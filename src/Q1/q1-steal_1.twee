@@ -1,0 +1,16 @@
+/* title + metadata */
+:: No Credit, No Problem {"position":"600,800","size":"100,100"}
+/* resources */
+<<CalcResource "-1" "-1" "0">>
+/* passage content */
+<div class="content">
+	<h1>No Credit, No Problem</h1>
+	<p>You let Mark have this one. Everyone knows what you bring to the table. Why be territorial about a good approach?</p>
+</div>
+/* actions */
+<div class="action-box">
+	<p><strong><em>ENERGY -1 SATSIFACTION -1</em></strong></p>
+    <<link "Next" "Start">>
+		<<EndingCheck>>
+	<</link>>
+</div>

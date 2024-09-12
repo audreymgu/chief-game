@@ -1,0 +1,16 @@
+/* title + metadata */
+:: Get HR involved {"position":"600,800","size":"100,100"}
+/* resources */
+<<CalcResource "-1" "1" "0">>
+/* passage content */
+<div class="content">
+	<h1>It Becomes a "Thing"</h1>
+	<p>You wanted to make it a thing, and a thing it shall be. The Roberts of the world need to be put on notice. And that notice needs to be stamped.</p>
+</div>
+/* actions */
+<div class="action-box">
+	<p><strong><em>ENERGY -1, SATISFACTION +1</em></strong></p>
+    <<link "Next" "Start">>
+		<<EndingCheck>>
+	<</link>>
+</div>

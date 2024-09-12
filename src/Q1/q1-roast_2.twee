@@ -1,0 +1,16 @@
+/* title + metadata */
+:: Get ahead of it, PR-style {"position":"600,800","size":"100,100"}
+/* resources */
+<<CalcResource "0" "0" "-3">>
+/* passage content */
+<div class="content">
+	<h1>HR Is Not Amused</h1>
+	<p>You schedule time with a “People Manager” to disclose the video and have a frank conversation about the sad vibes of the semi-regular office pizza parties. The only notes taken go straight into your file. (Yes, you have a file.)</p>
+</div>
+/* actions */
+<div class="action-box">
+	<p><strong><em>APPROVAL -3</em></strong></p>
+    <<link "Next" "Start">>
+		<<EndingCheck>>
+	<</link>>
+</div>

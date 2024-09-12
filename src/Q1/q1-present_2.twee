@@ -1,0 +1,16 @@
+/* title + metadata */
+:: Go for it {"position":"600,800","size":"100,100"}
+/* resources */
+<<CalcResource "-2" "2" "2">>
+/* passage content */
+<div class="content">
+	<h1>Recognition at Last</h1>
+	<p>They didn’t know your name yesterday and they might forget it tomorrow. But dammit, this feels good *now*.</p>
+</div>
+/* actions */
+<div class="action-box">
+	<p><strong><em>ENERGY -2 SATISFACTION +2 APPROVAL +2</em></strong></p>
+    <<link "Next" "Start">>
+		<<EndingCheck>>
+	<</link>>
+</div>

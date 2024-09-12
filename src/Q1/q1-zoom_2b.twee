@@ -1,0 +1,16 @@
+/* title + metadata */
+:: Lose Face {"position":"725,800","size":"100,100"}
+/* resources */
+<<CalcResource "-1" "0" "-1">>
+/* passage content */
+<div class="content">
+	<h1>Lose Face</h1>
+	<p>Turns out Liz had some good points — and your boss agrees. Liz is going to be checking in on you now from time to time.</p>
+</div>
+/* actions */
+<div class="action-box">
+	<p><em>ENERGY -1 APPROVAL -1</em></p>
+    <<link "Next" "Start">>
+		<<EndingCheck>>
+	<</link>>
+</div>

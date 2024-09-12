@@ -1,0 +1,19 @@
+:: You Go Viral [Q1] {"position":"600,675","size":"100,100"}
+/* passage content */
+<<audio "boom" play>>
+<<script>>
+    Dialog.setup("DRAMA ALERT!!");
+    Dialog.wiki("👀");
+    Dialog.open();
+<</script>>
+<div class="content">
+    <h1>You Go Viral For Roasting Your Workplace</h1>
+    <p>Your dumb little contribution to #WorkTok is racking up millions of views — including from some of your coworkers. The only problem? You spend the whole video talking about how much your office culture sucks.</p>
+</div>
+/* actions */
+<div class="action-box"><<nobr>>
+    <p><strong>What do you do?</strong></p><</nobr>>
+	[[Delete and pray it’s forgotten]]
+    [[Get ahead of it, PR-style]]
+    [[Fuck it, quit and become an influencer]]
+</div>

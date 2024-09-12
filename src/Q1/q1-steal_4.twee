@@ -1,0 +1,16 @@
+/* title + metadata */
+:: Mark Is Demolished {"position":"600,800","size":"100,100"}
+/* resources */
+<<CalcResource "0" "1" "1">>
+/* passage content */
+<div class="content">
+	<h1>Mark Is Demolished</h1>
+	<p>Your perfectly modulated disdain triggers a round of knowing laughter. It was always you. It was never Mark. Office grifters take note: you won’t get robbed without a fight.</p>
+</div>
+/* actions */
+<div class="action-box">
+	<p><strong><em>SATISFACTION +1 APPROVAL +1</em></strong></p>
+    <<link "Next" "Start">>
+		<<EndingCheck>>
+	<</link>>
+</div>

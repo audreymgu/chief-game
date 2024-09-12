@@ -1,0 +1,43 @@
+:: EndingCheck [widget] {"position":"900,100","size":"100,100"}
+<<widget "EndingCheck">>
+	<<set $time to $time + 1>>
+    
+    <<if $quarter == 4 and $time == 3>>
+    	<<set $approvalCheck to true>>
+    <</if>>
+	
+    <<if $time == 3>>
+    	<<if $quarter < 4>>
+    		<<set $quarter to $quarter + 1>>
+        <</if>>
+        <<set $time to 0>>
+    <</if>>
+    
+	<<if $energy <= 0>>
+		<<set $burnout to true>>
+    <<else>>
+    	<<set $burnout to false>>
+    <</if>>
+    
+    <<if $satisfaction <= 0>>
+     	<<GoRandom "EndUnhappy">>
+	<</if>>
+
+    <<if $approval <= 0>>
+        <<GoRandom "EndFired">>
+    <</if>>
+    
+    <<if $approvalCheck is true>>
+    	<<if $approval >= 6>>
+        	<<GoRandom "EndPromo">>
+        <<elseif $approval < 6 and $approval < 3>>
+        	<<GoRandom "EndStay">>
+        <<else>>
+        	<<GoRandom "EndFired">>
+        <</if>>
+    <</if>>
+
+    <<if $burnout is true and !hasVisited("Burnout")>>
+        <<goto [[Burnout]]>>
+    <</if>>
+<</widget>>

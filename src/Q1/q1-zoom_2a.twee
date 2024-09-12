@@ -1,0 +1,16 @@
+/* title + metadata */
+:: Public Win {"position":"725,800","size":"100,100"}
+/* resources */
+<<CalcResource "0" "1" "1">>
+/* passage content */
+<div class="content">
+	<h1>Public Win</h1>
+	<p>Your command of the facts is undeniable. Not only do you stand up for your work, but now you’ve settled this particular debate for good.</p>
+</div>
+/* actions */
+<div class="action-box">
+	<p><em>SATISFACTION +1, APPROVAL +1</em></p>
+    <<link "Next" "Start">>
+		<<EndingCheck>>
+	<</link>>
+</div>

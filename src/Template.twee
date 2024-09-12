@@ -1,0 +1,11 @@
+:: Template {"position":"300,675","size":"100,100"}
+<div class="content">
+<p>Test content</p>
+<<link "Next" "Start">>
+	<<EndingCheck>>
+<</link>>
+</div>
+<div class="action-box">
+	[[Action]]
+</div>
+<<CalcResource "0" "0" "0">>

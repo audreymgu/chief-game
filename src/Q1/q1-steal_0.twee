@@ -1,0 +1,19 @@
+:: Mark Steals Your Idea [Q1] {"position":"600,675","size":"100,100"}
+/* passage content */
+<<audio "phone" play>>
+<div class="content">
+    <h1>Mark Steals Your Idea</h1>
+    <p>You come to a group meeting armed with a killer build for a high-stakes project. You give your little spiel. Polite head nods. Then 15 minutes later, Mark rewords what you said. As if it’s *his* killer build. And worst of all, his version is getting a better reception.</p>
+</div>
+/* actions */
+<div class="action-box"><<nobr>>
+    <p><strong>What do you do?</strong></p><</nobr>>
+    <<link "Smile and nod">>
+        <<set _randomPassage = either("No Credit, No Problem", "Coworker Steps Up")>>
+        <<goto _randomPassage>>
+    <</link>>
+    <<link "Make mildly sarcastic remark">>
+        <<set _randomPassage = either("Wait, Not That Sarcastic", "Mark Is Demolished")>>
+        <<goto _randomPassage>>
+    <</link>>
+</div>

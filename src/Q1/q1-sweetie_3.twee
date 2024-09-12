@@ -1,0 +1,16 @@
+/* title + metadata */
+:: "OK Boomer" {"position":"600,800","size":"100,100"}
+/* resources */
+<<CalcResource "0" "1" "-2">>
+/* passage content */
+<div class="content">
+	<h1>Scorched Earth</h1>
+	<p>He deserves it, no doubt. So what if he thinks you overreacted?</p>
+</div>
+/* actions */
+<div class="action-box">
+	<p><strong><em>SATISFACTION +1, APPROVAL -2</em></strong></p>
+    <<link "Next" "Start">>
+		<<EndingCheck>>
+	<</link>>
+</div>

@@ -1,0 +1,16 @@
+/* title + metadata */
+:: Wait, Not That Sarcastic {"position":"600,800","size":"100,100"}
+/* resources */
+<<CalcResource "-1" "0" "-2">>
+/* passage content */
+<div class="content">
+	<h1>Wait, Not That Sarcastic</h1>
+	<p>You forget to set your word phasers to “stun” and go a little too far. The mood turns awkward. Mark smugly praises your contributions. You didn’t want it like this.</p>
+</div>
+/* actions */
+<div class="action-box">
+	<p><strong><em>ENERGY -1 APPROVAL -2</em></strong></p>
+    <<link "Next" "Start">>
+		<<EndingCheck>>
+	<</link>>
+</div>

@@ -1,0 +1,20 @@
+:: StoryScript [script]
+// hide back + forward
+Config.history.controls = false;
+
+// passage name function
+setup.getPassageNames = function(tag) {
+    const selectedTag = tag;
+    const passageNames = [];
+    
+    $('tw-passagedata').each(function() {
+        const name = $(this).attr('name');
+        const tags = $(this).attr('tags');
+        let safeTags = true;
+        if (tags.includes(selectedTag)) {
+	       passageNames.push(name);
+        }
+    });
+
+    return passageNames; 
+};

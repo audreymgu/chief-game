@@ -1,0 +1,4 @@
+:: StoryInit
+<<cacheaudio "boom" "audio/boom.mp3">>
+<<cacheaudio "office" "audio/office.mp3">>
+<<cacheaudio "phone" "audio/phone.m4a">>

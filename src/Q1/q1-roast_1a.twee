@@ -1,0 +1,16 @@
+/* title + metadata */
+:: Delete and pray it’s forgotten {"position":"600,800","size":"100,100"}
+/* resources */
+<<CalcResource "0" "0" "-2">>
+/* passage content */
+<div class="content">
+	<h1>The Internet Is Forever</h1>
+	<p>You delete the video, but not before the wrong person sees it. You receive a sternly-worded email with your boss cc’d.</p>
+</div>
+/* actions */
+<div class="action-box">
+	<p><strong><em>APPROVAL -2</em></strong></p>
+    <<link "Next" "Start">>
+		<<EndingCheck>>
+	<</link>>
+</div>

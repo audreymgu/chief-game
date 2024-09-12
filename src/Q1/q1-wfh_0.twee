@@ -1,0 +1,16 @@
+:: You're Asked to Deliver Bad News [Q1] {"position":"600,675","size":"100,100"}
+/* passage content */
+<<audio "phone" play>>
+<div class="content">
+    <h1>You’re Asked to Deliver Bad News</h1>
+    <p>Senior leadership has instituted a new WFH policy: there is no WFH. They need you to update your team.</p>
+</div>
+/* actions */
+<div class="action-box"><<nobr>>
+    <p><strong>What do you do?</strong></p><</nobr>>
+	[[Send a memo and stick to the script]]
+    <<link "Schedule time to talk about it openly">>
+        <<set _randomPassage = either("Trust Gained", "Lost Status")>>
+        <<goto _randomPassage>>
+    <</link>>
+</div>

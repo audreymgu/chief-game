@@ -1,0 +1,10 @@
+:: Login {"position":"500,300","size":"100,100"}
+<div class="content">
+    <p>Subject: FWD:FWD: Congratulations</p>
+	<p>Hey.</p>
+	<p>Congrats on the new gig! I'm on to greener pastures. Maybe you'll make it further in this office than I did. Maybe even a promotion by the end of the year, if you play your cards right!</p>
+	<p>Don't stress about it—it's like any other corporate job. Keep your <strong style="color:yellow">energy</strong> up, try to stay <strong style="color:yellow">motivated</strong>, and keep the <strong style="color:yellow">bosses happy</strong>.</p>
+	<p>I left something on your desk. Think of it as a welcome gift.</p>
+	<p><em>You check your desk. The person who was last here left a can of pringles with a note: "Good Luck!"</em></p>
+    [[Start]]
+</div>

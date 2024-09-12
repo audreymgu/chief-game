@@ -1,0 +1,27 @@
+:: Intro {"position":"500,300","size":"100,100"}
+<<nobr>>
+/* Variable Initialization */
+<<if $time == undefined>>
+	<<set $time to 0>>
+<</if>>
+<<if $quarter == undefined>>
+	<<set $quarter to 1>>
+<</if>>
+<<if $energy == undefined>>
+	<<set $energy to 4>>
+<</if>>
+<<if $satisfaction  == undefined>>
+	<<set $satisfaction to 4>>
+<</if>>
+<<if $approval == undefined>>
+	<<set $approval to 4>>
+<</if>>
+<<if $burnout == undefined>>
+	<<set $burnout to 0>>
+<</if>>
+<</nobr>>
+<div class="content">
+    <p>Welcome to Optimum Solutions, LLC!</p>
+	<p>Please login to your InfoMax account.</p>
+    [[Login]]
+</div>

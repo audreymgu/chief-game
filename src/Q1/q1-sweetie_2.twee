@@ -1,0 +1,16 @@
+/* title + metadata */
+:: Confront him gently {"position":"600,800","size":"100,100"}
+/* resources */
+<<CalcResource "-2" "+1" "0">>
+/* passage content */
+<div class="content">
+	<h1>Progress! Maybe?</h1>
+	<p>Parsing your words carefully, you tell Robert to keep it professional. You think you get through to him, but only time will tell.</p>
+</div>
+/* actions */
+<div class="action-box">
+	<p><strong><em>ENERGY -2 SATISFACTION +1</em></strong></p>
+    <<link "Next" "Start">>
+		<<EndingCheck>>
+	<</link>>
+</div>

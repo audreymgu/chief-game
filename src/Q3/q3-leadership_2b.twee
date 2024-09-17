@@ -1,0 +1,13 @@
+/* title + metadata */
+:: Ouch {"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">\
+	<div class="rel-wrapper">\
+        <<ResourceMeter>>\
+		<div class="content">
+			<p>He thinks you’re doing a great job right where you are. Ouch.</p>
+		</div>
+		<<CalcResource "0" "-1" "0">>
+		<<ResourceUpdate "0" "-1" "0">>
+	</div>
+</div>

@@ -1,9 +1,19 @@
 :: CalcResource [widget] {"position":"800,100","size":"100,100"}
-<<widget "CalcResource">>
+<<nobr>><<widget "CalcResource">>
 	<<if $burnout == true>>
 		<<set $satisfaction -= 1>>
     <</if>>
 	<<set $energy to Math.clamp($energy += Number($args[0]), -10, 10)>>
    	<<set $satisfaction to Math.clamp($satisfaction += Number($args[1]), 0, 10)>>
     <<set $approval to Math.clamp($approval += Number($args[2]), 0, 10)>>
-<</widget>>
+	<<timed 800ms>>
+		<<script>>
+			$('#energy').attr('value', State.variables.energy);
+			$('#satisfaction').attr('value', State.variables.satisfaction);
+			$('#approval').attr('value', State.variables.approval);
+		<</script>>
+		<<replace "#le">>Energy: $energy<</replace>>
+		<<replace "#ls">>Satisfaction: $satisfaction<</replace>>
+		<<replace "#la">>Approval: $approval<</replace>>
+	<</timed>>
+<</widget>><</nobr>>

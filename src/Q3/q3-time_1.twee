@@ -1,0 +1,13 @@
+/* title + metadata */
+:: Sleep when you're dead {"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">\
+	<div class="rel-wrapper">\
+        <<ResourceMeter>>\
+		<div class="content">
+			<p>Late nights and white knuckles make it happen. You celebrate with another can of Celsius.</p>
+		</div>
+		<<CalcResource "-2" "-1" "2">>
+		<<ResourceUpdate "-2" "-1" "2">>
+	</div>
+</div>

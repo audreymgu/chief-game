@@ -1,0 +1,13 @@
+/* title + metadata */
+:: Not worth your time {"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">\
+	<div class="rel-wrapper">\
+        <<ResourceMeter>>\
+		<div class="content">
+			<p>The only way to get executive attention is by doing your job well. Or so you tell yourself.</p>
+		</div>
+		<<CalcResource "2" "0" "0">>
+		<<ResourceUpdate "2" "0" "0">>
+	</div>
+</div>

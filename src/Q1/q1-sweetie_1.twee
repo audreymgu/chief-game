@@ -1,16 +1,14 @@
 /* title + metadata */
 :: Ignore it {"position":"600,800","size":"100,100"}
-/* resources */
-<<CalcResource "-1" "-2" "0">>
 /* passage content */
-<div class="content">
-	<h1>Another Day, Another Dollar</h1>
-	<p>You anticipate more sweeties in your future, but it’s better than making a fuss. Right? </p>
-</div>
-/* actions */
-<div class="action-box">
-	<p><strong><em>ENERGY -1 SATISFACTION -2</em></strong></p>
-    <<link "Next" "Start">>
-		<<EndingCheck>>
-	<</link>>
+<div class="abs-wrapper">\
+	<div class="rel-wrapper">\
+        <<ResourceMeter>>\
+		<div class="content">
+			<p>It’s always the accountants. Reminder to avoid that whole floor.
+			</p>
+		</div>
+		<<CalcResource "-1" "-2" "0">>
+		<<ResourceUpdate "-1" "-2" "0">>
+	</div>
 </div>

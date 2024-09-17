@@ -1,0 +1,13 @@
+/* title + metadata */
+:: Avoid the inevitable knife fight{"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">\
+	<div class="rel-wrapper">\
+        <<ResourceMeter>>\
+		<div class="content">
+			<p>After a bloodless—but annoying—internal struggle, the company ends up poaching someone from a rival firm.</p>
+		</div>
+	</div>
+	<<CalcResource "2" "0" "0">>
+	<<ResourceUpdate "2" "0" "0">>
+</div>

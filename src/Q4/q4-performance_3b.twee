@@ -1,0 +1,13 @@
+/* title + metadata */
+:: I'm sorry you feel that way {"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">\
+	<div class="rel-wrapper">\
+        <<ResourceMeter>>\
+		<div class="content">
+			<p>“I’m sorry you feel that way.” Have six words ever cut so deep? You better start updating that resume.</p>
+		</div>
+		<<CalcResource "-1" "-1" "-4">>
+		<<ResourceUpdate "-1" "-1" "-4">>
+	</div>
+</div>

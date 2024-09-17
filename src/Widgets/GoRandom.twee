@@ -6,4 +6,5 @@
     })>>
     <<set _randomPassage = _possiblePlaces[Math.floor(Math.random() * _possiblePlaces.length)]>>
     <<goto _randomPassage>>
+    <<script>>console.log("passage jump complete!")<</script>>
 <</widget>>

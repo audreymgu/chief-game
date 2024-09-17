@@ -1,16 +1,13 @@
 /* title + metadata */
 :: Let's take this offline {"position":"600,800","size":"100,100"}
-/* resources */
-<<CalcResource "-1" "0" "1">>
 /* passage content */
-<div class="content">
-	<h1>Throwdown Averted</h1>
-	<p>Who’s right and who’s wrong? It’s irrelevant. What matters is that you look like the adult in the room for refusing to waste other people’s time. Even if you sound a little corporate drone-y.</p>
-</div>
-/* actions */
-<div class="action-box">
-	<p><strong><em>ENERGY -1 APPROVAL +1</em></strong></p>
-    <<link "Next" "Start">>
-		<<EndingCheck>>
-	<</link>>
+<div class="abs-wrapper">\
+	<div class="rel-wrapper">\
+        <<ResourceMeter>>\
+		<div class="content">
+			<p>The words leave a bad taste in your mouth, but they’re effective.</p>
+		</div>
+		<<CalcResource "-1" "0" "1">>
+		<<ResourceUpdate "-1" "0" "1">>
+	</div>
 </div>

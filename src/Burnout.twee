@@ -1,6 +1,11 @@
 :: Burnout {"position":"500,300","size":"100,100"}
-<div class="content">
-	<h1>You're burned out</h1>
-	<p>You've overextended yourself! Take time to recover. As long as your burnout remains, your satisfaction at work will continue to deplete.</p>
-    <<link "Next" "Start">><</link>>
+<div class="abs-wrapper">\
+	<div class="rel-wrapper">\
+        <<ResourceMeter>>\
+		<div class="content">
+			<h1>You're burned out</h1>
+			<p>You've overextended yourself! Take time to recover. As long as your burnout remains, your satisfaction at work will continue to deplete.</p>
+			<<link "Next" "Start">><</link>>
+		</div>
+	</div>
 </div>

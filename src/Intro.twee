@@ -7,21 +7,34 @@
 <<if $quarter == undefined>>
 	<<set $quarter to 1>>
 <</if>>
-<<if $energy == undefined>>
-	<<set $energy to 4>>
-<</if>>
-<<if $satisfaction  == undefined>>
-	<<set $satisfaction to 4>>
-<</if>>
-<<if $approval == undefined>>
-	<<set $approval to 4>>
-<</if>>
-<<if $burnout == undefined>>
-	<<set $burnout to 0>>
-<</if>>
+<<set $burnout to 0>>
+<<set $login to true>>
 <</nobr>>
-<div class="content">
-    <p>Welcome to Optimum Solutions, LLC!</p>
-	<p>Please login to your InfoMax account.</p>
-    [[Login]]
+<div class="abs-wrapper">\
+	<div class="rel-wrapper">\
+		<div class="content">\
+			<p>Welcome to Optimum Solutions, LLC!</p>
+			<p>Please select your account to login.</p>\
+			<<listbox "$user" autoselect>>\
+				<<option "SyntaxSorceress" product>>
+				<<option "XOXOWaterCoolerWhisperer" sales>>
+				<<option "SueMeBro" legal>>
+				<<option "SmoothOperator" operations>>
+			<</listbox>>
+			<span id="userDesc"><<print setup.userDescs.product>></span>
+			<<script>>
+				$(document).on(":passagerender", function (event) {
+					$(event.content).find("select.macro-listbox").on("change", function (event) {
+						$("#userDesc").fadeOut(250);
+						setTimeout(function () {
+							var user = State.variables.user;
+							var desc = "setup.userDescs." + user;
+							$("#userDesc").empty().wiki(eval(desc)).fadeIn(250);
+						}, 250);
+					});
+				});
+			<</script>>
+			[[Login]]
+		</div>
+	</div>
 </div>

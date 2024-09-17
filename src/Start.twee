@@ -1,53 +1,74 @@
 :: Start [Main] {"position":"500,300","size":"100,100"}
-<<audio "office" play>>
-<div class="content">
-	<img src="img/office.png"/>
-	/* <p>Just another day in the office.</p> */
-</div>
-<div class="action-box">
-    You're back at your desk.
+<<nobr>><<if $login is true>>
+    <<switch $user>>
+        <<case product>>
+            <<set $energy to 5>>
+            <<set $satisfaction to 3>>
+            <<set $approval to 4>>
+        <</case>>
+        <<case sales>>
+            <<set $energy to 3>>
+            <<set $satisfaction to 4>>
+            <<set $approval to 5>>
+        <</case>>
+        <<case legal>>
+            <<set $energy to 4>>
+            <<set $satisfaction to 4>>
+            <<set $approval to 4>>
+        <</case>>
+        <<case operations>>
+            <<set $energy to 3>>
+            <<set $satisfaction to 3>>
+            <<set $approval to 6>>
+        <</case>>
+    <</switch>>
+    <<set $login to false>>
+<</if>><</nobr>>
+<<audio "office" play>>\
 
-    <em style="color:yellow;">DEVELOPER'S NOTE: When players are not in a scenario, they'll have the opportunity to perform various actions at their desk, allowing them a bit more control over their resources (like recharging from burnout, for example).</em>
-    <p style="color:gray;">
-    <strong>These activities (or something like them) will be implemented in a later build!</strong>
-    - Get back to work (fill out paperwork)
-    - Fiddle with your desk toys (newton's cradle)
-    - Silently scream in the bathroom
-    - Check social media
-    - Take a nap
-    </p><<nobr>>
-  /* [[Pet the Cat]]
-  [[Fight in the Applebee's Parking Lot]]
-  [[Minus Satisfaction]]
-  [[Burnout]] */
-  /* <<link "SIGOZINE GO IN">>
-      <<GoRandom "Q1">>
-  <</link>> */
-/* <<set _pieOptions = ["blueberry", "cherry", "coconut cream"]>>
-What's your favorite kind of pie?
-<<listbox "$pie" autoselect>>
-	<<optionsfrom _pieOptions>>
-<</listbox>> */<</nobr>>
-</div>
+
+<div class="abs-wrapper">\
+	<div class="rel-wrapper">\
+        <<ResourceMeter>>\
+        <div class="content">
+            User is $user
+            <p>You're back at your desk.</p>
+            <em style="color:yellow;">DEVELOPER'S NOTE: When players are not in a scenario, they'll have the opportunity to perform various actions at their desk, allowing them a bit more control over their resources (like recharging from burnout, for example).</em>
+            <ul>
+                <li>Get back to work (fill out paperwork)</li>
+                <li>Fiddle with your desk toys (newton's cradle)</li>
+                <li>Silently scream in the bathroom</li>
+                <li>Check social media</li>
+                <li>Take a nap</li>
+            </ul>\
+        </div>\
+    </div>\
+</div>\
+
 <<nobr>>
-<<set $seconds to random(4, 10)>>
-<<silently>>
-    <<repeat 1s>>
-        <<set $seconds to $seconds - 1>>
-        <<if $seconds gt 0>>
+    <<set $seconds to random(1, 1)>>
+    <<silently>>
+        <<repeat 1s>>
+            <<set $seconds to $seconds - 1>>
+            <<if $seconds gt 0>>
 
-        <<else>>
-            /* Demo Guardrail */
-            <<if $time == 2 and $quarter == 2>>
-                <<goto [[Demo End]]>>
             <<else>>
-                <<GoRandom "Q1">>
+                <<switch $quarter>>
+                    <<case 1>>
+                        <<GoRandom "Q1">>
+                    <</case>>
+                    <<case 2>>
+                        <<GoRandom "Q2">>
+                    <</case>>
+                    <<case 3>>
+                        <<GoRandom "Q3">>
+                    <</case>>
+                    <<case 4>>
+                        <<GoRandom "Q4">>
+                    <</case>>
+                <</switch>>
+                <<stop>>
             <</if>>
-            
-            /* <<run alert("DRAMA ALERT!!")>> */
-        	
-            <<stop>>
-        <</if>>
-    <</repeat>>
-<</silently>>
+        <</repeat>>
+    <</silently>>
 <</nobr>>

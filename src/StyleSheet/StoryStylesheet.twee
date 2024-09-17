@@ -1,28 +1,57 @@
 :: StoryStylesheet [stylesheet]
+/* .passage {
+	transition-property: none;
+} */
+
+/* resets */
+ p {
+  margin: 0;
+ }
+
+ h1 {
+  margin: 0;
+ }
+
 .action-box {
-  position: fixed;
-  bottom: 25px;
-  border: 1px solid white;
-  margin: auto;
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
-  padding: 1rem;
-  width: 50vw;
+  bottom: 0;
+  width: calc(100% - 4rem);
+  border: 1px solid white;
+  border-width: 1px 0 0 0;
+  margin: auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
 
-.ui-label {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.content {
+.abs-wrapper {
   margin: auto;
   position: absolute;
   top: 50%;
   left: 50%;
   width: 50vw;
+  height: 50vh;
+  max-height: 40rem;
   transform: translate(-50%, -50%);
+  border: 1px solid white;
+}
+
+.rel-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.content {
+  padding: 2rem;
+  overflow: scroll;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
 }
 
 #ui-bar {
@@ -65,3 +94,36 @@
 
 #story {
   margin:0;
+}
+
+.resource-meter {
+  border: 1px solid white;
+  border-width: 0 0 1px 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 10px;
+}
+
+.meter-unit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+progress {
+  height: 24px;
+}
+
+.ui-label {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+progress::-webkit-progress-value {
+  transition: width 0.5s ease;
+}

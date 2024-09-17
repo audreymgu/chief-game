@@ -1,0 +1,13 @@
+/* title + metadata */
+:: Liz gets it {"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">\
+	<div class="rel-wrapper">\
+        <<ResourceMeter>>\
+		<div class="content">
+			<p>You don’t get it. Liz does. It’s like your eighth grade play all over again.</p>
+		</div>
+		<<CalcResource "-1" "0" "0">>
+		<<ResourceUpdate "-1" "0" "0">>
+	</div>
+</div>

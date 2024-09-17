@@ -1,16 +1,13 @@
 /* title + metadata */
 :: Trust Gained {"position":"600,800","size":"100,100"}
-/* resources */
-<<CalcResource "-2" "0" "1">>
 /* passage content */
-<div class="content">
-	<h1>Trust Gained</h1>
-	<p>You manage to walk the fine line of admitting the new policy sucks without actually saying that or pointing fingers. You promise to take your team’s concerns back to leadership.</p>
-</div>
-/* actions */
-<div class="action-box">
-	<p><strong><em>ENERGY -2 APPROVAL+1</em></strong></p>
-    <<link "Next" "Start">>
-		<<EndingCheck>>
-	<</link>>
+<div class="abs-wrapper">\
+	<div class="rel-wrapper">\
+        <<ResourceMeter>>\
+		<div class="content">
+			<p>By deploying some of that trademark empathy, you still pass as human to your underlings.</p>
+		</div>
+		<<CalcResource "-1" "1" "1">>
+		<<ResourceUpdate "-1" "1" "1">>
+	</div>
 </div>

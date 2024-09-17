@@ -18,3 +18,12 @@ setup.getPassageNames = function(tag) {
 
     return passageNames; 
 };
+
+setup.userDescs = {};
+
+setup.userDescs.product = "PRODUCT: Software bends to your will. Output is your middle name. If only EQ was something you could download.";
+setup.userDescs.sales = "SALES: You can charm, cajole, and occasionally even captivate. What you can’t do is spreadsheets.";
+setup.userDescs.legal = "LEGAL: You practically invented due diligence. You cover your own ass with aplomb. You tend to make colleagues nervous.";
+setup.userDescs.operations = "OPS: Corporate machinery is your weapon of choice. But years of training have taken their toll.";
+
+console.log(setup.userDescs);

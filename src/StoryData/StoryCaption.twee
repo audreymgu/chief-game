@@ -1,9 +1,9 @@
 :: StoryCaption [StoryInit] {"position":"500,100","size":"100,100"}
-<p class="ui-label">Q$quarter</p>
+/* <p class="ui-label">Q$quarter</p>
 <p class="ui-label">Time: $time</p>
 <p class="ui-label">Energy: $energy</p>
 <progress @value="$energy" max="7"></progress>
 <p class="ui-label">Motivation: $satisfaction</p>
 <progress @value="$satisfaction" max="7"></progress>
 <p class="ui-label">Approval: $approval</p>
-<progress @value="$approval" max="7"></progress>
+<progress @value="$approval" max="7"></progress> */

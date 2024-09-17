@@ -1,17 +1,16 @@
 :: You Get into an Argument on Zoom [Q1] {"position":"600,675","size":"100,100"}
 /* passage content */
 <<audio "phone" play>>
-<div class="content">
-    <h1>You Get into an Argument on Zoom</h1>
-    <p>Halfway through your PowerPoint, Liz starts questioning your KPIs. What began as a disagreement is quickly spinning out in front of your delighted and transfixed coworkers.</p>
-</div>
-/* actions */
-<div class="action-box"><<nobr>>
-    <p><strong>What do you do?</strong></p><</nobr>>
-	[[Back off]]
-    <<link "Push Back">>
-        <<set _randomPassage = either("Public Win", "Lose Face")>>
-        <<goto _randomPassage>>
-    <</link>>
-    [["Let's take this offline"]]
+<div class="abs-wrapper">\
+	<div class="rel-wrapper">\
+        <<ResourceMeter>>\
+        <div class="content">
+            <h1>Zoom Argument</h1>
+            <p>Liz starts questioning your KPIs in front of the whole team. Will this aggression stand?</p>
+        </div>
+        <<ActionBox
+            "Back off"
+            "Push back|Public Win|Lose Face"
+            "Let's take this offline"
+        >> 
 </div>

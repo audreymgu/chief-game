@@ -1,0 +1,13 @@
+/* title + metadata */
+:: Uber home {"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">\
+	<div class="rel-wrapper">\
+        <<ResourceMeter>>\
+		<div class="content">
+			<p>Two-and-a-half manhattans and several unfortunate dance moves later, you have been gently placed in an Uber home.</p>
+		</div>
+		<<CalcResource "0" "1" "-1">>
+		<<ResourceUpdate "0" "1" "-1">>
+	</div>
+</div>

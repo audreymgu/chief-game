@@ -1,16 +1,13 @@
 /* title + metadata */
 :: Lost Status {"position":"600,800","size":"100,100"}
-/* resources */
-<<CalcResource "-1" "-2" "-1">>
 /* passage content */
-<div class="content">
-	<h1>Lost Status</h1>
-	<p>In your effort to stress how little you had to do with this decision, you give the unfortunate impression of having very little to do with any decision.</p>
-</div>
-/* actions */
-<div class="action-box">
-	<p><strong><em>ENERGY -1, SATISFACTION -2, APPROVAL -1</em></strong></p>
-    <<link "Next" "Start">>
-		<<EndingCheck>>
-	<</link>>
+<div class="abs-wrapper">\
+	<div class="rel-wrapper">\
+        <<ResourceMeter>>\
+		<div class="content">
+			<p>You somehow come off as both callous and clueless.</p>
+		</div>
+		<<CalcResource "-1" "0" "0">>
+		<<ResourceUpdate "-1" "0" "0">>
+	</div>
 </div>

@@ -1,0 +1,13 @@
+/* title + metadata */
+:: Fire him on the spot {"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">\
+	<div class="rel-wrapper">\
+        <<ResourceMeter>>\
+		<div class="content">
+			<p>Who doesn’t enjoy sampling the devil’s lettuce while taking a long bath? But this is a place of business.</p>
+		</div>
+		<<CalcResource "0" "0" "1">>
+		<<ResourceUpdate "0" "0" "1">>
+	</div>
+</div>

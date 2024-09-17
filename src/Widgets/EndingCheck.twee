@@ -30,7 +30,7 @@
     <<if $approvalCheck is true>>
     	<<if $approval >= 6>>
         	<<GoRandom "EndPromo">>
-        <<elseif $approval < 6 and $approval < 3>>
+        <<elseif $approval < 6 and $approval > 2>>
         	<<GoRandom "EndStay">>
         <<else>>
         	<<GoRandom "EndFired">>

@@ -1,0 +1,21 @@
+:: Liz Goes Viral [Q2] {"position":"600,675","size":"100,100"}
+/* passage content */
+<<audio "boom" play>>
+<<script>>
+    Dialog.setup("DRAMA ALERT!!");
+    Dialog.wiki("👀");
+    Dialog.open();
+<</script>>
+<div class="abs-wrapper">\
+	<div class="rel-wrapper">\
+        <<ResourceMeter>>\
+        <div class="content">
+            <h1>Liz Goes Viral</h1>
+            <p>Your primary office antagonist just blew up on #WorkTok by casually disparaging your firm’s culture. Unclear if anyone knows—including her.</p>
+        </div>
+        <<ActionBox
+            "Give her a heads up|She's grateful|Mind your business"
+            "Slip it to your boss|Tell Mark|Message your boss"
+        >>\
+    </div>
+</div>

@@ -1,0 +1,13 @@
+/* title + metadata */
+:: Not you {"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">\
+	<div class="rel-wrapper">\
+        <<ResourceMeter>>\
+		<div class="content">
+			<p>How could you trust the people below you? They’re not you. They do a not-you job—and people notice.</p>
+		</div>
+		<<CalcResource "-1" "-1" "0">>
+		<<ResourceUpdate "-1" "-1" "0">>
+	</div>
+</div>

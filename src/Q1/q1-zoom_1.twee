@@ -1,16 +1,13 @@
 /* title + metadata */
 :: Back off {"position":"725,800","size":"100,100"}
-/* resources */
-<<CalcResource "-1" "-2" "0">>
 /* passage content */
-<div class="content">
-	<h1>Morale Hit</h1>
-	<p>You plead the 5th on this particular issue and offer to look into it further — maybe with her help. Grumble grumble.</p>
-</div>
-/* actions */
-<div class="action-box">
-	<p><em>ENERGY -1, SATISFACTION -2</em></p>
-    <<link "Next" "Start">>
-		<<EndingCheck>>
-	<</link>>
+<div class="abs-wrapper">\
+	<div class="rel-wrapper">\
+        <<ResourceMeter>>\
+		<div class="content">
+			<p>You offer to “look into it.” You don’t know what Liz is capable of. </p>
+		</div>
+		<<CalcResource "+2" "-1" "0">>
+		<<ResourceUpdate "+2" "-1" "0">>
+	</div>
 </div>

@@ -1,0 +1,13 @@
+/* title + metadata */
+:: Be a silent partner {"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">\
+	<div class="rel-wrapper">\
+        <<ResourceMeter>>\
+		<div class="content">
+			<p>Showing up is enough. Sometimes words don’t come out good.</p>
+		</div>
+		<<CalcResource "0" "0" "1">>
+		<<ResourceUpdate "0" "0" "1">>
+	</div>
+</div>

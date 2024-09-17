@@ -1,15 +1,17 @@
 :: Bob from Finance Calls You “Sweetie.” Again. [Q1] {"position":"600,675","size":"100,100"}
 /* passage content */
 <<audio "phone" play>>
-<div class="content">
-    <h1>Bob from Finance Calls You “Sweetie.” Again.</h1>
-    <p>He has an uncommon ability to make you wince. Sure, he’s ancient. But shouldn’t he know better?</p>
-</div>
-/* actions */
-<div class="action-box"><<nobr>>
-    <p><strong>What do you do?</strong></p><</nobr>>
-	[[Ignore it]]
-    [[Confront him gently]]
-    [["OK Boomer"]]
-    [[Get HR involved]]
+<div class="abs-wrapper">\
+	<div class="rel-wrapper">\
+        <<ResourceMeter>>\
+        <div class="content">
+            <h1>Creep Alert</h1>
+            <p>Bob from accounting calls you “sweetie.” Again.</p>
+        </div>
+        <<ActionBox
+            "Ignore it"
+            "Confront him gently"
+            "OK Boomer"
+            "Get HR involved"
+        >>
 </div>

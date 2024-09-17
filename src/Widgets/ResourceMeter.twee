@@ -1,7 +1,7 @@
 :: ResourceMeter [widget] {"position":"700,100","size":"100,100"}
 <<widget "ResourceMeter">>\
     <div id="resource" class="resource-meter">\
-        <p class="ui-label">Q$quarter</p>\
+        <p id="quarter" class="ui-label">Q$quarter</p>\
         <div class="meter-unit">\
             <progress class="ui-meter" id="energy" @value="$energy" max="7"></progress>\
             <p id="le" class="ui-label">Energy: $energy</p>\

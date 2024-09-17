@@ -231,6 +231,11 @@ progress {
 
 progress::-webkit-progress-value {
   transition: width 0.5s ease;
+}
+
+#quarter {
+  font-size: 24px;
+  font-weight: bold;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">// hide back + forward
 Config.history.controls = false;
 
@@ -258,7 +263,7 @@ setup.userDescs.sales = "SALES: You can charm, cajole, and occasionally even cap
 setup.userDescs.legal = "LEGAL: You practically invented due diligence. You cover your own ass with aplomb. You tend to make colleagues nervous.";
 setup.userDescs.operations = "OPS: Corporate machinery is your weapon of choice. But years of training have taken their toll.";
 
-console.log(setup.userDescs);</script><tw-tag name="StoryInit" color="orange"></tw-tag><tw-tag name="EndE" color="orange"></tw-tag><tw-tag name="EndUnhappy" color="red"></tw-tag><tw-tag name="EndStay" color="red"></tw-tag><tw-tag name="Main" color="blue"></tw-tag><tw-tag name="Widget" color="green"></tw-tag><tw-tag name="Q2" color="green"></tw-tag><tw-tag name="Q3" color="green"></tw-tag><tw-tag name="Q4" color="green"></tw-tag><tw-tag name="EndFired" color="red"></tw-tag><tw-tag name="widget" color="orange"></tw-tag><tw-tag name="Q1" color="green"></tw-tag><tw-tag name="EndPromo" color="red"></tw-tag><tw-tag name="nobr" color="purple"></tw-tag><tw-passagedata pid="1" name="Action" tags="" position="300,800" size="100,100"></tw-passagedata><tw-passagedata pid="2" name="Burnout" tags="" position="500,300" size="100,100">&lt;div class=&quot;abs-wrapper&quot;&gt;\
+console.log(setup.userDescs);</script><tw-tag name="Main" color="blue"></tw-tag><tw-tag name="EndFired" color="red"></tw-tag><tw-tag name="EndStay" color="red"></tw-tag><tw-tag name="Q3" color="green"></tw-tag><tw-tag name="Q2" color="green"></tw-tag><tw-tag name="Q4" color="green"></tw-tag><tw-tag name="EndPromo" color="red"></tw-tag><tw-tag name="Widget" color="green"></tw-tag><tw-tag name="Q1" color="green"></tw-tag><tw-tag name="EndE" color="orange"></tw-tag><tw-tag name="EndUnhappy" color="red"></tw-tag><tw-tag name="nobr" color="purple"></tw-tag><tw-tag name="StoryInit" color="orange"></tw-tag><tw-tag name="widget" color="orange"></tw-tag><tw-passagedata pid="1" name="Action" tags="" position="300,800" size="100,100"></tw-passagedata><tw-passagedata pid="2" name="Burnout" tags="" position="500,300" size="100,100">&lt;div class=&quot;abs-wrapper&quot;&gt;\
 	&lt;div class=&quot;rel-wrapper&quot;&gt;\
         &lt;&lt;ResourceMeter&gt;&gt;\
 		&lt;div class=&quot;content&quot;&gt;
@@ -1036,7 +1041,7 @@ console.log(setup.userDescs);</script><tw-tag name="StoryInit" color="orange"></
 &lt;/div&gt;\
 
 &lt;&lt;nobr&gt;&gt;
-    &lt;&lt;set $seconds to random(1, 1)&gt;&gt;
+    &lt;&lt;set $seconds to random(4, 8)&gt;&gt;
     &lt;&lt;silently&gt;&gt;
         &lt;&lt;repeat 1s&gt;&gt;
             &lt;&lt;set $seconds to $seconds - 1&gt;&gt;
@@ -1191,7 +1196,7 @@ You pet the cat, it was good :3
     &lt;&lt;script&gt;&gt;console.log(&quot;passage jump complete!&quot;)&lt;&lt;/script&gt;&gt;
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="81" name="ResourceMeter" tags="widget" position="700,100" size="100,100">&lt;&lt;widget &quot;ResourceMeter&quot;&gt;&gt;\
     &lt;div id=&quot;resource&quot; class=&quot;resource-meter&quot;&gt;\
-        &lt;p class=&quot;ui-label&quot;&gt;Q$quarter&lt;/p&gt;\
+        &lt;p id=&quot;quarter&quot; class=&quot;ui-label&quot;&gt;Q$quarter&lt;/p&gt;\
         &lt;div class=&quot;meter-unit&quot;&gt;\
             &lt;progress class=&quot;ui-meter&quot; id=&quot;energy&quot; @value=&quot;$energy&quot; max=&quot;7&quot;&gt;&lt;/progress&gt;\
             &lt;p id=&quot;le&quot; class=&quot;ui-label&quot;&gt;Energy: $energy&lt;/p&gt;\

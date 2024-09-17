@@ -46,7 +46,7 @@
 </div>\
 
 <<nobr>>
-    <<set $seconds to random(1, 1)>>
+    <<set $seconds to random(4, 8)>>
     <<silently>>
         <<repeat 1s>>
             <<set $seconds to $seconds - 1>>

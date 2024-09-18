@@ -132,3 +132,14 @@ progress::-webkit-progress-value {
   font-size: 24px;
   font-weight: bold;
 }
+
+.quit-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100px;
+  width: 200px;
+  border: 1px solid white;
+  text-align: center;
+  justify: center;
+}

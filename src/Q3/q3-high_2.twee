@@ -7,7 +7,7 @@
 		<div class="content">
 			<p>Who doesn’t enjoy sampling the devil’s lettuce while taking a long bath? But this is a place of business.</p>
 		</div>
-		<<CalcResource "0" "0" "1">>
-		<<ResourceUpdate "0" "0" "1">>
+		<<CalcResource "-1" "0" "1">>
+		<<ResourceUpdate "-1" "0" "1">>
 	</div>
 </div>

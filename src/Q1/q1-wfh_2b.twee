@@ -7,7 +7,7 @@
 		<div class="content">
 			<p>You somehow come off as both callous and clueless.</p>
 		</div>
-		<<CalcResource "-1" "0" "0">>
-		<<ResourceUpdate "-1" "0" "0">>
+		<<CalcResource "-2" "0" "0">>
+		<<ResourceUpdate "-2" "0" "0">>
 	</div>
 </div>

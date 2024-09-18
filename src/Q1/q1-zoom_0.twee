@@ -1,6 +1,7 @@
 :: You Get into an Argument on Zoom [Q1] {"position":"600,675","size":"100,100"}
 /* passage content */
-<<audio "phone" play>>
+<<updatemeter 'timer' 0>>
+<<audio "phone" volume 0.25 play>>\
 <div class="abs-wrapper">\
 	<div class="rel-wrapper">\
         <<ResourceMeter>>\

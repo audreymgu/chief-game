@@ -7,7 +7,7 @@
 		<div class="content">
 			<p>By deploying some of that trademark empathy, you still pass as human to your underlings.</p>
 		</div>
-		<<CalcResource "-1" "1" "1">>
-		<<ResourceUpdate "-1" "1" "1">>
+		<<CalcResource "-2" "1" "1">>
+		<<ResourceUpdate "-2" "1" "1">>
 	</div>
 </div>

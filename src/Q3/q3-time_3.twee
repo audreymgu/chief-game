@@ -7,7 +7,7 @@
 		<div class="content">
 			<p>You lose a little face, but that’s better than losing your job.</p>
 		</div>
-		<<CalcResource "+1" "+1" "-1">>
-		<<ResourceUpdate "+1" "+1" "-1">>
+		<<CalcResource "1" "1" "-1">>
+		<<ResourceUpdate "1" "1" "-1">>
 	</div>
 </div>

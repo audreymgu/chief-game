@@ -34,10 +34,13 @@
         <div class="content">
             User is $user
             <p>You're back at your desk.</p>
-            <em style="color:yellow;">DEVELOPER'S NOTE: When players are not in a scenario, they'll have the opportunity to perform various actions at their desk, allowing them a bit more control over their resources (like recharging from burnout, for example).</em>
+            <em style="color:yellow;">DEVELOPER'S NOTE: When players are not in a scenario, they'll have the opportunity to perform various actions at their desk.</em>
 
             <<nobr>><ul>
-                <li>Get back to work (fill out paperwork)</li>
+                <li><<linkreplace "Get back to work">>
+                        <<typesim "Hey Jim, I won't be into work today, sorry.">>Send the email.<</typesim>>
+                    <</linkreplace>>
+                </li>
                 <li>
                     <<script>>
                         Meter.get('timer').on(':meter-animation-complete', function () {
@@ -47,7 +50,7 @@
                     <<linkreplace "Fiddle with your desk toys (Meditation Balls)">>
                         Breathe in... and out.
                         <<audio "om" volume 0.25 fadeoverto 5 0>>
-                        
+/*                         
                         <<showmeter 'timer' 1>>
                         <<timed 5s>>
                             <<audio "om" stop>>
@@ -58,7 +61,7 @@
                                 Dialog.open();
                             <</script>>
                             <<remove "#meter-timer">>
-                        <</timed>>
+                        <</timed>> */
                     <</linkreplace>>
                 </li>
                 <li>Silently scream in the bathroom</li>

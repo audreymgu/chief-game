@@ -423,7 +423,7 @@ Macro.add("timedprogressbar", {
 			
 		});
 	},
-});</script><tw-tag name="EndPromo" color="red"></tw-tag><tw-tag name="Widget" color="green"></tw-tag><tw-tag name="Q1" color="green"></tw-tag><tw-tag name="Q3" color="green"></tw-tag><tw-tag name="Main" color="blue"></tw-tag><tw-tag name="EndStay" color="red"></tw-tag><tw-tag name="Q4" color="green"></tw-tag><tw-tag name="EndE" color="orange"></tw-tag><tw-tag name="EndUnhappy" color="red"></tw-tag><tw-tag name="nobr" color="purple"></tw-tag><tw-tag name="widget" color="orange"></tw-tag><tw-tag name="EndFired" color="red"></tw-tag><tw-tag name="StoryInit" color="orange"></tw-tag><tw-tag name="Q2" color="green"></tw-tag><tw-passagedata pid="1" name="Action" tags="" position="300,800" size="100,100"></tw-passagedata><tw-passagedata pid="2" name="Burnout" tags="" position="500,300" size="100,100">&lt;div class=&quot;abs-wrapper&quot;&gt;\
+});</script><tw-tag name="Widget" color="green"></tw-tag><tw-tag name="Q4" color="green"></tw-tag><tw-tag name="Main" color="blue"></tw-tag><tw-tag name="EndFired" color="red"></tw-tag><tw-tag name="StoryInit" color="orange"></tw-tag><tw-tag name="widget" color="orange"></tw-tag><tw-tag name="Q3" color="green"></tw-tag><tw-tag name="EndUnhappy" color="red"></tw-tag><tw-tag name="EndStay" color="red"></tw-tag><tw-tag name="Q1" color="green"></tw-tag><tw-tag name="Q2" color="green"></tw-tag><tw-tag name="EndE" color="orange"></tw-tag><tw-tag name="nobr" color="purple"></tw-tag><tw-tag name="EndPromo" color="red"></tw-tag><tw-passagedata pid="1" name="Action" tags="" position="300,800" size="100,100"></tw-passagedata><tw-passagedata pid="2" name="Burnout" tags="" position="500,300" size="100,100">&lt;div class=&quot;abs-wrapper&quot;&gt;\
 	&lt;div class=&quot;rel-wrapper&quot;&gt;\
         &lt;&lt;ResourceMeter&gt;&gt;\
 		&lt;div class=&quot;content&quot;&gt;
@@ -507,8 +507,8 @@ Macro.add("timedprogressbar", {
 		&lt;div class=&quot;content&quot;&gt;\
 			&lt;p&gt;&lt;strong&gt;Subject: FWD:FWD: Congratulations&lt;/strong&gt;&lt;/p&gt;
 			&lt;p&gt;Hey.&lt;/p&gt;\
-			&lt;p&gt;Congrats on the new gig! I&#39;m on to greener pastures. Hope you&#39;ll make it further in this office than I did. Maybe even &lt;strong style=&quot;color:yellow&quot;&gt;earn a promotion by the end of the year!&lt;/strong&gt;&lt;/p&gt;\
-			&lt;p&gt;It&#39;s like any other corporate job. Keep your &lt;strong style=&quot;color:yellow&quot;&gt;energy&lt;/strong&gt; up, try to stay &lt;strong style=&quot;color:yellow&quot;&gt;motivated&lt;/strong&gt;, and keep the &lt;strong style=&quot;color:yellow&quot;&gt;bosses happy&lt;/strong&gt;.&lt;/p&gt;\
+			&lt;p&gt;Congrats on the new gig! I&#39;m on to greener pastures. Hope you&#39;ll make it further here than I did. Maybe even &lt;strong style=&quot;color:yellow&quot;&gt;earn a promotion by the end of the year!&lt;/strong&gt;&lt;/p&gt;\
+			&lt;p&gt;It&#39;s like any other corporate job. Keep your &lt;strong style=&quot;color:yellow&quot;&gt;energy&lt;/strong&gt; up, stay &lt;strong style=&quot;color:yellow&quot;&gt;motivated&lt;/strong&gt;, and keep the &lt;strong style=&quot;color:yellow&quot;&gt;bosses happy&lt;/strong&gt;.&lt;/p&gt;\
 			&lt;p&gt;I left something on your desk. Think of it as a welcome gift.&lt;/p&gt;
 			&lt;p&gt;&lt;em&gt;You check your desk. The person who was last here left a can of pringles with a note: &quot;Good Luck!&quot;&lt;/em&gt;&lt;/p&gt;
 			[[Start]]
@@ -1198,10 +1198,13 @@ Macro.add("timedprogressbar", {
         &lt;div class=&quot;content&quot;&gt;
             User is $user
             &lt;p&gt;You&#39;re back at your desk.&lt;/p&gt;
-            &lt;em style=&quot;color:yellow;&quot;&gt;DEVELOPER&#39;S NOTE: When players are not in a scenario, they&#39;ll have the opportunity to perform various actions at their desk, allowing them a bit more control over their resources (like recharging from burnout, for example).&lt;/em&gt;
+            &lt;em style=&quot;color:yellow;&quot;&gt;DEVELOPER&#39;S NOTE: When players are not in a scenario, they&#39;ll have the opportunity to perform various actions at their desk.&lt;/em&gt;
 
             &lt;&lt;nobr&gt;&gt;&lt;ul&gt;
-                &lt;li&gt;Get back to work (fill out paperwork)&lt;/li&gt;
+                &lt;li&gt;&lt;&lt;linkreplace &quot;Get back to work&quot;&gt;&gt;
+                        &lt;&lt;typesim &quot;Hey Jim, I won&#39;t be into work today, sorry.&quot;&gt;&gt;Send the email.&lt;&lt;/typesim&gt;&gt;
+                    &lt;&lt;/linkreplace&gt;&gt;
+                &lt;/li&gt;
                 &lt;li&gt;
                     &lt;&lt;script&gt;&gt;
                         Meter.get(&#39;timer&#39;).on(&#39;:meter-animation-complete&#39;, function () {
@@ -1211,7 +1214,7 @@ Macro.add("timedprogressbar", {
                     &lt;&lt;linkreplace &quot;Fiddle with your desk toys (Meditation Balls)&quot;&gt;&gt;
                         Breathe in... and out.
                         &lt;&lt;audio &quot;om&quot; volume 0.25 fadeoverto 5 0&gt;&gt;
-                        
+/*                         
                         &lt;&lt;showmeter &#39;timer&#39; 1&gt;&gt;
                         &lt;&lt;timed 5s&gt;&gt;
                             &lt;&lt;audio &quot;om&quot; stop&gt;&gt;
@@ -1222,7 +1225,7 @@ Macro.add("timedprogressbar", {
                                 Dialog.open();
                             &lt;&lt;/script&gt;&gt;
                             &lt;&lt;remove &quot;#meter-timer&quot;&gt;&gt;
-                        &lt;&lt;/timed&gt;&gt;
+                        &lt;&lt;/timed&gt;&gt; */
                     &lt;&lt;/linkreplace&gt;&gt;
                 &lt;/li&gt;
                 &lt;li&gt;Silently scream in the bathroom&lt;/li&gt;

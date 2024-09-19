@@ -1,7 +1,7 @@
 :: StoryInit
 <<cacheaudio "office" "audio/office.mp3">>
 <<cacheaudio "boom" "audio/boom.mp3">>
-<<cacheaudio "phone" "audio/phone.m4a">>
+<<cacheaudio "phone" "audio/slack.mp3">>
 <<cacheaudio "meditation" "audio/meditation-ball.mp3">>
 <<cacheaudio "om" "audio/om.mp3">>
 

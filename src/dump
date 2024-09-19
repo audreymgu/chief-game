@@ -1,0 +1,52 @@
+<<nobr>>
+<<set $seconds to random(4, 10)>>
+<<silently>>
+    <<repeat 1s>>
+        <<set $seconds to $seconds - 1>>
+        <<if $seconds gt 0>>
+
+        <<else>>
+            /* Demo Guardrail */
+            <<if $time == 2 and $quarter == 2>>
+                <<goto [[Demo End]]>>
+            <<else>>
+                <<GoRandom "Q1">>
+            <</if>>
+            
+            /* <<run alert("DRAMA ALERT!!")>> */
+        	
+            <<stop>>
+        <</if>>
+    <</repeat>>
+<</silently>>
+<</nobr>>
+
+<<nobr>>
+  /* [[Pet the Cat]]
+  [[Fight in the Applebee's Parking Lot]]
+  [[Minus Satisfaction]]
+  [[Burnout]] */
+  /* <<link "SIGOZINE GO IN">>
+      <<GoRandom "Q1">>
+  <</link>> */<</nobr>>
+
+
+  <<nobr>>
+    <<set $seconds to random(4, 10)>>
+    <<silently>>
+        <<repeat 1s>>
+            <<set $seconds to $seconds - 1>>
+            <<if $seconds gt 0>>
+
+            <<else>>
+                /* Demo Guardrail */
+                <<if $time == 2 and $quarter == 2>>
+                    <<goto [[Demo End]]>>
+                <<else>>
+                    <<GoRandom "Q1">>
+                <</if>>
+                <<stop>>
+            <</if>>
+        <</repeat>>
+    <</silently>>
+<</nobr>>

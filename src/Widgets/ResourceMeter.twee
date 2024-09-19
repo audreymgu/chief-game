@@ -14,5 +14,8 @@
             <progress class="ui-meter" id="approval" @value="$approval" max="7"></progress>\
             <p id="la" class="ui-label">Approval: $approval</p>\
         </div>
+        <div class="quit-btn">\
+            [[QUIT]]
+        </div>
     </div>\
 <</widget>>\

@@ -25,47 +25,16 @@
     <<set $login to false>>
 <</if>><</nobr>>
 <<audio "office" volume 0.25 loop play>>\                  
-<div class="quit-button">
-    [[QUIT]]
-</div>
 <div class="abs-wrapper">\
 	<div class="rel-wrapper">\
         <<ResourceMeter>>\
         <div class="content">
-            User is $user
             <p>You're back at your desk.</p>
-            <em style="color:yellow;">DEVELOPER'S NOTE: When players are not in a scenario, they'll have the opportunity to perform various actions at their desk.</em>
+            <em style="color:yellow;">DEVELOPER'S NOTE: When players are not in a scenario, they'll have the opportunity to fiddle with stuff at their desk.</em>
 
             <<nobr>><ul>
-                <li><<linkreplace "Get back to work">>
-                        <<typesim "Hey Jim, I won't be into work today, sorry.">>Send the email.<</typesim>>
-                    <</linkreplace>>
-                </li>
-                <li>
-                    <<script>>
-                        Meter.get('timer').on(':meter-animation-complete', function () {
-                            
-                        });
-                    <</script>>
-                    <<linkreplace "Fiddle with your desk toys (Meditation Balls)">>
-                        Breathe in... and out.
-                        <<audio "om" volume 0.25 fadeoverto 5 0>>
-/*                         
-                        <<showmeter 'timer' 1>>
-                        <<timed 5s>>
-                            <<audio "om" stop>>
-                            <<CalcResource "1" "0" "0">>
-                            <<script>>
-                                Dialog.setup("Enlightenment");
-                                Dialog.wiki("You emerge refreshed and renewed. ENERGY +1");
-                                Dialog.open();
-                            <</script>>
-                            <<remove "#meter-timer">>
-                        <</timed>> */
-                    <</linkreplace>>
-                </li>
-                <li>Silently scream in the bathroom</li>
-                <li>Check social media</li>
+                <li>Fiddle with your desk toys</li>
+                <li>Use your computer</li>
                 <li>Take a nap</li>
             </ul><</nobr>>
         </div>\

@@ -429,7 +429,7 @@ Macro.add("timedprogressbar", {
 			
 		});
 	},
-});</script><tw-tag name="EndE" color="orange"></tw-tag><tw-tag name="EndFired" color="red"></tw-tag><tw-tag name="EndStay" color="red"></tw-tag><tw-tag name="EndPromo" color="red"></tw-tag><tw-tag name="nobr" color="purple"></tw-tag><tw-tag name="Widget" color="green"></tw-tag><tw-tag name="Main" color="blue"></tw-tag><tw-tag name="Q4" color="green"></tw-tag><tw-tag name="Q3" color="green"></tw-tag><tw-tag name="EndUnhappy" color="red"></tw-tag><tw-tag name="Q1" color="green"></tw-tag><tw-tag name="Q2" color="green"></tw-tag><tw-tag name="StoryInit" color="orange"></tw-tag><tw-tag name="widget" color="orange"></tw-tag><tw-passagedata pid="1" name="Action" tags="" position="300,800" size="100,100"></tw-passagedata><tw-passagedata pid="2" name="Burnout" tags="" position="500,300" size="100,100">&lt;div class=&quot;abs-wrapper&quot;&gt;\
+});</script><tw-tag name="Q1" color="green"></tw-tag><tw-tag name="EndStay" color="red"></tw-tag><tw-tag name="Q3" color="green"></tw-tag><tw-tag name="Q4" color="green"></tw-tag><tw-tag name="Main" color="blue"></tw-tag><tw-tag name="EndE" color="orange"></tw-tag><tw-tag name="Widget" color="green"></tw-tag><tw-tag name="StoryInit" color="orange"></tw-tag><tw-tag name="widget" color="orange"></tw-tag><tw-tag name="EndUnhappy" color="red"></tw-tag><tw-tag name="Q2" color="green"></tw-tag><tw-tag name="EndFired" color="red"></tw-tag><tw-tag name="EndPromo" color="red"></tw-tag><tw-tag name="nobr" color="purple"></tw-tag><tw-passagedata pid="1" name="Action" tags="" position="300,800" size="100,100"></tw-passagedata><tw-passagedata pid="2" name="Burnout" tags="" position="500,300" size="100,100">&lt;div class=&quot;abs-wrapper&quot;&gt;\
 	&lt;div class=&quot;rel-wrapper&quot;&gt;\
         &lt;&lt;ResourceMeter&gt;&gt;\
 		&lt;div class=&quot;content&quot;&gt;
@@ -1323,17 +1323,16 @@ You pet the cat, it was good :3
 		&lt;&lt;set $satisfaction -= 1&gt;&gt;
     &lt;&lt;/if&gt;&gt;
 	&lt;&lt;set $energy to Math.clamp($energy += Number($args[0]), -10, 10)&gt;&gt;
-   	&lt;&lt;set $satisfaction to Math.clamp($satisfaction += Number($args[1]), 0, 10)&gt;&gt;
+   	/* &lt;&lt;set $satisfaction to Math.clamp($satisfaction += Number($args[1]), 0, 10)&gt;&gt; */
     &lt;&lt;set $approval to Math.clamp($approval += Number($args[2]), 0, 10)&gt;&gt;
 	&lt;&lt;timed 10ms&gt;&gt;
 		&lt;&lt;script&gt;&gt;
 			$(&#39;#energy&#39;).attr(&#39;value&#39;, State.variables.energy);
-			$(&#39;#satisfaction&#39;).attr(&#39;value&#39;, State.variables.satisfaction);
 			$(&#39;#approval&#39;).attr(&#39;value&#39;, State.variables.approval);
 		&lt;&lt;/script&gt;&gt;
-		&lt;&lt;replace &quot;#le&quot;&gt;&gt;Energy: $energy&lt;&lt;/replace&gt;&gt;
-		&lt;&lt;replace &quot;#ls&quot;&gt;&gt;Satisfaction: $satisfaction&lt;&lt;/replace&gt;&gt;
-		&lt;&lt;replace &quot;#la&quot;&gt;&gt;Approval: $approval&lt;&lt;/replace&gt;&gt;
+		&lt;&lt;replace &quot;#le&quot;&gt;&gt;WLB: $energy&lt;&lt;/replace&gt;&gt;
+		/* &lt;&lt;replace &quot;#ls&quot;&gt;&gt;Satisfaction: $satisfaction&lt;&lt;/replace&gt;&gt; */
+		&lt;&lt;replace &quot;#la&quot;&gt;&gt;Performance: $approval&lt;&lt;/replace&gt;&gt;
 	&lt;&lt;/timed&gt;&gt;
 &lt;&lt;/widget&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="80" name="EndingCheck" tags="widget" position="900,100" size="100,100">&lt;&lt;widget &quot;EndingCheck&quot;&gt;&gt;
 	&lt;&lt;set $time to $time + 1&gt;&gt;
@@ -1349,11 +1348,14 @@ You pet the cat, it was good :3
         &lt;&lt;set $time to 0&gt;&gt;
     &lt;&lt;/if&gt;&gt;
     
-	&lt;&lt;if $energy &lt;= 0&gt;&gt;
+	/* &lt;&lt;if $energy &lt;= 0&gt;&gt;
 		&lt;&lt;set $burnout to true&gt;&gt;
     &lt;&lt;else&gt;&gt;
     	&lt;&lt;set $burnout to false&gt;&gt;
-    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;/if&gt;&gt; */
+    &lt;&lt;if $energy &lt;= 0&gt;&gt;
+     	&lt;&lt;GoRandom &quot;EndUnhappy&quot;&gt;&gt;
+	&lt;&lt;/if&gt;&gt;
     
     &lt;&lt;if $satisfaction &lt;= 0&gt;&gt;
      	&lt;&lt;GoRandom &quot;EndUnhappy&quot;&gt;&gt;
@@ -1389,15 +1391,15 @@ You pet the cat, it was good :3
         &lt;p id=&quot;quarter&quot; class=&quot;ui-label&quot;&gt;Q$quarter&lt;/p&gt;\
         &lt;div class=&quot;meter-unit&quot;&gt;\
             &lt;progress class=&quot;ui-meter&quot; id=&quot;energy&quot; @value=&quot;$energy&quot; max=&quot;7&quot;&gt;&lt;/progress&gt;\
-            &lt;p id=&quot;le&quot; class=&quot;ui-label&quot;&gt;Energy: $energy&lt;/p&gt;\
+            &lt;p id=&quot;le&quot; class=&quot;ui-label&quot;&gt;WLB: $energy&lt;/p&gt;\
         &lt;/div&gt;
-        &lt;div class=&quot;meter-unit&quot;&gt;\
+        /* &lt;div class=&quot;meter-unit&quot;&gt;\
             &lt;progress class=&quot;ui-meter&quot; id=&quot;satisfaction&quot; @value=&quot;$satisfaction&quot; max=&quot;7&quot;&gt;&lt;/progress&gt;\
             &lt;p id=&quot;ls&quot; class=&quot;ui-label&quot;&gt;Satisfaction: $satisfaction&lt;/p&gt;\
-        &lt;/div&gt;
+        &lt;/div&gt; */
         &lt;div class=&quot;meter-unit&quot;&gt;\
             &lt;progress class=&quot;ui-meter&quot; id=&quot;approval&quot; @value=&quot;$approval&quot; max=&quot;7&quot;&gt;&lt;/progress&gt;\
-            &lt;p id=&quot;la&quot; class=&quot;ui-label&quot;&gt;Approval: $approval&lt;/p&gt;\
+            &lt;p id=&quot;la&quot; class=&quot;ui-label&quot;&gt;Performance: $approval&lt;/p&gt;\
         &lt;/div&gt;
         &lt;div class=&quot;quit-btn&quot;&gt;\
             [[QUIT]]
@@ -1408,13 +1410,10 @@ You pet the cat, it was good :3
     &lt;div class=&quot;action-box&quot;&gt;
         &lt;p&gt;&lt;strong&gt;&lt;em&gt;
             &lt;&lt;if $args[0] != 0&gt;&gt;
-                ENERGY $args[0]
-            &lt;&lt;/if&gt;&gt;
-            &lt;&lt;if $args[1] != 0&gt;&gt;
-                SATISFACTION $args[1]
+                WLB: $args[0]
             &lt;&lt;/if&gt;&gt;
             &lt;&lt;if $args[2] != 0&gt;&gt;
-                APPROVAL $args[2]
+                PERFORMANCE: $args[2]
             &lt;&lt;/if&gt;&gt;
         &lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
         &lt;&lt;link &quot;Next&quot; &quot;Start&quot;&gt;&gt;

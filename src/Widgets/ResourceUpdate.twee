@@ -4,13 +4,10 @@
     <div class="action-box">
         <p><strong><em>
             <<if $args[0] != 0>>
-                ENERGY $args[0]
-            <</if>>
-            <<if $args[1] != 0>>
-                SATISFACTION $args[1]
+                WLB: $args[0]
             <</if>>
             <<if $args[2] != 0>>
-                APPROVAL $args[2]
+                PERFORMANCE: $args[2]
             <</if>>
         </em></strong></p>
         <<link "Next" "Start">>

@@ -4,15 +4,15 @@
         <p id="quarter" class="ui-label">Q$quarter</p>\
         <div class="meter-unit">\
             <progress class="ui-meter" id="energy" @value="$energy" max="7"></progress>\
-            <p id="le" class="ui-label">Energy: $energy</p>\
+            <p id="le" class="ui-label">WLB: $energy</p>\
         </div>
-        <div class="meter-unit">\
+        /* <div class="meter-unit">\
             <progress class="ui-meter" id="satisfaction" @value="$satisfaction" max="7"></progress>\
             <p id="ls" class="ui-label">Satisfaction: $satisfaction</p>\
-        </div>
+        </div> */
         <div class="meter-unit">\
             <progress class="ui-meter" id="approval" @value="$approval" max="7"></progress>\
-            <p id="la" class="ui-label">Approval: $approval</p>\
+            <p id="la" class="ui-label">Performance: $approval</p>\
         </div>
         <div class="quit-btn">\
             [[QUIT]]

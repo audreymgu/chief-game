@@ -13,11 +13,14 @@
         <<set $time to 0>>
     <</if>>
     
-	<<if $energy <= 0>>
+	/* <<if $energy <= 0>>
 		<<set $burnout to true>>
     <<else>>
     	<<set $burnout to false>>
-    <</if>>
+    <</if>> */
+    <<if $energy <= 0>>
+     	<<GoRandom "EndUnhappy">>
+	<</if>>
     
     <<if $satisfaction <= 0>>
      	<<GoRandom "EndUnhappy">>

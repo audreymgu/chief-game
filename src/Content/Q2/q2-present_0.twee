@@ -1,0 +1,17 @@
+:: You’re Invited to Present to the Exec. Team [Q2] {"position":"600,675","size":"100,100"}
+/* passage content */
+<<audio "phone" volume 0.25 play>>
+<div class="abs-wrapper">
+	<div class="rel-wrapper">
+        <<ResourceMeter>>
+        <div class="content">
+            <h1>Make 'Em Proud</h1>
+            <p>The exec. committee has invited you to present your latest project at their quarterly shareout.</p>
+        </div>
+        <<ActionBox
+            "Take a bow"
+            "Share credit|Talk Up|Nothing to Claim"
+            "Pass the mic"
+        >>
+    </div>
+</div>

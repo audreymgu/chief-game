@@ -1,0 +1,13 @@
+/* title + metadata */
+:: You bribe {"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">
+	<div class="rel-wrapper">
+        <<ResourceMeter>>
+		<div class="content">
+			<p>You call in every favor and put together a clear plan of attack. Your team grumbles, but they get it done.</p>
+		</div>
+		<<CalcResource "-1" "0" "1">>
+		<<ResourceUpdate "-1" "0" "1">>
+	</div>
+</div>

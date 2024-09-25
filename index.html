@@ -104,66 +104,21 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://48081651-DB3C-4BED-B01B-71E01159D93A// --><tw-storydata name="Action Items (Prototype B)" startnode="8" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="48081651-DB3C-4BED-B01B-71E01159D93A" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "StoryStylesheet" */
-/* .passage {
-	transition-property: none;
-} */
-
-/* resets */
- p {
-  margin: 0;
- }
-
- h1 {
-  margin: 0;
- }
-
-.action-box {
-  position: absolute;
-  bottom: 0;
-  width: calc(100% - 4rem);
-  border: 1px solid white;
-  border-width: 1px 0 0 0;
-  margin: auto;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
+	<!-- UUID://48081651-DB3C-4BED-B01B-71E01159D93A// --><tw-storydata name="Action Items (Prototype B)" startnode="4" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="48081651-DB3C-4BED-B01B-71E01159D93A" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "Story Stylesheet" */
+@font-face {
+  font-family: "tickerbit";
+  src: url("fonts/tickerbit-mono.woff2") format("woff2");
 }
-
-.abs-wrapper {
-  margin: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 50vw;
-  height: 50vh;
-  max-height: 40rem;
-  transform: translate(-50%, -50%);
-  border: 1px solid white;
+@font-face {
+  font-family: "start-2p";
+  src: url("fonts/start-2p.otf") format("opentype");
 }
-
-.rel-wrapper {
-  position: relative;
-  height: 100%;
-}
-
-.content {
-  padding: 2rem;
-  overflow: scroll;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
+body {
+  background-color: #213C06;
 }
 
 #ui-bar {
-  width: 100%;
-  height: 5rem;
-  text-align: left;
+  display: none;
 }
 
 #ui-bar-body {
@@ -175,7 +130,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
   justify-content: space-between;
 }
 
-#ui-bar-body>:not(:first-child) {
+#ui-bar-body > :not(:first-child) {
   margin: 0;
 }
 
@@ -195,30 +150,11 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 }
 
 #menu ul {
-  margin:0;
+  margin: 0;
 }
 
 #story {
-  margin:0;
-}
-
-.resource-meter {
-  border: 1px solid white;
-  border-width: 0 0 1px 0;
   margin: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 12px;
-  padding: 10px;
-}
-
-.meter-unit {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 progress {
@@ -245,33 +181,584 @@ progress::-webkit-progress-value {
   right: 0;
   height: 100px;
   width: 200px;
-  border: 1px solid white;
   text-align: center;
   justify: center;
 }
 
 .quit-btn {
-  border: 1px solid white;
   height: 100%;
   justify: center;
 }
-/* twine-user-stylesheet #2: "UserStylesheet" */
-.progress-bar {
-	position: relative;
-	border: 1px solid #777;
-	background: black;
-	height: 1em;
+
+.chapel-meter {
+  border: 2px solid #446127;
 }
 
-.progress-value {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	background: #00ff00;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "StoryScript" */
-// hide back + forward
+.passage {
+  transition-property: none;
+}
+
+p {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+.abs-wrapper {
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 600px;
+  max-width: 720px;
+  max-height: 670px;
+  transform: translate(-50%, -50%);
+}
+
+.rel-wrapper {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  gap: 8px;
+  background-color: #DFDFD0;
+  border: 1px solid black;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  background-color: #FAF4E5;
+  border: 1px solid black;
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+}
+
+.logo {
+  position: absolute;
+  top: -3rem;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.resource-meter {
+  padding: 0 10px 0 10px;
+  background-color: #668547;
+  color: #F3E8CC;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  flex-grow: 1;
+  font-family: start-2p;
+}
+.resource-meter__unit {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.resource-meter__label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 10px;
+  margin-bottom: -2px;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-right: 1.5rem;
+}
+.user__label {
+  color: #213C06;
+  text-transform: uppercase;
+  font-size: 8px;
+}
+.user__name {
+  margin-top: 4px;
+  line-height: 1;
+  font-size: 20px;
+  letter-spacing: 1%;
+}
+
+.meter-unit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-box {
+  padding: 0 8px 8px 8px;
+  width: calc(100% - 16px);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: stretch;
+  align-content: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.avatar {
+  border-right: 1px solid black;
+  display: flex;
+  font-size: 12px;
+  align-items: flex-start;
+}
+.avatar__image {
+  object-fit: contain;
+  height: 64px;
+}
+
+.scenario {
+  flex-grow: 1;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  color: #2A2C41;
+  max-height: 325px;
+}
+.scenario__title {
+  margin-top: 8px;
+  line-height: 110%;
+  padding: 0;
+  margin-bottom: 0.75rem;
+  font-family: start-2p;
+  text-transform: uppercase;
+}
+.scenario__text {
+  flex-grow: 1;
+}
+.scenario__desc {
+  font-family: tickerbit;
+  line-height: 130%;
+}
+.scenario__img {
+  width: 275px;
+  align-self: start;
+}
+
+.titlebar {
+  display: flex;
+  justify-content: space-between;
+  height: 24px;
+  text-align: center;
+  border-bottom: 1px solid black;
+  padding: 3px;
+  background-image: linear-gradient(to bottom, #2A2C41 0%, #2A2C41 100%), linear-gradient(to bottom, #F8F7F2 0%, #F8F7F2 100%);
+  background-clip: content-box, padding-box;
+}
+.titlebar__text {
+  font-family: tickerbit;
+  font-size: 14px;
+}
+.titlebar__grip {
+  padding: 0 4px 0 4px;
+}
+
+.button:active {
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+}
+.button a {
+  border-style: ridge;
+  border-width: 1rem;
+  border-image-source: url("img/button.png");
+  border-image-slice: 30% 40% fill;
+  border-image-repeat: repeat;
+  border-radius: 12px;
+  color: #2A2C41;
+  background: #DFDFD0;
+  display: block;
+  height: 18px;
+  line-height: 22px;
+  margin-top: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: start-2p;
+  font-size: 14px;
+  transition: none;
+}
+.button a:hover {
+  border-image-source: url("img/button-hover.png");
+  text-decoration: none;
+}
+
+.menu-bar {
+  position: fixed;
+  width: calc(100vw - 12px);
+  background-color: #668547;
+  left: 0;
+  display: flex;
+  height: 36px;
+  padding: 6px;
+  justify-content: space-between;
+  font-family: tickerbit;
+}
+.menu-bar__group {
+  height: 100%;
+  display: flex;
+  gap: 4px;
+}
+.menu-bar__link {
+  color: #DCF15B;
+  background-color: #547335;
+  padding: 4px 12px 0 12px;
+}
+.menu-bar__link:hover {
+  color: black;
+  background-color: #DCF15B;
+}
+
+/*# sourceMappingURL=main.css.map */
+/* twine-user-stylesheet #2: "main.css" */
+@font-face {
+  font-family: "tickerbit";
+  src: url("fonts/tickerbit-mono.woff2") format("woff2");
+}
+@font-face {
+  font-family: "start-2p";
+  src: url("fonts/start-2p.otf") format("opentype");
+}
+body {
+  background-color: #213C06;
+}
+
+#ui-bar {
+  display: none;
+}
+
+#ui-bar-body {
+  margin: 0;
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#ui-bar-body > :not(:first-child) {
+  margin: 0;
+}
+
+#story-caption {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#menu-item-saves {
+  display: none;
+}
+
+#ui-bar-toggle {
+  display: none;
+}
+
+#menu ul {
+  margin: 0;
+}
+
+#story {
+  margin: 0;
+}
+
+progress {
+  height: 24px;
+}
+
+.ui-label {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+progress::-webkit-progress-value {
+  transition: width 0.5s ease;
+}
+
+#quarter {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.quit-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100px;
+  width: 200px;
+  text-align: center;
+  justify: center;
+}
+
+.quit-btn {
+  height: 100%;
+  justify: center;
+}
+
+.chapel-meter {
+  border: 2px solid #446127;
+}
+
+.passage {
+  transition-property: none;
+}
+
+p {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+.abs-wrapper {
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 600px;
+  max-width: 720px;
+  max-height: 670px;
+  transform: translate(-50%, -50%);
+}
+
+.rel-wrapper {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  gap: 8px;
+  background-color: #DFDFD0;
+  border: 1px solid black;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  background-color: #FAF4E5;
+  border: 1px solid black;
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+}
+
+.logo {
+  position: absolute;
+  top: -3rem;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.resource-meter {
+  padding: 0 10px 0 10px;
+  background-color: #668547;
+  color: #F3E8CC;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  flex-grow: 1;
+  font-family: start-2p;
+}
+.resource-meter__unit {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.resource-meter__label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 10px;
+  margin-bottom: -2px;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-right: 1.5rem;
+}
+.user__label {
+  color: #213C06;
+  text-transform: uppercase;
+  font-size: 8px;
+}
+.user__name {
+  margin-top: 4px;
+  line-height: 1;
+  font-size: 20px;
+  letter-spacing: 1%;
+}
+
+.meter-unit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-box {
+  padding: 0 8px 8px 8px;
+  width: calc(100% - 16px);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: stretch;
+  align-content: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.avatar {
+  border-right: 1px solid black;
+  display: flex;
+  font-size: 12px;
+  align-items: flex-start;
+}
+.avatar__image {
+  object-fit: contain;
+  height: 64px;
+}
+
+.scenario {
+  flex-grow: 1;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  color: #2A2C41;
+  max-height: 325px;
+}
+.scenario__title {
+  margin-top: 8px;
+  line-height: 110%;
+  padding: 0;
+  margin-bottom: 0.75rem;
+  font-family: start-2p;
+  text-transform: uppercase;
+}
+.scenario__text {
+  flex-grow: 1;
+}
+.scenario__desc {
+  font-family: tickerbit;
+  line-height: 130%;
+}
+.scenario__img {
+  width: 275px;
+  align-self: start;
+}
+
+.titlebar {
+  display: flex;
+  justify-content: space-between;
+  height: 24px;
+  text-align: center;
+  border-bottom: 1px solid black;
+  padding: 3px;
+  background-image: linear-gradient(to bottom, #2A2C41 0%, #2A2C41 100%), linear-gradient(to bottom, #F8F7F2 0%, #F8F7F2 100%);
+  background-clip: content-box, padding-box;
+}
+.titlebar__text {
+  font-family: tickerbit;
+  font-size: 14px;
+}
+.titlebar__grip {
+  padding: 0 4px 0 4px;
+}
+
+.button:active {
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+}
+.button a {
+  border-style: ridge;
+  border-width: 1rem;
+  border-image-source: url("img/button.png");
+  border-image-slice: 30% 40% fill;
+  border-image-repeat: repeat;
+  border-radius: 12px;
+  color: #2A2C41;
+  background: #DFDFD0;
+  display: block;
+  height: 18px;
+  line-height: 22px;
+  margin-top: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: start-2p;
+  font-size: 14px;
+  transition: none;
+}
+.button a:hover {
+  border-image-source: url("img/button-hover.png");
+  text-decoration: none;
+}
+
+.menu-bar {
+  position: fixed;
+  width: calc(100vw - 12px);
+  background-color: #668547;
+  left: 0;
+  display: flex;
+  height: 36px;
+  padding: 6px;
+  justify-content: space-between;
+  font-family: tickerbit;
+}
+.menu-bar__group {
+  height: 100%;
+  display: flex;
+  gap: 4px;
+}
+.menu-bar__link {
+  color: #DCF15B;
+  background-color: #547335;
+  padding: 4px 12px 0 12px;
+}
+.menu-bar__link:hover {
+  color: black;
+  background-color: #DCF15B;
+}
+
+/*# sourceMappingURL=main.css.map */
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">// hide back + forward
 Config.history.controls = false;
+Config.passages.nobr = true;
 
 // passage name function
 setup.getPassageNames = function(tag) {
@@ -291,186 +778,941 @@ setup.getPassageNames = function(tag) {
 };
 
 setup.userDescs = {};
-
 setup.userDescs.product = "PRODUCT: Software bends to your will. Output is your middle name. If only EQ was something you could download.";
 setup.userDescs.sales = "SALES: You can charm, cajole, and occasionally even captivate. What you can’t do is spreadsheets.";
 setup.userDescs.legal = "LEGAL: You practically invented due diligence. You cover your own ass with aplomb. You tend to make colleagues nervous.";
 setup.userDescs.operations = "OPS: Corporate machinery is your weapon of choice. But years of training have taken their toll.";
 
-console.log(setup.userDescs);
-
-// type-sim.min.js, for SugarCube 2, by Chapel
-// v2.0.0, 2024-07-22, 336675ff2cabe5f729a5f30d86aa409cc8432726
-;!function(){"use strict";Macro.add("typesim",{tags:null,handler:function(){if(!this.args.length||!this.args[0]||"string"!=typeof this.args[0])return this.error("no text to type out was provided");var t,e=$(document.createElement("span")).addClass("macro"+this.name),n=$(document.createElement("div"));this.payload[0].contents&&this.payload[0].contents.trim()&&(t=this.payload[0].contents),function(t,e,n){if(t&&"string"==typeof t){!e||e instanceof $||(e=$(e));var i=0,s=t.split(""),a=[],o=$(document.createElement("textarea")).addClass("type-sim").on("input.type-sim",(function(){var e=$(this);i=a.push(s[i]),e.val(a.join("")),t.length===a.length&&(e.off("input.type-sim").ariaDisabled(!0),n&&"function"==typeof n&&n(a.join("")),$(document).trigger({type:":type-sim-end",message:a.join("")}))}));e&&e[0]&&e.append(o)}}(this.args[0],e,(function(){n.wiki(t)})),e.append(n).appendTo($(this.output))}})}();
-// end type-sim.min.js
 // meters.min.js, for SugarCube 2, by Chapel
 // v1.0.1, 2024-07-22, 336675ff2cabe5f729a5f30d86aa409cc8432726
 ;!function(){"use strict";var t=!0,e=!1,s=!1,i={full:"#2ECC40",empty:"#FF4136",back:"#DDDDDD",height:"12px",width:"180px",animate:400,easing:"swing",text:"#111111",label:"",align:"center"},n=["center","left","right"],r=["swing","linear"];function a(t,e){return t&&"string"==typeof t&&(t=t.toLowerCase().trim())?t:e||""}function o(t){return t<.5?2*t*t:(4-2*t)*t-1}function l(t,e){if(!(this instanceof l))return new l(t,e);var s=clone(i);this.settings=Object.assign(s,t),this.settings.align=a(this.settings.align),this.settings.easing=a(this.settings.easing),n.includes(this.settings.align)||(this.settings.align="center"),r.includes(this.settings.easing)||(this.settings.easing="swing"),e=Number(e),Number.isNaN(e)&&(e=1),e=Math.clamp(e,0,1),this.value=e;var h=$(document.createElement("div")).addClass("chapel-meter").attr({"data-val":e,"data-label":this.settings.label}).css({position:"relative","background-color":this.settings.back,height:this.settings.height,width:this.settings.width,overflow:"hidden"}),g=$(document.createElement("div")).addClass("meter-label").css({top:0,right:0,"font-size":this.settings.height,"font-weight":"bold","line-height":"100%",width:"100%",height:"100%","vertical-align":"middle","text-align":this.settings.align,color:this.settings.text,"z-index":1,position:"relative",bottom:"100%"}).wiki(this.settings.label).appendTo(h),u=$(document.createElement("div")).addClass("meter-top").css({"background-color":this.settings.full,opacity:o(this.value),width:"100%",height:"100%","z-index":0}),c=$(document.createElement("div")).addClass("meter-bottom").css({position:"absolute",top:0,left:0,"background-color":this.settings.empty,opacity:1,width:100*this.value+"%",height:"100%","z-index":0}).append(u).appendTo(h);this.$element=h,this.$bars={top:u,bottom:c},this.$label=g,g.css("font-size",parseInt(h.css("height"),10)<parseInt($(".passage").css("font-size"),10)?h.css("height"):$(".passage").css("font-size")),g.css("line-height",h.css("height"))}Object.assign(l,{_list:new Map,is:function(t){return t instanceof l},has:function(t){return l._list.has(t)&&l.is(l._list.get(t))},get:function(t){return l.has(t)?l._list.get(t):null},del:function(t){l.has(t)&&l._list.delete(t)},add:function(t,s,i){if(!l.has(t)||e){Object.assign(s,{id:t});var n=new l(s,i);return l._list.set(t,n),n}console.error('Meter "'+t+'" already exists.')},_emit:function(t,e){l.is(t)&&t.$element.trigger({type:":"+e,meter:t})}}),Object.assign(l.prototype,{constructor:l,_label:function(t){var e=this;function s(){e.$label.empty().wiki(e.settings.label),e.$label.css("font-size",parseInt(e.$element.css("height"),10)<parseInt(e.$element.parent().css("font-size"),10)?e.$element.css("height"):e.$element.parent().css("font-size")),e.$label.css("line-height",e.$element.css("height"))}return t?setTimeout(s,Engine.minDomActionDelay):s(),this},_width:function(){var t=this;return this.$bars.bottom.animate({width:100*this.value+"%"},this.settings.animate,this.settings.easing,(function(){l._emit(t,"meter-animation-complete")})),this},_color:function(){return this.$bars.top.animate({opacity:o(this.value)},this.settings.animate,this.settings.easing),this},animate:function(){return l._emit(this,"meter-animation-start"),this._color()._width()._label()},val:function(t){return void 0!==t&&(t=Number(t),Number.isNaN(t)&&(t=1),t=Math.clamp(t,0,1),this.value=t,this.animate()),this.value},options:function(t){return t&&"object"==typeof t&&Object.assign(this.settings,t),this.settings},unwrap:function(){return this.$element[0]},place:function(t,e){var s=$(document.createElement("span"));return t instanceof jQuery||(t=$(t)),t[0]||console.warn("meter#place() -> no valid target"),e&&"object"==typeof e&&(e.classes&&(Array.isArray(e.classes)||"string"==typeof e.classes)&&s.addClass(e.classes),e.attr&&"object"==typeof e.attr&&s.attr(e.attr)),t.append(s.append(this.$element)),this._label(!0),this},on:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.on(t,e),this):this},one:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.one(t,e),this):this},off:function(t){return t=t&&"string"==typeof t&&t.trim()?t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "):".userland",this.$element.off(t),this},click:function(t,e){return this.$element.ariaClick(t,e),this},clone:function(){return new l(this.settings,this.value)},toJSON:function(){return JSON.reviveWrapper("new setup.Meter("+JSON.stringify(this.settings)+", "+this.value+")")}}),setup.Meter=l,t&&(window.Meter=window.Meter||l),Macro.add("newmeter",{tags:["colors","sizing","animation","label"],handler:function(){if(State.length>0&&!s)return this.error("The `<<newmeter>>` macro must be called in your `StoryInit` special passage. Seriously. No excuses. --Love, Chapel");if(this.args.length<1)return this.error("The `<<newmeter>>` macro requires at least one argument: a meter name.");var t=this.args[0],i=null,n=null,r=null,a=null;if("string"!=typeof t)return this.error("Invalid meter name.");if(t=t.trim(),l.has(t)&&!e)return this.error('Cannot clobber the existing meter "'+t+'".');this.payload.length&&(i=this.payload.find((function(t){return"colors"===t.name})),n=this.payload.find((function(t){return"sizing"===t.name})),r=this.payload.find((function(t){return"animation"===t.name})),a=this.payload.find((function(t){return"label"===t.name})));var o={};if(i){if(!i.args.length)return this.error("No arguments passed to the `<<colors>>` tag.");switch(i.args.length){case 1:o.empty=i.args[0],o.full="transparent";break;case 2:o.full=i.args[0],o.empty=i.args[1];break;default:o.full=i.args[0],o.empty=i.args[1],o.back=i.args[2]}}if(n){if(!n.args.length)return this.error("No arguments passed to the `<<sizing>>` tag.");o.width=n.args[0],n.args[1]&&(o.height=n.args[1])}if(r){if(!r.args.length)return this.error("No arguments passed to the `<<animation>>` tag.");if("boolean"!=typeof r.args[0]||r.args[0]){if("string"!=typeof r.args[0])return this.error("The argument to the `<<animation>>` tag should be `true`, `false`, or a valid CSS time value.");o.animate=Util.fromCssTime(r.args[0])}else o.animate=0;r.args[1]&&["swing","linear"].includes(r.args[1])&&(o.easing=r.args[1])}if(a){var h=a.args[0];if(!h||"string"!=typeof h)return this.error("The labelText argument for the `<<label>>` tag is required.");o.label=h.trim(),a.args[1]&&"string"==typeof a.args[1]&&(o.text=a.args[1]),a.args[2]&&"string"==typeof a.args[2]&&(o.align=a.args[2])}l.add(t,o,this.args[1])}}),Macro.add("showmeter",{handler:function(){if(this.args.length<1)return this.error("This macro requires at least one argument: the meter's name.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');"number"==typeof this.args[1]&&e.val(this.args[1]),e.place(this.output,{classes:"macro-"+this.name,attr:{id:"meter-"+Util.slugify(t)}})}}),Macro.add("updatemeter",{handler:function(){if(this.args.length<2)return this.error("This macro requires two arguments: the meter's name and a value.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');e.val(this.args[1])}})}();
-// end meters.min.js
-/* twine-user-script #2: "UserScript" */
-/*
-		Macro: timedprogressbar
-		
-		Description: Show a dynamically-created "progress bar" 
-		that changes colors as its timer runs down.
-		
-		Original design: Akjosch (https://github.com/Akjosch)
-		
-		Arguments:
-			[0]: The time to run in seconds
-			[1]: The length of the progress bar in CSS units (px, em, or %)
-*/
-Macro.add("timedprogressbar", {
-	isAsync : true,
-	tags: null,
-	handler: function() {
-		// Filter the payload for newlines and save it for later execution
-		var payload = this.payload[0].contents.replace(/\n$/, '').trim();
-		
-		// Save or generate a default duration
-		var duration = (Number(this.args[0]) || 60) * 1000;
-		
-		// Save or generate a width
-		var width = this.args[1] || "100%";
-		
-		// Generate a unique hash
-		var hash = Math.floor(Math.random() * 0x100000000).toString(16);
-		
-		//  Create an outer ID
-		var outerId = "outer_" + hash;
-		
-		// Create an inner ID
-		var innerId = "inner_" + hash;
-		
-		// Create an outer div, 
-		// add an ID,
-		// add a class,
-		// change the CSS width, and
-		// append to the output
-		var progressbar = $("<div>")
-		.attr("id", outerId)
-		.addClass("progress-bar")
-		.css('width', width)
-		.appendTo(this.output);
-		
-		// Create an inner div, 
-		// add an ID,
-		// add a class,
-		// change the CSS width, and
-		// append to the progressbar
-		var progressvalue = $("<div>")
-		.attr("id", innerId)
-		.addClass("progress-value")
-		.css('width', "100%")
-		.appendTo(progressbar);
-		
-		// Create a function to convert into hexadecimal
-		var toHex = function(num) {
-			var res = Math.round(Number(num)).toString(16);
-			return (res.length === 1 ? "0" + res : res);
-		};
-		
-		// Save a reference to possible payload content
-		var functionToRun = this.createShadowWrapper(
-			payload
-				? function() { Wikifier.wikifyEval(payload); }
-				: null
-		);
-		
-		// Watch for the :passagedisplay event once
-		jQuery(document).one(":passagedisplay", function() {
-			
-			// Get the current time
-			var timeStarted = (new Date()).getTime();
-			
-			// Save a reference to the setInterval function
-			var workFunction = setInterval(function() {
-				
-				// Check if the element is still 'connected'
-				if(! progressbar.prop("isConnected") ) {
-					
-					// Navigated away from the passage
-					clearInterval(workFunction);
-					return;
-				}
-				
-				// Figure out how much time has passed
-				var timePassed = (new Date()).getTime() - timeStarted;
-				
-				// Check if the timer has run out
-				if(timePassed >= duration) {
-					
-					// Reduce the inner width to 0
-					progressvalue.css('width', "0");
-					
-					// Clear interval
-					clearInterval(workFunction);
-					
-					// Run the inner function (if set)
-					setTimeout(functionToRun, 40);
-					return;
-				}
-				
-				// Update the progress percentage
-				var percentage = 100 - 100 * timePassed / duration;
-				
-				// Save the new color
-				var color = "#"
-					+ toHex(Math.min(255, 510 -  5.1 * percentage))
-					+ toHex(Math.min(255, 5.1 * percentage)) + "00";
-				
-				// Update the background color of the inner div
-				progressvalue.css("backgroundColor", color);
-				
-				// Update the inner div width
-				progressvalue.css("width", (100 - 100 * timePassed / duration) + "%");
-				
-			}, 40);
-			
-		});
-	},
-});</script><tw-tag name="Q1" color="green"></tw-tag><tw-tag name="EndStay" color="red"></tw-tag><tw-tag name="Q3" color="green"></tw-tag><tw-tag name="Q4" color="green"></tw-tag><tw-tag name="Main" color="blue"></tw-tag><tw-tag name="EndE" color="orange"></tw-tag><tw-tag name="Widget" color="green"></tw-tag><tw-tag name="StoryInit" color="orange"></tw-tag><tw-tag name="widget" color="orange"></tw-tag><tw-tag name="EndUnhappy" color="red"></tw-tag><tw-tag name="Q2" color="green"></tw-tag><tw-tag name="EndFired" color="red"></tw-tag><tw-tag name="EndPromo" color="red"></tw-tag><tw-tag name="nobr" color="purple"></tw-tag><tw-passagedata pid="1" name="Action" tags="" position="300,800" size="100,100"></tw-passagedata><tw-passagedata pid="2" name="Burnout" tags="" position="500,300" size="100,100">&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;h1&gt;You&#39;re burned out&lt;/h1&gt;
-			&lt;p&gt;You&#39;ve overextended yourself! Take time to recover. As long as your burnout remains, your satisfaction at work will continue to deplete.&lt;/p&gt;
-			&lt;&lt;link &quot;Next&quot; &quot;Start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Demo End" tags="" position="500,300" size="100,100">&lt;div class=&quot;content&quot;&gt;
-	&lt;h1&gt;Demo Completed!&lt;/h1&gt;
-	&lt;p&gt;You&#39;ve completed a playthrough of our initial prototype! This is roughly the halfway point of the game in terms of total play time.&lt;/p&gt;
-	&lt;p&gt;If you&#39;d like to restart and see how different choices might affect your next playthough, press the restart button at the top. Even making the same choice can sometimes lead to different results. Thank you for playing!&lt;/p&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Approval - Fired" tags="EndFired" position="1175,650" size="100,100">&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
+// end meters.min.js</script><tw-tag name="Widget" color="green"></tw-tag><tw-tag name="StoryInit" color="orange"></tw-tag><tw-tag name="Q1" color="green"></tw-tag><tw-tag name="Q2" color="green"></tw-tag><tw-tag name="EndE" color="orange"></tw-tag><tw-tag name="EndUnhappy" color="red"></tw-tag><tw-tag name="Main" color="blue"></tw-tag><tw-tag name="widget" color="orange"></tw-tag><tw-tag name="Q4" color="green"></tw-tag><tw-tag name="nobr" color="purple"></tw-tag><tw-tag name="Q3" color="green"></tw-tag><tw-tag name="EndFired" color="red"></tw-tag><tw-tag name="EndStay" color="red"></tw-tag><tw-tag name="EndPromo" color="red"></tw-tag><tw-passagedata pid="1" name="QUIT" tags="" position="100,100" size="100,100">&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;div class=&quot;content&quot;&gt;
+            You quit to realize your lifelong dream of being an iguana tamer.
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Approval - Fired" tags="EndingFired" position="1175,650" size="100,100">&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
         &lt;div class=&quot;content&quot;&gt;
             Congrats u have been fired :&#39;(
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Approval - No Change" tags="EndStay" position="925,650" size="100,100">&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-        &lt;div class=&quot;content&quot;&gt;
-            Congrats u have moved nowhere!
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="Approval - Promoted" tags="EndPromo" position="1050,650" size="100,100">&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-        &lt;div class=&quot;content&quot;&gt;
-            Congrats u have been promoted!
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="7" name="Unhappy 1" tags="EndUnhappy" position="925,525" size="100,100">&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Unhappy 1" tags="EndingEnergy" position="925,525" size="100,100">&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
         &lt;div class=&quot;content&quot;&gt;
             Your work has made you too unhappy. You quit!
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name="Intro" tags="" position="500,300" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Front" tags="Q1" position="600,675" size="100,100">/* passage content */
+/* &lt;&lt;audio &quot;phone&quot; volume 0.25 play&gt;&gt; */
+&lt;&lt;set $quarter to 1&gt;&gt;
+&lt;&lt;set $energy to 5&gt;&gt;
+&lt;&lt;set $approval to 5&gt;&gt;
+&lt;div class=&quot;menu-bar&quot;&gt;
+    &lt;div class=&quot;menu-bar__group&quot;&gt;
+        &lt;a class=&quot;menu-bar__link&quot;&gt;About&lt;/a&gt;
+        &lt;a class=&quot;menu-bar__link&quot;&gt;Help&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;a class=&quot;menu-bar__link&quot;&gt;Quit&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+    &lt;img class=&quot;logo&quot; src=&quot;img/logo.png&quot;/&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;div class=&quot;stats&quot;&gt;
+            &lt;&lt;PlayerAvatar&gt;&gt;
+            &lt;&lt;ResourceMeter&gt;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
+            &lt;&lt;TitleBar $quarterLabel&gt;&gt;
+            &lt;div class=&quot;scenario&quot;&gt;
+                &lt;img class=&quot;scenario__img&quot; src=&quot;img/scenario1.png&quot;/&gt;
+                &lt;div class=&quot;scenario__text&quot;&gt;
+                    &lt;h1 class=&quot;scenario__title&quot;&gt;Creep Alert&lt;/h1&gt;
+                    &lt;p class=&quot;scenario__desc&quot;&gt;One of your (more ancient) direct reports calls you “sweetie.” Again.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            /* &lt;&lt;ActionBox
+                &quot;Ignore it&quot;
+                &quot;Confront him gently|Parsing Words|Teachable Moment&quot;
+                &quot;Get HR involved&quot;
+            &gt;&gt; */
+            &lt;&lt;ActionBox
+                &quot;Ignore it|Demo&quot;
+                &quot;Confront him gently|Demo&quot;
+                &quot;Get HR involved|Demo&quot;
+            &gt;&gt;
+        &lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Ignore it" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;Grandpa already has one foot out the door and on a golf course. Why antagonize the living dead?
+			&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;1&quot; &quot;-2&quot; &quot;0&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;1&quot; &quot;-2&quot; &quot;0&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="Parsing Words" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;Parsing your words carefully, you tell him to keep it professional. He seems to get it.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-2&quot; &quot;2&quot; &quot;0&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-2&quot; &quot;2&quot; &quot;0&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="7" name="Teachable Moment" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;What starts as a teachable moment quickly devolves into something much more uncomfortable.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-2&quot; &quot;2&quot; &quot;0&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-2&quot; &quot;2&quot; &quot;0&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name="Get HR involved" tags="" position="600,800" size="100,100">&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;The creeps of the world need to be put on notice. And that notice needs to be stamped.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="There&#39;s no time" tags="Q1" position="600,675" size="100,100">/* passage content */
+&lt;&lt;audio &quot;phone&quot; volume 0.25 play&gt;&gt;
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;h1&gt;Five Alarm Fire&lt;/h1&gt;
+            &lt;p&gt;You’ve been given a high-stakes assignment with an impossible deadline.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;&lt;ActionBox
+            &quot;Sleep when you&#39;re dead&quot;
+            &quot;Delegate|You bribe|Not you&quot;
+            &quot;Ask for the extension now, not later&quot;
+        &gt;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="Sleep when you&#39;re dead" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;Late nights and white knuckles make it happen. You celebrate with another can of Celsius.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-3&quot; &quot;-1&quot; &quot;2&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-3&quot; &quot;-1&quot; &quot;2&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="You bribe" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;You call in every favor and put together a clear plan of attack. Your team grumbles, but they get it done.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="Not you" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;How could you trust the people below you? They’re not you. They do a not-you job—and people notice.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-1&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Ask for the extension now, not later" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;You lose a little face, but that’s better than losing your job.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;1&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;1&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="You&#39;re Asked to Deliver Bad News" tags="Q1" position="600,675" size="100,100">/* passage content */
+&lt;&lt;updatemeter &#39;timer&#39; 0&gt;&gt;
+&lt;&lt;audio &quot;phone&quot; volume 0.25 play&gt;&gt;
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;h1&gt;❌ Poolside Laptop ❌&lt;/h1&gt;
+            &lt;p&gt;The exec. committe is implementing a 4-day RTO. They need you to update your people.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;&lt;ActionBox
+            &quot;Send a memo and stick to the script|Deflect Blame|Vet with Legal&quot;
+            &quot;Schedule time to talk about it openly|Trust Gained|Lost Status&quot;
+        &gt;&gt; 
+    &lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="15" name="Deflect Blame" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;What else are inane, meandering memos for if not to deflect all personal blame? &lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;1&quot; &quot;-2&quot; &quot;0&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;1&quot; &quot;-2&quot; &quot;0&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="Vet with Legal" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;You forgot to vet your words with legal — and now people are picking them apart.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;1&quot; &quot;-2&quot; &quot;0&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;1&quot; &quot;-2&quot; &quot;0&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="Trust Gained" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;By deploying some of that trademark empathy, you still pass as human to your underlings.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-2&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-2&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="18" name="Lost Status" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;You somehow come off as both callous and clueless. Tough look.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-2&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-2&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="You Get into an Argument on Zoom" tags="Q1" position="600,675" size="100,100">/* passage content */
+&lt;&lt;updatemeter &#39;timer&#39; 0&gt;&gt;
+&lt;&lt;audio &quot;phone&quot; volume 0.25 play&gt;&gt;
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;h1&gt;Zoom Argument&lt;/h1&gt;
+            &lt;p&gt;Liz starts questioning your KPIs in front of the whole team. Will this aggression stand?&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;&lt;ActionBox
+            &quot;Back off&quot;
+            &quot;Hit her with data|Public Win|Lose Face&quot;
+            &quot;Let&#39;s take this offline&quot;
+        &gt;&gt; 
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="Back off" tags="" position="725,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;You offer to “look into it.” You don’t know what Liz is capable of. &lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;1&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="21" name="Public Win" tags="" position="725,800" size="100,100">/* resources */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;Your command of the facts is undeniable. Eat it, Liz.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="Lose Face" tags="" position="725,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;Turns out Liz had some good points—and your boss agrees.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;-1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;0&quot; &quot;-1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="Let&#39;s take this offline" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;The words leave a bad taste in your mouth, but they’re effective.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="Intern Clearly High" tags="Q2" position="600,675" size="100,100">/* passage content */
+&lt;&lt;audio &quot;phone&quot; volume 0.25 play&gt;&gt;
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;h1&gt;Intern Clearly High&lt;/h1&gt;
+            &lt;p&gt;Vapes may be odorless, but the eyes don’t deceive. And neither do his many failed attempts to use the copier.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;&lt;ActionBox
+            &quot;Send him home&quot;
+            &quot;Fire him on the spot&quot;
+            &quot;Ask for a toke&quot;
+        &gt;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="Send him home" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;He’s a good kid (or whatever). You have more important stuff to worry about.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;1&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="Fire him on the spot" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;Who doesn’t enjoy sampling the devil’s lettuce while taking a long bath? But this is a place of business.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="27" name="Ask for a toke" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;This is a political act. You support recreational cannabis. You should probably go home.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="28" name="You’re Invited to Present to the Exec. Team" tags="Q2" position="600,675" size="100,100">/* passage content */
+&lt;&lt;audio &quot;phone&quot; volume 0.25 play&gt;&gt;
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;h1&gt;Make &#39;Em Proud&lt;/h1&gt;
+            &lt;p&gt;The exec. committee has invited you to present your latest project at their quarterly shareout.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;&lt;ActionBox
+            &quot;Take a bow&quot;
+            &quot;Share credit|Talk Up|Nothing to Claim&quot;
+            &quot;Pass the mic&quot;
+        &gt;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="Take a bow" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;Sure, your achievement represents the hard work of dozens of underlings. But you corralled those underlings!&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;0&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="Talk Up" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;You talk up your team in a way that still makes it clear you’re the crucial element.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-2&quot; &quot;2&quot; &quot;2&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-2&quot; &quot;2&quot; &quot;2&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="Nothing to Claim" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;You list everyone’s contributions so thoroughly that you leave nothing to claim for yourself.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-2&quot; &quot;2&quot; &quot;2&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-2&quot; &quot;2&quot; &quot;2&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="32" name="Pass the mic" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;You let your deputy take the stage. He sweats, stammers, and self-sabotages for 6 painful minutes.&lt;/p&gt;
+		&lt;/div&gt;
+		/* actions */
+		&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;2&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;1&quot; &quot;2&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="33" name="Liz Goes Viral" tags="Q2" position="600,675" size="100,100">/* passage content */
+&lt;&lt;audio &quot;boom&quot; play&gt;&gt;
+&lt;&lt;script&gt;&gt;
+    Dialog.setup(&quot;DRAMA ALERT!!&quot;);
+    Dialog.wiki(&quot;👀&quot;);
+    Dialog.open();
+&lt;&lt;/script&gt;&gt;
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;h1&gt;Employee Goes Viral&lt;/h1&gt;
+            &lt;p&gt;One of your marketing girlies just blew up on #WorkTok with a tirade against the firm.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;&lt;ActionBox
+            &quot;Give her a heads up|She&#39;s grateful|Mind your business&quot;
+            &quot;Reprimand her privately&quot;
+            &quot;Leave a comment|Jaded Gen-Z|Dunked On&quot;
+        &gt;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="34" name="She&#39;s grateful" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;Grateful, she deletes the video and you bank a favor.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;0&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="35" name="Mind your business" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;She tells you to mind your business. She’s probably right.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;0&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="36" name="Reprimand her privately" tags="" position="600,800" size="100,100">/* passage content */
+&lt;&lt;audio &quot;office&quot; pause&gt;&gt;
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;You remind her that internet fame is sometimes incompatible with adult responsibilities. Your dad would be so proud.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;2&quot; &quot;2&quot; &quot;1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;2&quot; &quot;2&quot; &quot;1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="37" name="Jaded Gen-Z" tags="" position="600,800" size="100,100">/* passage content */
+&lt;&lt;audio &quot;office&quot; pause&gt;&gt;
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;Your kinda funny, kinda snarky reply strikes fear into her jaded Gen Z heart. She deletes the vid.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;0&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="38" name="Dunked On" tags="" position="600,800" size="100,100">/* passage content */
+&lt;&lt;audio &quot;office&quot; pause&gt;&gt;
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;Your holier-than-thou admonishment garners hundreds of dunks from TikTok strangers.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;0&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="39" name="Mark Steals Your Idea" tags="Q2" position="600,675" size="100,100">/* passage content */
+&lt;&lt;audio &quot;phone&quot; volume 0.25 play&gt;&gt;
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;h1&gt;Stolen Valor&lt;/h1&gt;
+            &lt;p&gt;You propose a bold plan during the department heads strategy session—then Mark proposes it again 10 minutes later.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;&lt;ActionBox
+            &quot;Smile and nod|No Credit, No Problem|Coworker Steps Up&quot;
+            &quot;Make mildly sarcastic remark|Wait, Not That Sarcastic|Mark Is Demolished&quot;
+        &gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="No Credit, No Problem" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;You let Mark have this one. Why be territorial about a good idea?&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;1&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="41" name="Coworker Steps Up" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;Tyler points out that Mark built his house on your foundation. You always liked that guy.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;0&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="42" name="Wait, Not That Sarcastic" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;You forget to set your word phasers to “stun” and go a little too far.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;0&quot; &quot;-1&quot; &quot;-2&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;-1&quot; &quot;-2&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="43" name="Mark Is Demolished" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;You demolish Mark with some perfectly-modulated sass.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;0&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="44" name="Doppelganger" tags="Q3" position="600,675" size="100,100">/* passage content */
+&lt;&lt;audio &quot;phone&quot; volume 0.25 play&gt;&gt;
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;h1&gt;Doppelganger&lt;/h1&gt;
+            &lt;p&gt;You learn that a “rising star” at the west coast office has a nearly identical portfolio to yours.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;&lt;ActionBox
+            &quot;Join forces&quot;
+            &quot;Ice him out&quot;
+            &quot;Live and let live&quot;
+        &gt;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="Join forces" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;Together you’ll go far. Or at least as far as the next company retreat.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="Ice him out" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;There can only be one. You’ll prove it by waging an invisible war for the next 6 months.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="47" name="Live and let live" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;Someone doing well 3,000 miles away? That ain’t none of your business.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="48" name="Leadership Training" tags="Q3" position="600,675" size="100,100">/* passage content */
+&lt;&lt;audio &quot;phone&quot; volume 0.25 play&gt;&gt;
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;h1&gt;Girl Boss&lt;/h1&gt;
+            &lt;p&gt;The exec. committee announces a new program to mentor up-and-coming women in the firm. They ask you to chair it.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;&lt;ActionBox
+            &quot;It&#39;s an honor to serve|Work Overtime|Admin Work&quot;
+            &quot;Volunteer your rival|Saddling Liz|4D Chess&quot;
+        &gt;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="49" name="Work Overtime" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;You work overtime to assemble an army of young, grateful talent—and eventual allies?&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="50" name="Admin Work" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;All the admin work has really cut into your work-work.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="51" name="Saddling Liz" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;You get to look magnanimous while saddling Liz with hours of extra labor. You deserve a pastry.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="52" name="4D Chess" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;Your game of 4-D chess backfires when Liz accepts the offer and does a great job. Stick to 4-D checkers.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;0&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="53" name="Reply All" tags="Q3" position="600,675" size="100,100">/* passage content */
+&lt;&lt;audio &quot;phone&quot; volume 0.25 play&gt;&gt;
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;h1&gt;Reply All&lt;/h1&gt;
+            &lt;p&gt;You accidentally CC half the company on a sensitive email chain filled with nonpublic material information.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;&lt;ActionBox
+            &quot;Dial-a-Counsel&quot;
+            &quot;Take ownership|Extremely Boring|Disregard&quot;
+            &quot;IT can fix&quot;
+        &gt;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="54" name="Dial-a-Counsel" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;You call the firm’s GC, who spins up one of those “delete that shit or else” memos in legalese.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="55" name="Extremely Boring" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;Leveraging your knowledge of what’s actually in the chain, you make it sound extremely boring. The recipients are more than happy to delete it.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="56" name="Disregard" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;Your fingers practically trip over each other to type DISREGARD!!! Good, now nobody will look into this.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="57" name="IT can fix" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;Un-sending emails maybe have legal implications—and the IT guy isn’t ready to be the hero you need.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="Small World" tags="Q3" position="600,675" size="100,100">/* passage content */
+&lt;&lt;audio &quot;phone&quot; volume 0.25 play&gt;&gt;
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;h1&gt;Small World&lt;/h1&gt;
+            &lt;p&gt;You run into an old friend, now fund manager on vacation. After a few après-skis, she says she’s looking to invest.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;&lt;ActionBox
+            &quot;Send it up the flagpole|Big Money|Jump the Gun&quot;
+            &quot;Keep a lid on it for now|Cultivate the Relationship|Private Investor&quot;
+        &gt;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="59" name="Big Money" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;Big money should be handled by the book. The exec. committee appreciates your sound judgment and rich friends.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="60" name="Jump the Gun" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;You jump the gun and apply too much pressure too soon. Your friend bails.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="61" name="Cultivate the Relationship" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;You cultivate the relationship to gauge her interest. When it’s time to involve the C-Suite, she’s ready to sign.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="62" name="Private Investor" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;The CFO gets wind that you’ve been conducting private investor relations over ski lodge negronis. He’s not amused.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="63" name="Gossip broker" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;One-and-a-half manhattans and numerous bitch-sessions later, you have become the firm’s latest information broker.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;0&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="64" name="Uber home" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;Two-and-a-half manhattans and several unfortunate dance moves later, you have been gently placed in an Uber home.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;0&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="65" name="Pay your respects" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;With your wits about you, you pay your respects to all the head honchos before they embark for the suburbs.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="66" name="Dull coworkers" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;You make polite-but-dull conversation with a few polite-but-dull coworkers before leaving early to binge “Selling Sunset.”&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;1&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="67" name="Holiday Party" tags="Q4" position="600,675" size="100,100">/* passage content */
+&lt;&lt;audio &quot;phone&quot; volume 0.25 play&gt;&gt;
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;h1&gt;Holiday Party&lt;/h1&gt;
+            &lt;p&gt;Two words: open bar.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;&lt;ActionBox
+            &quot;Live a little!|Gossip broker|Uber home&quot;
+            &quot;You&#39;re still at work|Pay your respects|Dull coworkers&quot;
+        &gt;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="68" name="Mansplaining" tags="Q4" position="600,675" size="100,100">/* passage content */
+&lt;&lt;audio &quot;phone&quot; volume 0.25 play&gt;&gt;
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;h1&gt;Mansplainin&#39;&lt;/h1&gt;
+            &lt;p&gt;The new Biz Dev guy steps all over your prepared remarks at a pitch—and gets a few things wrong.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;&lt;ActionBox
+            &quot;Throw him a lifeline&quot;
+            &quot;He&#39;s new&quot;
+        &gt;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="69" name="Throw him a lifeline" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;You gently correct his mistakes and graciously let him continue. Your fake smile pains you.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;0&quot; &quot;1&quot; &quot;2&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;1&quot; &quot;2&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="70" name="He&#39;s new" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;You pointedly dismiss him and watch him squirm. It feels great, tbh.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;0&quot; &quot;1&quot; &quot;2&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;1&quot; &quot;2&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="71" name="Performance Review" tags="Q4" position="600,675" size="100,100">/* passage content */
+&lt;&lt;audio &quot;phone&quot; volume 0.25 play&gt;&gt;
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;h1&gt;Performance Review&lt;/h1&gt;
+            &lt;p&gt;You made it to the end of the year—now it’s time to make a case for that promotion.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;&lt;ActionBox
+            &quot;Prepare a PowerPoint|Persuasive slides|Cluttered slides&quot;
+            &quot;Take a conversational approach&quot;
+            &quot;Threaten to walk|Big gamble|I&#39;m sorry you feel that way&quot;
+        &gt;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="72" name="Persuasive slides" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;Your cogent and persuasive slides build to an almost emotional climax. Did your boss just wipe away a tear?&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;0&quot; &quot;1&quot; &quot;2&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;1&quot; &quot;2&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="73" name="Cluttered slides" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;With every chart-cluttered, takeaway-muddled slide, your boss seems to be growing *less* interested in your career.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;0&quot; &quot;-1&quot; &quot;-1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;-1&quot; &quot;-1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="74" name="Take a conversational approach" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;You keep things light, knowing this half-hour meeting won’t change anything that’s already been decided.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="75" name="Big gamble" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;It’s a big gamble, but your track record speaks for itself—they need you. And your boss knows it.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;1&quot; &quot;2&quot; &quot;-1&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;1&quot; &quot;2&quot; &quot;-1&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="76" name="I&#39;m sorry you feel that way" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;“I’m sorry you feel that way.” Have six words ever cut so deep? You better start updating that resume.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;&lt;CalcResource &quot;-1&quot; &quot;-1&quot; &quot;-4&quot;&gt;&gt;
+		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;-1&quot; &quot;-4&quot;&gt;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="77" name="Power Vacuum" tags="Q4" position="600,675" size="100,100">/* passage content */
+&lt;&lt;audio &quot;phone&quot; volume 0.25 play&gt;&gt;
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;h1&gt;Power Vacuum&lt;/h1&gt;
+            &lt;p&gt;One of the firm’s MDs is leaving for a top job elsewhere. The exec. committee says they’re looking to promote from within.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;&lt;ActionBox
+            &quot;Ask him to bring you along|Sheryl Sandberg|He politely declines&quot;
+            &quot;Announce your candidacy&quot;
+            &quot;Avoid the inevitable knife fight&quot;
+        &gt;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="78" name="Sheryl Sandberg" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;You know people, and this guy is going places. Time to do the Sheryl Sandberg thing (with a better wardrobe).&lt;/p&gt;
+            &lt;p&gt;ENDING: Into the Sunset&lt;/p&gt;
+            &lt;p&gt;Want to play again? Press the restart button.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="79" name="He politely declines" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;He politely declines. It’s possible you’ve seen “Jerry Maguire” too many times.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;&lt;CalcResource &quot;0&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
+	&lt;&lt;ResourceUpdate &quot;0&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="80" name="Announce your candidacy" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;The Executive Committee likes your hustle and is excited to see how your team performs this quarter. Gah.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;&lt;CalcResource &quot;0&quot; &quot;-1&quot; &quot;1&quot;&gt;&gt;
+	&lt;&lt;ResourceUpdate &quot;0&quot; &quot;-1&quot; &quot;1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="81" name="Avoid the inevitable knife fight" tags="" position="600,800" size="100,100">/* passage content */
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;&lt;ResourceMeter&gt;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;After months of palace intrigue, the company ends up poaching someone from a rival firm.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;&lt;CalcResource &quot;2&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
+	&lt;&lt;ResourceUpdate &quot;2&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="82" name="Email" tags="" position="500,300" size="100,100">&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;p&gt;&lt;strong&gt;Subject: FWD:FWD: Congratulations&lt;/strong&gt;&lt;/p&gt;
+			&lt;p&gt;Hey.&lt;/p&gt;
+			&lt;p&gt;Congrats on the new gig! I&#39;m on to greener pastures. Hope you&#39;ll make it further here than I did. Maybe even &lt;strong style=&quot;color:yellow&quot;&gt;earn a promotion by the end of the year!&lt;/strong&gt;&lt;/p&gt;
+			&lt;p&gt;It&#39;s like any other corporate job. Keep your &lt;strong style=&quot;color:yellow&quot;&gt;energy&lt;/strong&gt; up and keep the &lt;strong style=&quot;color:yellow&quot;&gt;bosses happy&lt;/strong&gt;.&lt;/p&gt;
+			&lt;p&gt;I left something on your desk. Think of it as a welcome gift.&lt;/p&gt;
+			&lt;p&gt;&lt;em&gt;You check your desk. The person who was last here left a can of pringles with a note: &quot;Good Luck!&quot;&lt;/em&gt;&lt;/p&gt;
+			&lt;&lt;link &quot;Start&quot;&gt;&gt;
+				&lt;&lt;GoRandom &quot;Q1&quot;&gt;&gt;
+				&lt;&lt;set $energy to 5&gt;&gt;
+				&lt;&lt;set $approval to 5&gt;&gt;
+				&lt;&lt;updatemeter &#39;approval&#39; `$approval / $maxApproval`&gt;&gt;
+				&lt;&lt;updatemeter &#39;energy&#39; `$energy / $maxEnergy`&gt;&gt;
+			&lt;&lt;/link&gt;&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="83" name="Intro" tags="" position="500,300" size="100,100">&lt;&lt;nobr&gt;&gt;
 /* Variable Initialization */
 &lt;&lt;if $time == undefined&gt;&gt;
 	&lt;&lt;set $time to 0&gt;&gt;
@@ -481,12 +1723,12 @@ Macro.add("timedprogressbar", {
 &lt;&lt;set $burnout to 0&gt;&gt;
 &lt;&lt;set $login to true&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-		&lt;div class=&quot;content&quot;&gt;\
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+		&lt;div class=&quot;content&quot;&gt;
 			&lt;p&gt;Welcome to Optimum Solutions, LLC!&lt;/p&gt;
-			&lt;p&gt;Please select your account to login.&lt;/p&gt;\
-			&lt;&lt;listbox &quot;$user&quot; autoselect&gt;&gt;\
+			&lt;p&gt;Please select your account to login.&lt;/p&gt;
+			&lt;&lt;listbox &quot;$user&quot; autoselect&gt;&gt;
 				&lt;&lt;option &quot;SyntaxSorceress&quot; product&gt;&gt;
 				&lt;&lt;option &quot;XOXOWaterCoolerWhisperer&quot; sales&gt;&gt;
 				&lt;&lt;option &quot;SueMeBro&quot; legal&gt;&gt;
@@ -505,907 +1747,137 @@ Macro.add("timedprogressbar", {
 					});
 				});
 			&lt;&lt;/script&gt;&gt;
-			[[Login]]
+			[[Login|Email]]
 		&lt;/div&gt;
 	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="Login" tags="" position="500,300" size="100,100">&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-		&lt;div class=&quot;content&quot;&gt;\
-			&lt;p&gt;&lt;strong&gt;Subject: FWD:FWD: Congratulations&lt;/strong&gt;&lt;/p&gt;
-			&lt;p&gt;Hey.&lt;/p&gt;\
-			&lt;p&gt;Congrats on the new gig! I&#39;m on to greener pastures. Hope you&#39;ll make it further here than I did. Maybe even &lt;strong style=&quot;color:yellow&quot;&gt;earn a promotion by the end of the year!&lt;/strong&gt;&lt;/p&gt;\
-			&lt;p&gt;It&#39;s like any other corporate job. Keep your &lt;strong style=&quot;color:yellow&quot;&gt;energy&lt;/strong&gt; up, stay &lt;strong style=&quot;color:yellow&quot;&gt;motivated&lt;/strong&gt;, and keep the &lt;strong style=&quot;color:yellow&quot;&gt;bosses happy&lt;/strong&gt;.&lt;/p&gt;\
-			&lt;p&gt;I left something on your desk. Think of it as a welcome gift.&lt;/p&gt;
-			&lt;p&gt;&lt;em&gt;You check your desk. The person who was last here left a can of pringles with a note: &quot;Good Luck!&quot;&lt;/em&gt;&lt;/p&gt;
-			[[Start]]
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="Bob from Finance Calls You “Sweetie.” Again." tags="Q1" position="600,675" size="100,100">/* passage content */
-&lt;&lt;updatemeter &#39;timer&#39; 0&gt;&gt;
-&lt;&lt;audio &quot;phone&quot; volume 0.25 play&gt;&gt;\
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-        &lt;div class=&quot;content&quot;&gt;
-            &lt;h1&gt;Creep Alert&lt;/h1&gt;
-            &lt;p&gt;Bob from accounting calls you “sweetie.” Again.&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;&lt;ActionBox
-            &quot;Ignore it&quot;
-            &quot;Confront him gently&quot;
-            &quot;OK Boomer&quot;
-            &quot;Get HR involved&quot;
-        &gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="Ignore it" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;It’s always the accountants. Reminder to avoid that whole floor.
-			&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;1&quot; &quot;-2&quot; &quot;0&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;1&quot; &quot;-2&quot; &quot;0&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="Confront him gently" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;Parsing your words carefully, you tell Bob to keep it professional.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;-2&quot; &quot;2&quot; &quot;0&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;-2&quot; &quot;2&quot; &quot;0&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="OK Boomer" tags="" position="600,800" size="100,100">&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;Smoked him! So what if he thinks you overreacted? &lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;0&quot; &quot;1&quot; &quot;-2&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;1&quot; &quot;-2&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="Get HR involved" tags="" position="600,800" size="100,100">&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;The Bobs of the world need to be put on notice. And that notice needs to be stamped. &lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="15" name="You&#39;re Asked to Deliver Bad News" tags="Q1" position="600,675" size="100,100">/* passage content */
-&lt;&lt;updatemeter &#39;timer&#39; 0&gt;&gt;
-&lt;&lt;audio &quot;phone&quot; volume 0.25 play&gt;&gt;\
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-        &lt;div class=&quot;content&quot;&gt;
-            &lt;h1&gt;Bad News Bear&lt;/h1&gt;
-            &lt;p&gt;Senior leadership is taking away WFH Fridays.  They need you to update your team.&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;&lt;ActionBox
-            &quot;Send a memo and stick to the script&quot;
-            &quot;Schedule time to talk about it openly|Trust Gained|Lost Status&quot;
-        &gt;&gt; 
-    &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="Send a memo and stick to the script" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;What else are inane, meandering memos for if not to deflect all personal blame? &lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;1&quot; &quot;-2&quot; &quot;0&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;1&quot; &quot;-2&quot; &quot;0&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="Trust Gained" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;By deploying some of that trademark empathy, you still pass as human to your underlings.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;-2&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;-2&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="18" name="Lost Status" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;You somehow come off as both callous and clueless.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;-2&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;-2&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="You Get into an Argument on Zoom" tags="Q1" position="600,675" size="100,100">/* passage content */
-&lt;&lt;updatemeter &#39;timer&#39; 0&gt;&gt;
-&lt;&lt;audio &quot;phone&quot; volume 0.25 play&gt;&gt;\
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-        &lt;div class=&quot;content&quot;&gt;
-            &lt;h1&gt;Zoom Argument&lt;/h1&gt;
-            &lt;p&gt;Liz starts questioning your KPIs in front of the whole team. Will this aggression stand?&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;&lt;ActionBox
-            &quot;Back off&quot;
-            &quot;Push back|Public Win|Lose Face&quot;
-            &quot;Let&#39;s take this offline&quot;
-        &gt;&gt; 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="Back off" tags="" position="725,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;You offer to “look into it.” You don’t know what Liz is capable of. &lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;1&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="21" name="Public Win" tags="" position="725,800" size="100,100">/* resources */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;Your command of the facts is undeniable. Eat it, Liz.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="Lose Face" tags="" position="725,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;Turns out Liz had some good points—and your boss agrees.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;-1&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;0&quot; &quot;-1&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="Let&#39;s take this offline" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;The words leave a bad taste in your mouth, but they’re effective.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="You’re Invited to Present to the Exec. Team" tags="Q2" position="600,675" size="100,100">/* passage content */
-&lt;&lt;audio &quot;phone&quot; volume 0.25 play&gt;&gt;\
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-        &lt;div class=&quot;content&quot;&gt;
-            &lt;h1&gt;Big Presentation&lt;/h1&gt;
-            &lt;p&gt;Your boss offers to pass you the mic for a few minutes at the next executive shareout.&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;&lt;ActionBox
-            &quot;Be a silent partner&quot;
-            &quot;Go for it&quot;
-            &quot;Share credit&quot;
-        &gt;&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="Be a silent partner" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;Showing up is enough. Sometimes words don’t come out good.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;0&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="Go for it" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;They didn’t know your name yesterday and might forget it tomorrow. But dammit, this feels good *now*.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;-2&quot; &quot;2&quot; &quot;2&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;-2&quot; &quot;2&quot; &quot;2&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="27" name="Share credit" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;That’s the kind of team player who has upper management written all over her.&lt;/p&gt;
-		&lt;/div&gt;
-		/* actions */
-		&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;2&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;1&quot; &quot;2&quot;&gt;&gt;\
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="28" name="Liz Goes Viral" tags="Q2" position="600,675" size="100,100">/* passage content */
-&lt;&lt;audio &quot;boom&quot; play&gt;&gt;
-&lt;&lt;script&gt;&gt;
-    Dialog.setup(&quot;DRAMA ALERT!!&quot;);
-    Dialog.wiki(&quot;👀&quot;);
-    Dialog.open();
-&lt;&lt;/script&gt;&gt;
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-        &lt;div class=&quot;content&quot;&gt;
-            &lt;h1&gt;Liz Goes Viral&lt;/h1&gt;
-            &lt;p&gt;Your primary office antagonist just blew up on #WorkTok by casually disparaging your firm’s culture. Unclear if anyone knows—including her.&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;&lt;ActionBox
-            &quot;Give her a heads up|She&#39;s grateful|Mind your business&quot;
-            &quot;Slip it to your boss|Tell Mark|Message your boss&quot;
-        &gt;&gt;\
-    &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="She&#39;s grateful" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;Grateful, she deletes the video and you bank a favor.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;0&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="Mind your business" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;She tells you to mind your business. She’s probably right.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;0&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="Tell Mark" tags="" position="600,800" size="100,100">/* passage content */
-&lt;&lt;audio &quot;office&quot; pause&gt;&gt;
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;You slyly tell Mark about the video knowing he’ll bring it up publicly—and he does. Liz 0, you 1.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;2&quot; &quot;2&quot; &quot;1&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;2&quot; &quot;2&quot; &quot;1&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="32" name="Message your boss" tags="" position="600,800" size="100,100">/* passage content */
-&lt;&lt;audio &quot;office&quot; pause&gt;&gt;
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;You message your boss with the link. No reply.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;0&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="33" name="Mark Steals Your Idea" tags="Q2" position="600,675" size="100,100">/* passage content */
-&lt;&lt;audio &quot;phone&quot; volume 0.25 play&gt;&gt;\
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-        &lt;div class=&quot;content&quot;&gt;
-            &lt;h1&gt;Idea Thief&lt;/h1&gt;
-            &lt;p&gt;You propose a bold plan during the strategy session—then Mark proposes it again 10 minutes later.&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;&lt;ActionBox
-            &quot;Smile and nod|No Credit, No Problem|Coworker Steps Up&quot;
-            &quot;Make mildly sarcastic remark|Wait, Not That Sarcastic|Mark Is Demolished&quot;
-        &gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="34" name="No Credit, No Problem" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;You let Mark have this one. Why be territorial about a good approach?&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;1&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="35" name="Coworker Steps Up" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;Tyler points out that Mark built his house on your foundation. You always liked that guy.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;0&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="36" name="Wait, Not That Sarcastic" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;You forget to set your word phasers to “stun” and go a little too far.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;0&quot; &quot;-1&quot; &quot;-2&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;-1&quot; &quot;-2&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="37" name="Mark Is Demolished" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;You demolish Mark with some perfectly-modulated sass.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;0&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="38" name="Intern Clearly High" tags="Q3" position="600,675" size="100,100">/* passage content */
-&lt;&lt;audio &quot;phone&quot; volume 0.25 play&gt;&gt;\
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-        &lt;div class=&quot;content&quot;&gt;
-            &lt;h1&gt;Intern Clearly High&lt;/h1&gt;
-            &lt;p&gt;Vapes may be odorless, but the eyes don’t deceive. And neither do his many failed attempts to use the copier.&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;&lt;ActionBox
-            &quot;Send him home&quot;
-            &quot;Fire him on the spot&quot;
-        &gt;&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="39" name="Send him home" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;He’s a good kid (or whatever). You have more important stuff to worry about.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;1&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="Fire him on the spot" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;Who doesn’t enjoy sampling the devil’s lettuce while taking a long bath? But this is a place of business.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="41" name="Leadership Training" tags="Q3" position="600,675" size="100,100">/* passage content */
-&lt;&lt;audio &quot;phone&quot; volume 0.25 play&gt;&gt;\
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-        &lt;div class=&quot;content&quot;&gt;
-            &lt;h1&gt;Leadership Training&lt;/h1&gt;
-            &lt;p&gt;Your company announces a new program to fast-track up-and-comers. That’s you! Isn’t it?&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;&lt;ActionBox
-            &quot;Sign up|Managers select you|Liz gets it&quot;
-            &quot;Run it by your boss|He likes your initiative|Ouch&quot;
-            &quot;Not worth your time&quot;
-        &gt;&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="42" name="Managers select you" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;Out of [undisclosed] candidates, the managers select you! Good thing you thrive on high expectations.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="43" name="Liz gets it" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;You don’t get it. Liz does. It’s like your eighth grade play all over again.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="44" name="He likes your initiative" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;He likes your initiative and recommends you for the spot. Whatever happens, you impressed the person who matters.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="Ouch" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;He thinks you’re doing a great job right where you are. Ouch.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;0&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="Not worth your time" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;The only way to get executive attention is by doing your job well. Or so you tell yourself.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;2&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;2&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="47" name="There&#39;s no time" tags="Q3" position="600,675" size="100,100">/* passage content */
-&lt;&lt;audio &quot;phone&quot; volume 0.25 play&gt;&gt;\
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-        &lt;div class=&quot;content&quot;&gt;
-            &lt;h1&gt;&quot;There&#39;s No Time!&quot;&lt;/h1&gt;
-            &lt;p&gt;You’ve been given a high-stakes assignment with an impossible deadline.&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;&lt;ActionBox
-            &quot;Sleep when you&#39;re dead&quot;
-            &quot;Manage your resources|You bribe|Not you&quot;
-            &quot;Ask for the extension now, not later&quot;
-        &gt;&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="48" name="Sleep when you&#39;re dead" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;Late nights and white knuckles make it happen. You celebrate with another can of Celsius.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;-3&quot; &quot;-1&quot; &quot;2&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;-3&quot; &quot;-1&quot; &quot;2&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="49" name="You bribe" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;You bribe, intimidate, and delegate to share the load.Your team grumbles, but they get it done.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="50" name="Not you" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;How could you trust the people below you? They’re not you. They do a not-you job—and people notice.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;-1&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="51" name="Ask for the extension now, not later" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;You lose a little face, but that’s better than losing your job.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;1&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;1&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="52" name="Gossip broker" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;One-and-a-half manhattans and numerous bitch-sessions later, you have become the firm’s latest gossip broker.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;0&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="53" name="Uber home" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;Two-and-a-half manhattans and several unfortunate dance moves later, you have been gently placed in an Uber home.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;0&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="54" name="Pay your respects" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;With your wits about you, you pay your respects to all the head honchos before they embark for the suburbs.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="55" name="Dull coworkers" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;You make polite-but-dull conversation with a few polite-but-dull coworkers before leaving early to binge “Selling Sunset.”&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;1&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="56" name="Holiday Party" tags="Q4" position="600,675" size="100,100">/* passage content */
-&lt;&lt;audio &quot;phone&quot; volume 0.25 play&gt;&gt;\
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-        &lt;div class=&quot;content&quot;&gt;
-            &lt;h1&gt;Holiday Party&lt;/h1&gt;
-            &lt;p&gt;Two words: open bar.&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;&lt;ActionBox
-            &quot;Live a little!|Gossip broker|Uber home&quot;
-            &quot;You&#39;re still at work|Pay your respects|Dull coworkers&quot;
-        &gt;&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="57" name="Performance Review" tags="Q4" position="600,675" size="100,100">/* passage content */
-&lt;&lt;audio &quot;phone&quot; volume 0.25 play&gt;&gt;\
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-        &lt;div class=&quot;content&quot;&gt;
-            &lt;h1&gt;Performance Review&lt;/h1&gt;
-            &lt;p&gt;You made it to the end of the year—now it’s time to make a case for that promotion.&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;&lt;ActionBox
-            &quot;Prepare a PowerPoint|Persuasive slides|Cluttered slides&quot;
-            &quot;Take a conversational approach&quot;
-            &quot;Threaten to walk|Big gamble|I&#39;m sorry you feel that way&quot;
-        &gt;&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="Persuasive slides" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;Your cogent and persuasive slides build to an almost emotional climax. Did your boss just wipe away a tear?&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;0&quot; &quot;1&quot; &quot;2&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;1&quot; &quot;2&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="59" name="Cluttered slides" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;With every chart-cluttered, takeaway-muddled slide, your boss seems to be growing *less* interested in your career.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;0&quot; &quot;-1&quot; &quot;-1&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;0&quot; &quot;-1&quot; &quot;-1&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="60" name="Take a conversational approach" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;You keep things light, knowing this half-hour meeting won’t change anything that’s already been decided.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="61" name="Big gamble" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;It’s a big gamble, but your track record speaks for itself—they need you. And your boss knows it.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;1&quot; &quot;2&quot; &quot;-1&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;1&quot; &quot;2&quot; &quot;-1&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="62" name="I&#39;m sorry you feel that way" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;“I’m sorry you feel that way.” Have six words ever cut so deep? You better start updating that resume.&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;&lt;CalcResource &quot;-1&quot; &quot;-1&quot; &quot;-4&quot;&gt;&gt;
-		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;-1&quot; &quot;-4&quot;&gt;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="63" name="Power Vacuum" tags="Q4" position="600,675" size="100,100">/* passage content */
-&lt;&lt;audio &quot;phone&quot; volume 0.25 play&gt;&gt;\
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-        &lt;div class=&quot;content&quot;&gt;
-            &lt;h1&gt;Power Vacuum&lt;/h1&gt;
-            &lt;p&gt;Your boss is leaving for a competitor. Leadership says they’re looking to promote from within.&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;&lt;ActionBox
-            &quot;Offer to jump ship|All about people|He politely declines&quot;
-            &quot;Announce your candidacy&quot;
-            &quot;Avoid the inevitable knife fight&quot;
-        &gt;&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="64" name="All about people" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;It’s all about people, right? In other words: the devil you know is better than the one you don’t.&lt;/p&gt;
-            &lt;p&gt;ENDING: Into the Sunset&lt;/p&gt;
-            &lt;p&gt;Want to play again? Press the restart button.&lt;/p&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="65" name="He politely declines" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;He politely declines. It’s possible you’ve seen “Jerry Maguire” too many times.&lt;/p&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;&lt;CalcResource &quot;0&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
-	&lt;&lt;ResourceUpdate &quot;0&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="66" name="Announce your candidacy" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;The Executive Committee likes your hustle and is excited to see how your team performs this quarter. Gah.&lt;/p&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;&lt;CalcResource &quot;0&quot; &quot;-1&quot; &quot;1&quot;&gt;&gt;
-	&lt;&lt;ResourceUpdate &quot;0&quot; &quot;-1&quot; &quot;1&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="67" name="Avoid the inevitable knife fight" tags="" position="600,800" size="100,100">/* passage content */
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-		&lt;div class=&quot;content&quot;&gt;
-			&lt;p&gt;After a bloodless—but annoying—internal struggle, the company ends up poaching someone from a rival firm.&lt;/p&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;&lt;CalcResource &quot;2&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
-	&lt;&lt;ResourceUpdate &quot;2&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="68" name="QUIT" tags="" position="975,850" size="100,100">&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;div class=&quot;content&quot;&gt;
-            You quit to realize your lifelong dream of being an iguana tamer.
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="69" name="PassageReady" tags="" position="1100,850" size="100,100"></tw-passagedata><tw-passagedata pid="70" name="Start" tags="Main" position="500,300" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;if $login is true&gt;&gt;
-    &lt;&lt;switch $user&gt;&gt;
-        &lt;&lt;case product&gt;&gt;
-            &lt;&lt;set $energy to 5&gt;&gt;
-            &lt;&lt;set $satisfaction to 3&gt;&gt;
-            &lt;&lt;set $approval to 4&gt;&gt;
-        &lt;&lt;/case&gt;&gt;
-        &lt;&lt;case sales&gt;&gt;
-            &lt;&lt;set $energy to 3&gt;&gt;
-            &lt;&lt;set $satisfaction to 4&gt;&gt;
-            &lt;&lt;set $approval to 5&gt;&gt;
-        &lt;&lt;/case&gt;&gt;
-        &lt;&lt;case legal&gt;&gt;
-            &lt;&lt;set $energy to 4&gt;&gt;
-            &lt;&lt;set $satisfaction to 4&gt;&gt;
-            &lt;&lt;set $approval to 4&gt;&gt;
-        &lt;&lt;/case&gt;&gt;
-        &lt;&lt;case operations&gt;&gt;
-            &lt;&lt;set $energy to 3&gt;&gt;
-            &lt;&lt;set $satisfaction to 3&gt;&gt;
-            &lt;&lt;set $approval to 6&gt;&gt;
-        &lt;&lt;/case&gt;&gt;
-    &lt;&lt;/switch&gt;&gt;
-    &lt;&lt;set $login to false&gt;&gt;
-&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;
-&lt;&lt;audio &quot;office&quot; volume 0.25 loop play&gt;&gt;\                  
-&lt;div class=&quot;abs-wrapper&quot;&gt;\
-	&lt;div class=&quot;rel-wrapper&quot;&gt;\
-        &lt;&lt;ResourceMeter&gt;&gt;\
-        &lt;div class=&quot;content&quot;&gt;
-            &lt;p&gt;You&#39;re back at your desk.&lt;/p&gt;
-            &lt;em style=&quot;color:yellow;&quot;&gt;DEVELOPER&#39;S NOTE: When players are not in a scenario, they&#39;ll have the opportunity to fiddle with stuff at their desk.&lt;/em&gt;
-
-            &lt;&lt;nobr&gt;&gt;&lt;ul&gt;
-                &lt;li&gt;Fiddle with your desk toys&lt;/li&gt;
-                &lt;li&gt;Use your computer&lt;/li&gt;
-                &lt;li&gt;Take a nap&lt;/li&gt;
-            &lt;/ul&gt;&lt;&lt;/nobr&gt;&gt;
-        &lt;/div&gt;\
-    &lt;/div&gt;\
-&lt;/div&gt;\
-
-&lt;&lt;nobr&gt;&gt;
-    &lt;&lt;set $seconds to random(4, 8)&gt;&gt;
-    &lt;&lt;silently&gt;&gt;
-        &lt;&lt;repeat 1s&gt;&gt;
-            &lt;&lt;set $seconds to $seconds - 1&gt;&gt;
-            &lt;&lt;if $seconds gt 0&gt;&gt;
-
-            &lt;&lt;else&gt;&gt;
-                &lt;&lt;switch $quarter&gt;&gt;
-                    &lt;&lt;case 1&gt;&gt;
-                        &lt;&lt;GoRandom &quot;Q1&quot;&gt;&gt;
-                    &lt;&lt;/case&gt;&gt;
-                    &lt;&lt;case 2&gt;&gt;
-                        &lt;&lt;GoRandom &quot;Q2&quot;&gt;&gt;
-                    &lt;&lt;/case&gt;&gt;
-                    &lt;&lt;case 3&gt;&gt;
-                        &lt;&lt;GoRandom &quot;Q3&quot;&gt;&gt;
-                    &lt;&lt;/case&gt;&gt;
-                    &lt;&lt;case 4&gt;&gt;
-                        &lt;&lt;GoRandom &quot;Q4&quot;&gt;&gt;
-                    &lt;&lt;/case&gt;&gt;
-                &lt;&lt;/switch&gt;&gt;
-                &lt;&lt;stop&gt;&gt;
-            &lt;&lt;/if&gt;&gt;
-        &lt;&lt;/repeat&gt;&gt;
-    &lt;&lt;/silently&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="71" name="StoryCaption" tags="StoryInit" position="500,100" size="100,100">/* &lt;p class=&quot;ui-label&quot;&gt;Q$quarter&lt;/p&gt;
-&lt;p class=&quot;ui-label&quot;&gt;Time: $time&lt;/p&gt;
-&lt;p class=&quot;ui-label&quot;&gt;Energy: $energy&lt;/p&gt;
-&lt;progress @value=&quot;$energy&quot; max=&quot;7&quot;&gt;&lt;/progress&gt;
-&lt;p class=&quot;ui-label&quot;&gt;Motivation: $satisfaction&lt;/p&gt;
-&lt;progress @value=&quot;$satisfaction&quot; max=&quot;7&quot;&gt;&lt;/progress&gt;
-&lt;p class=&quot;ui-label&quot;&gt;Approval: $approval&lt;/p&gt;
-&lt;progress @value=&quot;$approval&quot; max=&quot;7&quot;&gt;&lt;/progress&gt; */</tw-passagedata><tw-passagedata pid="72" name="StoryInit" tags="" position="225,975" size="100,100">&lt;&lt;cacheaudio &quot;office&quot; &quot;audio/office.mp3&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="84" name="PassageReady" tags="" position="475,1100" size="100,100"></tw-passagedata><tw-passagedata pid="85" name="StoryCaption" tags="StoryInit" position="500,100" size="100,100"></tw-passagedata><tw-passagedata pid="86" name="StoryInit" tags="" position="725,1100" size="100,100">&lt;&lt;cacheaudio &quot;office&quot; &quot;audio/office.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;boom&quot; &quot;audio/boom.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;phone&quot; &quot;audio/slack.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;meditation&quot; &quot;audio/meditation-ball.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;om&quot; &quot;audio/om.mp3&quot;&gt;&gt;
 
-&lt;&lt;createaudiogroup &quot;:bg&quot;&gt;&gt;
-	&lt;&lt;track &quot;office&quot;&gt;&gt;
+/* &lt;&lt;createaudiogroup &quot;:bg&quot;&gt;&gt;
 &lt;&lt;/createaudiogroup&gt;&gt;
 &lt;&lt;createaudiogroup &quot;:sfx&quot;&gt;&gt;
-    &lt;&lt;track &quot;meditation&quot;&gt;&gt;
-&lt;&lt;/createaudiogroup&gt;&gt;
+&lt;&lt;/createaudiogroup&gt;&gt; */
 
-&lt;&lt;newmeter &#39;timer&#39; 0&gt;&gt;
-    &lt;&lt;colors &#39;green&#39; &#39;yellow&#39;&gt;&gt;
-    &lt;&lt;animation 5s linear&gt;&gt;
+&lt;&lt;set $maxEnergy to 10&gt;&gt;
+&lt;&lt;set $maxApproval to 10&gt;&gt;
+&lt;&lt;newmeter &#39;energy&#39; 0.5&gt;&gt;
+    &lt;&lt;colors &#39;green&#39; &#39;yellow&#39; #DAE5CE&gt;&gt;
+    &lt;&lt;sizing 100% 18px&gt;&gt;
+    &lt;&lt;animation 0.5s linear&gt;&gt;
 &lt;&lt;/newmeter&gt;&gt;
-
-&lt;&lt;newmeter &#39;timer2&#39; 0&gt;&gt;
-    &lt;&lt;colors &#39;green&#39; &#39;yellow&#39;&gt;&gt;
-    &lt;&lt;animation 5s linear&gt;&gt;
-&lt;&lt;/newmeter&gt;&gt;</tw-passagedata><tw-passagedata pid="73" name="Template" tags="" position="300,675" size="100,100">&lt;div class=&quot;content&quot;&gt;
-&lt;p&gt;Test content&lt;/p&gt;
-&lt;&lt;link &quot;Next&quot; &quot;Start&quot;&gt;&gt;
-	&lt;&lt;EndingCheck&gt;&gt;
-&lt;&lt;/link&gt;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;action-box&quot;&gt;
-	[[Action]]
-&lt;/div&gt;
-&lt;&lt;CalcResource &quot;0&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="74" name="Fight in the Applebee&#39;s Parking Lot" tags="" position="500,425" size="100,100">&lt;div class=&quot;content&quot;&gt;
-COWABUNGA
-&lt;&lt;link &quot;Next&quot; &quot;Start&quot;&gt;&gt;
-	&lt;&lt;EndingCheck&gt;&gt;
-&lt;&lt;/link&gt;&gt;
-&lt;/div&gt;
-&lt;&lt;CalcResource &quot;-2&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="75" name="I am floating isolated in space and time" tags="" position="775,425" size="100,100">&lt;div class=&quot;content&quot;&gt;
-What is reality
-&lt;&lt;link &quot;Next&quot; &quot;Start&quot;&gt;&gt;
-	&lt;&lt;EndingCheck&gt;&gt;
-&lt;&lt;/link&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="76" name="Minus Satisfaction" tags="" position="625,425" size="100,100">&lt;div class=&quot;content&quot;&gt;
-u suk
-&lt;&lt;link &quot;Next&quot; &quot;Start&quot;&gt;&gt;
-	&lt;&lt;EndingCheck&gt;&gt;
-&lt;&lt;/link&gt;&gt;
-&lt;/div&gt;
-&lt;&lt;CalcResource &quot;0&quot; &quot;-10&quot; &quot;0&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="77" name="Pet the Cat" tags="" position="375,425" size="100,100">&lt;div class=&quot;content&quot;&gt;
-You pet the cat, it was good :3
-&lt;&lt;link &quot;Next&quot; &quot;Start&quot;&gt;&gt;
-	&lt;&lt;EndingCheck&gt;&gt;
-&lt;&lt;/link&gt;&gt;
-&lt;/div&gt;
-&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="78" name="ActionBox" tags="widget" position="800,100" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;widget &quot;ActionBox&quot;&gt;&gt;
+&lt;&lt;newmeter &#39;approval&#39; 0.5&gt;&gt;
+    &lt;&lt;colors &#39;green&#39; &#39;yellow&#39; #DAE5CE&gt;&gt;
+    &lt;&lt;sizing 100% 18px&gt;&gt;
+    &lt;&lt;animation 0.5s linear&gt;&gt;
+&lt;&lt;/newmeter&gt;&gt;</tw-passagedata><tw-passagedata pid="87" name="ActionBox" tags="widget" position="800,100" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;widget &quot;ActionBox&quot;&gt;&gt;
     &lt;div class=&quot;action-box&quot;&gt;
-        &lt;p&gt;&lt;strong&gt;What do you do?&lt;/strong&gt;&lt;/p&gt;
         &lt;&lt;for _i to 0; _i lt _args.length; _i++&gt;&gt;
             &lt;&lt;if _args[_i].includes(&quot;|&quot;)&gt;&gt;
                 &lt;&lt;set _options = []&gt;&gt;
                 &lt;&lt;set _options = $args[_i].split(&quot;|&quot;)&gt;&gt;
                 &lt;&lt;if random(1, 100) &lt;= 50&gt;&gt;
-                    [[_options[0]|_options[1]]]
+                    &lt;div class=&quot;button&quot;&gt;&lt;a&gt;_options[0]&lt;/a&gt;&lt;/div&gt;
+                    /* &lt;span class=&quot;button&quot;&gt;[[_options[0]|_options[1]]]&lt;/span&gt; */
                 &lt;&lt;else&gt;&gt;
-                    [[_options[0]|_options[2]]]
+                    &lt;div class=&quot;button&quot;&gt;&lt;a&gt;_options[0]&lt;/a&gt;&lt;/div&gt;
+                    /* &lt;span class=&quot;button&quot;&gt;[[_options[0]|_options[2]]]&lt;/span&gt; */
                 &lt;&lt;/if&gt;&gt;
                 /* &lt;&lt;link &quot;_options[0]&quot;&gt;&gt;
                     &lt;&lt;set _randomPassage = either(_options[1], _options[2])&gt;&gt;
                     &lt;&lt;goto _randomPassage&gt;&gt;
                 &lt;&lt;/link&gt;&gt; */
             &lt;&lt;else&gt;&gt;
-                [[_args[_i]]]
+                &lt;div class=&quot;button&quot;&gt;&lt;a&gt;_args[_i]&lt;/a&gt;&lt;/div&gt;
             &lt;&lt;/if&gt;&gt;
         &lt;&lt;/for&gt;&gt;
     &lt;/div&gt;
-&lt;&lt;/widget&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="79" name="CalcResource" tags="widget" position="800,100" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;widget &quot;CalcResource&quot;&gt;&gt;
-	&lt;&lt;if $burnout == true&gt;&gt;
-		&lt;&lt;set $satisfaction -= 1&gt;&gt;
-    &lt;&lt;/if&gt;&gt;
+&lt;&lt;/widget&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="88" name="CalcResource" tags="widget" position="800,100" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;widget &quot;CalcResource&quot;&gt;&gt;
 	&lt;&lt;set $energy to Math.clamp($energy += Number($args[0]), -10, 10)&gt;&gt;
-   	/* &lt;&lt;set $satisfaction to Math.clamp($satisfaction += Number($args[1]), 0, 10)&gt;&gt; */
     &lt;&lt;set $approval to Math.clamp($approval += Number($args[2]), 0, 10)&gt;&gt;
-	&lt;&lt;timed 10ms&gt;&gt;
-		&lt;&lt;script&gt;&gt;
-			$(&#39;#energy&#39;).attr(&#39;value&#39;, State.variables.energy);
-			$(&#39;#approval&#39;).attr(&#39;value&#39;, State.variables.approval);
-		&lt;&lt;/script&gt;&gt;
-		&lt;&lt;replace &quot;#le&quot;&gt;&gt;WLB: $energy&lt;&lt;/replace&gt;&gt;
-		/* &lt;&lt;replace &quot;#ls&quot;&gt;&gt;Satisfaction: $satisfaction&lt;&lt;/replace&gt;&gt; */
-		&lt;&lt;replace &quot;#la&quot;&gt;&gt;Performance: $approval&lt;&lt;/replace&gt;&gt;
-	&lt;&lt;/timed&gt;&gt;
-&lt;&lt;/widget&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="80" name="EndingCheck" tags="widget" position="900,100" size="100,100">&lt;&lt;widget &quot;EndingCheck&quot;&gt;&gt;
-	&lt;&lt;set $time to $time + 1&gt;&gt;
-    
-    &lt;&lt;if $quarter == 4 and $time == 3&gt;&gt;
-    	&lt;&lt;set $approvalCheck to true&gt;&gt;
+	&lt;&lt;updatemeter &#39;approval&#39; `$approval / $maxApproval`&gt;&gt;
+	&lt;&lt;updatemeter &#39;energy&#39; `$energy / $maxEnergy`&gt;&gt;
+&lt;&lt;/widget&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="EndingCheck" tags="widget" position="900,100" size="100,100">&lt;&lt;widget &quot;EndingCheck&quot;&gt;&gt;
+    &lt;&lt;set $time to $time + 1&gt;&gt;
+
+    &lt;&lt;if $quarter == 4 and $time == 2&gt;&gt;
+    	&lt;&lt;set $personalityCheck to true&gt;&gt;
     &lt;&lt;/if&gt;&gt;
-	
-    &lt;&lt;if $time == 3&gt;&gt;
+    
+    &lt;&lt;if $time == 2&gt;&gt;
     	&lt;&lt;if $quarter &lt; 4&gt;&gt;
     		&lt;&lt;set $quarter to $quarter + 1&gt;&gt;
         &lt;&lt;/if&gt;&gt;
         &lt;&lt;set $time to 0&gt;&gt;
     &lt;&lt;/if&gt;&gt;
-    
-	/* &lt;&lt;if $energy &lt;= 0&gt;&gt;
-		&lt;&lt;set $burnout to true&gt;&gt;
-    &lt;&lt;else&gt;&gt;
-    	&lt;&lt;set $burnout to false&gt;&gt;
-    &lt;&lt;/if&gt;&gt; */
+
     &lt;&lt;if $energy &lt;= 0&gt;&gt;
-     	&lt;&lt;GoRandom &quot;EndUnhappy&quot;&gt;&gt;
-	&lt;&lt;/if&gt;&gt;
-    
-    &lt;&lt;if $satisfaction &lt;= 0&gt;&gt;
-     	&lt;&lt;GoRandom &quot;EndUnhappy&quot;&gt;&gt;
+     	&lt;&lt;GoRandom &quot;EndingEnergy&quot;&gt;&gt;
 	&lt;&lt;/if&gt;&gt;
 
     &lt;&lt;if $approval &lt;= 0&gt;&gt;
-        &lt;&lt;GoRandom &quot;EndFired&quot;&gt;&gt;
-    &lt;&lt;/if&gt;&gt;
-    
-    &lt;&lt;if $approvalCheck is true&gt;&gt;
-    	&lt;&lt;if $approval &gt;= 6&gt;&gt;
-        	&lt;&lt;GoRandom &quot;EndPromo&quot;&gt;&gt;
-        &lt;&lt;elseif $approval &lt; 6 and $approval &gt; 2&gt;&gt;
-        	&lt;&lt;GoRandom &quot;EndStay&quot;&gt;&gt;
-        &lt;&lt;else&gt;&gt;
-        	&lt;&lt;GoRandom &quot;EndFired&quot;&gt;&gt;
-        &lt;&lt;/if&gt;&gt;
+        &lt;&lt;GoRandom &quot;EndingFired&quot;&gt;&gt;
     &lt;&lt;/if&gt;&gt;
 
-    &lt;&lt;if $burnout is true and !hasVisited(&quot;Burnout&quot;)&gt;&gt;
-        &lt;&lt;goto [[Burnout]]&gt;&gt;
+    &lt;&lt;if $quarter == 1&gt;&gt;
+        &lt;&lt;GoRandom &quot;Q1&quot;&gt;&gt;
     &lt;&lt;/if&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="81" name="GoRandom" tags="widget" position="700,100" size="100,100">&lt;&lt;widget &quot;GoRandom&quot;&gt;&gt;
+    
+    &lt;&lt;if $quarter == 2&gt;&gt;
+        &lt;&lt;GoRandom &quot;Q2&quot;&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $quarter == 3&gt;&gt;
+        &lt;&lt;GoRandom &quot;Q3&quot;&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $quarter == 4 and $time &lt; 2&gt;&gt;
+        &lt;&lt;GoRandom &quot;Q4&quot;&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+
+    /* ending check */
+    &lt;&lt;if $personalityCheck is true&gt;&gt;
+    	&lt;&lt;goto &quot;QUIT&quot;&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="GoRandom" tags="widget" position="700,100" size="100,100">&lt;&lt;widget &quot;GoRandom&quot;&gt;&gt;
     &lt;&lt;set _possiblePlaces = setup.getPassageNames(_args[0])&gt;&gt;
     &lt;&lt;set _possiblePlaces to _possiblePlaces.filter(function(passage) {
-        return !hasVisited(passage); &lt;!-- Only keep passages that haven&#39;t been visited --&gt;
+        return !hasVisited(passage);
     })&gt;&gt;
     &lt;&lt;set _randomPassage = _possiblePlaces[Math.floor(Math.random() * _possiblePlaces.length)]&gt;&gt;
     &lt;&lt;goto _randomPassage&gt;&gt;
-    &lt;&lt;script&gt;&gt;console.log(&quot;passage jump complete!&quot;)&lt;&lt;/script&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="82" name="ResourceMeter" tags="widget" position="700,100" size="100,100">&lt;&lt;widget &quot;ResourceMeter&quot;&gt;&gt;\
-    &lt;div id=&quot;resource&quot; class=&quot;resource-meter&quot;&gt;\
-        &lt;p id=&quot;quarter&quot; class=&quot;ui-label&quot;&gt;Q$quarter&lt;/p&gt;\
-        &lt;div class=&quot;meter-unit&quot;&gt;\
-            &lt;progress class=&quot;ui-meter&quot; id=&quot;energy&quot; @value=&quot;$energy&quot; max=&quot;7&quot;&gt;&lt;/progress&gt;\
-            &lt;p id=&quot;le&quot; class=&quot;ui-label&quot;&gt;WLB: $energy&lt;/p&gt;\
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="91" name="PlayerAvatar" tags="widget" position="100,1225" size="100,100">&lt;&lt;widget &quot;PlayerAvatar&quot;&gt;&gt;
+    &lt;div class=&quot;avatar&quot;&gt;
+        &lt;img class=&quot;avatar__image&quot; src=&quot;img/icon1.png&quot;/&gt;
+    &lt;/div&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="92" name="QuarterTracker" tags="widget" position="700,100" size="100,100">&lt;&lt;widget &quot;QuarterTracker&quot;&gt;&gt;
+    &lt;p id=&quot;quarter&quot; class=&quot;ui-label&quot;&gt;Q$quarter&lt;/p&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="93" name="QuitButton" tags="widget" position="350,1225" size="100,100">&lt;&lt;widget &quot;QuitButton&quot;&gt;&gt;
+    &lt;div class=&quot;quit-btn&quot;&gt;
+        [[QUIT]]
+    &lt;/div&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="ResourceMeter" tags="widget" position="700,100" size="100,100">&lt;&lt;widget &quot;ResourceMeter&quot;&gt;&gt;
+    &lt;div id=&quot;resource&quot; class=&quot;resource-meter&quot;&gt;
+        &lt;div class=&quot;user&quot;&gt;
+            &lt;p class=&quot;user__label&quot;&gt;Playing as:&lt;/p&gt;
+            &lt;h1 class=&quot;user__name&quot;&gt;Alexis&lt;/h1&gt;
         &lt;/div&gt;
-        /* &lt;div class=&quot;meter-unit&quot;&gt;\
-            &lt;progress class=&quot;ui-meter&quot; id=&quot;satisfaction&quot; @value=&quot;$satisfaction&quot; max=&quot;7&quot;&gt;&lt;/progress&gt;\
-            &lt;p id=&quot;ls&quot; class=&quot;ui-label&quot;&gt;Satisfaction: $satisfaction&lt;/p&gt;\
-        &lt;/div&gt; */
-        &lt;div class=&quot;meter-unit&quot;&gt;\
-            &lt;progress class=&quot;ui-meter&quot; id=&quot;approval&quot; @value=&quot;$approval&quot; max=&quot;7&quot;&gt;&lt;/progress&gt;\
-            &lt;p id=&quot;la&quot; class=&quot;ui-label&quot;&gt;Performance: $approval&lt;/p&gt;\
+        &lt;div class=&quot;resource-meter__unit&quot;&gt;
+            &lt;div class=&quot;resource-meter__label&quot;&gt;
+                &lt;p&gt;Self-Care&lt;/p&gt;
+                &lt;p&gt;$energy/$maxEnergy&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;&lt;showmeter &#39;energy&#39; &#39;_energy / _maxEnergy&#39; /&gt;&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;quit-btn&quot;&gt;\
-            [[QUIT]]
+        &lt;div class=&quot;resource-meter__unit&quot;&gt;
+            &lt;div class=&quot;resource-meter__label&quot;&gt;
+                &lt;p&gt;Likability&lt;/p&gt;
+                &lt;p&gt;$approval/$maxApproval&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;&lt;showmeter &#39;approval&#39; &#39;_approval / _maxApproval&#39; /&gt;&gt;
         &lt;/div&gt;
-    &lt;/div&gt;\
-&lt;&lt;/widget&gt;&gt;\</tw-passagedata><tw-passagedata pid="83" name="ResourceUpdate" tags="widget" position="800,100" size="100,100">&lt;&lt;widget &quot;ResourceUpdate&quot;&gt;&gt;\
+    &lt;/div&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="ResourceUpdate" tags="widget" position="800,100" size="100,100">&lt;&lt;widget &quot;ResourceUpdate&quot;&gt;&gt;
     &lt;&lt;nobr&gt;&gt;
     &lt;div class=&quot;action-box&quot;&gt;
         &lt;p&gt;&lt;strong&gt;&lt;em&gt;
@@ -1416,10 +1888,16 @@ You pet the cat, it was good :3
                 PERFORMANCE: $args[2]
             &lt;&lt;/if&gt;&gt;
         &lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-        &lt;&lt;link &quot;Next&quot; &quot;Start&quot;&gt;&gt;
+        &lt;&lt;link &quot;Next&quot;&gt;&gt;
             &lt;&lt;EndingCheck&gt;&gt;
         &lt;&lt;/link&gt;&gt;
     &lt;/div&gt;&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="96" name="TitleBar" tags="widget" position="725,1225" size="100,100">&lt;&lt;widget &quot;TitleBar&quot;&gt;&gt;
+    &lt;div class=&quot;titlebar&quot;&gt;
+        &lt;img src=&quot;img/grip.svg&quot; class=&quot;titlebar__grip&quot;/&gt;
+        &lt;p class=&quot;titlebar__text&quot;&gt;_args[0]&lt;/p&gt;
+        &lt;img src=&quot;img/grip.svg&quot; class=&quot;titlebar__grip&quot;/&gt;
+    &lt;/div&gt;
 &lt;&lt;/widget&gt;&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */

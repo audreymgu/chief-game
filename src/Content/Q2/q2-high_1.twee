@@ -1,0 +1,13 @@
+/* title + metadata */
+:: Send him home {"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">
+	<div class="rel-wrapper">
+        <<ResourceMeter>>
+		<div class="content">
+			<p>He’s a good kid (or whatever). You have more important stuff to worry about.</p>
+		</div>
+		<<CalcResource "1" "0" "0">>
+		<<ResourceUpdate "1" "0" "0">>
+	</div>
+</div>

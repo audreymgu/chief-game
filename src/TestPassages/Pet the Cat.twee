@@ -1,8 +1,0 @@
-:: Pet the Cat {"position":"375,425","size":"100,100"}
-<div class="content">
-You pet the cat, it was good :3
-<<link "Next" "Start">>
-	<<EndingCheck>>
-<</link>>
-</div>
-<<CalcResource "1" "0" "0">>

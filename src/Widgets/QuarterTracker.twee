@@ -1,0 +1,4 @@
+:: QuarterTracker [widget] {"position":"700,100","size":"100,100"}
+<<widget "QuarterTracker">>
+    <p id="quarter" class="ui-label">Q$quarter</p>
+<</widget>>

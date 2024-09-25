@@ -1,0 +1,24 @@
+:: StoryData
+{
+  "ifid": "48081651-DB3C-4BED-B01B-71E01159D93A",
+  "format": "SugarCube",
+  "format-version": "2.37.3",
+  "start": "Front",
+  "tag-colors": {
+    "Widget": "green",
+    "StoryInit": "orange",
+    "widget": "orange",
+    "Q1": "green",
+    "Q2": "green",
+    "Q3": "green",
+    "Q4": "green",
+    "Main": "blue",
+    "EndE": "orange",
+    "EndFired": "red",
+    "EndUnhappy": "red",
+    "EndStay": "red",
+    "EndPromo": "red",
+    "nobr": "purple"
+  },
+  "zoom": 1
+}

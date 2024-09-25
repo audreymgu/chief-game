@@ -1,0 +1,6 @@
+:: PlayerAvatar [widget]
+<<widget "PlayerAvatar">>
+    <div class="avatar">
+        <img class="avatar__image" src="img/icon1.png"/>
+    </div>
+<</widget>>

@@ -2,9 +2,8 @@
 <<widget "GoRandom">>
     <<set _possiblePlaces = setup.getPassageNames(_args[0])>>
     <<set _possiblePlaces to _possiblePlaces.filter(function(passage) {
-        return !hasVisited(passage); <!-- Only keep passages that haven't been visited -->
+        return !hasVisited(passage);
     })>>
     <<set _randomPassage = _possiblePlaces[Math.floor(Math.random() * _possiblePlaces.length)]>>
     <<goto _randomPassage>>
-    <<script>>console.log("passage jump complete!")<</script>>
 <</widget>>

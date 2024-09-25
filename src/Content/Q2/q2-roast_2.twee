@@ -1,0 +1,14 @@
+/* title + metadata */
+:: Reprimand her privately {"position":"600,800","size":"100,100"}
+/* passage content */
+<<audio "office" pause>>
+<div class="abs-wrapper">
+	<div class="rel-wrapper">
+        <<ResourceMeter>>
+		<div class="content">
+			<p>You remind her that internet fame is sometimes incompatible with adult responsibilities. Your dad would be so proud.</p>
+		</div>
+		<<CalcResource "2" "2" "1">>
+		<<ResourceUpdate "2" "2" "1">>
+	</div>
+</div>

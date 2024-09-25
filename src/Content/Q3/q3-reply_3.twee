@@ -1,0 +1,13 @@
+/* title + metadata */
+:: IT can fix {"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">
+	<div class="rel-wrapper">
+        <<ResourceMeter>>
+		<div class="content">
+			<p>Un-sending emails maybe have legal implications—and the IT guy isn’t ready to be the hero you need.</p>
+		</div>
+		<<CalcResource "-1" "1" "1">>
+		<<ResourceUpdate "-1" "1" "1">>
+	</div>
+</div>

@@ -1,0 +1,200 @@
+.logo {
+    position:absolute;
+    top: -3rem;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.resource-meter {
+    padding: 0 10px 0 10px;
+    // border: 2px solid red;
+    background-color: #668547;
+    color: #F3E8CC;
+    // padding: 10px;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    flex-grow: 1;
+    font-family: start-2p;
+
+    &__unit {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__label {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-transform: uppercase;
+        font-size: 10px;
+        margin-bottom: -2px;
+    }
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-right: 1.5rem;
+    &__label {
+        color: #213C06;
+        text-transform: uppercase;
+        font-size: 8px;
+    }
+    &__name {
+        margin-top: 4px;
+        line-height: 1;
+        font-size: 20px;
+        letter-spacing: 1%;
+    }
+}
+
+.meter-unit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-box {
+    padding: 0 8px 8px 8px;
+  width: calc(100% - 16px);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: stretch;
+  align-content: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.avatar {
+    // border: 2px solid blue;
+    border-right: 1px solid black;
+    display: flex;
+    font-size: 12px;
+    align-items: flex-start;
+    &__description {
+
+    }
+    &__image {
+        object-fit: contain;
+        height: 64px;
+    }
+}
+
+.scenario {
+    flex-grow: 1;
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    color: #2A2C41;
+    max-height: 325px;
+    &__title {
+        margin-top: 8px;
+        line-height: 110%;
+        padding: 0;
+        margin-bottom: 0.75rem;
+        font-family: start-2p;
+        text-transform: uppercase;
+    }
+    &__text {
+        flex-grow: 1;
+    }
+    &__desc {
+        font-family: tickerbit;
+        line-height: 130%;
+    }
+    &__img {
+        width: 275px;
+        align-self: start;
+    }
+}
+
+
+.titlebar {
+    display: flex;
+    justify-content: space-between;    
+    height: 24px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding: 3px;
+    background-image: linear-gradient(to bottom, #2A2C41 0%, #2A2C41 100%), linear-gradient(to bottom, #F8F7F2 0%, #F8F7F2 100%);
+    background-clip: content-box, padding-box;
+    // border: 2px solid white;
+    &__text {
+        font-family: tickerbit;
+        font-size: 14px;
+        
+    }
+    &__grip {
+        padding: 0 4px 0 4px;
+    }
+}
+
+.button {
+    &:active {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px);
+    }
+    & a {
+        border-style: ridge;
+        border-width: 1rem;
+        border-image-source: url('img/button.png');
+        border-image-slice: 30% 40% fill;
+        border-image-repeat: repeat; 
+        border-radius: 12px;
+        color: #2A2C41;
+        background: #DFDFD0;
+        display: block;
+        height: 18px;
+        line-height:  22px;
+        margin-top: 4px;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: start-2p;
+        font-size: 14px;
+        &:hover {
+            border-image-source: url('img/button-hover.png');
+            text-decoration: none;
+        }
+
+        transition: none;
+    }
+
+}
+
+.menu-bar {
+    position: fixed;
+    width: calc(100vw - 12px);
+    background-color: #668547;
+    left: 0;
+    display: flex;
+    height: 36px;
+    padding: 6px;
+    justify-content: space-between;
+    font-family: tickerbit;
+    &__group {
+        height: 100%;
+        display: flex;
+        gap: 4px;
+    }
+    &__link {
+        color: #DCF15B;
+        background-color: #547335;
+        padding: 4px 12px 0 12px;
+        &:hover {
+            color: black;
+            background-color: #DCF15B;
+        }
+    }
+}

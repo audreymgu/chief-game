@@ -1,7 +1,0 @@
-:: I am floating isolated in space and time {"position":"775,425","size":"100,100"}
-<div class="content">
-What is reality
-<<link "Next" "Start">>
-	<<EndingCheck>>
-<</link>>
-</div>

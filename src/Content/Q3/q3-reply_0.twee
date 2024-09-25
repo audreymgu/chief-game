@@ -1,0 +1,17 @@
+:: Reply All [Q3] {"position":"600,675","size":"100,100"}
+/* passage content */
+<<audio "phone" volume 0.25 play>>
+<div class="abs-wrapper">
+	<div class="rel-wrapper">
+        <<ResourceMeter>>
+        <div class="content">
+            <h1>Reply All</h1>
+            <p>You accidentally CC half the company on a sensitive email chain filled with nonpublic material information.</p>
+        </div>
+        <<ActionBox
+            "Dial-a-Counsel"
+            "Take ownership|Extremely Boring|Disregard"
+            "IT can fix"
+        >>
+    </div>
+</div>

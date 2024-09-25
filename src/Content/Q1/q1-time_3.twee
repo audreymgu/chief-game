@@ -1,0 +1,13 @@
+/* title + metadata */
+:: Ask for the extension now, not later {"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">
+	<div class="rel-wrapper">
+        <<ResourceMeter>>
+		<div class="content">
+			<p>You lose a little face, but that’s better than losing your job.</p>
+		</div>
+		<<CalcResource "1" "1" "-1">>
+		<<ResourceUpdate "1" "1" "-1">>
+	</div>
+</div>

@@ -1,9 +1,0 @@
-:: Unhappy 1 [EndUnhappy] {"position":"925,525","size":"100,100"}
-<div class="abs-wrapper">\
-	<div class="rel-wrapper">\
-        <<ResourceMeter>>\
-        <div class="content">
-            Your work has made you too unhappy. You quit!
-        </div>
-    </div>
-</div>

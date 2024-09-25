@@ -1,22 +1,23 @@
 :: ActionBox [widget] {"position":"800,100","size":"100,100"}
 <<nobr>><<widget "ActionBox">>
     <div class="action-box">
-        <p><strong>What do you do?</strong></p>
         <<for _i to 0; _i lt _args.length; _i++>>
             <<if _args[_i].includes("|")>>
                 <<set _options = []>>
                 <<set _options = $args[_i].split("|")>>
                 <<if random(1, 100) <= 50>>
-                    [[_options[0]|_options[1]]]
+                    <div class="button"><a>_options[0]</a></div>
+                    /* <span class="button">[[_options[0]|_options[1]]]</span> */
                 <<else>>
-                    [[_options[0]|_options[2]]]
+                    <div class="button"><a>_options[0]</a></div>
+                    /* <span class="button">[[_options[0]|_options[2]]]</span> */
                 <</if>>
                 /* <<link "_options[0]">>
                     <<set _randomPassage = either(_options[1], _options[2])>>
                     <<goto _randomPassage>>
                 <</link>> */
             <<else>>
-                [[_args[_i]]]
+                <div class="button"><a>_args[_i]</a></div>
             <</if>>
         <</for>>
     </div>

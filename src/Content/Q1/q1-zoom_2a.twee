@@ -1,0 +1,13 @@
+/* title + metadata */
+:: Public Win {"position":"725,800","size":"100,100"}
+/* resources */
+<div class="abs-wrapper">
+	<div class="rel-wrapper">
+        <<ResourceMeter>>
+		<div class="content">
+			<p>Your command of the facts is undeniable. Eat it, Liz.</p>
+		</div>
+		<<CalcResource "-1" "1" "1">>
+		<<ResourceUpdate "-1" "1" "1">>
+	</div>
+</div>

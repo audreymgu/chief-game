@@ -1,0 +1,13 @@
+/* title + metadata */
+:: Dial-a-Counsel {"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">
+	<div class="rel-wrapper">
+        <<ResourceMeter>>
+		<div class="content">
+			<p>You call the firm’s GC, who spins up one of those “delete that shit or else” memos in legalese.</p>
+		</div>
+		<<CalcResource "-1" "1" "1">>
+		<<ResourceUpdate "-1" "1" "1">>
+	</div>
+</div>

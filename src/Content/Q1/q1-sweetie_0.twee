@@ -1,0 +1,42 @@
+:: Front [Q1] {"position":"600,675","size":"100,100"}
+/* passage content */
+/* <<audio "phone" volume 0.25 play>> */
+<<set $quarter to 1>>
+<<set $energy to 5>>
+<<set $approval to 5>>
+<div class="menu-bar">
+    <div class="menu-bar__group">
+        <a class="menu-bar__link">About</a>
+        <a class="menu-bar__link">Help</a>
+    </div>
+    <a class="menu-bar__link">Quit</a>
+</div>
+<div class="abs-wrapper">
+    <img class="logo" src="img/logo.png"/>
+	<div class="rel-wrapper">
+        <div class="stats">
+            <<PlayerAvatar>>
+            <<ResourceMeter>>
+        </div>
+        <div class="content">
+            <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
+            <<TitleBar $quarterLabel>>
+            <div class="scenario">
+                <img class="scenario__img" src="img/scenario1.png"/>
+                <div class="scenario__text">
+                    <h1 class="scenario__title">Creep Alert</h1>
+                    <p class="scenario__desc">One of your (more ancient) direct reports calls you “sweetie.” Again.</p>
+                </div>
+            </div>
+            /* <<ActionBox
+                "Ignore it"
+                "Confront him gently|Parsing Words|Teachable Moment"
+                "Get HR involved"
+            >> */
+            <<ActionBox
+                "Ignore it|Demo"
+                "Confront him gently|Demo"
+                "Get HR involved|Demo"
+            >>
+        </div>
+</div>

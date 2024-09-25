@@ -1,21 +1,23 @@
 :: ResourceMeter [widget] {"position":"700,100","size":"100,100"}
-<<widget "ResourceMeter">>\
-    <div id="resource" class="resource-meter">\
-        <p id="quarter" class="ui-label">Q$quarter</p>\
-        <div class="meter-unit">\
-            <progress class="ui-meter" id="energy" @value="$energy" max="7"></progress>\
-            <p id="le" class="ui-label">WLB: $energy</p>\
+<<widget "ResourceMeter">>
+    <div id="resource" class="resource-meter">
+        <div class="user">
+            <p class="user__label">Playing as:</p>
+            <h1 class="user__name">Alexis</h1>
         </div>
-        /* <div class="meter-unit">\
-            <progress class="ui-meter" id="satisfaction" @value="$satisfaction" max="7"></progress>\
-            <p id="ls" class="ui-label">Satisfaction: $satisfaction</p>\
-        </div> */
-        <div class="meter-unit">\
-            <progress class="ui-meter" id="approval" @value="$approval" max="7"></progress>\
-            <p id="la" class="ui-label">Performance: $approval</p>\
+        <div class="resource-meter__unit">
+            <div class="resource-meter__label">
+                <p>Self-Care</p>
+                <p>$energy/$maxEnergy</p>
+            </div>
+            <<showmeter 'energy' '_energy / _maxEnergy' />>
         </div>
-        <div class="quit-btn">\
-            [[QUIT]]
+        <div class="resource-meter__unit">
+            <div class="resource-meter__label">
+                <p>Likability</p>
+                <p>$approval/$maxApproval</p>
+            </div>
+            <<showmeter 'approval' '_approval / _maxApproval' />>
         </div>
-    </div>\
-<</widget>>\
+    </div>
+<</widget>>

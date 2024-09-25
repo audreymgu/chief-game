@@ -1,5 +1,5 @@
 :: ResourceUpdate [widget] {"position":"800,100","size":"100,100"}
-<<widget "ResourceUpdate">>\
+<<widget "ResourceUpdate">>
     <<nobr>>
     <div class="action-box">
         <p><strong><em>
@@ -10,7 +10,7 @@
                 PERFORMANCE: $args[2]
             <</if>>
         </em></strong></p>
-        <<link "Next" "Start">>
+        <<link "Next">>
             <<EndingCheck>>
         <</link>>
     </div><</nobr>>

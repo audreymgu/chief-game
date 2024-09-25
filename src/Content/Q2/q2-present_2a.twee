@@ -1,0 +1,13 @@
+/* title + metadata */
+:: Talk Up {"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">
+	<div class="rel-wrapper">
+        <<ResourceMeter>>
+		<div class="content">
+			<p>You talk up your team in a way that still makes it clear you’re the crucial element.</p>
+		</div>
+		<<CalcResource "-2" "2" "2">>
+		<<ResourceUpdate "-2" "2" "2">>
+	</div>
+</div>

@@ -1,46 +1,44 @@
 :: EndingCheck [widget] {"position":"900,100","size":"100,100"}
 <<widget "EndingCheck">>
-	<<set $time to $time + 1>>
-    
-    <<if $quarter == 4 and $time == 3>>
-    	<<set $approvalCheck to true>>
+    <<set $time to $time + 1>>
+
+    <<if $quarter == 4 and $time == 2>>
+    	<<set $personalityCheck to true>>
     <</if>>
-	
-    <<if $time == 3>>
+    
+    <<if $time == 2>>
     	<<if $quarter < 4>>
     		<<set $quarter to $quarter + 1>>
         <</if>>
         <<set $time to 0>>
     <</if>>
-    
-	/* <<if $energy <= 0>>
-		<<set $burnout to true>>
-    <<else>>
-    	<<set $burnout to false>>
-    <</if>> */
+
     <<if $energy <= 0>>
-     	<<GoRandom "EndUnhappy">>
-	<</if>>
-    
-    <<if $satisfaction <= 0>>
-     	<<GoRandom "EndUnhappy">>
+     	<<GoRandom "EndingEnergy">>
 	<</if>>
 
     <<if $approval <= 0>>
-        <<GoRandom "EndFired">>
-    <</if>>
-    
-    <<if $approvalCheck is true>>
-    	<<if $approval >= 6>>
-        	<<GoRandom "EndPromo">>
-        <<elseif $approval < 6 and $approval > 2>>
-        	<<GoRandom "EndStay">>
-        <<else>>
-        	<<GoRandom "EndFired">>
-        <</if>>
+        <<GoRandom "EndingFired">>
     <</if>>
 
-    <<if $burnout is true and !hasVisited("Burnout")>>
-        <<goto [[Burnout]]>>
+    <<if $quarter == 1>>
+        <<GoRandom "Q1">>
+    <</if>>
+    
+    <<if $quarter == 2>>
+        <<GoRandom "Q2">>
+    <</if>>
+    
+    <<if $quarter == 3>>
+        <<GoRandom "Q3">>
+    <</if>>
+    
+    <<if $quarter == 4 and $time < 2>>
+        <<GoRandom "Q4">>
+    <</if>>
+
+    /* ending check */
+    <<if $personalityCheck is true>>
+    	<<goto "QUIT">>
     <</if>>
 <</widget>>

@@ -1,0 +1,13 @@
+/* title + metadata */
+:: Announce your candidacy {"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">
+	<div class="rel-wrapper">
+        <<ResourceMeter>>
+		<div class="content">
+			<p>The Executive Committee likes your hustle and is excited to see how your team performs this quarter. Gah.</p>
+		</div>
+	</div>
+	<<CalcResource "0" "-1" "1">>
+	<<ResourceUpdate "0" "-1" "1">>
+</div>

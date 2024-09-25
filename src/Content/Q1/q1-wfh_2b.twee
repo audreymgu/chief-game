@@ -1,0 +1,13 @@
+/* title + metadata */
+:: Lost Status {"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">
+	<div class="rel-wrapper">
+        <<ResourceMeter>>
+		<div class="content">
+			<p>You somehow come off as both callous and clueless. Tough look.</p>
+		</div>
+		<<CalcResource "-2" "0" "0">>
+		<<ResourceUpdate "-2" "0" "0">>
+	</div>
+</div>

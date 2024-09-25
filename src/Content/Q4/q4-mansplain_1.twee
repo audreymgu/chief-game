@@ -1,0 +1,13 @@
+/* title + metadata */
+:: Throw him a lifeline {"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">
+	<div class="rel-wrapper">
+        <<ResourceMeter>>
+		<div class="content">
+			<p>You gently correct his mistakes and graciously let him continue. Your fake smile pains you.</p>
+		</div>
+		<<CalcResource "0" "1" "2">>
+		<<ResourceUpdate "0" "1" "2">>
+	</div>
+</div>

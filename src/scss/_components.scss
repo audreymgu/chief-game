@@ -149,7 +149,8 @@
     }
     &__img {
         width: 100%;
-        height: 150px;
+        min-height: 150px;
+        max-height: 250px;
         object-fit: cover;
         @include breakpoint(desktop) {
             height: unset;

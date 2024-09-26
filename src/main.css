@@ -8,6 +8,7 @@
 }
 body {
   background-color: #213C06;
+  image-rendering: crisp-edges;
 }
 
 #ui-bar {
@@ -107,7 +108,7 @@ h1 {
 
 .abs-wrapper {
   width: calc(100% - 28px);
-  height: calc(100vh - 80px);
+  height: calc(100% - 80px);
   position: fixed;
   top: 64px;
   left: 14px;
@@ -303,17 +304,23 @@ h1 {
   padding: 0;
   margin-bottom: 0.75rem;
   font-family: start-2p;
-  font-size: 32px;
+  font-size: 24px;
   text-transform: uppercase;
+}
+@media (min-width: 600px) {
+  .scenario__title {
+    font-size: 32px;
+  }
 }
 .scenario__text {
   flex-grow: 1;
   padding-left: 8px;
-  font-size: 20px;
+  font-size: 16px;
 }
 @media (min-width: 600px) {
   .scenario__text {
     padding-left: unset;
+    font-size: 20px;
   }
 }
 .scenario__desc {
@@ -323,12 +330,13 @@ h1 {
 }
 .scenario__img {
   width: 100%;
-  height: 260px;
+  height: 150px;
   object-fit: cover;
   align-self: start;
 }
 @media (min-width: 600px) {
   .scenario__img {
+    height: unset;
     width: 275px;
   }
 }
@@ -370,14 +378,22 @@ h1 {
   color: #2A2C41;
   background: #DFDFD0;
   display: block;
-  height: 18px;
-  line-height: 22px;
-  margin-top: 4px;
+  height: 10px;
+  line-height: 16px;
+  margin-top: 2px;
+  font-size: 12px;
   text-align: center;
   text-transform: uppercase;
   font-family: start-2p;
-  font-size: 14px;
   transition: none;
+}
+@media (min-width: 600px) {
+  .button a {
+    height: 18px;
+    line-height: 22px;
+    margin-top: 4px;
+    font-size: 14px;
+  }
 }
 .button a:hover {
   border-image-source: url("img/button-hover.png");

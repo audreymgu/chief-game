@@ -353,7 +353,7 @@ h1 {
   font-size: 14px;
 }
 .titlebar__grip {
-  padding: 0 4px 0 4px;
+  padding: 4px 2px 4px 2px;
 }
 
 .button:active {
@@ -409,6 +409,11 @@ h1 {
 .menu-bar__link:hover {
   color: black;
   background-color: #DCF15B;
+}
+@media (min-width: 600px) {
+  .menu-bar__logo {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

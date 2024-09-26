@@ -174,7 +174,7 @@
         
     }
     &__grip {
-        padding: 0 4px 0 4px;
+        padding: 4px 2px 4px 2px;
     }
 }
 
@@ -233,6 +233,11 @@
         &:hover {
             color: black;
             background-color: #DCF15B;
+        }
+    }
+    &__logo {
+        @include breakpoint(desktop) {
+            display: none;
         }
     }
 }

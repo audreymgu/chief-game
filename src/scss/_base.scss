@@ -86,5 +86,15 @@ progress::-webkit-progress-value {
 }
 
 .chapel-meter {
-  border: 2px solid #446127;
+  border: 2px solid #808D6B;
+}
+
+.meter-bottom {
+  height: 90%;
+  mask-image: repeating-linear-gradient(
+    to right, 
+    black 0%, black 10%, /* Adjust for segment gap */
+    transparent 10%, transparent 12.5% /* Adjust for segment width */
+  );
+  mask-size: 90px; 
 }

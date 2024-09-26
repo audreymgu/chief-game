@@ -28,15 +28,10 @@
                     <p class="scenario__desc">One of your (more ancient) direct reports calls you “sweetie.” Again.</p>
                 </div>
             </div>
-            /* <<ActionBox
+            <<ActionBox
                 "Ignore it"
                 "Confront him gently|Parsing Words|Teachable Moment"
                 "Get HR involved"
-            >> */
-            <<ActionBox
-                "Ignore it|Demo"
-                "Confront him gently|Demo"
-                "Get HR involved|Demo"
             >>
         </div>
 </div>

@@ -11,12 +11,12 @@
 <<set $maxEnergy to 10>>
 <<set $maxApproval to 10>>
 <<newmeter 'energy' 0.5>>
-    <<colors 'green' 'yellow' #DAE5CE>>
+    <<colors #74B137 'yellow' #FFFFF5>>
     <<sizing 100% 18px>>
     <<animation 0.5s linear>>
 <</newmeter>>
 <<newmeter 'approval' 0.5>>
-    <<colors 'green' 'yellow' #DAE5CE>>
+    <<colors #74B137 'yellow' #FFFFF5>>
     <<sizing 100% 18px>>
     <<animation 0.5s linear>>
 <</newmeter>>

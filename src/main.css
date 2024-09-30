@@ -152,6 +152,7 @@ h1 {
   background-color: #FFFFF5;
   border: 1px solid black;
   border-width: 1px 0 0 0;
+  color: #2A2C41;
 }
 @media (min-width: 600px) {
   .content {
@@ -343,6 +344,7 @@ h1 {
 }
 
 .titlebar {
+  color: white;
   display: flex;
   justify-content: space-between;
   height: 24px;
@@ -431,6 +433,101 @@ h1 {
   .menu-bar__logo {
     display: none;
   }
+}
+
+.class-selector {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.class {
+  flex: 1 0 0;
+  line-height: 1.1;
+  border: 1px solid black;
+}
+.class__portrait {
+  width: 100%;
+  flex: 1 0 0;
+  min-width: 134px;
+}
+.class:active {
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+}
+
+.class-info {
+  font-family: tickerbit;
+  font-size: 11px;
+  padding: 10px;
+  flex: 1 0 0;
+}
+.class-info p {
+  margin-bottom: 4px;
+}
+.class-info__title {
+  padding: 4px 4px 4px 6px;
+}
+.class-info__title--ops {
+  background-color: #F8DAE5;
+}
+.class-info__title--product {
+  background-color: #D6E495;
+}
+.class-info__title--legal {
+  background-color: #DEE5F9;
+}
+.class-info__title--sales {
+  background-color: #FCD1B4;
+}
+
+.initials-field {
+  margin: 24px 0 12px 0;
+  display: flex;
+  font-family: start-2p;
+  align-items: center;
+  line-height: 1.25;
+  font-size: 14px;
+}
+.initials-fieldp {
+  padding: 0px;
+  margin: 0px;
+}
+
+#textbox-user {
+  background-color: #FFFFFF;
+  color: #D4D5D9;
+  border: solid #D1D1D1;
+  border-width: 2px 1px 1px 1px;
+  flex-grow: 1;
+  box-sizing: border-box;
+  min-width: 0;
+  font-size: 28px;
+  text-transform: uppercase;
+  text-align: center;
+}
+#textbox-user:focus {
+  border: solid #8D8D8D;
+  border-width: 2px 1px 1px 1px;
+}
+
+.login-window {
+  padding: 8px 16px 16px 16px;
+}
+.login-window__title {
+  width: 100%;
+  text-align: center;
+  font-family: start-2p;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.login-window__info {
+  width: 100%;
+  text-align: center;
+  background: #F6F6E8;
+  font-family: tickerbit;
+  font-size: 14px;
+  margin-bottom: 12px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,17 +1,39 @@
 :: There's no time [Q1] {"position":"600,675","size":"100,100"}
+/* set placeholder values */
+<<set $quarter to 1>>
+<<set $energy to 5>>
+<<set $approval to 5>>
+<<set $softSkill to 1>>
 /* passage content */
-<<audio "phone" volume 0.25 play>>
-<div class="abs-wrapper">
-	<div class="rel-wrapper">
-        <<ResourceMeter>>
-        <div class="content">
-            <h1>Five Alarm Fire</h1>
-            <p>You’ve been given a high-stakes assignment with an impossible deadline.</p>
-        </div>
-        <<ActionBox
-            "Sleep when you're dead"
-            "Delegate|You bribe|Not you"
-            "Ask for the extension now, not later"
-        >>
+/* <<audio "phone" volume 0.25 play>> */
+<div class="menu-bar">
+    <div class="menu-bar__group">
+        <a class="menu-bar__link">Help</a>
     </div>
+    <img class="menu-bar__logo" src="img/logo-small.png" />
+    <a class="menu-bar__link">Quit</a>
+</div>
+<div class="abs-wrapper">
+    <img class="logo" src="img/logo.png"/>
+	<div class="rel-wrapper">
+        <div class="stats">
+            <<PlayerAvatar>>
+            <<ResourceMeter>>
+        </div>
+        <div class="content">
+            <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
+            <<TitleBar $quarterLabel>>
+            <div class="scenario">
+                <img class="scenario__img" src="img/scenario1.png"/>
+                <div class="scenario__text">
+                    <h1 class="scenario__title">Five Alarm Fire</h1>
+                    <p class="scenario__desc">You’ve been given a high-stakes assignment with an impossible deadline.</p>
+                </div>
+            </div>
+                <<ActionBox
+                    "Sleep when you're dead"
+                    "s|Delegate|You bribe|Not you"
+                    "Ask for the extension now, not later"
+                >>
+        </div>
 </div>

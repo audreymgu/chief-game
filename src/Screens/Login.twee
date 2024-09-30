@@ -1,4 +1,4 @@
-:: Intro {"position":"500,300","size":"100,100"}
+:: Login {"position":"500,300","size":"100,100"}
 <<nobr>>
 /* Variable Initialization */
 <<if $time == undefined>>
@@ -7,34 +7,51 @@
 <<if $quarter == undefined>>
 	<<set $quarter to 1>>
 <</if>>
-<<set $burnout to 0>>
 <<set $login to true>>
 <</nobr>>
 <div class="abs-wrapper">
 	<div class="rel-wrapper">
 		<div class="content">
-			<p>Welcome to Optimum Solutions, LLC!</p>
-			<p>Please select your account to login.</p>
-			<<listbox "$user" autoselect>>
-				<<option "SyntaxSorceress" product>>
-				<<option "XOXOWaterCoolerWhisperer" sales>>
-				<<option "SueMeBro" legal>>
-				<<option "SmoothOperator" operations>>
-			<</listbox>>
-			<span id="userDesc"><<print setup.userDescs.product>></span>
-			<<script>>
-				$(document).on(":passagerender", function (event) {
-					$(event.content).find("select.macro-listbox").on("change", function (event) {
-						$("#userDesc").fadeOut(250);
-						setTimeout(function () {
-							var user = State.variables.user;
-							var desc = "setup.userDescs." + user;
-							$("#userDesc").empty().wiki(eval(desc)).fadeIn(250);
-						}, 250);
-					});
-				});
-			<</script>>
-			[[Login|Email]]
+			<<TitleBar "Welcome">>
+			<div class="login-window">
+				<h1 class="login-window__title">Choose Your Department</h1>
+				<p class="login-window__info">Your skills may affect certain outcomes.</p>
+				<div class="class-selector">
+					<div class="class">
+						<img class="class__portrait" src="img/icon1.png"/>
+						<div class="class-info">
+							<p class="class-info__title class-info__title--product">PRODUCT</p>
+							<p>Software bends to your will. If only EQ was something you could download.</p>
+						</div>
+					</div>
+					<div class="class">
+						<img class="class__portrait" src="img/icon1.png"/>
+						<div class="class-info">
+							<p class="class-info__title class-info__title--sales">SALES</p>
+							<p>You can charm, cajole, and occasionally even captivate. You can’t do spreadsheets.</p>
+						</div>
+					</div>
+					<div class="class">
+						<img class="class__portrait" src="img/icon1.png"/>
+						<div class="class-info">
+							<p class="class-info__title class-info__title--legal">LEGAL</p>
+							<p>You practically invented due diligence. You cover your own ass with aplomb.</p>
+						</div>
+					</div>
+					<div class="class">
+						<img class="class__portrait" src="img/icon1.png"/>
+						<div class="class-info">
+							<p class="class-info__title class-info__title--ops">OPERATIONS</p>
+							<p>You know when to bcc and where the secret bathroom is. Surely that means something.</p>
+						</div>
+					</div>
+				</div>
+				<div class="initials-field">
+					<p class="initials-field__label">YOUR INITIALS:</p>
+					<<textbox "$user" "ABC">>
+				</div>
+				<div class="button">[[Login|Email]]</div>
+			</div>
 		</div>
 	</div>
 </div>

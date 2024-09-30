@@ -3,21 +3,51 @@
     <div class="action-box">
         <<for _i to 0; _i lt _args.length; _i++>>
             <<if _args[_i].includes("|")>>
+                /* split by separator */
                 <<set _options = []>>
                 <<set _options = $args[_i].split("|")>>
-                <<if random(1, 100) <= 50>>
-                    <div class="button"><a>_options[0]</a></div>
-                    /* <span class="button">[[_options[0]|_options[1]]]</span> */
+
+                /* check if special action */
+                <<if _options.length > 3>>
+                    <<set $actionType to _options[0]>>
+                    <<switch $actionType>>
+                    /* hard skill */
+                    <<case "h">>
+                        <<switch $hardSkill>>
+                        <<case 1>>
+                            <<set $probability to random(100,100)>>
+                        <<case -1>>
+                            <<set $probability to random(0,0)>>
+                        <<case 0>>
+                            <<set $probability to random(0,100)>>
+                        <</switch>>
+                    /* soft skill */
+                    <<case "s">>
+                        <<switch $softSkill>>
+                        <<case 1>>
+                            <<set $probability to random(100,100)>>
+                        <<case -1>>
+                            <<set $probability to random(0,0)>>
+                        <<case 0>>
+                            <<set $probability to random(0,100)>>
+                        <</switch>>
+                    <</switch>>
+                    <<if $probability >= 50>>
+                        <div class="button">[[_options[1]|_options[2]]]</div>
+                    <<else>>
+                        <div class="button">[[_options[1]|_options[3]]]</div>
+                    <</if>>
                 <<else>>
-                    <div class="button"><a>_options[0]</a></div>
-                    /* <span class="button">[[_options[0]|_options[2]]]</span> */
+                    /* non-special default */
+                    <<set $probability to random(0,100)>>
+                    <<if $probability >= 50>>
+                        <div class="button">[[_options[0]|_options[1]]]</div>
+                    <<else>>
+                     <div class="button">[[_options[0]|_options[2]]]</div>
+                    <</if>>
                 <</if>>
-                /* <<link "_options[0]">>
-                    <<set _randomPassage = either(_options[1], _options[2])>>
-                    <<goto _randomPassage>>
-                <</link>> */
             <<else>>
-                <div class="button"><a>_args[_i]</a></div>
+                <div class="button">[[_args[_i]]]</div>
             <</if>>
         <</for>>
     </div>

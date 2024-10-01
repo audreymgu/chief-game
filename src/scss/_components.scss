@@ -264,9 +264,11 @@
 }
 
 .class {
+    box-sizing: border-box;
     flex: 1 0 0;
     line-height: 1.1;
-    border: 1px solid black;
+    border: solid hsl(60, 20%, 75%);
+    border-width: 1px 2px 2px 1px;
     &__portrait {
         width: 100%;
         flex: 1 0 0;
@@ -275,6 +277,10 @@
     &:active {
         -webkit-transform: translateY(2px);
         transform: translateY(2px);
+    }
+    &--selected {
+        border: solid black;
+        border-width: 1px 2px 2px 1px;
     }
 }
 
@@ -318,7 +324,7 @@
 
 #textbox-user {
     background-color: #FFFFFF;
-    color: #D4D5D9;
+    color: #2A2C41;
     border: solid #D1D1D1;
     border-width: 2px 1px 1px 1px;
     &:focus {
@@ -328,10 +334,15 @@
     flex-grow: 1;
     box-sizing: border-box;
     min-width: 0;
+    height: 48px;
+    padding-top: 24px;
     font-size: 28px;
+    line-height: 0.5;
     text-transform: uppercase;
     text-align: center;
-    
+    &::placeholder {
+        color: #D4D5D9;
+    }
 }
 
 

@@ -8,6 +8,8 @@
 	<<set $quarter to 1>>
 <</if>>
 <<set $login to true>>
+<<set $hardSkill to 0>>
+<<set $softSkill to 0>>
 <</nobr>>
 <div class="abs-wrapper">
 	<div class="rel-wrapper">
@@ -17,28 +19,28 @@
 				<h1 class="login-window__title">Choose Your Department</h1>
 				<p class="login-window__info">Your skills may affect certain outcomes.</p>
 				<div class="class-selector">
-					<div class="class">
+					<div class="class" id="pd">
 						<img class="class__portrait" src="img/icon1.png"/>
 						<div class="class-info">
 							<p class="class-info__title class-info__title--product">PRODUCT</p>
 							<p>Software bends to your will. If only EQ was something you could download.</p>
 						</div>
 					</div>
-					<div class="class">
+					<div class="class" id="sa">
 						<img class="class__portrait" src="img/icon1.png"/>
 						<div class="class-info">
 							<p class="class-info__title class-info__title--sales">SALES</p>
 							<p>You can charm, cajole, and occasionally even captivate. You can’t do spreadsheets.</p>
 						</div>
 					</div>
-					<div class="class">
+					<div class="class" id="lg">
 						<img class="class__portrait" src="img/icon1.png"/>
 						<div class="class-info">
 							<p class="class-info__title class-info__title--legal">LEGAL</p>
 							<p>You practically invented due diligence. You cover your own ass with aplomb.</p>
 						</div>
 					</div>
-					<div class="class">
+					<div class="class" id="op">
 						<img class="class__portrait" src="img/icon1.png"/>
 						<div class="class-info">
 							<p class="class-info__title class-info__title--ops">OPERATIONS</p>
@@ -48,10 +50,41 @@
 				</div>
 				<div class="initials-field">
 					<p class="initials-field__label">YOUR INITIALS:</p>
-					<<textbox "$user" "ABC">>
+					<input id="textbox-user" name="textbox-user" type="text" inputmode="text" placeholder="ABC" maxlength="3" tabindex="0" class="macro-textbox">
 				</div>
 				<div class="button">[[Login|Email]]</div>
 			</div>
 		</div>
 	</div>
 </div>
+<<script>>
+    $(document).one(':passagedisplay', function () {
+        console.log("Passage displayed and script running.");
+        var divs = document.querySelectorAll('.class');
+		divs.forEach(function(div) {
+            div.addEventListener('click', function() {
+                divs.forEach(function(d) {
+                    d.classList.remove('class--selected');
+                });
+                this.classList.add('class--selected');
+				if (this.id === "pd") {
+					console.log("pd");
+					State.variables.hardSkill = 1;
+					State.variables.softSkill = -1;
+				} else if (this.id === "sa") {
+					console.log("sa");
+					State.variables.hardSkill = -1;
+					State.variables.softSkill = 1;
+				} else if (this.id === "lg") {
+					console.log("lg");
+					State.variables.hardSkill = 0;
+					State.variables.softSkill = 0;
+				} else if (this.id === "op") {
+					console.log("op");
+					State.variables.hardSkill = -1;
+					State.variables.softSkill = 1;
+				}    
+            });
+        });
+    });
+<</script>>

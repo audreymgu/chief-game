@@ -7,6 +7,16 @@ body {
   image-rendering: crisp-edges;
 }
 
+input:focus::-webkit-input-placeholder{
+    color: transparent!important;
+}
+input:focus::-moz-placeholder{
+    color: transparent!important;
+}
+input:focus:-moz-placeholder{
+    color: transparent!important;
+}
+
 // #ui-bar {
 //   width: 100%;
 //   height: 5rem;

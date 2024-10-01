@@ -11,6 +11,18 @@ body {
   image-rendering: crisp-edges;
 }
 
+input:focus::-webkit-input-placeholder {
+  color: transparent !important;
+}
+
+input:focus::-moz-placeholder {
+  color: transparent !important;
+}
+
+input:focus:-moz-placeholder {
+  color: transparent !important;
+}
+
 #ui-bar {
   display: none;
 }
@@ -442,9 +454,11 @@ h1 {
 }
 
 .class {
+  box-sizing: border-box;
   flex: 1 0 0;
   line-height: 1.1;
-  border: 1px solid black;
+  border: solid hsl(60deg, 20%, 75%);
+  border-width: 1px 2px 2px 1px;
 }
 .class__portrait {
   width: 100%;
@@ -454,6 +468,10 @@ h1 {
 .class:active {
   -webkit-transform: translateY(2px);
   transform: translateY(2px);
+}
+.class--selected {
+  border: solid black;
+  border-width: 1px 2px 2px 1px;
 }
 
 .class-info {
@@ -496,19 +514,25 @@ h1 {
 
 #textbox-user {
   background-color: #FFFFFF;
-  color: #D4D5D9;
+  color: #2A2C41;
   border: solid #D1D1D1;
   border-width: 2px 1px 1px 1px;
   flex-grow: 1;
   box-sizing: border-box;
   min-width: 0;
+  height: 48px;
+  padding-top: 24px;
   font-size: 28px;
+  line-height: 0.5;
   text-transform: uppercase;
   text-align: center;
 }
 #textbox-user:focus {
   border: solid #8D8D8D;
   border-width: 2px 1px 1px 1px;
+}
+#textbox-user::placeholder {
+  color: #D4D5D9;
 }
 
 .login-window {

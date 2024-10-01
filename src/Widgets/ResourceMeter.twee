@@ -3,7 +3,7 @@
     <div id="resource" class="resource-meter">
         <div class="user">
             <p class="user__label">Playing as:</p>
-            <h1 class="user__name">Alexis</h1>
+            <h1 class="user__name">$user</h1>
         </div>
         <div class="resource-meter__unit">
             <div class="resource-meter__label">

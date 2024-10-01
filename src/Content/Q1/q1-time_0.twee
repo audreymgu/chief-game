@@ -3,7 +3,6 @@
 <<set $quarter to 1>>
 <<set $energy to 5>>
 <<set $approval to 5>>
-<<set $softSkill to 1>>
 /* passage content */
 /* <<audio "phone" volume 0.25 play>> */
 <div class="menu-bar">

@@ -248,6 +248,7 @@ h1 {
   line-height: 1;
   font-size: 20px;
   letter-spacing: 1%;
+  text-transform: uppercase;
 }
 
 .meter-unit {
@@ -414,6 +415,17 @@ h1 {
 .button a:hover {
   border-image-source: url("img/button-hover.png");
   text-decoration: none;
+}
+.button--disabled a {
+  color: #969699;
+  border-image-source: url("img/button-inactive.png");
+  border-image-slice: 30% 40% fill;
+  border-image-repeat: repeat;
+  pointer-events: none;
+  cursor: default;
+}
+.button--disabled a:hover {
+  border-image-source: url("img/button-inactive.png");
 }
 
 .menu-bar {

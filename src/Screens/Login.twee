@@ -1,5 +1,4 @@
 :: Login {"position":"500,300","size":"100,100"}
-<<nobr>>
 /* Variable Initialization */
 <<if $time == undefined>>
 	<<set $time to 0>>
@@ -7,10 +6,9 @@
 <<if $quarter == undefined>>
 	<<set $quarter to 1>>
 <</if>>
-<<set $login to true>>
 <<set $hardSkill to 0>>
 <<set $softSkill to 0>>
-<</nobr>>
+<<set $user to "ABC">>
 <div class="abs-wrapper">
 	<div class="rel-wrapper">
 		<div class="content">
@@ -52,7 +50,15 @@
 					<p class="initials-field__label">YOUR INITIALS:</p>
 					<input id="textbox-user" name="textbox-user" type="text" inputmode="text" placeholder="ABC" maxlength="3" tabindex="0" class="macro-textbox">
 				</div>
-				<div class="button">[[Login|Email]]</div>
+				<div class="button button--disabled">
+					<<link "Login" "There's no time">>
+						<<script>>
+							var userField = document.getElementById("textbox-user");
+							var inputValue = userField.value.trim();
+							State.variables.user = inputValue;
+						<</script>>
+					<</link>>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -60,7 +66,22 @@
 <<script>>
     $(document).one(':passagedisplay', function () {
         console.log("Passage displayed and script running.");
+
         var divs = document.querySelectorAll('.class');
+		var userField = document.getElementById("textbox-user");
+		var inputValue = userField.value.trim();
+		var classCheck = false;
+		var btn = document.querySelector('.button');
+
+		function loginCheck () {
+			if (classCheck && inputValue.length > 1) {
+				console.log("gouda");
+				btn.classList.remove('button--disabled');
+			} else {
+				btn.classList.add('button--disabled');
+			}
+		}
+
 		divs.forEach(function(div) {
             div.addEventListener('click', function() {
                 divs.forEach(function(d) {
@@ -71,20 +92,30 @@
 					console.log("pd");
 					State.variables.hardSkill = 1;
 					State.variables.softSkill = -1;
+					classCheck = true;
 				} else if (this.id === "sa") {
 					console.log("sa");
 					State.variables.hardSkill = -1;
 					State.variables.softSkill = 1;
+					classCheck = true;
 				} else if (this.id === "lg") {
 					console.log("lg");
 					State.variables.hardSkill = 0;
 					State.variables.softSkill = 0;
+					classCheck = true;
 				} else if (this.id === "op") {
 					console.log("op");
 					State.variables.hardSkill = -1;
 					State.variables.softSkill = 1;
-				}    
+					classCheck = true;
+				} 
+				loginCheck();
             });
         });
+
+		userField.addEventListener('input', function() {
+			inputValue = userField.value.trim();
+			loginCheck();
+		})
     });
 <</script>>

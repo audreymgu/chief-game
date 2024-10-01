@@ -1,13 +1,28 @@
 /* title + metadata */
 :: Not you {"position":"600,800","size":"100,100"}
 /* passage content */
+<div class="menu-bar">
+    <div class="menu-bar__group">
+        <a class="menu-bar__link">Help</a>
+    </div>
+    <img class="menu-bar__logo" src="img/logo-small.png" />
+    <a class="menu-bar__link">Quit</a>
+</div>
 <div class="abs-wrapper">
+    <img class="logo" src="img/logo.png"/>
 	<div class="rel-wrapper">
-        <<ResourceMeter>>
-		<div class="content">
-			<p>How could you trust the people below you? They’re not you. They do a not-you job—and people notice.</p>
-		</div>
-		<<CalcResource "-1" "-1" "0">>
-		<<ResourceUpdate "-1" "-1" "0">>
+        <div class="stats">
+            <<PlayerAvatar>>
+            <<ResourceMeter>>
+        </div>
+        <div class="content">
+            <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
+            <<TitleBar $quarterLabel>>
+            <div class="scenario">
+				<p>How could you trust the people below you? They’re not you. They do a not-you job—and people notice.</p>
+				[[Back|There's no time]]
+            </div>
+			<<CalcResource "-1" "-1" "0">>
+        </div>
 	</div>
 </div>

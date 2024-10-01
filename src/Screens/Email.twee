@@ -2,6 +2,9 @@
 <div class="abs-wrapper">
 	<div class="rel-wrapper">
 		<div class="content">
+			$user
+			$hardSkill
+			$softSkill
 			<p><strong>Subject: FWD:FWD: Congratulations</strong></p>
 			<p>Hey.</p>
 			<p>Congrats on the new gig! I'm on to greener pastures. Hope you'll make it further here than I did. Maybe even <strong style="color:yellow">earn a promotion by the end of the year!</strong></p>

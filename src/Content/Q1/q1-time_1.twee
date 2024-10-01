@@ -1,13 +1,28 @@
 /* title + metadata */
 :: Sleep when you're dead {"position":"600,800","size":"100,100"}
 /* passage content */
+<div class="menu-bar">
+    <div class="menu-bar__group">
+        <a class="menu-bar__link">Help</a>
+    </div>
+    <img class="menu-bar__logo" src="img/logo-small.png" />
+    <a class="menu-bar__link">Quit</a>
+</div>
 <div class="abs-wrapper">
+    <img class="logo" src="img/logo.png"/>
 	<div class="rel-wrapper">
-        <<ResourceMeter>>
-		<div class="content">
-			<p>Late nights and white knuckles make it happen. You celebrate with another can of Celsius.</p>
-		</div>
-		<<CalcResource "-3" "-1" "2">>
-		<<ResourceUpdate "-3" "-1" "2">>
+        <div class="stats">
+            <<PlayerAvatar>>
+            <<ResourceMeter>>
+        </div>
+        <div class="content">
+            <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
+            <<TitleBar $quarterLabel>>
+            <div class="scenario">
+				<p>Late nights and white knuckles make it happen. You celebrate with another can of Celsius.</p>
+				[[Back|There's no time]]
+            </div>
+			<<CalcResource "-3" "-1" "2">>
+        </div>
 	</div>
 </div>

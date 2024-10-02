@@ -32,7 +32,7 @@
                 <<ActionBox
                     "Sleep when you're dead"
                     "s|Delegate|You bribe|Not you"
-                    "Ask for the extension now, not later"
+                    "Ask for the extension now"
                 >>
         </div>
 </div>

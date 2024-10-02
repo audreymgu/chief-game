@@ -4,6 +4,11 @@
     position: fixed;
     top: 64px;
     left: 14px;
+    &--login {
+        top: 50%;
+        height: min-content;
+        transform: translate(0, -50%);
+    }
     @include breakpoint(desktop) {
         width: unset;
         height: unset;
@@ -47,6 +52,16 @@
     border: 1px solid black;
     border-width: 1px 0 0 0;
     color: #2A2C41;
+    &--login {
+        padding: 3px;
+        background-image: linear-gradient(to bottom, #FFFFF5 0%, #FFFFF5 100%), linear-gradient(to bottom, #DFDFD0 0%, #DFDFD0 100%);
+        background-clip: content-box, padding-box;
+        @include breakpoint(desktop) {
+            padding: unset;
+            border-width: unset;
+            border: 1px solid black;
+        }
+    }
 }
 
 .stats {

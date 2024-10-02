@@ -232,7 +232,12 @@ h1 {
   top: 64px;
   left: 14px;
 }
-@media (min-width: 600px) {
+.abs-wrapper--login {
+  top: 50%;
+  height: min-content;
+  transform: translate(0, -50%);
+}
+@media (min-width: 650px) {
   .abs-wrapper {
     width: unset;
     height: unset;
@@ -255,7 +260,7 @@ h1 {
   background-color: #DFDFD0;
   border: 1px solid black;
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .rel-wrapper {
     padding: 8px;
     gap: 8px;
@@ -273,9 +278,21 @@ h1 {
   border-width: 1px 0 0 0;
   color: #2A2C41;
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .content {
     padding: 0px;
+    border-width: unset;
+    border: 1px solid black;
+  }
+}
+.content--login {
+  padding: 3px;
+  background-image: linear-gradient(to bottom, #FFFFF5 0%, #FFFFF5 100%), linear-gradient(to bottom, #DFDFD0 0%, #DFDFD0 100%);
+  background-clip: content-box, padding-box;
+}
+@media (min-width: 650px) {
+  .content--login {
+    padding: unset;
     border-width: unset;
     border: 1px solid black;
   }
@@ -285,7 +302,7 @@ h1 {
   display: flex;
   flex-direction: row;
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .stats {
     border: 1px solid black;
   }
@@ -299,7 +316,7 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .logo {
     display: block;
   }
@@ -336,7 +353,7 @@ h1 {
 .user {
   display: none;
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .user {
     display: flex;
     flex-direction: column;
@@ -378,7 +395,7 @@ h1 {
   justify-content: center;
   gap: 0.25rem;
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .action-box {
     border: none;
     width: calc(100% - 16px);
@@ -394,7 +411,7 @@ h1 {
   object-fit: contain;
   height: 54px;
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .avatar__image {
     margin: 4px;
     border: 1px solid black;
@@ -410,7 +427,7 @@ h1 {
   border: 1px solid black;
   border-width: 0 1px 0 1px;
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .scenario {
     border: unset;
     border-width: unset;
@@ -428,7 +445,7 @@ h1 {
   font-size: 24px;
   text-transform: uppercase;
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .scenario__title {
     font-size: 32px;
   }
@@ -438,7 +455,7 @@ h1 {
   padding-left: 8px;
   font-size: 16px;
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .scenario__text {
     padding-left: unset;
     font-size: 20px;
@@ -456,7 +473,7 @@ h1 {
   object-fit: cover;
   align-self: start;
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .scenario__img {
     height: unset;
     width: 275px;
@@ -474,7 +491,7 @@ h1 {
   background-image: linear-gradient(to bottom, #2A2C41 0%, #2A2C41 100%), linear-gradient(to bottom, #F8F7F2 0%, #F8F7F2 100%);
   background-clip: content-box, padding-box;
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .titlebar {
     border-width: 0 0 1px 0;
   }
@@ -510,7 +527,7 @@ h1 {
   font-family: start-2p;
   transition: none;
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .button a {
     height: 18px;
     line-height: 22px;
@@ -560,7 +577,7 @@ h1 {
   color: black;
   background-color: #DCF15B;
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .menu-bar__logo {
     display: none;
   }
@@ -568,8 +585,14 @@ h1 {
 
 .class-selector {
   display: flex;
+  flex-direction: column;
   gap: 12px;
   margin-bottom: 12px;
+}
+@media (min-width: 650px) {
+  .class-selector {
+    flex-direction: unset;
+  }
 }
 
 .class {
@@ -578,11 +601,25 @@ h1 {
   line-height: 1.1;
   border: solid hsl(60deg, 20%, 75%);
   border-width: 1px 2px 2px 1px;
+  display: flex;
+  flex-direction: row;
+}
+@media (min-width: 650px) {
+  .class {
+    flex-direction: column;
+  }
 }
 .class__portrait {
-  width: 100%;
+  max-width: 25%;
+  object-fit: contain;
   flex: 1 0 0;
-  min-width: 134px;
+}
+@media (min-width: 650px) {
+  .class__portrait {
+    max-width: unset;
+    width: 100%;
+    min-width: 134px;
+  }
 }
 .class:active {
   -webkit-transform: translateY(2px);
@@ -596,14 +633,33 @@ h1 {
 .class-info {
   font-family: tickerbit;
   font-size: 11px;
-  padding: 10px;
   flex: 1 0 0;
+}
+@media (min-width: 650px) {
+  .class-info {
+    padding: 10px;
+  }
 }
 .class-info p {
   margin-bottom: 4px;
 }
+.class-info__desc {
+  margin: 8px;
+  margin-right: 16px;
+}
+@media (min-width: 650px) {
+  .class-info__desc {
+    margin: unset;
+  }
+}
 .class-info__title {
+  margin: 8px;
   padding: 4px 4px 4px 6px;
+}
+@media (min-width: 650px) {
+  .class-info__title {
+    margin: unset;
+  }
 }
 .class-info__title--ops {
   background-color: #F8DAE5;
@@ -630,6 +686,10 @@ h1 {
   padding: 0px;
   margin: 0px;
 }
+.initials-field__label {
+  flex-grow: 1;
+  padding-top: 4px;
+}
 
 #textbox-user {
   background-color: #FFFFFF;
@@ -639,10 +699,12 @@ h1 {
   flex-grow: 1;
   box-sizing: border-box;
   min-width: 0;
+  max-width: 12rem;
   height: 48px;
   padding-top: 24px;
   font-size: 28px;
   line-height: 0.5;
+  letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
 }
@@ -656,6 +718,13 @@ h1 {
 
 .login-window {
   padding: 8px 16px 16px 16px;
+  border: 1px solid black;
+  border-width: 0px 1px 1px 1px;
+}
+@media (min-width: 650px) {
+  .login-window {
+    border: unset;
+  }
 }
 .login-window__title {
   width: 100%;
@@ -668,9 +737,18 @@ h1 {
   width: 100%;
   text-align: center;
   background: #F6F6E8;
+  line-height: 1.1;
+  font-size: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4px;
   font-family: tickerbit;
-  font-size: 14px;
   margin-bottom: 12px;
+}
+@media (min-width: 650px) {
+  .login-window__info {
+    font-size: 14px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
@@ -802,7 +880,12 @@ h1 {
   top: 64px;
   left: 14px;
 }
-@media (min-width: 600px) {
+.abs-wrapper--login {
+  top: 50%;
+  height: min-content;
+  transform: translate(0, -50%);
+}
+@media (min-width: 650px) {
   .abs-wrapper {
     width: unset;
     height: unset;
@@ -825,7 +908,7 @@ h1 {
   background-color: #DFDFD0;
   border: 1px solid black;
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .rel-wrapper {
     padding: 8px;
     gap: 8px;
@@ -843,9 +926,21 @@ h1 {
   border-width: 1px 0 0 0;
   color: #2A2C41;
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .content {
     padding: 0px;
+    border-width: unset;
+    border: 1px solid black;
+  }
+}
+.content--login {
+  padding: 3px;
+  background-image: linear-gradient(to bottom, #FFFFF5 0%, #FFFFF5 100%), linear-gradient(to bottom, #DFDFD0 0%, #DFDFD0 100%);
+  background-clip: content-box, padding-box;
+}
+@media (min-width: 650px) {
+  .content--login {
+    padding: unset;
     border-width: unset;
     border: 1px solid black;
   }
@@ -855,7 +950,7 @@ h1 {
   display: flex;
   flex-direction: row;
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .stats {
     border: 1px solid black;
   }
@@ -869,7 +964,7 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .logo {
     display: block;
   }
@@ -906,7 +1001,7 @@ h1 {
 .user {
   display: none;
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .user {
     display: flex;
     flex-direction: column;
@@ -948,7 +1043,7 @@ h1 {
   justify-content: center;
   gap: 0.25rem;
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .action-box {
     border: none;
     width: calc(100% - 16px);
@@ -964,7 +1059,7 @@ h1 {
   object-fit: contain;
   height: 54px;
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .avatar__image {
     margin: 4px;
     border: 1px solid black;
@@ -980,7 +1075,7 @@ h1 {
   border: 1px solid black;
   border-width: 0 1px 0 1px;
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .scenario {
     border: unset;
     border-width: unset;
@@ -998,7 +1093,7 @@ h1 {
   font-size: 24px;
   text-transform: uppercase;
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .scenario__title {
     font-size: 32px;
   }
@@ -1008,7 +1103,7 @@ h1 {
   padding-left: 8px;
   font-size: 16px;
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .scenario__text {
     padding-left: unset;
     font-size: 20px;
@@ -1026,7 +1121,7 @@ h1 {
   object-fit: cover;
   align-self: start;
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .scenario__img {
     height: unset;
     width: 275px;
@@ -1044,7 +1139,7 @@ h1 {
   background-image: linear-gradient(to bottom, #2A2C41 0%, #2A2C41 100%), linear-gradient(to bottom, #F8F7F2 0%, #F8F7F2 100%);
   background-clip: content-box, padding-box;
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .titlebar {
     border-width: 0 0 1px 0;
   }
@@ -1080,7 +1175,7 @@ h1 {
   font-family: start-2p;
   transition: none;
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .button a {
     height: 18px;
     line-height: 22px;
@@ -1130,7 +1225,7 @@ h1 {
   color: black;
   background-color: #DCF15B;
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .menu-bar__logo {
     display: none;
   }
@@ -1138,8 +1233,14 @@ h1 {
 
 .class-selector {
   display: flex;
+  flex-direction: column;
   gap: 12px;
   margin-bottom: 12px;
+}
+@media (min-width: 650px) {
+  .class-selector {
+    flex-direction: unset;
+  }
 }
 
 .class {
@@ -1148,11 +1249,25 @@ h1 {
   line-height: 1.1;
   border: solid hsl(60deg, 20%, 75%);
   border-width: 1px 2px 2px 1px;
+  display: flex;
+  flex-direction: row;
+}
+@media (min-width: 650px) {
+  .class {
+    flex-direction: column;
+  }
 }
 .class__portrait {
-  width: 100%;
+  max-width: 25%;
+  object-fit: contain;
   flex: 1 0 0;
-  min-width: 134px;
+}
+@media (min-width: 650px) {
+  .class__portrait {
+    max-width: unset;
+    width: 100%;
+    min-width: 134px;
+  }
 }
 .class:active {
   -webkit-transform: translateY(2px);
@@ -1166,14 +1281,33 @@ h1 {
 .class-info {
   font-family: tickerbit;
   font-size: 11px;
-  padding: 10px;
   flex: 1 0 0;
+}
+@media (min-width: 650px) {
+  .class-info {
+    padding: 10px;
+  }
 }
 .class-info p {
   margin-bottom: 4px;
 }
+.class-info__desc {
+  margin: 8px;
+  margin-right: 16px;
+}
+@media (min-width: 650px) {
+  .class-info__desc {
+    margin: unset;
+  }
+}
 .class-info__title {
+  margin: 8px;
   padding: 4px 4px 4px 6px;
+}
+@media (min-width: 650px) {
+  .class-info__title {
+    margin: unset;
+  }
 }
 .class-info__title--ops {
   background-color: #F8DAE5;
@@ -1200,6 +1334,10 @@ h1 {
   padding: 0px;
   margin: 0px;
 }
+.initials-field__label {
+  flex-grow: 1;
+  padding-top: 4px;
+}
 
 #textbox-user {
   background-color: #FFFFFF;
@@ -1209,10 +1347,12 @@ h1 {
   flex-grow: 1;
   box-sizing: border-box;
   min-width: 0;
+  max-width: 12rem;
   height: 48px;
   padding-top: 24px;
   font-size: 28px;
   line-height: 0.5;
+  letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
 }
@@ -1226,6 +1366,13 @@ h1 {
 
 .login-window {
   padding: 8px 16px 16px 16px;
+  border: 1px solid black;
+  border-width: 0px 1px 1px 1px;
+}
+@media (min-width: 650px) {
+  .login-window {
+    border: unset;
+  }
 }
 .login-window__title {
   width: 100%;
@@ -1238,9 +1385,18 @@ h1 {
   width: 100%;
   text-align: center;
   background: #F6F6E8;
+  line-height: 1.1;
+  font-size: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4px;
   font-family: tickerbit;
-  font-size: 14px;
   margin-bottom: 12px;
+}
+@media (min-width: 650px) {
+  .login-window__info {
+    font-size: 14px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
@@ -1274,7 +1430,7 @@ setup.userDescs.operations = "OPS: Corporate machinery is your weapon of choice.
 // meters.min.js, for SugarCube 2, by Chapel
 // v1.0.1, 2024-07-22, 336675ff2cabe5f729a5f30d86aa409cc8432726
 ;!function(){"use strict";var t=!0,e=!1,s=!1,i={full:"#2ECC40",empty:"#FF4136",back:"#DDDDDD",height:"12px",width:"180px",animate:400,easing:"swing",text:"#111111",label:"",align:"center"},n=["center","left","right"],r=["swing","linear"];function a(t,e){return t&&"string"==typeof t&&(t=t.toLowerCase().trim())?t:e||""}function o(t){return t<.5?2*t*t:(4-2*t)*t-1}function l(t,e){if(!(this instanceof l))return new l(t,e);var s=clone(i);this.settings=Object.assign(s,t),this.settings.align=a(this.settings.align),this.settings.easing=a(this.settings.easing),n.includes(this.settings.align)||(this.settings.align="center"),r.includes(this.settings.easing)||(this.settings.easing="swing"),e=Number(e),Number.isNaN(e)&&(e=1),e=Math.clamp(e,0,1),this.value=e;var h=$(document.createElement("div")).addClass("chapel-meter").attr({"data-val":e,"data-label":this.settings.label}).css({position:"relative","background-color":this.settings.back,height:this.settings.height,width:this.settings.width,overflow:"hidden"}),g=$(document.createElement("div")).addClass("meter-label").css({top:0,right:0,"font-size":this.settings.height,"font-weight":"bold","line-height":"100%",width:"100%",height:"100%","vertical-align":"middle","text-align":this.settings.align,color:this.settings.text,"z-index":1,position:"relative",bottom:"100%"}).wiki(this.settings.label).appendTo(h),u=$(document.createElement("div")).addClass("meter-top").css({"background-color":this.settings.full,opacity:o(this.value),width:"100%",height:"100%","z-index":0}),c=$(document.createElement("div")).addClass("meter-bottom").css({position:"absolute",top:0,left:0,"background-color":this.settings.empty,opacity:1,width:100*this.value+"%",height:"100%","z-index":0}).append(u).appendTo(h);this.$element=h,this.$bars={top:u,bottom:c},this.$label=g,g.css("font-size",parseInt(h.css("height"),10)<parseInt($(".passage").css("font-size"),10)?h.css("height"):$(".passage").css("font-size")),g.css("line-height",h.css("height"))}Object.assign(l,{_list:new Map,is:function(t){return t instanceof l},has:function(t){return l._list.has(t)&&l.is(l._list.get(t))},get:function(t){return l.has(t)?l._list.get(t):null},del:function(t){l.has(t)&&l._list.delete(t)},add:function(t,s,i){if(!l.has(t)||e){Object.assign(s,{id:t});var n=new l(s,i);return l._list.set(t,n),n}console.error('Meter "'+t+'" already exists.')},_emit:function(t,e){l.is(t)&&t.$element.trigger({type:":"+e,meter:t})}}),Object.assign(l.prototype,{constructor:l,_label:function(t){var e=this;function s(){e.$label.empty().wiki(e.settings.label),e.$label.css("font-size",parseInt(e.$element.css("height"),10)<parseInt(e.$element.parent().css("font-size"),10)?e.$element.css("height"):e.$element.parent().css("font-size")),e.$label.css("line-height",e.$element.css("height"))}return t?setTimeout(s,Engine.minDomActionDelay):s(),this},_width:function(){var t=this;return this.$bars.bottom.animate({width:100*this.value+"%"},this.settings.animate,this.settings.easing,(function(){l._emit(t,"meter-animation-complete")})),this},_color:function(){return this.$bars.top.animate({opacity:o(this.value)},this.settings.animate,this.settings.easing),this},animate:function(){return l._emit(this,"meter-animation-start"),this._color()._width()._label()},val:function(t){return void 0!==t&&(t=Number(t),Number.isNaN(t)&&(t=1),t=Math.clamp(t,0,1),this.value=t,this.animate()),this.value},options:function(t){return t&&"object"==typeof t&&Object.assign(this.settings,t),this.settings},unwrap:function(){return this.$element[0]},place:function(t,e){var s=$(document.createElement("span"));return t instanceof jQuery||(t=$(t)),t[0]||console.warn("meter#place() -> no valid target"),e&&"object"==typeof e&&(e.classes&&(Array.isArray(e.classes)||"string"==typeof e.classes)&&s.addClass(e.classes),e.attr&&"object"==typeof e.attr&&s.attr(e.attr)),t.append(s.append(this.$element)),this._label(!0),this},on:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.on(t,e),this):this},one:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.one(t,e),this):this},off:function(t){return t=t&&"string"==typeof t&&t.trim()?t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "):".userland",this.$element.off(t),this},click:function(t,e){return this.$element.ariaClick(t,e),this},clone:function(){return new l(this.settings,this.value)},toJSON:function(){return JSON.reviveWrapper("new setup.Meter("+JSON.stringify(this.settings)+", "+this.value+")")}}),setup.Meter=l,t&&(window.Meter=window.Meter||l),Macro.add("newmeter",{tags:["colors","sizing","animation","label"],handler:function(){if(State.length>0&&!s)return this.error("The `<<newmeter>>` macro must be called in your `StoryInit` special passage. Seriously. No excuses. --Love, Chapel");if(this.args.length<1)return this.error("The `<<newmeter>>` macro requires at least one argument: a meter name.");var t=this.args[0],i=null,n=null,r=null,a=null;if("string"!=typeof t)return this.error("Invalid meter name.");if(t=t.trim(),l.has(t)&&!e)return this.error('Cannot clobber the existing meter "'+t+'".');this.payload.length&&(i=this.payload.find((function(t){return"colors"===t.name})),n=this.payload.find((function(t){return"sizing"===t.name})),r=this.payload.find((function(t){return"animation"===t.name})),a=this.payload.find((function(t){return"label"===t.name})));var o={};if(i){if(!i.args.length)return this.error("No arguments passed to the `<<colors>>` tag.");switch(i.args.length){case 1:o.empty=i.args[0],o.full="transparent";break;case 2:o.full=i.args[0],o.empty=i.args[1];break;default:o.full=i.args[0],o.empty=i.args[1],o.back=i.args[2]}}if(n){if(!n.args.length)return this.error("No arguments passed to the `<<sizing>>` tag.");o.width=n.args[0],n.args[1]&&(o.height=n.args[1])}if(r){if(!r.args.length)return this.error("No arguments passed to the `<<animation>>` tag.");if("boolean"!=typeof r.args[0]||r.args[0]){if("string"!=typeof r.args[0])return this.error("The argument to the `<<animation>>` tag should be `true`, `false`, or a valid CSS time value.");o.animate=Util.fromCssTime(r.args[0])}else o.animate=0;r.args[1]&&["swing","linear"].includes(r.args[1])&&(o.easing=r.args[1])}if(a){var h=a.args[0];if(!h||"string"!=typeof h)return this.error("The labelText argument for the `<<label>>` tag is required.");o.label=h.trim(),a.args[1]&&"string"==typeof a.args[1]&&(o.text=a.args[1]),a.args[2]&&"string"==typeof a.args[2]&&(o.align=a.args[2])}l.add(t,o,this.args[1])}}),Macro.add("showmeter",{handler:function(){if(this.args.length<1)return this.error("This macro requires at least one argument: the meter's name.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');"number"==typeof this.args[1]&&e.val(this.args[1]),e.place(this.output,{classes:"macro-"+this.name,attr:{id:"meter-"+Util.slugify(t)}})}}),Macro.add("updatemeter",{handler:function(){if(this.args.length<2)return this.error("This macro requires two arguments: the meter's name and a value.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');e.val(this.args[1])}})}();
-// end meters.min.js</script><tw-tag name="EndPromo" color="red"></tw-tag><tw-tag name="nobr" color="purple"></tw-tag><tw-tag name="Q3" color="green"></tw-tag><tw-tag name="Main" color="blue"></tw-tag><tw-tag name="EndFired" color="red"></tw-tag><tw-tag name="StoryInit" color="orange"></tw-tag><tw-tag name="widget" color="orange"></tw-tag><tw-tag name="Widget" color="green"></tw-tag><tw-tag name="Q2" color="green"></tw-tag><tw-tag name="EndE" color="orange"></tw-tag><tw-tag name="EndUnhappy" color="red"></tw-tag><tw-tag name="EndStay" color="red"></tw-tag><tw-tag name="Q1" color="green"></tw-tag><tw-tag name="Q4" color="green"></tw-tag><tw-passagedata pid="1" name="QUIT" tags="" position="100,100" size="100,100">&lt;div class=&quot;abs-wrapper&quot;&gt;
+// end meters.min.js</script><tw-tag name="EndUnhappy" color="red"></tw-tag><tw-tag name="nobr" color="purple"></tw-tag><tw-tag name="Widget" color="green"></tw-tag><tw-tag name="Q2" color="green"></tw-tag><tw-tag name="EndFired" color="red"></tw-tag><tw-tag name="StoryInit" color="orange"></tw-tag><tw-tag name="Q4" color="green"></tw-tag><tw-tag name="EndStay" color="red"></tw-tag><tw-tag name="Q3" color="green"></tw-tag><tw-tag name="EndE" color="orange"></tw-tag><tw-tag name="EndPromo" color="red"></tw-tag><tw-tag name="widget" color="orange"></tw-tag><tw-tag name="Q1" color="green"></tw-tag><tw-tag name="Main" color="blue"></tw-tag><tw-passagedata pid="1" name="QUIT" tags="" position="100,100" size="100,100">&lt;div class=&quot;abs-wrapper&quot;&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
         &lt;div class=&quot;content&quot;&gt;
             You quit to realize your lifelong dream of being an iguana tamer.
@@ -1402,7 +1558,7 @@ setup.userDescs.operations = "OPS: Corporate machinery is your weapon of choice.
                 &lt;&lt;ActionBox
                     &quot;Sleep when you&#39;re dead&quot;
                     &quot;s|Delegate|You bribe|Not you&quot;
-                    &quot;Ask for the extension now, not later&quot;
+                    &quot;Ask for the extension now&quot;
                 &gt;&gt;
         &lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="Sleep when you&#39;re dead" tags="" position="600,800" size="100,100">/* passage content */
@@ -1480,7 +1636,7 @@ setup.userDescs.operations = "OPS: Corporate machinery is your weapon of choice.
 			&lt;&lt;CalcResource &quot;-1&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
         &lt;/div&gt;
 	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Ask for the extension now, not later" tags="" position="600,800" size="100,100">/* passage content */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Ask for the extension now" tags="" position="600,800" size="100,100">/* passage content */
 &lt;div class=&quot;menu-bar&quot;&gt;
     &lt;div class=&quot;menu-bar__group&quot;&gt;
         &lt;a class=&quot;menu-bar__link&quot;&gt;Help&lt;/a&gt;
@@ -2289,9 +2445,10 @@ setup.userDescs.operations = "OPS: Corporate machinery is your weapon of choice.
 &lt;&lt;set $hardSkill to 0&gt;&gt;
 &lt;&lt;set $softSkill to 0&gt;&gt;
 &lt;&lt;set $user to &quot;ABC&quot;&gt;&gt;
-&lt;div class=&quot;abs-wrapper&quot;&gt;
+&lt;&lt;set $class to 0&gt;&gt;
+&lt;div class=&quot;abs-wrapper abs-wrapper--login&quot;&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
-		&lt;div class=&quot;content&quot;&gt;
+		&lt;div class=&quot;content content--login&quot;&gt;
 			&lt;&lt;TitleBar &quot;Welcome&quot;&gt;&gt;
 			&lt;div class=&quot;login-window&quot;&gt;
 				&lt;h1 class=&quot;login-window__title&quot;&gt;Choose Your Department&lt;/h1&gt;
@@ -2301,28 +2458,28 @@ setup.userDescs.operations = "OPS: Corporate machinery is your weapon of choice.
 						&lt;img class=&quot;class__portrait&quot; src=&quot;img/icon1.png&quot;/&gt;
 						&lt;div class=&quot;class-info&quot;&gt;
 							&lt;p class=&quot;class-info__title class-info__title--product&quot;&gt;PRODUCT&lt;/p&gt;
-							&lt;p&gt;Software bends to your will. If only EQ was something you could download.&lt;/p&gt;
+							&lt;p class=&quot;class-info__desc&quot;&gt;Software bends to your will. If only EQ was something you could download.&lt;/p&gt;
 						&lt;/div&gt;
 					&lt;/div&gt;
 					&lt;div class=&quot;class&quot; id=&quot;sa&quot;&gt;
-						&lt;img class=&quot;class__portrait&quot; src=&quot;img/icon1.png&quot;/&gt;
+						&lt;img class=&quot;class__portrait&quot; src=&quot;img/icon2.png&quot;/&gt;
 						&lt;div class=&quot;class-info&quot;&gt;
 							&lt;p class=&quot;class-info__title class-info__title--sales&quot;&gt;SALES&lt;/p&gt;
-							&lt;p&gt;You can charm, cajole, and occasionally even captivate. You can’t do spreadsheets.&lt;/p&gt;
+							&lt;p class=&quot;class-info__desc&quot;&gt;You can charm, cajole, and occasionally even captivate. You can’t do spreadsheets.&lt;/p&gt;
 						&lt;/div&gt;
 					&lt;/div&gt;
 					&lt;div class=&quot;class&quot; id=&quot;lg&quot;&gt;
-						&lt;img class=&quot;class__portrait&quot; src=&quot;img/icon1.png&quot;/&gt;
+						&lt;img class=&quot;class__portrait&quot; src=&quot;img/icon3.png&quot;/&gt;
 						&lt;div class=&quot;class-info&quot;&gt;
 							&lt;p class=&quot;class-info__title class-info__title--legal&quot;&gt;LEGAL&lt;/p&gt;
-							&lt;p&gt;You practically invented due diligence. You cover your own ass with aplomb.&lt;/p&gt;
+							&lt;p class=&quot;class-info__desc&quot;&gt;You practically invented due diligence. You cover your own ass with aplomb.&lt;/p&gt;
 						&lt;/div&gt;
 					&lt;/div&gt;
 					&lt;div class=&quot;class&quot; id=&quot;op&quot;&gt;
-						&lt;img class=&quot;class__portrait&quot; src=&quot;img/icon1.png&quot;/&gt;
+						&lt;img class=&quot;class__portrait&quot; src=&quot;img/icon4.png&quot;/&gt;
 						&lt;div class=&quot;class-info&quot;&gt;
 							&lt;p class=&quot;class-info__title class-info__title--ops&quot;&gt;OPERATIONS&lt;/p&gt;
-							&lt;p&gt;You know when to bcc and where the secret bathroom is. Surely that means something.&lt;/p&gt;
+							&lt;p class=&quot;class-info__desc&quot;&gt;You know when to bcc and where the secret bathroom is. Surely that means something.&lt;/p&gt;
 						&lt;/div&gt;
 					&lt;/div&gt;
 				&lt;/div&gt;
@@ -2372,21 +2529,25 @@ setup.userDescs.operations = "OPS: Corporate machinery is your weapon of choice.
 					console.log(&quot;pd&quot;);
 					State.variables.hardSkill = 1;
 					State.variables.softSkill = -1;
+					State.variables.class = 1;
 					classCheck = true;
 				} else if (this.id === &quot;sa&quot;) {
 					console.log(&quot;sa&quot;);
 					State.variables.hardSkill = -1;
 					State.variables.softSkill = 1;
+					State.variables.class = 2;
 					classCheck = true;
 				} else if (this.id === &quot;lg&quot;) {
 					console.log(&quot;lg&quot;);
 					State.variables.hardSkill = 0;
 					State.variables.softSkill = 0;
+					State.variables.class = 3;
 					classCheck = true;
 				} else if (this.id === &quot;op&quot;) {
 					console.log(&quot;op&quot;);
 					State.variables.hardSkill = -1;
 					State.variables.softSkill = 1;
+					State.variables.class = 4;
 					classCheck = true;
 				} 
 				loginCheck();
@@ -2526,7 +2687,16 @@ setup.userDescs.operations = "OPS: Corporate machinery is your weapon of choice.
     &lt;&lt;goto _randomPassage&gt;&gt;
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="91" name="PlayerAvatar" tags="widget" position="100,1225" size="100,100">&lt;&lt;widget &quot;PlayerAvatar&quot;&gt;&gt;
     &lt;div class=&quot;avatar&quot;&gt;
-        &lt;img class=&quot;avatar__image&quot; src=&quot;img/icon1.png&quot;/&gt;
+        &lt;&lt;switch $class&gt;&gt;
+        &lt;&lt;case 1&gt;&gt;
+            &lt;img class=&quot;avatar__image&quot; src=&quot;img/icon1.png&quot;/&gt;
+        &lt;&lt;case 2&gt;&gt;
+            &lt;img class=&quot;avatar__image&quot; src=&quot;img/icon2.png&quot;/&gt;
+        &lt;&lt;case 3&gt;&gt;
+            &lt;img class=&quot;avatar__image&quot; src=&quot;img/icon3.png&quot;/&gt;
+        &lt;&lt;case 4&gt;&gt;
+            &lt;img class=&quot;avatar__image&quot; src=&quot;img/icon4.png&quot;/&gt;
+        &lt;&lt;/switch&gt;&gt;
     &lt;/div&gt;
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="92" name="QuarterTracker" tags="widget" position="700,100" size="100,100">&lt;&lt;widget &quot;QuarterTracker&quot;&gt;&gt;
     &lt;p id=&quot;quarter&quot; class=&quot;ui-label&quot;&gt;Q$quarter&lt;/p&gt;
@@ -2543,7 +2713,8 @@ setup.userDescs.operations = "OPS: Corporate machinery is your weapon of choice.
         &lt;div class=&quot;resource-meter__unit&quot;&gt;
             &lt;div class=&quot;resource-meter__label&quot;&gt;
                 &lt;p class=&quot;resource-meter__name&quot;&gt;Self-Care&lt;/p&gt;
-                &lt;p class=&quot;resource-meter__percentage&quot;&gt;&lt;&lt;print (($energy / $maxEnergy) * 100)&gt;&gt;%&lt;/p&gt;
+                &lt;&lt;set $enPercentage to ($energy / $maxEnergy) * 100&gt;&gt;
+                &lt;p class=&quot;resource-meter__percentage&quot;&gt;$enPercentage%&lt;/p&gt;
             &lt;/div&gt;
             &lt;&lt;showmeter &#39;energy&#39; &#39;_energy / _maxEnergy&#39; /&gt;&gt;
         &lt;/div&gt;

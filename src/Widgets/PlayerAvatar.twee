@@ -1,6 +1,15 @@
 :: PlayerAvatar [widget]
 <<widget "PlayerAvatar">>
     <div class="avatar">
-        <img class="avatar__image" src="img/icon1.png"/>
+        <<switch $class>>
+        <<case 1>>
+            <img class="avatar__image" src="img/icon1.png"/>
+        <<case 2>>
+            <img class="avatar__image" src="img/icon2.png"/>
+        <<case 3>>
+            <img class="avatar__image" src="img/icon3.png"/>
+        <<case 4>>
+            <img class="avatar__image" src="img/icon4.png"/>
+        <</switch>>
     </div>
 <</widget>>

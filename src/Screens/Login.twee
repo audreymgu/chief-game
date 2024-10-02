@@ -9,9 +9,10 @@
 <<set $hardSkill to 0>>
 <<set $softSkill to 0>>
 <<set $user to "ABC">>
-<div class="abs-wrapper">
+<<set $class to 0>>
+<div class="abs-wrapper abs-wrapper--login">
 	<div class="rel-wrapper">
-		<div class="content">
+		<div class="content content--login">
 			<<TitleBar "Welcome">>
 			<div class="login-window">
 				<h1 class="login-window__title">Choose Your Department</h1>
@@ -21,28 +22,28 @@
 						<img class="class__portrait" src="img/icon1.png"/>
 						<div class="class-info">
 							<p class="class-info__title class-info__title--product">PRODUCT</p>
-							<p>Software bends to your will. If only EQ was something you could download.</p>
+							<p class="class-info__desc">Software bends to your will. If only EQ was something you could download.</p>
 						</div>
 					</div>
 					<div class="class" id="sa">
-						<img class="class__portrait" src="img/icon1.png"/>
+						<img class="class__portrait" src="img/icon2.png"/>
 						<div class="class-info">
 							<p class="class-info__title class-info__title--sales">SALES</p>
-							<p>You can charm, cajole, and occasionally even captivate. You can’t do spreadsheets.</p>
+							<p class="class-info__desc">You can charm, cajole, and occasionally even captivate. You can’t do spreadsheets.</p>
 						</div>
 					</div>
 					<div class="class" id="lg">
-						<img class="class__portrait" src="img/icon1.png"/>
+						<img class="class__portrait" src="img/icon3.png"/>
 						<div class="class-info">
 							<p class="class-info__title class-info__title--legal">LEGAL</p>
-							<p>You practically invented due diligence. You cover your own ass with aplomb.</p>
+							<p class="class-info__desc">You practically invented due diligence. You cover your own ass with aplomb.</p>
 						</div>
 					</div>
 					<div class="class" id="op">
-						<img class="class__portrait" src="img/icon1.png"/>
+						<img class="class__portrait" src="img/icon4.png"/>
 						<div class="class-info">
 							<p class="class-info__title class-info__title--ops">OPERATIONS</p>
-							<p>You know when to bcc and where the secret bathroom is. Surely that means something.</p>
+							<p class="class-info__desc">You know when to bcc and where the secret bathroom is. Surely that means something.</p>
 						</div>
 					</div>
 				</div>
@@ -92,21 +93,25 @@
 					console.log("pd");
 					State.variables.hardSkill = 1;
 					State.variables.softSkill = -1;
+					State.variables.class = 1;
 					classCheck = true;
 				} else if (this.id === "sa") {
 					console.log("sa");
 					State.variables.hardSkill = -1;
 					State.variables.softSkill = 1;
+					State.variables.class = 2;
 					classCheck = true;
 				} else if (this.id === "lg") {
 					console.log("lg");
 					State.variables.hardSkill = 0;
 					State.variables.softSkill = 0;
+					State.variables.class = 3;
 					classCheck = true;
 				} else if (this.id === "op") {
 					console.log("op");
 					State.variables.hardSkill = -1;
 					State.variables.softSkill = 1;
+					State.variables.class = 4;
 					classCheck = true;
 				} 
 				loginCheck();

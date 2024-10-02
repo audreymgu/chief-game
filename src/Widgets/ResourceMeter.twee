@@ -8,8 +8,7 @@
         <div class="resource-meter__unit">
             <div class="resource-meter__label">
                 <p class="resource-meter__name">Self-Care</p>
-                <<set $enPercentage to ($energy / $maxEnergy) * 100>>
-                <p class="resource-meter__percentage">$enPercentage%</p>
+                <p><<print (($energy / $maxEnergy) * 100)>>%</p>
             </div>
             <<showmeter 'energy' '_energy / _maxEnergy' />>
         </div>

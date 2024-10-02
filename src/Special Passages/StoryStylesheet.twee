@@ -1,7 +1,7 @@
 ::Story Stylesheet [stylesheet]
 @font-face {
   font-family: "tickerbit";
-  src: url("fonts/tickerbit-mono.woff2") format("woff2");
+  src: url("fonts/departure.woff2") format("woff2");
 }
 @font-face {
   font-family: "start-2p";
@@ -192,6 +192,14 @@ h1 {
   }
 }
 
+@keyframes color-shift {
+  0% {
+    background-color: inherit;
+  }
+  100% {
+    background-color: #e8f2ff;
+  }
+}
 .stats {
   display: flex;
   flex-direction: row;
@@ -200,6 +208,10 @@ h1 {
   .stats {
     border: 1px solid black;
   }
+}
+.stats--alert {
+  background-color: #e8f2ff;
+  animation: 0.5s ease-out 0s 1 color-shift;
 }
 
 .logo {
@@ -218,7 +230,6 @@ h1 {
 
 .resource-meter {
   padding: 0 10px 0 10px;
-  background-color: #DFDFD0;
   color: #2A2C41;
   font-size: 12px;
   justify-content: center;
@@ -321,6 +332,9 @@ h1 {
   border: 1px solid black;
   border-width: 0 1px 0 1px;
 }
+.scenario--alert {
+  margin: 24px 0 24px 0;
+}
 @media (min-width: 650px) {
   .scenario {
     border: unset;
@@ -352,7 +366,7 @@ h1 {
 @media (min-width: 650px) {
   .scenario__text {
     padding-left: unset;
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .scenario__desc {
@@ -372,6 +386,17 @@ h1 {
     height: unset;
     width: 275px;
   }
+}
+.scenario__icon {
+  height: 64px;
+  align-self: center;
+  margin: 4px 18px 12px 12px;
+}
+
+.btn-area {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .titlebar {

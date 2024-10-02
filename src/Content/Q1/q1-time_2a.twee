@@ -1,5 +1,6 @@
 /* title + metadata */
 :: You bribe {"position":"600,800","size":"100,100"}
+<<CalcResource "-1" "0" "1">>
 /* passage content */
 <div class="menu-bar">
     <div class="menu-bar__group">
@@ -11,18 +12,23 @@
 <div class="abs-wrapper">
     <img class="logo" src="img/logo.png"/>
 	<div class="rel-wrapper">
-        <div class="stats">
+        <div class="stats stats--alert">
             <<PlayerAvatar>>
             <<ResourceMeter>>
         </div>
         <div class="content">
-            <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
-            <<TitleBar $quarterLabel>>
-            <div class="scenario">
-				<p>You call in every favor and put together a clear plan of attack. Your team grumbles, but they get it done.</p>
-				[[Back|There's no time]]
+            <<set $title to State.active.title>>
+            <<TitleBar $title>>
+            <div class="scenario scenario--alert">
+				<img class="scenario__icon" src="img/warn1.png"/>
+				<div class="scenario__text">
+					<p class="scenario__desc">You call in every favor and put together a clear plan of attack. Your team grumbles, but they get it done.</p>
+				</div>
+				
             </div>
-			<<CalcResource "-1" "0" "1">>
+			<div class="btn-area">
+				<div class="button">[[Go Back (Preview Only)|There's no time]]</div>
+			</div>
         </div>
 	</div>
 </div>

@@ -1,39 +1,35 @@
 :: EndingCheck [widget] {"position":"900,100","size":"100,100"}
 <<widget "EndingCheck">>
-    <<set $time to $time + 1>>
-
-    <<if $quarter == 4 and $time == 2>>
-    	<<set $personalityCheck to true>>
-    <</if>>
-    
-    <<if $time == 2>>
-    	<<if $quarter < 4>>
-    		<<set $quarter to $quarter + 1>>
-        <</if>>
-        <<set $time to 0>>
-    <</if>>
-
+    /* check for fail conditions */
     <<if $energy <= 0>>
      	<<GoRandom "EndingEnergy">>
 	<</if>>
-
     <<if $approval <= 0>>
         <<GoRandom "EndingFired">>
     <</if>>
 
-    <<if $quarter == 1>>
+    /* advance time */
+    <<set $time to $time + 1>>
+    
+    /* check for ending stage */
+    <<if $quarter == 4 and $time == 2>>
+    	<<set $personalityCheck to true>>
+    <</if>>
+    
+    /* move to next quarter */
+    <<if $time == 2 && $quarter < 4>>
+        <<set $quarter to $quarter + 1>>
+        <<set $time to 0>>
+    <</if>>
+
+    /* go to next scenario */
+    <<if $quarter is 1>>
         <<GoRandom "Q1">>
-    <</if>>
-    
-    <<if $quarter == 2>>
+    <<elseif $quarter is 2>>
         <<GoRandom "Q2">>
-    <</if>>
-    
-    <<if $quarter == 3>>
+    <<elseif $quarter is 3>>
         <<GoRandom "Q3">>
-    <</if>>
-    
-    <<if $quarter == 4 and $time < 2>>
+    <<elseif $quarter == 4 and $time < 2>>
         <<GoRandom "Q4">>
     <</if>>
 

@@ -13,7 +13,6 @@
 .resource-meter {
     padding: 0 10px 0 10px;
     // border: 2px solid red;
-    background-color: #DFDFD0;
     color: #2A2C41;
     // padding: 10px;
     font-size: 12px;
@@ -115,6 +114,9 @@
     flex-direction: column;
     border: 1px solid black;
     border-width: 0 1px 0 1px;
+    &--alert {
+        margin: 24px 0 24px 0;
+    }
     @include breakpoint(desktop) {
         border: unset;
         border-width: unset;
@@ -140,7 +142,7 @@
         font-size: 16px;
         @include breakpoint(desktop) {
             padding-left: unset;
-            font-size: 20px;
+            font-size: 18px;
         }
     }
     &__desc {
@@ -159,8 +161,18 @@
         }
         align-self: start;
     }
+    &__icon {
+        height: 64px;
+        align-self: center;
+        margin: 4px 18px 12px 12px;
+    }
 }
 
+.btn-area {
+    margin-left: 20px;    
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
 
 .titlebar {
     color: white;

@@ -1,7 +1,7 @@
 :: CalcResource [widget] {"position":"800,100","size":"100,100"}
-<<nobr>><<widget "CalcResource">>
-	<<set $energy to Math.clamp($energy += Number($args[0]), -10, 10)>>
+<<widget "CalcResource">>
+	<<set $energy to Math.clamp($energy += Number($args[0]), 0, 10)>>
     <<set $approval to Math.clamp($approval += Number($args[2]), 0, 10)>>
 	<<updatemeter 'approval' `$approval / $maxApproval`>>
 	<<updatemeter 'energy' `$energy / $maxEnergy`>>
-<</widget>><</nobr>>
+<</widget>>

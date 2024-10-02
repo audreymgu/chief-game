@@ -64,10 +64,23 @@
     }
 }
 
+@keyframes color-shift {
+  0% {
+    background-color: inherit;
+  }
+  100% {
+    background-color: #e8f2ff;
+  }
+}
+
 .stats {
     display: flex;
     flex-direction: row;
     @include breakpoint(desktop) {
         border: 1px solid black;
+    }
+    &--alert {
+        background-color: #e8f2ff;
+        animation: 0.5s ease-out 0s 1 color-shift;
     }
 }

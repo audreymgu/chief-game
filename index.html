@@ -107,7 +107,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 	<!-- UUID://48081651-DB3C-4BED-B01B-71E01159D93A// --><tw-storydata name="Action Items (Prototype B)" startnode="83" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="48081651-DB3C-4BED-B01B-71E01159D93A" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "Story Stylesheet" */
 @font-face {
   font-family: "tickerbit";
-  src: url("fonts/tickerbit-mono.woff2") format("woff2");
+  src: url("fonts/departure.woff2") format("woff2");
 }
 @font-face {
   font-family: "start-2p";
@@ -298,6 +298,14 @@ h1 {
   }
 }
 
+@keyframes color-shift {
+  0% {
+    background-color: inherit;
+  }
+  100% {
+    background-color: #e8f2ff;
+  }
+}
 .stats {
   display: flex;
   flex-direction: row;
@@ -306,6 +314,10 @@ h1 {
   .stats {
     border: 1px solid black;
   }
+}
+.stats--alert {
+  background-color: #e8f2ff;
+  animation: 0.5s ease-out 0s 1 color-shift;
 }
 
 .logo {
@@ -324,7 +336,6 @@ h1 {
 
 .resource-meter {
   padding: 0 10px 0 10px;
-  background-color: #DFDFD0;
   color: #2A2C41;
   font-size: 12px;
   justify-content: center;
@@ -427,6 +438,9 @@ h1 {
   border: 1px solid black;
   border-width: 0 1px 0 1px;
 }
+.scenario--alert {
+  margin: 24px 0 24px 0;
+}
 @media (min-width: 650px) {
   .scenario {
     border: unset;
@@ -458,7 +472,7 @@ h1 {
 @media (min-width: 650px) {
   .scenario__text {
     padding-left: unset;
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .scenario__desc {
@@ -478,6 +492,17 @@ h1 {
     height: unset;
     width: 275px;
   }
+}
+.scenario__icon {
+  height: 64px;
+  align-self: center;
+  margin: 4px 18px 12px 12px;
+}
+
+.btn-area {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .titlebar {
@@ -755,7 +780,7 @@ h1 {
 /* twine-user-stylesheet #2: "main.css" */
 @font-face {
   font-family: "tickerbit";
-  src: url("fonts/tickerbit-mono.woff2") format("woff2");
+  src: url("fonts/departure.woff2") format("woff2");
 }
 @font-face {
   font-family: "start-2p";
@@ -946,6 +971,14 @@ h1 {
   }
 }
 
+@keyframes color-shift {
+  0% {
+    background-color: inherit;
+  }
+  100% {
+    background-color: #e8f2ff;
+  }
+}
 .stats {
   display: flex;
   flex-direction: row;
@@ -954,6 +987,10 @@ h1 {
   .stats {
     border: 1px solid black;
   }
+}
+.stats--alert {
+  background-color: #e8f2ff;
+  animation: 0.5s ease-out 0s 1 color-shift;
 }
 
 .logo {
@@ -972,7 +1009,6 @@ h1 {
 
 .resource-meter {
   padding: 0 10px 0 10px;
-  background-color: #DFDFD0;
   color: #2A2C41;
   font-size: 12px;
   justify-content: center;
@@ -1075,6 +1111,9 @@ h1 {
   border: 1px solid black;
   border-width: 0 1px 0 1px;
 }
+.scenario--alert {
+  margin: 24px 0 24px 0;
+}
 @media (min-width: 650px) {
   .scenario {
     border: unset;
@@ -1106,7 +1145,7 @@ h1 {
 @media (min-width: 650px) {
   .scenario__text {
     padding-left: unset;
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .scenario__desc {
@@ -1126,6 +1165,17 @@ h1 {
     height: unset;
     width: 275px;
   }
+}
+.scenario__icon {
+  height: 64px;
+  align-self: center;
+  margin: 4px 18px 12px 12px;
+}
+
+.btn-area {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .titlebar {
@@ -1430,7 +1480,7 @@ setup.userDescs.operations = "OPS: Corporate machinery is your weapon of choice.
 // meters.min.js, for SugarCube 2, by Chapel
 // v1.0.1, 2024-07-22, 336675ff2cabe5f729a5f30d86aa409cc8432726
 ;!function(){"use strict";var t=!0,e=!1,s=!1,i={full:"#2ECC40",empty:"#FF4136",back:"#DDDDDD",height:"12px",width:"180px",animate:400,easing:"swing",text:"#111111",label:"",align:"center"},n=["center","left","right"],r=["swing","linear"];function a(t,e){return t&&"string"==typeof t&&(t=t.toLowerCase().trim())?t:e||""}function o(t){return t<.5?2*t*t:(4-2*t)*t-1}function l(t,e){if(!(this instanceof l))return new l(t,e);var s=clone(i);this.settings=Object.assign(s,t),this.settings.align=a(this.settings.align),this.settings.easing=a(this.settings.easing),n.includes(this.settings.align)||(this.settings.align="center"),r.includes(this.settings.easing)||(this.settings.easing="swing"),e=Number(e),Number.isNaN(e)&&(e=1),e=Math.clamp(e,0,1),this.value=e;var h=$(document.createElement("div")).addClass("chapel-meter").attr({"data-val":e,"data-label":this.settings.label}).css({position:"relative","background-color":this.settings.back,height:this.settings.height,width:this.settings.width,overflow:"hidden"}),g=$(document.createElement("div")).addClass("meter-label").css({top:0,right:0,"font-size":this.settings.height,"font-weight":"bold","line-height":"100%",width:"100%",height:"100%","vertical-align":"middle","text-align":this.settings.align,color:this.settings.text,"z-index":1,position:"relative",bottom:"100%"}).wiki(this.settings.label).appendTo(h),u=$(document.createElement("div")).addClass("meter-top").css({"background-color":this.settings.full,opacity:o(this.value),width:"100%",height:"100%","z-index":0}),c=$(document.createElement("div")).addClass("meter-bottom").css({position:"absolute",top:0,left:0,"background-color":this.settings.empty,opacity:1,width:100*this.value+"%",height:"100%","z-index":0}).append(u).appendTo(h);this.$element=h,this.$bars={top:u,bottom:c},this.$label=g,g.css("font-size",parseInt(h.css("height"),10)<parseInt($(".passage").css("font-size"),10)?h.css("height"):$(".passage").css("font-size")),g.css("line-height",h.css("height"))}Object.assign(l,{_list:new Map,is:function(t){return t instanceof l},has:function(t){return l._list.has(t)&&l.is(l._list.get(t))},get:function(t){return l.has(t)?l._list.get(t):null},del:function(t){l.has(t)&&l._list.delete(t)},add:function(t,s,i){if(!l.has(t)||e){Object.assign(s,{id:t});var n=new l(s,i);return l._list.set(t,n),n}console.error('Meter "'+t+'" already exists.')},_emit:function(t,e){l.is(t)&&t.$element.trigger({type:":"+e,meter:t})}}),Object.assign(l.prototype,{constructor:l,_label:function(t){var e=this;function s(){e.$label.empty().wiki(e.settings.label),e.$label.css("font-size",parseInt(e.$element.css("height"),10)<parseInt(e.$element.parent().css("font-size"),10)?e.$element.css("height"):e.$element.parent().css("font-size")),e.$label.css("line-height",e.$element.css("height"))}return t?setTimeout(s,Engine.minDomActionDelay):s(),this},_width:function(){var t=this;return this.$bars.bottom.animate({width:100*this.value+"%"},this.settings.animate,this.settings.easing,(function(){l._emit(t,"meter-animation-complete")})),this},_color:function(){return this.$bars.top.animate({opacity:o(this.value)},this.settings.animate,this.settings.easing),this},animate:function(){return l._emit(this,"meter-animation-start"),this._color()._width()._label()},val:function(t){return void 0!==t&&(t=Number(t),Number.isNaN(t)&&(t=1),t=Math.clamp(t,0,1),this.value=t,this.animate()),this.value},options:function(t){return t&&"object"==typeof t&&Object.assign(this.settings,t),this.settings},unwrap:function(){return this.$element[0]},place:function(t,e){var s=$(document.createElement("span"));return t instanceof jQuery||(t=$(t)),t[0]||console.warn("meter#place() -> no valid target"),e&&"object"==typeof e&&(e.classes&&(Array.isArray(e.classes)||"string"==typeof e.classes)&&s.addClass(e.classes),e.attr&&"object"==typeof e.attr&&s.attr(e.attr)),t.append(s.append(this.$element)),this._label(!0),this},on:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.on(t,e),this):this},one:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.one(t,e),this):this},off:function(t){return t=t&&"string"==typeof t&&t.trim()?t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "):".userland",this.$element.off(t),this},click:function(t,e){return this.$element.ariaClick(t,e),this},clone:function(){return new l(this.settings,this.value)},toJSON:function(){return JSON.reviveWrapper("new setup.Meter("+JSON.stringify(this.settings)+", "+this.value+")")}}),setup.Meter=l,t&&(window.Meter=window.Meter||l),Macro.add("newmeter",{tags:["colors","sizing","animation","label"],handler:function(){if(State.length>0&&!s)return this.error("The `<<newmeter>>` macro must be called in your `StoryInit` special passage. Seriously. No excuses. --Love, Chapel");if(this.args.length<1)return this.error("The `<<newmeter>>` macro requires at least one argument: a meter name.");var t=this.args[0],i=null,n=null,r=null,a=null;if("string"!=typeof t)return this.error("Invalid meter name.");if(t=t.trim(),l.has(t)&&!e)return this.error('Cannot clobber the existing meter "'+t+'".');this.payload.length&&(i=this.payload.find((function(t){return"colors"===t.name})),n=this.payload.find((function(t){return"sizing"===t.name})),r=this.payload.find((function(t){return"animation"===t.name})),a=this.payload.find((function(t){return"label"===t.name})));var o={};if(i){if(!i.args.length)return this.error("No arguments passed to the `<<colors>>` tag.");switch(i.args.length){case 1:o.empty=i.args[0],o.full="transparent";break;case 2:o.full=i.args[0],o.empty=i.args[1];break;default:o.full=i.args[0],o.empty=i.args[1],o.back=i.args[2]}}if(n){if(!n.args.length)return this.error("No arguments passed to the `<<sizing>>` tag.");o.width=n.args[0],n.args[1]&&(o.height=n.args[1])}if(r){if(!r.args.length)return this.error("No arguments passed to the `<<animation>>` tag.");if("boolean"!=typeof r.args[0]||r.args[0]){if("string"!=typeof r.args[0])return this.error("The argument to the `<<animation>>` tag should be `true`, `false`, or a valid CSS time value.");o.animate=Util.fromCssTime(r.args[0])}else o.animate=0;r.args[1]&&["swing","linear"].includes(r.args[1])&&(o.easing=r.args[1])}if(a){var h=a.args[0];if(!h||"string"!=typeof h)return this.error("The labelText argument for the `<<label>>` tag is required.");o.label=h.trim(),a.args[1]&&"string"==typeof a.args[1]&&(o.text=a.args[1]),a.args[2]&&"string"==typeof a.args[2]&&(o.align=a.args[2])}l.add(t,o,this.args[1])}}),Macro.add("showmeter",{handler:function(){if(this.args.length<1)return this.error("This macro requires at least one argument: the meter's name.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');"number"==typeof this.args[1]&&e.val(this.args[1]),e.place(this.output,{classes:"macro-"+this.name,attr:{id:"meter-"+Util.slugify(t)}})}}),Macro.add("updatemeter",{handler:function(){if(this.args.length<2)return this.error("This macro requires two arguments: the meter's name and a value.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');e.val(this.args[1])}})}();
-// end meters.min.js</script><tw-tag name="EndUnhappy" color="red"></tw-tag><tw-tag name="nobr" color="purple"></tw-tag><tw-tag name="Widget" color="green"></tw-tag><tw-tag name="Q2" color="green"></tw-tag><tw-tag name="EndFired" color="red"></tw-tag><tw-tag name="StoryInit" color="orange"></tw-tag><tw-tag name="Q4" color="green"></tw-tag><tw-tag name="EndStay" color="red"></tw-tag><tw-tag name="Q3" color="green"></tw-tag><tw-tag name="EndE" color="orange"></tw-tag><tw-tag name="EndPromo" color="red"></tw-tag><tw-tag name="widget" color="orange"></tw-tag><tw-tag name="Q1" color="green"></tw-tag><tw-tag name="Main" color="blue"></tw-tag><tw-passagedata pid="1" name="QUIT" tags="" position="100,100" size="100,100">&lt;div class=&quot;abs-wrapper&quot;&gt;
+// end meters.min.js</script><tw-tag name="EndPromo" color="red"></tw-tag><tw-tag name="EndStay" color="red"></tw-tag><tw-tag name="StoryInit" color="orange"></tw-tag><tw-tag name="widget" color="orange"></tw-tag><tw-tag name="Q1" color="green"></tw-tag><tw-tag name="Q2" color="green"></tw-tag><tw-tag name="Q3" color="green"></tw-tag><tw-tag name="Q4" color="green"></tw-tag><tw-tag name="nobr" color="purple"></tw-tag><tw-tag name="Widget" color="green"></tw-tag><tw-tag name="EndE" color="orange"></tw-tag><tw-tag name="EndFired" color="red"></tw-tag><tw-tag name="EndUnhappy" color="red"></tw-tag><tw-tag name="Main" color="blue"></tw-tag><tw-passagedata pid="1" name="QUIT" tags="" position="100,100" size="100,100">&lt;div class=&quot;abs-wrapper&quot;&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
         &lt;div class=&quot;content&quot;&gt;
             You quit to realize your lifelong dream of being an iguana tamer.
@@ -1526,9 +1576,12 @@ setup.userDescs.operations = "OPS: Corporate machinery is your weapon of choice.
 		&lt;&lt;ResourceUpdate &quot;-1&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
 	&lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="There&#39;s no time" tags="Q1" position="600,675" size="100,100">/* set placeholder values */
-&lt;&lt;set $quarter to 1&gt;&gt;
-&lt;&lt;set $energy to 5&gt;&gt;
-&lt;&lt;set $approval to 5&gt;&gt;
+&lt;&lt;if $demo is true&gt;&gt;
+    &lt;&lt;set $quarter to 1&gt;&gt;
+    &lt;&lt;set $energy to 5&gt;&gt;
+    &lt;&lt;set $approval to 5&gt;&gt;
+    &lt;&lt;set $demo to false&gt;&gt;
+&lt;&lt;/if&gt;&gt;
 /* passage content */
 /* &lt;&lt;audio &quot;phone&quot; volume 0.25 play&gt;&gt; */
 &lt;div class=&quot;menu-bar&quot;&gt;
@@ -1561,7 +1614,8 @@ setup.userDescs.operations = "OPS: Corporate machinery is your weapon of choice.
                     &quot;Ask for the extension now&quot;
                 &gt;&gt;
         &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="Sleep when you&#39;re dead" tags="" position="600,800" size="100,100">/* passage content */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="Sleep when you&#39;re dead" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-3&quot; &quot;-1&quot; &quot;2&quot;&gt;&gt;
+/* passage content */
 &lt;div class=&quot;menu-bar&quot;&gt;
     &lt;div class=&quot;menu-bar__group&quot;&gt;
         &lt;a class=&quot;menu-bar__link&quot;&gt;Help&lt;/a&gt;
@@ -1572,21 +1626,27 @@ setup.userDescs.operations = "OPS: Corporate machinery is your weapon of choice.
 &lt;div class=&quot;abs-wrapper&quot;&gt;
     &lt;img class=&quot;logo&quot; src=&quot;img/logo.png&quot;/&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
-        &lt;div class=&quot;stats&quot;&gt;
+        &lt;div class=&quot;stats stats--alert&quot;&gt;
             &lt;&lt;PlayerAvatar&gt;&gt;
             &lt;&lt;ResourceMeter&gt;&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot;&gt;
-            &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
-            &lt;&lt;TitleBar $quarterLabel&gt;&gt;
-            &lt;div class=&quot;scenario&quot;&gt;
-				&lt;p&gt;Late nights and white knuckles make it happen. You celebrate with another can of Celsius.&lt;/p&gt;
-				[[Back|There&#39;s no time]]
+            &lt;&lt;set $title to State.active.title&gt;&gt;
+            &lt;&lt;TitleBar $title&gt;&gt;
+            &lt;div class=&quot;scenario scenario--alert&quot;&gt;
+				&lt;img class=&quot;scenario__icon&quot; src=&quot;img/warn1.png&quot;/&gt;
+				&lt;div class=&quot;scenario__text&quot;&gt;
+					&lt;p class=&quot;scenario__desc&quot;&gt;Late nights and white knuckles make it happen. You celebrate with another can of Celsius.&lt;/p&gt;
+				&lt;/div&gt;
+				
             &lt;/div&gt;
-			&lt;&lt;CalcResource &quot;-3&quot; &quot;-1&quot; &quot;2&quot;&gt;&gt;
+			&lt;div class=&quot;btn-area&quot;&gt;
+				&lt;div class=&quot;button&quot;&gt;[[Go Back (Preview Only)|There&#39;s no time]]&lt;/div&gt;
+			&lt;/div&gt;
         &lt;/div&gt;
 	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="You bribe" tags="" position="600,800" size="100,100">/* passage content */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="You bribe" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
+/* passage content */
 &lt;div class=&quot;menu-bar&quot;&gt;
     &lt;div class=&quot;menu-bar__group&quot;&gt;
         &lt;a class=&quot;menu-bar__link&quot;&gt;Help&lt;/a&gt;
@@ -1597,21 +1657,27 @@ setup.userDescs.operations = "OPS: Corporate machinery is your weapon of choice.
 &lt;div class=&quot;abs-wrapper&quot;&gt;
     &lt;img class=&quot;logo&quot; src=&quot;img/logo.png&quot;/&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
-        &lt;div class=&quot;stats&quot;&gt;
+        &lt;div class=&quot;stats stats--alert&quot;&gt;
             &lt;&lt;PlayerAvatar&gt;&gt;
             &lt;&lt;ResourceMeter&gt;&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot;&gt;
-            &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
-            &lt;&lt;TitleBar $quarterLabel&gt;&gt;
-            &lt;div class=&quot;scenario&quot;&gt;
-				&lt;p&gt;You call in every favor and put together a clear plan of attack. Your team grumbles, but they get it done.&lt;/p&gt;
-				[[Back|There&#39;s no time]]
+            &lt;&lt;set $title to State.active.title&gt;&gt;
+            &lt;&lt;TitleBar $title&gt;&gt;
+            &lt;div class=&quot;scenario scenario--alert&quot;&gt;
+				&lt;img class=&quot;scenario__icon&quot; src=&quot;img/warn1.png&quot;/&gt;
+				&lt;div class=&quot;scenario__text&quot;&gt;
+					&lt;p class=&quot;scenario__desc&quot;&gt;You call in every favor and put together a clear plan of attack. Your team grumbles, but they get it done.&lt;/p&gt;
+				&lt;/div&gt;
+				
             &lt;/div&gt;
-			&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
+			&lt;div class=&quot;btn-area&quot;&gt;
+				&lt;div class=&quot;button&quot;&gt;[[Go Back (Preview Only)|There&#39;s no time]]&lt;/div&gt;
+			&lt;/div&gt;
         &lt;/div&gt;
 	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="Not you" tags="" position="600,800" size="100,100">/* passage content */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="Not you" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;0&quot; &quot;0&quot; &quot;-1&quot;&gt;&gt;
+/* passage content */
 &lt;div class=&quot;menu-bar&quot;&gt;
     &lt;div class=&quot;menu-bar__group&quot;&gt;
         &lt;a class=&quot;menu-bar__link&quot;&gt;Help&lt;/a&gt;
@@ -1622,21 +1688,27 @@ setup.userDescs.operations = "OPS: Corporate machinery is your weapon of choice.
 &lt;div class=&quot;abs-wrapper&quot;&gt;
     &lt;img class=&quot;logo&quot; src=&quot;img/logo.png&quot;/&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
-        &lt;div class=&quot;stats&quot;&gt;
+        &lt;div class=&quot;stats stats--alert&quot;&gt;
             &lt;&lt;PlayerAvatar&gt;&gt;
             &lt;&lt;ResourceMeter&gt;&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot;&gt;
-            &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
-            &lt;&lt;TitleBar $quarterLabel&gt;&gt;
-            &lt;div class=&quot;scenario&quot;&gt;
-				&lt;p&gt;How could you trust the people below you? They’re not you. They do a not-you job—and people notice.&lt;/p&gt;
-				[[Back|There&#39;s no time]]
+            &lt;&lt;set $title to State.active.title&gt;&gt;
+            &lt;&lt;TitleBar $title&gt;&gt;
+            &lt;div class=&quot;scenario scenario--alert&quot;&gt;
+				&lt;img class=&quot;scenario__icon&quot; src=&quot;img/warn1.png&quot;/&gt;
+				&lt;div class=&quot;scenario__text&quot;&gt;
+					&lt;p class=&quot;scenario__desc&quot;&gt;How could you trust the people below you? They’re not you. They do a not-you job—and people notice.&lt;/p&gt;
+				&lt;/div&gt;
+				
             &lt;/div&gt;
-			&lt;&lt;CalcResource &quot;-1&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
+			&lt;div class=&quot;btn-area&quot;&gt;
+				&lt;div class=&quot;button&quot;&gt;[[Go Back (Preview Only)|There&#39;s no time]]&lt;/div&gt;
+			&lt;/div&gt;
         &lt;/div&gt;
 	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Ask for the extension now" tags="" position="600,800" size="100,100">/* passage content */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Ask for the extension now" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;2&quot; &quot;0&quot; &quot;-1&quot;&gt;&gt;
+/* passage content */
 &lt;div class=&quot;menu-bar&quot;&gt;
     &lt;div class=&quot;menu-bar__group&quot;&gt;
         &lt;a class=&quot;menu-bar__link&quot;&gt;Help&lt;/a&gt;
@@ -1647,18 +1719,23 @@ setup.userDescs.operations = "OPS: Corporate machinery is your weapon of choice.
 &lt;div class=&quot;abs-wrapper&quot;&gt;
     &lt;img class=&quot;logo&quot; src=&quot;img/logo.png&quot;/&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
-        &lt;div class=&quot;stats&quot;&gt;
+        &lt;div class=&quot;stats stats--alert&quot;&gt;
             &lt;&lt;PlayerAvatar&gt;&gt;
             &lt;&lt;ResourceMeter&gt;&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot;&gt;
-            &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
-            &lt;&lt;TitleBar $quarterLabel&gt;&gt;
-            &lt;div class=&quot;scenario&quot;&gt;
-				&lt;p&gt;You lose a little face, but that’s better than losing your job.&lt;/p&gt;
-				[[Back|There&#39;s no time]]
+            &lt;&lt;set $title to State.active.title&gt;&gt;
+            &lt;&lt;TitleBar $title&gt;&gt;
+            &lt;div class=&quot;scenario scenario--alert&quot;&gt;
+				&lt;img class=&quot;scenario__icon&quot; src=&quot;img/warn1.png&quot;/&gt;
+				&lt;div class=&quot;scenario__text&quot;&gt;
+					&lt;p class=&quot;scenario__desc&quot;&gt;You lose a little face, but that’s better than losing your job.&lt;/p&gt;
+				&lt;/div&gt;
+				
             &lt;/div&gt;
-			&lt;&lt;CalcResource &quot;1&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
+			&lt;div class=&quot;btn-area&quot;&gt;
+				&lt;div class=&quot;button&quot;&gt;[[Go Back (Preview Only)|There&#39;s no time]]&lt;/div&gt;
+			&lt;/div&gt;
         &lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="You&#39;re Asked to Deliver Bad News" tags="Q1" position="600,675" size="100,100">/* passage content */
@@ -2446,6 +2523,7 @@ setup.userDescs.operations = "OPS: Corporate machinery is your weapon of choice.
 &lt;&lt;set $softSkill to 0&gt;&gt;
 &lt;&lt;set $user to &quot;ABC&quot;&gt;&gt;
 &lt;&lt;set $class to 0&gt;&gt;
+&lt;&lt;set $demo to true&gt;&gt;
 &lt;div class=&quot;abs-wrapper abs-wrapper--login&quot;&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
 		&lt;div class=&quot;content content--login&quot;&gt;
@@ -2571,12 +2649,12 @@ setup.userDescs.operations = "OPS: Corporate machinery is your weapon of choice.
 &lt;&lt;set $maxEnergy to 10&gt;&gt;
 &lt;&lt;set $maxApproval to 10&gt;&gt;
 &lt;&lt;newmeter &#39;energy&#39; 0.5&gt;&gt;
-    &lt;&lt;colors #74B137 &#39;yellow&#39; #FFFFF5&gt;&gt;
+    &lt;&lt;colors #74B137 #DDF15B #FFFFF5&gt;&gt;
     &lt;&lt;sizing 100% 18px&gt;&gt;
     &lt;&lt;animation 0.5s linear&gt;&gt;
 &lt;&lt;/newmeter&gt;&gt;
 &lt;&lt;newmeter &#39;approval&#39; 0.5&gt;&gt;
-    &lt;&lt;colors #74B137 &#39;yellow&#39; #FFFFF5&gt;&gt;
+    &lt;&lt;colors #74B137 #DDF15B #FFFFF5&gt;&gt;
     &lt;&lt;sizing 100% 18px&gt;&gt;
     &lt;&lt;animation 0.5s linear&gt;&gt;
 &lt;&lt;/newmeter&gt;&gt;</tw-passagedata><tw-passagedata pid="87" name="ActionBox" tags="widget" position="800,100" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;widget &quot;ActionBox&quot;&gt;&gt;
@@ -2595,21 +2673,21 @@ setup.userDescs.operations = "OPS: Corporate machinery is your weapon of choice.
                     &lt;&lt;case &quot;h&quot;&gt;&gt;
                         &lt;&lt;switch $hardSkill&gt;&gt;
                         &lt;&lt;case 1&gt;&gt;
-                            &lt;&lt;set $probability to random(100,100)&gt;&gt;
+                            &lt;&lt;set $probability to random(20,100)&gt;&gt;
                         &lt;&lt;case -1&gt;&gt;
                             &lt;&lt;set $probability to random(0,0)&gt;&gt;
                         &lt;&lt;case 0&gt;&gt;
-                            &lt;&lt;set $probability to random(0,100)&gt;&gt;
+                            &lt;&lt;set $probability to random(0,80)&gt;&gt;
                         &lt;&lt;/switch&gt;&gt;
                     /* soft skill */
                     &lt;&lt;case &quot;s&quot;&gt;&gt;
                         &lt;&lt;switch $softSkill&gt;&gt;
                         &lt;&lt;case 1&gt;&gt;
-                            &lt;&lt;set $probability to random(100,100)&gt;&gt;
+                            &lt;&lt;set $probability to random(20,100)&gt;&gt;
                         &lt;&lt;case -1&gt;&gt;
                             &lt;&lt;set $probability to random(0,0)&gt;&gt;
                         &lt;&lt;case 0&gt;&gt;
-                            &lt;&lt;set $probability to random(0,100)&gt;&gt;
+                            &lt;&lt;set $probability to random(0,80)&gt;&gt;
                         &lt;&lt;/switch&gt;&gt;
                     &lt;&lt;/switch&gt;&gt;
                     &lt;&lt;if $probability &gt;= 50&gt;&gt;
@@ -2631,46 +2709,42 @@ setup.userDescs.operations = "OPS: Corporate machinery is your weapon of choice.
             &lt;&lt;/if&gt;&gt;
         &lt;&lt;/for&gt;&gt;
     &lt;/div&gt;
-&lt;&lt;/widget&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="88" name="CalcResource" tags="widget" position="800,100" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;widget &quot;CalcResource&quot;&gt;&gt;
-	&lt;&lt;set $energy to Math.clamp($energy += Number($args[0]), -10, 10)&gt;&gt;
+&lt;&lt;/widget&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="88" name="CalcResource" tags="widget" position="800,100" size="100,100">&lt;&lt;widget &quot;CalcResource&quot;&gt;&gt;
+	&lt;&lt;set $energy to Math.clamp($energy += Number($args[0]), 0, 10)&gt;&gt;
     &lt;&lt;set $approval to Math.clamp($approval += Number($args[2]), 0, 10)&gt;&gt;
 	&lt;&lt;updatemeter &#39;approval&#39; `$approval / $maxApproval`&gt;&gt;
 	&lt;&lt;updatemeter &#39;energy&#39; `$energy / $maxEnergy`&gt;&gt;
-&lt;&lt;/widget&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="EndingCheck" tags="widget" position="900,100" size="100,100">&lt;&lt;widget &quot;EndingCheck&quot;&gt;&gt;
-    &lt;&lt;set $time to $time + 1&gt;&gt;
-
-    &lt;&lt;if $quarter == 4 and $time == 2&gt;&gt;
-    	&lt;&lt;set $personalityCheck to true&gt;&gt;
-    &lt;&lt;/if&gt;&gt;
-    
-    &lt;&lt;if $time == 2&gt;&gt;
-    	&lt;&lt;if $quarter &lt; 4&gt;&gt;
-    		&lt;&lt;set $quarter to $quarter + 1&gt;&gt;
-        &lt;&lt;/if&gt;&gt;
-        &lt;&lt;set $time to 0&gt;&gt;
-    &lt;&lt;/if&gt;&gt;
-
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="EndingCheck" tags="widget" position="900,100" size="100,100">&lt;&lt;widget &quot;EndingCheck&quot;&gt;&gt;
+    /* check for fail conditions */
     &lt;&lt;if $energy &lt;= 0&gt;&gt;
      	&lt;&lt;GoRandom &quot;EndingEnergy&quot;&gt;&gt;
 	&lt;&lt;/if&gt;&gt;
-
     &lt;&lt;if $approval &lt;= 0&gt;&gt;
         &lt;&lt;GoRandom &quot;EndingFired&quot;&gt;&gt;
     &lt;&lt;/if&gt;&gt;
 
-    &lt;&lt;if $quarter == 1&gt;&gt;
+    /* advance time */
+    &lt;&lt;set $time to $time + 1&gt;&gt;
+    
+    /* check for ending stage */
+    &lt;&lt;if $quarter == 4 and $time == 2&gt;&gt;
+    	&lt;&lt;set $personalityCheck to true&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    
+    /* move to next quarter */
+    &lt;&lt;if $time == 2 &amp;&amp; $quarter &lt; 4&gt;&gt;
+        &lt;&lt;set $quarter to $quarter + 1&gt;&gt;
+        &lt;&lt;set $time to 0&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+
+    /* go to next scenario */
+    &lt;&lt;if $quarter is 1&gt;&gt;
         &lt;&lt;GoRandom &quot;Q1&quot;&gt;&gt;
-    &lt;&lt;/if&gt;&gt;
-    
-    &lt;&lt;if $quarter == 2&gt;&gt;
+    &lt;&lt;elseif $quarter is 2&gt;&gt;
         &lt;&lt;GoRandom &quot;Q2&quot;&gt;&gt;
-    &lt;&lt;/if&gt;&gt;
-    
-    &lt;&lt;if $quarter == 3&gt;&gt;
+    &lt;&lt;elseif $quarter is 3&gt;&gt;
         &lt;&lt;GoRandom &quot;Q3&quot;&gt;&gt;
-    &lt;&lt;/if&gt;&gt;
-    
-    &lt;&lt;if $quarter == 4 and $time &lt; 2&gt;&gt;
+    &lt;&lt;elseif $quarter == 4 and $time &lt; 2&gt;&gt;
         &lt;&lt;GoRandom &quot;Q4&quot;&gt;&gt;
     &lt;&lt;/if&gt;&gt;
 
@@ -2713,8 +2787,7 @@ setup.userDescs.operations = "OPS: Corporate machinery is your weapon of choice.
         &lt;div class=&quot;resource-meter__unit&quot;&gt;
             &lt;div class=&quot;resource-meter__label&quot;&gt;
                 &lt;p class=&quot;resource-meter__name&quot;&gt;Self-Care&lt;/p&gt;
-                &lt;&lt;set $enPercentage to ($energy / $maxEnergy) * 100&gt;&gt;
-                &lt;p class=&quot;resource-meter__percentage&quot;&gt;$enPercentage%&lt;/p&gt;
+                &lt;p&gt;&lt;&lt;print (($energy / $maxEnergy) * 100)&gt;&gt;%&lt;/p&gt;
             &lt;/div&gt;
             &lt;&lt;showmeter &#39;energy&#39; &#39;_energy / _maxEnergy&#39; /&gt;&gt;
         &lt;/div&gt;

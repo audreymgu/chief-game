@@ -1,8 +1,11 @@
 :: There's no time [Q1] {"position":"600,675","size":"100,100"}
 /* set placeholder values */
-<<set $quarter to 1>>
-<<set $energy to 5>>
-<<set $approval to 5>>
+<<if $demo is true>>
+    <<set $quarter to 1>>
+    <<set $energy to 5>>
+    <<set $approval to 5>>
+    <<set $demo to false>>
+<</if>>
 /* passage content */
 /* <<audio "phone" volume 0.25 play>> */
 <div class="menu-bar">

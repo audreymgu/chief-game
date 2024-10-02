@@ -10,6 +10,7 @@
 <<set $softSkill to 0>>
 <<set $user to "ABC">>
 <<set $class to 0>>
+<<set $demo to true>>
 <div class="abs-wrapper abs-wrapper--login">
 	<div class="rel-wrapper">
 		<div class="content content--login">

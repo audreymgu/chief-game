@@ -27,9 +27,9 @@
                         <<case 1>>
                             <<set $probability to random(20,100)>>
                         <<case -1>>
-                            <<set $probability to random(0,0)>>
-                        <<case 0>>
                             <<set $probability to random(0,80)>>
+                        <<case 0>>
+                            <<set $probability to random(0,100)>>
                         <</switch>>
                     <</switch>>
                     <<if $probability >= 50>>

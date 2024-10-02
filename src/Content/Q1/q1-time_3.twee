@@ -1,7 +1,6 @@
 /* title + metadata */
 :: Ask for the extension now {"position":"600,800","size":"100,100"}
 <<CalcResource "2" "0" "-1">>
-/* passage content */
 <div class="menu-bar">
     <div class="menu-bar__group">
         <a class="menu-bar__link">Help</a>
@@ -16,13 +15,13 @@
             <<PlayerAvatar>>
             <<ResourceMeter>>
         </div>
-        <div class="content">
+        <div class="content content--alert">
             <<set $title to State.active.title>>
             <<TitleBar $title>>
             <div class="scenario scenario--alert">
 				<img class="scenario__icon" src="img/warn1.png"/>
-				<div class="scenario__text">
-					<p class="scenario__desc">You lose a little face, but that’s better than losing your job.</p>
+				<div class="scenario__text scenario__text--alert">
+					<p class="scenario__desc scenario__desc--alert">You lose a little face, but that’s better than losing your job.</p>
 				</div>
 				
             </div>

@@ -16,13 +16,13 @@
             <<PlayerAvatar>>
             <<ResourceMeter>>
         </div>
-        <div class="content">
+        <div class="content content--alert">
             <<set $title to State.active.title>>
             <<TitleBar $title>>
             <div class="scenario scenario--alert">
 				<img class="scenario__icon" src="img/warn1.png"/>
-				<div class="scenario__text">
-					<p class="scenario__desc">Late nights and white knuckles make it happen. You celebrate with another can of Celsius.</p>
+				<div class="scenario__text scenario__text--alert">
+					<p class="scenario__desc scenario__desc--alert">Late nights and white knuckles make it happen. You celebrate with another can of Celsius.</p>
 				</div>
 				
             </div>

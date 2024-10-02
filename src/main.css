@@ -170,6 +170,9 @@ h1 {
   border: 1px solid black;
   border-width: 1px 0 0 0;
   color: #2A2C41;
+  padding: 3px;
+  background-image: linear-gradient(to bottom, #FFFFF5 0%, #FFFFF5 100%), linear-gradient(to bottom, #DFDFD0 0%, #DFDFD0 100%);
+  background-clip: content-box, padding-box;
 }
 @media (min-width: 650px) {
   .content {
@@ -178,13 +181,8 @@ h1 {
     border: 1px solid black;
   }
 }
-.content--login {
-  padding: 3px;
-  background-image: linear-gradient(to bottom, #FFFFF5 0%, #FFFFF5 100%), linear-gradient(to bottom, #DFDFD0 0%, #DFDFD0 100%);
-  background-clip: content-box, padding-box;
-}
 @media (min-width: 650px) {
-  .content--login {
+  .content {
     padding: unset;
     border-width: unset;
     border: 1px solid black;
@@ -332,7 +330,13 @@ h1 {
   border-width: 0 1px 0 1px;
 }
 .scenario--alert {
-  margin: 24px 0 24px 0;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 650px) {
+  .scenario--alert {
+    margin: 24px 0 24px 0;
+  }
 }
 @media (min-width: 650px) {
   .scenario {
@@ -359,8 +363,8 @@ h1 {
 }
 .scenario__text {
   flex-grow: 1;
-  padding-left: 8px;
   font-size: 16px;
+  padding-left: 8px;
 }
 @media (min-width: 650px) {
   .scenario__text {
@@ -368,9 +372,24 @@ h1 {
     font-size: 18px;
   }
 }
+.scenario__text--alert {
+  padding-left: 0;
+  flex-grow: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+@media (min-width: 650px) {
+  .scenario__text--alert {
+    text-align: left;
+  }
+}
 .scenario__desc {
   font-family: tickerbit;
   line-height: 130%;
+}
+.scenario__desc--alert {
+  height: min-content;
   max-width: 90%;
 }
 .scenario__img {
@@ -389,13 +408,25 @@ h1 {
 .scenario__icon {
   height: 64px;
   align-self: center;
-  margin: 4px 18px 12px 12px;
+  margin: 12px;
+}
+@media (min-width: 650px) {
+  .scenario__icon {
+    margin: 12px 20px 12px 12px;
+  }
 }
 
 .btn-area {
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  border: 1px solid black;
+  border-width: 0 1px 1px 1px;
+}
+@media (min-width: 650px) {
+  .btn-area {
+    border: none;
+  }
 }
 
 .titlebar {

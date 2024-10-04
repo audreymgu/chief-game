@@ -1,9 +1,9 @@
 :: Email {"position":"500,300","size":"100,100"}
 <div class="handbook">
 	<div>
-		<h1 class="handbook__title">EMPLOYEE HANDBOOK</h1>
+		<h1 class="handbook__title">HOW TO PLAY</h1>
 		<div class="handbook__text">
-			<p>Welcome to Optimum Solutions! Reminder that your employment is at-will and may be terminated at any time.</p>
+			<p>As a woman, you know that climbing the corporate ladder is never just about the work—so watch your step.</p>
 			<p><mark>Likeability</mark> measures your standing at the firm. If it drops to zero, <mark>you will be fired</mark>. <mark>Self-Care</mark> reflects your resilience. If it drops to zero, <mark>you will burn out.</mark></p>
 			<p>You’ll face challenging scenarios with multiple stakeholders during your tenure. Do your best—and remember to smile!</p>
 		</div>

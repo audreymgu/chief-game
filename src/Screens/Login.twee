@@ -12,6 +12,7 @@
 <<set $class to 0>>
 <<set $demo to true>>
 <div class="abs-wrapper abs-wrapper--login">
+	<img class="logo" src="img/logo.png"/>
 	<div class="rel-wrapper">
 		<div class="content content--login">
 			<<TitleBar "Welcome">>
@@ -53,7 +54,7 @@
 					<input id="textbox-user" name="textbox-user" type="text" inputmode="text" placeholder="ABC" maxlength="3" tabindex="0" class="macro-textbox">
 				</div>
 				<div class="button button--disabled">
-					<<link "Login" "There's no time">>
+					<<link "Login" "Email">>
 						<<script>>
 							var userField = document.getElementById("textbox-user");
 							var inputValue = userField.value.trim();

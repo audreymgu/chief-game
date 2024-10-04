@@ -457,3 +457,55 @@
         margin-bottom: 12px;
     }
 }
+
+.handbook {
+    color: black;
+    background-color: none;
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    border-width: 16px 0 0 32px;
+    border-style: ridge;
+    border-image-source: url("img/handbook-mobile.png");
+    border-image-slice: 42% 0% 0% 50.5% fill;
+    border-image-repeat: round;
+    // background-color: #FFFFF5;
+    width: 75%;
+    height: calc(100% - 80px);
+    background-clip: padding-box;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 24px;
+    @include breakpoint(desktop) {
+        border-style: unset;
+        border-image-source: unset;
+        border-image-slice: unset;
+        border-image-repeat: unset;
+        margin: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url("img/handbook.png");
+        height: 500px;
+        width: 717px;
+        background-size: contain;
+        padding: 32px 72px;
+        box-sizing: border-box;
+    }
+    &__title {
+        font-family: start-2p;
+        font-size: 24px;
+        margin-bottom: 0.5rem;
+    }
+    &__text {
+        font-family: tickerbit;
+        & p {
+            margin-bottom: 16px;
+            line-height: 1.65;
+        }
+        & mark {
+            background-color: #FDFFA2;
+        }
+    }
+}

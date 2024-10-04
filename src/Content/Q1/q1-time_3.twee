@@ -1,13 +1,7 @@
 /* title + metadata */
 :: Ask for the extension now {"position":"600,800","size":"100,100"}
 <<CalcResource "2" "0" "-1">>
-<div class="menu-bar">
-    <div class="menu-bar__group">
-        <a class="menu-bar__link">Help</a>
-    </div>
-    <img class="menu-bar__logo" src="img/logo-small.png" />
-    <a class="menu-bar__link">Quit</a>
-</div>
+<<MenuBar>>
 <div class="abs-wrapper">
     <img class="logo" src="img/logo.png"/>
 	<div class="rel-wrapper">

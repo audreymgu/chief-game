@@ -8,13 +8,7 @@
 <</if>>
 /* passage content */
 /* <<audio "phone" volume 0.25 play>> */
-<div class="menu-bar">
-    <div class="menu-bar__group">
-        <a class="menu-bar__link">Help</a>
-    </div>
-    <img class="menu-bar__logo" src="img/logo-small.png" />
-    <a class="menu-bar__link">Quit</a>
-</div>
+<<MenuBar>>
 <div class="abs-wrapper">
     <img class="logo" src="img/logo.png"/>
 	<div class="rel-wrapper">

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-CSS_FILE="/Users/gu/Repositories/chief-game/src/main.css"
-TWEET_FILE="/Users/gu/Repositories/chief-game/src/Special Passages/StoryStylesheet.twee"
+CSS_FILE="/Users/gu/Repositories/chief-sveltekit/src/game/main.css"
+TWEET_FILE="/Users/gu/Repositories/chief-sveltekit/src/game/special/StoryStylesheet.twee"
 
 update_twee_file() {
   echo "::Story Stylesheet" [stylesheet]> "$TWEET_FILE"

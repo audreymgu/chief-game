@@ -1,0 +1,13 @@
+:: QUIT [QUIT]
+<div class="abs-wrapper">
+	<div class="rel-wrapper">
+        <div class="content">
+            You quit to realize your lifelong dream of being an iguana tamer.
+            <<link "Play Again?">>
+                <<script>>
+                    Engine.restart();
+                <</script>>
+            <</link>>
+        </div>
+    </div>
+</div>

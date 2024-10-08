@@ -1,0 +1,15 @@
+:: GoRandom [widget] {"position":"700,100","size":"100,100"}
+<<widget "GoRandom">>
+    <<set _possiblePlaces = setup.getPassageNames(_args[0])>>
+    <<set _possiblePlaces to _possiblePlaces.filter(function(passage) {
+        return !hasVisited(passage);
+    })>>
+    <<if _possiblePlaces.length > 0>>
+        <<set _randomPassage = _possiblePlaces[Math.floor(Math.random() * _possiblePlaces.length)]>>
+        <<goto _randomPassage>>
+    <<else>>
+        <<script>>
+            console.log("No more passages.");
+        <</script>>
+    <</if>>
+<</widget>>

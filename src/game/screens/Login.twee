@@ -1,0 +1,130 @@
+:: Login {"position":"500,300","size":"100,100"}
+/* Pass Messages */
+<<EventMessenger "loginFlag" false>>
+/* Variable Initialization */
+<<if $time == undefined>>
+	<<set $time to 0>>
+<</if>>
+<<if $quarter == undefined>>
+	<<set $quarter to 1>>
+<</if>>
+<<set $hardSkill to 0>>
+<<set $softSkill to 0>>
+<<set $user to "ABC">>
+<<set $class to 0>>
+<<set $demo to true>>
+<div class="abs-wrapper abs-wrapper--login">
+	<img class="logo" src="img/logo.png"/>
+	<div class="rel-wrapper">
+		<div class="content content--login">
+			<<TitleBar "Welcome">>
+			<div class="login-window">
+				<h1 class="login-window__title">Choose Your Department</h1>
+				<p class="login-window__info">Your skills may affect certain outcomes.</p>
+				<div class="class-selector">
+					<div class="class" id="pd">
+						<img class="class__portrait" src="img/icon1.png"/>
+						<div class="class-info">
+							<p class="class-info__title class-info__title--product">PRODUCT</p>
+							<p class="class-info__desc">Software bends to your will. If only EQ was something you could download.</p>
+						</div>
+					</div>
+					<div class="class" id="sa">
+						<img class="class__portrait" src="img/icon2.png"/>
+						<div class="class-info">
+							<p class="class-info__title class-info__title--sales">SALES</p>
+							<p class="class-info__desc">You can charm, cajole, and occasionally even captivate. You can’t do spreadsheets.</p>
+						</div>
+					</div>
+					<div class="class" id="lg">
+						<img class="class__portrait" src="img/icon3.png"/>
+						<div class="class-info">
+							<p class="class-info__title class-info__title--legal">LEGAL</p>
+							<p class="class-info__desc">You practically invented due diligence. You cover your own ass with aplomb.</p>
+						</div>
+					</div>
+					<div class="class" id="op">
+						<img class="class__portrait" src="img/icon4.png"/>
+						<div class="class-info">
+							<p class="class-info__title class-info__title--ops">OPERATIONS</p>
+							<p class="class-info__desc">You know when to bcc and where the secret bathroom is. Surely that means something.</p>
+						</div>
+					</div>
+				</div>
+				<div class="initials-field">
+					<p class="initials-field__label">YOUR INITIALS:</p>
+					<input id="textbox-user" name="textbox-user" type="text" inputmode="text" placeholder="ABC" maxlength="3" tabindex="0" class="macro-textbox">
+				</div>
+				<div class="button button--disabled">
+					<<link "Login" "Email">>
+						<<script>>
+							var userField = document.getElementById("textbox-user");
+							var inputValue = userField.value.trim();
+							State.variables.user = inputValue;
+						<</script>>
+					<</link>>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<<script>>
+    $(document).one(':passagedisplay', function () {
+        console.log("Login game logic running.");
+
+        var divs = document.querySelectorAll('.class');
+		var userField = document.getElementById("textbox-user");
+		var inputValue = userField.value.trim();
+		var classCheck = false;
+		var btn = document.querySelector('.button');
+
+		function loginCheck () {
+			if (classCheck && inputValue.length > 1) {
+				console.log("gouda");
+				btn.classList.remove('button--disabled');
+			} else {
+				btn.classList.add('button--disabled');
+			}
+		}
+
+		divs.forEach(function(div) {
+            div.addEventListener('click', function() {
+                divs.forEach(function(d) {
+                    d.classList.remove('class--selected');
+                });
+                this.classList.add('class--selected');
+				if (this.id === "pd") {
+					console.log("pd");
+					State.variables.hardSkill = 1;
+					State.variables.softSkill = -1;
+					State.variables.class = 1;
+					classCheck = true;
+				} else if (this.id === "sa") {
+					console.log("sa");
+					State.variables.hardSkill = -1;
+					State.variables.softSkill = 1;
+					State.variables.class = 2;
+					classCheck = true;
+				} else if (this.id === "lg") {
+					console.log("lg");
+					State.variables.hardSkill = 0;
+					State.variables.softSkill = 0;
+					State.variables.class = 3;
+					classCheck = true;
+				} else if (this.id === "op") {
+					console.log("op");
+					State.variables.hardSkill = -1;
+					State.variables.softSkill = 1;
+					State.variables.class = 4;
+					classCheck = true;
+				} 
+				loginCheck();
+            });
+        });
+
+		userField.addEventListener('input', function() {
+			inputValue = userField.value.trim();
+			loginCheck();
+		})
+    });
+<</script>>

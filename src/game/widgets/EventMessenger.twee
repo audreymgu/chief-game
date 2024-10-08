@@ -1,0 +1,12 @@
+:: EventMessenger [widget]
+<<widget "EventMessenger">>
+    <<set $var1 to $args[0]>>
+    <<set $var2 to $args[1]>>
+    <<script>>
+        const message = {
+            type: State.variables.var1,
+            value: State.variables.var2
+        };
+        window.parent.postMessage(message, "*");
+    <</script>>
+<</widget>>

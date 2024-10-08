@@ -1,0 +1,9 @@
+:: Approval - Fired [EndingFired] {"position":"1175,650","size":"100,100"}
+<div class="abs-wrapper">
+	<div class="rel-wrapper">
+        <<ResourceMeter>>
+        <div class="content">
+            Congrats u have been fired :'(
+        </div>
+    </div>
+</div>

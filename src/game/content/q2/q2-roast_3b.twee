@@ -1,0 +1,14 @@
+/* title + metadata */
+:: Dunked On {"position":"600,800","size":"100,100"}
+/* passage content */
+<<audio "office" pause>>
+<div class="abs-wrapper">
+	<div class="rel-wrapper">
+        <<ResourceMeter>>
+		<div class="content">
+			<p>Your holier-than-thou admonishment garners hundreds of dunks from TikTok strangers.</p>
+		</div>
+		<<CalcResource "0" "0" "0">>
+		<<ResourceUpdate "0" "0" "0">>
+	</div>
+</div>

@@ -1,0 +1,10 @@
+:: MenuBar [widget]
+<<widget "MenuBar">>
+<div class="menu-bar">
+    <div class="menu-bar__group">
+        <a class="menu-bar__link">About</a>
+    </div>
+    <img class="menu-bar__logo" src="img/logo-small.png" />
+    <a class="menu-bar__link">Quit</a>
+</div>
+<</widget>>

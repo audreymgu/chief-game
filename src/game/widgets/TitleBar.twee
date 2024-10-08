@@ -1,0 +1,8 @@
+:: TitleBar [widget]
+<<widget "TitleBar">>
+    <div class="titlebar">
+        <img src="img/grip.svg" class="titlebar__grip"/>
+        <p class="titlebar__text">_args[0]</p>
+        <img src="img/grip.svg" class="titlebar__grip"/>
+    </div>
+<</widget>>

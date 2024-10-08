@@ -1,0 +1,13 @@
+/* title + metadata */
+:: Extremely Boring {"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">
+	<div class="rel-wrapper">
+        <<ResourceMeter>>
+		<div class="content">
+			<p>Leveraging your knowledge of what’s actually in the chain, you make it sound extremely boring. The recipients are more than happy to delete it.</p>
+		</div>
+		<<CalcResource "-1" "1" "1">>
+		<<ResourceUpdate "-1" "1" "1">>
+	</div>
+</div>

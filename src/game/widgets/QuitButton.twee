@@ -1,0 +1,6 @@
+::QuitButton [widget]
+<<widget "QuitButton">>
+    <div class="quit-btn">
+        [[QUIT]]
+    </div>
+<</widget>>

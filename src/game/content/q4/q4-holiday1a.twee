@@ -1,0 +1,13 @@
+/* title + metadata */
+:: Gossip broker {"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">
+	<div class="rel-wrapper">
+        <<ResourceMeter>>
+		<div class="content">
+			<p>One-and-a-half manhattans and numerous bitch-sessions later, you have become the firm’s latest information broker.</p>
+		</div>
+		<<CalcResource "0" "1" "1">>
+		<<ResourceUpdate "0" "1" "1">>
+	</div>
+</div>

@@ -1,0 +1,13 @@
+/* title + metadata */
+:: Mind your business{"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">
+	<div class="rel-wrapper">
+        <<ResourceMeter>>
+		<div class="content">
+			<p>She tells you to mind your business. She’s probably right.</p>
+		</div>
+		<<CalcResource "0" "0" "0">>
+		<<ResourceUpdate "0" "0" "0">>
+	</div>
+</div>

@@ -1,0 +1,13 @@
+/* title + metadata */
+:: Parsing Words {"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">
+	<div class="rel-wrapper">
+        <<ResourceMeter>>
+		<div class="content">
+			<p>Parsing your words carefully, you tell him to keep it professional. He seems to get it.</p>
+		</div>
+		<<CalcResource "-2" "2" "0">>
+		<<ResourceUpdate "-2" "2" "0">>
+	</div>
+</div>

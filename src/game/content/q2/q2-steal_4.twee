@@ -1,0 +1,13 @@
+/* title + metadata */
+:: Mark Is Demolished {"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">
+	<div class="rel-wrapper">
+        <<ResourceMeter>>
+		<div class="content">
+			<p>You demolish Mark with some perfectly-modulated sass.</p>
+		</div>
+		<<CalcResource "0" "1" "1">>
+		<<ResourceUpdate "0" "1" "1">>
+	</div>
+</div>

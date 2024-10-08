@@ -1,0 +1,19 @@
+$_breakpoints: (
+  desktop: 650px, 
+);
+
+@mixin breakpoint($key) {
+  @if map-has-key($_breakpoints, $key) {
+    @media (min-width: #{map-get($_breakpoints, $key)}) {
+      @content;
+    }
+  }
+}
+
+@mixin vbreakpoint($key) {
+  @if map-has-key($_breakpoints, $key) {
+    @media (max-height: #{map-get($_breakpoints, $key)}) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+/* title + metadata */
+:: Coworker Steps Up {"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">
+	<div class="rel-wrapper">
+        <<ResourceMeter>>
+		<div class="content">
+			<p>Tyler points out that Mark built his house on your foundation. You always liked that guy.</p>
+		</div>
+		<<CalcResource "0" "1" "0">>
+		<<ResourceUpdate "0" "1" "0">>
+	</div>
+</div>

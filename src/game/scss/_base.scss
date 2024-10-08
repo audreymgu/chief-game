@@ -1,0 +1,111 @@
+// div {
+//   border: 1px solid white;
+// }
+
+body {
+  background-color: #213C06;
+  image-rendering: crisp-edges;
+}
+
+input:focus::-webkit-input-placeholder{
+    color: transparent!important;
+}
+input:focus::-moz-placeholder{
+    color: transparent!important;
+}
+input:focus:-moz-placeholder{
+    color: transparent!important;
+}
+
+// #ui-bar {
+//   width: 100%;
+//   height: 5rem;
+//   text-align: left;
+// }
+
+#ui-bar {
+	display: none;
+}
+
+#ui-bar-body {
+  margin: 0;
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#ui-bar-body>:not(:first-child) {
+  margin: 0;
+}
+
+#story-caption {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#menu-item-saves {
+  display: none;
+}
+
+#ui-bar-toggle {
+  display: none;
+}
+
+#menu ul {
+  margin:0;
+}
+
+#story {
+  margin:0;
+}
+
+progress {
+  height: 24px;
+}
+
+.ui-label {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+progress::-webkit-progress-value {
+  transition: width 0.5s ease;
+}
+
+#quarter {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.quit-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100px;
+  width: 200px;
+  text-align: center;
+  justify: center;
+}
+
+.quit-btn {
+  height: 100%;
+  justify: center;
+}
+
+.chapel-meter {
+  border: 2px solid #808D6B;
+}
+
+.meter-bottom {
+  height: 90%;
+  mask-image: repeating-linear-gradient(
+    to right, 
+    black 0%, black 10%, /* Adjust for segment gap */
+    transparent 10%, transparent 12.5% /* Adjust for segment width */
+  );
+  mask-size: 90px; 
+}

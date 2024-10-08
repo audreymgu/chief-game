@@ -1,0 +1,13 @@
+/* title + metadata */
+:: Take a bow {"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">
+	<div class="rel-wrapper">
+        <<ResourceMeter>>
+		<div class="content">
+			<p>Sure, your achievement represents the hard work of dozens of underlings. But you corralled those underlings!</p>
+		</div>
+		<<CalcResource "0" "0" "1">>
+		<<ResourceUpdate "0" "0" "1">>
+	</div>
+</div>

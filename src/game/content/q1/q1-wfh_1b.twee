@@ -1,0 +1,13 @@
+/* title + metadata */
+:: Vet with Legal {"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">
+	<div class="rel-wrapper">
+        <<ResourceMeter>>
+		<div class="content">
+			<p>You forgot to vet your words with legal — and now people are picking them apart.</p>
+		</div>
+		<<CalcResource "1" "-2" "0">>
+		<<ResourceUpdate "1" "-2" "0">>
+	</div>
+</div>

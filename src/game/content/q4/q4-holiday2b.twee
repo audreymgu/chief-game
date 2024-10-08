@@ -1,0 +1,13 @@
+/* title + metadata */
+:: Dull coworkers {"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">
+	<div class="rel-wrapper">
+        <<ResourceMeter>>
+		<div class="content">
+			<p>You make polite-but-dull conversation with a few polite-but-dull coworkers before leaving early to binge “Selling Sunset.”</p>
+		</div>
+		<<CalcResource "1" "0" "0">>
+		<<ResourceUpdate "1" "0" "0">>
+	</div>
+</div>

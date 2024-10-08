@@ -1,0 +1,13 @@
+/* title + metadata */
+:: Big gamble {"position":"600,800","size":"100,100"}
+/* passage content */
+<div class="abs-wrapper">
+	<div class="rel-wrapper">
+        <<ResourceMeter>>
+		<div class="content">
+			<p>It’s a big gamble, but your track record speaks for itself—they need you. And your boss knows it.</p>
+		</div>
+		<<CalcResource "1" "2" "-1">>
+		<<ResourceUpdate "1" "2" "-1">>
+	</div>
+</div>

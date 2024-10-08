@@ -1,0 +1,14 @@
+/* title + metadata */
+:: Jaded Gen-Z {"position":"600,800","size":"100,100"}
+/* passage content */
+<<audio "office" pause>>
+<div class="abs-wrapper">
+	<div class="rel-wrapper">
+        <<ResourceMeter>>
+		<div class="content">
+			<p>Your kinda funny, kinda snarky reply strikes fear into her jaded Gen Z heart. She deletes the vid.</p>
+		</div>
+		<<CalcResource "0" "0" "0">>
+		<<ResourceUpdate "0" "0" "0">>
+	</div>
+</div>

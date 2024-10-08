@@ -1,0 +1,22 @@
+:: StoryInit
+<<cacheaudio "office" "audio/office.mp3">>
+<<cacheaudio "boom" "audio/boom.mp3">>
+<<cacheaudio "phone" "audio/slack.mp3">>
+
+/* <<createaudiogroup ":bg">>
+<</createaudiogroup>>
+<<createaudiogroup ":sfx">>
+<</createaudiogroup>> */
+
+<<set $maxEnergy to 10>>
+<<set $maxApproval to 10>>
+<<newmeter 'energy' 0.5>>
+    <<colors #74B137 #DDF15B #FFFFF5>>
+    <<sizing 100% 18px>>
+    <<animation 0.5s linear>>
+<</newmeter>>
+<<newmeter 'approval' 0.5>>
+    <<colors #74B137 #DDF15B #FFFFF5>>
+    <<sizing 100% 18px>>
+    <<animation 0.5s linear>>
+<</newmeter>>

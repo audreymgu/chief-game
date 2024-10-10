@@ -11,5 +11,6 @@
             $.wiki('<<GoRandom "QUIT">>')
         }
     });
-    console.log('Listening for Svelte messages...');
+    
+    console.log('Child listening for messages...');
 <</script>>

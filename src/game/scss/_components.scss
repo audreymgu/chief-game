@@ -187,6 +187,88 @@
     }
 }
 
+.ending {
+    flex-grow: 1;
+    display: flex;
+    gap: 12px;
+    color: #2A2C41;
+    flex-direction: column;
+    border: 1px solid black;
+    border-width: 0 1px 0 1px;
+    &--alert {
+        align-items: center;
+        justify-content: center;
+        @include breakpoint(desktop) {
+            margin: 24px 0 24px 0;
+        }
+    }
+    @include breakpoint(desktop) {
+        border: unset;
+        border-width: unset;
+        flex-direction: row;
+        max-height: 325px;
+        padding: 8px;
+    }
+    &__title {
+        margin-top: 8px;
+        line-height: 110%;
+        padding: 0;
+        margin-bottom: 0.75rem;
+        font-family: start-2p;
+        font-size: 24px;
+        @include breakpoint(desktop) {
+            font-size: 24px;
+        }
+        text-transform: uppercase;
+    }
+    &__text {
+        flex-grow: 1;
+        font-size: 16px;
+        padding-left: 8px;
+        @include breakpoint(desktop) {
+            padding-left: unset;
+            font-size: 18px;   
+        }
+        &--alert {
+            padding-left: 0;
+            flex-grow: 0;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            @include breakpoint(desktop) {
+                text-align: left;
+            }
+        }
+    }
+    &__desc {
+        font-family: tickerbit;
+        line-height: 130%;
+        &--alert {
+            height: min-content;
+            max-width: 90%;
+        }
+    }
+    &__img {
+        width: 100%;
+        min-height: 150px;
+        max-height: 500px;
+        object-fit: cover;
+        @include breakpoint(desktop) {
+            height: unset;
+            width: 275px;
+        }
+        align-self: start;
+    }
+    &__icon {
+        height: 64px;
+        align-self: center;
+        margin: 12px;
+        @include breakpoint(desktop) {
+            margin: 12px 20px 12px 12px;
+        }
+    }
+}
+
 .btn-area {
     padding-left: 20px;    
     padding-right: 20px;
@@ -195,6 +277,9 @@
     border-width: 0 1px 1px 1px;
     @include breakpoint(desktop) {
         border: none;
+    }
+    &--ending {
+        padding: 0 8px 8px 8px;
     }
 }
 

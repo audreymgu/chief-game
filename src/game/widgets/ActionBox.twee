@@ -1,5 +1,5 @@
-:: ActionBox [widget] {"position":"800,100","size":"100,100"}
-<<nobr>><<widget "ActionBox">>
+:: ChoiceModule [widget] {"position":"800,100","size":"100,100"}
+<<nobr>><<widget "ChoiceModule">>
     <div class="action-box">
         <<for _i to 0; _i lt _args.length; _i++>>
             <<if _args[_i].includes("|")>>

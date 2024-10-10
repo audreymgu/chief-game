@@ -8,7 +8,7 @@
             <h1>Stolen Valor</h1>
             <p>You propose a bold plan during the department heads strategy session—then Mark proposes it again 10 minutes later.</p>
         </div>
-        <<ActionBox
+        <<ChoiceModule
             "Smile and nod|No Credit, No Problem|Coworker Steps Up"
             "Make mildly sarcastic remark|Wait, Not That Sarcastic|Mark Is Demolished"
         >>

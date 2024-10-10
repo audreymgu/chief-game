@@ -8,7 +8,7 @@
             <h1>Doppelganger</h1>
             <p>You learn that a “rising star” at the west coast office has a nearly identical portfolio to yours.</p>
         </div>
-        <<ActionBox
+        <<ChoiceModule
             "Join forces"
             "Ice him out"
             "Live and let live"

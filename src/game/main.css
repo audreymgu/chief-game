@@ -168,7 +168,6 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-items: flex-start;
-  padding: 6px;
   background-color: #FFFFF5;
   border: 1px solid black;
   border-width: 1px 0 0 0;
@@ -179,16 +178,17 @@ h1 {
 }
 @media (min-width: 650px) {
   .content {
-    padding: 0px;
+    padding: unset;
     border-width: unset;
     border: 1px solid black;
   }
 }
+.content--ending {
+  border-width: 0px;
+}
 @media (min-width: 650px) {
-  .content {
-    padding: unset;
-    border-width: unset;
-    border: 1px solid black;
+  .content--ending {
+    border-width: 1px;
   }
 }
 
@@ -419,6 +419,102 @@ h1 {
   }
 }
 
+.ending {
+  flex-grow: 1;
+  display: flex;
+  gap: 12px;
+  color: #2A2C41;
+  flex-direction: column;
+  border: 1px solid black;
+  border-width: 0 1px 0 1px;
+}
+.ending--alert {
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 650px) {
+  .ending--alert {
+    margin: 24px 0 24px 0;
+  }
+}
+@media (min-width: 650px) {
+  .ending {
+    border: unset;
+    border-width: unset;
+    flex-direction: row;
+    max-height: 325px;
+    padding: 8px;
+  }
+}
+.ending__title {
+  margin-top: 8px;
+  line-height: 110%;
+  padding: 0;
+  margin-bottom: 0.75rem;
+  font-family: start-2p;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+@media (min-width: 650px) {
+  .ending__title {
+    font-size: 24px;
+  }
+}
+.ending__text {
+  flex-grow: 1;
+  font-size: 16px;
+  padding-left: 8px;
+}
+@media (min-width: 650px) {
+  .ending__text {
+    padding-left: unset;
+    font-size: 18px;
+  }
+}
+.ending__text--alert {
+  padding-left: 0;
+  flex-grow: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+@media (min-width: 650px) {
+  .ending__text--alert {
+    text-align: left;
+  }
+}
+.ending__desc {
+  font-family: tickerbit;
+  line-height: 130%;
+}
+.ending__desc--alert {
+  height: min-content;
+  max-width: 90%;
+}
+.ending__img {
+  width: 100%;
+  min-height: 150px;
+  max-height: 500px;
+  object-fit: cover;
+  align-self: start;
+}
+@media (min-width: 650px) {
+  .ending__img {
+    height: unset;
+    width: 275px;
+  }
+}
+.ending__icon {
+  height: 64px;
+  align-self: center;
+  margin: 12px;
+}
+@media (min-width: 650px) {
+  .ending__icon {
+    margin: 12px 20px 12px 12px;
+  }
+}
+
 .btn-area {
   padding-left: 20px;
   padding-right: 20px;
@@ -430,6 +526,9 @@ h1 {
   .btn-area {
     border: none;
   }
+}
+.btn-area--ending {
+  padding: 0 8px 8px 8px;
 }
 
 .titlebar {

@@ -2,11 +2,29 @@
 <<widget "EventMessenger">>
     <<set $var1 to $args[0]>>
     <<set $var2 to $args[1]>>
+    <<if $args[2]>>
+        <<set $var3 to $args[2]>>
+    <</if>>
     <<script>>
-        const message = {
-            type: State.variables.var1,
-            value: State.variables.var2
-        };
-        window.parent.postMessage(message, "*");
+        window.addEventListener("message", (event) => {
+            if (event.data.type === "parentReady") {
+                console.log("Parent is ready, sending message...");
+                let message;
+                if (!State.getVar("$var3")) {
+                    message = {
+                        type: State.getVar("$var1"),
+                        value: State.getVar("$var2")
+                    };
+                } else {
+                    message = {
+                        type: State.getVar("$var1"),
+                        value: State.getVar("$var2"),
+                        mod: State.getVar("$var3")
+                    };
+                }
+                window.parent.postMessage(message, "*");
+            }
+        });
     <</script>>
 <</widget>>
+

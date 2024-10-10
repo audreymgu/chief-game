@@ -1,0 +1,40 @@
+::PassageDone
+<<script>>    
+    if (document.querySelector('#sharing')) {
+        var btn = document.querySelector('#sharing');
+
+        btn.addEventListener('click', async () => {
+            // Adjust path to your image
+            const response = await fetch('/img/ending1.png');
+            // Convert image to a blob
+            const blob = await response.blob();
+
+            const file = new File([blob], 'ending1.png', {
+                type: 'image/png'
+            });
+
+            let shareData = {
+                text: '🗡️🔪🗡️🔪🗡️🔪🗡️🔪\nℑ 𝔠𝔥𝔬𝔰𝔢 𝔳𝔦𝔬𝔩𝔢𝔫𝔠𝔢\nON THE CORPORATE TRAIL\n🗡️🔪🗡️🔪🗡️🔪🗡️🔪\nthecorporatetrail.com',
+                files: [file]
+            };
+
+            if (!navigator.canShare) {
+                console.log('Web Share API not available');
+                return;
+            }
+            
+            if (!navigator.canShare(shareData)) {
+                console.log('Share data unsupported, disallowed, or invalid');
+                return;
+            }
+            
+            navigator.share(shareData)
+            .then(() => {
+                console.log('Shared successfully');
+            })
+            .catch((e) => {
+                console.log('Error: ' + e);
+            })
+        });
+    }
+<</script>>

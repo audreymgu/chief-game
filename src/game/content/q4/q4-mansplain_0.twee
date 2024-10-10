@@ -8,7 +8,7 @@
             <h1>Mansplainin'</h1>
             <p>The new Biz Dev guy steps all over your prepared remarks at a pitch—and gets a few things wrong.</p>
         </div>
-        <<ActionBox
+        <<ChoiceModule
             "Throw him a lifeline"
             "He's new"
         >>

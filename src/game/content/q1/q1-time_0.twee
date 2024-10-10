@@ -1,6 +1,6 @@
 :: There's no time [Q1] {"position":"600,675","size":"100,100"}
 /* Pass Messages */
-<<EventMessenger "loginFlag" true>>
+<<EventMessenger "showMenu" true>>
 /* set placeholder values */
 <<if $demo is true>>
     <<set $quarter to 1>>
@@ -27,10 +27,10 @@
                     <p class="scenario__desc">You’ve been given a high-stakes assignment with an impossible deadline.</p>
                 </div>
             </div>
-                <<ActionBox
-                    "Sleep when you're dead"
-                    "s|Delegate|You bribe|Not you"
-                    "Ask for the extension now"
-                >>
+            <<ChoiceModule
+                "Sleep when you're dead"
+                "s|Delegate|You bribe|Not you"
+                "Ask for the extension now"
+            >>
         </div>
 </div>

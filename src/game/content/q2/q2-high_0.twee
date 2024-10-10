@@ -8,7 +8,7 @@
             <h1>Intern Clearly High</h1>
             <p>Vapes may be odorless, but the eyes don’t deceive. And neither do his many failed attempts to use the copier.</p>
         </div>
-        <<ActionBox
+        <<ChoiceModule
             "Send him home"
             "Fire him on the spot"
             "Ask for a toke"

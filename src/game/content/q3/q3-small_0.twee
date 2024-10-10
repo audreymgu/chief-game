@@ -8,7 +8,7 @@
             <h1>Small World</h1>
             <p>You run into an old friend, now fund manager on vacation. After a few après-skis, she says she’s looking to invest.</p>
         </div>
-        <<ActionBox
+        <<ChoiceModule
             "Send it up the flagpole|Big Money|Jump the Gun"
             "Keep a lid on it for now|Cultivate the Relationship|Private Investor"
         >>

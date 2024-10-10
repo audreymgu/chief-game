@@ -8,7 +8,7 @@
             <h1>Girl Boss</h1>
             <p>The exec. committee announces a new program to mentor up-and-coming women in the firm. They ask you to chair it.</p>
         </div>
-        <<ActionBox
+        <<ChoiceModule
             "It's an honor to serve|Work Overtime|Admin Work"
             "Volunteer your rival|Saddling Liz|4D Chess"
         >>

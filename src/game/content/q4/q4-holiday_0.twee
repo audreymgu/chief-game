@@ -8,7 +8,7 @@
             <h1>Holiday Party</h1>
             <p>Two words: open bar.</p>
         </div>
-        <<ActionBox
+        <<ChoiceModule
             "Live a little!|Gossip broker|Uber home"
             "You're still at work|Pay your respects|Dull coworkers"
         >>

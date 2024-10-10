@@ -13,7 +13,7 @@
             <h1>Employee Goes Viral</h1>
             <p>One of your marketing girlies just blew up on #WorkTok with a tirade against the firm.</p>
         </div>
-        <<ActionBox
+        <<ChoiceModule
             "Give her a heads up|She's grateful|Mind your business"
             "Reprimand her privately"
             "Leave a comment|Jaded Gen-Z|Dunked On"

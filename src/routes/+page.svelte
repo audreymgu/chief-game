@@ -4,7 +4,10 @@
     import '../app.css';
     import { onMount } from 'svelte';
 
+    let iframeEl;
+
     let menuVisible;
+    let menuEnding;
 
     onMount(() => {
         window.addEventListener("message", (event) => {
@@ -14,31 +17,35 @@
             const data = event.data;
 
             // Check for the labeled boolean message type
-            if (data.type === "loginFlag") {
-                console.log("Received menu flag:", data.value);
+            if (data.type === "showMenu") {
+                console.log(data.type, data.value);
                 // Handle the labeled boolean value here
                 if (data.value === false) {
-                    console.log("hide");
                     menuVisible = false;
                 } else if (data.value === true) {
-                    console.log("show");
                     menuVisible = true;
+                    if (data.mod) {
+                        menuEnding = true;
+                    } else {
+                        menuEnding = false;
+                    }
                 }
             }
         });
+
+        iframeEl.contentWindow.postMessage({ type: "parentReady" }, "*");
     });
 
-    let iframeEl;
-
-    function handleRestart() {
-        // Send a message to the iframe to restart the game
-        // iframeEl.contentWindow.postMessage('restart', '*');
-        // console.log("Restart request.");
+    function handleQuit() {
         iframeEl.contentWindow.postMessage('quit', '*');
-        console.log("Quit ending.");
+        console.log("Skip to quit ending.");
+    }
+    function handleRestart() {
+        iframeEl.contentWindow.postMessage('restart', '*');
+        console.log("Restart request.");
     }
 </script>
 {#if menuVisible}
-    <MenuBar on:restart={handleRestart}/>
+    <MenuBar menuEnding={menuEnding} on:restart={handleRestart} on:quit={handleQuit}/>
 {/if}
 <GameArea bind:iframe={iframeEl}/>

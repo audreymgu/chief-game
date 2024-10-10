@@ -1,9 +1,14 @@
 <script>
+    export let menuEnding;
     import { createEventDispatcher } from 'svelte';
     const dispatch = createEventDispatcher();
 
-    function handleClick() {
+    function handleQuit() {
         // Dispatch a custom event to the parent component
+        dispatch('quit');
+    }
+
+    function handleRestart () {
         dispatch('restart');
     }
 </script>
@@ -13,7 +18,11 @@
         <a class="menu-bar__link">About</a>
     </div>
     <img class="menu-bar__logo" src="img/logo-small.png" />
-    <a on:click={handleClick} class="menu-bar__link">Quit</a>
+    {#if menuEnding}
+        <a on:click={handleRestart} class="menu-bar__link menu-bar__link--highlight">Retry?</a>
+    {:else}
+        <a on:click={handleQuit} class="menu-bar__link">Quit</a>
+    {/if}
 </div>
 
 <style lang="scss">
@@ -42,6 +51,13 @@
             &:hover {
                 color: black;
                 background-color: #DCF15B;
+            }
+            &--highlight {
+                color: black;
+                background-color: #DCF15B;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
         &__logo {

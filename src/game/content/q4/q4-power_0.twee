@@ -8,7 +8,7 @@
             <h1>Power Vacuum</h1>
             <p>One of the firm’s MDs is leaving for a top job elsewhere. The exec. committee says they’re looking to promote from within.</p>
         </div>
-        <<ActionBox
+        <<ChoiceModule
             "Ask him to bring you along|Sheryl Sandberg|He politely declines"
             "Announce your candidacy"
             "Avoid the inevitable knife fight"

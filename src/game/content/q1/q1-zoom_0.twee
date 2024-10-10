@@ -9,7 +9,7 @@
             <h1>Zoom Argument</h1>
             <p>Liz starts questioning your KPIs in front of the whole team. Will this aggression stand?</p>
         </div>
-        <<ActionBox
+        <<ChoiceModule
             "Back off"
             "Hit her with data|Public Win|Lose Face"
             "Let's take this offline"

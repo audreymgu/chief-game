@@ -1,0 +1,8 @@
+:: SharingModule [widget]
+<<widget "SharingModule">>
+    <div class="btn-area btn-area--ending">
+        <div class="button" id="sharing"><a>Share</a></div>
+        <div class="button"><a>Copy to Clipboard</a></div>
+        <p class="result"></p>
+    </div>
+<</widget>>

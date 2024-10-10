@@ -8,7 +8,7 @@
             <h1>Make 'Em Proud</h1>
             <p>The exec. committee has invited you to present your latest project at their quarterly shareout.</p>
         </div>
-        <<ActionBox
+        <<ChoiceModule
             "Take a bow"
             "Share credit|Talk Up|Nothing to Claim"
             "Pass the mic"

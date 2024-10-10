@@ -8,7 +8,7 @@
             <h1>Performance Review</h1>
             <p>You made it to the end of the year—now it’s time to make a case for that promotion.</p>
         </div>
-        <<ActionBox
+        <<ChoiceModule
             "Prepare a PowerPoint|Persuasive slides|Cluttered slides"
             "Take a conversational approach"
             "Threaten to walk|Big gamble|I'm sorry you feel that way"

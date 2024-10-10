@@ -28,7 +28,7 @@
                     <p class="scenario__desc">One of your (more ancient) direct reports calls you “sweetie.” Again.</p>
                 </div>
             </div>
-            <<ActionBox
+            <<ChoiceModule
                 "Ignore it"
                 "Confront him gently|Parsing Words|Teachable Moment"
                 "Get HR involved"

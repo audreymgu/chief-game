@@ -8,7 +8,7 @@
             <h1>Reply All</h1>
             <p>You accidentally CC half the company on a sensitive email chain filled with nonpublic material information.</p>
         </div>
-        <<ActionBox
+        <<ChoiceModule
             "Dial-a-Counsel"
             "Take ownership|Extremely Boring|Disregard"
             "IT can fix"

@@ -9,7 +9,7 @@
             <h1>❌ Poolside Laptop ❌</h1>
             <p>The exec. committe is implementing a 4-day RTO. They need you to update your people.</p>
         </div>
-        <<ActionBox
+        <<ChoiceModule
             "Send a memo and stick to the script|Deflect Blame|Vet with Legal"
             "Schedule time to talk about it openly|Trust Gained|Lost Status"
         >> 

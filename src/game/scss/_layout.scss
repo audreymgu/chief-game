@@ -45,12 +45,6 @@
     flex-direction: column;
     justify-items: flex-start;
     // border: 2px solid yellow;
-    padding: 6px;
-    @include breakpoint(desktop) {
-        padding: 0px;
-        border-width: unset;
-        border: 1px solid black;
-    }
     background-color: #FFFFF5;
     border: 1px solid black;
     border-width: 1px 0 0 0;
@@ -62,6 +56,12 @@
         padding: unset;
         border-width: unset;
         border: 1px solid black;
+    }
+    &--ending {
+        border-width: 0px;
+        @include breakpoint(desktop) {
+            border-width: 1px;
+        }
     }
 }
 

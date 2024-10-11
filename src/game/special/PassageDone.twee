@@ -14,7 +14,6 @@
             });
 
             let shareData = {
-                text: '🗡️🔪🗡️🔪🗡️🔪🗡️🔪\nℑ 𝔠𝔥𝔬𝔰𝔢 𝔳𝔦𝔬𝔩𝔢𝔫𝔠𝔢\nON THE CORPORATE TRAIL\n🗡️🔪🗡️🔪🗡️🔪🗡️🔪\nthecorporatetrail.com',
                 files: [file]
             };
 

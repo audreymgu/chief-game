@@ -2,24 +2,41 @@
 <<script>>    
     if (document.querySelector('#sharing')) {
         var btn = document.querySelector('#sharing');
-
+        var endingImage = State.getVar("$endingImage");
+        var endingLabel = State.getVar("$endingLabel").toString() + ".png";
         btn.addEventListener('click', async () => {
-            // Adjust path to your image
-            const response = await fetch('/img/ending1.png');
-            // Convert image to a blob
+            // path to image
+            const response = await fetch(endingImage);
+            
+            // convert to blob
             const blob = await response.blob();
 
-            const file = new File([blob], 'ending1.png', {
+            const file = new File([blob], endingLabel, {
                 type: 'image/png'
             });
 
             let shareData = {
-                text: '🗡️🔪🗡️🔪🗡️🔪🗡️🔪\nℑ 𝔠𝔥𝔬𝔰𝔢 𝔳𝔦𝔬𝔩𝔢𝔫𝔠𝔢\nON THE CORPORATE TRAIL\n🗡️🔪🗡️🔪🗡️🔪🗡️🔪\nthecorporatetrail.com',
                 files: [file]
             };
-
+            // copy to clipboard if web share unavailable
             if (!navigator.canShare) {
-                console.log('Web Share API not available');
+                console.log('Web Share API not available. Using clipboard as a fallback.');
+                try {
+                    btn.classList.remove("button--success");
+                    btn.children[0].innerText = "Copying...";
+                    navigator.clipboard.write([
+                        new ClipboardItem({
+                            'image/png': blob
+                        })
+                    ]);
+                    // add delay to help communicate state
+                    setTimeout(function(){
+                        btn.children[0].innerText = "Copied to Clipboard";
+                        btn.classList.add("button--success");
+                    }, 200);
+                } catch (error) {
+                    console.error(error);
+                }
                 return;
             }
             

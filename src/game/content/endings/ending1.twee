@@ -1,6 +1,8 @@
 :: Ending 1
 <<EventMessenger "showMenu" true true>>
 /* passage content */
+<<set $endingImage to "/img/ending1.png">>
+<<set $endingLabel to "The Corporate Trail - You Chose Violence">>
 <div class="abs-wrapper">
     <img class="logo" src="img/logo.png"/>
 	<div class="rel-wrapper">

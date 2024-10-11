@@ -591,7 +591,6 @@ h1 {
   text-decoration: none;
 }
 .button--disabled a {
-  color: #969699;
   border-image-source: url("img/button-inactive.png");
   border-image-slice: 30% 40% fill;
   border-image-repeat: repeat;
@@ -600,6 +599,31 @@ h1 {
 }
 .button--disabled a:hover {
   border-image-source: url("img/button-inactive.png");
+}
+.button--success a {
+  border-image-source: url("img/button-hover.png");
+  border-image-slice: 30% 40% fill;
+  border-image-repeat: repeat;
+  pointer-events: none;
+  cursor: default;
+}
+.button--success a:hover {
+  border-image-source: url("img/button-active.png");
+}
+.button--sharing a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-top: 8px;
+  gap: 8px;
+  line-height: 0;
+}
+@-moz-document url-prefix() {
+  .button--sharing a {
+    padding-top: 4px;
+  }
 }
 
 .menu-bar {
@@ -854,6 +878,21 @@ h1 {
 }
 .handbook__text mark {
   background-color: #FDFFA2;
+}
+
+.button-icon {
+  height: 150%;
+  margin-top: -8px;
+}
+@media (min-width: 650px) {
+  .button-icon {
+    height: 100%;
+  }
+  @-moz-document url-prefix() {
+    .button-icon {
+      margin-top: -4px;
+    }
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

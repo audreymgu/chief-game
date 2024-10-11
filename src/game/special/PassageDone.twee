@@ -41,7 +41,23 @@
             }
             
             if (!navigator.canShare(shareData)) {
-                console.log('Share data unsupported, disallowed, or invalid');
+                console.log('Share data unsupported, disallowed, or invalid. Using clipboard as a fallback.');
+                try {
+                    btn.classList.remove("button--success");
+                    btn.children[0].innerText = "Copying...";
+                    navigator.clipboard.write([
+                        new ClipboardItem({
+                            'image/png': blob
+                        })
+                    ]);
+                    // add delay to help communicate state
+                    setTimeout(function(){
+                        btn.children[0].innerText = "Copied to Clipboard";
+                        btn.classList.add("button--success");
+                    }, 200);
+                } catch (error) {
+                    console.error(error);
+                }
                 return;
             }
             

@@ -1,0 +1,27 @@
+/* title + metadata */
+:: Gentle parenting {"position":"600,800","size":"100,100"}
+<<CalcResource "-1" "1" "-1" "0">>
+<<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
+<<TitleBar $quarterLabel>>
+<div class="scenario scenario--inactive">
+	<img class="scenario__img" src="img/q4-performance.png"/>
+	<div class="scenario__text">
+		<h1 class="scenario__title">Performance Reviews</h1>
+		<p class="scenario__desc">Time to deliver feedback without bruising any delicate egos.</p>
+	</div>
+</div>
+<div class="alert">
+    <div class="scenario scenario--alert">
+        <img class="scenario__icon" src="img/warn1.png"/>
+        <div class="scenario__text scenario__text--alert">
+            <p class="scenario__desc scenario__desc--alert">Your “gentle parenting” style leaves your direct reports comforted, trusting, and unlikely to improve.</p>
+        </div>
+    </div>
+    <div class="btn-area btn-area--alert">
+        <div class="button">
+            <<link "Next">>
+                <<EndingCheck>>
+            <</link>>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+:: There's no time [Q2] {"position":"600,675","size":"100,100"}
+/* pass messages */
+<<EventMessenger "showMenu" true>>
+/* set placeholder values */
+<<if $demo is true>>
+    <<set $quarter to 1>>
+    <<set $energy to 5>>
+    <<set $approval to 5>>
+    <<set $workStyle to 0>>
+    <<set $orientation to 0>>
+    <<set $demo to false>>
+<</if>>
+/* passage content */
+/* <<audio "phone" volume 0.25 play>> */
+<div class="abs-wrapper">
+    <img class="logo" src="img/logo.png"/>
+	<div class="rel-wrapper">
+        <div class="stats">
+            <<PlayerAvatar>>
+            <<ResourceMeter>>
+        </div>
+        <div class="content" id="scenario-area">
+            <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
+            <<TitleBar $quarterLabel>>
+            <div class="scenario">
+                <img class="scenario__img" src="img/q2-time.png"/>
+                <div class="scenario__text">
+                    <h1 class="scenario__title">Five Alarm Fire</h1>
+                    <p class="scenario__desc">You’ve been given a high-stakes assignment with an impossible deadline.</p>
+                </div>
+            </div>
+            <<ChoiceModule
+                "Sleep when you're dead"
+                "Call in favors"
+                "Speak truth to power"
+            >>
+        </div>
+</div>

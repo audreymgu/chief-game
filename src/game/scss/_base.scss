@@ -98,6 +98,7 @@ progress::-webkit-progress-value {
 
 .chapel-meter {
   border: 2px solid #808D6B;
+  overflow: visible !important;
 }
 
 .meter-bottom {
@@ -108,4 +109,8 @@ progress::-webkit-progress-value {
     transparent 10%, transparent 12.5% /* Adjust for segment width */
   );
   mask-size: 90px; 
+}
+.meter-label {
+  margin-top: -18px !important;
+  font-size: 10px !important;
 }

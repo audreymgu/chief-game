@@ -1,0 +1,27 @@
+/* title + metadata */
+:: But the networking... {"position":"600,800","size":"100,100"}
+<<CalcResource "-1" "2" "1" "0">>
+<<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
+<<TitleBar $quarterLabel>>
+<div class="scenario scenario--inactive">
+    <img class="scenario__img" src="img/q1-trade.png"/>
+    <div class="scenario__text">
+        <h1 class="scenario__title">Trade Show</h1>
+        <p class="scenario__desc">You’ve been asked to join a major industry gathering in Singapore. It’s a 19-hour flight.</p>
+    </div>
+</div>
+<div class="alert">
+    <div class="scenario scenario--alert">
+        <img class="scenario__icon" src="img/warn1.png"/>
+        <div class="scenario__text scenario__text--alert">
+            <p class="scenario__desc scenario__desc--alert">You hunt down opportunities wherever they appear. You’re a premium class predator.</p>
+        </div>
+    </div>
+    <div class="btn-area btn-area--alert">
+        <div class="button">
+            <<link "Next">>
+                <<EndingCheck>>
+            <</link>>
+        </div>
+    </div>
+</div>

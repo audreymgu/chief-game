@@ -8,14 +8,12 @@
         <div class="resource-meter__unit">
             <div class="resource-meter__label">
                 <p class="resource-meter__name">Self-Care</p>
-                <p><<print (($energy / $maxEnergy) * 100)>>%</p>
             </div>
             <<showmeter 'energy' '_energy / _maxEnergy' />>
         </div>
         <div class="resource-meter__unit">
             <div class="resource-meter__label">
                 <p>Likability</p>
-                <p><<print (($approval / $maxApproval) * 100)>>%</p>
             </div>
             <<showmeter 'approval' '_approval / _maxApproval' />>
         </div>

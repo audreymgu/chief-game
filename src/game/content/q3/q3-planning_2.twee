@@ -1,0 +1,27 @@
+/* title + metadata */
+:: At your home {"position":"600,800","size":"100,100"}
+<<CalcResource "-1" "2" "0" "-1">>
+<<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
+<<TitleBar $quarterLabel>>
+<div class="scenario scenario--inactive">
+    <img class="scenario__img" src="img/q3-planning.png"/>
+    <div class="scenario__text">
+        <h1 class="scenario__title">Planning Committee</h1>
+        <p class="scenario__desc">You’ve been tasked with hosting a senior hires event, because “you’re so good at that kind of thing.”</p>
+    </div>
+</div>
+<div class="alert">
+    <div class="scenario scenario--alert">
+        <img class="scenario__icon" src="img/warn1.png"/>
+        <div class="scenario__text scenario__text--alert">
+            <p class="scenario__desc scenario__desc--alert">You endear yourself to the next generation of leaders. One of whom does some unmentionable stuff to your powder room.</p>
+        </div>
+    </div>
+    <div class="btn-area btn-area--alert">
+        <div class="button">
+            <<link "Next">>
+                <<EndingCheck>>
+            <</link>>
+        </div>
+    </div>
+</div>

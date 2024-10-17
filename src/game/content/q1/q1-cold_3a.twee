@@ -1,0 +1,27 @@
+/* title + metadata */
+:: Coalition {"position":"600,800","size":"100,100"}
+<<CalcResource "1" "1" "-1" "0">>
+<<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
+<<TitleBar $quarterLabel>>
+<div class="scenario scenario--inactive">
+    <img class="scenario__img" src="img/q1-cold.png"/>
+    <div class="scenario__text">
+        <h1 class="scenario__title">You're Fuckin' Cold</h1>
+        <p class="scenario__desc">The building is heated like a Victorian prison. Your besuited male colleagues don’t seem to notice.</p>
+    </div>
+</div>
+<div class="alert">
+    <div class="scenario scenario--alert">
+        <img class="scenario__icon" src="img/warn1.png"/>
+        <div class="scenario__text scenario__text--alert">
+            <p class="scenario__desc scenario__desc--alert">You build a coalition of the cold and successfully advocate for a sensible 70°.</p>
+        </div>
+    </div>
+    <div class="btn-area btn-area--alert">
+        <div class="button">
+            <<link "Next">>
+                <<EndingCheck>>
+            <</link>>
+        </div>
+    </div>
+</div>

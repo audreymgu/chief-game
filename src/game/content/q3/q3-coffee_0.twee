@@ -1,0 +1,29 @@
+:: Coffee Chats [Q3] {"position":"600,675","size":"100,100"}
+/* pass messages */
+<<EventMessenger "showMenu" true>>
+/* passage content */
+/* <<audio "phone" volume 0.25 play>> */
+<div class="abs-wrapper">
+    <img class="logo" src="img/logo.png"/>
+	<div class="rel-wrapper">
+        <div class="stats">
+            <<PlayerAvatar>>
+            <<ResourceMeter>>
+        </div>
+        <div class="content" id="scenario-area">
+            <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
+            <<TitleBar $quarterLabel>>
+            <div class="scenario">
+                <img class="scenario__img" src="img/placeholder.png"/>
+                <div class="scenario__text">
+                    <h1 class="scenario__title">Coffee Chats</h1>
+                    <p class="scenario__desc">As one of the few women executives in the building, you’ve become a de facto mentor to dozens of people.</p>
+                </div>
+            </div>
+            <<ChoiceModule
+                "Find the time"
+                "Set boundaries"
+                "s|Start a women's group|You convince|Get rebranded"
+            >>
+        </div>
+</div>

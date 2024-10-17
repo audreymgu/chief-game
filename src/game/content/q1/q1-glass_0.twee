@@ -1,0 +1,27 @@
+:: Glass Cliff [Q1] {"position":"600,675","size":"100,100"}
+/* passage content */
+/* <<audio "phone" volume 0.25 play>> */
+<div class="abs-wrapper">
+    <img class="logo" src="img/logo.png"/>
+	<div class="rel-wrapper">
+        <div class="stats">
+            <<PlayerAvatar>>
+            <<ResourceMeter>>
+        </div>
+        <div class="content" id="scenario-area">
+            <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
+            <<TitleBar $quarterLabel>>
+            <div class="scenario">
+                <img class="scenario__img" src="img/placeholder.png"/>
+                <div class="scenario__text">
+                    <h1 class="scenario__title">Glass Cliff</h1>
+                    <p class="scenario__desc">You’re offered a highly visible role leading a struggling division with minimal support.</p>
+                </div>
+            </div>
+            <<ChoiceModule
+                "Fuck it we ball"
+                "Your plate is full"
+                "s|Volunteer your rival|Deteriorate|Turn around"
+            >>
+        </div>
+</div>

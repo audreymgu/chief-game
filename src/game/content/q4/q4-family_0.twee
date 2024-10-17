@@ -1,0 +1,29 @@
+:: Family Planning [Q4] {"position":"600,675","size":"100,100"}
+/* pass messages */
+<<EventMessenger "showMenu" true>>
+/* passage content */
+/* <<audio "phone" volume 0.25 play>> */
+<div class="abs-wrapper">
+    <img class="logo" src="img/logo.png"/>
+	<div class="rel-wrapper">
+        <div class="stats">
+            <<PlayerAvatar>>
+            <<ResourceMeter>>
+        </div>
+        <div class="content" id="scenario-area">
+            <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
+            <<TitleBar $quarterLabel>>
+            <div class="scenario">
+                <img class="scenario__img" src="img/q4-family.png"/>
+                <div class="scenario__text">
+                    <h1 class="scenario__title">Family Planning</h1>
+                    <p class="scenario__desc">At the EOY forecasting meeting, the COO casually asks if you'll be “on leave” in the next 18 months. While staring directly at your uterus.</p>
+                </div>
+            </div>
+            <<ChoiceModule
+                "Play dumb"
+                "Say way too much"
+                "None of his business"
+            >>
+        </div>
+</div>

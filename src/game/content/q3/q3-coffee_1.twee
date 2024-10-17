@@ -1,0 +1,27 @@
+/* title + metadata */
+:: Find the time {"position":"600,800","size":"100,100"}
+<<CalcResource "-1" "1" "1" "-1">>
+<<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
+<<TitleBar $quarterLabel>>
+<div class="scenario scenario--inactive">
+    <img class="scenario__img" src="img/placeholder.png"/>
+    <div class="scenario__text">
+        <h1 class="scenario__title">Coffee Chats</h1>
+        <p class="scenario__desc">As one of the few women executives in the building, you’ve become a de facto mentor to dozens of people.</p>
+    </div>
+</div>
+<div class="alert">
+    <div class="scenario scenario--alert">
+        <img class="scenario__icon" src="img/warn1.png"/>
+        <div class="scenario__text scenario__text--alert">
+            <p class="scenario__desc scenario__desc--alert">The lost working hours mean more late nights in the sad room with the Peloton. But it’s worth it.</p>
+        </div>
+    </div>
+    <div class="btn-area btn-area--alert">
+        <div class="button">
+            <<link "Next">>
+                <<EndingCheck>>
+            <</link>>
+        </div>
+    </div>
+</div>

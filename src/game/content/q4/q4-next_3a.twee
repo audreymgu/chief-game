@@ -1,0 +1,27 @@
+/* title + metadata */
+:: Big gamble {"position":"600,800","size":"100,100"}
+<<CalcResource "2" "0" "-1" "1">>
+<<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
+<<TitleBar $quarterLabel>>
+<div class="scenario scenario--inactive">
+    <img class="scenario__img" src="img/q4-next.png"/>
+    <div class="scenario__text">
+        <h1 class="scenario__title">Next Steps</h1>
+        <p class="scenario__desc">You made it to the end of the year—now it’s time to make a case for your promotion.</p>
+    </div>
+</div>
+<div class="alert">
+    <div class="scenario scenario--alert">
+        <img class="scenario__icon" src="img/warn1.png"/>
+        <div class="scenario__text scenario__text--alert">
+            <p class="scenario__desc scenario__desc--alert">It’s a big gamble, but your track record speaks for itself—they need you. And they know it.</p>
+        </div>
+    </div>
+    <div class="btn-area btn-area--alert">
+        <div class="button">
+            <<link "Next">>
+                <<EndingCheck>>
+            <</link>>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+:: Screen Bare [Q4] {"position":"600,675","size":"100,100"}
+/* pass messages */
+<<EventMessenger "showMenu" true>>
+/* passage content */
+/* <<audio "phone" volume 0.25 play>> */
+<div class="abs-wrapper">
+    <img class="logo" src="img/logo.png"/>
+	<div class="rel-wrapper">
+        <div class="stats">
+            <<PlayerAvatar>>
+            <<ResourceMeter>>
+        </div>
+        <div class="content" id="scenario-area">
+            <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
+            <<TitleBar $quarterLabel>>
+            <div class="scenario">
+                <img class="scenario__img" src="img/q4-screen.png"/>
+                <div class="scenario__text">
+                    <h1 class="scenario__title">Screen Bare</h1>
+                    <p class="scenario__desc">While screen sharing on a prep call for Q3 earnings, you reveal your bulk order for Charmin double-ply on Amazon.</p>
+                </div>
+            </div>
+            <<ChoiceModule
+                "Pretend no one saw|Close tab|Maybe they didn't"
+                "Own it with a joke|You laugh|Borderline inappropriate"
+            >>
+        </div>
+</div>

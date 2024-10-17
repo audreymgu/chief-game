@@ -14,9 +14,11 @@
     <<colors #74B137 #DDF15B #FFFFF5>>
     <<sizing 100% 18px>>
     <<animation 0.5s linear>>
+    <<label '$energy' 'black' right>>
 <</newmeter>>
 <<newmeter 'approval' 0.5>>
     <<colors #74B137 #DDF15B #FFFFF5>>
     <<sizing 100% 18px>>
     <<animation 0.5s linear>>
+    <<label '$approval' 'black' right>>
 <</newmeter>>

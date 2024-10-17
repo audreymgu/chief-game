@@ -99,12 +99,18 @@ progress::-webkit-progress-value {
 
 .chapel-meter {
   border: 2px solid #808D6B;
+  overflow: visible !important;
 }
 
 .meter-bottom {
   height: 90%;
   mask-image: repeating-linear-gradient(to right, black 0%, black 10%, transparent 10%, transparent 12.5%);
   mask-size: 90px;
+}
+
+.meter-label {
+  margin-top: -18px !important;
+  font-size: 10px !important;
 }
 
 .passage {
@@ -125,6 +131,7 @@ h1 {
   position: fixed;
   top: 64px;
   left: 14px;
+  filter: drop-shadow(8px 8px 0px rgba(0, 0, 0, 0.25));
 }
 .abs-wrapper--login {
   top: 50%;
@@ -336,10 +343,20 @@ h1 {
 .scenario--alert {
   align-items: center;
   justify-content: center;
+  border-width: 0px;
 }
 @media (min-width: 650px) {
   .scenario--alert {
-    margin: 24px 0 24px 0;
+    margin: 4px 0 4px 0;
+  }
+}
+.scenario--inactive {
+  opacity: 50%;
+  display: none;
+}
+@media (min-width: 650px) {
+  .scenario--inactive {
+    display: flex;
   }
 }
 @media (min-width: 650px) {
@@ -357,7 +374,7 @@ h1 {
   padding: 0;
   margin-bottom: 0.75rem;
   font-family: start-2p;
-  font-size: 24px;
+  font-size: 22px;
   text-transform: uppercase;
 }
 @media (min-width: 650px) {
@@ -367,8 +384,10 @@ h1 {
 }
 .scenario__text {
   flex-grow: 1;
-  font-size: 16px;
-  padding-left: 8px;
+  font-size: 14px;
+  padding-left: 12px;
+  padding-right: 12px;
+  line-height: 120%;
 }
 @media (min-width: 650px) {
   .scenario__text {
@@ -417,6 +436,20 @@ h1 {
 @media (min-width: 650px) {
   .scenario__icon {
     margin: 12px 20px 12px 12px;
+  }
+}
+
+.alert {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 8px;
+  border: 1px solid black;
+  background-color: #F8FFCF;
+}
+@media (min-width: 650px) {
+  .alert {
+    margin: 0 8px 8px 8px;
   }
 }
 
@@ -531,6 +564,9 @@ h1 {
 .btn-area--ending {
   padding: 0 8px 8px 8px;
 }
+.btn-area--alert {
+  border-width: 0px;
+}
 
 .titlebar {
   color: white;
@@ -581,8 +617,8 @@ h1 {
 }
 @media (min-width: 650px) {
   .button a {
-    height: 18px;
-    line-height: 22px;
+    height: 26px;
+    line-height: 28px;
     margin-top: 4px;
     font-size: 14px;
   }
@@ -663,7 +699,7 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 }
 @media (min-width: 650px) {
   .class-selector {
@@ -806,7 +842,7 @@ h1 {
   width: 100%;
   text-align: center;
   font-family: start-2p;
-  font-size: 16px;
+  font-size: 14px;
   text-transform: uppercase;
 }
 .login-window__info {

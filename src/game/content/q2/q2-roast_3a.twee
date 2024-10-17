@@ -1,14 +1,28 @@
 /* title + metadata */
-:: Jaded Gen-Z {"position":"600,800","size":"100,100"}
+:: Kinda snarky {"position":"600,800","size":"100,100"}
 /* passage content */
-<<audio "office" pause>>
-<div class="abs-wrapper">
-	<div class="rel-wrapper">
-        <<ResourceMeter>>
-		<div class="content">
-			<p>Your kinda funny, kinda snarky reply strikes fear into her jaded Gen Z heart. She deletes the vid.</p>
-		</div>
-		<<CalcResource "0" "0" "0">>
-		<<ResourceUpdate "0" "0" "0">>
+<<CalcResource "1" "0" "-1" "1">>
+<<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
+<<TitleBar $quarterLabel>>
+<div class="scenario scenario--inactive">
+	<img class="scenario__img" src="img/q2-roast.png"/>
+	<div class="scenario__text">
+		<h1 class="scenario__title">Employee Goes Viral</h1>
+		<p class="scenario__desc">One of your young reports just blew up on #WorkTok with a tirade against the firm.</p>
 	</div>
+</div>
+<div class="alert">
+    <div class="scenario scenario--alert">
+        <img class="scenario__icon" src="img/warn1.png"/>
+        <div class="scenario__text scenario__text--alert">
+            <p class="scenario__desc scenario__desc--alert">Your kinda funny, kinda snarky reply strikes fear into her jaded Gen Z heart. She deletes the vid.</p>
+        </div>
+    </div>
+    <div class="btn-area btn-area--alert">
+        <div class="button">
+            <<link "Next">>
+                <<EndingCheck>>
+            <</link>>
+        </div>
+    </div>
 </div>

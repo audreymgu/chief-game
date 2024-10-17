@@ -9,8 +9,8 @@
 		</div>
 	</div>
 	<div class="button">
-		<<link "Begin">>
-			<<goto "There's no time">>
+		<<link "Next">>
+			<<EndingCheck>>
 		<</link>>
 	</div>
 </div>

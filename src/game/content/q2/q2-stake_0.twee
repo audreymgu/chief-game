@@ -1,0 +1,29 @@
+:: Multiple Stakeholders [Q2] {"position":"600,675","size":"100,100"}
+/* pass messages */
+<<EventMessenger "showMenu" true>>
+/* passage content */
+/* <<audio "phone" volume 0.25 play>> */
+<div class="abs-wrapper">
+    <img class="logo" src="img/logo.png"/>
+	<div class="rel-wrapper">
+        <div class="stats">
+            <<PlayerAvatar>>
+            <<ResourceMeter>>
+        </div>
+        <div class="content" id="scenario-area">
+            <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
+            <<TitleBar $quarterLabel>>
+            <div class="scenario">
+                <img class="scenario__img" src="img/q2-stake.png"/>
+                <div class="scenario__text">
+                    <h1 class="scenario__title">Multiple Stakeholders</h1>
+                    <p class="scenario__desc">A last-minute emergency hits your inbox at 5pm—and your nephew’s recital starts at 5pm.</p>
+                </div>
+            </div>
+            <<ChoiceModule
+                "Stay late"
+                "Bring your laptop|You take|The glow"
+                "Two words: silent mode"
+            >>
+        </div>
+</div>

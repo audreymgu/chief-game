@@ -1,13 +1,27 @@
 /* title + metadata */
-:: IT can fix {"position":"600,800","size":"100,100"}
-/* passage content */
-<div class="abs-wrapper">
-	<div class="rel-wrapper">
-        <<ResourceMeter>>
-		<div class="content">
-			<p>Un-sending emails maybe have legal implications—and the IT guy isn’t ready to be the hero you need.</p>
-		</div>
-		<<CalcResource "-1" "1" "1">>
-		<<ResourceUpdate "-1" "1" "1">>
+:: DISREGARD! {"position":"600,800","size":"100,100"}
+<<CalcResource "-1" "0" "-1" "0">>
+<<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
+<<TitleBar $quarterLabel>>
+<div class="scenario scenario--inactive">
+	<img class="scenario__img" src="img/q3-reply.png"/>
+	<div class="scenario__text">
+		<h1 class="scenario__title">Reply All</h1>
+		<p class="scenario__desc">A junior associate forwards a long email chain to a client that contains some unflattering remarks—your remarks.</p>
 	</div>
+</div>
+<div class="alert">
+    <div class="scenario scenario--alert">
+        <img class="scenario__icon" src="img/warn1.png"/>
+        <div class="scenario__text scenario__text--alert">
+            <p class="scenario__desc scenario__desc--alert">Your fingers practically trip over each other to send a gratuitous follow-up. Great, now nobody will look into this.</p>
+        </div>
+    </div>
+    <div class="btn-area btn-area--alert">
+        <div class="button">
+            <<link "Next">>
+                <<EndingCheck>>
+            <</link>>
+        </div>
+    </div>
 </div>

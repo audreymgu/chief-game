@@ -3,7 +3,7 @@
   "ifid": "48081651-DB3C-4BED-B01B-71E01159D93A",
   "format": "SugarCube",
   "format-version": "2.37.3",
-  "start": "Ending 1",
+  "start": "Login",
   "tag-colors": {
     "Widget": "green",
     "StoryInit": "orange",

@@ -10,41 +10,43 @@
 <</if>>
 <<set $hardSkill to 0>>
 <<set $softSkill to 0>>
+<<set $energy to 5>>
+<<set $energyPercent to 50>>
+<<set $approval to 5>>
+<<set $approvalPercent to 50>>
 <<set $user to "ABC">>
 <<set $class to 0>>
 <<set $demo to true>>
+<<set $workStyle to 0>>
+<<set $orientation to 0>>
 <div class="abs-wrapper abs-wrapper--login">
 	<img class="logo" src="img/logo.png"/>
 	<div class="rel-wrapper">
 		<div class="content content--login">
 			<<TitleBar "Welcome">>
 			<div class="login-window">
-				<h1 class="login-window__title">Choose Your Department</h1>
+				<h1 class="login-window__title">Pick Your Department</h1>
 				<p class="login-window__info">Your skills may affect certain outcomes.</p>
 				<div class="class-selector">
-					<div class="class" id="pd">
-						<img class="class__portrait" src="img/icon1.png"/>
+					<div class="class" id="pd">	
 						<div class="class-info">
 							<p class="class-info__title class-info__title--product">PRODUCT</p>
 							<p class="class-info__desc">Software bends to your will. If only EQ was something you could download.</p>
 						</div>
 					</div>
 					<div class="class" id="sa">
-						<img class="class__portrait" src="img/icon2.png"/>
 						<div class="class-info">
 							<p class="class-info__title class-info__title--sales">SALES</p>
 							<p class="class-info__desc">You can charm, cajole, and occasionally even captivate. You can’t do spreadsheets.</p>
 						</div>
 					</div>
 					<div class="class" id="lg">
-						<img class="class__portrait" src="img/icon3.png"/>
 						<div class="class-info">
 							<p class="class-info__title class-info__title--legal">LEGAL</p>
 							<p class="class-info__desc">You practically invented due diligence. You cover your own ass with aplomb.</p>
 						</div>
 					</div>
 					<div class="class" id="op">
-						<img class="class__portrait" src="img/icon4.png"/>
 						<div class="class-info">
 							<p class="class-info__title class-info__title--ops">OPERATIONS</p>
 							<p class="class-info__desc">You know when to bcc and where the secret bathroom is. Surely that means something.</p>
@@ -52,11 +54,11 @@
 					</div>
 				</div>
 				<div class="initials-field">
-					<p class="initials-field__label">YOUR INITIALS:</p>
-					<input id="textbox-user" name="textbox-user" type="text" inputmode="text" placeholder="ABC" maxlength="3" tabindex="0" class="macro-textbox">
+					<p class="initials-field__label">ENTER PLAYER NAME:</p>
+					<input id="textbox-user" name="textbox-user" type="text" inputmode="text" placeholder="JANET" maxlength="8" tabindex="0" class="macro-textbox">
 				</div>
 				<div class="button button--disabled">
-					<<link "Login" "Email">>
+					<<link "Begin" "Email">>
 						<<script>>
 							var userField = document.getElementById("textbox-user");
 							var inputValue = userField.value.trim();

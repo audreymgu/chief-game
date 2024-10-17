@@ -1,13 +1,28 @@
 /* title + metadata */
-:: Deflect Blame {"position":"600,800","size":"100,100"}
+:: Leggings {"position":"600,800","size":"100,100"}
 /* passage content */
-<div class="abs-wrapper">
-	<div class="rel-wrapper">
-        <<ResourceMeter>>
-		<div class="content">
-			<p>What else are inane, meandering memos for if not to deflect all personal blame? </p>
-		</div>
-		<<CalcResource "1" "-2" "0">>
-		<<ResourceUpdate "1" "-2" "0">>
+<<CalcResource "-1" "0" "1" "0">>
+<<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
+<<TitleBar $quarterLabel>>
+<div class="scenario scenario--inactive">
+	<img class="scenario__img" src="img/q1-wfh.png"/>
+	<div class="scenario__text">
+		<h1 class="scenario__title">RTOh No</h1>
+		<p class="scenario__desc">The exec. committee is pushing for 5 days in-office. So much laundry won’t get done.</p>
 	</div>
+</div>
+<div class="alert">
+    <div class="scenario scenario--alert">
+        <img class="scenario__icon" src="img/warn1.png"/>
+        <div class="scenario__text scenario__text--alert">
+            <p class="scenario__desc scenario__desc--alert">Sure, you’ll miss working in your leggings, but if leadership doesn’t model this, who will?</p>
+        </div>
+    </div>
+    <div class="btn-area btn-area--alert">
+        <div class="button">
+            <<link "Next">>
+                <<EndingCheck>>
+            <</link>>
+        </div>
+    </div>
 </div>

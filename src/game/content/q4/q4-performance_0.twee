@@ -1,17 +1,28 @@
-:: Performance Review [Q4] {"position":"600,675","size":"100,100"}
+:: Performance Reviews [Q4] {"position":"600,675","size":"100,100"}
+/* pass messages */
+<<EventMessenger "showMenu" true>>
 /* passage content */
-<<audio "phone" volume 0.25 play>>
+/* <<audio "phone" volume 0.25 play>> */
 <div class="abs-wrapper">
+    <img class="logo" src="img/logo.png"/>
 	<div class="rel-wrapper">
-        <<ResourceMeter>>
-        <div class="content">
-            <h1>Performance Review</h1>
-            <p>You made it to the end of the year—now it’s time to make a case for that promotion.</p>
+        <div class="stats">
+            <<PlayerAvatar>>
+            <<ResourceMeter>>
         </div>
-        <<ChoiceModule
-            "Prepare a PowerPoint|Persuasive slides|Cluttered slides"
-            "Take a conversational approach"
-            "Threaten to walk|Big gamble|I'm sorry you feel that way"
-        >>
-    </div>
+        <div class="content" id="scenario-area">
+            <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
+            <<TitleBar $quarterLabel>>
+            <div class="scenario">
+                <img class="scenario__img" src="img/q4-performance.png"/>
+                <div class="scenario__text">
+                    <h1 class="scenario__title">Performance Reviews</h1>
+                    <p class="scenario__desc">Time to deliver feedback without bruising any delicate egos.</p>
+                </div>
+            </div>
+            <<ChoiceModule
+                "h|Be objective|Command facts|No feelings"
+                "s|Be diplomatic|Artfully constructed|Gentle parenting"
+            >>
+        </div>
 </div>

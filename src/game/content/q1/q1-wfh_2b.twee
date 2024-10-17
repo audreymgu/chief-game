@@ -1,13 +1,28 @@
 /* title + metadata */
-:: Lost Status {"position":"600,800","size":"100,100"}
+:: Agitator {"position":"600,800","size":"100,100"}
 /* passage content */
-<div class="abs-wrapper">
-	<div class="rel-wrapper">
-        <<ResourceMeter>>
-		<div class="content">
-			<p>You somehow come off as both callous and clueless. Tough look.</p>
-		</div>
-		<<CalcResource "-2" "0" "0">>
-		<<ResourceUpdate "-2" "0" "0">>
+<<CalcResource "-1" "-2" "-1" "-1">>
+<<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
+<<TitleBar $quarterLabel>>
+<div class="scenario scenario--inactive">
+	<img class="scenario__img" src="img/q1-wfh.png"/>
+	<div class="scenario__text">
+		<h1 class="scenario__title">RTOh No</h1>
+		<p class="scenario__desc">The exec. committee is pushing for 5 days in-office. So much laundry won’t get done.</p>
 	</div>
+</div>
+<div class="alert">
+    <div class="scenario scenario--alert">
+        <img class="scenario__icon" src="img/warn1.png"/>
+        <div class="scenario__text scenario__text--alert">
+            <p class="scenario__desc scenario__desc--alert">The exec. committee holds firm and brands you an agitator (you assume).</p>
+        </div>
+    </div>
+    <div class="btn-area btn-area--alert">
+        <div class="button">
+            <<link "Next">>
+                <<EndingCheck>>
+            <</link>>
+        </div>
+    </div>
 </div>

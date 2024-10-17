@@ -1,13 +1,27 @@
 /* title + metadata */
-:: Persuasive slides {"position":"600,800","size":"100,100"}
-/* passage content */
-<div class="abs-wrapper">
-	<div class="rel-wrapper">
-        <<ResourceMeter>>
-		<div class="content">
-			<p>Your cogent and persuasive slides build to an almost emotional climax. Did your boss just wipe away a tear?</p>
-		</div>
-		<<CalcResource "0" "1" "2">>
-		<<ResourceUpdate "0" "1" "2">>
+:: Command facts {"position":"600,800","size":"100,100"}
+<<CalcResource "0" "1" "1" "0">>
+<<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
+<<TitleBar $quarterLabel>>
+<div class="scenario scenario--inactive">
+	<img class="scenario__img" src="img/q4-performance.png"/>
+	<div class="scenario__text">
+		<h1 class="scenario__title">Performance Reviews</h1>
+		<p class="scenario__desc">Time to deliver feedback without bruising any delicate egos.</p>
 	</div>
+</div>
+<div class="alert">
+    <div class="scenario scenario--alert">
+        <img class="scenario__icon" src="img/warn1.png"/>
+        <div class="scenario__text scenario__text--alert">
+            <p class="scenario__desc scenario__desc--alert">Your command of the facts makes you sound neutral and measured. And sort of British.</p>
+        </div>
+    </div>
+    <div class="btn-area btn-area--alert">
+        <div class="button">
+            <<link "Next">>
+                <<EndingCheck>>
+            <</link>>
+        </div>
+    </div>
 </div>

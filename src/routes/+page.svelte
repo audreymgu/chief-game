@@ -1,6 +1,7 @@
 <script>
     import GameArea from '$lib/GameArea.svelte';
     import MenuBar from '$lib/MenuBar.svelte';
+    import About from '$lib/About.svelte';
     import '../app.css';
     import { onMount } from 'svelte';
 
@@ -45,6 +46,7 @@
         console.log("Restart request.");
     }
 </script>
+<!-- <About/> -->
 {#if menuVisible}
     <MenuBar menuEnding={menuEnding} on:restart={handleRestart} on:quit={handleQuit}/>
 {/if}

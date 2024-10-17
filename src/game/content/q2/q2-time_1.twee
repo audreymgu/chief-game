@@ -1,0 +1,27 @@
+/* title + metadata */
+:: Sleep when you're dead {"position":"600,800","size":"100,100"}
+<<CalcResource "-2" "1" "1" "-1">>
+<<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
+<<TitleBar $quarterLabel>>
+<div class="scenario scenario--inactive">
+    <img class="scenario__img" src="img/q2-time.png"/>
+    <div class="scenario__text">
+        <h1 class="scenario__title">Five Alarm Fire</h1>
+        <p class="scenario__desc">You’ve been given a high-stakes assignment with an impossible deadline.</p>
+    </div>
+</div>
+<div class="alert">
+    <div class="scenario scenario--alert">
+        <img class="scenario__icon" src="img/warn1.png"/>
+        <div class="scenario__text scenario__text--alert">
+            <p class="scenario__desc scenario__desc--alert">Late nights and white knuckles make it happen. You celebrate with another can of Celsius.</p>
+        </div>
+    </div>
+    <div class="btn-area btn-area--alert">
+        <div class="button">
+            <<link "Next">>
+                <<EndingCheck>>
+            <</link>>
+        </div>
+    </div>
+</div>

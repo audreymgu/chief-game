@@ -1,0 +1,29 @@
+:: Planning Committee [Q3] {"position":"600,675","size":"100,100"}
+/* pass messages */
+<<EventMessenger "showMenu" true>>
+/* passage content */
+/* <<audio "phone" volume 0.25 play>> */
+<div class="abs-wrapper">
+    <img class="logo" src="img/logo.png"/>
+	<div class="rel-wrapper">
+        <div class="stats">
+            <<PlayerAvatar>>
+            <<ResourceMeter>>
+        </div>
+        <div class="content" id="scenario-area">
+            <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
+            <<TitleBar $quarterLabel>>
+            <div class="scenario">
+                <img class="scenario__img" src="img/q3-planning.png"/>
+                <div class="scenario__text">
+                    <h1 class="scenario__title">Planning Committee</h1>
+                    <p class="scenario__desc">You’ve been tasked with hosting a senior hires event, because “you’re so good at that kind of thing.”</p>
+                </div>
+            </div>
+            <<ChoiceModule
+                "At the office"
+                "At your home"
+                "Cirque du Soleil"
+            >>
+        </div>
+</div>

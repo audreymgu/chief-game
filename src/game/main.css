@@ -524,6 +524,7 @@ h1 {
   overflow-y: auto;
   font-size: 16px;
   padding-left: 8px;
+  scrollbar-color: gray rgba(0, 0, 0, 0);
 }
 @media (min-width: 650px) {
   .ending__text {

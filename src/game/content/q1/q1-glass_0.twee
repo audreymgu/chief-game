@@ -14,7 +14,7 @@
             <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
             <<TitleBar $quarterLabel>>
             <div class="scenario">
-                <img class="scenario__img" src="img/placeholder.png"/>
+                <img class="scenario__img" src="img/q1-glass.png"/>
                 <div class="scenario__text">
                     <h1 class="scenario__title">Glass Cliff</h1>
                     <p class="scenario__desc">You’re offered a highly visible role leading a struggling division with minimal support.</p>

@@ -9,7 +9,7 @@
         <div class="content content--ending">
             <<TitleBar "🗑️🗑️ YOU GOT CANNED 🗑️🗑️">>
             <div class="ending">
-                <img class="ending__img" src="img/placeholder.png"/>
+                <img class="ending__img" src="img/e-canned.png"/>
                 <div class="ending__text">
                     <h1 class="ending__title">You Got Canned</h1>
                     <p class="ending__desc">Officially, your position was made redundant in a department restructuring designed to right-size operations. Unofficially, in the words of Kenny Powers: Yer fuckin’ out!</p>

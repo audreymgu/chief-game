@@ -9,7 +9,7 @@
         <div class="content content--ending">
             <<TitleBar "🦎🦎 YOU QUIT 🦎🦎">>
             <div class="ending">
-                <img class="ending__img" src="img/placeholder.png"/>
+                <img class="ending__img" src="img/e-quit.png"/>
                 <div class="ending__text">
                     <h1 class="ending__title">You Quit</h1>
                     <p class="ending__desc">Spend your best years saying shit like “circle back” while drinking a watery K-Cup in some anonymous conference room? No thanks. Time to abscond to Costa Rica and become an iguana tamer.</p>

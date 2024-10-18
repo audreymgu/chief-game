@@ -139,11 +139,12 @@
         margin-top: 8px;
         line-height: 110%;
         padding: 0;
-        margin-bottom: 0.75rem;
+        margin-bottom: 0.25rem;
         font-family: start-2p;
         font-size: 22px;
         @include breakpoint(desktop) {
             font-size: 32px;
+            margin-bottom: 0.75rem;
         }
         text-transform: uppercase;
     }

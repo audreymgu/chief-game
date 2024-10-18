@@ -1,0 +1,28 @@
+:: Canned {"position":"1175,650","size":"100,100"}
+<<EventMessenger "showMenu" true true>>
+/* passage content */
+<<set $endingImage to "/img/ending1.png">>
+<<set $endingLabel to "The Corporate Trail - You Chose Violence">>
+<div class="abs-wrapper">
+    <img class="logo" src="img/logo.png"/>
+	<div class="rel-wrapper">
+        <div class="content content--ending">
+            <<TitleBar "🗑️🗑️ YOU GOT CANNED 🗑️🗑️">>
+            <div class="ending">
+                <img class="ending__img" src="img/placeholder.png"/>
+                <div class="ending__text">
+                    <h1 class="ending__title">You Got Canned</h1>
+                    <p class="ending__desc">Officially, your position was made redundant in a department restructuring designed to right-size operations. Unofficially, in the words of Kenny Powers: Yer fuckin’ out!</p>
+                </div>
+            </div>
+        </div>
+        <div class="btn-area">
+            <div class="button">
+                <<link "Play Again?">>
+                    <<script>>
+                        Engine.restart();
+                    <</script>>
+                <</link>>
+            </div>
+        </div>
+</div>

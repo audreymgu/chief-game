@@ -7,7 +7,7 @@
         </div>
         <div class="resource-meter__unit">
             <div class="resource-meter__label">
-                <p class="resource-meter__name">Self-Care</p>
+                <p class="resource-meter__name">Wellbeing</p>
             </div>
             <<showmeter 'energy' '_energy / _maxEnergy' />>
         </div>

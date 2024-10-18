@@ -1,12 +1,12 @@
 :: Login {"position":"500,300","size":"100,100"}
 /* Pass Messages */
-<<EventMessenger "loginFlag" false>>
+<<EventMessenger "loginFlag" true false>>
 /* Variable Initialization */
 <<if $time == undefined>>
 	<<set $time to 0>>
 <</if>>
 <<if $quarter == undefined>>
-	<<set $quarter to 1>>
+	<<set $quarter to 0>>
 <</if>>
 <<set $hardSkill to 0>>
 <<set $softSkill to 0>>
@@ -19,6 +19,7 @@
 <<set $demo to true>>
 <<set $workStyle to 0>>
 <<set $orientation to 0>>
+<<set $quarter to 1>>
 <div class="abs-wrapper abs-wrapper--login">
 	<img class="logo" src="img/logo.png"/>
 	<div class="rel-wrapper">
@@ -26,7 +27,7 @@
 			<<TitleBar "Welcome">>
 			<div class="login-window">
 				<h1 class="login-window__title">Pick Your Department</h1>
-				<p class="login-window__info">Your skills may affect certain outcomes.</p>
+				/* <p class="login-window__info">Your skills may affect certain outcomes.</p> */
 				<div class="class-selector">
 					<div class="class" id="pd">	
 						<div class="class-info">
@@ -57,13 +58,14 @@
 					<p class="initials-field__label">ENTER PLAYER NAME:</p>
 					<input id="textbox-user" name="textbox-user" type="text" inputmode="text" placeholder="JANET" maxlength="8" tabindex="0" class="macro-textbox">
 				</div>
-				<div class="button button--disabled">
-					<<link "Begin" "Email">>
+				<div class="button  button--disabled">
+					<<link "Next">>
 						<<script>>
 							var userField = document.getElementById("textbox-user");
 							var inputValue = userField.value.trim();
 							State.variables.user = inputValue;
 						<</script>>
+						<<GoRandom "Q1">>
 					<</link>>
 				</div>
 			</div>

@@ -1,4 +1,6 @@
 :: Glass Cliff [Q1] {"position":"600,675","size":"100,100"}
+/* pass messages */
+<<EventMessenger "showMenu" true>>
 /* passage content */
 /* <<audio "phone" volume 0.25 play>> */
 <div class="abs-wrapper">

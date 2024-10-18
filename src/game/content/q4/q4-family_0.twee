@@ -17,7 +17,7 @@
                 <img class="scenario__img" src="img/q4-family.png"/>
                 <div class="scenario__text">
                     <h1 class="scenario__title">Family Planning</h1>
-                    <p class="scenario__desc">At the EOY forecasting meeting, the COO casually asks if you'll be “on leave” in the next 18 months. While staring directly at your uterus.</p>
+                    <p class="scenario__desc">At the EOY forecast, the COO casually asks if you'll be “on leave” soon. While staring directly at your uterus.</p>
                 </div>
             </div>
             <<ChoiceModule

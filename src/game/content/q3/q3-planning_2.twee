@@ -14,7 +14,7 @@
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">You endear yourself to the next generation of leaders. One of whom does some unmentionable stuff to your powder room.</p>
+            <p class="scenario__desc scenario__desc--alert">You endear yourself to the next generation—some of whom do unmentionable stuff to your powder room.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

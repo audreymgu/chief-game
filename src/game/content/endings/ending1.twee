@@ -11,7 +11,7 @@
             <div class="ending">
                 <img class="ending__img" src="img/ending1.png"/>
                 <div class="ending__text">
-                    <h1 class="ending__title">Let the Haters Know You Chose Violence</h1>
+                    <h1 class="ending__title">$user,You Chose Violence</h1>
                     <p class="ending__desc">For you to win, someone else has to lose. Call it a competitive spirit. You either played D1 athletics or too much Monopoly.</p>
                 </div>
             </div>

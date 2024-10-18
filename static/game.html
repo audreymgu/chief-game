@@ -114,7 +114,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
   src: url("fonts/start-2p.otf") format("opentype");
 }
 body {
-  background-color: #213C06;
+  background-color: #2F530B;
   image-rendering: crisp-edges;
 }
 
@@ -204,7 +204,7 @@ progress::-webkit-progress-value {
 }
 
 .chapel-meter {
-  border: 2px solid #808D6B;
+  border: 1px solid #808D6B;
   overflow: visible !important;
 }
 
@@ -254,7 +254,7 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     min-width: 600px;
-    max-width: 720px;
+    max-width: 790px;
     max-height: 670px;
   }
 }
@@ -271,6 +271,8 @@ h1 {
   .rel-wrapper {
     padding: 8px;
     gap: 8px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
   }
 }
 .rel-wrapper--handbook {
@@ -280,6 +282,7 @@ h1 {
 .content {
   flex-grow: 1;
   display: flex;
+  overflow: scroll;
   flex-direction: column;
   justify-items: flex-start;
   background-color: #FFFFF5;
@@ -292,8 +295,7 @@ h1 {
 }
 @media (min-width: 650px) {
   .content {
-    padding: unset;
-    border-width: unset;
+    padding: 8px;
     border: 1px solid black;
   }
 }
@@ -321,6 +323,9 @@ h1 {
 @media (min-width: 650px) {
   .stats {
     border: 1px solid black;
+    margin-bottom: 12px;
+    padding: 8px;
+    background-color: #DFDFD0;
   }
 }
 .stats--alert {
@@ -331,8 +336,8 @@ h1 {
 .logo {
   display: none;
   position: absolute;
-  top: -3rem;
-  width: 100%;
+  top: -2.5rem;
+  width: 97%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -350,9 +355,16 @@ h1 {
   align-items: center;
   display: flex;
   flex-direction: row;
-  gap: 12px;
+  gap: 16px;
   flex-grow: 1;
   font-family: start-2p;
+  background-color: #FFFFF5;
+}
+@media (min-width: 650px) {
+  .resource-meter {
+    border: 1px solid black;
+    border-width: 1px 1px 1px 0px;
+  }
 }
 .resource-meter__unit {
   flex: 1;
@@ -377,7 +389,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-content: center;
-    margin-right: 1.5rem;
+    margin-right: 1.25rem;
   }
 }
 .user__label {
@@ -416,8 +428,7 @@ h1 {
 }
 @media (min-width: 650px) {
   .action-box {
-    border: none;
-    width: calc(100% - 16px);
+    width: calc(100% - 18px);
   }
 }
 
@@ -425,6 +436,13 @@ h1 {
   display: flex;
   font-size: 12px;
   align-items: flex-start;
+}
+@media (min-width: 650px) {
+  .avatar {
+    border: 1px solid black;
+    border-width: 1px 0px 1px 1px;
+    background-color: #FFFFF5;
+  }
 }
 .avatar__image {
   object-fit: contain;
@@ -446,16 +464,6 @@ h1 {
   border: 1px solid black;
   border-width: 0 1px 0 1px;
 }
-.scenario--alert {
-  align-items: center;
-  justify-content: center;
-  border-width: 0px;
-}
-@media (min-width: 650px) {
-  .scenario--alert {
-    margin: 4px 0 4px 0;
-  }
-}
 .scenario--inactive {
   opacity: 50%;
   display: none;
@@ -467,11 +475,21 @@ h1 {
 }
 @media (min-width: 650px) {
   .scenario {
-    border: unset;
-    border-width: unset;
+    border-width: 0px 1px 0 1px;
     flex-direction: row;
     max-height: 325px;
     padding: 8px;
+  }
+}
+.scenario--alert {
+  align-items: center;
+  justify-content: center;
+  border-width: 0px;
+  background-color: #F8FFCF;
+}
+@media (min-width: 650px) {
+  .scenario--alert {
+    border-width: 1px 1px 0 1px;
   }
 }
 .scenario__title {
@@ -498,7 +516,7 @@ h1 {
 }
 @media (min-width: 650px) {
   .scenario__text {
-    padding-left: unset;
+    padding-top: 12px;
     font-size: 18px;
   }
 }
@@ -512,6 +530,8 @@ h1 {
 @media (min-width: 650px) {
   .scenario__text--alert {
     text-align: left;
+    padding-top: 10px;
+    height: 94px;
   }
 }
 .scenario__desc {
@@ -532,7 +552,9 @@ h1 {
 @media (min-width: 650px) {
   .scenario__img {
     height: unset;
-    width: 275px;
+    width: 265px;
+    max-height: unset;
+    border: 1px solid black;
   }
 }
 .scenario__icon {
@@ -542,7 +564,7 @@ h1 {
 }
 @media (min-width: 650px) {
   .scenario__icon {
-    margin: 12px 20px 12px 12px;
+    margin: 6px 20px 12px 12px;
   }
 }
 
@@ -552,16 +574,19 @@ h1 {
   flex-direction: column;
   margin: 8px;
   border: 1px solid black;
-  background-color: #F8FFCF;
 }
 @media (min-width: 650px) {
   .alert {
-    margin: 0 8px 8px 8px;
+    margin: 0;
+    padding: 0px 8px 8px 8px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-width: 0px 1px 1px 1px;
   }
 }
 
 .ending {
   flex-grow: 1;
+  overflow-y: auto;
   display: flex;
   gap: 12px;
   color: #2A2C41;
@@ -580,11 +605,11 @@ h1 {
 }
 @media (min-width: 650px) {
   .ending {
-    border: unset;
-    border-width: unset;
+    border-width: 0 1px 0 1px;
     flex-direction: row;
     max-height: 325px;
     padding: 8px;
+    overflow: auto;
   }
 }
 .ending__title {
@@ -603,6 +628,7 @@ h1 {
 }
 .ending__text {
   flex-grow: 1;
+  overflow-y: auto;
   font-size: 16px;
   padding-left: 8px;
 }
@@ -669,10 +695,27 @@ h1 {
   }
 }
 .btn-area--ending {
-  padding: 0 8px 8px 8px;
+  border: 1px solid black;
+  border-width: 1px;
+  padding: 8px;
+  z-index: 2;
+}
+@media (min-width: 650px) {
+  .btn-area--ending {
+    border-width: 0 1px 1px 1px;
+    padding-top: 0;
+  }
 }
 .btn-area--alert {
+  background-color: #F8FFCF;
   border-width: 0px;
+}
+@media (min-width: 650px) {
+  .btn-area--alert {
+    padding-bottom: 10px;
+    border: 1px solid black;
+    border-width: 0 1px 1px 1px;
+  }
 }
 
 .titlebar {
@@ -685,11 +728,6 @@ h1 {
   padding: 3px;
   background-image: linear-gradient(to bottom, #2A2C41 0%, #2A2C41 100%), linear-gradient(to bottom, #F8F7F2 0%, #F8F7F2 100%);
   background-clip: content-box, padding-box;
-}
-@media (min-width: 650px) {
-  .titlebar {
-    border-width: 0 0 1px 0;
-  }
 }
 .titlebar__text {
   font-family: tickerbit;
@@ -758,16 +796,11 @@ h1 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  align-content: center;
-  padding-top: 8px;
   gap: 8px;
-  line-height: 0;
+  border-image-source: url("img/button-hover.png");
 }
-@-moz-document url-prefix() {
-  .button--sharing a {
-    padding-top: 4px;
-  }
+.button--sharing a:hover {
+  text-decoration: underline;
 }
 
 .menu-bar {
@@ -940,11 +973,6 @@ h1 {
   border: 1px solid black;
   border-width: 0px 1px 1px 1px;
 }
-@media (min-width: 650px) {
-  .login-window {
-    border: unset;
-  }
-}
 .login-window__title {
   width: 100%;
   text-align: center;
@@ -1030,7 +1058,8 @@ h1 {
 }
 @media (min-width: 650px) {
   .button-icon {
-    height: 100%;
+    height: 75%;
+    margin-top: 0px;
   }
   @-moz-document url-prefix() {
     .button-icon {
@@ -1050,7 +1079,7 @@ h1 {
   src: url("fonts/start-2p.otf") format("opentype");
 }
 body {
-  background-color: #213C06;
+  background-color: #2F530B;
   image-rendering: crisp-edges;
 }
 
@@ -1140,7 +1169,7 @@ progress::-webkit-progress-value {
 }
 
 .chapel-meter {
-  border: 2px solid #808D6B;
+  border: 1px solid #808D6B;
   overflow: visible !important;
 }
 
@@ -1190,7 +1219,7 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     min-width: 600px;
-    max-width: 720px;
+    max-width: 790px;
     max-height: 670px;
   }
 }
@@ -1207,6 +1236,8 @@ h1 {
   .rel-wrapper {
     padding: 8px;
     gap: 8px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
   }
 }
 .rel-wrapper--handbook {
@@ -1216,6 +1247,7 @@ h1 {
 .content {
   flex-grow: 1;
   display: flex;
+  overflow: scroll;
   flex-direction: column;
   justify-items: flex-start;
   background-color: #FFFFF5;
@@ -1228,8 +1260,7 @@ h1 {
 }
 @media (min-width: 650px) {
   .content {
-    padding: unset;
-    border-width: unset;
+    padding: 8px;
     border: 1px solid black;
   }
 }
@@ -1257,6 +1288,9 @@ h1 {
 @media (min-width: 650px) {
   .stats {
     border: 1px solid black;
+    margin-bottom: 12px;
+    padding: 8px;
+    background-color: #DFDFD0;
   }
 }
 .stats--alert {
@@ -1267,8 +1301,8 @@ h1 {
 .logo {
   display: none;
   position: absolute;
-  top: -3rem;
-  width: 100%;
+  top: -2.5rem;
+  width: 97%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -1286,9 +1320,16 @@ h1 {
   align-items: center;
   display: flex;
   flex-direction: row;
-  gap: 12px;
+  gap: 16px;
   flex-grow: 1;
   font-family: start-2p;
+  background-color: #FFFFF5;
+}
+@media (min-width: 650px) {
+  .resource-meter {
+    border: 1px solid black;
+    border-width: 1px 1px 1px 0px;
+  }
 }
 .resource-meter__unit {
   flex: 1;
@@ -1313,7 +1354,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-content: center;
-    margin-right: 1.5rem;
+    margin-right: 1.25rem;
   }
 }
 .user__label {
@@ -1352,8 +1393,7 @@ h1 {
 }
 @media (min-width: 650px) {
   .action-box {
-    border: none;
-    width: calc(100% - 16px);
+    width: calc(100% - 18px);
   }
 }
 
@@ -1361,6 +1401,13 @@ h1 {
   display: flex;
   font-size: 12px;
   align-items: flex-start;
+}
+@media (min-width: 650px) {
+  .avatar {
+    border: 1px solid black;
+    border-width: 1px 0px 1px 1px;
+    background-color: #FFFFF5;
+  }
 }
 .avatar__image {
   object-fit: contain;
@@ -1382,16 +1429,6 @@ h1 {
   border: 1px solid black;
   border-width: 0 1px 0 1px;
 }
-.scenario--alert {
-  align-items: center;
-  justify-content: center;
-  border-width: 0px;
-}
-@media (min-width: 650px) {
-  .scenario--alert {
-    margin: 4px 0 4px 0;
-  }
-}
 .scenario--inactive {
   opacity: 50%;
   display: none;
@@ -1403,11 +1440,21 @@ h1 {
 }
 @media (min-width: 650px) {
   .scenario {
-    border: unset;
-    border-width: unset;
+    border-width: 0px 1px 0 1px;
     flex-direction: row;
     max-height: 325px;
     padding: 8px;
+  }
+}
+.scenario--alert {
+  align-items: center;
+  justify-content: center;
+  border-width: 0px;
+  background-color: #F8FFCF;
+}
+@media (min-width: 650px) {
+  .scenario--alert {
+    border-width: 1px 1px 0 1px;
   }
 }
 .scenario__title {
@@ -1434,7 +1481,7 @@ h1 {
 }
 @media (min-width: 650px) {
   .scenario__text {
-    padding-left: unset;
+    padding-top: 12px;
     font-size: 18px;
   }
 }
@@ -1448,6 +1495,8 @@ h1 {
 @media (min-width: 650px) {
   .scenario__text--alert {
     text-align: left;
+    padding-top: 10px;
+    height: 94px;
   }
 }
 .scenario__desc {
@@ -1468,7 +1517,9 @@ h1 {
 @media (min-width: 650px) {
   .scenario__img {
     height: unset;
-    width: 275px;
+    width: 265px;
+    max-height: unset;
+    border: 1px solid black;
   }
 }
 .scenario__icon {
@@ -1478,7 +1529,7 @@ h1 {
 }
 @media (min-width: 650px) {
   .scenario__icon {
-    margin: 12px 20px 12px 12px;
+    margin: 6px 20px 12px 12px;
   }
 }
 
@@ -1488,16 +1539,19 @@ h1 {
   flex-direction: column;
   margin: 8px;
   border: 1px solid black;
-  background-color: #F8FFCF;
 }
 @media (min-width: 650px) {
   .alert {
-    margin: 0 8px 8px 8px;
+    margin: 0;
+    padding: 0px 8px 8px 8px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-width: 0px 1px 1px 1px;
   }
 }
 
 .ending {
   flex-grow: 1;
+  overflow-y: auto;
   display: flex;
   gap: 12px;
   color: #2A2C41;
@@ -1516,11 +1570,11 @@ h1 {
 }
 @media (min-width: 650px) {
   .ending {
-    border: unset;
-    border-width: unset;
+    border-width: 0 1px 0 1px;
     flex-direction: row;
     max-height: 325px;
     padding: 8px;
+    overflow: auto;
   }
 }
 .ending__title {
@@ -1539,6 +1593,7 @@ h1 {
 }
 .ending__text {
   flex-grow: 1;
+  overflow-y: auto;
   font-size: 16px;
   padding-left: 8px;
 }
@@ -1605,10 +1660,27 @@ h1 {
   }
 }
 .btn-area--ending {
-  padding: 0 8px 8px 8px;
+  border: 1px solid black;
+  border-width: 1px;
+  padding: 8px;
+  z-index: 2;
+}
+@media (min-width: 650px) {
+  .btn-area--ending {
+    border-width: 0 1px 1px 1px;
+    padding-top: 0;
+  }
 }
 .btn-area--alert {
+  background-color: #F8FFCF;
   border-width: 0px;
+}
+@media (min-width: 650px) {
+  .btn-area--alert {
+    padding-bottom: 10px;
+    border: 1px solid black;
+    border-width: 0 1px 1px 1px;
+  }
 }
 
 .titlebar {
@@ -1621,11 +1693,6 @@ h1 {
   padding: 3px;
   background-image: linear-gradient(to bottom, #2A2C41 0%, #2A2C41 100%), linear-gradient(to bottom, #F8F7F2 0%, #F8F7F2 100%);
   background-clip: content-box, padding-box;
-}
-@media (min-width: 650px) {
-  .titlebar {
-    border-width: 0 0 1px 0;
-  }
 }
 .titlebar__text {
   font-family: tickerbit;
@@ -1694,16 +1761,11 @@ h1 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  align-content: center;
-  padding-top: 8px;
   gap: 8px;
-  line-height: 0;
+  border-image-source: url("img/button-hover.png");
 }
-@-moz-document url-prefix() {
-  .button--sharing a {
-    padding-top: 4px;
-  }
+.button--sharing a:hover {
+  text-decoration: underline;
 }
 
 .menu-bar {
@@ -1876,11 +1938,6 @@ h1 {
   border: 1px solid black;
   border-width: 0px 1px 1px 1px;
 }
-@media (min-width: 650px) {
-  .login-window {
-    border: unset;
-  }
-}
 .login-window__title {
   width: 100%;
   text-align: center;
@@ -1966,7 +2023,8 @@ h1 {
 }
 @media (min-width: 650px) {
   .button-icon {
-    height: 100%;
+    height: 75%;
+    margin-top: 0px;
   }
   @-moz-document url-prefix() {
     .button-icon {
@@ -1999,7 +2057,7 @@ setup.getPassageNames = function(tag) {
 // meters.min.js, for SugarCube 2, by Chapel
 // v1.0.1, 2024-07-22, 336675ff2cabe5f729a5f30d86aa409cc8432726
 ;!function(){"use strict";var t=!0,e=!1,s=!1,i={full:"#2ECC40",empty:"#FF4136",back:"#DDDDDD",height:"12px",width:"180px",animate:400,easing:"swing",text:"#111111",label:"",align:"center"},n=["center","left","right"],r=["swing","linear"];function a(t,e){return t&&"string"==typeof t&&(t=t.toLowerCase().trim())?t:e||""}function o(t){return t<.5?2*t*t:(4-2*t)*t-1}function l(t,e){if(!(this instanceof l))return new l(t,e);var s=clone(i);this.settings=Object.assign(s,t),this.settings.align=a(this.settings.align),this.settings.easing=a(this.settings.easing),n.includes(this.settings.align)||(this.settings.align="center"),r.includes(this.settings.easing)||(this.settings.easing="swing"),e=Number(e),Number.isNaN(e)&&(e=1),e=Math.clamp(e,0,1),this.value=e;var h=$(document.createElement("div")).addClass("chapel-meter").attr({"data-val":e,"data-label":this.settings.label}).css({position:"relative","background-color":this.settings.back,height:this.settings.height,width:this.settings.width,overflow:"hidden"}),g=$(document.createElement("div")).addClass("meter-label").css({top:0,right:0,"font-size":this.settings.height,"font-weight":"bold","line-height":"100%",width:"100%",height:"100%","vertical-align":"middle","text-align":this.settings.align,color:this.settings.text,"z-index":1,position:"relative",bottom:"100%"}).wiki(this.settings.label).appendTo(h),u=$(document.createElement("div")).addClass("meter-top").css({"background-color":this.settings.full,opacity:o(this.value),width:"100%",height:"100%","z-index":0}),c=$(document.createElement("div")).addClass("meter-bottom").css({position:"absolute",top:0,left:0,"background-color":this.settings.empty,opacity:1,width:100*this.value+"%",height:"100%","z-index":0}).append(u).appendTo(h);this.$element=h,this.$bars={top:u,bottom:c},this.$label=g,g.css("font-size",parseInt(h.css("height"),10)<parseInt($(".passage").css("font-size"),10)?h.css("height"):$(".passage").css("font-size")),g.css("line-height",h.css("height"))}Object.assign(l,{_list:new Map,is:function(t){return t instanceof l},has:function(t){return l._list.has(t)&&l.is(l._list.get(t))},get:function(t){return l.has(t)?l._list.get(t):null},del:function(t){l.has(t)&&l._list.delete(t)},add:function(t,s,i){if(!l.has(t)||e){Object.assign(s,{id:t});var n=new l(s,i);return l._list.set(t,n),n}console.error('Meter "'+t+'" already exists.')},_emit:function(t,e){l.is(t)&&t.$element.trigger({type:":"+e,meter:t})}}),Object.assign(l.prototype,{constructor:l,_label:function(t){var e=this;function s(){e.$label.empty().wiki(e.settings.label),e.$label.css("font-size",parseInt(e.$element.css("height"),10)<parseInt(e.$element.parent().css("font-size"),10)?e.$element.css("height"):e.$element.parent().css("font-size")),e.$label.css("line-height",e.$element.css("height"))}return t?setTimeout(s,Engine.minDomActionDelay):s(),this},_width:function(){var t=this;return this.$bars.bottom.animate({width:100*this.value+"%"},this.settings.animate,this.settings.easing,(function(){l._emit(t,"meter-animation-complete")})),this},_color:function(){return this.$bars.top.animate({opacity:o(this.value)},this.settings.animate,this.settings.easing),this},animate:function(){return l._emit(this,"meter-animation-start"),this._color()._width()._label()},val:function(t){return void 0!==t&&(t=Number(t),Number.isNaN(t)&&(t=1),t=Math.clamp(t,0,1),this.value=t,this.animate()),this.value},options:function(t){return t&&"object"==typeof t&&Object.assign(this.settings,t),this.settings},unwrap:function(){return this.$element[0]},place:function(t,e){var s=$(document.createElement("span"));return t instanceof jQuery||(t=$(t)),t[0]||console.warn("meter#place() -> no valid target"),e&&"object"==typeof e&&(e.classes&&(Array.isArray(e.classes)||"string"==typeof e.classes)&&s.addClass(e.classes),e.attr&&"object"==typeof e.attr&&s.attr(e.attr)),t.append(s.append(this.$element)),this._label(!0),this},on:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.on(t,e),this):this},one:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.one(t,e),this):this},off:function(t){return t=t&&"string"==typeof t&&t.trim()?t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "):".userland",this.$element.off(t),this},click:function(t,e){return this.$element.ariaClick(t,e),this},clone:function(){return new l(this.settings,this.value)},toJSON:function(){return JSON.reviveWrapper("new setup.Meter("+JSON.stringify(this.settings)+", "+this.value+")")}}),setup.Meter=l,t&&(window.Meter=window.Meter||l),Macro.add("newmeter",{tags:["colors","sizing","animation","label"],handler:function(){if(State.length>0&&!s)return this.error("The `<<newmeter>>` macro must be called in your `StoryInit` special passage. Seriously. No excuses. --Love, Chapel");if(this.args.length<1)return this.error("The `<<newmeter>>` macro requires at least one argument: a meter name.");var t=this.args[0],i=null,n=null,r=null,a=null;if("string"!=typeof t)return this.error("Invalid meter name.");if(t=t.trim(),l.has(t)&&!e)return this.error('Cannot clobber the existing meter "'+t+'".');this.payload.length&&(i=this.payload.find((function(t){return"colors"===t.name})),n=this.payload.find((function(t){return"sizing"===t.name})),r=this.payload.find((function(t){return"animation"===t.name})),a=this.payload.find((function(t){return"label"===t.name})));var o={};if(i){if(!i.args.length)return this.error("No arguments passed to the `<<colors>>` tag.");switch(i.args.length){case 1:o.empty=i.args[0],o.full="transparent";break;case 2:o.full=i.args[0],o.empty=i.args[1];break;default:o.full=i.args[0],o.empty=i.args[1],o.back=i.args[2]}}if(n){if(!n.args.length)return this.error("No arguments passed to the `<<sizing>>` tag.");o.width=n.args[0],n.args[1]&&(o.height=n.args[1])}if(r){if(!r.args.length)return this.error("No arguments passed to the `<<animation>>` tag.");if("boolean"!=typeof r.args[0]||r.args[0]){if("string"!=typeof r.args[0])return this.error("The argument to the `<<animation>>` tag should be `true`, `false`, or a valid CSS time value.");o.animate=Util.fromCssTime(r.args[0])}else o.animate=0;r.args[1]&&["swing","linear"].includes(r.args[1])&&(o.easing=r.args[1])}if(a){var h=a.args[0];if(!h||"string"!=typeof h)return this.error("The labelText argument for the `<<label>>` tag is required.");o.label=h.trim(),a.args[1]&&"string"==typeof a.args[1]&&(o.text=a.args[1]),a.args[2]&&"string"==typeof a.args[2]&&(o.align=a.args[2])}l.add(t,o,this.args[1])}}),Macro.add("showmeter",{handler:function(){if(this.args.length<1)return this.error("This macro requires at least one argument: the meter's name.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');"number"==typeof this.args[1]&&e.val(this.args[1]),e.place(this.output,{classes:"macro-"+this.name,attr:{id:"meter-"+Util.slugify(t)}})}}),Macro.add("updatemeter",{handler:function(){if(this.args.length<2)return this.error("This macro requires two arguments: the meter's name and a value.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');e.val(this.args[1])}})}();
-// end meters.min.js</script><tw-tag name="widget" color="orange"></tw-tag><tw-tag name="Q2" color="green"></tw-tag><tw-tag name="EndE" color="orange"></tw-tag><tw-tag name="EndPromo" color="red"></tw-tag><tw-tag name="nobr" color="purple"></tw-tag><tw-tag name="Main" color="blue"></tw-tag><tw-tag name="EndFired" color="red"></tw-tag><tw-tag name="Widget" color="green"></tw-tag><tw-tag name="StoryInit" color="orange"></tw-tag><tw-tag name="Q1" color="green"></tw-tag><tw-tag name="Q3" color="green"></tw-tag><tw-tag name="Q4" color="green"></tw-tag><tw-tag name="EndUnhappy" color="red"></tw-tag><tw-tag name="EndStay" color="red"></tw-tag><tw-passagedata pid="1" name="Burnout" tags="" position="925,525" size="100,100">&lt;&lt;EventMessenger &quot;showMenu&quot; true true&gt;&gt;
+// end meters.min.js</script><tw-tag name="EndPromo" color="red"></tw-tag><tw-tag name="nobr" color="purple"></tw-tag><tw-tag name="widget" color="orange"></tw-tag><tw-tag name="Main" color="blue"></tw-tag><tw-tag name="EndE" color="orange"></tw-tag><tw-tag name="EndStay" color="red"></tw-tag><tw-tag name="Widget" color="green"></tw-tag><tw-tag name="Q2" color="green"></tw-tag><tw-tag name="Q4" color="green"></tw-tag><tw-tag name="StoryInit" color="orange"></tw-tag><tw-tag name="Q1" color="green"></tw-tag><tw-tag name="Q3" color="green"></tw-tag><tw-tag name="EndFired" color="red"></tw-tag><tw-tag name="EndUnhappy" color="red"></tw-tag><tw-passagedata pid="1" name="Burnout" tags="" position="925,525" size="100,100">&lt;&lt;EventMessenger &quot;showMenu&quot; true true&gt;&gt;
 /* passage content */
 &lt;&lt;set $endingImage to &quot;/img/ending1.png&quot;&gt;&gt;
 &lt;&lt;set $endingLabel to &quot;The Corporate Trail - You Chose Violence&quot;&gt;&gt;
@@ -2063,7 +2121,7 @@ setup.getPassageNames = function(tag) {
             &lt;div class=&quot;ending&quot;&gt;
                 &lt;img class=&quot;ending__img&quot; src=&quot;img/ending1.png&quot;/&gt;
                 &lt;div class=&quot;ending__text&quot;&gt;
-                    &lt;h1 class=&quot;ending__title&quot;&gt;Let the Haters Know You Chose Violence&lt;/h1&gt;
+                    &lt;h1 class=&quot;ending__title&quot;&gt;$user,You Chose Violence&lt;/h1&gt;
                     &lt;p class=&quot;ending__desc&quot;&gt;For you to win, someone else has to lose. Call it a competitive spirit. You either played D1 athletics or too much Monopoly.&lt;/p&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
@@ -2269,7 +2327,7 @@ setup.getPassageNames = function(tag) {
                 &quot;s|Volunteer your rival|Deteriorate|Turn around&quot;
             &gt;&gt;
         &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="Fuck it we ball" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-3&quot; &quot;2&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="Fuck it we ball" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-2&quot; &quot;1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -2695,7 +2753,7 @@ setup.getPassageNames = function(tag) {
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="Reprimand her privately" tags="" position="600,800" size="100,100">/* passage content */
-&lt;&lt;CalcResource &quot;0&quot; &quot;0&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
+&lt;&lt;CalcResource &quot;0&quot; &quot;1&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -3339,7 +3397,7 @@ setup.getPassageNames = function(tag) {
     &lt;div class=&quot;scenario scenario--alert&quot;&gt;
         &lt;img class=&quot;scenario__icon&quot; src=&quot;img/warn1.png&quot;/&gt;
         &lt;div class=&quot;scenario__text scenario__text--alert&quot;&gt;
-            &lt;p class=&quot;scenario__desc scenario__desc--alert&quot;&gt;You endear yourself to the next generation of leaders. One of whom does some unmentionable stuff to your powder room.&lt;/p&gt;
+            &lt;p class=&quot;scenario__desc scenario__desc--alert&quot;&gt;You endear yourself to the next generation—some of whom do unmentionable stuff to your powder room.&lt;/p&gt;
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;btn-area btn-area--alert&quot;&gt;
@@ -3586,7 +3644,7 @@ setup.getPassageNames = function(tag) {
                 &lt;img class=&quot;scenario__img&quot; src=&quot;img/q4-family.png&quot;/&gt;
                 &lt;div class=&quot;scenario__text&quot;&gt;
                     &lt;h1 class=&quot;scenario__title&quot;&gt;Family Planning&lt;/h1&gt;
-                    &lt;p class=&quot;scenario__desc&quot;&gt;At the EOY forecasting meeting, the COO casually asks if you&#39;ll be “on leave” in the next 18 months. While staring directly at your uterus.&lt;/p&gt;
+                    &lt;p class=&quot;scenario__desc&quot;&gt;At the EOY forecast, the COO casually asks if you&#39;ll be “on leave” soon. While staring directly at your uterus.&lt;/p&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;&lt;ChoiceModule
@@ -3602,7 +3660,7 @@ setup.getPassageNames = function(tag) {
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q4-family.png&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
         &lt;h1 class=&quot;scenario__title&quot;&gt;Family Planning&lt;/h1&gt;
-        &lt;p class=&quot;scenario__desc&quot;&gt;At the EOY forecasting meeting, the COO casually asks if you&#39;ll be “on leave” in the next 18 months. While staring directly at your uterus.&lt;/p&gt;
+            &lt;p class=&quot;scenario__desc&quot;&gt;At the EOY forecast, the COO casually asks if you&#39;ll be “on leave” soon. While staring directly at your uterus.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -3626,7 +3684,7 @@ setup.getPassageNames = function(tag) {
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q4-family.png&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
         &lt;h1 class=&quot;scenario__title&quot;&gt;Family Planning&lt;/h1&gt;
-        &lt;p class=&quot;scenario__desc&quot;&gt;At the EOY forecasting meeting, the COO casually asks if you&#39;ll be “on leave” in the next 18 months. While staring directly at your uterus.&lt;/p&gt;
+        &lt;p class=&quot;scenario__desc&quot;&gt;At the EOY forecast, the COO casually asks if you&#39;ll be “on leave” soon. While staring directly at your uterus.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -3650,7 +3708,7 @@ setup.getPassageNames = function(tag) {
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q4-family.png&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
         &lt;h1 class=&quot;scenario__title&quot;&gt;Family Planning&lt;/h1&gt;
-        &lt;p class=&quot;scenario__desc&quot;&gt;At the EOY forecasting meeting, the COO casually asks if you&#39;ll be “on leave” in the next 18 months. While staring directly at your uterus.&lt;/p&gt;
+        &lt;p class=&quot;scenario__desc&quot;&gt;At the EOY forecast, the COO casually asks if you&#39;ll be “on leave” soon. While staring directly at your uterus.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -4301,14 +4359,14 @@ setup.getPassageNames = function(tag) {
 &lt;&lt;set $maxEnergy to 10&gt;&gt;
 &lt;&lt;set $maxApproval to 10&gt;&gt;
 &lt;&lt;newmeter &#39;energy&#39; 0.5&gt;&gt;
-    &lt;&lt;colors #74B137 #DDF15B #FFFFF5&gt;&gt;
-    &lt;&lt;sizing 100% 18px&gt;&gt;
+    &lt;&lt;colors #74B137 #DDF15B #EEEEE0&gt;&gt;
+    &lt;&lt;sizing 100% 20px&gt;&gt;
     &lt;&lt;animation 0.5s linear&gt;&gt;
     &lt;&lt;label &#39;$energy&#39; &#39;black&#39; right&gt;&gt;
 &lt;&lt;/newmeter&gt;&gt;
 &lt;&lt;newmeter &#39;approval&#39; 0.5&gt;&gt;
-    &lt;&lt;colors #74B137 #DDF15B #FFFFF5&gt;&gt;
-    &lt;&lt;sizing 100% 18px&gt;&gt;
+    &lt;&lt;colors #74B137 #DDF15B #EEEEE0&gt;&gt;
+    &lt;&lt;sizing 100% 20px&gt;&gt;
     &lt;&lt;animation 0.5s linear&gt;&gt;
     &lt;&lt;label &#39;$approval&#39; &#39;black&#39; right&gt;&gt;
 &lt;&lt;/newmeter&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="CalcResource" tags="widget" position="800,100" size="100,100">&lt;&lt;widget &quot;CalcResource&quot;&gt;&gt;
@@ -4541,7 +4599,14 @@ setup.getPassageNames = function(tag) {
     &lt;/div&gt;&lt;&lt;/nobr&gt;&gt;
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="101" name="SharingModule" tags="widget" position="100,1350" size="100,100">&lt;&lt;widget &quot;SharingModule&quot;&gt;&gt;
     &lt;div class=&quot;btn-area btn-area--ending&quot;&gt;
-        &lt;div class=&quot;button button--sharing&quot; id=&quot;sharing&quot;&gt;&lt;a&gt;&lt;img class=&quot;button-icon&quot; src=&quot;/img/share2.png&quot;/&gt;&lt;span&gt;Share&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+        &lt;div class=&quot;button button--sharing&quot; id=&quot;sharing&quot;&gt;&lt;a&gt;Share&lt;/a&gt;&lt;/div&gt;
+        &lt;div class=&quot;button&quot;&gt;
+            &lt;&lt;link &quot;Play Again?&quot;&gt;&gt;
+                &lt;&lt;script&gt;&gt;
+                    Engine.restart();
+                &lt;&lt;/script&gt;&gt;
+            &lt;&lt;/link&gt;&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="102" name="TitleBar" tags="widget" position="225,1350" size="100,100">&lt;&lt;widget &quot;TitleBar&quot;&gt;&gt;
     &lt;div class=&quot;titlebar&quot;&gt;

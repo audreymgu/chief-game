@@ -4,11 +4,6 @@
     position: fixed;
     top: 64px;
     left: 14px;
-    &--login {
-        top: 50%;
-        height: min-content;
-        transform: translate(0, -50%);
-    }
     @include breakpoint(desktop) {
         width: unset;
         height: unset;
@@ -58,6 +53,7 @@
     background-image: linear-gradient(to bottom, #FFFFF5 0%, #FFFFF5 100%), linear-gradient(to bottom, #DFDFD0 0%, #DFDFD0 100%);
     background-clip: content-box, padding-box;
     @include breakpoint(desktop) {
+        overflow-y: unset;
         padding: 8px;
         border: 1px solid black;
     }

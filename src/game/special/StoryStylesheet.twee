@@ -133,11 +133,6 @@ h1 {
   left: 14px;
   filter: drop-shadow(8px 8px 0px rgba(0, 0, 0, 0.25));
 }
-.abs-wrapper--login {
-  top: 50%;
-  height: min-content;
-  transform: translate(0, -50%);
-}
 @media (min-width: 650px) {
   .abs-wrapper {
     width: unset;
@@ -189,6 +184,7 @@ h1 {
 }
 @media (min-width: 650px) {
   .content {
+    overflow-y: unset;
     padding: 8px;
     border: 1px solid black;
   }
@@ -438,8 +434,8 @@ h1 {
 }
 .scenario__img {
   width: 100%;
-  min-height: 150px;
-  max-height: 200px;
+  height: auto;
+  height: 220px;
   object-fit: cover;
   align-self: start;
 }

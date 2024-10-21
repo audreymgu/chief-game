@@ -1,0 +1,28 @@
+::PassageHeader
+
+<div id="about" class="about-window about-window--hidden">
+    <div class="titlebar titlebar--float">
+        <img src="img/grip.svg" class="titlebar__grip">
+        <p class="titlebar__text">WHO MADE THIS?</p>
+        <img src="img/grip.svg" class="titlebar__grip">
+    </div>
+    <div class="window-text">
+        <div class="window-text__scroll">
+            <h1 class="window-text__title">Meet Chief</h1>
+            <p class="window-text__copy">Navigating the highs, lows, and absurdities of corporate life at the executive level takes more than grit and hustle. Just ask a member of Chief—<mark>40% of us are in the C-Suite</mark>.</p>
+            <p class="window-text__copy">As <mark>the largest network of senior women executives</mark>, Chief can connect you to the right leaders and help you become a more impactful one yourself.</p>
+            <p class="window-text__copy">Visit <a href="https://chief.com">Chief.com</a> to learn more.</p>
+        </div>
+        <div id="close" class="button"><a>Close</a></div>
+    </div>
+</div>
+
+<<done>>
+    <<script>>
+        $(document).ready(function() {
+            $("#close").click(function(){
+                document.getElementById('about').classList.toggle('about-window--hidden');
+            });
+        });
+    <</script>>
+<</done>>

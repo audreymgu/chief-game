@@ -1,7 +1,7 @@
 :: SharingModule [widget]
 <<widget "SharingModule">>
     <div class="btn-area btn-area--ending">
-        <div class="button button--sharing" id="sharing"><a>Share</a></div>
+        <div class="button button--ending button--sharing" id="sharing"><a>Share</a></div>
         <div class="button">
             <<link "Play Again?">>
                 <<script>>

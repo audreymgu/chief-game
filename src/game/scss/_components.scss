@@ -231,7 +231,6 @@
     flex-grow: 1;
     overflow-y: auto;
     display: flex;
-    gap: 12px;
     color: #2A2C41;
     flex-direction: column;
     border: 1px solid black;
@@ -245,11 +244,11 @@
         }
     }
     @include breakpoint(desktop) {
-        border-width: 0 1px 0 1px;
+        border-width: 0 1px 1px 1px;
         flex-direction: row;
         max-height: 325px;
         padding: 8px;
-        overflow: auto;
+        overflow-y: auto;
     }
     &__title {
         margin-top: 8px;
@@ -268,9 +267,9 @@
         overflow-y: auto;
         font-size: 16px;
         padding-left: 8px;
+        padding-top: 8px;
         scrollbar-color: gray rgba(0,0,0,0); 
         @include breakpoint(desktop) {
-            padding-left: unset;
             font-size: 18px;   
         }
         &--alert {
@@ -297,9 +296,12 @@
         min-height: 150px;
         max-height: 500px;
         object-fit: cover;
+        border: 1px solid black;
+        border-width: 0 0 1px 0;
         @include breakpoint(desktop) {
             height: unset;
             width: 275px;
+            border-width: 1px;
         }
         align-self: start;
     }
@@ -323,12 +325,11 @@
         border: none;
     }
     &--ending {
-        border: 1px solid black;
-        border-width: 1px;
         padding: 8px;
+        background-color:#F8FFCF;
+        border: 1px solid black;
         @include breakpoint(desktop) {
             border-width: 0 1px 1px 1px;
-            padding-top: 0;
         }
         z-index: 2;
     }
@@ -363,9 +364,13 @@
     &__grip {
         padding: 4px 2px 4px 2px;
     }
+    &--float {
+        border-width: 0 0 1px 0;
+    }
 }
 
 .button {
+
     &:active {
         -webkit-transform: translateY(2px);
         transform: translateY(2px);
@@ -436,6 +441,17 @@
             &:hover {
                 text-decoration: underline;
             }    
+        }
+    }
+    &--ending {
+        & a {
+            margin-bottom: 8px;
+            margin-top: 2px;
+        }
+    }
+    &--top {
+        & a {
+            margin-top: 0px;
         }
     }
 }
@@ -688,5 +704,169 @@
         @-moz-document url-prefix() {
             margin-top: -4px;
         }
+    }
+}
+
+.icon-view {
+    z-index: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    width: calc(100vw - 128px);
+    justify-content: space-between;
+    margin: 56px 64px;
+    &--hidden {
+        display: none;
+    }
+}
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:hover {
+        .icon__label {
+            color: #dcf15b;
+            text-decoration: underline;
+        }
+    }
+    &:active {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px);
+    }
+    &__label {
+        color: white;
+        font-family: start-2p;
+        margin-top: 24px;
+    }
+    &__img {
+        height: 106px;
+        width: fit-content;
+    }
+}
+
+.scroll-bar {
+    position: absolute;
+    right: 0;
+    top: 32px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    &__middle {
+        flex-shrink: 2;
+        max-height: 100%;
+    }
+}
+.about-window {
+    width: calc(100% - 28px);
+    height: calc(100% - 80px);
+    position: fixed;
+    top: 64px;
+    left: 14px;
+    display: block;
+    z-index: 4;
+    background-color: #FFFFF5;
+    border: 1px solid black;
+    @include breakpoint(desktop) {
+        top: 80px;
+        left: 30px;
+        width: 650px;
+        height: unset;
+        filter: drop-shadow(8px 8px 0px rgba(0, 0, 0, 0.25));
+    }
+    &--hidden {
+        display: none;
+    }
+}
+
+.window-text {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+    overflow: auto;
+    height: calc(100% - 80px);
+    &__scroll {
+        overflow: auto;
+    }
+    &__title {
+        font-family: start-2p;
+        text-transform: uppercase;
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+    &__copy {
+        font-family: tickerbit;
+        max-width: 550px;
+        font-size: 14px;
+        line-height: 1.75;
+        margin-bottom: 12px;
+        @include breakpoint(desktop) {
+            line-height: 1.75;
+            margin-bottom: 24px;
+            font-size: 16px;
+        }
+        & mark {
+            background-color: #FDFFA2;
+        }
+        & a {
+            color: #85A506;
+        }
+    }
+
+    &::-webkit-scrollbar {
+        width: 26px;
+    }
+    
+    &::-webkit-scrollbar-button:vertical {
+        background-color: red;
+        border: 1px dashed blue;
+        height: 24px;
+    }
+    
+    /* Turn on single button up on top, and down on bottom */
+    &::-webkit-scrollbar-button:start:decrement,
+    &::-webkit-scrollbar-button:end:increment {
+        display: block;
+    }
+    
+    /* Turn off the down area up on top, and up area on bottom */
+    &::-webkit-scrollbar-button:vertical:start:increment,
+    &::-webkit-scrollbar-button:vertical:end:decrement {
+        display: none;
+    }
+    
+    /* Place The scroll down button at the bottom */
+    &::-webkit-scrollbar-button:vertical:increment {
+        background-color: #DFDFD0;
+        border: 1px solid black;
+        border-width: 1px 0 0 1px;
+        background-image: url(img/scroll-bottom.svg);
+        background-position: center;
+        background-size: 28px;
+        background-repeat: no-repeat;
+    }
+    
+    /* Place The scroll up button at the up */
+    &::-webkit-scrollbar-button:vertical:decrement {
+        background-color: #DFDFD0;
+        border: 1px solid black;
+        border-width: 0 0 1px 1px;
+        background-image: url(img/scroll-top.svg);
+        background-position: center;
+        background-size: 28px;
+        background-repeat: no-repeat;
+    }
+    
+    &::-webkit-scrollbar-track:vertical {
+        background-color: #DFDFD0;
+        border: 1px solid black;
+        border-width: 0 0 0 1px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #FDF7EE;
+        border: 1px solid black; /* Space around the thumb to ensure visibility */
     }
 }

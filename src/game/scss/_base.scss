@@ -3,8 +3,9 @@
 // }
 
 body {
-  background-color: #2F530B;
+  background-color: transparent;
   image-rendering: crisp-edges;
+  height: 100dvh;
 }
 
 input:focus::-webkit-input-placeholder{
@@ -24,7 +25,11 @@ input:focus:-moz-placeholder{
 // }
 
 #ui-bar {
-	display: none;
+	position: fixed;
+  bottom: 0;
+  height: 0;
+  width: 0;
+  z-index: 0;
 }
 
 #ui-bar-body {

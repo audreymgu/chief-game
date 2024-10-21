@@ -58,7 +58,7 @@
 					<p class="initials-field__label">ENTER PLAYER NAME:</p>
 					<input id="textbox-user" name="textbox-user" type="text" inputmode="text" placeholder="JANET" maxlength="8" tabindex="0" class="macro-textbox">
 				</div>
-				<div class="button  button--disabled">
+				<div id="login" class="button  button--disabled">
 					<<link "Next">>
 						<<script>>
 							var userField = document.getElementById("textbox-user");
@@ -74,13 +74,14 @@
 </div>
 <<script>>
     $(document).one(':passagedisplay', function () {
+		UIBar.hide();
         console.log("Login game logic running.");
 
         var divs = document.querySelectorAll('.class');
 		var userField = document.getElementById("textbox-user");
 		var inputValue = userField.value.trim();
 		var classCheck = false;
-		var btn = document.querySelector('.button');
+		var btn = document.querySelector('#login');
 
 		function loginCheck () {
 			if (classCheck && inputValue.length > 1) {

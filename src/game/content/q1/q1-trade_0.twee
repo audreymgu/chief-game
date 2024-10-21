@@ -1,8 +1,10 @@
 :: Trade Show [Q1] {"position":"600,675","size":"100,100"}
+<<script>>
+    UIBar.show();
+<</script>>
 /* pass messages */
 <<EventMessenger "showMenu" true>>
 /* passage content */
-/* <<audio "phone" volume 0.25 play>> */
 <<set $quarter to 1>>
 <div class="abs-wrapper">
     <img class="logo" src="img/logo.png"/>
@@ -28,3 +30,6 @@
             >>
         </div>
 </div>
+<<timed 0.1s>>
+    <<audio "slack" volume 0.25 play>>
+<</timed>>

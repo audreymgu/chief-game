@@ -18,7 +18,7 @@
         <a class="menu-bar__link">About</a>
     </div> -->
     <img class="menu-bar__logo" src="img/logo.png" />
-    <p class="menu-bar__heading">A corporate survival game by<img src="img/chief.svg"/></p>
+    <a href="https://chief.com" class="menu-bar__heading">A corporate survival game by<img src="img/chief.svg"/></a>
     <!-- {#if menuEnding}
         <a on:click={handleRestart} class="menu-bar__link menu-bar__link--highlight">Retry?</a>
     {:else}

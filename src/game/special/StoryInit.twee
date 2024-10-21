@@ -1,7 +1,9 @@
 :: StoryInit
 <<cacheaudio "office" "audio/office.mp3">>
 <<cacheaudio "boom" "audio/boom.mp3">>
-<<cacheaudio "phone" "audio/slack.mp3">>
+<<cacheaudio "slack" "audio/slack.mp3">>
+<<cacheaudio "tada" "audio/tada.mp3">>
+<<cacheaudio "click" "audio/click.mp3">>
 
 /* <<createaudiogroup ":bg">>
 <</createaudiogroup>>

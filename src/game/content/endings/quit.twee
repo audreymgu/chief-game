@@ -1,4 +1,7 @@
 :: QUIT [QUIT]
+<<script>>
+    UIBar.hide();
+<</script>>
 <<EventMessenger "showMenu" true true>>
 /* passage content */
 <<set $endingImage to "/img/ending1.png">>
@@ -11,18 +14,12 @@
             <div class="ending">
                 <img class="ending__img" src="img/e-quit.png"/>
                 <div class="ending__text">
-                    <h1 class="ending__title">You Quit</h1>
+                    <h1 class="ending__title">$user,You Quit</h1>
                     <p class="ending__desc">Spend your best years saying shit like “circle back” while drinking a watery K-Cup in some anonymous conference room? No thanks. Time to abscond to Costa Rica and become an iguana tamer.</p>
                 </div>
             </div>
+            <<SharingModule>>
         </div>
-        <div class="btn-area">
-            <div class="button">
-                <<link "Play Again?">>
-                    <<script>>
-                        Engine.restart();
-                    <</script>>
-                <</link>>
-            </div>
-        </div>
+    </div>
 </div>
+<<audio "tada" volume 0.25 play>>

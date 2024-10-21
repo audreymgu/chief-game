@@ -28,13 +28,15 @@
     }
     .about-window {
         z-index: 4;
-        position: fixed;
-        top: 80px;
-        left: 30px;
-        width: 650px;
-        background-color: #FFFFF5;
-        border: 1px solid black;
-        filter: drop-shadow(8px 8px 0px rgba(0, 0, 0, 0.25));
+        @include breakpoint(desktop) {
+            position: fixed;
+            top: 80px;
+            left: 30px;
+            width: 650px;
+            background-color: #FFFFF5;
+            border: 1px solid black;
+            filter: drop-shadow(8px 8px 0px rgba(0, 0, 0, 0.25));
+        }
         &__text {
             padding: 24px;
             overflow-y: scroll;

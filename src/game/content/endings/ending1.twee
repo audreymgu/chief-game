@@ -1,4 +1,7 @@
 :: Ending 1
+<<script>>
+    UIBar.hide();
+<</script>>
 <<EventMessenger "showMenu" true true>>
 /* passage content */
 <<set $endingImage to "/img/ending1.png">>
@@ -18,3 +21,4 @@
             <<SharingModule>>
         </div>
 </div>
+<<audio "tada" volume 0.25 play>>

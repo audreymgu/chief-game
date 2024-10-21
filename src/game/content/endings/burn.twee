@@ -1,4 +1,7 @@
 :: Burnout {"position":"925,525","size":"100,100"}
+<<script>>
+    UIBar.hide();
+<</script>>
 <<EventMessenger "showMenu" true true>>
 /* passage content */
 <<set $endingImage to "/img/ending1.png">>
@@ -15,14 +18,14 @@
                     <p class="ending__desc">You woke up one morning under the world’s heaviest duvet and decided to call in sick. Forever.</p>
                 </div>
             </div>
-        </div>
-        <div class="btn-area">
-            <div class="button">
-                <<link "Play Again?">>
-                    <<script>>
-                        Engine.restart();
-                    <</script>>
-                <</link>>
+            <div class="btn-area btn-area--ending">
+                <div class="button button--top">
+                    <<link "Play Again?">>
+                        <<script>>
+                            Engine.restart();
+                        <</script>>
+                    <</link>>
+                </div>
             </div>
         </div>
 </div>

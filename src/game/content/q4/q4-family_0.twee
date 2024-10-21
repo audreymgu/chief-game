@@ -2,7 +2,6 @@
 /* pass messages */
 <<EventMessenger "showMenu" true>>
 /* passage content */
-/* <<audio "phone" volume 0.25 play>> */
 <div class="abs-wrapper">
     <img class="logo" src="img/logo.png"/>
 	<div class="rel-wrapper">
@@ -27,3 +26,4 @@
             >>
         </div>
 </div>
+<<audio "slack" volume 0.25 play>>

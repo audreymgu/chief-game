@@ -2,6 +2,7 @@
     import GameArea from '$lib/GameArea.svelte';
     import MenuBar from '$lib/MenuBar.svelte';
     import About from '$lib/About.svelte';
+    // import Icons from '$lib/Icons.svelte';
     import '../app.css';
     import { onMount } from 'svelte';
 
@@ -51,3 +52,4 @@
 <MenuBar menuEnding={menuEnding} on:restart={handleRestart} on:quit={handleQuit}/>
 <!-- {/if} -->
 <GameArea bind:iframe={iframeEl}/>
+<!-- <Icons /> -->

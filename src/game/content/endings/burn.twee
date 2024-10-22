@@ -12,7 +12,7 @@
         <div class="content content--ending">
             <<TitleBar "🔥🔥 YOU BURNED OUT 🔥🔥">>
             <div class="ending">
-                <img class="ending__img" src="img/e-burn.png"/>
+                <img class="ending__img" src="img/e-burn.jpg"/>
                 <div class="ending__text">
                     <h1 class="ending__title">You Burned Out</h1>
                     <p class="ending__desc">You woke up one morning under the world’s heaviest duvet and decided to call in sick. Forever.</p>

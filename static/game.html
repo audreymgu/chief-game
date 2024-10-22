@@ -104,7 +104,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://48081651-DB3C-4BED-B01B-71E01159D93A// --><tw-storydata name="The Corporate Trail" startnode="85" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="48081651-DB3C-4BED-B01B-71E01159D93A" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "main.css" */
+	<!-- UUID://48081651-DB3C-4BED-B01B-71E01159D93A// --><tw-storydata name="The Corporate Trail" startnode="93" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="48081651-DB3C-4BED-B01B-71E01159D93A" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "main.css" */
 @font-face {
   font-family: "tickerbit";
   src: url("fonts/departure.woff2") format("woff2");
@@ -2403,7 +2403,7 @@ setup.getPassageNames = function(tag) {
 // meters.min.js, for SugarCube 2, by Chapel
 // v1.0.1, 2024-07-22, 336675ff2cabe5f729a5f30d86aa409cc8432726
 ;!function(){"use strict";var t=!0,e=!1,s=!1,i={full:"#2ECC40",empty:"#FF4136",back:"#DDDDDD",height:"12px",width:"180px",animate:400,easing:"swing",text:"#111111",label:"",align:"center"},n=["center","left","right"],r=["swing","linear"];function a(t,e){return t&&"string"==typeof t&&(t=t.toLowerCase().trim())?t:e||""}function o(t){return t<.5?2*t*t:(4-2*t)*t-1}function l(t,e){if(!(this instanceof l))return new l(t,e);var s=clone(i);this.settings=Object.assign(s,t),this.settings.align=a(this.settings.align),this.settings.easing=a(this.settings.easing),n.includes(this.settings.align)||(this.settings.align="center"),r.includes(this.settings.easing)||(this.settings.easing="swing"),e=Number(e),Number.isNaN(e)&&(e=1),e=Math.clamp(e,0,1),this.value=e;var h=$(document.createElement("div")).addClass("chapel-meter").attr({"data-val":e,"data-label":this.settings.label}).css({position:"relative","background-color":this.settings.back,height:this.settings.height,width:this.settings.width,overflow:"hidden"}),g=$(document.createElement("div")).addClass("meter-label").css({top:0,right:0,"font-size":this.settings.height,"font-weight":"bold","line-height":"100%",width:"100%",height:"100%","vertical-align":"middle","text-align":this.settings.align,color:this.settings.text,"z-index":1,position:"relative",bottom:"100%"}).wiki(this.settings.label).appendTo(h),u=$(document.createElement("div")).addClass("meter-top").css({"background-color":this.settings.full,opacity:o(this.value),width:"100%",height:"100%","z-index":0}),c=$(document.createElement("div")).addClass("meter-bottom").css({position:"absolute",top:0,left:0,"background-color":this.settings.empty,opacity:1,width:100*this.value+"%",height:"100%","z-index":0}).append(u).appendTo(h);this.$element=h,this.$bars={top:u,bottom:c},this.$label=g,g.css("font-size",parseInt(h.css("height"),10)<parseInt($(".passage").css("font-size"),10)?h.css("height"):$(".passage").css("font-size")),g.css("line-height",h.css("height"))}Object.assign(l,{_list:new Map,is:function(t){return t instanceof l},has:function(t){return l._list.has(t)&&l.is(l._list.get(t))},get:function(t){return l.has(t)?l._list.get(t):null},del:function(t){l.has(t)&&l._list.delete(t)},add:function(t,s,i){if(!l.has(t)||e){Object.assign(s,{id:t});var n=new l(s,i);return l._list.set(t,n),n}console.error('Meter "'+t+'" already exists.')},_emit:function(t,e){l.is(t)&&t.$element.trigger({type:":"+e,meter:t})}}),Object.assign(l.prototype,{constructor:l,_label:function(t){var e=this;function s(){e.$label.empty().wiki(e.settings.label),e.$label.css("font-size",parseInt(e.$element.css("height"),10)<parseInt(e.$element.parent().css("font-size"),10)?e.$element.css("height"):e.$element.parent().css("font-size")),e.$label.css("line-height",e.$element.css("height"))}return t?setTimeout(s,Engine.minDomActionDelay):s(),this},_width:function(){var t=this;return this.$bars.bottom.animate({width:100*this.value+"%"},this.settings.animate,this.settings.easing,(function(){l._emit(t,"meter-animation-complete")})),this},_color:function(){return this.$bars.top.animate({opacity:o(this.value)},this.settings.animate,this.settings.easing),this},animate:function(){return l._emit(this,"meter-animation-start"),this._color()._width()._label()},val:function(t){return void 0!==t&&(t=Number(t),Number.isNaN(t)&&(t=1),t=Math.clamp(t,0,1),this.value=t,this.animate()),this.value},options:function(t){return t&&"object"==typeof t&&Object.assign(this.settings,t),this.settings},unwrap:function(){return this.$element[0]},place:function(t,e){var s=$(document.createElement("span"));return t instanceof jQuery||(t=$(t)),t[0]||console.warn("meter#place() -> no valid target"),e&&"object"==typeof e&&(e.classes&&(Array.isArray(e.classes)||"string"==typeof e.classes)&&s.addClass(e.classes),e.attr&&"object"==typeof e.attr&&s.attr(e.attr)),t.append(s.append(this.$element)),this._label(!0),this},on:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.on(t,e),this):this},one:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.one(t,e),this):this},off:function(t){return t=t&&"string"==typeof t&&t.trim()?t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "):".userland",this.$element.off(t),this},click:function(t,e){return this.$element.ariaClick(t,e),this},clone:function(){return new l(this.settings,this.value)},toJSON:function(){return JSON.reviveWrapper("new setup.Meter("+JSON.stringify(this.settings)+", "+this.value+")")}}),setup.Meter=l,t&&(window.Meter=window.Meter||l),Macro.add("newmeter",{tags:["colors","sizing","animation","label"],handler:function(){if(State.length>0&&!s)return this.error("The `<<newmeter>>` macro must be called in your `StoryInit` special passage. Seriously. No excuses. --Love, Chapel");if(this.args.length<1)return this.error("The `<<newmeter>>` macro requires at least one argument: a meter name.");var t=this.args[0],i=null,n=null,r=null,a=null;if("string"!=typeof t)return this.error("Invalid meter name.");if(t=t.trim(),l.has(t)&&!e)return this.error('Cannot clobber the existing meter "'+t+'".');this.payload.length&&(i=this.payload.find((function(t){return"colors"===t.name})),n=this.payload.find((function(t){return"sizing"===t.name})),r=this.payload.find((function(t){return"animation"===t.name})),a=this.payload.find((function(t){return"label"===t.name})));var o={};if(i){if(!i.args.length)return this.error("No arguments passed to the `<<colors>>` tag.");switch(i.args.length){case 1:o.empty=i.args[0],o.full="transparent";break;case 2:o.full=i.args[0],o.empty=i.args[1];break;default:o.full=i.args[0],o.empty=i.args[1],o.back=i.args[2]}}if(n){if(!n.args.length)return this.error("No arguments passed to the `<<sizing>>` tag.");o.width=n.args[0],n.args[1]&&(o.height=n.args[1])}if(r){if(!r.args.length)return this.error("No arguments passed to the `<<animation>>` tag.");if("boolean"!=typeof r.args[0]||r.args[0]){if("string"!=typeof r.args[0])return this.error("The argument to the `<<animation>>` tag should be `true`, `false`, or a valid CSS time value.");o.animate=Util.fromCssTime(r.args[0])}else o.animate=0;r.args[1]&&["swing","linear"].includes(r.args[1])&&(o.easing=r.args[1])}if(a){var h=a.args[0];if(!h||"string"!=typeof h)return this.error("The labelText argument for the `<<label>>` tag is required.");o.label=h.trim(),a.args[1]&&"string"==typeof a.args[1]&&(o.text=a.args[1]),a.args[2]&&"string"==typeof a.args[2]&&(o.align=a.args[2])}l.add(t,o,this.args[1])}}),Macro.add("showmeter",{handler:function(){if(this.args.length<1)return this.error("This macro requires at least one argument: the meter's name.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');"number"==typeof this.args[1]&&e.val(this.args[1]),e.place(this.output,{classes:"macro-"+this.name,attr:{id:"meter-"+Util.slugify(t)}})}}),Macro.add("updatemeter",{handler:function(){if(this.args.length<2)return this.error("This macro requires two arguments: the meter's name and a value.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');e.val(this.args[1])}})}();
-// end meters.min.js</script><tw-tag name="Q3" color="green"></tw-tag><tw-tag name="EndFired" color="red"></tw-tag><tw-tag name="Q1" color="green"></tw-tag><tw-tag name="EndPromo" color="red"></tw-tag><tw-tag name="Q2" color="green"></tw-tag><tw-tag name="Main" color="blue"></tw-tag><tw-tag name="EndStay" color="red"></tw-tag><tw-tag name="Widget" color="green"></tw-tag><tw-tag name="widget" color="orange"></tw-tag><tw-tag name="EndE" color="orange"></tw-tag><tw-tag name="EndUnhappy" color="red"></tw-tag><tw-tag name="nobr" color="purple"></tw-tag><tw-tag name="StoryInit" color="orange"></tw-tag><tw-tag name="Q4" color="green"></tw-tag><tw-passagedata pid="1" name="Burnout" tags="" position="925,525" size="100,100">&lt;&lt;script&gt;&gt;
+// end meters.min.js</script><tw-tag name="Widget" color="green"></tw-tag><tw-tag name="StoryInit" color="orange"></tw-tag><tw-tag name="Q1" color="green"></tw-tag><tw-tag name="Q3" color="green"></tw-tag><tw-tag name="Main" color="blue"></tw-tag><tw-tag name="EndStay" color="red"></tw-tag><tw-tag name="EndPromo" color="red"></tw-tag><tw-tag name="widget" color="orange"></tw-tag><tw-tag name="Q2" color="green"></tw-tag><tw-tag name="EndE" color="orange"></tw-tag><tw-tag name="Q4" color="green"></tw-tag><tw-tag name="EndFired" color="red"></tw-tag><tw-tag name="EndUnhappy" color="red"></tw-tag><tw-tag name="nobr" color="purple"></tw-tag><tw-passagedata pid="1" name="Burnout" tags="" position="925,525" size="100,100">&lt;&lt;script&gt;&gt;
     UIBar.hide();
 &lt;&lt;/script&gt;&gt;
 &lt;&lt;EventMessenger &quot;showMenu&quot; true true&gt;&gt;
@@ -2416,7 +2416,7 @@ setup.getPassageNames = function(tag) {
         &lt;div class=&quot;content content--ending&quot;&gt;
             &lt;&lt;TitleBar &quot;🔥🔥 YOU BURNED OUT 🔥🔥&quot;&gt;&gt;
             &lt;div class=&quot;ending&quot;&gt;
-                &lt;img class=&quot;ending__img&quot; src=&quot;img/e-burn.png&quot;/&gt;
+                &lt;img class=&quot;ending__img&quot; src=&quot;img/e-burn.jpg&quot;/&gt;
                 &lt;div class=&quot;ending__text&quot;&gt;
                     &lt;h1 class=&quot;ending__title&quot;&gt;You Burned Out&lt;/h1&gt;
                     &lt;p class=&quot;ending__desc&quot;&gt;You woke up one morning under the world’s heaviest duvet and decided to call in sick. Forever.&lt;/p&gt;
@@ -2462,7 +2462,197 @@ setup.getPassageNames = function(tag) {
         &lt;/div&gt;
 
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Ending 1" tags="" position="350,100" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Test" tags="" position="600,800" size="100,100">&lt;&lt;set $quarter to 4&gt;&gt;
+&lt;&lt;set $time to 1&gt;&gt;
+&lt;&lt;set $energy to 5&gt;&gt;
+&lt;&lt;set $approval to 5&gt;&gt;
+&lt;&lt;set $workStyle to -4&gt;&gt;
+&lt;&lt;set $orientation to 4&gt;&gt;
+&lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
+&lt;&lt;TitleBar $quarterLabel&gt;&gt;
+&lt;div class=&quot;scenario scenario--inactive&quot;&gt;
+    &lt;img class=&quot;scenario__img&quot; src=&quot;img/q1-cold.png&quot;/&gt;
+    &lt;div class=&quot;scenario__text&quot;&gt;
+        &lt;h1 class=&quot;scenario__title&quot;&gt;You&#39;re Fuckin&#39; Cold&lt;/h1&gt;
+        &lt;p class=&quot;scenario__desc&quot;&gt;The building is heated like a Victorian prison. Your besuited male colleagues don’t seem to notice.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;alert&quot;&gt;
+    &lt;div class=&quot;scenario scenario--alert&quot;&gt;
+        &lt;img class=&quot;scenario__icon&quot; src=&quot;img/warn1.png&quot;/&gt;
+        &lt;div class=&quot;scenario__text scenario__text--alert&quot;&gt;
+            &lt;p class=&quot;scenario__desc scenario__desc--alert&quot;&gt;Your “Right to Heat!” email goes ignored by most people, who assume it’s some kind of charity.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;btn-area btn-area--alert&quot;&gt;
+        &lt;div class=&quot;button&quot;&gt;
+            &lt;&lt;link &quot;Next&quot;&gt;&gt;
+                &lt;&lt;EndingCheck&gt;&gt;
+            &lt;&lt;/link&gt;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Ending 1" tags="" position="475,100" size="100,100">&lt;&lt;script&gt;&gt;
+    UIBar.hide();
+&lt;&lt;/script&gt;&gt;
+&lt;&lt;EventMessenger &quot;showMenu&quot; true true&gt;&gt;
+/* passage content */
+&lt;&lt;set $endingImage to &quot;/img/e-friends.png&quot;&gt;&gt;
+&lt;&lt;set $endingLabel to &quot;The Corporate Trail - You&#39;re Not Here to Make Friends&quot;&gt;&gt;
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+    &lt;img class=&quot;logo&quot; src=&quot;img/logo.png&quot;/&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;div class=&quot;content content--ending&quot;&gt;
+            &lt;&lt;TitleBar &quot;👏👏 NOT HERE TO MAKE FRIENDS 👏👏&quot;&gt;&gt;
+            &lt;div class=&quot;ending&quot;&gt;
+                &lt;img class=&quot;ending__img&quot; src=&quot;img/e-friends.jpg&quot;/&gt;
+                &lt;div class=&quot;ending__text&quot;&gt;
+                    &lt;h1 class=&quot;ending__title&quot;&gt;$user,You’re Not Here to Make Friends&lt;/h1&gt;
+                    &lt;p class=&quot;ending__desc&quot;&gt;$workStyle $orientation Water cooler talk was never your thing. You’d prefer coworkers not bother you, but if they must, they need to make it *actionable*.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;&lt;SharingModule&gt;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;&lt;audio &quot;tada&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Ending 2" tags="" position="600,100" size="100,100">&lt;&lt;script&gt;&gt;
+    UIBar.hide();
+&lt;&lt;/script&gt;&gt;
+&lt;&lt;EventMessenger &quot;showMenu&quot; true true&gt;&gt;
+/* passage content */
+&lt;&lt;set $endingImage to &quot;/img/e-boss.jpg&quot;&gt;&gt;
+&lt;&lt;set $endingLabel to &quot;The Corporate Trail - You Manage Like a Boss&quot;&gt;&gt;
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+    &lt;img class=&quot;logo&quot; src=&quot;img/logo.png&quot;/&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;div class=&quot;content content--ending&quot;&gt;
+            &lt;&lt;TitleBar &quot;🔪🔪 YOU MANAGE LIKE A BOSS 🔪🔪&quot;&gt;&gt;
+            &lt;div class=&quot;ending&quot;&gt;
+                &lt;img class=&quot;ending__img&quot; src=&quot;img/e-boss.jpg&quot;/&gt;
+                &lt;div class=&quot;ending__text&quot;&gt;
+                    &lt;h1 class=&quot;ending__title&quot;&gt;$user,You Manage Like a Boss&lt;/h1&gt;
+                    &lt;p class=&quot;ending__desc&quot;&gt;$workStyle $orientation You have an innate ability to herd your colleagues toward a common goal. Have you considered starting a cult?&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;&lt;SharingModule&gt;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;&lt;audio &quot;tada&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Ending 3" tags="" position="725,100" size="100,100">&lt;&lt;script&gt;&gt;
+    UIBar.hide();
+&lt;&lt;/script&gt;&gt;
+&lt;&lt;EventMessenger &quot;showMenu&quot; true true&gt;&gt;
+/* passage content */
+&lt;&lt;set $endingImage to &quot;/img/e-beloved.jpg&quot;&gt;&gt;
+&lt;&lt;set $endingLabel to &quot;The Corporate Trail - You&#39;re a Beloved Office Presence&quot;&gt;&gt;
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+    &lt;img class=&quot;logo&quot; src=&quot;img/logo.png&quot;/&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;div class=&quot;content content--ending&quot;&gt;
+            &lt;&lt;TitleBar &quot;🔪🔪 YOU CHOSE VIOLENCE 🔪🔪&quot;&gt;&gt;
+            &lt;div class=&quot;ending&quot;&gt;
+                &lt;img class=&quot;ending__img&quot; src=&quot;img/e-beloved.jpg&quot;/&gt;
+                &lt;div class=&quot;ending__text&quot;&gt;
+                    &lt;h1 class=&quot;ending__title&quot;&gt;$user,You&#39;re a Beloved Office Presence&lt;/h1&gt;
+                    &lt;p class=&quot;ending__desc&quot;&gt;$workStyle $orientation People like working with you. They tend to think you’re on their side—and they’re right. You probably get hit up on LinkedIn a lot.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;&lt;SharingModule&gt;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;&lt;audio &quot;tada&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Ending 4" tags="" position="850,100" size="100,100">&lt;&lt;script&gt;&gt;
+    UIBar.hide();
+&lt;&lt;/script&gt;&gt;
+&lt;&lt;EventMessenger &quot;showMenu&quot; true true&gt;&gt;
+/* passage content */
+&lt;&lt;set $endingImage to &quot;/img/e-out.jpg&quot;&gt;&gt;
+&lt;&lt;set $endingLabel to &quot;The Corporate Trail - You Chose Violence&quot;&gt;&gt;
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+    &lt;img class=&quot;logo&quot; src=&quot;img/logo.png&quot;/&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;div class=&quot;content content--ending&quot;&gt;
+            &lt;&lt;TitleBar &quot;🏃💨 YOU WERE JUST HEADING OUT 🏃💨&quot;&gt;&gt;
+            &lt;div class=&quot;ending&quot;&gt;
+                &lt;img class=&quot;ending__img&quot; src=&quot;img/e-out.jpg&quot;/&gt;
+                &lt;div class=&quot;ending__text&quot;&gt;
+                    &lt;h1 class=&quot;ending__title&quot;&gt;$user,You Were Just Heading Out&lt;/h1&gt;
+                    &lt;p class=&quot;ending__desc&quot;&gt;$workStyle $orientation Oh, a bunch of stakeholders are jumping on a quick Teams to chat through action items? Sorry, you’ll have to circle back.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;&lt;SharingModule&gt;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;&lt;audio &quot;tada&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Ending 5" tags="" position="975,100" size="100,100">&lt;&lt;script&gt;&gt;
+    UIBar.hide();
+&lt;&lt;/script&gt;&gt;
+&lt;&lt;EventMessenger &quot;showMenu&quot; true true&gt;&gt;
+/* passage content */
+&lt;&lt;set $endingImage to &quot;/img/e-violence.jpg&quot;&gt;&gt;
+&lt;&lt;set $endingLabel to &quot;The Corporate Trail - You Chose Violence&quot;&gt;&gt;
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+    &lt;img class=&quot;logo&quot; src=&quot;img/logo.png&quot;/&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;div class=&quot;content content--ending&quot;&gt;
+            &lt;&lt;TitleBar &quot;🔪🔪 YOU CHOSE VIOLENCE 🔪🔪&quot;&gt;&gt;
+            &lt;div class=&quot;ending&quot;&gt;
+                &lt;img class=&quot;ending__img&quot; src=&quot;img/e-violence.jpg&quot;/&gt;
+                &lt;div class=&quot;ending__text&quot;&gt;
+                    &lt;h1 class=&quot;ending__title&quot;&gt;$user,You Chose Violence&lt;/h1&gt;
+                    &lt;p class=&quot;ending__desc&quot;&gt;$workStyle $orientation For you to win, someone else has to lose. Call it a competitive spirit. You either played D1 athletics or too much Monopoly.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;&lt;SharingModule&gt;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;&lt;audio &quot;tada&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="Ending 6" tags="" position="1100,100" size="100,100">&lt;&lt;script&gt;&gt;
+    UIBar.hide();
+&lt;&lt;/script&gt;&gt;
+&lt;&lt;EventMessenger &quot;showMenu&quot; true true&gt;&gt;
+/* passage content */
+&lt;&lt;set $endingImage to &quot;/img/e-profit.jpg&quot;&gt;&gt;
+&lt;&lt;set $endingLabel to &quot;The Corporate Trail - You Bleed for Incremental Profit&quot;&gt;&gt;
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+    &lt;img class=&quot;logo&quot; src=&quot;img/logo.png&quot;/&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;div class=&quot;content content--ending&quot;&gt;
+            &lt;&lt;TitleBar &quot;💸🩸 YOU BLEED FOR PROFIT 💸🩸&quot;&gt;&gt;
+            &lt;div class=&quot;ending&quot;&gt;
+                &lt;img class=&quot;ending__img&quot; src=&quot;img/e-profit.jpg&quot;/&gt;
+                &lt;div class=&quot;ending__text&quot;&gt;
+                    &lt;h1 class=&quot;ending__title&quot;&gt;$user,You Bleed for Incremental Profit&lt;/h1&gt;
+                    &lt;p class=&quot;ending__desc&quot;&gt;$workStyle $orientation You’re a hero of free market enterprise. You don’t stop until the work is done, and value is safely returned to shareholders.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;&lt;SharingModule&gt;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;&lt;audio &quot;tada&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Ending 7" tags="" position="1225,100" size="100,100">&lt;&lt;script&gt;&gt;
+    UIBar.hide();
+&lt;&lt;/script&gt;&gt;
+&lt;&lt;EventMessenger &quot;showMenu&quot; true true&gt;&gt;
+/* passage content */
+&lt;&lt;set $endingImage to &quot;/img/placeholder.png&quot;&gt;&gt;
+&lt;&lt;set $endingLabel to &quot;The Corporate Trail - You Jump on Grenades&quot;&gt;&gt;
+&lt;div class=&quot;abs-wrapper&quot;&gt;
+    &lt;img class=&quot;logo&quot; src=&quot;img/logo.png&quot;/&gt;
+	&lt;div class=&quot;rel-wrapper&quot;&gt;
+        &lt;div class=&quot;content content--ending&quot;&gt;
+            &lt;&lt;TitleBar &quot;💜💜 YOU JUMP ON GRENADES 💜💜&quot;&gt;&gt;
+            &lt;div class=&quot;ending&quot;&gt;
+                &lt;img class=&quot;ending__img&quot; src=&quot;img/placeholder.png&quot;/&gt;
+                &lt;div class=&quot;ending__text&quot;&gt;
+                    &lt;h1 class=&quot;ending__title&quot;&gt;$user,You Jump on Grenades&lt;/h1&gt;
+                    &lt;p class=&quot;ending__desc&quot;&gt;$workStyle $orientation Whatever the problem, you make it your own. Nobody asks you to do this, but you like to imagine that someone, somewhere is keeping score.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;&lt;SharingModule&gt;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;&lt;audio &quot;tada&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="Ending 8" tags="" position="100,225" size="100,100">&lt;&lt;script&gt;&gt;
     UIBar.hide();
 &lt;&lt;/script&gt;&gt;
 &lt;&lt;EventMessenger &quot;showMenu&quot; true true&gt;&gt;
@@ -2473,18 +2663,19 @@ setup.getPassageNames = function(tag) {
     &lt;img class=&quot;logo&quot; src=&quot;img/logo.png&quot;/&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
         &lt;div class=&quot;content content--ending&quot;&gt;
-            &lt;&lt;TitleBar &quot;🔪🔪 YOU CHOSE VIOLENCE 🔪🔪&quot;&gt;&gt;
+            &lt;&lt;TitleBar &quot;👑👑 YOU GAME OF THRONES&#39;D IT 👑👑&quot;&gt;&gt;
             &lt;div class=&quot;ending&quot;&gt;
-                &lt;img class=&quot;ending__img&quot; src=&quot;img/e-violence.png&quot;/&gt;
+                &lt;img class=&quot;ending__img&quot; src=&quot;img/e-thrones.jpg&quot;/&gt;
                 &lt;div class=&quot;ending__text&quot;&gt;
-                    &lt;h1 class=&quot;ending__title&quot;&gt;$user,You Chose Violence&lt;/h1&gt;
-                    &lt;p class=&quot;ending__desc&quot;&gt;For you to win, someone else has to lose. Call it a competitive spirit. You either played D1 athletics or too much Monopoly.&lt;/p&gt;
+                    &lt;h1 class=&quot;ending__title&quot;&gt;$user,You Game-of-Thrones&#39;d It&lt;/h1&gt;
+                    &lt;p class=&quot;ending__desc&quot;&gt;$workStyle $orientation Your feel for office politics is as honed as it is frightening. Maybe you should look into actual politics.&lt;/p&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;&lt;SharingModule&gt;&gt;
         &lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
-&lt;&lt;audio &quot;tada&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="QUIT" tags="QUIT" position="475,100" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;&lt;audio &quot;tada&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="QUIT" tags="QUIT" position="225,225" size="100,100">&lt;&lt;script&gt;&gt;
     UIBar.hide();
 &lt;&lt;/script&gt;&gt;
 &lt;&lt;EventMessenger &quot;showMenu&quot; true true&gt;&gt;
@@ -2507,7 +2698,7 @@ setup.getPassageNames = function(tag) {
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-&lt;&lt;audio &quot;tada&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="You&#39;re Fuckin&#39; Cold" tags="Q1" position="600,675" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;&lt;audio &quot;tada&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="You&#39;re Fuckin&#39; Cold" tags="Q1" position="600,675" size="100,100">&lt;&lt;script&gt;&gt;
     UIBar.show();
 &lt;&lt;/script&gt;&gt;
 /* pass messages */
@@ -2539,7 +2730,7 @@ setup.getPassageNames = function(tag) {
 &lt;/div&gt;
 &lt;&lt;timed 0.1s&gt;&gt;
     &lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Get blankets" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;0&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Get blankets" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;0&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -2563,7 +2754,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="7" name="Descend" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="15" name="Descend" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -2587,7 +2778,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name="Futz" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="Futz" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -2611,7 +2802,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="Coalition" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;1&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="Coalition" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;1&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -2635,7 +2826,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="Right to heat" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;-1&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="18" name="Right to heat" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;-1&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -2659,7 +2850,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="Glass Cliff" tags="Q1" position="600,675" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="Glass Cliff" tags="Q1" position="600,675" size="100,100">&lt;&lt;script&gt;&gt;
     UIBar.show();
 &lt;&lt;/script&gt;&gt;
 /* pass messages */
@@ -2691,7 +2882,7 @@ setup.getPassageNames = function(tag) {
 &lt;/div&gt;
 &lt;&lt;timed 0.1s&gt;&gt;
     &lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Fuck it we ball" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-2&quot; &quot;1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="Fuck it we ball" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-2&quot; &quot;1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -2715,7 +2906,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Your plate is full" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="21" name="Your plate is full" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -2739,7 +2930,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="Deteriorate" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;-1&quot; &quot;1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="Deteriorate" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;-1&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -2763,7 +2954,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="15" name="Turn around" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;-1&quot; &quot;1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="Turn around" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;-1&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -2787,7 +2978,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="Trade Show" tags="Q1" position="600,675" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="Trade Show" tags="Q1" position="600,675" size="100,100">&lt;&lt;script&gt;&gt;
     UIBar.show();
 &lt;&lt;/script&gt;&gt;
 /* pass messages */
@@ -2820,7 +3011,7 @@ setup.getPassageNames = function(tag) {
 &lt;/div&gt;
 &lt;&lt;timed 0.1s&gt;&gt;
     &lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="No way" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="No way" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -2844,7 +3035,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="18" name="But the networking..." tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;2&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="But the networking..." tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;2&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -2868,7 +3059,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="Send your deputy" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;1&quot; &quot;-1&quot; &quot;-1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="27" name="Send your deputy" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;1&quot; &quot;-1&quot; &quot;-1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -2892,7 +3083,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="RTOh No" tags="Q1" position="600,675" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="28" name="RTOh No" tags="Q1" position="600,675" size="100,100">&lt;&lt;script&gt;&gt;
     UIBar.show();
 &lt;&lt;/script&gt;&gt;
 /* pass messages */
@@ -2924,7 +3115,7 @@ setup.getPassageNames = function(tag) {
 &lt;/div&gt;
 &lt;&lt;timed 0.1s&gt;&gt;
     &lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="Leggings" tags="" position="600,800" size="100,100">/* passage content */
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="Leggings" tags="" position="600,800" size="100,100">/* passage content */
 &lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
@@ -2949,7 +3140,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="Impromptu" tags="" position="600,800" size="100,100">/* passage content */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="Impromptu" tags="" position="600,800" size="100,100">/* passage content */
 &lt;&lt;CalcResource &quot;-1&quot; &quot;-1&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
@@ -2974,7 +3165,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="Productivity" tags="" position="600,800" size="100,100">/* passage content */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="Productivity" tags="" position="600,800" size="100,100">/* passage content */
 &lt;&lt;CalcResource &quot;-1&quot; &quot;2&quot; &quot;-1&quot; &quot;-1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
@@ -2999,7 +3190,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="Agitator" tags="" position="600,800" size="100,100">/* passage content */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="32" name="Agitator" tags="" position="600,800" size="100,100">/* passage content */
 &lt;&lt;CalcResource &quot;-1&quot; &quot;-2&quot; &quot;-1&quot; &quot;-1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
@@ -3024,7 +3215,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="Ask for an exception" tags="" position="600,800" size="100,100">/* passage content */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="33" name="Ask for an exception" tags="" position="600,800" size="100,100">/* passage content */
 &lt;&lt;CalcResource &quot;2&quot; &quot;-2&quot; &quot;-1&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
@@ -3049,7 +3240,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="Employee Goes Viral" tags="Q2" position="600,675" size="100,100">/* pass messages */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="34" name="Employee Goes Viral" tags="Q2" position="600,675" size="100,100">/* pass messages */
 &lt;&lt;EventMessenger &quot;showMenu&quot; true&gt;&gt;
 /* passage content */
 &lt;div class=&quot;abs-wrapper&quot;&gt;
@@ -3076,7 +3267,7 @@ setup.getPassageNames = function(tag) {
             &gt;&gt;
         &lt;/div&gt;
 &lt;/div&gt;
-&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="She&#39;s grateful" tags="" position="600,800" size="100,100">/* passage content */
+&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="She&#39;s grateful" tags="" position="600,800" size="100,100">/* passage content */
 &lt;&lt;CalcResource &quot;0&quot; &quot;1&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
@@ -3101,7 +3292,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="28" name="Mind your" tags="" position="600,800" size="100,100">/* passage content */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="36" name="Mind your" tags="" position="600,800" size="100,100">/* passage content */
 &lt;&lt;CalcResource &quot;0&quot; &quot;-1&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
@@ -3126,7 +3317,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="Reprimand her privately" tags="" position="600,800" size="100,100">/* passage content */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="37" name="Reprimand her privately" tags="" position="600,800" size="100,100">/* passage content */
 &lt;&lt;CalcResource &quot;0&quot; &quot;1&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
@@ -3151,7 +3342,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="Kinda snarky" tags="" position="600,800" size="100,100">/* passage content */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="38" name="Kinda snarky" tags="" position="600,800" size="100,100">/* passage content */
 &lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;-1&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
@@ -3176,7 +3367,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="Dunked on" tags="" position="600,800" size="100,100">/* passage content */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="39" name="Dunked on" tags="" position="600,800" size="100,100">/* passage content */
 &lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;-1&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
@@ -3201,7 +3392,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="32" name="Multiple Stakeholders" tags="Q2" position="600,675" size="100,100">/* pass messages */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="Multiple Stakeholders" tags="Q2" position="600,675" size="100,100">/* pass messages */
 &lt;&lt;EventMessenger &quot;showMenu&quot; true&gt;&gt;
 /* passage content */
 &lt;div class=&quot;abs-wrapper&quot;&gt;
@@ -3228,7 +3419,7 @@ setup.getPassageNames = function(tag) {
             &gt;&gt;
         &lt;/div&gt;
 &lt;/div&gt;
-&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="Stay late" tags="" position="600,800" size="100,100">/* passage content */
+&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="Stay late" tags="" position="600,800" size="100,100">/* passage content */
 &lt;&lt;CalcResource &quot;-2&quot; &quot;0&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
@@ -3253,7 +3444,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="34" name="You take" tags="" position="600,800" size="100,100">/* passage content */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="42" name="You take" tags="" position="600,800" size="100,100">/* passage content */
 &lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
@@ -3278,7 +3469,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="35" name="The glow" tags="" position="600,800" size="100,100">/* passage content */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="43" name="The glow" tags="" position="600,800" size="100,100">/* passage content */
 &lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
@@ -3303,7 +3494,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="36" name="Two words: silent mode" tags="" position="600,800" size="100,100">/* passage content */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="44" name="Two words: silent mode" tags="" position="600,800" size="100,100">/* passage content */
 &lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
@@ -3328,7 +3519,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="37" name="There&#39;s no time" tags="Q2" position="600,675" size="100,100">/* pass messages */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="There&#39;s no time" tags="Q2" position="600,675" size="100,100">/* pass messages */
 &lt;&lt;EventMessenger &quot;showMenu&quot; true&gt;&gt;
 /* passage content */
 &lt;div class=&quot;abs-wrapper&quot;&gt;
@@ -3355,7 +3546,7 @@ setup.getPassageNames = function(tag) {
             &gt;&gt;
         &lt;/div&gt;
 &lt;/div&gt;
-&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="Sleep when you&#39;re dead" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-2&quot; &quot;1&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
+&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="Sleep when you&#39;re dead" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-2&quot; &quot;1&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -3379,7 +3570,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="39" name="Call in favors" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;-1&quot; &quot;1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="47" name="Call in favors" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;-1&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -3403,7 +3594,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="Speak truth to power" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="48" name="Speak truth to power" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -3427,7 +3618,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="41" name="The E Word" tags="Q2" position="600,675" size="100,100">/* pass messages */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="49" name="The E Word" tags="Q2" position="600,675" size="100,100">/* pass messages */
 &lt;&lt;EventMessenger &quot;showMenu&quot; true&gt;&gt;
 /* passage content */
 &lt;div class=&quot;abs-wrapper&quot;&gt;
@@ -3454,7 +3645,7 @@ setup.getPassageNames = function(tag) {
             &gt;&gt;
         &lt;/div&gt;
 &lt;/div&gt;
-&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Sorry I care" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
+&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="Sorry I care" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -3478,7 +3669,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="43" name="The numbers" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="51" name="The numbers" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -3502,7 +3693,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="44" name="You fumble" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="52" name="You fumble" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -3526,7 +3717,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="You suggest" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;-1&quot; &quot;1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="53" name="You suggest" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;-1&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -3550,7 +3741,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="You stammer" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;-1&quot; &quot;1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="54" name="You stammer" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;-1&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -3574,7 +3765,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="47" name="Coffee Chats" tags="Q3" position="600,675" size="100,100">/* pass messages */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="55" name="Coffee Chats" tags="Q3" position="600,675" size="100,100">/* pass messages */
 &lt;&lt;EventMessenger &quot;showMenu&quot; true&gt;&gt;
 /* passage content */
 &lt;div class=&quot;abs-wrapper&quot;&gt;
@@ -3601,7 +3792,7 @@ setup.getPassageNames = function(tag) {
             &gt;&gt;
         &lt;/div&gt;
 &lt;/div&gt;
-&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Find the time" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
+&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="Find the time" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -3625,14 +3816,14 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="49" name="Set boundaries" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="57" name="Set boundaries" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q3-coffee.png&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
-        &lt;h1 class=&quot;scenario__title&quot;&gt;Set Boundaries&lt;/h1&gt;
-        &lt;p class=&quot;scenario__desc&quot;&gt;You have people at home to mentor, too. And expensing coffee is a pain in the ass.&lt;/p&gt;
+        &lt;h1 class=&quot;scenario__title&quot;&gt;Coffee Chats&lt;/h1&gt;
+        &lt;p class=&quot;scenario__desc&quot;&gt;As one of the few women executives in the building, you’ve become a de facto mentor to dozens of people.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -3649,14 +3840,14 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="50" name="You convince" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;1&quot; &quot;-1&quot; &quot;-1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="You convince" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;1&quot; &quot;-1&quot; &quot;-1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q3-coffee.png&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
-        &lt;h1 class=&quot;scenario__title&quot;&gt;Set Boundaries&lt;/h1&gt;
-        &lt;p class=&quot;scenario__desc&quot;&gt;You have people at home to mentor, too. And expensing coffee is a pain in the ass.&lt;/p&gt;
+        &lt;h1 class=&quot;scenario__title&quot;&gt;Coffee Chats&lt;/h1&gt;
+        &lt;p class=&quot;scenario__desc&quot;&gt;As one of the few women executives in the building, you’ve become a de facto mentor to dozens of people.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -3673,14 +3864,14 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="51" name="Get rebranded" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-2&quot; &quot;0&quot; &quot;-1&quot; &quot;-1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="59" name="Get rebranded" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-2&quot; &quot;0&quot; &quot;-1&quot; &quot;-1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q3-coffee.png&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
-        &lt;h1 class=&quot;scenario__title&quot;&gt;Set Boundaries&lt;/h1&gt;
-        &lt;p class=&quot;scenario__desc&quot;&gt;You have people at home to mentor, too. And expensing coffee is a pain in the ass.&lt;/p&gt;
+        &lt;h1 class=&quot;scenario__title&quot;&gt;Coffee Chats&lt;/h1&gt;
+        &lt;p class=&quot;scenario__desc&quot;&gt;As one of the few women executives in the building, you’ve become a de facto mentor to dozens of people.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -3697,7 +3888,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="52" name="Planning Committee" tags="Q3" position="600,675" size="100,100">/* pass messages */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="60" name="Planning Committee" tags="Q3" position="600,675" size="100,100">/* pass messages */
 &lt;&lt;EventMessenger &quot;showMenu&quot; true&gt;&gt;
 /* passage content */
 &lt;div class=&quot;abs-wrapper&quot;&gt;
@@ -3724,7 +3915,7 @@ setup.getPassageNames = function(tag) {
             &gt;&gt;
         &lt;/div&gt;
 &lt;/div&gt;
-&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="53" name="At the office" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
+&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="At the office" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -3748,7 +3939,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="54" name="At your home" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;2&quot; &quot;0&quot; &quot;-1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="62" name="At your home" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;2&quot; &quot;0&quot; &quot;-1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -3772,7 +3963,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="55" name="Cirque du Soleil" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="63" name="Cirque du Soleil" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -3796,7 +3987,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="56" name="Reply All" tags="Q3" position="600,675" size="100,100">/* passage content */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="64" name="Reply All" tags="Q3" position="600,675" size="100,100">/* passage content */
 &lt;div class=&quot;abs-wrapper&quot;&gt;
     &lt;img class=&quot;logo&quot; src=&quot;img/logo.png&quot;/&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
@@ -3821,7 +4012,7 @@ setup.getPassageNames = function(tag) {
             &gt;&gt;
         &lt;/div&gt;
 &lt;/div&gt;
-&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="Fire their ass" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="65" name="Fire their ass" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -3845,7 +4036,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="Teachable moment" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;-1&quot; &quot;-1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="66" name="Teachable moment" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;-1&quot; &quot;-1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -3869,7 +4060,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="59" name="DISREGARD!" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="67" name="DISREGARD!" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -3893,7 +4084,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="60" name="Stolen Valor" tags="Q3" position="600,675" size="100,100">/* pass messages */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="68" name="Stolen Valor" tags="Q3" position="600,675" size="100,100">/* pass messages */
 &lt;&lt;EventMessenger &quot;showMenu&quot; true&gt;&gt;
 /* passage content */
 &lt;div class=&quot;abs-wrapper&quot;&gt;
@@ -3919,7 +4110,7 @@ setup.getPassageNames = function(tag) {
             &gt;&gt;
         &lt;/div&gt;
 &lt;/div&gt;
-&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="Smile &amp; nod" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;-1&quot; &quot;-1&quot;&gt;&gt;
+&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="Smile &amp; nod" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;-1&quot; &quot;-1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -3943,7 +4134,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="62" name="You demolish" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="70" name="You demolish" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -3967,7 +4158,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="63" name="Too far" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;0&quot; &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="71" name="Too far" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;0&quot; &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -3991,7 +4182,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="64" name="Family Planning" tags="Q4" position="600,675" size="100,100">/* pass messages */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="72" name="Family Planning" tags="Q4" position="600,675" size="100,100">/* pass messages */
 &lt;&lt;EventMessenger &quot;showMenu&quot; true&gt;&gt;
 /* passage content */
 &lt;div class=&quot;abs-wrapper&quot;&gt;
@@ -4018,7 +4209,7 @@ setup.getPassageNames = function(tag) {
             &gt;&gt;
         &lt;/div&gt;
 &lt;/div&gt;
-&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="65" name="Play dumb" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
+&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="73" name="Play dumb" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -4042,7 +4233,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="66" name="Say way too much" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="74" name="Say way too much" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -4066,7 +4257,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="67" name="None of his business" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="75" name="None of his business" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -4090,7 +4281,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="68" name="Next Steps" tags="Q4" position="600,675" size="100,100">/* pass messages */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="76" name="Next Steps" tags="Q4" position="600,675" size="100,100">/* pass messages */
 &lt;&lt;EventMessenger &quot;showMenu&quot; true&gt;&gt;
 /* passage content */
 &lt;div class=&quot;abs-wrapper&quot;&gt;
@@ -4117,7 +4308,7 @@ setup.getPassageNames = function(tag) {
             &gt;&gt;
         &lt;/div&gt;
 &lt;/div&gt;
-&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="Persuasive slides" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;1&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
+&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="77" name="Persuasive slides" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;1&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -4141,7 +4332,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="70" name="Muddled slides" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;-1&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="78" name="Muddled slides" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;-1&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -4165,7 +4356,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="71" name="Keep it casual" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;0&quot; &quot;0&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="79" name="Keep it casual" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;0&quot; &quot;0&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -4189,7 +4380,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="72" name="Big gamble" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;2&quot; &quot;0&quot; &quot;-1&quot; &quot;1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="80" name="Big gamble" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;2&quot; &quot;0&quot; &quot;-1&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -4213,7 +4404,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="73" name="Sorry you" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;-3&quot; &quot;-1&quot; &quot;1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="81" name="Sorry you" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;-3&quot; &quot;-1&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -4237,7 +4428,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="74" name="Performance Reviews" tags="Q4" position="600,675" size="100,100">/* pass messages */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="82" name="Performance Reviews" tags="Q4" position="600,675" size="100,100">/* pass messages */
 &lt;&lt;EventMessenger &quot;showMenu&quot; true&gt;&gt;
 /* passage content */
 &lt;div class=&quot;abs-wrapper&quot;&gt;
@@ -4263,7 +4454,7 @@ setup.getPassageNames = function(tag) {
             &gt;&gt;
         &lt;/div&gt;
 &lt;/div&gt;
-&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="75" name="Command facts" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;0&quot; &quot;1&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
+&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="83" name="Command facts" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;0&quot; &quot;1&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -4287,7 +4478,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="76" name="No feelings" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;0&quot; &quot;-1&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="84" name="No feelings" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;0&quot; &quot;-1&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -4311,7 +4502,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="77" name="Artfully constructed" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;0&quot; &quot;1&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="85" name="Artfully constructed" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;0&quot; &quot;1&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -4335,7 +4526,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="78" name="Gentle parenting" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="86" name="Gentle parenting" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -4359,7 +4550,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="79" name="Screen Bare" tags="Q4" position="600,675" size="100,100">/* pass messages */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="87" name="Screen Bare" tags="Q4" position="600,675" size="100,100">/* pass messages */
 &lt;&lt;EventMessenger &quot;showMenu&quot; true&gt;&gt;
 /* passage content */
 &lt;div class=&quot;abs-wrapper&quot;&gt;
@@ -4385,7 +4576,7 @@ setup.getPassageNames = function(tag) {
             &gt;&gt;
         &lt;/div&gt;
 &lt;/div&gt;
-&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="80" name="Close tab" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
+&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="88" name="Close tab" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -4409,7 +4600,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="81" name="Maybe they didn&#39;t" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="89" name="Maybe they didn&#39;t" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -4433,7 +4624,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="82" name="You laugh" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;0&quot; &quot;1&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="90" name="You laugh" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;0&quot; &quot;1&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -4457,7 +4648,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="83" name="Borderline inappropriate" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;0&quot; &quot;-1&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="91" name="Borderline inappropriate" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;0&quot; &quot;-1&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -4481,7 +4672,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="84" name="Email" tags="" position="500,300" size="100,100">&lt;div class=&quot;handbook&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="92" name="Email" tags="" position="500,300" size="100,100">&lt;div class=&quot;handbook&quot;&gt;
 	&lt;div&gt;
 		&lt;h1 class=&quot;handbook__title&quot;&gt;HOW TO PLAY&lt;/h1&gt;
 		&lt;div class=&quot;handbook__text&quot;&gt;
@@ -4495,7 +4686,7 @@ setup.getPassageNames = function(tag) {
 			&lt;&lt;EndingCheck&gt;&gt;
 		&lt;&lt;/link&gt;&gt;
 	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="85" name="Login" tags="" position="500,300" size="100,100">/* Pass Messages */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="93" name="Login" tags="" position="500,300" size="100,100">/* Pass Messages */
 &lt;&lt;EventMessenger &quot;loginFlag&quot; true false&gt;&gt;
 /* Variable Initialization */
 &lt;&lt;if $time == undefined&gt;&gt;
@@ -4628,7 +4819,7 @@ setup.getPassageNames = function(tag) {
 			loginCheck();
 		})
     });
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="86" name="PassageDone" tags="" position="725,1100" size="100,100">&lt;&lt;script&gt;&gt;    
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="PassageDone" tags="" position="475,1225" size="100,100">&lt;&lt;script&gt;&gt;    
     if (document.querySelector(&#39;#sharing&#39;)) {
         var btn = document.querySelector(&#39;#sharing&#39;);
         var endingImage = State.getVar(&quot;$endingImage&quot;);
@@ -4699,7 +4890,7 @@ setup.getPassageNames = function(tag) {
             })
         });
     }
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="87" name="PassageHeader" tags="" position="850,1100" size="100,100">&lt;div id=&quot;about&quot; class=&quot;about-window about-window--hidden&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="PassageHeader" tags="" position="600,1225" size="100,100">&lt;div id=&quot;about&quot; class=&quot;about-window about-window--hidden&quot;&gt;
     &lt;div class=&quot;titlebar titlebar--float&quot;&gt;
         &lt;img src=&quot;img/grip.svg&quot; class=&quot;titlebar__grip&quot;&gt;
         &lt;p class=&quot;titlebar__text&quot;&gt;WHO MADE THIS?&lt;/p&gt;
@@ -4724,7 +4915,7 @@ setup.getPassageNames = function(tag) {
             });
         });
     &lt;&lt;/script&gt;&gt;
-&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="88" name="PassageReady" tags="" position="975,1100" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="96" name="PassageReady" tags="" position="725,1225" size="100,100">&lt;&lt;script&gt;&gt;
     window.addEventListener(&#39;message&#39;, function (event) {
         // check the message content
         if (event.data === &#39;restart&#39;) {
@@ -4743,7 +4934,7 @@ setup.getPassageNames = function(tag) {
         document.body.height = window.innerHeight;
     }
     window.onresize(); // called to initially set the height.
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="StoryCaption" tags="StoryInit" position="500,100" size="100,100">&lt;div id=&quot;desktop&quot; class=&quot;icon-view&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="97" name="StoryCaption" tags="StoryInit" position="500,100" size="100,100">&lt;div id=&quot;desktop&quot; class=&quot;icon-view&quot;&gt;
     &lt;div id=&quot;about-btn&quot; class=&quot;icon&quot;&gt;
         &lt;img class=&quot;icon__img&quot; src=&quot;img/about.png&quot; /&gt;
         &lt;p class=&quot;icon__label&quot;&gt;ABOUT&lt;/p&gt;
@@ -4767,7 +4958,7 @@ setup.getPassageNames = function(tag) {
             });
         });
     &lt;&lt;/script&gt;&gt;
-&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="StoryInit" tags="" position="1225,1100" size="100,100">&lt;&lt;cacheaudio &quot;office&quot; &quot;audio/office.mp3&quot;&gt;&gt;
+&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="98" name="StoryInit" tags="" position="975,1225" size="100,100">&lt;&lt;cacheaudio &quot;office&quot; &quot;audio/office.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;boom&quot; &quot;audio/boom.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;slack&quot; &quot;audio/slack.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;tada&quot; &quot;audio/tada.mp3&quot;&gt;&gt;
@@ -4791,14 +4982,14 @@ setup.getPassageNames = function(tag) {
     &lt;&lt;sizing 100% 20px&gt;&gt;
     &lt;&lt;animation 0.5s linear&gt;&gt;
     &lt;&lt;label &#39;$approval&#39; &#39;black&#39; right&gt;&gt;
-&lt;&lt;/newmeter&gt;&gt;</tw-passagedata><tw-passagedata pid="91" name="CalcResource" tags="widget" position="800,100" size="100,100">&lt;&lt;widget &quot;CalcResource&quot;&gt;&gt;
+&lt;&lt;/newmeter&gt;&gt;</tw-passagedata><tw-passagedata pid="99" name="CalcResource" tags="widget" position="800,100" size="100,100">&lt;&lt;widget &quot;CalcResource&quot;&gt;&gt;
 	&lt;&lt;set $energy to Math.clamp($energy += Number($args[0]), 0, 10)&gt;&gt;
     &lt;&lt;set $approval to Math.clamp($approval += Number($args[1]), 0, 10)&gt;&gt;
 	&lt;&lt;set $workStyle to Math.clamp($workStyle += Number($args[2]), 0, 8)&gt;&gt;
     &lt;&lt;set $orientation to Math.clamp($orientation += Number($args[3]), 0, 8)&gt;&gt;
 	&lt;&lt;updatemeter &#39;approval&#39; `$approval / $maxApproval`&gt;&gt;
 	&lt;&lt;updatemeter &#39;energy&#39; `$energy / $maxEnergy`&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="92" name="ChoiceModule" tags="widget" position="800,100" size="100,100">&lt;&lt;widget &quot;ChoiceModule&quot;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="100" name="ChoiceModule" tags="widget" position="800,100" size="100,100">&lt;&lt;widget &quot;ChoiceModule&quot;&gt;&gt;
     &lt;div class=&quot;action-box&quot;&gt;
         &lt;&lt;for _i to 0; _i lt _args.length; _i++&gt;&gt;
             &lt;&lt;capture _i&gt;&gt;
@@ -4892,7 +5083,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/capture&gt;&gt;
         &lt;&lt;/for&gt;&gt;
     &lt;/div&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="93" name="EndingCheck" tags="widget" position="900,100" size="100,100">&lt;&lt;widget &quot;EndingCheck&quot;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="101" name="EndingCheck" tags="widget" position="900,100" size="100,100">&lt;&lt;widget &quot;EndingCheck&quot;&gt;&gt;
     /* check for fail conditions */
     &lt;&lt;if $energy &lt;= 0&gt;&gt;
         &lt;&lt;goto &quot;Burnout&quot;&gt;&gt;    
@@ -4926,9 +5117,49 @@ setup.getPassageNames = function(tag) {
     &lt;&lt;/if&gt;&gt;
     /* ending check */
     &lt;&lt;if $personalityCheck is true&gt;&gt;
-    	&lt;&lt;goto &quot;Ending 1&quot;&gt;&gt;
+        &lt;&lt;script&gt;&gt;
+            console.log(&quot;Personality check is true&quot;);
+        &lt;&lt;/script&gt;&gt;
+
+        &lt;&lt;if $workStyle is 0&gt;&gt;
+            /* break tie */
+            &lt;&lt;set $workStyle to ($workStyle += (Math.random() &lt; 0.5 ? 1 : -1))&gt;&gt;
+            &lt;&lt;script&gt;&gt;
+                console.log(&quot;Work style tie broken&quot;);
+            &lt;&lt;/script&gt;&gt;
+        &lt;&lt;/if&gt;&gt;
+        
+        &lt;&lt;if $orientation is 0&gt;&gt;
+            /* break tie */
+            &lt;&lt;set $orientation to ($orientation += (Math.random() &lt; 0.5 ? 1 : -1))&gt;&gt;
+            &lt;&lt;script&gt;&gt;
+                console.log(&quot;Orientation tie broken&quot;);
+            &lt;&lt;/script&gt;&gt;
+        &lt;&lt;/if&gt;&gt;
+        
+        &lt;&lt;if Math.abs($workStyle) &lt; 4 &amp;&amp; Math.abs($orientation) &lt; 4&gt;&gt;
+            &lt;&lt;if $workStyle &gt; 0 &amp;&amp; $orientation &gt; 0&gt;&gt;
+                &lt;&lt;goto &quot;Ending 1&quot;&gt;&gt;
+            &lt;&lt;elseif $workStyle &gt; 0 &amp;&amp; $orientation &lt; 0&gt;&gt;
+                &lt;&lt;goto &quot;Ending 2&quot;&gt;&gt;
+            &lt;&lt;elseif $workStyle &lt; 0 &amp;&amp; $orientation &lt; 0&gt;&gt;
+                &lt;&lt;goto &quot;Ending 3&quot;&gt;&gt;
+            &lt;&lt;else&gt;&gt;
+                &lt;&lt;goto &quot;Ending 4&quot;&gt;&gt;
+            &lt;&lt;/if&gt;&gt;
+        &lt;&lt;else&gt;&gt;
+            &lt;&lt;if $workStyle &gt; 0 &amp;&amp; $orientation &gt; 0&gt;&gt;
+                &lt;&lt;goto &quot;Ending 5&quot;&gt;&gt;
+            &lt;&lt;elseif $workStyle &gt; 0 &amp;&amp; $orientation &lt; 0&gt;&gt;
+                &lt;&lt;goto &quot;Ending 6&quot;&gt;&gt;
+            &lt;&lt;elseif $workStyle &lt; 0 &amp;&amp; $orientation &lt; 0&gt;&gt;
+                &lt;&lt;goto &quot;Ending 7&quot;&gt;&gt;
+            &lt;&lt;else&gt;&gt;
+                &lt;&lt;goto &quot;Ending 8&quot;&gt;&gt;
+            &lt;&lt;/if&gt;&gt;
+        &lt;&lt;/if&gt;&gt;
     &lt;&lt;/if&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="EventMessenger" tags="widget" position="475,1225" size="100,100">&lt;&lt;widget &quot;EventMessenger&quot;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="102" name="EventMessenger" tags="widget" position="225,1350" size="100,100">&lt;&lt;widget &quot;EventMessenger&quot;&gt;&gt;
     &lt;&lt;set $var1 to $args[0]&gt;&gt;
     &lt;&lt;set $var2 to $args[1]&gt;&gt;
     &lt;&lt;if $args[2]&gt;&gt;
@@ -4955,7 +5186,7 @@ setup.getPassageNames = function(tag) {
             }
         });
     &lt;&lt;/script&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="GoRandom" tags="widget" position="700,100" size="100,100">&lt;&lt;widget &quot;GoRandom&quot;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="103" name="GoRandom" tags="widget" position="700,100" size="100,100">&lt;&lt;widget &quot;GoRandom&quot;&gt;&gt;
     &lt;&lt;set _possiblePlaces = setup.getPassageNames(_args[0])&gt;&gt;
     &lt;&lt;set _possiblePlaces to _possiblePlaces.filter(function(passage) {
         return !hasVisited(passage);
@@ -4968,7 +5199,7 @@ setup.getPassageNames = function(tag) {
             console.log(&quot;No more passages.&quot;);
         &lt;&lt;/script&gt;&gt;
     &lt;&lt;/if&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="96" name="MenuBar" tags="widget" position="725,1225" size="100,100">&lt;&lt;widget &quot;MenuBar&quot;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="104" name="MenuBar" tags="widget" position="475,1350" size="100,100">&lt;&lt;widget &quot;MenuBar&quot;&gt;&gt;
 &lt;div class=&quot;menu-bar&quot;&gt;
     &lt;div class=&quot;menu-bar__group&quot;&gt;
         &lt;a class=&quot;menu-bar__link&quot;&gt;About&lt;/a&gt;
@@ -4976,7 +5207,7 @@ setup.getPassageNames = function(tag) {
     &lt;img class=&quot;menu-bar__logo&quot; src=&quot;img/logo-small.png&quot; /&gt;
     &lt;a class=&quot;menu-bar__link&quot;&gt;Quit&lt;/a&gt;
 &lt;/div&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="97" name="PlayerAvatar" tags="widget" position="850,1225" size="100,100">&lt;&lt;widget &quot;PlayerAvatar&quot;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="105" name="PlayerAvatar" tags="widget" position="600,1350" size="100,100">&lt;&lt;widget &quot;PlayerAvatar&quot;&gt;&gt;
     &lt;div class=&quot;avatar&quot;&gt;
         &lt;&lt;switch $class&gt;&gt;
         &lt;&lt;case 1&gt;&gt;
@@ -4989,13 +5220,13 @@ setup.getPassageNames = function(tag) {
             &lt;img class=&quot;avatar__image&quot; src=&quot;img/icon4.png&quot;/&gt;
         &lt;&lt;/switch&gt;&gt;
     &lt;/div&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="98" name="QuarterTracker" tags="widget" position="700,100" size="100,100">&lt;&lt;widget &quot;QuarterTracker&quot;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="106" name="QuarterTracker" tags="widget" position="700,100" size="100,100">&lt;&lt;widget &quot;QuarterTracker&quot;&gt;&gt;
     &lt;p id=&quot;quarter&quot; class=&quot;ui-label&quot;&gt;Q$quarter&lt;/p&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="99" name="QuitButton" tags="widget" position="1100,1225" size="100,100">&lt;&lt;widget &quot;QuitButton&quot;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="107" name="QuitButton" tags="widget" position="850,1350" size="100,100">&lt;&lt;widget &quot;QuitButton&quot;&gt;&gt;
     &lt;div class=&quot;quit-btn&quot;&gt;
         [[QUIT]]
     &lt;/div&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="100" name="ResourceMeter" tags="widget" position="700,100" size="100,100">&lt;&lt;widget &quot;ResourceMeter&quot;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="108" name="ResourceMeter" tags="widget" position="700,100" size="100,100">&lt;&lt;widget &quot;ResourceMeter&quot;&gt;&gt;
     &lt;div id=&quot;resource&quot; class=&quot;resource-meter&quot;&gt;
         &lt;div class=&quot;user&quot;&gt;
             &lt;p class=&quot;user__label&quot;&gt;Playing as:&lt;/p&gt;
@@ -5014,7 +5245,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;showmeter &#39;approval&#39; &#39;_approval / _maxApproval&#39; /&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="101" name="ResourceUpdate" tags="widget" position="800,100" size="100,100">&lt;&lt;widget &quot;ResourceUpdate&quot;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="109" name="ResourceUpdate" tags="widget" position="800,100" size="100,100">&lt;&lt;widget &quot;ResourceUpdate&quot;&gt;&gt;
     &lt;&lt;nobr&gt;&gt;
     &lt;div class=&quot;action-box&quot;&gt;
         &lt;p&gt;&lt;strong&gt;&lt;em&gt;
@@ -5029,7 +5260,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;EndingCheck&gt;&gt;
         &lt;&lt;/link&gt;&gt;
     &lt;/div&gt;&lt;&lt;/nobr&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="102" name="SharingModule" tags="widget" position="225,1350" size="100,100">&lt;&lt;widget &quot;SharingModule&quot;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="110" name="SharingModule" tags="widget" position="1225,1350" size="100,100">&lt;&lt;widget &quot;SharingModule&quot;&gt;&gt;
     &lt;div class=&quot;btn-area btn-area--ending&quot;&gt;
         &lt;div class=&quot;button button--ending button--sharing&quot; id=&quot;sharing&quot;&gt;&lt;a&gt;Share&lt;/a&gt;&lt;/div&gt;
         &lt;div class=&quot;button&quot;&gt;
@@ -5040,7 +5271,7 @@ setup.getPassageNames = function(tag) {
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="103" name="TitleBar" tags="widget" position="350,1350" size="100,100">&lt;&lt;widget &quot;TitleBar&quot;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="111" name="TitleBar" tags="widget" position="100,1475" size="100,100">&lt;&lt;widget &quot;TitleBar&quot;&gt;&gt;
     &lt;div class=&quot;titlebar&quot;&gt;
         &lt;img src=&quot;img/grip.svg&quot; class=&quot;titlebar__grip&quot;/&gt;
         &lt;p class=&quot;titlebar__text&quot;&gt;_args[0]&lt;/p&gt;

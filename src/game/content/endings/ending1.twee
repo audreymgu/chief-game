@@ -4,21 +4,22 @@
 <</script>>
 <<EventMessenger "showMenu" true true>>
 /* passage content */
-<<set $endingImage to "/img/ending1.png">>
-<<set $endingLabel to "The Corporate Trail - You Chose Violence">>
+<<set $endingImage to "/img/e-friends.png">>
+<<set $endingLabel to "The Corporate Trail - You're Not Here to Make Friends">>
 <div class="abs-wrapper">
     <img class="logo" src="img/logo.png"/>
 	<div class="rel-wrapper">
         <div class="content content--ending">
-            <<TitleBar "🔪🔪 YOU CHOSE VIOLENCE 🔪🔪">>
+            <<TitleBar "👏👏 NOT HERE TO MAKE FRIENDS 👏👏">>
             <div class="ending">
-                <img class="ending__img" src="img/e-violence.png"/>
+                <img class="ending__img" src="img/e-friends.jpg"/>
                 <div class="ending__text">
-                    <h1 class="ending__title">$user,You Chose Violence</h1>
-                    <p class="ending__desc">For you to win, someone else has to lose. Call it a competitive spirit. You either played D1 athletics or too much Monopoly.</p>
+                    <h1 class="ending__title">$user,You’re Not Here to Make Friends</h1>
+                    <p class="ending__desc">$workStyle $orientation Water cooler talk was never your thing. You’d prefer coworkers not bother you, but if they must, they need to make it *actionable*.</p>
                 </div>
             </div>
             <<SharingModule>>
         </div>
+    </div>
 </div>
 <<audio "tada" volume 0.25 play>>

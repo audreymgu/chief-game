@@ -1,0 +1,25 @@
+:: Ending 2
+<<script>>
+    UIBar.hide();
+<</script>>
+<<EventMessenger "showMenu" true true>>
+/* passage content */
+<<set $endingImage to "/img/e-boss.jpg">>
+<<set $endingLabel to "The Corporate Trail - You Manage Like a Boss">>
+<div class="abs-wrapper">
+    <img class="logo" src="img/logo.png"/>
+	<div class="rel-wrapper">
+        <div class="content content--ending">
+            <<TitleBar "🔪🔪 YOU MANAGE LIKE A BOSS 🔪🔪">>
+            <div class="ending">
+                <img class="ending__img" src="img/e-boss.jpg"/>
+                <div class="ending__text">
+                    <h1 class="ending__title">$user,You Manage Like a Boss</h1>
+                    <p class="ending__desc">$workStyle $orientation You have an innate ability to herd your colleagues toward a common goal. Have you considered starting a cult?</p>
+                </div>
+            </div>
+            <<SharingModule>>
+        </div>
+    </div>
+</div>
+<<audio "tada" volume 0.25 play>>

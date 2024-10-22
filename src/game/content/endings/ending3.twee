@@ -1,0 +1,25 @@
+:: Ending 3
+<<script>>
+    UIBar.hide();
+<</script>>
+<<EventMessenger "showMenu" true true>>
+/* passage content */
+<<set $endingImage to "/img/e-beloved.jpg">>
+<<set $endingLabel to "The Corporate Trail - You're a Beloved Office Presence">>
+<div class="abs-wrapper">
+    <img class="logo" src="img/logo.png"/>
+	<div class="rel-wrapper">
+        <div class="content content--ending">
+            <<TitleBar "🔪🔪 YOU CHOSE VIOLENCE 🔪🔪">>
+            <div class="ending">
+                <img class="ending__img" src="img/e-beloved.jpg"/>
+                <div class="ending__text">
+                    <h1 class="ending__title">$user,You're a Beloved Office Presence</h1>
+                    <p class="ending__desc">$workStyle $orientation People like working with you. They tend to think you’re on their side—and they’re right. You probably get hit up on LinkedIn a lot.</p>
+                </div>
+            </div>
+            <<SharingModule>>
+        </div>
+    </div>
+</div>
+<<audio "tada" volume 0.25 play>>

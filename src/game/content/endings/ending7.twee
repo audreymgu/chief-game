@@ -1,0 +1,25 @@
+:: Ending 7
+<<script>>
+    UIBar.hide();
+<</script>>
+<<EventMessenger "showMenu" true true>>
+/* passage content */
+<<set $endingImage to "/img/placeholder.png">>
+<<set $endingLabel to "The Corporate Trail - You Jump on Grenades">>
+<div class="abs-wrapper">
+    <img class="logo" src="img/logo.png"/>
+	<div class="rel-wrapper">
+        <div class="content content--ending">
+            <<TitleBar "💜💜 YOU JUMP ON GRENADES 💜💜">>
+            <div class="ending">
+                <img class="ending__img" src="img/placeholder.png"/>
+                <div class="ending__text">
+                    <h1 class="ending__title">$user,You Jump on Grenades</h1>
+                    <p class="ending__desc">$workStyle $orientation Whatever the problem, you make it your own. Nobody asks you to do this, but you like to imagine that someone, somewhere is keeping score.</p>
+                </div>
+            </div>
+            <<SharingModule>>
+        </div>
+    </div>
+</div>
+<<audio "tada" volume 0.25 play>>

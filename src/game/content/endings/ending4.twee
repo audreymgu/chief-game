@@ -1,0 +1,25 @@
+:: Ending 4
+<<script>>
+    UIBar.hide();
+<</script>>
+<<EventMessenger "showMenu" true true>>
+/* passage content */
+<<set $endingImage to "/img/e-out.jpg">>
+<<set $endingLabel to "The Corporate Trail - You Chose Violence">>
+<div class="abs-wrapper">
+    <img class="logo" src="img/logo.png"/>
+	<div class="rel-wrapper">
+        <div class="content content--ending">
+            <<TitleBar "🏃💨 YOU WERE JUST HEADING OUT 🏃💨">>
+            <div class="ending">
+                <img class="ending__img" src="img/e-out.jpg"/>
+                <div class="ending__text">
+                    <h1 class="ending__title">$user,You Were Just Heading Out</h1>
+                    <p class="ending__desc">$workStyle $orientation Oh, a bunch of stakeholders are jumping on a quick Teams to chat through action items? Sorry, you’ll have to circle back.</p>
+                </div>
+            </div>
+            <<SharingModule>>
+        </div>
+    </div>
+</div>
+<<audio "tada" volume 0.25 play>>

@@ -6,8 +6,8 @@
 <div class="scenario scenario--inactive">
     <img class="scenario__img" src="img/q3-coffee.png"/>
     <div class="scenario__text">
-        <h1 class="scenario__title">Set Boundaries</h1>
-        <p class="scenario__desc">You have people at home to mentor, too. And expensing coffee is a pain in the ass.</p>
+        <h1 class="scenario__title">Coffee Chats</h1>
+        <p class="scenario__desc">As one of the few women executives in the building, you’ve become a de facto mentor to dozens of people.</p>
     </div>
 </div>
 <div class="alert">

@@ -33,6 +33,46 @@
     <</if>>
     /* ending check */
     <<if $personalityCheck is true>>
-    	<<goto "Ending 1">>
+        <<script>>
+            console.log("Personality check is true");
+        <</script>>
+
+        <<if $workStyle is 0>>
+            /* break tie */
+            <<set $workStyle to ($workStyle += (Math.random() < 0.5 ? 1 : -1))>>
+            <<script>>
+                console.log("Work style tie broken");
+            <</script>>
+        <</if>>
+        
+        <<if $orientation is 0>>
+            /* break tie */
+            <<set $orientation to ($orientation += (Math.random() < 0.5 ? 1 : -1))>>
+            <<script>>
+                console.log("Orientation tie broken");
+            <</script>>
+        <</if>>
+        
+        <<if Math.abs($workStyle) < 4 && Math.abs($orientation) < 4>>
+            <<if $workStyle > 0 && $orientation > 0>>
+                <<goto "Ending 1">>
+            <<elseif $workStyle > 0 && $orientation < 0>>
+                <<goto "Ending 2">>
+            <<elseif $workStyle < 0 && $orientation < 0>>
+                <<goto "Ending 3">>
+            <<else>>
+                <<goto "Ending 4">>
+            <</if>>
+        <<else>>
+            <<if $workStyle > 0 && $orientation > 0>>
+                <<goto "Ending 5">>
+            <<elseif $workStyle > 0 && $orientation < 0>>
+                <<goto "Ending 6">>
+            <<elseif $workStyle < 0 && $orientation < 0>>
+                <<goto "Ending 7">>
+            <<else>>
+                <<goto "Ending 8">>
+            <</if>>
+        <</if>>
     <</if>>
 <</widget>>

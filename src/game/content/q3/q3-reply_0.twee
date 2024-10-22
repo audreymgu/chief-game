@@ -11,7 +11,7 @@
             <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
             <<TitleBar $quarterLabel>>
             <div class="scenario">
-                <img class="scenario__img" src="img/q3-reply.png"/>
+                <img class="scenario__img" src="img/q3-reply.jpg"/>
                 <div class="scenario__text">
                     <h1 class="scenario__title">Reply All</h1>
                     <p class="scenario__desc">A junior associate forwards a long email chain to a client that contains some unflattering remarks—your remarks.</p>

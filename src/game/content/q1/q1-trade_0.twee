@@ -17,7 +17,7 @@
             <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
             <<TitleBar $quarterLabel>>
             <div class="scenario">
-                <img class="scenario__img" src="img/q1-trade.png"/>
+                <img class="scenario__img" src="img/q1-trade.jpg"/>
                 <div class="scenario__text">
                     <h1 class="scenario__title">Trade Show</h1>
                     <p class="scenario__desc">You’ve been asked to join a major industry gathering in Singapore. It’s a 19-hour flight.</p>

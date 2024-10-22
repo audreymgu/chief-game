@@ -5,7 +5,7 @@
 <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
 <<TitleBar $quarterLabel>>
 <div class="scenario scenario--inactive">
-    <img class="scenario__img" src="img/q2-stake.png"/>
+    <img class="scenario__img" src="img/q2-stake.jpg"/>
     <div class="scenario__text">
         <h1 class="scenario__title">Multiple Stakeholders</h1>
         <p class="scenario__desc">A last-minute emergency hits your inbox at 5pm—and your nephew’s recital starts at 5pm.</p>

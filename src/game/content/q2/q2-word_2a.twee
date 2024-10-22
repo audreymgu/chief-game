@@ -4,7 +4,7 @@
 <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
 <<TitleBar $quarterLabel>>
 <div class="scenario scenario--inactive">
-    <img class="scenario__img" src="img/q2-word.png"/>
+    <img class="scenario__img" src="img/q2-word.jpg"/>
     <div class="scenario__text">
         <h1 class="scenario__title">The "E" Word</h1>
         <p class="scenario__desc">After passionately advocating for a project, Brian says you seem "emotional.”</p>

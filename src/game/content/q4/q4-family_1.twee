@@ -4,7 +4,7 @@
 <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
 <<TitleBar $quarterLabel>>
 <div class="scenario scenario--inactive">
-    <img class="scenario__img" src="img/q4-family.png"/>
+    <img class="scenario__img" src="img/q4-family.jpg"/>
     <div class="scenario__text">
         <h1 class="scenario__title">Family Planning</h1>
             <p class="scenario__desc">At the EOY forecast, the COO casually asks if you'll be “on leave” soon. While staring directly at your uterus.</p>

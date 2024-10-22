@@ -13,7 +13,7 @@
             <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
             <<TitleBar $quarterLabel>>
             <div class="scenario">
-                <img class="scenario__img" src="img/q4-performance.png"/>
+                <img class="scenario__img" src="img/q4-performance.jpg"/>
                 <div class="scenario__text">
                     <h1 class="scenario__title">Performance Reviews</h1>
                     <p class="scenario__desc">Time to deliver feedback without bruising any delicate egos.</p>

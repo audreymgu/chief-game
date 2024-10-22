@@ -5,7 +5,7 @@
 <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
 <<TitleBar $quarterLabel>>
 <div class="scenario scenario--inactive">
-	<img class="scenario__img" src="img/q2-roast.png"/>
+	<img class="scenario__img" src="img/q2-roast.jpg"/>
 	<div class="scenario__text">
 		<h1 class="scenario__title">Employee Goes Viral</h1>
 		<p class="scenario__desc">One of your young reports just blew up on #WorkTok with a tirade against the firm.</p>

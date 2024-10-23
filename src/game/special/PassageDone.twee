@@ -1,7 +1,9 @@
 ::PassageDone
 <<script>>
-    var endingLabel = State.getVar("$endingLabel").toString();
-    var endingImage = State.getVar("$endingImage");
+    if (document.querySelector('#sharing')) {
+        var endingLabel = State.getVar("$endingLabel").toString();
+        var endingImage = State.getVar("$endingImage");
+    }
 
     // Function to fetch the image blob
     async function fetchImageBlob(imageUrl) {

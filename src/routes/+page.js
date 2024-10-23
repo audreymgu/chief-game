@@ -40,7 +40,7 @@ export function load({ url }) {
     } else if (result === 'qui') {
         ogTitle = "🦎🦎 YOU QUIT 🦎🦎 - The Corporate Trail";
         ogDescription = "Spend your best years saying shit like “circle back” while drinking a watery K-Cup? No thanks. Time to abscond to Costa Rica and become an iguana tamer.";
-        ogImage = 'https://chief-game.vercel.app/img/e-thrones.jpg'; 
+        ogImage = 'https://chief-game.vercel.app/img/e-quit.jpg'; 
     } else {
         ogTitle = "SURVIVE THE CORPORATE TRAIL";
         ogDescription = "A game of corporate survival";

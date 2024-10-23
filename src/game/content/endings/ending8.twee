@@ -4,8 +4,8 @@
 <</script>>
 <<EventMessenger "showMenu" true true>>
 /* passage content */
-<<set $endingImage to "/img/ending1.png">>
-<<set $endingLabel to "The Corporate Trail - You Chose Violence">>
+<<set $endingImage to "/img/e-thrones.png">>
+<<set $endingLabel to "got">>
 <div class="abs-wrapper">
     <img class="logo" src="img/logo.png"/>
 	<div class="rel-wrapper">
@@ -16,6 +16,11 @@
                 <div class="ending__text">
                     <h1 class="ending__title">$user,You Game-of-Thrones'd It</h1>
                     <p class="ending__desc">$workStyle $orientation Your feel for office politics is as honed as it is frightening. Maybe you should look into actual politics.</p>
+                    <<link "Play again?">>
+                        <<script>>
+                            Engine.restart();
+                        <</script>>
+                    <</link>>
                 </div>
             </div>
             <<SharingModule>>

@@ -4,8 +4,8 @@
 <</script>>
 <<EventMessenger "showMenu" true true>>
 /* passage content */
-<<set $endingImage to "/img/e-profit.jpg">>
-<<set $endingLabel to "The Corporate Trail - You Bleed for Incremental Profit">>
+<<set $endingImage to "/img/e-profit.png">>
+<<set $endingLabel to "pro">>
 <div class="abs-wrapper">
     <img class="logo" src="img/logo.png"/>
 	<div class="rel-wrapper">
@@ -16,6 +16,11 @@
                 <div class="ending__text">
                     <h1 class="ending__title">$user,You Bleed for Incremental Profit</h1>
                     <p class="ending__desc">$workStyle $orientation You’re a hero of free market enterprise. You don’t stop until the work is done, and value is safely returned to shareholders.</p>
+                    <<link "Play again?">>
+                        <<script>>
+                            Engine.restart();
+                        <</script>>
+                    <</link>>
                 </div>
             </div>
             <<SharingModule>>

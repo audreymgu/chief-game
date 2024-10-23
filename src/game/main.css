@@ -185,6 +185,7 @@ h1 {
   padding: 3px;
   background-image: linear-gradient(to bottom, #FFFFF5 0%, #FFFFF5 100%), linear-gradient(to bottom, #DFDFD0 0%, #DFDFD0 100%);
   background-clip: content-box, padding-box;
+  height: calc(100% - 6px);
 }
 @media (min-width: 650px) {
   .content {
@@ -511,7 +512,7 @@ h1 {
   padding: 0;
   margin-bottom: 0.75rem;
   font-family: start-2p;
-  font-size: 24px;
+  font-size: 20px;
   text-transform: uppercase;
 }
 @media (min-width: 650px) {
@@ -526,6 +527,10 @@ h1 {
   padding-left: 8px;
   padding-top: 8px;
   scrollbar-color: gray rgba(0, 0, 0, 0);
+}
+.ending__text a {
+  font-family: tickerbit;
+  color: #85A506;
 }
 @media (min-width: 650px) {
   .ending__text {
@@ -682,7 +687,7 @@ h1 {
   border-image-source: url("img/button-inactive.png");
 }
 .button--success a {
-  border-image-source: url("img/button-hover.png");
+  border-image-source: url("img/button.png");
   border-image-slice: 30% 40% fill;
   border-image-repeat: repeat;
   pointer-events: none;
@@ -1132,6 +1137,17 @@ h1 {
 .window-text::-webkit-scrollbar-thumb {
   background-color: #FDF7EE;
   border: 1px solid black; /* Space around the thumb to ensure visibility */
+}
+
+.bg {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+.bg--canned {
+  background-color: red;
 }
 
 /*# sourceMappingURL=main.css.map */

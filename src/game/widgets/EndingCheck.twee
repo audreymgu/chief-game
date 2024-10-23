@@ -33,6 +33,7 @@
     <</if>>
     /* ending check */
     <<if $personalityCheck is true>>
+        <<set $slack to false>>
         <<script>>
             console.log("Personality check is true");
         <</script>>
@@ -76,3 +77,4 @@
         <</if>>
     <</if>>
 <</widget>>
+

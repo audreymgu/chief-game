@@ -292,6 +292,7 @@ h1 {
   padding: 3px;
   background-image: linear-gradient(to bottom, #FFFFF5 0%, #FFFFF5 100%), linear-gradient(to bottom, #DFDFD0 0%, #DFDFD0 100%);
   background-clip: content-box, padding-box;
+  height: calc(100% - 6px);
 }
 @media (min-width: 650px) {
   .content {
@@ -618,7 +619,7 @@ h1 {
   padding: 0;
   margin-bottom: 0.75rem;
   font-family: start-2p;
-  font-size: 24px;
+  font-size: 20px;
   text-transform: uppercase;
 }
 @media (min-width: 650px) {
@@ -633,6 +634,10 @@ h1 {
   padding-left: 8px;
   padding-top: 8px;
   scrollbar-color: gray rgba(0, 0, 0, 0);
+}
+.ending__text a {
+  font-family: tickerbit;
+  color: #85A506;
 }
 @media (min-width: 650px) {
   .ending__text {
@@ -789,7 +794,7 @@ h1 {
   border-image-source: url("img/button-inactive.png");
 }
 .button--success a {
-  border-image-source: url("img/button-hover.png");
+  border-image-source: url("img/button.png");
   border-image-slice: 30% 40% fill;
   border-image-repeat: repeat;
   pointer-events: none;
@@ -1239,6 +1244,17 @@ h1 {
 .window-text::-webkit-scrollbar-thumb {
   background-color: #FDF7EE;
   border: 1px solid black; /* Space around the thumb to ensure visibility */
+}
+
+.bg {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+.bg--canned {
+  background-color: red;
 }
 
 /*# sourceMappingURL=main.css.map */
@@ -1430,6 +1446,7 @@ h1 {
   padding: 3px;
   background-image: linear-gradient(to bottom, #FFFFF5 0%, #FFFFF5 100%), linear-gradient(to bottom, #DFDFD0 0%, #DFDFD0 100%);
   background-clip: content-box, padding-box;
+  height: calc(100% - 6px);
 }
 @media (min-width: 650px) {
   .content {
@@ -1756,7 +1773,7 @@ h1 {
   padding: 0;
   margin-bottom: 0.75rem;
   font-family: start-2p;
-  font-size: 24px;
+  font-size: 20px;
   text-transform: uppercase;
 }
 @media (min-width: 650px) {
@@ -1771,6 +1788,10 @@ h1 {
   padding-left: 8px;
   padding-top: 8px;
   scrollbar-color: gray rgba(0, 0, 0, 0);
+}
+.ending__text a {
+  font-family: tickerbit;
+  color: #85A506;
 }
 @media (min-width: 650px) {
   .ending__text {
@@ -1927,7 +1948,7 @@ h1 {
   border-image-source: url("img/button-inactive.png");
 }
 .button--success a {
-  border-image-source: url("img/button-hover.png");
+  border-image-source: url("img/button.png");
   border-image-slice: 30% 40% fill;
   border-image-repeat: repeat;
   pointer-events: none;
@@ -2379,6 +2400,17 @@ h1 {
   border: 1px solid black; /* Space around the thumb to ensure visibility */
 }
 
+.bg {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+.bg--canned {
+  background-color: red;
+}
+
 /*# sourceMappingURL=main.css.map */</style><script role="script" id="twine-user-script" type="text/twine-javascript">// hide back + forward
 Config.history.controls = false;
 Config.passages.nobr = true;
@@ -2403,12 +2435,13 @@ setup.getPassageNames = function(tag) {
 // meters.min.js, for SugarCube 2, by Chapel
 // v1.0.1, 2024-07-22, 336675ff2cabe5f729a5f30d86aa409cc8432726
 ;!function(){"use strict";var t=!0,e=!1,s=!1,i={full:"#2ECC40",empty:"#FF4136",back:"#DDDDDD",height:"12px",width:"180px",animate:400,easing:"swing",text:"#111111",label:"",align:"center"},n=["center","left","right"],r=["swing","linear"];function a(t,e){return t&&"string"==typeof t&&(t=t.toLowerCase().trim())?t:e||""}function o(t){return t<.5?2*t*t:(4-2*t)*t-1}function l(t,e){if(!(this instanceof l))return new l(t,e);var s=clone(i);this.settings=Object.assign(s,t),this.settings.align=a(this.settings.align),this.settings.easing=a(this.settings.easing),n.includes(this.settings.align)||(this.settings.align="center"),r.includes(this.settings.easing)||(this.settings.easing="swing"),e=Number(e),Number.isNaN(e)&&(e=1),e=Math.clamp(e,0,1),this.value=e;var h=$(document.createElement("div")).addClass("chapel-meter").attr({"data-val":e,"data-label":this.settings.label}).css({position:"relative","background-color":this.settings.back,height:this.settings.height,width:this.settings.width,overflow:"hidden"}),g=$(document.createElement("div")).addClass("meter-label").css({top:0,right:0,"font-size":this.settings.height,"font-weight":"bold","line-height":"100%",width:"100%",height:"100%","vertical-align":"middle","text-align":this.settings.align,color:this.settings.text,"z-index":1,position:"relative",bottom:"100%"}).wiki(this.settings.label).appendTo(h),u=$(document.createElement("div")).addClass("meter-top").css({"background-color":this.settings.full,opacity:o(this.value),width:"100%",height:"100%","z-index":0}),c=$(document.createElement("div")).addClass("meter-bottom").css({position:"absolute",top:0,left:0,"background-color":this.settings.empty,opacity:1,width:100*this.value+"%",height:"100%","z-index":0}).append(u).appendTo(h);this.$element=h,this.$bars={top:u,bottom:c},this.$label=g,g.css("font-size",parseInt(h.css("height"),10)<parseInt($(".passage").css("font-size"),10)?h.css("height"):$(".passage").css("font-size")),g.css("line-height",h.css("height"))}Object.assign(l,{_list:new Map,is:function(t){return t instanceof l},has:function(t){return l._list.has(t)&&l.is(l._list.get(t))},get:function(t){return l.has(t)?l._list.get(t):null},del:function(t){l.has(t)&&l._list.delete(t)},add:function(t,s,i){if(!l.has(t)||e){Object.assign(s,{id:t});var n=new l(s,i);return l._list.set(t,n),n}console.error('Meter "'+t+'" already exists.')},_emit:function(t,e){l.is(t)&&t.$element.trigger({type:":"+e,meter:t})}}),Object.assign(l.prototype,{constructor:l,_label:function(t){var e=this;function s(){e.$label.empty().wiki(e.settings.label),e.$label.css("font-size",parseInt(e.$element.css("height"),10)<parseInt(e.$element.parent().css("font-size"),10)?e.$element.css("height"):e.$element.parent().css("font-size")),e.$label.css("line-height",e.$element.css("height"))}return t?setTimeout(s,Engine.minDomActionDelay):s(),this},_width:function(){var t=this;return this.$bars.bottom.animate({width:100*this.value+"%"},this.settings.animate,this.settings.easing,(function(){l._emit(t,"meter-animation-complete")})),this},_color:function(){return this.$bars.top.animate({opacity:o(this.value)},this.settings.animate,this.settings.easing),this},animate:function(){return l._emit(this,"meter-animation-start"),this._color()._width()._label()},val:function(t){return void 0!==t&&(t=Number(t),Number.isNaN(t)&&(t=1),t=Math.clamp(t,0,1),this.value=t,this.animate()),this.value},options:function(t){return t&&"object"==typeof t&&Object.assign(this.settings,t),this.settings},unwrap:function(){return this.$element[0]},place:function(t,e){var s=$(document.createElement("span"));return t instanceof jQuery||(t=$(t)),t[0]||console.warn("meter#place() -> no valid target"),e&&"object"==typeof e&&(e.classes&&(Array.isArray(e.classes)||"string"==typeof e.classes)&&s.addClass(e.classes),e.attr&&"object"==typeof e.attr&&s.attr(e.attr)),t.append(s.append(this.$element)),this._label(!0),this},on:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.on(t,e),this):this},one:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.one(t,e),this):this},off:function(t){return t=t&&"string"==typeof t&&t.trim()?t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "):".userland",this.$element.off(t),this},click:function(t,e){return this.$element.ariaClick(t,e),this},clone:function(){return new l(this.settings,this.value)},toJSON:function(){return JSON.reviveWrapper("new setup.Meter("+JSON.stringify(this.settings)+", "+this.value+")")}}),setup.Meter=l,t&&(window.Meter=window.Meter||l),Macro.add("newmeter",{tags:["colors","sizing","animation","label"],handler:function(){if(State.length>0&&!s)return this.error("The `<<newmeter>>` macro must be called in your `StoryInit` special passage. Seriously. No excuses. --Love, Chapel");if(this.args.length<1)return this.error("The `<<newmeter>>` macro requires at least one argument: a meter name.");var t=this.args[0],i=null,n=null,r=null,a=null;if("string"!=typeof t)return this.error("Invalid meter name.");if(t=t.trim(),l.has(t)&&!e)return this.error('Cannot clobber the existing meter "'+t+'".');this.payload.length&&(i=this.payload.find((function(t){return"colors"===t.name})),n=this.payload.find((function(t){return"sizing"===t.name})),r=this.payload.find((function(t){return"animation"===t.name})),a=this.payload.find((function(t){return"label"===t.name})));var o={};if(i){if(!i.args.length)return this.error("No arguments passed to the `<<colors>>` tag.");switch(i.args.length){case 1:o.empty=i.args[0],o.full="transparent";break;case 2:o.full=i.args[0],o.empty=i.args[1];break;default:o.full=i.args[0],o.empty=i.args[1],o.back=i.args[2]}}if(n){if(!n.args.length)return this.error("No arguments passed to the `<<sizing>>` tag.");o.width=n.args[0],n.args[1]&&(o.height=n.args[1])}if(r){if(!r.args.length)return this.error("No arguments passed to the `<<animation>>` tag.");if("boolean"!=typeof r.args[0]||r.args[0]){if("string"!=typeof r.args[0])return this.error("The argument to the `<<animation>>` tag should be `true`, `false`, or a valid CSS time value.");o.animate=Util.fromCssTime(r.args[0])}else o.animate=0;r.args[1]&&["swing","linear"].includes(r.args[1])&&(o.easing=r.args[1])}if(a){var h=a.args[0];if(!h||"string"!=typeof h)return this.error("The labelText argument for the `<<label>>` tag is required.");o.label=h.trim(),a.args[1]&&"string"==typeof a.args[1]&&(o.text=a.args[1]),a.args[2]&&"string"==typeof a.args[2]&&(o.align=a.args[2])}l.add(t,o,this.args[1])}}),Macro.add("showmeter",{handler:function(){if(this.args.length<1)return this.error("This macro requires at least one argument: the meter's name.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');"number"==typeof this.args[1]&&e.val(this.args[1]),e.place(this.output,{classes:"macro-"+this.name,attr:{id:"meter-"+Util.slugify(t)}})}}),Macro.add("updatemeter",{handler:function(){if(this.args.length<2)return this.error("This macro requires two arguments: the meter's name and a value.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');e.val(this.args[1])}})}();
-// end meters.min.js</script><tw-tag name="nobr" color="purple"></tw-tag><tw-tag name="StoryInit" color="orange"></tw-tag><tw-tag name="Q3" color="green"></tw-tag><tw-tag name="EndPromo" color="red"></tw-tag><tw-tag name="EndFired" color="red"></tw-tag><tw-tag name="widget" color="orange"></tw-tag><tw-tag name="Q2" color="green"></tw-tag><tw-tag name="Main" color="blue"></tw-tag><tw-tag name="EndUnhappy" color="red"></tw-tag><tw-tag name="Widget" color="green"></tw-tag><tw-tag name="Q4" color="green"></tw-tag><tw-tag name="EndE" color="orange"></tw-tag><tw-tag name="Q1" color="green"></tw-tag><tw-tag name="EndStay" color="red"></tw-tag><tw-passagedata pid="1" name="Burnout" tags="" position="925,525" size="100,100">&lt;&lt;script&gt;&gt;
+// end meters.min.js</script><tw-tag name="Q1" color="green"></tw-tag><tw-tag name="EndE" color="orange"></tw-tag><tw-tag name="EndStay" color="red"></tw-tag><tw-tag name="Widget" color="green"></tw-tag><tw-tag name="EndPromo" color="red"></tw-tag><tw-tag name="nobr" color="purple"></tw-tag><tw-tag name="EndFired" color="red"></tw-tag><tw-tag name="StoryInit" color="orange"></tw-tag><tw-tag name="Q3" color="green"></tw-tag><tw-tag name="Q4" color="green"></tw-tag><tw-tag name="Main" color="blue"></tw-tag><tw-tag name="widget" color="orange"></tw-tag><tw-tag name="Q2" color="green"></tw-tag><tw-tag name="EndUnhappy" color="red"></tw-tag><tw-passagedata pid="1" name="Burnout" tags="" position="925,525" size="100,100">&lt;&lt;set $slack to false&gt;&gt;
+&lt;&lt;script&gt;&gt;
     UIBar.hide();
 &lt;&lt;/script&gt;&gt;
 &lt;&lt;EventMessenger &quot;showMenu&quot; true true&gt;&gt;
 /* passage content */
-&lt;&lt;set $endingImage to &quot;/img/ending1.png&quot;&gt;&gt;
+&lt;&lt;set $endingImage to &quot;/img/e-burn.png&quot;&gt;&gt;
 &lt;&lt;set $endingLabel to &quot;The Corporate Trail - You Chose Violence&quot;&gt;&gt;
 &lt;div class=&quot;abs-wrapper&quot;&gt;
     &lt;img class=&quot;logo&quot; src=&quot;img/logo.png&quot;/&gt;
@@ -2432,19 +2465,21 @@ setup.getPassageNames = function(tag) {
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Canned" tags="" position="1175,650" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Canned" tags="" position="1175,650" size="100,100">&lt;&lt;set $slack to false&gt;&gt;
+&lt;&lt;script&gt;&gt;
     UIBar.hide();
 &lt;&lt;/script&gt;&gt;
-&lt;&lt;EventMessenger &quot;showMenu&quot; true true&gt;&gt;
-&lt;&lt;set $endingImage to &quot;/img/ending1.png&quot;&gt;&gt;
+&lt;&lt;EventMessenger &quot;menuColor&quot; true&gt;&gt;
+&lt;&lt;set $endingImage to &quot;/img/e-canned.png&quot;&gt;&gt;
 &lt;&lt;set $endingLabel to &quot;The Corporate Trail - You Chose Violence&quot;&gt;&gt;
+&lt;div class=&quot;bg bg--canned&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;abs-wrapper&quot;&gt;
-    &lt;img class=&quot;logo&quot; src=&quot;img/logo.png&quot;/&gt;
+    &lt;img class=&quot;logo&quot; src=&quot;img/gameover.svg&quot;/&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
         &lt;div class=&quot;content content--ending&quot;&gt;
             &lt;&lt;TitleBar &quot;🗑️🗑️ YOU GOT CANNED 🗑️🗑️&quot;&gt;&gt;
             &lt;div class=&quot;ending&quot;&gt;
-                &lt;img class=&quot;ending__img&quot; src=&quot;img/e-canned.png&quot;/&gt;
+                &lt;img class=&quot;ending__img&quot; src=&quot;img/e-canned.jpg&quot;/&gt;
                 &lt;div class=&quot;ending__text&quot;&gt;
                     &lt;h1 class=&quot;ending__title&quot;&gt;$user,You Got Canned&lt;/h1&gt;
                     &lt;p class=&quot;ending__desc&quot;&gt;Officially, your position was made redundant in a department restructuring designed to right-size operations. Unofficially, in the words of Kenny Powers: Yer fuckin’ out!&lt;/p&gt;
@@ -2497,7 +2532,7 @@ setup.getPassageNames = function(tag) {
 &lt;&lt;EventMessenger &quot;showMenu&quot; true true&gt;&gt;
 /* passage content */
 &lt;&lt;set $endingImage to &quot;/img/e-friends.png&quot;&gt;&gt;
-&lt;&lt;set $endingLabel to &quot;The Corporate Trail - You&#39;re Not Here to Make Friends&quot;&gt;&gt;
+&lt;&lt;set $endingLabel to &quot;fri&quot;&gt;&gt;
 &lt;div class=&quot;abs-wrapper&quot;&gt;
     &lt;img class=&quot;logo&quot; src=&quot;img/logo.png&quot;/&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
@@ -2508,6 +2543,11 @@ setup.getPassageNames = function(tag) {
                 &lt;div class=&quot;ending__text&quot;&gt;
                     &lt;h1 class=&quot;ending__title&quot;&gt;$user,You’re Not Here to Make Friends&lt;/h1&gt;
                     &lt;p class=&quot;ending__desc&quot;&gt;$workStyle $orientation Water cooler talk was never your thing. You’d prefer coworkers not bother you, but if they must, they need to make it *actionable*.&lt;/p&gt;
+                    &lt;&lt;link &quot;Play again?&quot;&gt;&gt;
+                        &lt;&lt;script&gt;&gt;
+                            Engine.restart();
+                        &lt;&lt;/script&gt;&gt;
+                    &lt;&lt;/link&gt;&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;&lt;SharingModule&gt;&gt;
@@ -2519,8 +2559,8 @@ setup.getPassageNames = function(tag) {
 &lt;&lt;/script&gt;&gt;
 &lt;&lt;EventMessenger &quot;showMenu&quot; true true&gt;&gt;
 /* passage content */
-&lt;&lt;set $endingImage to &quot;/img/e-boss.jpg&quot;&gt;&gt;
-&lt;&lt;set $endingLabel to &quot;The Corporate Trail - You Manage Like a Boss&quot;&gt;&gt;
+&lt;&lt;set $endingImage to &quot;/img/e-boss.png&quot;&gt;&gt;
+&lt;&lt;set $endingLabel to &quot;bos&quot;&gt;&gt;
 &lt;div class=&quot;abs-wrapper&quot;&gt;
     &lt;img class=&quot;logo&quot; src=&quot;img/logo.png&quot;/&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
@@ -2531,6 +2571,11 @@ setup.getPassageNames = function(tag) {
                 &lt;div class=&quot;ending__text&quot;&gt;
                     &lt;h1 class=&quot;ending__title&quot;&gt;$user,You Manage Like a Boss&lt;/h1&gt;
                     &lt;p class=&quot;ending__desc&quot;&gt;$workStyle $orientation You have an innate ability to herd your colleagues toward a common goal. Have you considered starting a cult?&lt;/p&gt;
+                    &lt;&lt;link &quot;Play again?&quot;&gt;&gt;
+                        &lt;&lt;script&gt;&gt;
+                            Engine.restart();
+                        &lt;&lt;/script&gt;&gt;
+                    &lt;&lt;/link&gt;&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;&lt;SharingModule&gt;&gt;
@@ -2542,18 +2587,23 @@ setup.getPassageNames = function(tag) {
 &lt;&lt;/script&gt;&gt;
 &lt;&lt;EventMessenger &quot;showMenu&quot; true true&gt;&gt;
 /* passage content */
-&lt;&lt;set $endingImage to &quot;/img/e-beloved.jpg&quot;&gt;&gt;
-&lt;&lt;set $endingLabel to &quot;The Corporate Trail - You&#39;re a Beloved Office Presence&quot;&gt;&gt;
+&lt;&lt;set $endingImage to &quot;/img/e-beloved.png&quot;&gt;&gt;
+&lt;&lt;set $endingLabel to &quot;bel&quot;&gt;&gt;
 &lt;div class=&quot;abs-wrapper&quot;&gt;
     &lt;img class=&quot;logo&quot; src=&quot;img/logo.png&quot;/&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
         &lt;div class=&quot;content content--ending&quot;&gt;
-            &lt;&lt;TitleBar &quot;🔪🔪 YOU CHOSE VIOLENCE 🔪🔪&quot;&gt;&gt;
+            &lt;&lt;TitleBar &quot;💗💗 YOU ARE BELOVED 💗💗&quot;&gt;&gt;
             &lt;div class=&quot;ending&quot;&gt;
                 &lt;img class=&quot;ending__img&quot; src=&quot;img/e-beloved.jpg&quot;/&gt;
                 &lt;div class=&quot;ending__text&quot;&gt;
                     &lt;h1 class=&quot;ending__title&quot;&gt;$user,You&#39;re a Beloved Office Presence&lt;/h1&gt;
                     &lt;p class=&quot;ending__desc&quot;&gt;$workStyle $orientation People like working with you. They tend to think you’re on their side—and they’re right. You probably get hit up on LinkedIn a lot.&lt;/p&gt;
+                    &lt;&lt;link &quot;Play again?&quot;&gt;&gt;
+                        &lt;&lt;script&gt;&gt;
+                            Engine.restart();
+                        &lt;&lt;/script&gt;&gt;
+                    &lt;&lt;/link&gt;&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;&lt;SharingModule&gt;&gt;
@@ -2565,8 +2615,8 @@ setup.getPassageNames = function(tag) {
 &lt;&lt;/script&gt;&gt;
 &lt;&lt;EventMessenger &quot;showMenu&quot; true true&gt;&gt;
 /* passage content */
-&lt;&lt;set $endingImage to &quot;/img/e-out.jpg&quot;&gt;&gt;
-&lt;&lt;set $endingLabel to &quot;The Corporate Trail - You Chose Violence&quot;&gt;&gt;
+&lt;&lt;set $endingImage to &quot;/img/e-out.png&quot;&gt;&gt;
+&lt;&lt;set $endingLabel to &quot;out&quot;&gt;&gt;
 &lt;div class=&quot;abs-wrapper&quot;&gt;
     &lt;img class=&quot;logo&quot; src=&quot;img/logo.png&quot;/&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
@@ -2577,6 +2627,11 @@ setup.getPassageNames = function(tag) {
                 &lt;div class=&quot;ending__text&quot;&gt;
                     &lt;h1 class=&quot;ending__title&quot;&gt;$user,You Were Just Heading Out&lt;/h1&gt;
                     &lt;p class=&quot;ending__desc&quot;&gt;$workStyle $orientation Oh, a bunch of stakeholders are jumping on a quick Teams to chat through action items? Sorry, you’ll have to circle back.&lt;/p&gt;
+                    &lt;&lt;link &quot;Play again?&quot;&gt;&gt;
+                        &lt;&lt;script&gt;&gt;
+                            Engine.restart();
+                        &lt;&lt;/script&gt;&gt;
+                    &lt;&lt;/link&gt;&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;&lt;SharingModule&gt;&gt;
@@ -2588,8 +2643,8 @@ setup.getPassageNames = function(tag) {
 &lt;&lt;/script&gt;&gt;
 &lt;&lt;EventMessenger &quot;showMenu&quot; true true&gt;&gt;
 /* passage content */
-&lt;&lt;set $endingImage to &quot;/img/e-violence.jpg&quot;&gt;&gt;
-&lt;&lt;set $endingLabel to &quot;The Corporate Trail - You Chose Violence&quot;&gt;&gt;
+&lt;&lt;set $endingImage to &quot;/img/e-violence.png&quot;&gt;&gt;
+&lt;&lt;set $endingLabel to &quot;vio&quot;&gt;&gt;
 &lt;div class=&quot;abs-wrapper&quot;&gt;
     &lt;img class=&quot;logo&quot; src=&quot;img/logo.png&quot;/&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
@@ -2600,6 +2655,11 @@ setup.getPassageNames = function(tag) {
                 &lt;div class=&quot;ending__text&quot;&gt;
                     &lt;h1 class=&quot;ending__title&quot;&gt;$user,You Chose Violence&lt;/h1&gt;
                     &lt;p class=&quot;ending__desc&quot;&gt;$workStyle $orientation For you to win, someone else has to lose. Call it a competitive spirit. You either played D1 athletics or too much Monopoly.&lt;/p&gt;
+                    &lt;&lt;link &quot;Play again?&quot;&gt;&gt;
+                        &lt;&lt;script&gt;&gt;
+                            Engine.restart();
+                        &lt;&lt;/script&gt;&gt;
+                    &lt;&lt;/link&gt;&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;&lt;SharingModule&gt;&gt;
@@ -2611,8 +2671,8 @@ setup.getPassageNames = function(tag) {
 &lt;&lt;/script&gt;&gt;
 &lt;&lt;EventMessenger &quot;showMenu&quot; true true&gt;&gt;
 /* passage content */
-&lt;&lt;set $endingImage to &quot;/img/e-profit.jpg&quot;&gt;&gt;
-&lt;&lt;set $endingLabel to &quot;The Corporate Trail - You Bleed for Incremental Profit&quot;&gt;&gt;
+&lt;&lt;set $endingImage to &quot;/img/e-profit.png&quot;&gt;&gt;
+&lt;&lt;set $endingLabel to &quot;pro&quot;&gt;&gt;
 &lt;div class=&quot;abs-wrapper&quot;&gt;
     &lt;img class=&quot;logo&quot; src=&quot;img/logo.png&quot;/&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
@@ -2623,6 +2683,11 @@ setup.getPassageNames = function(tag) {
                 &lt;div class=&quot;ending__text&quot;&gt;
                     &lt;h1 class=&quot;ending__title&quot;&gt;$user,You Bleed for Incremental Profit&lt;/h1&gt;
                     &lt;p class=&quot;ending__desc&quot;&gt;$workStyle $orientation You’re a hero of free market enterprise. You don’t stop until the work is done, and value is safely returned to shareholders.&lt;/p&gt;
+                    &lt;&lt;link &quot;Play again?&quot;&gt;&gt;
+                        &lt;&lt;script&gt;&gt;
+                            Engine.restart();
+                        &lt;&lt;/script&gt;&gt;
+                    &lt;&lt;/link&gt;&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;&lt;SharingModule&gt;&gt;
@@ -2635,7 +2700,7 @@ setup.getPassageNames = function(tag) {
 &lt;&lt;EventMessenger &quot;showMenu&quot; true true&gt;&gt;
 /* passage content */
 &lt;&lt;set $endingImage to &quot;/img/placeholder.png&quot;&gt;&gt;
-&lt;&lt;set $endingLabel to &quot;The Corporate Trail - You Jump on Grenades&quot;&gt;&gt;
+&lt;&lt;set $endingLabel to &quot;gre&quot;&gt;&gt;
 &lt;div class=&quot;abs-wrapper&quot;&gt;
     &lt;img class=&quot;logo&quot; src=&quot;img/logo.png&quot;/&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
@@ -2646,6 +2711,11 @@ setup.getPassageNames = function(tag) {
                 &lt;div class=&quot;ending__text&quot;&gt;
                     &lt;h1 class=&quot;ending__title&quot;&gt;$user,You Jump on Grenades&lt;/h1&gt;
                     &lt;p class=&quot;ending__desc&quot;&gt;$workStyle $orientation Whatever the problem, you make it your own. Nobody asks you to do this, but you like to imagine that someone, somewhere is keeping score.&lt;/p&gt;
+                    &lt;&lt;link &quot;Play again?&quot;&gt;&gt;
+                        &lt;&lt;script&gt;&gt;
+                            Engine.restart();
+                        &lt;&lt;/script&gt;&gt;
+                    &lt;&lt;/link&gt;&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;&lt;SharingModule&gt;&gt;
@@ -2657,8 +2727,8 @@ setup.getPassageNames = function(tag) {
 &lt;&lt;/script&gt;&gt;
 &lt;&lt;EventMessenger &quot;showMenu&quot; true true&gt;&gt;
 /* passage content */
-&lt;&lt;set $endingImage to &quot;/img/ending1.png&quot;&gt;&gt;
-&lt;&lt;set $endingLabel to &quot;The Corporate Trail - You Chose Violence&quot;&gt;&gt;
+&lt;&lt;set $endingImage to &quot;/img/e-thrones.png&quot;&gt;&gt;
+&lt;&lt;set $endingLabel to &quot;got&quot;&gt;&gt;
 &lt;div class=&quot;abs-wrapper&quot;&gt;
     &lt;img class=&quot;logo&quot; src=&quot;img/logo.png&quot;/&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
@@ -2669,19 +2739,25 @@ setup.getPassageNames = function(tag) {
                 &lt;div class=&quot;ending__text&quot;&gt;
                     &lt;h1 class=&quot;ending__title&quot;&gt;$user,You Game-of-Thrones&#39;d It&lt;/h1&gt;
                     &lt;p class=&quot;ending__desc&quot;&gt;$workStyle $orientation Your feel for office politics is as honed as it is frightening. Maybe you should look into actual politics.&lt;/p&gt;
+                    &lt;&lt;link &quot;Play again?&quot;&gt;&gt;
+                        &lt;&lt;script&gt;&gt;
+                            Engine.restart();
+                        &lt;&lt;/script&gt;&gt;
+                    &lt;&lt;/link&gt;&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;&lt;SharingModule&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-&lt;&lt;audio &quot;tada&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="QUIT" tags="QUIT" position="225,225" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;&lt;audio &quot;tada&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="QUIT" tags="QUIT" position="225,225" size="100,100">&lt;&lt;set $slack to false&gt;&gt;
+&lt;&lt;script&gt;&gt;
     UIBar.hide();
 &lt;&lt;/script&gt;&gt;
 &lt;&lt;EventMessenger &quot;showMenu&quot; true true&gt;&gt;
 /* passage content */
 &lt;&lt;set $endingImage to &quot;/img/e-quit.png&quot;&gt;&gt;
-&lt;&lt;set $endingLabel to &quot;The Corporate Trail - You Chose Violence&quot;&gt;&gt;
+&lt;&lt;set $endingLabel to &quot;qui&quot;&gt;&gt;
 &lt;div class=&quot;abs-wrapper&quot;&gt;
     &lt;img class=&quot;logo&quot; src=&quot;img/logo.png&quot;/&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
@@ -2691,7 +2767,13 @@ setup.getPassageNames = function(tag) {
                 &lt;img class=&quot;ending__img&quot; src=&quot;img/e-quit.jpg&quot;/&gt;
                 &lt;div class=&quot;ending__text&quot;&gt;
                     &lt;h1 class=&quot;ending__title&quot;&gt;$user,You Quit&lt;/h1&gt;
-                    &lt;p class=&quot;ending__desc&quot;&gt;Spend your best years saying shit like “circle back” while drinking a watery K-Cup in some anonymous conference room? No thanks. Time to abscond to Costa Rica and become an iguana tamer.&lt;/p&gt;
+                    &lt;p class=&quot;ending__desc&quot;&gt;Spend your best years saying shit like “circle back” while drinking a watery K-Cup in some anonymous conference room? No thanks. Time to abscond to Costa Rica and become an iguana tamer.
+                    &lt;/p&gt;
+                    &lt;&lt;link &quot;Play again?&quot;&gt;&gt;
+                        &lt;&lt;script&gt;&gt;
+                            Engine.restart();
+                        &lt;&lt;/script&gt;&gt;
+                    &lt;&lt;/link&gt;&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;&lt;SharingModule&gt;&gt;
@@ -2727,10 +2809,7 @@ setup.getPassageNames = function(tag) {
                 &quot;s|Start a petition|Coalition|Right to heat&quot;
             &gt;&gt;
         &lt;/div&gt;
-&lt;/div&gt;
-&lt;&lt;timed 0.1s&gt;&gt;
-    &lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Get blankets" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;0&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="Get blankets" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;0&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -2879,10 +2958,7 @@ setup.getPassageNames = function(tag) {
                 &quot;s|Volunteer your rival|Deteriorate|Turn around&quot;
             &gt;&gt;
         &lt;/div&gt;
-&lt;/div&gt;
-&lt;&lt;timed 0.1s&gt;&gt;
-    &lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="Fuck it we ball" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-2&quot; &quot;1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="Fuck it we ball" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-2&quot; &quot;1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -3008,10 +3084,7 @@ setup.getPassageNames = function(tag) {
                 &quot;Send your deputy&quot;
             &gt;&gt;
         &lt;/div&gt;
-&lt;/div&gt;
-&lt;&lt;timed 0.1s&gt;&gt;
-    &lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="No way" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="No way" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -3112,10 +3185,7 @@ setup.getPassageNames = function(tag) {
                 &quot;Ask for an exception&quot;
             &gt;&gt;
         &lt;/div&gt;
-&lt;/div&gt;
-&lt;&lt;timed 0.1s&gt;&gt;
-    &lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="Leggings" tags="" position="600,800" size="100,100">/* passage content */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="Leggings" tags="" position="600,800" size="100,100">/* passage content */
 &lt;&lt;CalcResource &quot;-1&quot; &quot;0&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
@@ -3266,8 +3336,7 @@ setup.getPassageNames = function(tag) {
                 &quot;s|Leave a comment|Kinda snarky|Dunked on&quot;
             &gt;&gt;
         &lt;/div&gt;
-&lt;/div&gt;
-&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="She&#39;s grateful" tags="" position="600,800" size="100,100">/* passage content */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="35" name="She&#39;s grateful" tags="" position="600,800" size="100,100">/* passage content */
 &lt;&lt;CalcResource &quot;0&quot; &quot;1&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
@@ -3418,8 +3487,7 @@ setup.getPassageNames = function(tag) {
                 &quot;Two words: silent mode&quot;
             &gt;&gt;
         &lt;/div&gt;
-&lt;/div&gt;
-&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="Stay late" tags="" position="600,800" size="100,100">/* passage content */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="41" name="Stay late" tags="" position="600,800" size="100,100">/* passage content */
 &lt;&lt;CalcResource &quot;-2&quot; &quot;0&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
@@ -3545,8 +3613,7 @@ setup.getPassageNames = function(tag) {
                 &quot;Speak truth to power&quot;
             &gt;&gt;
         &lt;/div&gt;
-&lt;/div&gt;
-&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="Sleep when you&#39;re dead" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-2&quot; &quot;1&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="Sleep when you&#39;re dead" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-2&quot; &quot;1&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -3644,8 +3711,7 @@ setup.getPassageNames = function(tag) {
                 &quot;s|Verbal judo him|You suggest|You stammer&quot;
             &gt;&gt;
         &lt;/div&gt;
-&lt;/div&gt;
-&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="Sorry I care" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="50" name="Sorry I care" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;0&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -3791,8 +3857,7 @@ setup.getPassageNames = function(tag) {
                 &quot;s|Start a women&#39;s group|You convince|Get rebranded&quot;
             &gt;&gt;
         &lt;/div&gt;
-&lt;/div&gt;
-&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="Find the time" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="56" name="Find the time" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;1&quot; &quot;-1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -3914,8 +3979,7 @@ setup.getPassageNames = function(tag) {
                 &quot;Cirque du Soleil&quot;
             &gt;&gt;
         &lt;/div&gt;
-&lt;/div&gt;
-&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="At the office" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="61" name="At the office" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;0&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -4011,8 +4075,7 @@ setup.getPassageNames = function(tag) {
                 &quot;DISREGARD!&quot;
             &gt;&gt;
         &lt;/div&gt;
-&lt;/div&gt;
-&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="65" name="Fire their ass" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="65" name="Fire their ass" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;-1&quot; &quot;1&quot; &quot;1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -4109,8 +4172,7 @@ setup.getPassageNames = function(tag) {
                 &quot;h|Make sarcastic remark|You demolish|Too far&quot;
             &gt;&gt;
         &lt;/div&gt;
-&lt;/div&gt;
-&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="Smile &amp; nod" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;-1&quot; &quot;-1&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="69" name="Smile &amp; nod" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;-1&quot; &quot;1&quot; &quot;-1&quot; &quot;-1&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -4208,8 +4270,7 @@ setup.getPassageNames = function(tag) {
                 &quot;None of his business&quot;
             &gt;&gt;
         &lt;/div&gt;
-&lt;/div&gt;
-&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="73" name="Play dumb" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="73" name="Play dumb" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -4307,8 +4368,7 @@ setup.getPassageNames = function(tag) {
                 &quot;s|Threaten to walk|Big gamble|Sorry you&quot;
             &gt;&gt;
         &lt;/div&gt;
-&lt;/div&gt;
-&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="77" name="Persuasive slides" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;1&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="77" name="Persuasive slides" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;1&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -4453,8 +4513,7 @@ setup.getPassageNames = function(tag) {
                 &quot;s|Be diplomatic|Artfully constructed|Gentle parenting&quot;
             &gt;&gt;
         &lt;/div&gt;
-&lt;/div&gt;
-&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="83" name="Command facts" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;0&quot; &quot;1&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="83" name="Command facts" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;0&quot; &quot;1&quot; &quot;1&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -4575,8 +4634,7 @@ setup.getPassageNames = function(tag) {
                 &quot;Own it with a joke|You laugh|Borderline inappropriate&quot;
             &gt;&gt;
         &lt;/div&gt;
-&lt;/div&gt;
-&lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;</tw-passagedata><tw-passagedata pid="88" name="Close tab" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="88" name="Close tab" tags="" position="600,800" size="100,100">&lt;&lt;CalcResource &quot;1&quot; &quot;0&quot; &quot;-1&quot; &quot;0&quot;&gt;&gt;
 &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
 &lt;&lt;TitleBar $quarterLabel&gt;&gt;
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
@@ -4747,6 +4805,7 @@ setup.getPassageNames = function(tag) {
 				&lt;/div&gt;
 				&lt;div id=&quot;login&quot; class=&quot;button  button--disabled&quot;&gt;
 					&lt;&lt;link &quot;Next&quot;&gt;&gt;
+						&lt;&lt;set $slack to true&gt;&gt;
 						&lt;&lt;script&gt;&gt;
 							var userField = document.getElementById(&quot;textbox-user&quot;);
 							var inputValue = userField.value.trim();
@@ -4819,75 +4878,97 @@ setup.getPassageNames = function(tag) {
 			loginCheck();
 		})
     });
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="PassageDone" tags="" position="475,1225" size="100,100">&lt;&lt;script&gt;&gt;    
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="PassageDone" tags="" position="475,1225" size="100,100">&lt;&lt;script&gt;&gt;
+    var endingLabel = State.getVar(&quot;$endingLabel&quot;).toString();
+    var endingImage = State.getVar(&quot;$endingImage&quot;);
+
+    // Function to fetch the image blob
+    async function fetchImageBlob(imageUrl) {
+        try {
+            const response = await fetch(imageUrl);
+            return await response.blob();
+        } catch (error) {
+            console.error(&#39;Failed to fetch image:&#39;, error);
+            return null;
+        }
+    }
+
+    // Share button functionality
     if (document.querySelector(&#39;#sharing&#39;)) {
-        var btn = document.querySelector(&#39;#sharing&#39;);
-        var endingImage = State.getVar(&quot;$endingImage&quot;);
-        var endingLabel = State.getVar(&quot;$endingLabel&quot;).toString() + &quot;.png&quot;;
-        btn.addEventListener(&#39;click&#39;, async () =&gt; {
-            // path to image
-            const response = await fetch(endingImage);
+        var shareBtn = document.querySelector(&#39;#sharing&#39;);
+
+        shareBtn.addEventListener(&#39;click&#39;, async () =&gt; {
+            const blob = await fetchImageBlob(endingImage);
             
-            // convert to blob
-            const blob = await response.blob();
+            if (!blob) {
+                console.error(&#39;Image blob is not available for sharing.&#39;);
+                return;
+            }
 
-            const file = new File([blob], endingLabel, {
-                type: &#39;image/png&#39;
-            });
-
+            var resultURL = &#39;https://chief-game.vercel.app/?result=&#39; + endingLabel;
             let shareData = {
-                files: [file]
+                url: resultURL,
             };
-            // copy to clipboard if web share unavailable
-            if (!navigator.canShare) {
-                console.log(&#39;Web Share API not available. Using clipboard as a fallback.&#39;);
+
+            // Fallback to clipboard if Web Share API is unavailable
+            if (!navigator.canShare || !navigator.canShare(shareData)) {
+                console.log(&#39;Web Share API not available. Using clipboard as fallback.&#39;);
                 try {
-                    btn.classList.remove(&quot;button--success&quot;);
-                    btn.children[0].innerText = &quot;Copying...&quot;;
-                    navigator.clipboard.write([
+                    shareBtn.classList.remove(&quot;button--success&quot;);
+                    shareBtn.children[0].innerText = &quot;Copying...&quot;;
+                    await navigator.clipboard.write([
                         new ClipboardItem({
                             &#39;image/png&#39;: blob
                         })
                     ]);
-                    // add delay to help communicate state
-                    setTimeout(function(){
-                        btn.children[0].innerText = &quot;Copied to Clipboard&quot;;
-                        btn.classList.add(&quot;button--success&quot;);
+                    setTimeout(function () {
+                        shareBtn.children[0].innerText = &quot;Copied to Clipboard&quot;;
+                        shareBtn.classList.add(&quot;button--success&quot;);
                     }, 200);
                 } catch (error) {
                     console.error(error);
                 }
                 return;
             }
-            
-            if (!navigator.canShare(shareData)) {
-                console.log(&#39;Share data unsupported, disallowed, or invalid. Using clipboard as a fallback.&#39;);
-                try {
-                    btn.classList.remove(&quot;button--success&quot;);
-                    btn.children[0].innerText = &quot;Copying...&quot;;
-                    navigator.clipboard.write([
-                        new ClipboardItem({
-                            &#39;image/png&#39;: blob
-                        })
-                    ]);
-                    // add delay to help communicate state
-                    setTimeout(function(){
-                        btn.children[0].innerText = &quot;Copied to Clipboard&quot;;
-                        btn.classList.add(&quot;button--success&quot;);
-                    }, 200);
-                } catch (error) {
-                    console.error(error);
-                }
-                return;
-            }
-            
+
+            // Try sharing via Web Share API
             navigator.share(shareData)
-            .then(() =&gt; {
-                console.log(&#39;Shared successfully&#39;);
-            })
-            .catch((e) =&gt; {
-                console.log(&#39;Error: &#39; + e);
-            })
+                .then(() =&gt; {
+                    console.log(&#39;Shared successfully&#39;);
+                })
+                .catch((e) =&gt; {
+                    console.log(&#39;Error: &#39; + e);
+                });
+        });
+    }
+
+    // Clipboard functionality (Separate Event Listener)
+    if (document.querySelector(&#39;#clip&#39;)) {
+        var clipBtn = document.querySelector(&#39;#clip&#39;);
+
+        clipBtn.addEventListener(&#39;click&#39;, async () =&gt; {
+            const blob = await fetchImageBlob(endingImage);
+
+            if (!blob) {
+                console.error(&#39;Image blob is not available for clipboard.&#39;);
+                return;
+            }
+
+            try {
+                clipBtn.classList.remove(&quot;button--success&quot;);
+                clipBtn.children[0].innerText = &quot;Copying...&quot;;
+                await navigator.clipboard.write([
+                    new ClipboardItem({
+                        &#39;image/png&#39;: blob
+                    })
+                ]);
+                setTimeout(function () {
+                    clipBtn.children[0].innerText = &quot;Copied to Clipboard&quot;;
+                    clipBtn.classList.add(&quot;button--success&quot;);
+                }, 200);
+            } catch (error) {
+                console.error(&#39;Failed to copy image to clipboard:&#39;, error);
+            }
         });
     }
 &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="PassageHeader" tags="" position="600,1225" size="100,100">&lt;div id=&quot;about&quot; class=&quot;about-window about-window--hidden&quot;&gt;
@@ -4915,6 +4996,11 @@ setup.getPassageNames = function(tag) {
             });
         });
     &lt;&lt;/script&gt;&gt;
+    &lt;&lt;if $slack is true&gt;&gt;
+        &lt;&lt;timed 0.1s&gt;&gt;
+            &lt;&lt;audio &quot;slack&quot; volume 0.25 play&gt;&gt;
+        &lt;&lt;/timed&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
 &lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="96" name="PassageReady" tags="" position="725,1225" size="100,100">&lt;&lt;script&gt;&gt;
     window.addEventListener(&#39;message&#39;, function (event) {
         // check the message content
@@ -5117,6 +5203,7 @@ setup.getPassageNames = function(tag) {
     &lt;&lt;/if&gt;&gt;
     /* ending check */
     &lt;&lt;if $personalityCheck is true&gt;&gt;
+        &lt;&lt;set $slack to false&gt;&gt;
         &lt;&lt;script&gt;&gt;
             console.log(&quot;Personality check is true&quot;);
         &lt;&lt;/script&gt;&gt;
@@ -5263,13 +5350,7 @@ setup.getPassageNames = function(tag) {
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="110" name="SharingModule" tags="widget" position="1225,1350" size="100,100">&lt;&lt;widget &quot;SharingModule&quot;&gt;&gt;
     &lt;div class=&quot;btn-area btn-area--ending&quot;&gt;
         &lt;div class=&quot;button button--ending button--sharing&quot; id=&quot;sharing&quot;&gt;&lt;a&gt;Share&lt;/a&gt;&lt;/div&gt;
-        &lt;div class=&quot;button&quot;&gt;
-            &lt;&lt;link &quot;Play Again?&quot;&gt;&gt;
-                &lt;&lt;script&gt;&gt;
-                    Engine.restart();
-                &lt;&lt;/script&gt;&gt;
-            &lt;&lt;/link&gt;&gt;
-        &lt;/div&gt;
+        &lt;div class=&quot;button&quot; id=&quot;clip&quot;&gt;&lt;a&gt;Copy Image to Clipboard&lt;/a&gt;&lt;/div&gt;
     &lt;/div&gt;
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="111" name="TitleBar" tags="widget" position="100,1475" size="100,100">&lt;&lt;widget &quot;TitleBar&quot;&gt;&gt;
     &lt;div class=&quot;titlebar&quot;&gt;

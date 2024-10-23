@@ -1,10 +1,11 @@
 :: Burnout {"position":"925,525","size":"100,100"}
+<<set $slack to false>>
 <<script>>
     UIBar.hide();
 <</script>>
 <<EventMessenger "showMenu" true true>>
 /* passage content */
-<<set $endingImage to "/img/ending1.png">>
+<<set $endingImage to "/img/e-burn.png">>
 <<set $endingLabel to "The Corporate Trail - You Chose Violence">>
 <div class="abs-wrapper">
     <img class="logo" src="img/logo.png"/>

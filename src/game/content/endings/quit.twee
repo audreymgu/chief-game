@@ -1,11 +1,12 @@
 :: QUIT [QUIT]
+<<set $slack to false>>
 <<script>>
     UIBar.hide();
 <</script>>
 <<EventMessenger "showMenu" true true>>
 /* passage content */
 <<set $endingImage to "/img/e-quit.png">>
-<<set $endingLabel to "The Corporate Trail - You Chose Violence">>
+<<set $endingLabel to "qui">>
 <div class="abs-wrapper">
     <img class="logo" src="img/logo.png"/>
 	<div class="rel-wrapper">
@@ -15,7 +16,13 @@
                 <img class="ending__img" src="img/e-quit.jpg"/>
                 <div class="ending__text">
                     <h1 class="ending__title">$user,You Quit</h1>
-                    <p class="ending__desc">Spend your best years saying shit like “circle back” while drinking a watery K-Cup in some anonymous conference room? No thanks. Time to abscond to Costa Rica and become an iguana tamer.</p>
+                    <p class="ending__desc">Spend your best years saying shit like “circle back” while drinking a watery K-Cup in some anonymous conference room? No thanks. Time to abscond to Costa Rica and become an iguana tamer.
+                    </p>
+                    <<link "Play again?">>
+                        <<script>>
+                            Engine.restart();
+                        <</script>>
+                    <</link>>
                 </div>
             </div>
             <<SharingModule>>

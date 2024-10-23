@@ -4,8 +4,8 @@
 <</script>>
 <<EventMessenger "showMenu" true true>>
 /* passage content */
-<<set $endingImage to "/img/e-out.jpg">>
-<<set $endingLabel to "The Corporate Trail - You Chose Violence">>
+<<set $endingImage to "/img/e-out.png">>
+<<set $endingLabel to "out">>
 <div class="abs-wrapper">
     <img class="logo" src="img/logo.png"/>
 	<div class="rel-wrapper">
@@ -16,6 +16,11 @@
                 <div class="ending__text">
                     <h1 class="ending__title">$user,You Were Just Heading Out</h1>
                     <p class="ending__desc">$workStyle $orientation Oh, a bunch of stakeholders are jumping on a quick Teams to chat through action items? Sorry, you’ll have to circle back.</p>
+                    <<link "Play again?">>
+                        <<script>>
+                            Engine.restart();
+                        <</script>>
+                    <</link>>
                 </div>
             </div>
             <<SharingModule>>

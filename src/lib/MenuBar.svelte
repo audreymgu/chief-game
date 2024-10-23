@@ -1,5 +1,6 @@
 <script>
     export let menuEnding;
+    export let menuColor;
     import { createEventDispatcher } from 'svelte';
     const dispatch = createEventDispatcher();
 
@@ -12,19 +13,25 @@
         dispatch('restart');
     }
 </script>
-
-<div class="menu-bar">
-    <!-- <div class="menu-bar__group">
-        <a class="menu-bar__link">About</a>
-    </div> -->
-    <img class="menu-bar__logo" src="img/logo.png" />
-    <a href="https://chief.com" class="menu-bar__heading">A corporate survival game by<img src="img/chief.svg"/></a>
-    <!-- {#if menuEnding}
-        <a on:click={handleRestart} class="menu-bar__link menu-bar__link--highlight">Retry?</a>
-    {:else}
-        <a on:click={handleQuit} class="menu-bar__link">Quit</a>
-    {/if} -->
-</div>
+{#if menuEnding}
+    <div class="menu-bar menu-bar--color">
+        <!-- <div class="menu-bar__group">
+            <a class="menu-bar__link">About</a>
+        </div> -->
+            <img class="menu-bar__logo" src="img/logo.png" />
+            <a href="https://chief.com" class="menu-bar__heading menu-bar__heading--color">A corporate survival game by<img src="img/chief.svg"/></a>
+        <!-- {#if menuEnding}
+            <a on:click={handleRestart} class="menu-bar__link menu-bar__link--highlight">Retry?</a>
+        {:else}
+            <a on:click={handleQuit} class="menu-bar__link">Quit</a>
+        {/if} -->
+    </div>
+{:else}
+    <div class="menu-bar">
+        <img class="menu-bar__logo" src="img/logo.png" />
+        <a href="https://chief.com" class="menu-bar__heading">A corporate survival game by<img src="img/chief.svg"/></a>
+    </div>
+{/if}
 
 <style lang="scss">
     .menu-bar {
@@ -40,6 +47,9 @@
         justify-content: center;
         font-family: ticker;
         font-size: 16px;
+        &--color {
+            background-color: rgba(0,0,0,0.4);
+        }
         &__heading {
             display: none;
             @include breakpoint(desktop) {
@@ -52,6 +62,12 @@
                 & img {
                     margin-left: 12px;
                     margin-bottom: -3px;
+                }
+            }
+            &--color {
+                @include breakpoint(desktop) {
+                    color: #DFDFD0;
+                    background-color: transparent;
                 }
             }
         }

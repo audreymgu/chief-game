@@ -52,6 +52,7 @@
     padding: 3px;
     background-image: linear-gradient(to bottom, #FFFFF5 0%, #FFFFF5 100%), linear-gradient(to bottom, #DFDFD0 0%, #DFDFD0 100%);
     background-clip: content-box, padding-box;
+    height: calc(100% - 6px);
     @include breakpoint(desktop) {
         overflow-y: unset;
         padding: 8px;

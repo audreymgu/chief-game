@@ -1,73 +1,95 @@
 ::PassageDone
-<<script>>    
+<<script>>
+    var endingLabel = State.getVar("$endingLabel").toString();
+    var endingImage = State.getVar("$endingImage");
+
+    // Function to fetch the image blob
+    async function fetchImageBlob(imageUrl) {
+        try {
+            const response = await fetch(imageUrl);
+            return await response.blob();
+        } catch (error) {
+            console.error('Failed to fetch image:', error);
+            return null;
+        }
+    }
+
+    // Share button functionality
     if (document.querySelector('#sharing')) {
-        var btn = document.querySelector('#sharing');
-        var endingImage = State.getVar("$endingImage");
-        var endingLabel = State.getVar("$endingLabel").toString() + ".png";
-        btn.addEventListener('click', async () => {
-            // path to image
-            const response = await fetch(endingImage);
+        var shareBtn = document.querySelector('#sharing');
+
+        shareBtn.addEventListener('click', async () => {
+            const blob = await fetchImageBlob(endingImage);
             
-            // convert to blob
-            const blob = await response.blob();
+            if (!blob) {
+                console.error('Image blob is not available for sharing.');
+                return;
+            }
 
-            const file = new File([blob], endingLabel, {
-                type: 'image/png'
-            });
-
+            var resultURL = 'https://chief-game.vercel.app/?result=' + endingLabel;
             let shareData = {
-                files: [file]
+                url: resultURL,
             };
-            // copy to clipboard if web share unavailable
-            if (!navigator.canShare) {
-                console.log('Web Share API not available. Using clipboard as a fallback.');
+
+            // Fallback to clipboard if Web Share API is unavailable
+            if (!navigator.canShare || !navigator.canShare(shareData)) {
+                console.log('Web Share API not available. Using clipboard as fallback.');
                 try {
-                    btn.classList.remove("button--success");
-                    btn.children[0].innerText = "Copying...";
-                    navigator.clipboard.write([
+                    shareBtn.classList.remove("button--success");
+                    shareBtn.children[0].innerText = "Copying...";
+                    await navigator.clipboard.write([
                         new ClipboardItem({
                             'image/png': blob
                         })
                     ]);
-                    // add delay to help communicate state
-                    setTimeout(function(){
-                        btn.children[0].innerText = "Copied to Clipboard";
-                        btn.classList.add("button--success");
+                    setTimeout(function () {
+                        shareBtn.children[0].innerText = "Copied to Clipboard";
+                        shareBtn.classList.add("button--success");
                     }, 200);
                 } catch (error) {
                     console.error(error);
                 }
                 return;
             }
-            
-            if (!navigator.canShare(shareData)) {
-                console.log('Share data unsupported, disallowed, or invalid. Using clipboard as a fallback.');
-                try {
-                    btn.classList.remove("button--success");
-                    btn.children[0].innerText = "Copying...";
-                    navigator.clipboard.write([
-                        new ClipboardItem({
-                            'image/png': blob
-                        })
-                    ]);
-                    // add delay to help communicate state
-                    setTimeout(function(){
-                        btn.children[0].innerText = "Copied to Clipboard";
-                        btn.classList.add("button--success");
-                    }, 200);
-                } catch (error) {
-                    console.error(error);
-                }
-                return;
-            }
-            
+
+            // Try sharing via Web Share API
             navigator.share(shareData)
-            .then(() => {
-                console.log('Shared successfully');
-            })
-            .catch((e) => {
-                console.log('Error: ' + e);
-            })
+                .then(() => {
+                    console.log('Shared successfully');
+                })
+                .catch((e) => {
+                    console.log('Error: ' + e);
+                });
+        });
+    }
+
+    // Clipboard functionality (Separate Event Listener)
+    if (document.querySelector('#clip')) {
+        var clipBtn = document.querySelector('#clip');
+
+        clipBtn.addEventListener('click', async () => {
+            const blob = await fetchImageBlob(endingImage);
+
+            if (!blob) {
+                console.error('Image blob is not available for clipboard.');
+                return;
+            }
+
+            try {
+                clipBtn.classList.remove("button--success");
+                clipBtn.children[0].innerText = "Copying...";
+                await navigator.clipboard.write([
+                    new ClipboardItem({
+                        'image/png': blob
+                    })
+                ]);
+                setTimeout(function () {
+                    clipBtn.children[0].innerText = "Copied to Clipboard";
+                    clipBtn.classList.add("button--success");
+                }, 200);
+            } catch (error) {
+                console.error('Failed to copy image to clipboard:', error);
+            }
         });
     }
 <</script>>

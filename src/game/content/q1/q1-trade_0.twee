@@ -30,6 +30,3 @@
             >>
         </div>
 </div>
-<<timed 0.1s>>
-    <<audio "slack" volume 0.25 play>>
-<</timed>>

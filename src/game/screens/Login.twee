@@ -60,6 +60,7 @@
 				</div>
 				<div id="login" class="button  button--disabled">
 					<<link "Next">>
+						<<set $slack to true>>
 						<<script>>
 							var userField = document.getElementById("textbox-user");
 							var inputValue = userField.value.trim();

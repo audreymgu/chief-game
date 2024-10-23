@@ -4,8 +4,8 @@
 <</script>>
 <<EventMessenger "showMenu" true true>>
 /* passage content */
-<<set $endingImage to "/img/e-violence.jpg">>
-<<set $endingLabel to "The Corporate Trail - You Chose Violence">>
+<<set $endingImage to "/img/e-violence.png">>
+<<set $endingLabel to "vio">>
 <div class="abs-wrapper">
     <img class="logo" src="img/logo.png"/>
 	<div class="rel-wrapper">
@@ -16,6 +16,11 @@
                 <div class="ending__text">
                     <h1 class="ending__title">$user,You Chose Violence</h1>
                     <p class="ending__desc">$workStyle $orientation For you to win, someone else has to lose. Call it a competitive spirit. You either played D1 athletics or too much Monopoly.</p>
+                    <<link "Play again?">>
+                        <<script>>
+                            Engine.restart();
+                        <</script>>
+                    <</link>>
                 </div>
             </div>
             <<SharingModule>>

@@ -2,12 +2,6 @@
 <<widget "SharingModule">>
     <div class="btn-area btn-area--ending">
         <div class="button button--ending button--sharing" id="sharing"><a>Share</a></div>
-        <div class="button">
-            <<link "Play Again?">>
-                <<script>>
-                    Engine.restart();
-                <</script>>
-            <</link>>
-        </div>
+        <div class="button" id="clip"><a>Copy Image to Clipboard</a></div>
     </div>
 <</widget>>

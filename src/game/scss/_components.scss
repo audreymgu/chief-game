@@ -256,7 +256,7 @@
         padding: 0;
         margin-bottom: 0.75rem;
         font-family: start-2p;
-        font-size: 24px;
+        font-size: 20px;
         @include breakpoint(desktop) {
             font-size: 24px;
         }
@@ -268,7 +268,13 @@
         font-size: 16px;
         padding-left: 8px;
         padding-top: 8px;
+
+    
         scrollbar-color: gray rgba(0,0,0,0); 
+        & a {
+            font-family: tickerbit;
+            color: #85A506;
+        }
         @include breakpoint(desktop) {
             font-size: 18px;   
         }
@@ -420,7 +426,7 @@
     }
     &--success {
         & a {
-            border-image-source: url('img/button-hover.png');
+            border-image-source: url('img/button.png');
             border-image-slice: 30% 40% fill;
             border-image-repeat: repeat;
             pointer-events: none;
@@ -869,4 +875,15 @@
         background-color: #FDF7EE;
         border: 1px solid black; /* Space around the thumb to ensure visibility */
     }
+}
+
+.bg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    &--canned {
+        background-color: red;
+    }
+    top: 0;
+    left: 0;
 }

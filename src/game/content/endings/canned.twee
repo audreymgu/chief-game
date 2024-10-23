@@ -1,17 +1,19 @@
 :: Canned {"position":"1175,650","size":"100,100"}
+<<set $slack to false>>
 <<script>>
     UIBar.hide();
 <</script>>
-<<EventMessenger "showMenu" true true>>
-<<set $endingImage to "/img/ending1.png">>
+<<EventMessenger "menuColor" true>>
+<<set $endingImage to "/img/e-canned.png">>
 <<set $endingLabel to "The Corporate Trail - You Chose Violence">>
+<div class="bg bg--canned"></div>
 <div class="abs-wrapper">
-    <img class="logo" src="img/logo.png"/>
+    <img class="logo" src="img/gameover.svg"/>
 	<div class="rel-wrapper">
         <div class="content content--ending">
             <<TitleBar "🗑️🗑️ YOU GOT CANNED 🗑️🗑️">>
             <div class="ending">
-                <img class="ending__img" src="img/e-canned.png"/>
+                <img class="ending__img" src="img/e-canned.jpg"/>
                 <div class="ending__text">
                     <h1 class="ending__title">$user,You Got Canned</h1>
                     <p class="ending__desc">Officially, your position was made redundant in a department restructuring designed to right-size operations. Unofficially, in the words of Kenny Powers: Yer fuckin’ out!</p>

@@ -22,7 +22,7 @@
                 <img src="img/grip.svg" class="titlebar__grip">
             </div>
             <div class="calendar">
-                <p class="calendar__heading">You are in</p>
+                <p class="calendar__heading">Now starting</p>
                 <p class="calendar__quarter">Q$quarter</p>
             </div>
             <div class="tracker">

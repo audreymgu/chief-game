@@ -43,7 +43,7 @@ export function load({ url }) {
         ogImage = 'https://chief-game.vercel.app/img/e-quit.jpg'; 
     } else {
         ogTitle = "SURVIVE THE CORPORATE TRAIL";
-        ogDescription = "A game of corporate survival";
+        ogDescription = "A corporate survival game by Chief";
         ogImage = 'https://chief-game.vercel.app/img/e-violence.jpg';
     }
 

@@ -15,7 +15,7 @@
                 <img class="ending__img" src="img/e-boss.jpg"/>
                 <div class="ending__text">
                     <h1 class="ending__title">$user,You Manage Like a Boss</h1>
-                    <p class="ending__desc">$workStyle $orientation You have an innate ability to herd your colleagues toward a common goal. Have you considered starting a cult?</p>
+                    <p class="ending__desc">You have an innate ability to herd your colleagues toward a common goal. Have you considered starting a cult?</p>
                     <<link "Play again?">>
                         <<script>>
                             Engine.restart();

@@ -15,7 +15,7 @@
                 <img class="ending__img" src="img/e-thrones.jpg"/>
                 <div class="ending__text">
                     <h1 class="ending__title">$user,You Game-of-Thrones'd It</h1>
-                    <p class="ending__desc">$workStyle $orientation Your feel for office politics is as honed as it is frightening. Maybe you should look into actual politics.</p>
+                    <p class="ending__desc">Your feel for office politics is as honed as it is frightening. Maybe you should look into actual politics.</p>
                     <<link "Play again?">>
                         <<script>>
                             Engine.restart();

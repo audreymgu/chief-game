@@ -1,10 +1,44 @@
 :: Employee Goes Viral [Q2] {"position":"600,675","size":"100,100"}
 /* pass messages */
 <<EventMessenger "showMenu" true>>
+/* handle quarter */
+<<script>>
+    $(document).ready(function() {
+        let quarterCheck = State.getVar("$quarterNotification");
+        if(quarterCheck) {
+            document.getElementById('quarter').classList.toggle('quarter-indicator--hidden');
+        }
+        $("#quarter-close").click(function(){
+            document.getElementById('quarter').classList.toggle('quarter-indicator--hidden');
+        });
+    });
+<</script>>
 /* passage content */
 <div class="abs-wrapper">
     <img class="logo" src="img/logo.png"/>
 	<div class="rel-wrapper">
+        <div id="quarter" class="quarter-indicator quarter-indicator--hidden">
+            <div class="titlebar titlebar--quarter">
+                <img src="img/grip.svg" class="titlebar__grip">
+                <p class="titlebar__text">⏳ TIME IS PASSING ⏳</p>
+                <img src="img/grip.svg" class="titlebar__grip">
+            </div>
+            <div class="calendar">
+                <p class="calendar__heading">You are in</p>
+                <p class="calendar__quarter">Q$quarter</p>
+            </div>
+            <div class="tracker">
+                <img src="img/left.svg">
+                <div class="tracker-module">
+                    <p class="tracker-module__number">$remaining</p>
+                    <p class="tracker-module__label">quarters remain.</p>
+                </div>
+                <img src="img/right.svg">
+            </div>
+            <div id="quarter-close" class="button button--quarter">
+                <a>OK</a>
+            </div>
+        </div>
         <div class="stats">
             <<PlayerAvatar>>
             <<ResourceMeter>>

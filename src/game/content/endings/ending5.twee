@@ -15,7 +15,7 @@
                 <img class="ending__img" src="img/e-violence.jpg"/>
                 <div class="ending__text">
                     <h1 class="ending__title">$user,You Chose Violence</h1>
-                    <p class="ending__desc">$workStyle $orientation For you to win, someone else has to lose. Call it a competitive spirit. You either played D1 athletics or too much Monopoly.</p>
+                    <p class="ending__desc">For you to win, someone else has to lose. Call it a competitive spirit. You either played D1 athletics or too much Monopoly.</p>
                     <<link "Play again?">>
                         <<script>>
                             Engine.restart();

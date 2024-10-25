@@ -26,48 +26,58 @@
 		<div class="content content--login">
 			<<TitleBar "Welcome">>
 			<div class="login-window">
-				<h1 class="login-window__title">Pick Your Department</h1>
-				/* <p class="login-window__info">Your skills may affect certain outcomes.</p> */
-				<div class="class-selector">
-					<div class="class" id="pd">	
-						<div class="class-info">
-							<p class="class-info__title class-info__title--product">PRODUCT</p>
-							<p class="class-info__desc">Software bends to your will. If only EQ was something you could download.</p>
+				<div>
+					<h1 class="login-window__title">Pick Your Department</h1>
+					<p class="login-window__info">Your skills may affect certain outcomes.</p>
+					<div class="class-selector">
+						<div class="class" id="pd">	
+							<img class="class__portrait" src="img/placeholder.png"/>
+							<div class="class-info">
+								<p class="class-info__title class-info__title--product">PRODUCT</p>
+								<p class="class-info__desc">Software bends to your will. If only EQ was something you could download.</p>
+							</div>
 						</div>
-					</div>
-					<div class="class" id="sa">
-						<div class="class-info">
-							<p class="class-info__title class-info__title--sales">SALES</p>
-							<p class="class-info__desc">You can charm, cajole, and occasionally even captivate. You can’t do spreadsheets.</p>
+						<div class="class" id="sa">
+							<img class="class__portrait" src="img/placeholder.png"/>
+							<div class="class-info">
+								<p class="class-info__title class-info__title--sales">SALES</p>
+								<p class="class-info__desc">You can charm, cajole, and occasionally even captivate. You can’t do spreadsheets.</p>
+							</div>
 						</div>
-					</div>
-					<div class="class" id="lg">
-						<div class="class-info">
-							<p class="class-info__title class-info__title--legal">LEGAL</p>
-							<p class="class-info__desc">You practically invented due diligence. You cover your own ass with aplomb.</p>
+						<div class="class" id="lg">
+							<img class="class__portrait" src="img/placeholder.png"/>
+							<div class="class-info">
+								<p class="class-info__title class-info__title--legal">LEGAL</p>
+								<p class="class-info__desc">You practically invented due diligence. You cover your own ass with aplomb.</p>
+							</div>
 						</div>
-					</div>
-					<div class="class" id="op">
-						<div class="class-info">
-							<p class="class-info__title class-info__title--ops">OPERATIONS</p>
-							<p class="class-info__desc">You know when to bcc and where the secret bathroom is. Surely that means something.</p>
+						<div class="class" id="op">
+							<img class="class__portrait" src="img/placeholder.png"/>
+							<div class="class-info">
+								<p class="class-info__title class-info__title--ops">OPERATIONS</p>
+								<p class="class-info__desc">You know when to bcc and where the secret bathroom is. Surely that means something.</p>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="initials-field">
-					<p class="initials-field__label">ENTER PLAYER NAME:</p>
-					<input id="textbox-user" name="textbox-user" type="text" inputmode="text" placeholder="JANET" maxlength="8" tabindex="0" class="macro-textbox">
-				</div>
-				<div id="login" class="button  button--disabled">
-					<<link "Next">>
-						<<set $slack to true>>
-						<<script>>
-							var userField = document.getElementById("textbox-user");
-							var inputValue = userField.value.trim();
-							State.variables.user = inputValue;
-						<</script>>
-						<<GoRandom "Q1">>
-					<</link>>
+				<div>
+					<div class="initials-field">
+						<p class="initials-field__label">ENTER PLAYER NAME:</p>
+						<input id="textbox-user" name="textbox-user" type="text" inputmode="text" placeholder="JANET" maxlength="8" tabindex="0" class="macro-textbox">
+					</div>
+					<div id="login" class="button  button--disabled">
+						<<link "Next">>
+							<<set $slack to true>>
+							<<set $quarterNotification to true>>
+							<<set $remaining to 4>>
+							<<script>>
+								var userField = document.getElementById("textbox-user");
+								var inputValue = userField.value.trim();
+								State.variables.user = inputValue;
+							<</script>>
+							<<GoRandom "Q1">>
+						<</link>>
+					</div>
 				</div>
 			</div>
 		</div>

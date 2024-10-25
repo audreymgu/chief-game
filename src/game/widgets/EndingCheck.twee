@@ -1,5 +1,8 @@
 :: EndingCheck [widget] {"position":"900,100","size":"100,100"}
 <<widget "EndingCheck">>
+    <<if $quarterNotification is true>>
+        <<set $quarterNotification to false>>
+    <</if>>
     /* check for fail conditions */
     <<if $energy <= 0>>
         <<goto "Burnout">>    
@@ -17,6 +20,8 @@
         /* move to next quarter */
         <<if $time == 2 && $quarter < 4>>
             <<set $quarter to $quarter + 1>>
+            <<set $quarterNotification to true>>
+            <<set $remaining to 5 - $quarter>>
             <<set $time to 0>>
         <</if>>
 

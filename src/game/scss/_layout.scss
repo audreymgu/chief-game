@@ -9,7 +9,7 @@
         height: unset;
         margin: auto;
         position: absolute;
-        top: 50%;
+        top: calc(50% - 20px);
         left: 50%;
         transform: translate(-50%, -50%);
         min-width: 600px;
@@ -17,6 +17,44 @@
         max-height: 670px;
     }
     filter: drop-shadow(8px 8px 0px rgba(0, 0, 0, 0.25));
+    &--login {
+        top: 14px;
+        height: calc(100% - 32px);
+        @include breakpoint(desktop) {
+                width: unset;
+                height: unset;
+                margin: auto;
+                position: absolute;
+                top: calc(50% - 20px);
+                left: 50%;
+                transform: translate(-50%, -50%);
+                min-width: 600px;
+                max-width: 790px;
+                max-height: 670px;
+            }
+    }
+    &--start {
+        filter: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 32px;
+        left: 24px;
+        height: calc(100% - 64px);
+        width: calc(100% - 48px);
+        @include breakpoint(desktop) {
+                width: unset;
+                height: unset;
+                margin: auto;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                min-width: 600px;
+                max-width: 790px;
+                max-height: 670px;
+        }
+    }
 }
 
 .rel-wrapper {
@@ -25,7 +63,11 @@
     display: flex;
     flex-direction: column;
     background-color: #DFDFD0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
     @include breakpoint(desktop) {
+        max-width: unset;
         padding: 8px;
         gap: 8px;
         background-color: rgba(0,0,0,0);
@@ -35,6 +77,13 @@
     border: 1px solid black;
     &--handbook {
         background-color: none;
+    }
+    &--start {
+        background-color: transparent;
+        border-width: 0px;
+        @include breakpoint(desktop) {
+            padding: 0px;
+        }
     }
 }
 
@@ -63,6 +112,9 @@
         @include breakpoint(desktop) {
             border-width: 1px;
         }
+    }
+    &--login {
+        border-width: 0px;
     }
 }
 

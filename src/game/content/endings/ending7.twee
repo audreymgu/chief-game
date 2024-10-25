@@ -15,7 +15,7 @@
                 <img class="ending__img" src="img/placeholder.png"/>
                 <div class="ending__text">
                     <h1 class="ending__title">$user,You Jump on Grenades</h1>
-                    <p class="ending__desc">$workStyle $orientation Whatever the problem, you make it your own. Nobody asks you to do this, but you like to imagine that someone, somewhere is keeping score.</p>
+                    <p class="ending__desc">Whatever the problem, you make it your own. Nobody asks you to do this, but you like to imagine that someone, somewhere is keeping score.</p>
                     <<link "Play again?">>
                         <<script>>
                             Engine.restart();

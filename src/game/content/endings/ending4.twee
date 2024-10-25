@@ -15,7 +15,7 @@
                 <img class="ending__img" src="img/e-out.jpg"/>
                 <div class="ending__text">
                     <h1 class="ending__title">$user,You Were Just Heading Out</h1>
-                    <p class="ending__desc">$workStyle $orientation Oh, a bunch of stakeholders are jumping on a quick Teams to chat through action items? Sorry, you’ll have to circle back.</p>
+                    <p class="ending__desc">Oh, a bunch of stakeholders are jumping on a quick Teams to chat through action items? Sorry, you’ll have to circle back.</p>
                     <<link "Play again?">>
                         <<script>>
                             Engine.restart();

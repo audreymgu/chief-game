@@ -71,7 +71,7 @@
 
 <!-- <About/> -->
 <!-- {#if menuVisible} -->
-<MenuBar menuEnding={menuEnding} on:restart={handleRestart} on:quit={handleQuit}/>
+<!-- <MenuBar menuEnding={menuEnding} on:restart={handleRestart} on:quit={handleQuit}/> -->
 <!-- {/if} -->
 <GameArea bind:iframe={iframeEl}/>
 <!-- <Icons /> -->

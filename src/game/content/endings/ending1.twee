@@ -15,7 +15,7 @@
                 <img class="ending__img" src="img/e-friends.jpg"/>
                 <div class="ending__text">
                     <h1 class="ending__title">$user,You’re Not Here to Make Friends</h1>
-                    <p class="ending__desc">$workStyle $orientation Water cooler talk was never your thing. You’d prefer coworkers not bother you, but if they must, they need to make it *actionable*.</p>
+                    <p class="ending__desc">Water cooler talk was never your thing. You’d prefer coworkers not bother you, but if they must, they need to make it *actionable*.</p>
                     <<link "Play again?">>
                         <<script>>
                             Engine.restart();

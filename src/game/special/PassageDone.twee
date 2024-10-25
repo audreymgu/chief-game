@@ -16,6 +16,47 @@
         }
     }
 
+    // Intro screen sharing
+    if (document.querySelector('#sharing-lnk')) {
+        var shareBtn = document.querySelector('#sharing-lnk');
+
+        shareBtn.addEventListener('click', async () => {
+            const blob = await fetchImageBlob(endingImage);
+            
+            var resultURL = 'https://chief-game.vercel.app'
+            let shareData = {
+                url: resultURL,
+            };
+
+            // Fallback to clipboard if Web Share API is unavailable
+            if (!navigator.canShare || !navigator.canShare(shareData)) {
+                console.log('Web Share API not available. Using clipboard as fallback.');
+                try {
+                    await navigator.clipboard.write([
+                        new ClipboardItem({
+                            'text/plain': resultURL,
+                        })
+                    ]);
+                    setTimeout(function () {
+                        shareBtn.children[0].innerText = "Copied to Clipboard";
+                    }, 200);
+                } catch (error) {
+                    console.error(error);
+                }
+                return;
+            }
+
+            // Try sharing via Web Share API
+            navigator.share(shareData)
+                .then(() => {
+                    console.log('Shared successfully');
+                })
+                .catch((e) => {
+                    console.log('Error: ' + e);
+                });
+        });
+    }
+
     // Share button functionality
     if (document.querySelector('#sharing')) {
         var shareBtn = document.querySelector('#sharing');

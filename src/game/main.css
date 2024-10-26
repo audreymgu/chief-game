@@ -474,7 +474,7 @@ h1 {
   align-items: center;
   justify-content: center;
   border-width: 0px;
-  background-color: #F8FFCF;
+  background-color: #E8FFD0;
 }
 @media (min-width: 650px) and (min-height: 850px) {
   .scenario--alert {

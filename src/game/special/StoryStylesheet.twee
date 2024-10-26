@@ -312,6 +312,30 @@ h1 {
     width: 100%;
   }
 }
+.logo--ending {
+  position: absolute;
+  top: -2.75rem;
+  display: block;
+}
+@media (min-width: 650px) and (min-height: 850px) {
+  .logo--ending {
+    position: relative;
+    top: unset;
+    left: 0.5rem;
+  }
+}
+.logo--red path {
+  fill: #FF1E03;
+}
+.logo--blue path {
+  fill: #29E5F9;
+}
+.logo--purple path {
+  fill: #FE8D72;
+}
+.logo--teal path {
+  fill: #29F9CC;
+}
 
 .resource-meter {
   padding: 0 10px 0 10px;
@@ -1247,8 +1271,17 @@ h1 {
 .bg--start {
   background-color: #DCF15B;
 }
-.bg--canned {
-  background-color: red;
+.bg--red {
+  background-color: #7D0F01;
+}
+.bg--blue {
+  background-color: #0F499A;
+}
+.bg--purple {
+  background-color: #741A84;
+}
+.bg--teal {
+  background-color: #337462;
 }
 
 .menu-bar {

@@ -5,10 +5,9 @@
 <</script>>
 <<EventMessenger "menuColor" true>>
 <<set $endingImage to "/img/e-canned.png">>
-<<set $endingLabel to "The Corporate Trail - You Chose Violence">>
-<div class="bg bg--canned"></div>
+<div class="bg bg--red"></div>
 <div class="abs-wrapper">
-    <img class="logo" src="img/gameover.svg"/>
+    <img class="logo logo--red" src="img/gameover.svg"/>
 	<div class="rel-wrapper">
         <div class="content content--ending">
             <<TitleBar "🗑️🗑️ YOU GOT CANNED 🗑️🗑️">>

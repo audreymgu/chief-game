@@ -22,6 +22,36 @@
             width: 100%;
         }
     }
+    &--ending {
+        position:absolute;
+        top: -2.75rem;
+        display: block;
+        @include breakpoint(desktop) {
+            position: relative;
+            top: unset;
+            left: 0.5rem;
+        }
+    }
+    &--red {
+        & path {
+                fill: #FF1E03;
+        }
+    }
+    &--blue {
+        & path {
+            fill: #29E5F9;
+        }
+    }
+    &--purple {
+        & path {
+            fill: #FE8D72;
+        }
+    }
+    &--teal {
+        & path {
+                fill: #29F9CC;
+        }      
+    }
 }
 
 .resource-meter {
@@ -927,8 +957,17 @@
     &--start {
         background-color: #DCF15B;
     }
-    &--canned {
-        background-color: red;
+    &--red {
+        background-color: #7D0F01;
+    }
+    &--blue {
+        background-color: #0F499A;
+    }
+    &--purple {
+        background-color: #741A84;
+    }
+    &--teal {
+        background-color: #337462;
     }
     top: 0;
     left: 0;

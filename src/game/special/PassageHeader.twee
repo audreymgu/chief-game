@@ -36,6 +36,9 @@
                 document.getElementById('hamburger').src="img/menu.svg";
             });
         });
+        if(document.getElementById('scenario-area')) {
+            gsap.from("#scenario-area", {duration: 0.5, y: 25, ease: "back.out"});
+        }
     <</script>>
     <<if $slack is true>>
         <<timed 0.1s>>

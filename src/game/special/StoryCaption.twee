@@ -17,6 +17,14 @@
     </div>
 </div>
 
+<div class="bar">
+    <img class="logo" src="img/logo.png"/>
+    <div class="stats">
+        <<PlayerAvatar>>
+        <<ResourceMeter>>
+    </div>
+</div>
+
 <<done>>
     <<script>>
         $("#quit-btn").click(function() {

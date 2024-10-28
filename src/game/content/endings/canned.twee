@@ -6,7 +6,7 @@
 <<EventMessenger "menuColor" true>>
 <<set $endingImage to "/img/e-canned.png">>
 <div class="bg bg--red"></div>
-<div class="abs-wrapper">
+<div class=" abs-wrapper abs-wrapper--ending">
     <img class="logo logo--red" src="img/gameover.svg"/>
 	<div class="rel-wrapper">
         <div class="content content--ending">

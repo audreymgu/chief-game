@@ -13,7 +13,6 @@
 <</script>>
 /* passage content */
 <div class="abs-wrapper">
-    <img class="logo" src="img/logo.png"/>
 	<div class="rel-wrapper">
         <div id="quarter" class="quarter-indicator quarter-indicator--hidden">
             <div class="titlebar titlebar--quarter">
@@ -36,10 +35,6 @@
             <div id="quarter-close" class="button button--quarter">
                 <a>OK</a>
             </div>
-        </div>
-        <div class="stats">
-            <<PlayerAvatar>>
-            <<ResourceMeter>>
         </div>
         <div class="content" id="scenario-area">
             <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>

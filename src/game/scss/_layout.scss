@@ -1,20 +1,62 @@
-.abs-wrapper {
-    width: calc(100% - 28px);
+.bar {
+    width: calc(100% - 11px);
     height: calc(100% - 80px);
     position: fixed;
     top: 64px;
     left: 14px;
     @include breakpoint(desktop) {
-        width: unset;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 594px;
+        width: 100%;
+        max-width: 790px;
+        height: 694px;
+        z-index: 5;
+        filter: drop-shadow(8px 8px 0px rgba(0, 0, 0, 0.25));
+        padding: 8px;
+        box-sizing: border-box;
+    }
+}
+.abs-wrapper {
+    width: calc(100% - 28px);
+    height: calc(100% - 131px);
+    position: fixed;
+    top: 115px;
+    left: 14px;
+    @include breakpoint(desktop) {
+        // width: unset;
         height: unset;
-        margin: auto;
+        // margin: auto;
         position: absolute;
-        top: calc(50% - 20px);
+        top: calc(50% + 105px);
         left: 50%;
         transform: translate(-50%, -50%);
         min-width: 600px;
+        width: 100%;
         max-width: 790px;
         max-height: 670px;
+    }
+    &--ending {
+        width: calc(100% - 28px);
+        height: calc(100% - 80px);
+        position: fixed;
+        top: 64px;
+        left: 14px;
+    
+        @include breakpoint(desktop) {
+            width: unset;
+            height: unset;
+            // margin: auto;
+            position: absolute;
+            top: calc(50% - 20px);
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 600px;
+            max-width: 790px;
+            max-height: 670px;
+        }
     }
     filter: drop-shadow(8px 8px 0px rgba(0, 0, 0, 0.25));
     &--login {
@@ -72,6 +114,7 @@
         gap: 8px;
         background-color: rgba(0,0,0,0);
         border: none;
+        box-sizing: border-box;
     }
     
     border: 1px solid black;
@@ -96,7 +139,7 @@
     // border: 2px solid yellow;
     background-color: #FFFFF5;
     border: 1px solid black;
-    border-width: 1px 0 0 0;
+    border-width: 0;
     color: #2A2C41;
     padding: 3px;
     background-image: linear-gradient(to bottom, #FFFFF5 0%, #FFFFF5 100%), linear-gradient(to bottom, #DFDFD0 0%, #DFDFD0 100%);
@@ -130,6 +173,7 @@
 .stats {
     display: flex;
     flex-direction: row;
+    width: calc(100% - 18px);
     @include breakpoint(desktop) {
         border: 1px solid black;
         margin-bottom:12px;

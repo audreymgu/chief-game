@@ -5,8 +5,8 @@
     }
     // position:absolute;
     // top: -2.5rem;
-    width: 97%;
-    margin-bottom: 10px;
+    width: 100%;
+    margin-bottom: 15px;
     // left: 50%;
     // transform: translate(-50%, -50%);
     &--start {
@@ -24,12 +24,15 @@
     }
     &--ending {
         position:absolute;
-        top: -2.75rem;
+        top: -4.75rem;
         display: block;
+        width: 97%;
         @include breakpoint(desktop) {
+            top: -2.75rem;
             position: relative;
             top: unset;
             left: 0.5rem;
+            margin: 0;
         }
     }
     &--red {

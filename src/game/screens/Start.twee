@@ -46,11 +46,11 @@
 </div>
 
 <<script>>
-	setTimeout(() => {
-		function startUnlock() {
-			const btn = document.querySelector('#start-btn');
-			btn.classList.remove('button--disabled');
-		}
+	function startUnlock() {
+		const btn = document.querySelector('#start-btn');
+		btn.classList.remove('button--disabled');
+	}
+	$(document).ready(function() {
 		gsap.from(".notification", {delay: 0.5, stagger: 1, duration: 0.5, y: 25, opacity: 0, ease: "back.out", onComplete: startUnlock});
-    }, 100);
+	});
 <</script>>

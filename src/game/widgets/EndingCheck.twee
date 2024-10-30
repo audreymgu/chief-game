@@ -21,7 +21,7 @@
         <<if $time == 2 && $quarter < 4>>
             <<set $quarter to $quarter + 1>>
             <<set $quarterNotification to true>>
-            <<set $remaining to 5 - $quarter>>
+            <<set $remaining to 4 - $quarter>>
             <<set $time to 0>>
         <</if>>
 

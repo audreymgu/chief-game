@@ -956,7 +956,7 @@
 .bg {
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     &--start {
         background-color: #DCF15B;
     }
@@ -972,9 +972,35 @@
     &--teal {
         background-color: #337462;
     }
+    &--animation {
+        opacity: 1;
+        z-index: 6;
+        background-color: #213C06;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     top: 0;
     left: 0;
     z-index: -1;
+    &__text {
+        text-transform: uppercase;
+        font-family: start-2p;
+        filter: drop-shadow(8px 8px 0px rgba(0, 0, 0, 0.25));
+        font-size: 12px;
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        @include breakpoint(desktop) {
+            font-size: 24px;
+            max-width: unset;
+        }
+    }
+    &__bar {
+        
+    }
 }
 
 .menu-bar {

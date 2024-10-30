@@ -30,4 +30,6 @@
         </div>
     </div>
 </div>
-<<audio "tada" volume 0.25 play>>
+<<timed 1.5s>>
+    <<audio "tada" volume 0.25 play>>
+<</timed>>

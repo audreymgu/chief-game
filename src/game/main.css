@@ -1326,7 +1326,7 @@ h1 {
 .bg {
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   top: 0;
   left: 0;
   z-index: -1;
@@ -1346,7 +1346,31 @@ h1 {
 .bg--teal {
   background-color: #337462;
 }
-
+.bg--animation {
+  opacity: 1;
+  z-index: 6;
+  background-color: #213C06;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg__text {
+  text-transform: uppercase;
+  font-family: start-2p;
+  filter: drop-shadow(8px 8px 0px rgba(0, 0, 0, 0.25));
+  font-size: 12px;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+@media (min-width: 650px) and (min-height: 850px) {
+  .bg__text {
+    font-size: 24px;
+    max-width: unset;
+  }
+}
 .menu-bar {
   position: fixed;
   z-index: 2;

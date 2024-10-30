@@ -4,6 +4,7 @@
 <<cacheaudio "slack" "audio/slack.mp3">>
 <<cacheaudio "tada" "audio/tada.mp3">>
 <<cacheaudio "click" "audio/click.mp3">>
+<<cacheaudio "over" "audio/gameover.mp3">>
 
 /* <<createaudiogroup ":bg">>
 <</createaudiogroup>>

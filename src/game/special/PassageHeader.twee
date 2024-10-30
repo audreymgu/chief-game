@@ -36,23 +36,28 @@
                 document.getElementById('hamburger').src="img/menu.svg";
             });
         });
-        if(document.getElementById('scenario-area')) {
-            gsap.from("#scenario-area", {duration: 0.5, y: 25, ease: "back.out"});
-        }
-        if(document.getElementById('transition')) {
-            var tl = gsap.timeline();
-            tl.from(".bg__text", {duration: 1.5, y: 100, ease: "back.out"});
-            tl.from(".dot", {delay: 0.5, duration: 0.25, stagger:{ each:0.25, from:"start"}, opacity: 0}, 0);
-            tl.to("#transition", {duration: 0.5, opacity: 0, visibility: "hidden", ease: "back.out"});
-            tl.from(".rel-wrapper", {duration: 0.5, y: 25, ease: "back.out"}, 1.5);
-        }
+        const waitForGSAP = setInterval(function() {
+            if (typeof gsap !== "undefined") {
+                clearInterval(waitForGSAP);
+                if(document.getElementById('scenario-area')) {
+                    gsap.from("#scenario-area", {duration: 0.5, y: 25, ease: "back.out"});
+                }
+                if(document.getElementById('transition')) {
+                    var tl = gsap.timeline();
+                    tl.from(".bg__text", {duration: 1.5, y: 100, ease: "back.out"});
+                    tl.from(".dot", {delay: 0.5, duration: 0.25, stagger:{ each:0.25, from:"start"}, opacity: 0}, 0);
+                    tl.to("#transition", {duration: 0.5, opacity: 0, visibility: "hidden", ease: "back.out"});
+                    tl.from(".rel-wrapper", {duration: 0.5, y: 25, ease: "back.out"}, 1.5);
+                }
 
-        let text = document.querySelector("#quit-btn");
-        let animation = gsap.to("#quit-btn", { paused: true, duration: 0.1, rotation: 10, yoyo: true, repeat: 5, ease: "power1.inOut" });
-        text.addEventListener("mouseenter", () => animation.restart());
-        setInterval(() => {
-            animation.restart();
-        }, 15000);
+                let text = document.querySelector("#quit-btn");
+                let animation = gsap.to("#quit-btn", { paused: true, duration: 0.1, rotation: 10, yoyo: true, repeat: 5, ease: "power1.inOut" });
+                text.addEventListener("mouseenter", () => animation.restart());
+                setInterval(() => {
+                    animation.restart();
+                }, 15000);
+            }
+        }, 100);
     <</script>>
     <<if $slack is true>>
         <<timed 0.1s>>

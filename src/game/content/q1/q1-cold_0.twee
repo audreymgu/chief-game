@@ -1,6 +1,7 @@
 :: You're Fuckin' Cold [Q1] {"position":"600,675","size":"100,100"}
 <<script>>
     UIBar.show();
+    UIBar.unstow();
 <</script>>
 /* pass messages */
 <<EventMessenger "showMenu" true>>

@@ -2,11 +2,14 @@
 //   border: 1px solid white;
 // }
 
+* {
+  cursor: url("img/cursor.svg "), auto;
+}
+
 body {
   background-color: transparent;
   image-rendering: crisp-edges;
   height: 100dvh;
-  cursor: url("img/cursor.svg "), auto;
 }
 
 a,

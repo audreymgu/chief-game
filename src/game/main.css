@@ -6,11 +6,14 @@
   font-family: "start-2p";
   src: url("fonts/start-2p.otf") format("opentype");
 }
+* {
+  cursor: url("img/cursor.svg "), auto;
+}
+
 body {
   background-color: transparent;
   image-rendering: crisp-edges;
   height: 100dvh;
-  cursor: url("img/cursor.svg "), auto;
 }
 
 a,

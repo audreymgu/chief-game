@@ -52,7 +52,7 @@
         text.addEventListener("mouseenter", () => animation.restart());
         setInterval(() => {
             animation.restart();
-        }, 20000);
+        }, 15000);
     <</script>>
     <<if $slack is true>>
         <<timed 0.1s>>

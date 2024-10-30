@@ -20,7 +20,6 @@
 <div class="bar">
     <img class="logo" src="img/logo.png"/>
     <div class="stats">
-        <<PlayerAvatar>>
         <<ResourceMeter>>
     </div>
 </div>

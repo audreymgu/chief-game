@@ -334,6 +334,7 @@ h1 {
   display: flex;
   flex-direction: row;
   width: calc(100% - 18px);
+  height: 64px;
 }
 @media (min-width: 650px) and (min-height: 850px) {
   .stats {
@@ -402,11 +403,13 @@ h1 {
 }
 
 .resource-meter {
-  padding: 0 10px 0 10px;
+  padding-right: 8px;
+  padding-left: 8px;
+  padding-top: 8px;
   color: #2A2C41;
   font-size: 12px;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   flex-direction: row;
   gap: 16px;
@@ -416,8 +419,10 @@ h1 {
 }
 @media (min-width: 650px) and (min-height: 850px) {
   .resource-meter {
+    padding: 0 10px 0 5px;
+    align-items: center;
     border: 1px solid black;
-    border-width: 1px 1px 1px 0px;
+    border-width: 1px 1px 1px 1px;
   }
 }
 .resource-meter__unit {
@@ -442,8 +447,9 @@ h1 {
   .user {
     display: flex;
     flex-direction: column;
-    align-content: center;
     margin-right: 1.25rem;
+    margin-left: 0.5rem;
+    align-items: start;
   }
 }
 .user__label {
@@ -452,8 +458,8 @@ h1 {
   font-size: 8px;
 }
 .user__name {
-  margin-top: 4px;
-  line-height: 1;
+  margin-top: 8px;
+  line-height: 15px;
   font-size: 20px;
   letter-spacing: 1%;
   text-transform: uppercase;

@@ -1,5 +1,4 @@
 ::PassageHeader
-
 <div id="menu-overlay" class="menu-overlay menu-overlay--hidden">
     <ul id="mobile-menu" class="mobile-menu">
         <li id="about-mobile" class="mobile-menu__option"><img src="img/about.png" />About</li>
@@ -15,9 +14,9 @@
     </div>
     <div class="window-text">
         <div class="window-text__scroll">
-            <h1 class="window-text__title">Meet Chief</h1>
-            <p class="window-text__copy">Navigating the highs, lows, and absurdities of corporate life at the executive level takes more than grit and hustle. Just ask a member of Chief—<mark>40% of us are in the C-Suite</mark>.</p>
-            <p class="window-text__copy">As <mark>the largest network of senior women executives</mark>, Chief can connect you to the right leaders and help you become a more impactful one yourself.</p>
+            <h1 class="window-text__title">CHIEF IS A NETWORK FOR WOMEN EXECUTIVES</h1>
+            <p class="window-text__copy">Navigating the highs, lows, and absurdities of corporate life at the executive level takes more than grit and hustle. Just ask any of our members—<mark>40% of whom are in the C-Suite</mark>.</p>
+            <p class="window-text__copy">Chief helps you be <mark>a more impactful leader</mark> by connecting you with peers who understand your challenges and ambitions.</p>
             <p class="window-text__copy">Visit <a href="https://chief.com">Chief.com</a> to learn more.</p>
         </div>
         <div id="close" class="button"><a>Close</a></div>

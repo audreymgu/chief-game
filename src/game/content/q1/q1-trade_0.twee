@@ -17,6 +17,7 @@
         });
     });
 <</script>>
+<<set $remaining to 3>>
 /* passage content */
 <div class="abs-wrapper">
 	<div class="rel-wrapper">
@@ -49,13 +50,13 @@
                 <img class="scenario__img" src="img/q1-trade.jpg"/>
                 <div class="scenario__text">
                     <h1 class="scenario__title">Trade Show</h1>
-                    <p class="scenario__desc">You’ve been asked to join a major industry gathering in Singapore. It’s a 19-hour flight.</p>
+                    <p class="scenario__desc">You’ve been asked to join a major industry gathering in Sydney. It’s a 19-hour flight.</p>
                 </div>
             </div>
             <<ChoiceModule
-                "No way"
-                "But the networking..."
-                "Send your deputy"
+                "Literally anything else"
+                "Embrace globalism"
+                "Send a minion"
             >>
         </div>
 </div>

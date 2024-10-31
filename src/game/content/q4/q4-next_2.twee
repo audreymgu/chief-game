@@ -14,7 +14,7 @@
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">You keep things light, knowing this hourlong meeting won’t change anything that’s already been decided.</p>
+            <p class="scenario__desc scenario__desc--alert">You keep things light, but by the end of the meeting, it’s clear nothing’s changing. Turns out, charm only goes so far.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

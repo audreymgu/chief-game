@@ -15,7 +15,7 @@
                 <img class="ending__img" src="img/e-canned.jpg"/>
                 <div class="ending__text">
                     <h1 class="ending__title">$user,You Got Canned</h1>
-                    <p class="ending__desc">Officially, your position was made redundant in a department restructuring designed to right-size operations. Unofficially, in the words of Kenny Powers: Yer fuckin’ out!</p>
+                    <p class="ending__desc">Officially, your position was made redundant in a restructuring designed to right-size the organization. Unofficially, you were the most expensive one on your team. ("I’m still big. It’s the budgets that got small!”)</p>
                 </div>
             </div>
             <div class="btn-area btn-area--ending">

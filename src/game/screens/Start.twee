@@ -10,21 +10,21 @@
 		<img class="notification__image" src="img/slack.png"/>
 		<div class="notification-text">
 			<p class="notification-text__heading">#ALL-HANDS</p>
-			<p class="notification-text__body">Traverse double standards to reach the corner office!</p>
+			<p class="notification-text__body">Traverse workplace double standards as a woman exec!</p>
 		</div>
 	</div>
 	<div id="notif2" class="notification">
 		<img class="notification__image" src="img/slack.png"/>
 		<div class="notification-text">
 			<p class="notification-text__heading">#ALL-HANDS</p>
-			<p class="notification-text__body">Optimize your WELLBEING without sacrificing LIKEABILITY</p>
+			<p class="notification-text__body">Optimize your WELL-BEING without sacrificing LIKEABILITY!</p>
 		</div>
 	</div>
 	<div id="notif3" class="notification">
 		<img class="notification__image" src="img/slack.png"/>
 		<div class="notification-text">
 			<p class="notification-text__heading">#ALL-HANDS</p>
-			<p class="notification-text__body">And remember to smile!</p>
+			<p class="notification-text__body">Always remember to smile!</p>
 		</div>
 	</div>
 	<div class="rel-wrapper rel-wrapper--start">

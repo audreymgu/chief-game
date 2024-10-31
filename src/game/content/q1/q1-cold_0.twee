@@ -17,6 +17,7 @@
         });
     });
 <</script>>
+<<set $remaining to 3>>
 /* passage content */
 <div class="abs-wrapper">
 	<div class="rel-wrapper">
@@ -48,14 +49,14 @@
             <div class="scenario">
                 <img class="scenario__img" src="img/q1-cold.jpg"/>
                 <div class="scenario__text">
-                    <h1 class="scenario__title">You're Fuckin' Cold</h1>
+                    <h1 class="scenario__title">What's Cooler Than Being Cold?</h1>
                     <p class="scenario__desc">The building is heated like a Victorian prison. Your besuited male colleagues don’t seem to notice.</p>
                 </div>
             </div>
             <<ChoiceModule
-                "Get blankets"
-                "h|Adjust the thermostat|Descend|Futz"
-                "s|Start a petition|Coalition|Right to heat"
+                "Drape yourself in blankets"
+                "h|Tinker with the thermostat|Descend|Futz"
+                "s|Rally the freezing folk|Coalition|Right to heat"
             >>
         </div>
 </div>

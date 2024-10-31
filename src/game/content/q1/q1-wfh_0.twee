@@ -17,6 +17,7 @@
         });
     });
 <</script>>
+<<set $remaining to 3>>
 /* passage content */
 <div class="abs-wrapper">
 	<div class="rel-wrapper">
@@ -49,11 +50,11 @@
                 <img class="scenario__img" src="img/q1-wfh.jpg"/>
                 <div class="scenario__text">
                     <h1 class="scenario__title">RTOh No</h1>
-                    <p class="scenario__desc">The exec. committee is pushing for 5 days in-office. So much laundry won’t get done.</p>
+                    <p class="scenario__desc">The exec committee is pushing for five days in-office. It spells disaster for laundry piles everywhere. </p>
                 </div>
             </div>
             <<ChoiceModule
-                "h|Promote the policy|Leggings|Impromptu"
+                "h|Support the new policy|Leggings|Impromptu"
                 "s|Fight for your teams|Productivity|Agitator"
                 "Ask for an exception"
             >>

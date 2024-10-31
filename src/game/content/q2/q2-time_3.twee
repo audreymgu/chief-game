@@ -1,5 +1,5 @@
 /* title + metadata */
-:: Speak truth to power {"position":"600,800","size":"100,100"}
+:: Stop the madness {"position":"600,800","size":"100,100"}
 <<CalcResource "1" "-1" "1" "0">>
 <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
 <<TitleBar $quarterLabel>>
@@ -14,7 +14,7 @@
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">You tell the top brass it can’t be done—at least not like this. So they give it to someone else.</p>
+            <p class="scenario__desc scenario__desc--alert">You tell the top brass it can’t be done. At least, not like this. They pass it to someone else, and you keep your sanity—for now.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

@@ -15,7 +15,7 @@
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">You take a seat in the back and fire off a few emails between performances.</p>
+            <p class="scenario__desc scenario__desc--alert">You take a seat in the back and fire off a few emails between performances. Neither the emails nor the recital get your full attention.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

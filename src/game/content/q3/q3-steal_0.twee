@@ -50,7 +50,7 @@
             </div>
             <<ChoiceModule
                 "Smile & nod"
-                "h|Make sarcastic remark|You demolish|Too far"
+                "h|Put your foot down|You demolish|Too far"
             >>
         </div>
 </div>

@@ -17,6 +17,7 @@
         });
     });
 <</script>>
+<<set $remaining to 3>>
 /* passage content */
 <div class="abs-wrapper">
 	<div class="rel-wrapper">
@@ -53,7 +54,7 @@
                 </div>
             </div>
             <<ChoiceModule
-                "Fuck it we ball"
+                "F it we ball"
                 "Your plate is full"
                 "s|Volunteer your rival|Deteriorate|Turn around"
             >>

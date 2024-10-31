@@ -14,7 +14,7 @@
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">You try to futz with the nearest box you can see—unsuccessfully. You can feel the eye rolls.</p>
+            <p class="scenario__desc scenario__desc--alert">You try to futz with the nearest box you can see — unsuccessfully. Now everyone knows who to blame when the office turns into a sauna.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

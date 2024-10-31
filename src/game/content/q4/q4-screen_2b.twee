@@ -7,14 +7,14 @@
     <img class="scenario__img" src="img/q4-screen.jpg"/>
     <div class="scenario__text">
         <h1 class="scenario__title">Screen Bare</h1>
-        <p class="scenario__desc">While screen sharing on a prep call for Q3 earnings, you reveal your bulk order for Charmin double-ply on Amazon.</p>
+        <p class="scenario__desc">While screen-sharing on a prep call for the Q3 earnings report, you accidentally reveal your bulk order for Charmin double-ply.</p>
     </div>
 </div>
 <div class="alert">
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">You make a borderline inappropriate comment about your personal life. You see someone cringe—physically.</p>
+            <p class="scenario__desc scenario__desc--alert">You make a borderline inappropriate comment about your personal life. Awkward silence follows.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

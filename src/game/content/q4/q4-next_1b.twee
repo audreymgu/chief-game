@@ -14,7 +14,7 @@
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">With every cluttered slide, the exec. committee seems to be growing *less* interested in your future.</p>
+            <p class="scenario__desc scenario__desc--alert">With every chart-cluttered, bullet-riddled slide, the exec committee seems to be growing *less* interested in your future.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

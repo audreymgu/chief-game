@@ -14,7 +14,7 @@
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">You convince the top brass to fund a monthly program with famous guest speakers.</p>
+            <p class="scenario__desc scenario__desc--alert">You convince the top brass to fund a monthly program with famous guest speakers. Now the only problem is that you’ve added “event planner” to your already overflowing plate.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

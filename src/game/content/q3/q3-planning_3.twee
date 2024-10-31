@@ -7,14 +7,14 @@
     <img class="scenario__img" src="img/q3-planning.jpg"/>
     <div class="scenario__text">
         <h1 class="scenario__title">Planning Committee</h1>
-        <p class="scenario__desc">You’ve been tasked with hosting a senior hires event, because “you’re so good at that kind of thing.”</p>
+        <p class="scenario__desc">You’ve been tasked with hosting a team-building event, because “you’re so good at that kind of thing.”</p>
     </div>
 </div>
 <div class="alert">
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">Never a wrong answer. Even if it’s a bit 2000-and-late. Maybe you can follow it up with a team SoulCycle.</p>
+            <p class="scenario__desc scenario__desc--alert">Never a wrong answer. Even if it’s a bit 2000-and-late. Maybe you can follow it up with a team SoulCycle. You made an impression — whether it’s a good one is debatable.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

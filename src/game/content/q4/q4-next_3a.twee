@@ -14,7 +14,7 @@
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">It’s a big gamble, but your track record speaks for itself—they need you. And they know it.</p>
+            <p class="scenario__desc scenario__desc--alert">It’s a big gamble, but it pays off. Your track record speaks for itself — they need you, and they know it.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

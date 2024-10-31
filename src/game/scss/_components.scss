@@ -586,6 +586,10 @@
     border-width: 1px 2px 2px 1px;
     display: flex;
     flex-direction: row;
+    cursor: url('img/cursor2.svg'), pointer;
+    & * {
+        cursor: url('img/cursor2.svg'), pointer;
+    }
     @include breakpoint(desktop) {
         flex-direction: column;
     }
@@ -598,6 +602,9 @@
             min-width: 134px;
         }
         flex: 1 0 0;
+        &:hover {
+            cursor: url('img/cursor2.svg'), pointer;
+        }
     }
     &:active {
         -webkit-transform: translateY(2px);
@@ -606,6 +613,13 @@
     &--selected {
         border: solid black;
         border-width: 1px 2px 2px 1px;
+    }
+}
+
+#textbox-user {
+    cursor: url('img/cursor2.svg'), pointer;     
+    & * {
+        cursor: url('img/cursor2.svg'), pointer;
     }
 }
 
@@ -627,6 +641,7 @@
         }
     }
     &__title {
+
         margin: 8px;
         @include breakpoint(desktop) {
             margin: unset;
@@ -660,8 +675,14 @@
     }
     &__label {
         flex-grow: 1;
-        padding-top: 4px;
+        padding-top: 8px;
     }
+}
+
+.initials-sublabel {
+    margin-top: 4px;
+    color: #d1d1d1;
+    font-size: 12px;
 }
 
 #textbox-user {
@@ -1189,7 +1210,7 @@
     top: 100px;
     @include breakpoint(desktop) {
         left: -200px;
-        top: 150px;
+        top: 70px;
     }
 
 }
@@ -1204,7 +1225,7 @@
     top: 360px;
     @include breakpoint(desktop) {
         left: -125px;
-        top: 425px;
+        top: 355px;
     }
 }
 

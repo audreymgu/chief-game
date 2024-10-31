@@ -15,7 +15,7 @@
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">Grateful, she deletes the video and you bank a favor.</p>
+            <p class="scenario__desc scenario__desc--alert">Grateful, they delete the video and you bank a favor.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

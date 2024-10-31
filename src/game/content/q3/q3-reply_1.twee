@@ -7,14 +7,14 @@
 	<img class="scenario__img" src="img/q3-reply.jpg"/>
 	<div class="scenario__text">
 		<h1 class="scenario__title">Reply All</h1>
-		<p class="scenario__desc">A junior associate forwards a long email chain to a client that contains some unflattering remarks—your remarks.</p>
+		<p class="scenario__desc">A junior associate forwards a long email chain to a client that contains some unflattering remarks — made by you.</p>
 	</div>
 </div>
 <div class="alert">
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">Anyone who causes you to look bad has got to go. You don’t make the rules. (Well, in this case you do.)</p>
+            <p class="scenario__desc scenario__desc--alert">Anyone who causes you to look bad has got to go. You don’t make the rules. (Well, in this case you do.) Word spreads fast about your harsh leadership style.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

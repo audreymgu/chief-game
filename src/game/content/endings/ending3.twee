@@ -21,7 +21,7 @@
                 <img class="ending__img" src="img/e-beloved.jpg"/>
                 <div class="ending__text">
                     <h1 class="ending__title">$user,You're a Beloved Office Presence</h1>
-                    <p class="ending__desc">People like working with you. They tend to think you’re on their side—and they’re right. You probably get hit up on LinkedIn a lot.</p>
+                    <p class="ending__desc">People love working with you, and they trust that you’ve got their back. Just be prepared for a calendar filled with gratuitous coffee chats and one-on-ones.</p>
                     <<link "Play again?">>
                         <<script>>
                             Engine.restart();

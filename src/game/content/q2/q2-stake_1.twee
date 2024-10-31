@@ -15,7 +15,7 @@
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">Honestly, he’s not even your favorite nephew.</p>
+            <p class="scenario__desc scenario__desc--alert">You meet the deadline but miss out on family brownie points. Honestly, he’s not even your favorite nephew.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

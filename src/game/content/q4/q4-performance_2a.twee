@@ -14,7 +14,7 @@
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">Your artfully constructed compliment sandwiches mask the bitter mustard of your critiques.</p>
+            <p class="scenario__desc scenario__desc--alert">Your artfully constructed compliment sandwiches mask the bitter mustard of your critiques. It goes down easy, but your team isn’t any more motivated.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

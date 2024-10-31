@@ -14,7 +14,7 @@
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">The lost working hours mean more late nights in the sad room with the Peloton. But it’s worth it.</p>
+            <p class="scenario__desc scenario__desc--alert">You manage to meet with everyone, but your work hours suffer. Those late-night Peloton rides become your only downtime. On the plus side, your calves look great.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

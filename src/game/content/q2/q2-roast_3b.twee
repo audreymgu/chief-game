@@ -15,7 +15,7 @@
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">Your holier-than-thou admonishment garners hundreds of dunks from TikTok strangers.</p>
+            <p class="scenario__desc scenario__desc--alert">The TikTok trolls come for you instead, and it turns into a viral disaster.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

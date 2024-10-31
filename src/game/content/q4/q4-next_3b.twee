@@ -14,7 +14,7 @@
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">“We’re sorry you feel that way.” Have six words ever cut so deep? You better start updating that resume.</p>
+            <p class="scenario__desc scenario__desc--alert">“We’re sorry you feel that way.” Have six words ever cut so deep? You better start updating your LinkedIn.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

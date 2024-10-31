@@ -1,5 +1,5 @@
 /* title + metadata */
-:: Reprimand her privately {"position":"600,800","size":"100,100"}
+:: Reprimand them privately {"position":"600,800","size":"100,100"}
 /* passage content */
 <<CalcResource "0" "1" "1" "-1">>
 <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
@@ -15,7 +15,7 @@
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">You tell her internet fame is sometimes incompatible with adult responsibilities. Your dad would be so proud.</p>
+            <p class="scenario__desc scenario__desc--alert">You give them a reality check on mixing professionalism and the pursuit of viral fame. They take it in stride, but you wonder if the message really landed.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

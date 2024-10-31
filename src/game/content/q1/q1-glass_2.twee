@@ -14,7 +14,7 @@
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">You turn it down. You don’t believe in yourself that much.</p>
+            <p class="scenario__desc scenario__desc--alert">You turn it down. Your blood pressure thanks you, but you’ll have to find another way to stand out. </p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

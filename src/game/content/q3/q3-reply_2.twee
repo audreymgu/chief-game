@@ -7,14 +7,14 @@
 	<img class="scenario__img" src="img/q3-reply.jpg"/>
 	<div class="scenario__text">
 		<h1 class="scenario__title">Reply All</h1>
-		<p class="scenario__desc">A junior associate forwards a long email chain to a client that contains some unflattering remarks—your remarks.</p>
+		<p class="scenario__desc">A junior associate forwards a long email chain to a client that contains some unflattering remarks — made by you.</p>
 	</div>
 </div>
 <div class="alert">
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">Shit happens. You accept the consequences and tell the kid to be more discreet next time.</p>
+            <p class="scenario__desc scenario__desc--alert">You turn the incident into a learning opportunity.  The team appreciates your approach, but the client relationship is forever strained.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

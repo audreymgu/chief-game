@@ -14,7 +14,7 @@
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">You get rebranded as the firm’s unpaid DEI person, given HR tasks in lieu of actual opportunities.</p>
+            <p class="scenario__desc scenario__desc--alert">You get rebranded as the firm’s unpaid DEI person and are given HR tasks in lieu of actual opportunities. Not great — even for those in HR.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

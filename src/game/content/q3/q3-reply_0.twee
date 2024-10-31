@@ -43,7 +43,7 @@
                 <img class="scenario__img" src="img/q3-reply.jpg"/>
                 <div class="scenario__text">
                     <h1 class="scenario__title">Reply All</h1>
-                    <p class="scenario__desc">A junior associate forwards a long email chain to a client that contains some unflattering remarks—your remarks.</p>
+                    <p class="scenario__desc">A junior associate forwards a long email chain to a client that contains some unflattering remarks — made by you.</p>
                 </div>
             </div>
             <<ChoiceModule

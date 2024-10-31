@@ -45,12 +45,12 @@
                 <img class="scenario__img" src="img/q3-planning.jpg"/>
                 <div class="scenario__text">
                     <h1 class="scenario__title">Planning Committee</h1>
-                    <p class="scenario__desc">You’ve been tasked with hosting a senior hires event, because “you’re so good at that kind of thing.”</p>
+                    <p class="scenario__desc">You’ve been tasked with hosting a team-building event, because “you’re so good at that kind of thing.”</p>
                 </div>
             </div>
             <<ChoiceModule
-                "At the office"
-                "At your home"
+                "Host at the office"
+                "Host at your home"
                 "Cirque du Soleil"
             >>
         </div>

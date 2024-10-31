@@ -50,7 +50,7 @@
             </div>
             <<ChoiceModule
                 "h|Give her a heads up|She's grateful|Mind your"
-                "Reprimand her privately"
+                "Reprimand them privately"
                 "s|Leave a comment|Kinda snarky|Dunked on"
             >>
         </div>

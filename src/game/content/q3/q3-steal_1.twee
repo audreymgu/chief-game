@@ -14,7 +14,7 @@
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">You let Mark have this one. Why be territorial about a good idea?</p>
+            <p class="scenario__desc scenario__desc--alert">You let Mark have this one, but deep down, you wonder if appeasing him is worth your self-respect.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

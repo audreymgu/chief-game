@@ -49,7 +49,7 @@
                 </div>
             </div>
             <<ChoiceModule
-                "Sorry I care"
+                "Sorry I care, Brian"
                 "h|Pants him with data|The numbers|You fumble"
                 "s|Verbal judo him|You suggest|You stammer"
             >>

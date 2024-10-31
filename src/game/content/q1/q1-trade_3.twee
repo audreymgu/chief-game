@@ -1,5 +1,5 @@
 /* title + metadata */
-:: Send your deputy {"position":"600,800","size":"100,100"}
+:: Send a minion {"position":"600,800","size":"100,100"}
 <<CalcResource "1" "1" "-1" "-1">>
 <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
 <<TitleBar $quarterLabel>>
@@ -7,14 +7,14 @@
     <img class="scenario__img" src="img/q1-trade.jpg"/>
     <div class="scenario__text">
         <h1 class="scenario__title">Trade Show</h1>
-        <p class="scenario__desc">You’ve been asked to join a major industry gathering in Singapore. It’s a 19-hour flight.</p>
+        <p class="scenario__desc">You’ve been asked to join a major industry gathering in Sydney. It’s a 19-hour flight.</p>
     </div>
 </div>
 <div class="alert">
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">They’re young and single, they’ll have a blast—and remember that you made it happen.</p>
+            <p class="scenario__desc scenario__desc--alert">Your deputy is young and wild and free. They’ll have a blast — and remember that you made it happen.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

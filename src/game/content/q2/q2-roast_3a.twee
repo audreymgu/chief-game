@@ -15,7 +15,7 @@
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">Your kinda funny, kinda snarky reply strikes fear into her jaded Gen Z heart. She deletes the vid.</p>
+            <p class="scenario__desc scenario__desc--alert">Your kinda funny, kinda snarky reply strikes fear into their jaded Gen Z heart. They delete the vid.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

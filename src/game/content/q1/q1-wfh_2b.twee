@@ -8,14 +8,14 @@
 	<img class="scenario__img" src="img/q1-wfh.jpg"/>
 	<div class="scenario__text">
 		<h1 class="scenario__title">RTOh No</h1>
-		<p class="scenario__desc">The exec. committee is pushing for 5 days in-office. So much laundry won’t get done.</p>
+		<p class="scenario__desc">The exec committee is pushing for five days in-office. It spells disaster for laundry piles everywhere.</p>
 	</div>
 </div>
 <div class="alert">
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">The exec. committee holds firm and brands you an agitator (you assume).</p>
+            <p class="scenario__desc scenario__desc--alert">The exec. committee holds firm and brands you an agitator.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

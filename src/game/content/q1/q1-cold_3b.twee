@@ -14,7 +14,7 @@
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">Your “Right to Heat!” email goes ignored by most people, who assume it’s some kind of charity.</p>
+            <p class="scenario__desc scenario__desc--alert">Your “Right to Heat!” email goes ignored by most people, who assume it’s some kind of philanthropic venture.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

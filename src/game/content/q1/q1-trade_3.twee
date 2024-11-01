@@ -1,6 +1,7 @@
 /* title + metadata */
 :: Send a minion {"position":"600,800","size":"100,100"}
 <<CalcResource "1" "1" "-1" "-1">>
+<<audio "good" volume 0.5 play>>
 <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
 <<TitleBar $quarterLabel>>
 <div class="scenario scenario--inactive">

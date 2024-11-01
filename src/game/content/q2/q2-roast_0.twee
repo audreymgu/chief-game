@@ -47,7 +47,7 @@
                 </div>
             </div>
             <<ChoiceModule
-                "h|Give her a heads up|She's grateful|Mind your"
+                "h|Give them a heads up|She's grateful|Mind your"
                 "Reprimand them privately"
                 "s|Leave a comment|Kinda snarky|Dunked on"
             >>

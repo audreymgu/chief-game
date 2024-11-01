@@ -5,6 +5,9 @@
 <<cacheaudio "tada" "audio/tada.mp3">>
 <<cacheaudio "click" "audio/click.mp3">>
 <<cacheaudio "over" "audio/gameover.mp3">>
+<<cacheaudio "bad" "audio/bad.mp3">>
+<<cacheaudio "neutral" "audio/foreground.mp3">>
+<<cacheaudio "good" "audio/good.mp3">>
 
 /* <<createaudiogroup ":bg">>
 <</createaudiogroup>>

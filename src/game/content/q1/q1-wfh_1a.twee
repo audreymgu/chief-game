@@ -2,6 +2,7 @@
 :: Leggings {"position":"600,800","size":"100,100"}
 /* passage content */
 <<CalcResource "-1" "0" "1" "0">>
+<<audio "neutral" volume 0.5 play>>
 <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
 <<TitleBar $quarterLabel>>
 <div class="scenario scenario--inactive">

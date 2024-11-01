@@ -32,7 +32,7 @@ export function load({ url }) {
     } else if (result === 'gre') {
         ogTitle = "🧯🔥 YOU ARE THE EXECUTIVE FIREFIGHTER 🧯🔥 - The Corporate Trail";
         ogDescription = "You solve all sorts of problems — even the ones you have nothing to do with. People appreciate your dependability, but after fighting so many dumpster fires, you’re at risk of burning out.";
-        ogImage = 'https://chief-game.vercel.app/img/placeholder.png';
+        ogImage = 'https://chief-game.vercel.app/img/e-fire_share.jpg';
     } else if (result === 'got') {
         ogTitle = "👑👑 YOU GAME OF THRONES'D IT 👑👑 - The Corporate Trail";
         ogDescription = "Your feel for office politics is as honed as it is frightening. Maybe you should look into actual politics.";

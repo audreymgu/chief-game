@@ -23,6 +23,7 @@
                     <h1 class="ending__title">$user,You Chose Violence</h1>
                     <p class="ending__desc">For you to win, someone else has to lose. And so what if you stab your teammate in the back? There are no teams on The Corporate Trail.</p>
                     <div class="ending__replay">
+                        🕹️
                         <<link "Play again?">>
                             <<script>>
                                 Engine.restart();

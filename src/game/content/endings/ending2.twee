@@ -23,6 +23,7 @@
                     <h1 class="ending__title">$user,You Manage Like a Boss</h1>
                     <p class="ending__desc">You have an innate ability to inspire your colleagues and herd them toward a common goal. Leadership looks good on you, and people follow your directions without question. Have you considered starting a cult?</p>
                     <div class="ending__replay">
+                        🕹️
                         <<link "Play again?">>
                             <<script>>
                                 Engine.restart();

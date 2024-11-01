@@ -24,6 +24,7 @@
                     <p class="ending__desc">Your work ethic is unmatched, but at what cost? You’ve hit revenue targets by missing weekends fueled by triple-shot espressos and gas station No-Doze. The job won’t be done until value is returned to shareholders.</p>
                     <div class="ending__replay">
                         <<link "Play again?">>
+                            🕹️
                             <<script>>
                                 Engine.restart();
                             <</script>>

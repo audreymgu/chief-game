@@ -23,6 +23,7 @@
                     <h1 class="ending__title">$user,You Game-of-Thrones'd It</h1>
                     <p class="ending__desc">Your feel for office politics is frighteningly sharp — you’ve outmaneuvered everyone and survived all power plays. After your stint in the C-Suite, you should consider running for Congress.</p>
                     <div class="ending__replay">
+                        🕹️
                         <<link "Play again?">>
                             <<script>>
                                 Engine.restart();

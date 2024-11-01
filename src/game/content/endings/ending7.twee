@@ -21,6 +21,7 @@
                     <p class="ending__desc">You solve all sorts of problems — even the ones you have nothing to do with. People appreciate your dependability, but after fighting so many dumpster fires, you’re at risk of burning out.</p>
                     <div class="ending__replay">
                         <<link "Play again?">>
+                            🕹️
                             <<script>>
                                 Engine.restart();
                             <</script>>

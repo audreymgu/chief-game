@@ -49,7 +49,7 @@
             <<ChoiceModule
                 "Find the time"
                 "Set boundaries"
-                "s|Start a resource group|You convince|Get rebranded"
+                "h|Start a resource group|You convince|Get rebranded"
             >>
         </div>
 </div>

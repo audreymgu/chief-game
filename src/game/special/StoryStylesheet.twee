@@ -770,6 +770,9 @@ h1 {
     margin: 12px 20px 12px 12px;
   }
 }
+.ending__replay {
+  margin-top: 12px;
+}
 .ending__replay a {
   color: hsl(72deg, 93%, 30%);
   text-decoration: underline;

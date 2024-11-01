@@ -203,15 +203,12 @@ h1 {
 }
 @media (min-width: 650px) and (min-height: 850px) {
   .abs-wrapper--ending {
-    width: unset;
+    width: 100%;
     height: unset;
     position: absolute;
     top: calc(50% - 20px);
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 600px;
-    max-width: 790px;
-    max-height: 670px;
   }
 }
 .abs-wrapper--login {

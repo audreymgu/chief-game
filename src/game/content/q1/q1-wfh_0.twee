@@ -32,12 +32,10 @@
                 <p class="calendar__quarter">Q$quarter</p>
             </div>
             <div class="tracker">
-                <img src="img/left.svg">
                 <div class="tracker-module">
                     <p class="tracker-module__number">$remaining</p>
-                    <p class="tracker-module__label">quarters remain.</p>
+                    <p class="tracker-module__label">remaining</p>
                 </div>
-                <img src="img/right.svg">
             </div>
             <div id="quarter-close" class="button button--quarter">
                 <a>OK</a>

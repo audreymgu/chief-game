@@ -21,11 +21,13 @@
                     <h1 class="ending__title">$user,You Quit</h1>
                     <p class="ending__desc">Spend the best years of your life “circling back” over stale office coffee? No thanks. Time to pack it up, blow it up, and move to Costa Rica.
                     </p>
-                    <<link "Play again?">>
-                        <<script>>
-                            Engine.restart();
-                        <</script>>
-                    <</link>>
+                    <div class="ending__replay">
+                        <<link "Play again?">>
+                            <<script>>
+                                Engine.restart();
+                            <</script>>
+                        <</link>>
+                    </div>
                 </div>
             </div>
             <<SharingModule>>

@@ -19,11 +19,13 @@
                 <div class="ending__text">
                     <h1 class="ending__title">$user,You Are the Executive Firefighter</h1>
                     <p class="ending__desc">You solve all sorts of problems — even the ones you have nothing to do with. People appreciate your dependability, but after fighting so many dumpster fires, you’re at risk of burning out.</p>
-                    <<link "Play again?">>
-                        <<script>>
-                            Engine.restart();
-                        <</script>>
-                    <</link>>
+                    <div class="ending__replay">
+                        <<link "Play again?">>
+                            <<script>>
+                                Engine.restart();
+                            <</script>>
+                        <</link>>
+                    </div>
                 </div>
             </div>
             <<SharingModule>>

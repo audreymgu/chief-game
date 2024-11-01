@@ -22,11 +22,13 @@
                 <div class="ending__text">
                     <h1 class="ending__title">$user,You Were Just Heading Out</h1>
                     <p class="ending__desc">Oh, a last-minute Zoom meeting? Sorry, you’ll have to circle back. Some call it a healthy work-life balance, you call it self-preservation.</p>
-                    <<link "Play again?">>
-                        <<script>>
-                            Engine.restart();
-                        <</script>>
-                    <</link>>
+                    <div class="ending__replay">
+                        <<link "Play again?">>
+                            <<script>>
+                                Engine.restart();
+                            <</script>>
+                        <</link>>
+                    </div>
                 </div>
             </div>
             <<SharingModule>>

@@ -84,6 +84,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        position: relative;
     }
 
     &__label {
@@ -93,6 +94,19 @@
         text-transform: uppercase;
         font-size: 10px;
         margin-bottom: -2px;
+    }
+    &__indicator {
+        position: absolute;
+        z-index: 5;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 5px;
+        height: 40px;
+        width: 40px;
+        line-height: 45px;
+        opacity: 0;
+        background-image: url('img/notif.svg')
     }
 }
 
@@ -177,7 +191,7 @@
     border-width: 0 1px 0 1px;
 
     &--inactive {
-        opacity: 50%;
+        opacity: 20%;
         display: none;
         @include breakpoint(desktop) {
             display: flex;
@@ -196,7 +210,7 @@
         @include breakpoint(desktop) {
             border-width: 1px 1px 0 1px;
         }
-        background-color: #E8FFD0;
+        background-color: #C4D2FF;
     }
     &__title {
         margin-top: 8px;
@@ -260,7 +274,7 @@
         align-self: center;
         margin: 12px;
         @include breakpoint(desktop) {
-            margin: 6px 20px 12px 12px;
+            margin: 6px 4px 12px 28px;
         }
     }
 }
@@ -274,7 +288,7 @@
     @include breakpoint(desktop) {
         margin: 0;
         padding: 0px 8px 8px 8px;
-        border: 1px solid rgba(0,0,0,0.5);
+        border: 1px solid rgba(0,0,0,0.2);
         border-width: 0px 1px 1px 1px;
     }
 }
@@ -306,7 +320,7 @@
         margin-top: 8px;
         line-height: 110%;
         padding: 0;
-        margin-bottom: 0.75rem;
+        margin-bottom: 0.25rem;
         font-family: start-2p;
         font-size: 20px;
         @include breakpoint(desktop) {
@@ -348,6 +362,9 @@
     &__desc {
         font-family: tickerbit;
         line-height: 130%;
+        @include breakpoint(desktop) {
+            font-size: 16px;
+        }
         &--alert {
             height: min-content;
             max-width: 90%;
@@ -375,6 +392,15 @@
             margin: 12px 20px 12px 12px;
         }
     }
+    &__replay {
+        & a {
+            color: hsl(72 93% 30% / 1);
+            text-decoration: underline;
+            @include breakpoint(desktop) {
+                    font-size: 16px;
+            }
+        }
+    }
 }
 
 .btn-area {
@@ -397,7 +423,7 @@
     }
     &--alert {
         
-        background-color: #F8FFCF;
+        background-color: #C4D2FF;
         border-width: 0px;
         @include breakpoint(desktop) {
             padding-bottom: 10px;
@@ -411,20 +437,22 @@
     color: white;
     display: flex;
     justify-content: space-between;    
-    height: 24px;
+    height: 33px;
     text-align: center;
     border: 1px solid black;
     padding: 3px;
-    background-image: linear-gradient(to bottom, #2A2C41 0%, #2A2C41 100%), linear-gradient(to bottom, #F8F7F2 0%, #F8F7F2 100%);
-    background-clip: content-box, padding-box;
+    background-color: #2A2C41;
+    // background-image: linear-gradient(to bottom, #2A2C41 0%, #2A2C41 100%), linear-gradient(to bottom, #F8F7F2 0%, #F8F7F2 100%);
+    // background-clip: content-box, padding-box;
     
     &__text {
         font-family: tickerbit;
         font-size: 14px;
+        line-height: 33px;
         
     }
     &__grip {
-        padding: 4px 2px 4px 2px;
+        padding: 4px;
     }
     &--float {
         border-width: 0 0 1px 0;
@@ -436,46 +464,61 @@
 }
 
 .button {
+    & a {
+            border-style: ridge;
+            border-width: 1rem;
+            border-image-source: url('img/button.png');
+            border-image-slice: 30% 40% fill;
+            border-image-repeat: repeat;
+            border-radius: 12px;
+            color: #2A2C41;
+            background: #DFDFD0;
+            display: block;
+            height: 10px;
+            line-height: 16px;
+            margin-top: 2px;
+            font-size: 12px;
+    
+            @include breakpoint(desktop) {
+                height: 26px;
+                line-height: 28px;
+                margin-top: 4px;
+                font-size: 14px;
+            }
+    
+            text-align: center;
+            text-transform: uppercase;
+            font-family: start-2p;
+    
+            &:hover {
+                border-image-source: url('img/button-hover.png');
+                text-decoration: none;
+            }
+    
+            transition: none;
+        }
     &--quarter {
         width: calc(100% - 24px);
         margin: 12px;
         margin-top: 36px;
+        @include breakpoint(desktop) {
+            margin-top: 12px;
+        }
+        & a {
+            border-image-source: url('img/button-navy.png');
+            background: #2F4382;
+            color: #FFFFF5;
+            &:hover {
+                background: #DCF15B;
+                color: #2A2C41;
+            }
+        }
     }
     &:active {
         -webkit-transform: translateY(2px);
         transform: translateY(2px);
     }
-    & a {
-        border-style: ridge;
-        border-width: 1rem;
-        border-image-source: url('img/button.png');
-        border-image-slice: 30% 40% fill;
-        border-image-repeat: repeat; 
-        border-radius: 12px;
-        color: #2A2C41;
-        background: #DFDFD0;
-        display: block;
-        height: 10px;
-        line-height:  16px;
-        margin-top: 2px;
-        font-size: 12px;
-        @include breakpoint(desktop) {
-            height: 26px;
-            line-height:  28px;
-            margin-top: 4px;
-            font-size: 14px;
-        }
 
-        text-align: center;
-        text-transform: uppercase;
-        font-family: start-2p;
-        
-        &:hover {
-            border-image-source: url('img/button-hover.png');
-            text-decoration: none;
-        }
-        transition: none;
-    }
     &--start {
         & a {
             height: 16px;
@@ -919,7 +962,8 @@
             background-color: #FDFFA2;
         }
         & a {
-            color: #85A506;
+            color: hsl(72 93% 30% / 1);
+            text-decoration: underline;
         }
     }
 
@@ -1311,10 +1355,10 @@
         top: -30px;
         right: -150px;
         transform: none;
-        height: 500px;
-        width: 500px;
+        height: 390px;
+        width: 350px;
     }
-    background-color: #EFFFA2;
+    background-color: #C4D2FF;
     border: 1px solid black;
     z-index: 5;
     font-family: start-2p;
@@ -1328,6 +1372,9 @@
 
 .calendar {
     width: 250px;
+    @include breakpoint(desktop) {
+        width: 180px;
+    }
     margin: auto;
     filter: drop-shadow(8px 8px 0px rgba(0, 0, 0, 0.25));
     &__heading {
@@ -1340,6 +1387,9 @@
         height: 50px;
         line-height: 55px;
         text-align: center;
+        @include breakpoint(desktop) {
+            font-size: 12px;
+        }
     }
     &__quarter {
         background-color: #FFFFF5;
@@ -1348,8 +1398,14 @@
         border-width: 0px 1px 1px 1px;
         text-align: center;
         line-height: 155px;
+
         font-size: 64px;
         padding-top: 20px;
+        @include breakpoint(desktop) {
+            height: 100px;
+            line-height: 100px;
+            font-size: 48px;
+        }
     }
 }
 
@@ -1365,6 +1421,9 @@
     font-size: 12px;
     height: 48px;
     line-height: 54px;
+    @include breakpoint(desktop) {
+        width: 180px;
+    }
     &__label {
         padding: 0 12px 0 12px;
     }
@@ -1375,3 +1434,58 @@
         font-size: 16px;
     }
 }
+
+// .calendar {
+//     width: 180px;
+//     margin: auto;
+//     filter: drop-shadow(8px 8px 0px rgba(0, 0, 0, 0.25));
+
+//     &__heading {
+//         background-color: #DCF15B;
+//         border: 1px solid #2A2C41;
+//         border-width: 1px 1px 1px 1px;
+//         color: #547335;
+//         text-transform: uppercase;
+//         font-size: 12px;
+//         height: 50px;
+//         line-height: 55px;
+//         text-align: center;
+//     }
+
+//     &__quarter {
+//         background-color: #FFFFF5;
+//         border: 1px solid #2A2C41;
+//         height: 100px;
+//         border-width: 0px 1px 1px 1px;
+//         text-align: center;
+//         line-height: 100px;
+//         font-size: 48px;
+//         padding-top: 20px;
+//     }
+// }
+
+// .tracker {
+//     display: flex;
+//     gap: 12px;
+// }
+
+// .tracker-module {
+//     display: flex;
+//     background-color: #213C06;
+//     border: 1px solid black;
+//     color: white;
+//     font-size: 10px;
+//     height: 32px;
+//     line-height: 36px;
+
+//     &__label {
+//         padding: 0 12px 0 12px;
+//     }
+
+//     &__number {
+//         background-color: white;
+//         color: #213C06;
+//         padding: 0 12px 0 12px;
+//         font-size: 16px;
+//     }
+// }

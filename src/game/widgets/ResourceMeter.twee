@@ -6,12 +6,18 @@
             <h1 class="user__name">$user</h1>
         </div>
         <div class="resource-meter__unit">
+            <div id="energyNotif" class="resource-meter__indicator">
+                <p>$energyNotif</p>
+            </div>
             <div class="resource-meter__label">
                 <p class="resource-meter__name">Wellbeing</p>
             </div>
             <<showmeter 'energy' '_energy / _maxEnergy' />>
         </div>
         <div class="resource-meter__unit">
+            <div id="approvalNotif" class="resource-meter__indicator">
+                <p>$approvalNotif</p>
+            </div>
             <div class="resource-meter__label">
                 <p>Likability</p>
             </div>

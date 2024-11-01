@@ -22,11 +22,13 @@
                 <div class="ending__text">
                     <h1 class="ending__title">$user,You’re Not Here to Make Friends</h1>
                     <p class="ending__desc">You’re efficient, strategic, and you’ve kept distractions at bay. You’d prefer coworkers not bother you, but if they must, they need to make it actionable. Don’t expect an invite to happy hour.</p>
-                    <<link "Play again?">>
-                        <<script>>
-                            Engine.restart();
-                        <</script>>
-                    <</link>>
+                    <div class="ending__replay">
+                        <<link "Play again?">>
+                            <<script>>
+                                Engine.restart();
+                            <</script>>
+                        <</link>>
+                    </div>
                 </div>
             </div>
             <<SharingModule>>

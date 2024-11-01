@@ -2,8 +2,27 @@
 <<widget "CalcResource">>
 	<<set $energy to Math.clamp($energy += Number($args[0]), 0, 10)>>
     <<set $approval to Math.clamp($approval += Number($args[1]), 0, 10)>>
-	<<set $workStyle to Math.clamp($workStyle += Number($args[2]), 0, 8)>>
-    <<set $orientation to Math.clamp($orientation += Number($args[3]), 0, 8)>>
+	<<set $workStyle to Math.clamp($workStyle += Number($args[2]), -8, 8)>>
+    <<set $orientation to Math.clamp($orientation += Number($args[3]), -8, 8)>>
+	<<set $energyDelta to $args[0]>>
+	<<set $approvalDelta to $args[1]>>
+	<<script>>
+        $(document).ready(function() {
+            $("#energyNotif p").text(State.getVar("$energyDelta").toString());
+			$("#approvalNotif p").text(State.getVar("$approvalDelta").toString());
+        });
+		const waitForGSAP = setInterval(function() {
+            if (typeof gsap !== "undefined") {
+                clearInterval(waitForGSAP);
+                if(document.getElementById('energyNotif')) {
+                    gsap.fromTo("#energyNotif", {y: 25}, {y: 0, opacity: 1, duration: 0.5, ease: "back.out"});
+					gsap.fromTo("#approvalNotif", {y: 25}, {y: 0, opacity: 1, duration: 0.5, ease: "back.out"});
+					gsap.to("#energyNotif", {delay: 2.5, duration: 0.5, opacity: 0, ease: "back.out"});
+					gsap.to("#approvalNotif", {delay: 2.5, duration: 0.5, opacity: 0, ease: "back.out"});
+                }
+            }
+        }, 100);
+	<</script>>
 	<<updatemeter 'approval' `$approval / $maxApproval`>>
 	<<updatemeter 'energy' `$energy / $maxEnergy`>>
 <</widget>>

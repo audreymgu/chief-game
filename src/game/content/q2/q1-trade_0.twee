@@ -1,6 +1,4 @@
-:: The E Word [Q2] {"position":"600,675","size":"100,100"}
-/* pass messages */
-<<EventMessenger "showMenu" true>>
+:: Trade Show [Q2] {"position":"600,675","size":"100,100"}
 /* handle quarter */
 <<script>>
     $(document).ready(function() {
@@ -13,6 +11,7 @@
         });
     });
 <</script>>
+<<set $remaining to 3>>
 /* passage content */
 <div class="abs-wrapper">
 	<div class="rel-wrapper">
@@ -40,16 +39,16 @@
             <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
             <<TitleBar $quarterLabel>>
             <div class="scenario">
-                <img class="scenario__img" src="img/q2-word.jpg"/>
+                <img class="scenario__img" src="img/q1-trade.jpg"/>
                 <div class="scenario__text">
-                    <h1 class="scenario__title">The "E" Word</h1>
-                    <p class="scenario__desc">After passionately advocating for a project, Brian says you seem "emotional.”</p>
+                    <h1 class="scenario__title">Trade Show</h1>
+                    <p class="scenario__desc">You’ve been asked to join a major industry gathering in Sydney. It’s a 19-hour flight.</p>
                 </div>
             </div>
             <<ChoiceModule
-                "Sorry I care, Brian"
-                "h|Pants him with data|The numbers|You fumble"
-                "s|Verbal judo him|You suggest|You stammer"
+                "Literally anything else"
+                "Embrace globalism"
+                "Send a minion"
             >>
         </div>
 </div>

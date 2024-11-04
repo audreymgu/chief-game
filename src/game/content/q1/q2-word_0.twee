@@ -1,4 +1,8 @@
-:: Multiple Stakeholders [Q2] {"position":"600,675","size":"100,100"}
+:: The E Word [Q1] {"position":"600,675","size":"100,100"}
+<<script>>
+    UIBar.show();
+    UIBar.unstow();
+<</script>>
 /* pass messages */
 <<EventMessenger "showMenu" true>>
 /* handle quarter */
@@ -40,16 +44,16 @@
             <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
             <<TitleBar $quarterLabel>>
             <div class="scenario">
-                <img class="scenario__img" src="img/q2-stake.jpg"/>
+                <img class="scenario__img" src="img/q2-word.jpg"/>
                 <div class="scenario__text">
-                    <h1 class="scenario__title">Multiple Stakeholders</h1>
-                    <p class="scenario__desc">A last-minute emergency hits your inbox at 5pm—and your nephew’s clarinet recital starts at 5pm.</p>
+                    <h1 class="scenario__title">The "E" Word</h1>
+                    <p class="scenario__desc">After passionately advocating for a project, Brian says you seem "emotional.”</p>
                 </div>
             </div>
             <<ChoiceModule
-                "Stay late"
-                "Bring your laptop|You take|The glow"
-                "Two words: silent mode"
+                "Sorry I care, Brian"
+                "h|Pants him with data|The numbers|You fumble"
+                "s|Verbal judo him|You suggest|You stammer"
             >>
         </div>
 </div>

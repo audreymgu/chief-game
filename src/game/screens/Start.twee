@@ -9,21 +9,21 @@
 	<div id="notif1" class="notification">
 		<img class="notification__image" src="img/slack.png"/>
 		<div class="notification-text">
-			<p class="notification-text__heading">#ALL-HANDS</p>
+			<p class="notification-text__heading">#All-Team</p>
 			<p class="notification-text__body">Traverse workplace double standards as a woman exec!</p>
 		</div>
 	</div>
 	<div id="notif2" class="notification">
 		<img class="notification__image" src="img/slack.png"/>
 		<div class="notification-text">
-			<p class="notification-text__heading">#ALL-HANDS</p>
+			<p class="notification-text__heading">#All-Team</p>
 			<p class="notification-text__body">Optimize your WELL-BEING without sacrificing LIKEABILITY!</p>
 		</div>
 	</div>
 	<div id="notif3" class="notification">
 		<img class="notification__image" src="img/slack.png"/>
 		<div class="notification-text">
-			<p class="notification-text__heading">#ALL-HANDS</p>
+			<p class="notification-text__heading">#All-Team</p>
 			<p class="notification-text__body">Always remember to smile!</p>
 		</div>
 	</div>

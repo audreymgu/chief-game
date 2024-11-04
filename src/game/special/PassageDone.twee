@@ -23,7 +23,7 @@
         shareBtn.addEventListener('click', async () => {
             const blob = await fetchImageBlob(endingImage);
             
-            var resultURL = 'https://chief-game.vercel.app'
+            var resultURL = 'https://thecorporatetrail.chief.com'
             let shareData = {
                 url: resultURL,
             };
@@ -69,7 +69,7 @@
                 return;
             }
 
-            var resultURL = 'https://chief-game.vercel.app/?result=' + endingLabel;
+            var resultURL = 'https://thecorporatetrail.chief.com/?result=' + endingLabel;
             let shareData = {
                 url: resultURL,
             };

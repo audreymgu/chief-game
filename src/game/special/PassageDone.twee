@@ -113,26 +113,20 @@
         clipBtn.addEventListener('click', async () => {
             const blob = await fetchImageBlob(endingImage);
 
+            function isMobileDevice() {
+                return /Mobi|Android/i.test(navigator.userAgent);
+            }
+
             if (!blob) {
                 console.error('Image blob is not available for clipboard.');
                 return;
             }
 
-            try {
-                clipBtn.classList.remove("button--success");
-                clipBtn.children[0].innerText = "Copying...";
-                await navigator.clipboard.write([
-                    new ClipboardItem({
-                        'image/png': blob
-                    })
-                ]);
-                setTimeout(function () {
-                    clipBtn.children[0].innerText = "Copied to Clipboard";
-                    clipBtn.classList.add("button--success");
-                }, 200);
-            } catch (error) {
-                console.error('Failed to copy image to clipboard:', error);
-            }
+
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(await fetchImageBlob(endingImage));
+            link.download = 'image.png';
+            link.click();
         });
     }
 <</script>>

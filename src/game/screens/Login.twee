@@ -8,14 +8,14 @@
 <<if $quarter == undefined>>
 	<<set $quarter to 0>>
 <</if>>
-<<set $hardSkill to 0>>
-<<set $softSkill to 0>>
+<<set $class to 1>>
+<<set $hardSkill to 1>>
+<<set $softSkill to -1>>
 <<set $energy to 5>>
 <<set $energyPercent to 50>>
 <<set $approval to 5>>
 <<set $approvalPercent to 50>>
 <<set $user to "ABC">>
-<<set $class to 0>>
 <<set $demo to true>>
 <<set $workStyle to 0>>
 <<set $orientation to 0>>
@@ -30,7 +30,7 @@
 					<h1 class="login-window__title">Pick Your Department</h1>
 					<p class="login-window__info">Your skills may affect certain outcomes.</p>
 					<div class="class-selector">
-						<div class="class" id="pd">	
+						<div class="class class--selected" id="pd">	
 							<img class="class__portrait" src="img/tech.jpg"/>
 							<div class="class-info">
 								<p class="class-info__title class-info__title--product">TECH</p>
@@ -55,7 +55,7 @@
 							<img class="class__portrait" src="img/ops.jpg"/>
 							<div class="class-info">
 								<p class="class-info__title class-info__title--ops">OPERATIONS</p>
-								<p class="class-info__desc">Blockers, beware. Neither rain nor sleet nor shifting priority keeps you from hitting a deadline.</p>
+								<p class="class-info__desc">Blockers, beware. Neither rain nor shifting priority keeps you from hitting a deadline.</p>
 							</div>
 						</div>
 					</div>
@@ -94,7 +94,7 @@
         var divs = document.querySelectorAll('.class');
 		var userField = document.getElementById("textbox-user");
 		var inputValue = userField.value.trim();
-		var classCheck = false;
+		var classCheck = true;
 		var btn = document.querySelector('#login');
 
 		function loginCheck () {

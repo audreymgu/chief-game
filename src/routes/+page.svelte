@@ -5,6 +5,7 @@
     import { onMount } from 'svelte';
 
     import { page } from '$app/stores';
+    import { browser } from '$app/environment';
 
     let { ogTitle, ogDescription, ogImage } = $page.data;
 
@@ -58,15 +59,24 @@
         iframeEl.contentWindow.postMessage('restart', '*');
         console.log("Restart request.");
     }
+    if (browser) {
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function gtag(){window.dataLayer.push(arguments);}
+        window.gtag('js', new Date());
+
+        window.gtag('config', 'G-3QGYQG9BYF');
+    }
 </script>
 
 <svelte:head>
-  <title>The Corporate Trail</title>
-  <meta property="og:title" content="{ogTitle}" />
-  <meta property="og:description" content="{ogDescription}" />
-  <meta property="og:image" content="{ogImage}" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="{`https://chief-game.vercel.app`}">
+    <title>The Corporate Trail</title>
+    <meta property="og:title" content="{ogTitle}" />
+    <meta property="og:description" content="{ogDescription}" />
+    <meta property="og:image" content="{ogImage}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{`https://chief-game.vercel.app`}">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3QGYQG9BYF"></script>
 </svelte:head>
 
 <!-- <About/> -->

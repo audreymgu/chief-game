@@ -1,6 +1,6 @@
 ::Story Stylesheet [stylesheet]
 @font-face {
-  font-family: "tickerbit";
+  font-family: "departure";
   src: url("fonts/departure.woff2") format("woff2");
 }
 @font-face {
@@ -612,7 +612,7 @@ h1 {
   }
 }
 .scenario__desc {
-  font-family: tickerbit;
+  font-family: departure;
   line-height: 130%;
 }
 .scenario__desc--alert {
@@ -713,7 +713,7 @@ h1 {
   scrollbar-color: gray rgba(0, 0, 0, 0);
 }
 .ending__text a {
-  font-family: tickerbit;
+  font-family: departure;
   color: #85A506;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
@@ -735,7 +735,7 @@ h1 {
   }
 }
 .ending__desc {
-  font-family: tickerbit;
+  font-family: departure;
   line-height: 130%;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
@@ -832,7 +832,7 @@ h1 {
   background-color: #2A2C41;
 }
 .titlebar__text {
-  font-family: tickerbit;
+  font-family: departure;
   font-size: 14px;
   line-height: 33px;
 }
@@ -953,7 +953,7 @@ h1 {
   height: 36px;
   padding: 6px;
   justify-content: space-between;
-  font-family: tickerbit;
+  font-family: departure;
 }
 .menu-bar__group {
   height: 100%;
@@ -1037,7 +1037,7 @@ h1 {
 }
 
 .class-info {
-  font-family: tickerbit;
+  font-family: departure;
   font-size: 11px;
   flex: 1 0 0;
 }
@@ -1191,7 +1191,7 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   padding: 4px;
-  font-family: tickerbit;
+  font-family: departure;
   margin-bottom: 12px;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
@@ -1244,7 +1244,7 @@ h1 {
   margin-bottom: 0.5rem;
 }
 .handbook__text {
-  font-family: tickerbit;
+  font-family: departure;
 }
 .handbook__text p {
   margin-bottom: 16px;
@@ -1376,7 +1376,7 @@ h1 {
   margin-bottom: 16px;
 }
 .window-text__copy {
-  font-family: tickerbit;
+  font-family: departure;
   max-width: 550px;
   font-size: 14px;
   line-height: 1.75;
@@ -1496,7 +1496,7 @@ h1 {
   display: block;
   height: 36px;
   padding: 6px;
-  font-family: tickerbit;
+  font-family: departure;
   font-size: 16px;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
@@ -1585,7 +1585,7 @@ h1 {
 }
 
 .start-subhead {
-  font-family: tickerbit;
+  font-family: departure;
   text-transform: uppercase;
   color: #213C06;
   font-size: 14px;
@@ -1604,7 +1604,7 @@ h1 {
 .notification {
   z-index: 2;
   color: #2A2C41;
-  font-family: tickerbit;
+  font-family: departure;
   background-color: #FFFFF5;
   padding: 20px;
   border: 3px solid #778329;
@@ -1691,7 +1691,7 @@ h1 {
   border-width: 0 0 1px 0;
   z-index: 2;
   background-color: #668547;
-  font-family: tickerbit;
+  font-family: departure;
   color: #DCF15B;
   justify-items: center;
 }

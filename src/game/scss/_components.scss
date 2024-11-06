@@ -249,7 +249,7 @@
         }
     }
     &__desc {
-        font-family: tickerbit;
+        font-family: departure;
         line-height: 130%;
         &--alert {
             height: min-content;
@@ -341,7 +341,7 @@
     
         scrollbar-color: gray rgba(0,0,0,0); 
         & a {
-            font-family: tickerbit;
+            font-family: departure;
             color: #85A506;
         }
         @include breakpoint(desktop) {
@@ -360,7 +360,7 @@
         }
     }
     &__desc {
-        font-family: tickerbit;
+        font-family: departure;
         line-height: 130%;
         @include breakpoint(desktop) {
             font-size: 16px;
@@ -447,7 +447,7 @@
     // background-clip: content-box, padding-box;
     
     &__text {
-        font-family: tickerbit;
+        font-family: departure;
         font-size: 14px;
         line-height: 33px;
         
@@ -590,7 +590,7 @@
     height: 36px;
     padding: 6px;
     justify-content: space-between;
-    font-family: tickerbit;
+    font-family: departure;
     &__group {
         height: 100%;
         display: flex;
@@ -668,7 +668,7 @@
 }
 
 .class-info {
-    font-family: tickerbit;
+    font-family: departure;
     font-size: 11px;
     @include breakpoint(desktop) {
         padding: 10px;
@@ -808,7 +808,7 @@
         margin-left: auto;
         margin-right: auto;
         padding: 4px;
-        font-family: tickerbit;
+        font-family: departure;
         @include breakpoint(desktop) {
             font-size: 14px;
         }
@@ -858,7 +858,7 @@
         margin-bottom: 0.5rem;
     }
     &__text {
-        font-family: tickerbit;
+        font-family: departure;
         & p {
             margin-bottom: 16px;
             line-height: 1.65;
@@ -978,7 +978,7 @@
         margin-bottom: 16px;
     }
     &__copy {
-        font-family: tickerbit;
+        font-family: departure;
         max-width: 550px;
         font-size: 14px;
         line-height: 1.75;
@@ -1117,7 +1117,7 @@
         display: flex;
         justify-content: center;
     }
-    font-family: tickerbit;
+    font-family: departure;
     font-size: 16px;
     &:hover {
         text-decoration: underline;
@@ -1205,7 +1205,7 @@
 }
 
 .start-subhead {
-    font-family: tickerbit;
+    font-family: departure;
     text-transform: uppercase;
     color: #213C06;
     font-size: 14px;
@@ -1224,7 +1224,7 @@
 // .notification {
 //     z-index: 2;
 //     color: #2A2C41;
-//     font-family: tickerbit;
+//     font-family: departure;
 //     background-color: #FFFFF5;
 //     padding: 1.25vw;
 //     border: 3px solid #778329;
@@ -1253,7 +1253,7 @@
 .notification {
     z-index: 2;
     color: #2A2C41;
-    font-family: tickerbit;
+    font-family: departure;
     background-color: #FFFFF5;
     padding: 20px;
     border: 3px solid #778329;
@@ -1335,7 +1335,7 @@
     border-width: 0 0 1px 0;
     z-index: 2;
     background-color: #668547;
-    font-family: tickerbit;
+    font-family: departure;
     color: #DCF15B;
     justify-items: center;
     &__option {

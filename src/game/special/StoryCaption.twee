@@ -9,7 +9,7 @@
 <div id="desktop" class="icon-view">
     <div id="about-btn" class="icon">
         <img class="icon__img" src="img/about.png" />
-        <p class="icon__label">ABOUT</p>
+        <p class="icon__label">WHO MADE THIS?</p>
     </div>
     <div id="quit-btn" class="icon">
         <img class="icon__img" src="img/quit.png" />

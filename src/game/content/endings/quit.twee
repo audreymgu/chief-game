@@ -5,7 +5,7 @@
 <</script>>
 <<EventMessenger "showMenu" true true>>
 /* passage content */
-<<set $endingImage to "/img/e-quit.png">>
+<<set $endingImage to "/img/e-quit_share.png">>
 <<set $endingLabel to "qui">>
 <div class="bg bg--teal"></div>
 <div class=" abs-wrapper abs-wrapper--ending">

@@ -4,7 +4,7 @@
 <</script>>
 <<EventMessenger "showMenu" true true>>
 /* passage content */
-<<set $endingImage to "/img/e-beloved.png">>
+<<set $endingImage to "/img/e-beloved_share.png">>
 <<set $endingLabel to "bel">>
 <div id="transition" class="bg bg--animation">
     <p class="bg__text">Evaluating your performance<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></p>

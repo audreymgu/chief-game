@@ -895,10 +895,14 @@
     }
 }
 .icon {
-    display: flex;
-    flex-direction: column;
-    flex: 0 0 auto;
-    
+    display: none;
+    @include breakpoint(desktop) {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
     &:hover {
         .icon__label {
             color: #dcf15b;
@@ -913,6 +917,7 @@
         color: white;
         font-family: start-2p;
         margin-top: 12px;
+        font-size: 12px;
     }
     &__img {
         height: 106px;

@@ -1,7 +1,7 @@
 ::PassageHeader
 <div id="menu-overlay" class="menu-overlay menu-overlay--hidden">
     <ul id="mobile-menu" class="mobile-menu">
-        <li id="about-mobile" class="mobile-menu__option"><img src="img/about.png" />About</li>
+        <li id="about-mobile" class="mobile-menu__option"><img src="img/about.png" />Who Made This?</li>
         <li id="quit-mobile" class="mobile-menu__option"><img src="img/quit.png" />Quit</li>
     </ul>
 </div>

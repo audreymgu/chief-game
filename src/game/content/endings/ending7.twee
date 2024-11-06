@@ -4,7 +4,7 @@
 <</script>>
 <<EventMessenger "showMenu" true true>>
 /* passage content */
-<<set $endingImage to "/img/placeholder.png">>
+<<set $endingImage to "/img/e-fire_share.png">>
 <<set $endingLabel to "gre">>
 <div class="bg bg--purple"></div>
 <div class=" abs-wrapper abs-wrapper--ending">

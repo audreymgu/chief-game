@@ -1,6 +1,4 @@
 :: Login {"position":"500,300","size":"100,100"}
-/* Pass Messages */
-<<EventMessenger "loginFlag" true false>>
 /* Variable Initialization */
 <<if $time == undefined>>
 	<<set $time to 0>>
@@ -20,6 +18,59 @@
 <<set $workStyle to 0>>
 <<set $orientation to 0>>
 <<set $quarter to 1>>
+<<script>>
+	$(document).ready(function() {
+		$("#l-close").click(function(){
+			document.getElementById('l-about').classList.toggle('about-window--hidden');
+		});
+		$("#l-about-mobile").click(function(){
+			document.getElementById('l-about').classList.toggle('about-window--hidden');
+			document.getElementById('l-menu-overlay').classList.toggle('menu-overlay--hidden');
+			document.getElementById('l-hamburger').src="img/menu.svg";
+		});
+		$("#l-hamburger").click(function() {
+			if (document.getElementById('l-menu-overlay').classList.contains('menu-overlay--hidden')) {
+				document.getElementById('l-hamburger').src="img/close.svg";
+			} else {
+				document.getElementById('l-hamburger').src="img/menu.svg";
+			}
+			document.getElementById('l-menu-overlay').classList.toggle('menu-overlay--hidden');        
+		});
+		$("#l-quit-mobile").click(function() {
+            $.wiki("<<timed 0.1s>><<goto 'QUIT'>><</timed>>");
+            document.getElementById('menu-overlay').classList.toggle('menu-overlay--hidden');
+            document.getElementById('hamburger').src="img/menu.svg";
+        });
+	});
+<</script>>
+
+<div class="menu-bar menu-bar--login">
+    <img id="l-hamburger" class="menu-bar__btn" src="img/menu.svg" />
+    <img class="menu-bar__logo" src="img/logo.png" />
+    <a href="https://chief.com" class="menu-bar__heading">A corporate survival game by<img src="img/chief.svg"/></a>
+</div>
+<div id="l-menu-overlay" class="menu-overlay menu-overlay--hidden">
+    <ul id="l-mobile-menu" class="mobile-menu">
+        <li id="l-about-mobile" class="mobile-menu__option"><img src="img/about.png" />Who Made This?</li>
+        <li id="l-quit-mobile" class="mobile-menu__option"><img src="img/quit.png" />Quit</li>
+    </ul>
+</div>
+<div id="l-about" class="about-window about-window--hidden">
+    <div class="titlebar titlebar--float">
+        <img src="img/grip.svg" class="titlebar__grip">
+        <p class="titlebar__text">WHO MADE THIS?</p>
+        <img src="img/grip.svg" class="titlebar__grip">
+    </div>
+    <div class="window-text">
+        <div class="window-text__scroll">
+            <h1 class="window-text__title">CHIEF IS A NETWORK FOR WOMEN EXECUTIVES</h1>
+            <p class="window-text__copy">Navigating the highs, lows, and absurdities of corporate life at the executive level takes more than grit and hustle. Just ask any of our members—<mark>40% of whom are in the C-Suite</mark>.</p>
+            <p class="window-text__copy">Chief helps you be <mark>a more impactful leader</mark> by connecting you with peers who understand your challenges and ambitions.</p>
+            <p class="window-text__copy">Visit <a href="https://chief.com">Chief.com</a> to learn more.</p>
+        </div>
+        <div id="l-close" class="button"><a>Close</a></div>
+    </div>
+</div>
 <div class="abs-wrapper abs-wrapper--login">
 	<img class="logo" src="img/logo.png"/>
 	<div class="rel-wrapper">

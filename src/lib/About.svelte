@@ -20,7 +20,7 @@
         top: 32px;
         display: flex;
         flex-direction: column;
-        border: 1px solid black;
+        border: 1px solid #2A2C41;
         &__middle {
             flex-shrink: 2;
             max-height: 100%;
@@ -34,7 +34,7 @@
             left: 30px;
             width: 650px;
             background-color: #FFFFF5;
-            border: 1px solid black;
+            border: 1px solid #2A2C41;
             filter: drop-shadow(8px 8px 0px rgba(0, 0, 0, 0.25));
         }
         &__text {
@@ -65,7 +65,7 @@
             /* Place The scroll down button at the bottom */
             &::-webkit-scrollbar-button:vertical:increment {
                 background-color: #DFDFD0;
-                border: 1px solid black;
+                border: 1px solid #2A2C41;
                 border-width: 1px 0 0 1px;
                 background-image: url(img/scroll-bottom.svg);
                 background-position: center;
@@ -76,7 +76,7 @@
             /* Place The scroll up button at the up */
             &::-webkit-scrollbar-button:vertical:decrement {
                 background-color: #DFDFD0;
-                border: 1px solid black;
+                border: 1px solid #2A2C41;
                 border-width: 0 0 1px 1px;
                 background-image: url(img/scroll-top.svg);
                 background-position: center;
@@ -86,13 +86,13 @@
             
             &::-webkit-scrollbar-track:vertical {
                 background-color: #DFDFD0;
-                border: 1px solid black;
+                border: 1px solid #2A2C41;
                 border-width: 0 0 0 1px;
             }
 
             &::-webkit-scrollbar-thumb {
                 background-color: #FDF7EE;
-                border: 1px solid black; /* Space around the thumb to ensure visibility */
+                border: 1px solid #2A2C41; /* Space around the thumb to ensure visibility */
             }
 
             & h1 {
@@ -123,7 +123,7 @@
         justify-content: space-between;    
         height: 24px;
         text-align: center;
-        border: 1px solid black;
+        border: 1px solid #2A2C41;
         @include breakpoint(desktop) {
             border-width: 0 0 1px 0;
         }

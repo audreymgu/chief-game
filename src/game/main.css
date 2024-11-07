@@ -213,8 +213,8 @@ h1 {
   }
 }
 .abs-wrapper--login {
-  top: 14px;
-  height: calc(100% - 32px);
+  top: 64px;
+  height: calc(100% - 80px);
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   .abs-wrapper--login {
@@ -264,7 +264,7 @@ h1 {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   .rel-wrapper {
@@ -293,10 +293,11 @@ h1 {
   flex-grow: 1;
   display: flex;
   overflow-y: auto;
+  flex-basis: fit-content;
   flex-direction: column;
-  justify-items: flex-start;
+  justify-content: flex-start;
   background-color: #FFFFF5;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 0;
   color: #2A2C41;
   padding: 3px;
@@ -308,7 +309,7 @@ h1 {
   .content {
     overflow-y: unset;
     padding: 8px;
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
   }
 }
 .content--ending {
@@ -339,7 +340,7 @@ h1 {
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   .stats {
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
     margin-bottom: 12px;
     padding: 8px;
     width: calc(100% - 18px);
@@ -423,7 +424,7 @@ h1 {
   .resource-meter {
     padding: 0 10px 0 5px;
     align-items: center;
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
     border-width: 1px 1px 1px 1px;
   }
 }
@@ -489,17 +490,12 @@ h1 {
 }
 
 .action-box {
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 0 1px 1px 1px;
   width: calc(100% - 18px);
   padding: 0 8px 8px 8px;
-  margin: auto;
   display: flex;
   flex-direction: column;
-  justify-items: center;
-  align-items: stretch;
-  align-content: center;
-  justify-content: center;
   gap: 0.25rem;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
@@ -515,7 +511,7 @@ h1 {
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   .avatar {
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
     border-width: 1px 0px 1px 1px;
     background-color: #FFFFF5;
   }
@@ -527,18 +523,19 @@ h1 {
 @media (min-width: 1200px) and (min-height: 850px) {
   .avatar__image {
     margin: 4px;
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
   }
 }
 
 .scenario {
-  flex-grow: 1;
   display: flex;
   gap: 12px;
   color: #2A2C41;
   flex-direction: column;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 0 1px 0 1px;
+  padding-bottom: 12px;
+  flex-grow: 2;
 }
 .scenario--inactive {
   opacity: 20%;
@@ -584,10 +581,10 @@ h1 {
   }
 }
 .scenario__text {
-  flex-grow: 1;
   font-size: 14px;
   padding-left: 12px;
   padding-right: 12px;
+  height: fit-content;
   line-height: 120%;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
@@ -620,8 +617,8 @@ h1 {
 }
 .scenario__img {
   width: 100%;
-  height: auto;
-  height: 220px;
+  min-height: 250px;
+  max-height: 500px;
   object-fit: cover;
   align-self: start;
 }
@@ -630,7 +627,7 @@ h1 {
     height: unset;
     width: 265px;
     max-height: unset;
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
   }
 }
 .scenario__icon {
@@ -649,7 +646,7 @@ h1 {
   display: flex;
   flex-direction: column;
   margin: 8px;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   .alert {
@@ -666,7 +663,7 @@ h1 {
   display: flex;
   color: #2A2C41;
   flex-direction: column;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 0 1px 0 1px;
 }
 .ending--alert {
@@ -751,7 +748,7 @@ h1 {
   min-height: 150px;
   max-height: 500px;
   object-fit: cover;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 0 0 1px 0;
   align-self: start;
 }
@@ -789,7 +786,7 @@ h1 {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 0 1px 1px 1px;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
@@ -800,7 +797,7 @@ h1 {
 .btn-area--ending {
   padding: 8px;
   background-color: #F8FFCF;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   z-index: 2;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
@@ -815,7 +812,7 @@ h1 {
 @media (min-width: 1200px) and (min-height: 850px) {
   .btn-area--alert {
     padding-bottom: 10px;
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
     border-width: 0 1px 1px 1px;
   }
 }
@@ -826,7 +823,7 @@ h1 {
   justify-content: space-between;
   height: 33px;
   text-align: center;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   padding: 3px;
   background-color: #2A2C41;
 }
@@ -859,7 +856,7 @@ h1 {
   height: 10px;
   line-height: 16px;
   margin-top: 2px;
-  font-size: 12px;
+  font-size: 11px;
   text-align: center;
   text-transform: uppercase;
   font-family: start-2p;
@@ -903,6 +900,13 @@ h1 {
 .button--start a {
   height: 16px;
   line-height: 20px;
+}
+.button--start a:hover {
+  border-image-source: url("img/button-blue.png");
+}
+.button--hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 .button--disabled a {
   color: rgba(42, 44, 65, 0.5);
@@ -972,6 +976,10 @@ h1 {
   .menu-bar__logo {
     display: none;
   }
+}
+.menu-bar--login {
+  display: flex !important;
+  justify-content: center;
 }
 
 .class-selector {
@@ -1159,7 +1167,7 @@ h1 {
 
 .login-window {
   padding: 8px 16px 16px 16px;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 0px 1px 1px 1px;
   height: 100%;
   display: flex;
@@ -1321,7 +1329,7 @@ h1 {
   top: 32px;
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
 }
 .scroll-bar__middle {
   flex-shrink: 2;
@@ -1337,7 +1345,7 @@ h1 {
   display: block;
   z-index: 4;
   background-color: #FFFFF5;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   .about-window {
@@ -1350,6 +1358,15 @@ h1 {
 }
 .about-window--hidden {
   display: none;
+}
+.about-window--over {
+  display: none;
+  z-index: 2;
+}
+@media (min-width: 1200px) and (min-height: 850px) {
+  .about-window--over {
+    display: unset;
+  }
 }
 
 .window-text {
@@ -1411,7 +1428,7 @@ h1 {
 }
 .window-text::-webkit-scrollbar-button:vertical:increment {
   background-color: #DFDFD0;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 1px 0 0 1px;
   background-image: url(img/scroll-bottom.svg);
   background-position: center;
@@ -1420,7 +1437,7 @@ h1 {
 }
 .window-text::-webkit-scrollbar-button:vertical:decrement {
   background-color: #DFDFD0;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 0 0 1px 1px;
   background-image: url(img/scroll-top.svg);
   background-position: center;
@@ -1429,12 +1446,12 @@ h1 {
 }
 .window-text::-webkit-scrollbar-track:vertical {
   background-color: #DFDFD0;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 0 0 0 1px;
 }
 .window-text::-webkit-scrollbar-thumb {
   background-color: #FDF7EE;
-  border: 1px solid black; /* Space around the thumb to ensure visibility */
+  border: 1px solid #2A2C41; /* Space around the thumb to ensure visibility */
 }
 
 .bg {
@@ -1463,7 +1480,7 @@ h1 {
 .bg--animation {
   opacity: 1;
   z-index: 6;
-  background-color: #213C06;
+  background-color: #DCF15B;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -1589,6 +1606,11 @@ h1 {
   color: #213C06;
   font-size: 14px;
   margin-bottom: 20px;
+  text-decoration: underline;
+}
+.start-subhead.link-external::after {
+  visibility: hidden;
+  content: "";
 }
 
 .start-img {
@@ -1606,7 +1628,7 @@ h1 {
   font-family: departure;
   background-color: #FFFFF5;
   padding: 20px;
-  border: 3px solid #778329;
+  border: 3px solid #2A2C41;
   filter: drop-shadow(8px 8px 0px rgba(0, 0, 0, 0.25));
   display: flex;
   position: absolute;
@@ -1735,7 +1757,7 @@ h1 {
   height: 100%;
   width: 100%;
   background-color: #C4D2FF;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   z-index: 5;
   font-family: start-2p;
   color: #2A2C41;
@@ -1804,12 +1826,13 @@ h1 {
 .tracker {
   display: flex;
   gap: 12px;
+  margin-bottom: 48px;
 }
 
 .tracker-module {
   display: flex;
   background-color: #213C06;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   color: white;
   font-size: 12px;
   height: 48px;
@@ -1828,6 +1851,19 @@ h1 {
   color: #213C06;
   padding: 0 12px 0 12px;
   font-size: 16px;
+}
+
+.screensaver-popup {
+  display: none;
+  pointer-events: none;
+}
+@media (min-width: 1200px) and (min-height: 850px) {
+  .screensaver-popup {
+    display: block;
+    position: absolute;
+    height: 100px;
+    z-index: 100;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

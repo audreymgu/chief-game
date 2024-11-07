@@ -37,9 +37,6 @@
                     <p class="tracker-module__label">remaining</p>
                 </div>
             </div>
-            <div id="quarter-close" class="button button--quarter">
-                <a>OK</a>
-            </div>
         </div>
         <div class="content" id="scenario-area">
             <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>

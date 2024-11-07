@@ -76,7 +76,7 @@
     @include breakpoint(desktop) {
         padding: 0 10px 0 5px;
         align-items: center;
-        border: 1px solid black;
+        border: 1px solid #2A2C41;
         border-width: 1px 1px 1px 1px;
     }
     &__unit {
@@ -141,20 +141,15 @@
 }
 
 .action-box {
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
     border-width: 0 1px 1px 1px;
     width: calc(100% - 18px);
     padding: 0 8px 8px 8px;
     @include breakpoint(desktop) {
         width: calc(100% - 18px);
     }
-    margin: auto;
     display: flex;
     flex-direction: column;
-    justify-items: center;
-    align-items: stretch;
-    align-content: center;
-    justify-content: center;
     gap: 0.25rem;
 }
 
@@ -165,7 +160,7 @@
     font-size: 12px;
     align-items: flex-start;
     @include breakpoint(desktop) {
-        border: 1px solid black;
+        border: 1px solid #2A2C41;
         border-width: 1px 0px 1px 1px;
         background-color: #FFFFF5;
     }
@@ -175,21 +170,21 @@
         height: 54px;
         @include breakpoint(desktop) {
             margin: 4px;
-            border: 1px solid black;  
+            border: 1px solid #2A2C41;  
 
         }
     }
 }
 
 .scenario {
-    flex-grow: 1;
     display: flex;
     gap: 12px;
     color: #2A2C41;
     flex-direction: column;
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
     border-width: 0 1px 0 1px;
-
+    padding-bottom: 12px;
+    flex-grow: 2;
     &--inactive {
         opacity: 20%;
         display: none;
@@ -226,10 +221,10 @@
         text-transform: uppercase;
     }
     &__text {
-        flex-grow: 1;
         font-size: 14px;
         padding-left: 12px;
         padding-right: 12px;
+        height: fit-content;
         line-height: 120%;
         @include breakpoint(desktop) {
             padding-top: 12px;
@@ -258,14 +253,14 @@
     }
     &__img {
         width: 100%;
-        height: auto;
-        height: 220px;
+        min-height: 250px;
+        max-height: 500px;
         object-fit: cover;
         @include breakpoint(desktop) {
             height: unset;
             width: 265px;
             max-height: unset;
-            border: 1px solid black;
+            border: 1px solid #2A2C41;
         }
         align-self: start;
     }
@@ -284,7 +279,7 @@
     display: flex;
     flex-direction: column;
     margin: 8px;
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
     @include breakpoint(desktop) {
         margin: 0;
         padding: 0px 8px 8px 8px;
@@ -299,7 +294,7 @@
     display: flex;
     color: #2A2C41;
     flex-direction: column;
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
     border-width: 0 1px 0 1px;
     &--alert {
         align-items: center;
@@ -375,7 +370,7 @@
         min-height: 150px;
         max-height: 500px;
         object-fit: cover;
-        border: 1px solid black;
+        border: 1px solid #2A2C41;
         border-width: 0 0 1px 0;
         @include breakpoint(desktop) {
             height: unset;
@@ -408,7 +403,7 @@
     padding-left: 20px;    
     padding-right: 20px;
     padding-bottom: 20px;
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
     border-width: 0 1px 1px 1px;
     @include breakpoint(desktop) {
         border: none;
@@ -416,7 +411,7 @@
     &--ending {
         padding: 8px;
         background-color:#F8FFCF;
-        border: 1px solid black;
+        border: 1px solid #2A2C41;
         @include breakpoint(desktop) {
             border-width: 0 1px 1px 1px;
         }
@@ -428,7 +423,7 @@
         border-width: 0px;
         @include breakpoint(desktop) {
             padding-bottom: 10px;
-            border: 1px solid black;
+            border: 1px solid #2A2C41;
             border-width: 0 1px 1px 1px;
         }
     }
@@ -440,7 +435,7 @@
     justify-content: space-between;    
     height: 33px;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
     padding: 3px;
     background-color: #2A2C41;
     // background-image: linear-gradient(to bottom, #2A2C41 0%, #2A2C41 100%), linear-gradient(to bottom, #F8F7F2 0%, #F8F7F2 100%);
@@ -478,7 +473,7 @@
             height: 10px;
             line-height: 16px;
             margin-top: 2px;
-            font-size: 12px;
+            font-size: 11px;
     
             @include breakpoint(desktop) {
                 height: 26px;
@@ -524,7 +519,14 @@
         & a {
             height: 16px;
             line-height: 20px;
+            &:hover {
+                border-image-source: url('img/button-blue.png');
+            }
         }
+    }
+    &--hidden {
+        opacity: 0;
+        pointer-events: none;
     }
     &--disabled {
         & a {
@@ -609,6 +611,10 @@
         @include breakpoint(desktop) {
             display: none;
         }
+    }
+    &--login {
+        display: flex !important;
+        justify-content: center;
     }
 }
 
@@ -780,7 +786,7 @@
 
 .login-window {
     padding: 8px 16px 16px 16px;
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
     border-width: 0px 1px 1px 1px;
     height: 100%;
     display: flex;
@@ -932,7 +938,7 @@
     top: 32px;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
     &__middle {
         flex-shrink: 2;
         max-height: 100%;
@@ -947,7 +953,7 @@
     display: block;
     z-index: 4;
     background-color: #FFFFF5;
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
     @include breakpoint(desktop) {
         top: 80px;
         left: 30px;
@@ -957,6 +963,13 @@
     }
     &--hidden {
         display: none;
+    }
+    &--over {
+        display: none;
+        @include breakpoint(desktop) {
+            display: unset;
+        }
+        z-index: 2;
     }
 }
 
@@ -1022,7 +1035,7 @@
     /* Place The scroll down button at the bottom */
     &::-webkit-scrollbar-button:vertical:increment {
         background-color: #DFDFD0;
-        border: 1px solid black;
+        border: 1px solid #2A2C41;
         border-width: 1px 0 0 1px;
         background-image: url(img/scroll-bottom.svg);
         background-position: center;
@@ -1033,7 +1046,7 @@
     /* Place The scroll up button at the up */
     &::-webkit-scrollbar-button:vertical:decrement {
         background-color: #DFDFD0;
-        border: 1px solid black;
+        border: 1px solid #2A2C41;
         border-width: 0 0 1px 1px;
         background-image: url(img/scroll-top.svg);
         background-position: center;
@@ -1043,13 +1056,13 @@
     
     &::-webkit-scrollbar-track:vertical {
         background-color: #DFDFD0;
-        border: 1px solid black;
+        border: 1px solid #2A2C41;
         border-width: 0 0 0 1px;
     }
 
     &::-webkit-scrollbar-thumb {
         background-color: #FDF7EE;
-        border: 1px solid black; /* Space around the thumb to ensure visibility */
+        border: 1px solid #2A2C41; /* Space around the thumb to ensure visibility */
     }
 }
 
@@ -1075,7 +1088,7 @@
     &--animation {
         opacity: 1;
         z-index: 6;
-        background-color: #213C06;
+        background-color: #DCF15B;
         text-align: center;
         display: flex;
         justify-content: center;
@@ -1210,6 +1223,11 @@
     color: #213C06;
     font-size: 14px;
     margin-bottom: 20px;
+    text-decoration: underline;
+    &.link-external::after {
+            visibility: hidden;
+            content: "";
+    }
 }
 
 .start-img {
@@ -1256,7 +1274,7 @@
     font-family: departure;
     background-color: #FFFFF5;
     padding: 20px;
-    border: 3px solid #778329;
+    border: 3px solid #2A2C41;
     filter: drop-shadow(8px 8px 0px rgba(0, 0, 0, 0.25));
     display: flex;
     position: absolute;
@@ -1389,7 +1407,7 @@
         width: 350px;
     }
     background-color: #C4D2FF;
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
     z-index: 5;
     font-family: start-2p;
     color: #2A2C41;
@@ -1442,11 +1460,12 @@
 .tracker {
     display: flex;
     gap: 12px;
+    margin-bottom: 48px;
 }
 .tracker-module {
     display: flex;
     background-color: #213C06;
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
     color: white;
     font-size: 12px;
     height: 48px;
@@ -1462,6 +1481,17 @@
         color: #213C06;
         padding: 0 12px 0 12px;
         font-size: 16px;
+    }
+}
+
+.screensaver-popup {
+    display: none;
+    pointer-events: none;
+    @include breakpoint(desktop) {
+        display: block;
+        position: absolute;
+        height: 100px;
+        z-index: 100;
     }
 }
 
@@ -1502,7 +1532,7 @@
 // .tracker-module {
 //     display: flex;
 //     background-color: #213C06;
-//     border: 1px solid black;
+//     border: 1px solid #2A2C41;
 //     color: white;
 //     font-size: 10px;
 //     height: 32px;

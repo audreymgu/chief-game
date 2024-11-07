@@ -320,8 +320,8 @@ h1 {
   }
 }
 .abs-wrapper--login {
-  top: 14px;
-  height: calc(100% - 32px);
+  top: 64px;
+  height: calc(100% - 80px);
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   .abs-wrapper--login {
@@ -371,7 +371,7 @@ h1 {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   .rel-wrapper {
@@ -400,10 +400,11 @@ h1 {
   flex-grow: 1;
   display: flex;
   overflow-y: auto;
+  flex-basis: fit-content;
   flex-direction: column;
-  justify-items: flex-start;
+  justify-content: flex-start;
   background-color: #FFFFF5;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 0;
   color: #2A2C41;
   padding: 3px;
@@ -415,7 +416,7 @@ h1 {
   .content {
     overflow-y: unset;
     padding: 8px;
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
   }
 }
 .content--ending {
@@ -446,7 +447,7 @@ h1 {
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   .stats {
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
     margin-bottom: 12px;
     padding: 8px;
     width: calc(100% - 18px);
@@ -530,7 +531,7 @@ h1 {
   .resource-meter {
     padding: 0 10px 0 5px;
     align-items: center;
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
     border-width: 1px 1px 1px 1px;
   }
 }
@@ -596,17 +597,12 @@ h1 {
 }
 
 .action-box {
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 0 1px 1px 1px;
   width: calc(100% - 18px);
   padding: 0 8px 8px 8px;
-  margin: auto;
   display: flex;
   flex-direction: column;
-  justify-items: center;
-  align-items: stretch;
-  align-content: center;
-  justify-content: center;
   gap: 0.25rem;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
@@ -622,7 +618,7 @@ h1 {
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   .avatar {
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
     border-width: 1px 0px 1px 1px;
     background-color: #FFFFF5;
   }
@@ -634,18 +630,19 @@ h1 {
 @media (min-width: 1200px) and (min-height: 850px) {
   .avatar__image {
     margin: 4px;
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
   }
 }
 
 .scenario {
-  flex-grow: 1;
   display: flex;
   gap: 12px;
   color: #2A2C41;
   flex-direction: column;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 0 1px 0 1px;
+  padding-bottom: 12px;
+  flex-grow: 2;
 }
 .scenario--inactive {
   opacity: 20%;
@@ -691,10 +688,10 @@ h1 {
   }
 }
 .scenario__text {
-  flex-grow: 1;
   font-size: 14px;
   padding-left: 12px;
   padding-right: 12px;
+  height: fit-content;
   line-height: 120%;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
@@ -727,8 +724,8 @@ h1 {
 }
 .scenario__img {
   width: 100%;
-  height: auto;
-  height: 220px;
+  min-height: 250px;
+  max-height: 500px;
   object-fit: cover;
   align-self: start;
 }
@@ -737,7 +734,7 @@ h1 {
     height: unset;
     width: 265px;
     max-height: unset;
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
   }
 }
 .scenario__icon {
@@ -756,7 +753,7 @@ h1 {
   display: flex;
   flex-direction: column;
   margin: 8px;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   .alert {
@@ -773,7 +770,7 @@ h1 {
   display: flex;
   color: #2A2C41;
   flex-direction: column;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 0 1px 0 1px;
 }
 .ending--alert {
@@ -858,7 +855,7 @@ h1 {
   min-height: 150px;
   max-height: 500px;
   object-fit: cover;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 0 0 1px 0;
   align-self: start;
 }
@@ -896,7 +893,7 @@ h1 {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 0 1px 1px 1px;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
@@ -907,7 +904,7 @@ h1 {
 .btn-area--ending {
   padding: 8px;
   background-color: #F8FFCF;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   z-index: 2;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
@@ -922,7 +919,7 @@ h1 {
 @media (min-width: 1200px) and (min-height: 850px) {
   .btn-area--alert {
     padding-bottom: 10px;
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
     border-width: 0 1px 1px 1px;
   }
 }
@@ -933,7 +930,7 @@ h1 {
   justify-content: space-between;
   height: 33px;
   text-align: center;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   padding: 3px;
   background-color: #2A2C41;
 }
@@ -966,7 +963,7 @@ h1 {
   height: 10px;
   line-height: 16px;
   margin-top: 2px;
-  font-size: 12px;
+  font-size: 11px;
   text-align: center;
   text-transform: uppercase;
   font-family: start-2p;
@@ -1010,6 +1007,13 @@ h1 {
 .button--start a {
   height: 16px;
   line-height: 20px;
+}
+.button--start a:hover {
+  border-image-source: url("img/button-blue.png");
+}
+.button--hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 .button--disabled a {
   color: rgba(42, 44, 65, 0.5);
@@ -1079,6 +1083,10 @@ h1 {
   .menu-bar__logo {
     display: none;
   }
+}
+.menu-bar--login {
+  display: flex !important;
+  justify-content: center;
 }
 
 .class-selector {
@@ -1266,7 +1274,7 @@ h1 {
 
 .login-window {
   padding: 8px 16px 16px 16px;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 0px 1px 1px 1px;
   height: 100%;
   display: flex;
@@ -1428,7 +1436,7 @@ h1 {
   top: 32px;
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
 }
 .scroll-bar__middle {
   flex-shrink: 2;
@@ -1444,7 +1452,7 @@ h1 {
   display: block;
   z-index: 4;
   background-color: #FFFFF5;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   .about-window {
@@ -1457,6 +1465,15 @@ h1 {
 }
 .about-window--hidden {
   display: none;
+}
+.about-window--over {
+  display: none;
+  z-index: 2;
+}
+@media (min-width: 1200px) and (min-height: 850px) {
+  .about-window--over {
+    display: unset;
+  }
 }
 
 .window-text {
@@ -1518,7 +1535,7 @@ h1 {
 }
 .window-text::-webkit-scrollbar-button:vertical:increment {
   background-color: #DFDFD0;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 1px 0 0 1px;
   background-image: url(img/scroll-bottom.svg);
   background-position: center;
@@ -1527,7 +1544,7 @@ h1 {
 }
 .window-text::-webkit-scrollbar-button:vertical:decrement {
   background-color: #DFDFD0;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 0 0 1px 1px;
   background-image: url(img/scroll-top.svg);
   background-position: center;
@@ -1536,12 +1553,12 @@ h1 {
 }
 .window-text::-webkit-scrollbar-track:vertical {
   background-color: #DFDFD0;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 0 0 0 1px;
 }
 .window-text::-webkit-scrollbar-thumb {
   background-color: #FDF7EE;
-  border: 1px solid black; /* Space around the thumb to ensure visibility */
+  border: 1px solid #2A2C41; /* Space around the thumb to ensure visibility */
 }
 
 .bg {
@@ -1570,7 +1587,7 @@ h1 {
 .bg--animation {
   opacity: 1;
   z-index: 6;
-  background-color: #213C06;
+  background-color: #DCF15B;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -1696,6 +1713,11 @@ h1 {
   color: #213C06;
   font-size: 14px;
   margin-bottom: 20px;
+  text-decoration: underline;
+}
+.start-subhead.link-external::after {
+  visibility: hidden;
+  content: "";
 }
 
 .start-img {
@@ -1713,7 +1735,7 @@ h1 {
   font-family: departure;
   background-color: #FFFFF5;
   padding: 20px;
-  border: 3px solid #778329;
+  border: 3px solid #2A2C41;
   filter: drop-shadow(8px 8px 0px rgba(0, 0, 0, 0.25));
   display: flex;
   position: absolute;
@@ -1842,7 +1864,7 @@ h1 {
   height: 100%;
   width: 100%;
   background-color: #C4D2FF;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   z-index: 5;
   font-family: start-2p;
   color: #2A2C41;
@@ -1911,12 +1933,13 @@ h1 {
 .tracker {
   display: flex;
   gap: 12px;
+  margin-bottom: 48px;
 }
 
 .tracker-module {
   display: flex;
   background-color: #213C06;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   color: white;
   font-size: 12px;
   height: 48px;
@@ -1935,6 +1958,19 @@ h1 {
   color: #213C06;
   padding: 0 12px 0 12px;
   font-size: 16px;
+}
+
+.screensaver-popup {
+  display: none;
+  pointer-events: none;
+}
+@media (min-width: 1200px) and (min-height: 850px) {
+  .screensaver-popup {
+    display: block;
+    position: absolute;
+    height: 100px;
+    z-index: 100;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
@@ -2154,8 +2190,8 @@ h1 {
   }
 }
 .abs-wrapper--login {
-  top: 14px;
-  height: calc(100% - 32px);
+  top: 64px;
+  height: calc(100% - 80px);
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   .abs-wrapper--login {
@@ -2205,7 +2241,7 @@ h1 {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   .rel-wrapper {
@@ -2234,10 +2270,11 @@ h1 {
   flex-grow: 1;
   display: flex;
   overflow-y: auto;
+  flex-basis: fit-content;
   flex-direction: column;
-  justify-items: flex-start;
+  justify-content: flex-start;
   background-color: #FFFFF5;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 0;
   color: #2A2C41;
   padding: 3px;
@@ -2249,7 +2286,7 @@ h1 {
   .content {
     overflow-y: unset;
     padding: 8px;
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
   }
 }
 .content--ending {
@@ -2280,7 +2317,7 @@ h1 {
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   .stats {
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
     margin-bottom: 12px;
     padding: 8px;
     width: calc(100% - 18px);
@@ -2364,7 +2401,7 @@ h1 {
   .resource-meter {
     padding: 0 10px 0 5px;
     align-items: center;
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
     border-width: 1px 1px 1px 1px;
   }
 }
@@ -2430,17 +2467,12 @@ h1 {
 }
 
 .action-box {
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 0 1px 1px 1px;
   width: calc(100% - 18px);
   padding: 0 8px 8px 8px;
-  margin: auto;
   display: flex;
   flex-direction: column;
-  justify-items: center;
-  align-items: stretch;
-  align-content: center;
-  justify-content: center;
   gap: 0.25rem;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
@@ -2456,7 +2488,7 @@ h1 {
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   .avatar {
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
     border-width: 1px 0px 1px 1px;
     background-color: #FFFFF5;
   }
@@ -2468,18 +2500,19 @@ h1 {
 @media (min-width: 1200px) and (min-height: 850px) {
   .avatar__image {
     margin: 4px;
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
   }
 }
 
 .scenario {
-  flex-grow: 1;
   display: flex;
   gap: 12px;
   color: #2A2C41;
   flex-direction: column;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 0 1px 0 1px;
+  padding-bottom: 12px;
+  flex-grow: 2;
 }
 .scenario--inactive {
   opacity: 20%;
@@ -2525,10 +2558,10 @@ h1 {
   }
 }
 .scenario__text {
-  flex-grow: 1;
   font-size: 14px;
   padding-left: 12px;
   padding-right: 12px;
+  height: fit-content;
   line-height: 120%;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
@@ -2561,8 +2594,8 @@ h1 {
 }
 .scenario__img {
   width: 100%;
-  height: auto;
-  height: 220px;
+  min-height: 250px;
+  max-height: 500px;
   object-fit: cover;
   align-self: start;
 }
@@ -2571,7 +2604,7 @@ h1 {
     height: unset;
     width: 265px;
     max-height: unset;
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
   }
 }
 .scenario__icon {
@@ -2590,7 +2623,7 @@ h1 {
   display: flex;
   flex-direction: column;
   margin: 8px;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   .alert {
@@ -2607,7 +2640,7 @@ h1 {
   display: flex;
   color: #2A2C41;
   flex-direction: column;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 0 1px 0 1px;
 }
 .ending--alert {
@@ -2692,7 +2725,7 @@ h1 {
   min-height: 150px;
   max-height: 500px;
   object-fit: cover;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 0 0 1px 0;
   align-self: start;
 }
@@ -2730,7 +2763,7 @@ h1 {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 0 1px 1px 1px;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
@@ -2741,7 +2774,7 @@ h1 {
 .btn-area--ending {
   padding: 8px;
   background-color: #F8FFCF;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   z-index: 2;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
@@ -2756,7 +2789,7 @@ h1 {
 @media (min-width: 1200px) and (min-height: 850px) {
   .btn-area--alert {
     padding-bottom: 10px;
-    border: 1px solid black;
+    border: 1px solid #2A2C41;
     border-width: 0 1px 1px 1px;
   }
 }
@@ -2767,7 +2800,7 @@ h1 {
   justify-content: space-between;
   height: 33px;
   text-align: center;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   padding: 3px;
   background-color: #2A2C41;
 }
@@ -2800,7 +2833,7 @@ h1 {
   height: 10px;
   line-height: 16px;
   margin-top: 2px;
-  font-size: 12px;
+  font-size: 11px;
   text-align: center;
   text-transform: uppercase;
   font-family: start-2p;
@@ -2844,6 +2877,13 @@ h1 {
 .button--start a {
   height: 16px;
   line-height: 20px;
+}
+.button--start a:hover {
+  border-image-source: url("img/button-blue.png");
+}
+.button--hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 .button--disabled a {
   color: rgba(42, 44, 65, 0.5);
@@ -2913,6 +2953,10 @@ h1 {
   .menu-bar__logo {
     display: none;
   }
+}
+.menu-bar--login {
+  display: flex !important;
+  justify-content: center;
 }
 
 .class-selector {
@@ -3100,7 +3144,7 @@ h1 {
 
 .login-window {
   padding: 8px 16px 16px 16px;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 0px 1px 1px 1px;
   height: 100%;
   display: flex;
@@ -3262,7 +3306,7 @@ h1 {
   top: 32px;
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
 }
 .scroll-bar__middle {
   flex-shrink: 2;
@@ -3278,7 +3322,7 @@ h1 {
   display: block;
   z-index: 4;
   background-color: #FFFFF5;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   .about-window {
@@ -3291,6 +3335,15 @@ h1 {
 }
 .about-window--hidden {
   display: none;
+}
+.about-window--over {
+  display: none;
+  z-index: 2;
+}
+@media (min-width: 1200px) and (min-height: 850px) {
+  .about-window--over {
+    display: unset;
+  }
 }
 
 .window-text {
@@ -3352,7 +3405,7 @@ h1 {
 }
 .window-text::-webkit-scrollbar-button:vertical:increment {
   background-color: #DFDFD0;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 1px 0 0 1px;
   background-image: url(img/scroll-bottom.svg);
   background-position: center;
@@ -3361,7 +3414,7 @@ h1 {
 }
 .window-text::-webkit-scrollbar-button:vertical:decrement {
   background-color: #DFDFD0;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 0 0 1px 1px;
   background-image: url(img/scroll-top.svg);
   background-position: center;
@@ -3370,12 +3423,12 @@ h1 {
 }
 .window-text::-webkit-scrollbar-track:vertical {
   background-color: #DFDFD0;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   border-width: 0 0 0 1px;
 }
 .window-text::-webkit-scrollbar-thumb {
   background-color: #FDF7EE;
-  border: 1px solid black; /* Space around the thumb to ensure visibility */
+  border: 1px solid #2A2C41; /* Space around the thumb to ensure visibility */
 }
 
 .bg {
@@ -3404,7 +3457,7 @@ h1 {
 .bg--animation {
   opacity: 1;
   z-index: 6;
-  background-color: #213C06;
+  background-color: #DCF15B;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -3530,6 +3583,11 @@ h1 {
   color: #213C06;
   font-size: 14px;
   margin-bottom: 20px;
+  text-decoration: underline;
+}
+.start-subhead.link-external::after {
+  visibility: hidden;
+  content: "";
 }
 
 .start-img {
@@ -3547,7 +3605,7 @@ h1 {
   font-family: departure;
   background-color: #FFFFF5;
   padding: 20px;
-  border: 3px solid #778329;
+  border: 3px solid #2A2C41;
   filter: drop-shadow(8px 8px 0px rgba(0, 0, 0, 0.25));
   display: flex;
   position: absolute;
@@ -3676,7 +3734,7 @@ h1 {
   height: 100%;
   width: 100%;
   background-color: #C4D2FF;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   z-index: 5;
   font-family: start-2p;
   color: #2A2C41;
@@ -3745,12 +3803,13 @@ h1 {
 .tracker {
   display: flex;
   gap: 12px;
+  margin-bottom: 48px;
 }
 
 .tracker-module {
   display: flex;
   background-color: #213C06;
-  border: 1px solid black;
+  border: 1px solid #2A2C41;
   color: white;
   font-size: 12px;
   height: 48px;
@@ -3769,6 +3828,19 @@ h1 {
   color: #213C06;
   padding: 0 12px 0 12px;
   font-size: 16px;
+}
+
+.screensaver-popup {
+  display: none;
+  pointer-events: none;
+}
+@media (min-width: 1200px) and (min-height: 850px) {
+  .screensaver-popup {
+    display: block;
+    position: absolute;
+    height: 100px;
+    z-index: 100;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "StoryScript" */
@@ -3800,7 +3872,7 @@ importScripts("/gsap.min.js");
 ;!function(){"use strict";var t=!0,e=!1,s=!1,i={full:"#2ECC40",empty:"#FF4136",back:"#DDDDDD",height:"12px",width:"180px",animate:400,easing:"swing",text:"#111111",label:"",align:"center"},n=["center","left","right"],r=["swing","linear"];function a(t,e){return t&&"string"==typeof t&&(t=t.toLowerCase().trim())?t:e||""}function o(t){return t<.5?2*t*t:(4-2*t)*t-1}function l(t,e){if(!(this instanceof l))return new l(t,e);var s=clone(i);this.settings=Object.assign(s,t),this.settings.align=a(this.settings.align),this.settings.easing=a(this.settings.easing),n.includes(this.settings.align)||(this.settings.align="center"),r.includes(this.settings.easing)||(this.settings.easing="swing"),e=Number(e),Number.isNaN(e)&&(e=1),e=Math.clamp(e,0,1),this.value=e;var h=$(document.createElement("div")).addClass("chapel-meter").attr({"data-val":e,"data-label":this.settings.label}).css({position:"relative","background-color":this.settings.back,height:this.settings.height,width:this.settings.width,overflow:"hidden"}),g=$(document.createElement("div")).addClass("meter-label").css({top:0,right:0,"font-size":this.settings.height,"font-weight":"bold","line-height":"100%",width:"100%",height:"100%","vertical-align":"middle","text-align":this.settings.align,color:this.settings.text,"z-index":1,position:"relative",bottom:"100%"}).wiki(this.settings.label).appendTo(h),u=$(document.createElement("div")).addClass("meter-top").css({"background-color":this.settings.full,opacity:o(this.value),width:"100%",height:"100%","z-index":0}),c=$(document.createElement("div")).addClass("meter-bottom").css({position:"absolute",top:0,left:0,"background-color":this.settings.empty,opacity:1,width:100*this.value+"%",height:"100%","z-index":0}).append(u).appendTo(h);this.$element=h,this.$bars={top:u,bottom:c},this.$label=g,g.css("font-size",parseInt(h.css("height"),10)<parseInt($(".passage").css("font-size"),10)?h.css("height"):$(".passage").css("font-size")),g.css("line-height",h.css("height"))}Object.assign(l,{_list:new Map,is:function(t){return t instanceof l},has:function(t){return l._list.has(t)&&l.is(l._list.get(t))},get:function(t){return l.has(t)?l._list.get(t):null},del:function(t){l.has(t)&&l._list.delete(t)},add:function(t,s,i){if(!l.has(t)||e){Object.assign(s,{id:t});var n=new l(s,i);return l._list.set(t,n),n}console.error('Meter "'+t+'" already exists.')},_emit:function(t,e){l.is(t)&&t.$element.trigger({type:":"+e,meter:t})}}),Object.assign(l.prototype,{constructor:l,_label:function(t){var e=this;function s(){e.$label.empty().wiki(e.settings.label),e.$label.css("font-size",parseInt(e.$element.css("height"),10)<parseInt(e.$element.parent().css("font-size"),10)?e.$element.css("height"):e.$element.parent().css("font-size")),e.$label.css("line-height",e.$element.css("height"))}return t?setTimeout(s,Engine.minDomActionDelay):s(),this},_width:function(){var t=this;return this.$bars.bottom.animate({width:100*this.value+"%"},this.settings.animate,this.settings.easing,(function(){l._emit(t,"meter-animation-complete")})),this},_color:function(){return this.$bars.top.animate({opacity:o(this.value)},this.settings.animate,this.settings.easing),this},animate:function(){return l._emit(this,"meter-animation-start"),this._color()._width()._label()},val:function(t){return void 0!==t&&(t=Number(t),Number.isNaN(t)&&(t=1),t=Math.clamp(t,0,1),this.value=t,this.animate()),this.value},options:function(t){return t&&"object"==typeof t&&Object.assign(this.settings,t),this.settings},unwrap:function(){return this.$element[0]},place:function(t,e){var s=$(document.createElement("span"));return t instanceof jQuery||(t=$(t)),t[0]||console.warn("meter#place() -> no valid target"),e&&"object"==typeof e&&(e.classes&&(Array.isArray(e.classes)||"string"==typeof e.classes)&&s.addClass(e.classes),e.attr&&"object"==typeof e.attr&&s.attr(e.attr)),t.append(s.append(this.$element)),this._label(!0),this},on:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.on(t,e),this):this},one:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.one(t,e),this):this},off:function(t){return t=t&&"string"==typeof t&&t.trim()?t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "):".userland",this.$element.off(t),this},click:function(t,e){return this.$element.ariaClick(t,e),this},clone:function(){return new l(this.settings,this.value)},toJSON:function(){return JSON.reviveWrapper("new setup.Meter("+JSON.stringify(this.settings)+", "+this.value+")")}}),setup.Meter=l,t&&(window.Meter=window.Meter||l),Macro.add("newmeter",{tags:["colors","sizing","animation","label"],handler:function(){if(State.length>0&&!s)return this.error("The `<<newmeter>>` macro must be called in your `StoryInit` special passage. Seriously. No excuses. --Love, Chapel");if(this.args.length<1)return this.error("The `<<newmeter>>` macro requires at least one argument: a meter name.");var t=this.args[0],i=null,n=null,r=null,a=null;if("string"!=typeof t)return this.error("Invalid meter name.");if(t=t.trim(),l.has(t)&&!e)return this.error('Cannot clobber the existing meter "'+t+'".');this.payload.length&&(i=this.payload.find((function(t){return"colors"===t.name})),n=this.payload.find((function(t){return"sizing"===t.name})),r=this.payload.find((function(t){return"animation"===t.name})),a=this.payload.find((function(t){return"label"===t.name})));var o={};if(i){if(!i.args.length)return this.error("No arguments passed to the `<<colors>>` tag.");switch(i.args.length){case 1:o.empty=i.args[0],o.full="transparent";break;case 2:o.full=i.args[0],o.empty=i.args[1];break;default:o.full=i.args[0],o.empty=i.args[1],o.back=i.args[2]}}if(n){if(!n.args.length)return this.error("No arguments passed to the `<<sizing>>` tag.");o.width=n.args[0],n.args[1]&&(o.height=n.args[1])}if(r){if(!r.args.length)return this.error("No arguments passed to the `<<animation>>` tag.");if("boolean"!=typeof r.args[0]||r.args[0]){if("string"!=typeof r.args[0])return this.error("The argument to the `<<animation>>` tag should be `true`, `false`, or a valid CSS time value.");o.animate=Util.fromCssTime(r.args[0])}else o.animate=0;r.args[1]&&["swing","linear"].includes(r.args[1])&&(o.easing=r.args[1])}if(a){var h=a.args[0];if(!h||"string"!=typeof h)return this.error("The labelText argument for the `<<label>>` tag is required.");o.label=h.trim(),a.args[1]&&"string"==typeof a.args[1]&&(o.text=a.args[1]),a.args[2]&&"string"==typeof a.args[2]&&(o.align=a.args[2])}l.add(t,o,this.args[1])}}),Macro.add("showmeter",{handler:function(){if(this.args.length<1)return this.error("This macro requires at least one argument: the meter's name.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');"number"==typeof this.args[1]&&e.val(this.args[1]),e.place(this.output,{classes:"macro-"+this.name,attr:{id:"meter-"+Util.slugify(t)}})}}),Macro.add("updatemeter",{handler:function(){if(this.args.length<2)return this.error("This macro requires two arguments: the meter's name and a value.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');e.val(this.args[1])}})}();
 // end meters.min.js
 /* twine-user-script #2: "UserScript" */
-</script><tw-tag name="Q2" color="green"></tw-tag><tw-tag name="Main" color="blue"></tw-tag><tw-tag name="Q3" color="green"></tw-tag><tw-tag name="EndE" color="orange"></tw-tag><tw-tag name="EndFired" color="red"></tw-tag><tw-tag name="EndStay" color="red"></tw-tag><tw-tag name="Q4" color="green"></tw-tag><tw-tag name="EndUnhappy" color="red"></tw-tag><tw-tag name="EndPromo" color="red"></tw-tag><tw-tag name="nobr" color="purple"></tw-tag><tw-tag name="Widget" color="green"></tw-tag><tw-tag name="StoryInit" color="orange"></tw-tag><tw-tag name="widget" color="orange"></tw-tag><tw-tag name="Q1" color="green"></tw-tag><tw-passagedata pid="1" name="Burnout" tags="" position="925,525" size="100,100">&lt;&lt;set $slack to false&gt;&gt;
+</script><tw-tag name="Q3" color="green"></tw-tag><tw-tag name="Q4" color="green"></tw-tag><tw-tag name="Main" color="blue"></tw-tag><tw-tag name="EndE" color="orange"></tw-tag><tw-tag name="EndStay" color="red"></tw-tag><tw-tag name="StoryInit" color="orange"></tw-tag><tw-tag name="EndUnhappy" color="red"></tw-tag><tw-tag name="Q1" color="green"></tw-tag><tw-tag name="Q2" color="green"></tw-tag><tw-tag name="Widget" color="green"></tw-tag><tw-tag name="EndFired" color="red"></tw-tag><tw-tag name="EndPromo" color="red"></tw-tag><tw-tag name="nobr" color="purple"></tw-tag><tw-tag name="widget" color="orange"></tw-tag><tw-passagedata pid="1" name="Burnout" tags="" position="925,525" size="100,100">&lt;&lt;set $slack to false&gt;&gt;
 &lt;&lt;script&gt;&gt;
     UIBar.hide();
 &lt;&lt;/script&gt;&gt;
@@ -3909,7 +3981,7 @@ importScripts("/gsap.min.js");
 &lt;div class=&quot;bg bg--purple&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot; abs-wrapper abs-wrapper--ending&quot;&gt;
     &lt;svg class=&quot;logo logo--ending logo--purple&quot; width=&quot;861&quot; height=&quot;86&quot; viewBox=&quot;0 0 861 86&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-        &lt;path d=&quot;M24.25 85.2329V73.1079H12.125V60.9829H0V24.6079H12.125V12.4829H24.25V0.35791H84.875V12.4829H36.375V24.6079H24.25V60.9829H36.375V73.1079H60.625V48.8579H48.5V36.7329H84.875V85.2329H24.25ZM97 85.2329V24.6079H109.125V12.4829H121.25V0.35791H157.625V12.4829H169.75V24.6079H181.875V85.2329H157.625V60.9829H121.25V85.2329H97ZM121.25 48.8579H157.625V24.6079H145.5V12.4829H133.375V24.6079H121.25V48.8579ZM194 85.2329V0.35791H218.25V12.4829H230.375V24.6079H242.5V12.4829H254.625V0.35791H278.875V85.2329H254.625V36.7329H242.5V60.9829H230.375V36.7329H218.25V85.2329H194ZM291 85.2329V0.35791H375.875V12.4829H315.25V36.7329H363.75V48.8579H315.25V73.1079H375.875V85.2329H291ZM497.125 85.2329V73.1079H485V12.4829H497.125V0.35791H557.75V12.4829H569.875V73.1079H557.75V85.2329H497.125ZM509.25 73.1079H545.625V12.4829H509.25V73.1079ZM618.375 85.2329V73.1079H606.25V60.9829H594.125V48.8579H582V0.35791H606.25V36.7329H618.375V48.8579H630.5V36.7329H642.625V0.35791H666.875V48.8579H654.75V60.9829H642.625V73.1079H630.5V85.2329H618.375ZM679 85.2329V0.35791H763.875V12.4829H703.25V36.7329H751.75V48.8579H703.25V73.1079H763.875V85.2329H679ZM776 85.2329V0.35791H848.75V12.4829H860.875V48.8579H836.625V60.9829H848.75V73.1079H860.875V85.2329H824.5V73.1079H812.375V60.9829H800.25V85.2329H776ZM800.25 48.8579H824.5V36.7329H836.625V12.4829H800.25V48.8579Z&quot; fill=&quot;#FBC307&quot;/&gt;
+        &lt;path class=&quot;flash&quot; d=&quot;M24.25 85.2329V73.1079H12.125V60.9829H0V24.6079H12.125V12.4829H24.25V0.35791H84.875V12.4829H36.375V24.6079H24.25V60.9829H36.375V73.1079H60.625V48.8579H48.5V36.7329H84.875V85.2329H24.25ZM97 85.2329V24.6079H109.125V12.4829H121.25V0.35791H157.625V12.4829H169.75V24.6079H181.875V85.2329H157.625V60.9829H121.25V85.2329H97ZM121.25 48.8579H157.625V24.6079H145.5V12.4829H133.375V24.6079H121.25V48.8579ZM194 85.2329V0.35791H218.25V12.4829H230.375V24.6079H242.5V12.4829H254.625V0.35791H278.875V85.2329H254.625V36.7329H242.5V60.9829H230.375V36.7329H218.25V85.2329H194ZM291 85.2329V0.35791H375.875V12.4829H315.25V36.7329H363.75V48.8579H315.25V73.1079H375.875V85.2329H291ZM497.125 85.2329V73.1079H485V12.4829H497.125V0.35791H557.75V12.4829H569.875V73.1079H557.75V85.2329H497.125ZM509.25 73.1079H545.625V12.4829H509.25V73.1079ZM618.375 85.2329V73.1079H606.25V60.9829H594.125V48.8579H582V0.35791H606.25V36.7329H618.375V48.8579H630.5V36.7329H642.625V0.35791H666.875V48.8579H654.75V60.9829H642.625V73.1079H630.5V85.2329H618.375ZM679 85.2329V0.35791H763.875V12.4829H703.25V36.7329H751.75V48.8579H703.25V73.1079H763.875V85.2329H679ZM776 85.2329V0.35791H848.75V12.4829H860.875V48.8579H836.625V60.9829H848.75V73.1079H860.875V85.2329H824.5V73.1079H812.375V60.9829H800.25V85.2329H776ZM800.25 48.8579H824.5V36.7329H836.625V12.4829H800.25V48.8579Z&quot; fill=&quot;#FBC307&quot;/&gt;
     &lt;/svg&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
         &lt;div class=&quot;content content--ending&quot;&gt;
@@ -3948,7 +4020,7 @@ importScripts("/gsap.min.js");
 &lt;div class=&quot;bg bg--purple&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot; abs-wrapper abs-wrapper--ending&quot;&gt;
     &lt;svg class=&quot;logo logo--ending logo--purple&quot; width=&quot;861&quot; height=&quot;86&quot; viewBox=&quot;0 0 861 86&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-        &lt;path d=&quot;M24.25 85.2329V73.1079H12.125V60.9829H0V24.6079H12.125V12.4829H24.25V0.35791H84.875V12.4829H36.375V24.6079H24.25V60.9829H36.375V73.1079H60.625V48.8579H48.5V36.7329H84.875V85.2329H24.25ZM97 85.2329V24.6079H109.125V12.4829H121.25V0.35791H157.625V12.4829H169.75V24.6079H181.875V85.2329H157.625V60.9829H121.25V85.2329H97ZM121.25 48.8579H157.625V24.6079H145.5V12.4829H133.375V24.6079H121.25V48.8579ZM194 85.2329V0.35791H218.25V12.4829H230.375V24.6079H242.5V12.4829H254.625V0.35791H278.875V85.2329H254.625V36.7329H242.5V60.9829H230.375V36.7329H218.25V85.2329H194ZM291 85.2329V0.35791H375.875V12.4829H315.25V36.7329H363.75V48.8579H315.25V73.1079H375.875V85.2329H291ZM497.125 85.2329V73.1079H485V12.4829H497.125V0.35791H557.75V12.4829H569.875V73.1079H557.75V85.2329H497.125ZM509.25 73.1079H545.625V12.4829H509.25V73.1079ZM618.375 85.2329V73.1079H606.25V60.9829H594.125V48.8579H582V0.35791H606.25V36.7329H618.375V48.8579H630.5V36.7329H642.625V0.35791H666.875V48.8579H654.75V60.9829H642.625V73.1079H630.5V85.2329H618.375ZM679 85.2329V0.35791H763.875V12.4829H703.25V36.7329H751.75V48.8579H703.25V73.1079H763.875V85.2329H679ZM776 85.2329V0.35791H848.75V12.4829H860.875V48.8579H836.625V60.9829H848.75V73.1079H860.875V85.2329H824.5V73.1079H812.375V60.9829H800.25V85.2329H776ZM800.25 48.8579H824.5V36.7329H836.625V12.4829H800.25V48.8579Z&quot; fill=&quot;#FBC307&quot;/&gt;
+        &lt;path class=&quot;flash&quot; d=&quot;M24.25 85.2329V73.1079H12.125V60.9829H0V24.6079H12.125V12.4829H24.25V0.35791H84.875V12.4829H36.375V24.6079H24.25V60.9829H36.375V73.1079H60.625V48.8579H48.5V36.7329H84.875V85.2329H24.25ZM97 85.2329V24.6079H109.125V12.4829H121.25V0.35791H157.625V12.4829H169.75V24.6079H181.875V85.2329H157.625V60.9829H121.25V85.2329H97ZM121.25 48.8579H157.625V24.6079H145.5V12.4829H133.375V24.6079H121.25V48.8579ZM194 85.2329V0.35791H218.25V12.4829H230.375V24.6079H242.5V12.4829H254.625V0.35791H278.875V85.2329H254.625V36.7329H242.5V60.9829H230.375V36.7329H218.25V85.2329H194ZM291 85.2329V0.35791H375.875V12.4829H315.25V36.7329H363.75V48.8579H315.25V73.1079H375.875V85.2329H291ZM497.125 85.2329V73.1079H485V12.4829H497.125V0.35791H557.75V12.4829H569.875V73.1079H557.75V85.2329H497.125ZM509.25 73.1079H545.625V12.4829H509.25V73.1079ZM618.375 85.2329V73.1079H606.25V60.9829H594.125V48.8579H582V0.35791H606.25V36.7329H618.375V48.8579H630.5V36.7329H642.625V0.35791H666.875V48.8579H654.75V60.9829H642.625V73.1079H630.5V85.2329H618.375ZM679 85.2329V0.35791H763.875V12.4829H703.25V36.7329H751.75V48.8579H703.25V73.1079H763.875V85.2329H679ZM776 85.2329V0.35791H848.75V12.4829H860.875V48.8579H836.625V60.9829H848.75V73.1079H860.875V85.2329H824.5V73.1079H812.375V60.9829H800.25V85.2329H776ZM800.25 48.8579H824.5V36.7329H836.625V12.4829H800.25V48.8579Z&quot; fill=&quot;#FBC307&quot;/&gt;
     &lt;/svg&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
         &lt;div class=&quot;content content--ending&quot;&gt;
@@ -3987,7 +4059,7 @@ importScripts("/gsap.min.js");
 &lt;div class=&quot;bg bg--blue&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot; abs-wrapper abs-wrapper--ending&quot;&gt;
     &lt;svg class=&quot;logo logo--ending logo--blue&quot; width=&quot;861&quot; height=&quot;86&quot; viewBox=&quot;0 0 861 86&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-        &lt;path d=&quot;M24.25 85.2329V73.1079H12.125V60.9829H0V24.6079H12.125V12.4829H24.25V0.35791H84.875V12.4829H36.375V24.6079H24.25V60.9829H36.375V73.1079H60.625V48.8579H48.5V36.7329H84.875V85.2329H24.25ZM97 85.2329V24.6079H109.125V12.4829H121.25V0.35791H157.625V12.4829H169.75V24.6079H181.875V85.2329H157.625V60.9829H121.25V85.2329H97ZM121.25 48.8579H157.625V24.6079H145.5V12.4829H133.375V24.6079H121.25V48.8579ZM194 85.2329V0.35791H218.25V12.4829H230.375V24.6079H242.5V12.4829H254.625V0.35791H278.875V85.2329H254.625V36.7329H242.5V60.9829H230.375V36.7329H218.25V85.2329H194ZM291 85.2329V0.35791H375.875V12.4829H315.25V36.7329H363.75V48.8579H315.25V73.1079H375.875V85.2329H291ZM497.125 85.2329V73.1079H485V12.4829H497.125V0.35791H557.75V12.4829H569.875V73.1079H557.75V85.2329H497.125ZM509.25 73.1079H545.625V12.4829H509.25V73.1079ZM618.375 85.2329V73.1079H606.25V60.9829H594.125V48.8579H582V0.35791H606.25V36.7329H618.375V48.8579H630.5V36.7329H642.625V0.35791H666.875V48.8579H654.75V60.9829H642.625V73.1079H630.5V85.2329H618.375ZM679 85.2329V0.35791H763.875V12.4829H703.25V36.7329H751.75V48.8579H703.25V73.1079H763.875V85.2329H679ZM776 85.2329V0.35791H848.75V12.4829H860.875V48.8579H836.625V60.9829H848.75V73.1079H860.875V85.2329H824.5V73.1079H812.375V60.9829H800.25V85.2329H776ZM800.25 48.8579H824.5V36.7329H836.625V12.4829H800.25V48.8579Z&quot; fill=&quot;#FBC307&quot;/&gt;
+        &lt;path class=&quot;flash&quot; d=&quot;M24.25 85.2329V73.1079H12.125V60.9829H0V24.6079H12.125V12.4829H24.25V0.35791H84.875V12.4829H36.375V24.6079H24.25V60.9829H36.375V73.1079H60.625V48.8579H48.5V36.7329H84.875V85.2329H24.25ZM97 85.2329V24.6079H109.125V12.4829H121.25V0.35791H157.625V12.4829H169.75V24.6079H181.875V85.2329H157.625V60.9829H121.25V85.2329H97ZM121.25 48.8579H157.625V24.6079H145.5V12.4829H133.375V24.6079H121.25V48.8579ZM194 85.2329V0.35791H218.25V12.4829H230.375V24.6079H242.5V12.4829H254.625V0.35791H278.875V85.2329H254.625V36.7329H242.5V60.9829H230.375V36.7329H218.25V85.2329H194ZM291 85.2329V0.35791H375.875V12.4829H315.25V36.7329H363.75V48.8579H315.25V73.1079H375.875V85.2329H291ZM497.125 85.2329V73.1079H485V12.4829H497.125V0.35791H557.75V12.4829H569.875V73.1079H557.75V85.2329H497.125ZM509.25 73.1079H545.625V12.4829H509.25V73.1079ZM618.375 85.2329V73.1079H606.25V60.9829H594.125V48.8579H582V0.35791H606.25V36.7329H618.375V48.8579H630.5V36.7329H642.625V0.35791H666.875V48.8579H654.75V60.9829H642.625V73.1079H630.5V85.2329H618.375ZM679 85.2329V0.35791H763.875V12.4829H703.25V36.7329H751.75V48.8579H703.25V73.1079H763.875V85.2329H679ZM776 85.2329V0.35791H848.75V12.4829H860.875V48.8579H836.625V60.9829H848.75V73.1079H860.875V85.2329H824.5V73.1079H812.375V60.9829H800.25V85.2329H776ZM800.25 48.8579H824.5V36.7329H836.625V12.4829H800.25V48.8579Z&quot; fill=&quot;#FBC307&quot;/&gt;
     &lt;/svg&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
         &lt;div class=&quot;content content--ending&quot;&gt;
@@ -4026,7 +4098,7 @@ importScripts("/gsap.min.js");
 &lt;div class=&quot;bg bg--blue&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot; abs-wrapper abs-wrapper--ending&quot;&gt;
     &lt;svg class=&quot;logo logo--ending logo--blue&quot; width=&quot;861&quot; height=&quot;86&quot; viewBox=&quot;0 0 861 86&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-        &lt;path class=&quot;fill&quot; d=&quot;M24.25 85.2329V73.1079H12.125V60.9829H0V24.6079H12.125V12.4829H24.25V0.35791H84.875V12.4829H36.375V24.6079H24.25V60.9829H36.375V73.1079H60.625V48.8579H48.5V36.7329H84.875V85.2329H24.25ZM97 85.2329V24.6079H109.125V12.4829H121.25V0.35791H157.625V12.4829H169.75V24.6079H181.875V85.2329H157.625V60.9829H121.25V85.2329H97ZM121.25 48.8579H157.625V24.6079H145.5V12.4829H133.375V24.6079H121.25V48.8579ZM194 85.2329V0.35791H218.25V12.4829H230.375V24.6079H242.5V12.4829H254.625V0.35791H278.875V85.2329H254.625V36.7329H242.5V60.9829H230.375V36.7329H218.25V85.2329H194ZM291 85.2329V0.35791H375.875V12.4829H315.25V36.7329H363.75V48.8579H315.25V73.1079H375.875V85.2329H291ZM497.125 85.2329V73.1079H485V12.4829H497.125V0.35791H557.75V12.4829H569.875V73.1079H557.75V85.2329H497.125ZM509.25 73.1079H545.625V12.4829H509.25V73.1079ZM618.375 85.2329V73.1079H606.25V60.9829H594.125V48.8579H582V0.35791H606.25V36.7329H618.375V48.8579H630.5V36.7329H642.625V0.35791H666.875V48.8579H654.75V60.9829H642.625V73.1079H630.5V85.2329H618.375ZM679 85.2329V0.35791H763.875V12.4829H703.25V36.7329H751.75V48.8579H703.25V73.1079H763.875V85.2329H679ZM776 85.2329V0.35791H848.75V12.4829H860.875V48.8579H836.625V60.9829H848.75V73.1079H860.875V85.2329H824.5V73.1079H812.375V60.9829H800.25V85.2329H776ZM800.25 48.8579H824.5V36.7329H836.625V12.4829H800.25V48.8579Z&quot; fill=&quot;#FBC307&quot;/&gt;
+        &lt;path class=&quot;flash&quot; class=&quot;fill&quot; d=&quot;M24.25 85.2329V73.1079H12.125V60.9829H0V24.6079H12.125V12.4829H24.25V0.35791H84.875V12.4829H36.375V24.6079H24.25V60.9829H36.375V73.1079H60.625V48.8579H48.5V36.7329H84.875V85.2329H24.25ZM97 85.2329V24.6079H109.125V12.4829H121.25V0.35791H157.625V12.4829H169.75V24.6079H181.875V85.2329H157.625V60.9829H121.25V85.2329H97ZM121.25 48.8579H157.625V24.6079H145.5V12.4829H133.375V24.6079H121.25V48.8579ZM194 85.2329V0.35791H218.25V12.4829H230.375V24.6079H242.5V12.4829H254.625V0.35791H278.875V85.2329H254.625V36.7329H242.5V60.9829H230.375V36.7329H218.25V85.2329H194ZM291 85.2329V0.35791H375.875V12.4829H315.25V36.7329H363.75V48.8579H315.25V73.1079H375.875V85.2329H291ZM497.125 85.2329V73.1079H485V12.4829H497.125V0.35791H557.75V12.4829H569.875V73.1079H557.75V85.2329H497.125ZM509.25 73.1079H545.625V12.4829H509.25V73.1079ZM618.375 85.2329V73.1079H606.25V60.9829H594.125V48.8579H582V0.35791H606.25V36.7329H618.375V48.8579H630.5V36.7329H642.625V0.35791H666.875V48.8579H654.75V60.9829H642.625V73.1079H630.5V85.2329H618.375ZM679 85.2329V0.35791H763.875V12.4829H703.25V36.7329H751.75V48.8579H703.25V73.1079H763.875V85.2329H679ZM776 85.2329V0.35791H848.75V12.4829H860.875V48.8579H836.625V60.9829H848.75V73.1079H860.875V85.2329H824.5V73.1079H812.375V60.9829H800.25V85.2329H776ZM800.25 48.8579H824.5V36.7329H836.625V12.4829H800.25V48.8579Z&quot; fill=&quot;#FBC307&quot;/&gt;
     &lt;/svg&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
         &lt;div class=&quot;content content--ending&quot;&gt;
@@ -4065,7 +4137,7 @@ importScripts("/gsap.min.js");
 &lt;div class=&quot;bg bg--red&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot; abs-wrapper abs-wrapper--ending&quot;&gt;
     &lt;svg class=&quot;logo logo--ending logo--red&quot; width=&quot;861&quot; height=&quot;86&quot; viewBox=&quot;0 0 861 86&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-        &lt;path d=&quot;M24.25 85.2329V73.1079H12.125V60.9829H0V24.6079H12.125V12.4829H24.25V0.35791H84.875V12.4829H36.375V24.6079H24.25V60.9829H36.375V73.1079H60.625V48.8579H48.5V36.7329H84.875V85.2329H24.25ZM97 85.2329V24.6079H109.125V12.4829H121.25V0.35791H157.625V12.4829H169.75V24.6079H181.875V85.2329H157.625V60.9829H121.25V85.2329H97ZM121.25 48.8579H157.625V24.6079H145.5V12.4829H133.375V24.6079H121.25V48.8579ZM194 85.2329V0.35791H218.25V12.4829H230.375V24.6079H242.5V12.4829H254.625V0.35791H278.875V85.2329H254.625V36.7329H242.5V60.9829H230.375V36.7329H218.25V85.2329H194ZM291 85.2329V0.35791H375.875V12.4829H315.25V36.7329H363.75V48.8579H315.25V73.1079H375.875V85.2329H291ZM497.125 85.2329V73.1079H485V12.4829H497.125V0.35791H557.75V12.4829H569.875V73.1079H557.75V85.2329H497.125ZM509.25 73.1079H545.625V12.4829H509.25V73.1079ZM618.375 85.2329V73.1079H606.25V60.9829H594.125V48.8579H582V0.35791H606.25V36.7329H618.375V48.8579H630.5V36.7329H642.625V0.35791H666.875V48.8579H654.75V60.9829H642.625V73.1079H630.5V85.2329H618.375ZM679 85.2329V0.35791H763.875V12.4829H703.25V36.7329H751.75V48.8579H703.25V73.1079H763.875V85.2329H679ZM776 85.2329V0.35791H848.75V12.4829H860.875V48.8579H836.625V60.9829H848.75V73.1079H860.875V85.2329H824.5V73.1079H812.375V60.9829H800.25V85.2329H776ZM800.25 48.8579H824.5V36.7329H836.625V12.4829H800.25V48.8579Z&quot; fill=&quot;#FBC307&quot;/&gt;
+        &lt;path class=&quot;flash&quot; d=&quot;M24.25 85.2329V73.1079H12.125V60.9829H0V24.6079H12.125V12.4829H24.25V0.35791H84.875V12.4829H36.375V24.6079H24.25V60.9829H36.375V73.1079H60.625V48.8579H48.5V36.7329H84.875V85.2329H24.25ZM97 85.2329V24.6079H109.125V12.4829H121.25V0.35791H157.625V12.4829H169.75V24.6079H181.875V85.2329H157.625V60.9829H121.25V85.2329H97ZM121.25 48.8579H157.625V24.6079H145.5V12.4829H133.375V24.6079H121.25V48.8579ZM194 85.2329V0.35791H218.25V12.4829H230.375V24.6079H242.5V12.4829H254.625V0.35791H278.875V85.2329H254.625V36.7329H242.5V60.9829H230.375V36.7329H218.25V85.2329H194ZM291 85.2329V0.35791H375.875V12.4829H315.25V36.7329H363.75V48.8579H315.25V73.1079H375.875V85.2329H291ZM497.125 85.2329V73.1079H485V12.4829H497.125V0.35791H557.75V12.4829H569.875V73.1079H557.75V85.2329H497.125ZM509.25 73.1079H545.625V12.4829H509.25V73.1079ZM618.375 85.2329V73.1079H606.25V60.9829H594.125V48.8579H582V0.35791H606.25V36.7329H618.375V48.8579H630.5V36.7329H642.625V0.35791H666.875V48.8579H654.75V60.9829H642.625V73.1079H630.5V85.2329H618.375ZM679 85.2329V0.35791H763.875V12.4829H703.25V36.7329H751.75V48.8579H703.25V73.1079H763.875V85.2329H679ZM776 85.2329V0.35791H848.75V12.4829H860.875V48.8579H836.625V60.9829H848.75V73.1079H860.875V85.2329H824.5V73.1079H812.375V60.9829H800.25V85.2329H776ZM800.25 48.8579H824.5V36.7329H836.625V12.4829H800.25V48.8579Z&quot; fill=&quot;#FBC307&quot;/&gt;
     &lt;/svg&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
         &lt;div class=&quot;content content--ending&quot;&gt;
@@ -4104,7 +4176,7 @@ importScripts("/gsap.min.js");
 &lt;div class=&quot;bg bg--blue&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot; abs-wrapper abs-wrapper--ending&quot;&gt;
     &lt;svg class=&quot;logo logo--ending logo--blue&quot; width=&quot;861&quot; height=&quot;86&quot; viewBox=&quot;0 0 861 86&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-        &lt;path d=&quot;M24.25 85.2329V73.1079H12.125V60.9829H0V24.6079H12.125V12.4829H24.25V0.35791H84.875V12.4829H36.375V24.6079H24.25V60.9829H36.375V73.1079H60.625V48.8579H48.5V36.7329H84.875V85.2329H24.25ZM97 85.2329V24.6079H109.125V12.4829H121.25V0.35791H157.625V12.4829H169.75V24.6079H181.875V85.2329H157.625V60.9829H121.25V85.2329H97ZM121.25 48.8579H157.625V24.6079H145.5V12.4829H133.375V24.6079H121.25V48.8579ZM194 85.2329V0.35791H218.25V12.4829H230.375V24.6079H242.5V12.4829H254.625V0.35791H278.875V85.2329H254.625V36.7329H242.5V60.9829H230.375V36.7329H218.25V85.2329H194ZM291 85.2329V0.35791H375.875V12.4829H315.25V36.7329H363.75V48.8579H315.25V73.1079H375.875V85.2329H291ZM497.125 85.2329V73.1079H485V12.4829H497.125V0.35791H557.75V12.4829H569.875V73.1079H557.75V85.2329H497.125ZM509.25 73.1079H545.625V12.4829H509.25V73.1079ZM618.375 85.2329V73.1079H606.25V60.9829H594.125V48.8579H582V0.35791H606.25V36.7329H618.375V48.8579H630.5V36.7329H642.625V0.35791H666.875V48.8579H654.75V60.9829H642.625V73.1079H630.5V85.2329H618.375ZM679 85.2329V0.35791H763.875V12.4829H703.25V36.7329H751.75V48.8579H703.25V73.1079H763.875V85.2329H679ZM776 85.2329V0.35791H848.75V12.4829H860.875V48.8579H836.625V60.9829H848.75V73.1079H860.875V85.2329H824.5V73.1079H812.375V60.9829H800.25V85.2329H776ZM800.25 48.8579H824.5V36.7329H836.625V12.4829H800.25V48.8579Z&quot; fill=&quot;#FBC307&quot;/&gt;
+        &lt;path class=&quot;flash&quot; d=&quot;M24.25 85.2329V73.1079H12.125V60.9829H0V24.6079H12.125V12.4829H24.25V0.35791H84.875V12.4829H36.375V24.6079H24.25V60.9829H36.375V73.1079H60.625V48.8579H48.5V36.7329H84.875V85.2329H24.25ZM97 85.2329V24.6079H109.125V12.4829H121.25V0.35791H157.625V12.4829H169.75V24.6079H181.875V85.2329H157.625V60.9829H121.25V85.2329H97ZM121.25 48.8579H157.625V24.6079H145.5V12.4829H133.375V24.6079H121.25V48.8579ZM194 85.2329V0.35791H218.25V12.4829H230.375V24.6079H242.5V12.4829H254.625V0.35791H278.875V85.2329H254.625V36.7329H242.5V60.9829H230.375V36.7329H218.25V85.2329H194ZM291 85.2329V0.35791H375.875V12.4829H315.25V36.7329H363.75V48.8579H315.25V73.1079H375.875V85.2329H291ZM497.125 85.2329V73.1079H485V12.4829H497.125V0.35791H557.75V12.4829H569.875V73.1079H557.75V85.2329H497.125ZM509.25 73.1079H545.625V12.4829H509.25V73.1079ZM618.375 85.2329V73.1079H606.25V60.9829H594.125V48.8579H582V0.35791H606.25V36.7329H618.375V48.8579H630.5V36.7329H642.625V0.35791H666.875V48.8579H654.75V60.9829H642.625V73.1079H630.5V85.2329H618.375ZM679 85.2329V0.35791H763.875V12.4829H703.25V36.7329H751.75V48.8579H703.25V73.1079H763.875V85.2329H679ZM776 85.2329V0.35791H848.75V12.4829H860.875V48.8579H836.625V60.9829H848.75V73.1079H860.875V85.2329H824.5V73.1079H812.375V60.9829H800.25V85.2329H776ZM800.25 48.8579H824.5V36.7329H836.625V12.4829H800.25V48.8579Z&quot; fill=&quot;#FBC307&quot;/&gt;
     &lt;/svg&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
         &lt;div class=&quot;content content--ending&quot;&gt;
@@ -4140,7 +4212,7 @@ importScripts("/gsap.min.js");
 &lt;div class=&quot;bg bg--purple&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot; abs-wrapper abs-wrapper--ending&quot;&gt;
     &lt;svg class=&quot;logo logo--ending logo--purple&quot; width=&quot;861&quot; height=&quot;86&quot; viewBox=&quot;0 0 861 86&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-        &lt;path d=&quot;M24.25 85.2329V73.1079H12.125V60.9829H0V24.6079H12.125V12.4829H24.25V0.35791H84.875V12.4829H36.375V24.6079H24.25V60.9829H36.375V73.1079H60.625V48.8579H48.5V36.7329H84.875V85.2329H24.25ZM97 85.2329V24.6079H109.125V12.4829H121.25V0.35791H157.625V12.4829H169.75V24.6079H181.875V85.2329H157.625V60.9829H121.25V85.2329H97ZM121.25 48.8579H157.625V24.6079H145.5V12.4829H133.375V24.6079H121.25V48.8579ZM194 85.2329V0.35791H218.25V12.4829H230.375V24.6079H242.5V12.4829H254.625V0.35791H278.875V85.2329H254.625V36.7329H242.5V60.9829H230.375V36.7329H218.25V85.2329H194ZM291 85.2329V0.35791H375.875V12.4829H315.25V36.7329H363.75V48.8579H315.25V73.1079H375.875V85.2329H291ZM497.125 85.2329V73.1079H485V12.4829H497.125V0.35791H557.75V12.4829H569.875V73.1079H557.75V85.2329H497.125ZM509.25 73.1079H545.625V12.4829H509.25V73.1079ZM618.375 85.2329V73.1079H606.25V60.9829H594.125V48.8579H582V0.35791H606.25V36.7329H618.375V48.8579H630.5V36.7329H642.625V0.35791H666.875V48.8579H654.75V60.9829H642.625V73.1079H630.5V85.2329H618.375ZM679 85.2329V0.35791H763.875V12.4829H703.25V36.7329H751.75V48.8579H703.25V73.1079H763.875V85.2329H679ZM776 85.2329V0.35791H848.75V12.4829H860.875V48.8579H836.625V60.9829H848.75V73.1079H860.875V85.2329H824.5V73.1079H812.375V60.9829H800.25V85.2329H776ZM800.25 48.8579H824.5V36.7329H836.625V12.4829H800.25V48.8579Z&quot; fill=&quot;#FBC307&quot;/&gt;
+        &lt;path class=&quot;flash&quot; d=&quot;M24.25 85.2329V73.1079H12.125V60.9829H0V24.6079H12.125V12.4829H24.25V0.35791H84.875V12.4829H36.375V24.6079H24.25V60.9829H36.375V73.1079H60.625V48.8579H48.5V36.7329H84.875V85.2329H24.25ZM97 85.2329V24.6079H109.125V12.4829H121.25V0.35791H157.625V12.4829H169.75V24.6079H181.875V85.2329H157.625V60.9829H121.25V85.2329H97ZM121.25 48.8579H157.625V24.6079H145.5V12.4829H133.375V24.6079H121.25V48.8579ZM194 85.2329V0.35791H218.25V12.4829H230.375V24.6079H242.5V12.4829H254.625V0.35791H278.875V85.2329H254.625V36.7329H242.5V60.9829H230.375V36.7329H218.25V85.2329H194ZM291 85.2329V0.35791H375.875V12.4829H315.25V36.7329H363.75V48.8579H315.25V73.1079H375.875V85.2329H291ZM497.125 85.2329V73.1079H485V12.4829H497.125V0.35791H557.75V12.4829H569.875V73.1079H557.75V85.2329H497.125ZM509.25 73.1079H545.625V12.4829H509.25V73.1079ZM618.375 85.2329V73.1079H606.25V60.9829H594.125V48.8579H582V0.35791H606.25V36.7329H618.375V48.8579H630.5V36.7329H642.625V0.35791H666.875V48.8579H654.75V60.9829H642.625V73.1079H630.5V85.2329H618.375ZM679 85.2329V0.35791H763.875V12.4829H703.25V36.7329H751.75V48.8579H703.25V73.1079H763.875V85.2329H679ZM776 85.2329V0.35791H848.75V12.4829H860.875V48.8579H836.625V60.9829H848.75V73.1079H860.875V85.2329H824.5V73.1079H812.375V60.9829H800.25V85.2329H776ZM800.25 48.8579H824.5V36.7329H836.625V12.4829H800.25V48.8579Z&quot; fill=&quot;#FBC307&quot;/&gt;
     &lt;/svg&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
         &lt;div class=&quot;content content--ending&quot;&gt;
@@ -4179,7 +4251,7 @@ importScripts("/gsap.min.js");
 &lt;div class=&quot;bg bg--red&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot; abs-wrapper abs-wrapper--ending&quot;&gt;
     &lt;svg class=&quot;logo logo--ending logo--red&quot; width=&quot;861&quot; height=&quot;86&quot; viewBox=&quot;0 0 861 86&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-        &lt;path d=&quot;M24.25 85.2329V73.1079H12.125V60.9829H0V24.6079H12.125V12.4829H24.25V0.35791H84.875V12.4829H36.375V24.6079H24.25V60.9829H36.375V73.1079H60.625V48.8579H48.5V36.7329H84.875V85.2329H24.25ZM97 85.2329V24.6079H109.125V12.4829H121.25V0.35791H157.625V12.4829H169.75V24.6079H181.875V85.2329H157.625V60.9829H121.25V85.2329H97ZM121.25 48.8579H157.625V24.6079H145.5V12.4829H133.375V24.6079H121.25V48.8579ZM194 85.2329V0.35791H218.25V12.4829H230.375V24.6079H242.5V12.4829H254.625V0.35791H278.875V85.2329H254.625V36.7329H242.5V60.9829H230.375V36.7329H218.25V85.2329H194ZM291 85.2329V0.35791H375.875V12.4829H315.25V36.7329H363.75V48.8579H315.25V73.1079H375.875V85.2329H291ZM497.125 85.2329V73.1079H485V12.4829H497.125V0.35791H557.75V12.4829H569.875V73.1079H557.75V85.2329H497.125ZM509.25 73.1079H545.625V12.4829H509.25V73.1079ZM618.375 85.2329V73.1079H606.25V60.9829H594.125V48.8579H582V0.35791H606.25V36.7329H618.375V48.8579H630.5V36.7329H642.625V0.35791H666.875V48.8579H654.75V60.9829H642.625V73.1079H630.5V85.2329H618.375ZM679 85.2329V0.35791H763.875V12.4829H703.25V36.7329H751.75V48.8579H703.25V73.1079H763.875V85.2329H679ZM776 85.2329V0.35791H848.75V12.4829H860.875V48.8579H836.625V60.9829H848.75V73.1079H860.875V85.2329H824.5V73.1079H812.375V60.9829H800.25V85.2329H776ZM800.25 48.8579H824.5V36.7329H836.625V12.4829H800.25V48.8579Z&quot; fill=&quot;#FBC307&quot;/&gt;
+        &lt;path class=&quot;flash&quot; d=&quot;M24.25 85.2329V73.1079H12.125V60.9829H0V24.6079H12.125V12.4829H24.25V0.35791H84.875V12.4829H36.375V24.6079H24.25V60.9829H36.375V73.1079H60.625V48.8579H48.5V36.7329H84.875V85.2329H24.25ZM97 85.2329V24.6079H109.125V12.4829H121.25V0.35791H157.625V12.4829H169.75V24.6079H181.875V85.2329H157.625V60.9829H121.25V85.2329H97ZM121.25 48.8579H157.625V24.6079H145.5V12.4829H133.375V24.6079H121.25V48.8579ZM194 85.2329V0.35791H218.25V12.4829H230.375V24.6079H242.5V12.4829H254.625V0.35791H278.875V85.2329H254.625V36.7329H242.5V60.9829H230.375V36.7329H218.25V85.2329H194ZM291 85.2329V0.35791H375.875V12.4829H315.25V36.7329H363.75V48.8579H315.25V73.1079H375.875V85.2329H291ZM497.125 85.2329V73.1079H485V12.4829H497.125V0.35791H557.75V12.4829H569.875V73.1079H557.75V85.2329H497.125ZM509.25 73.1079H545.625V12.4829H509.25V73.1079ZM618.375 85.2329V73.1079H606.25V60.9829H594.125V48.8579H582V0.35791H606.25V36.7329H618.375V48.8579H630.5V36.7329H642.625V0.35791H666.875V48.8579H654.75V60.9829H642.625V73.1079H630.5V85.2329H618.375ZM679 85.2329V0.35791H763.875V12.4829H703.25V36.7329H751.75V48.8579H703.25V73.1079H763.875V85.2329H679ZM776 85.2329V0.35791H848.75V12.4829H860.875V48.8579H836.625V60.9829H848.75V73.1079H860.875V85.2329H824.5V73.1079H812.375V60.9829H800.25V85.2329H776ZM800.25 48.8579H824.5V36.7329H836.625V12.4829H800.25V48.8579Z&quot; fill=&quot;#FBC307&quot;/&gt;
     &lt;/svg&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
         &lt;div class=&quot;content content--ending&quot;&gt;
@@ -4215,7 +4287,7 @@ importScripts("/gsap.min.js");
 &lt;&lt;set $endingLabel to &quot;qui&quot;&gt;&gt;
 &lt;div class=&quot;bg bg--teal&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot; abs-wrapper abs-wrapper--ending&quot;&gt;
-    &lt;svg class=&quot;logo logo--ending logo--teal&quot; width=&quot;861&quot; height=&quot;86&quot; viewBox=&quot;0 0 861 86&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+    &lt;svg id=&quot;gameover&quot; class=&quot;logo logo--ending logo--teal&quot; width=&quot;861&quot; height=&quot;86&quot; viewBox=&quot;0 0 861 86&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
         &lt;path d=&quot;M24.25 85.2329V73.1079H12.125V60.9829H0V24.6079H12.125V12.4829H24.25V0.35791H84.875V12.4829H36.375V24.6079H24.25V60.9829H36.375V73.1079H60.625V48.8579H48.5V36.7329H84.875V85.2329H24.25ZM97 85.2329V24.6079H109.125V12.4829H121.25V0.35791H157.625V12.4829H169.75V24.6079H181.875V85.2329H157.625V60.9829H121.25V85.2329H97ZM121.25 48.8579H157.625V24.6079H145.5V12.4829H133.375V24.6079H121.25V48.8579ZM194 85.2329V0.35791H218.25V12.4829H230.375V24.6079H242.5V12.4829H254.625V0.35791H278.875V85.2329H254.625V36.7329H242.5V60.9829H230.375V36.7329H218.25V85.2329H194ZM291 85.2329V0.35791H375.875V12.4829H315.25V36.7329H363.75V48.8579H315.25V73.1079H375.875V85.2329H291ZM497.125 85.2329V73.1079H485V12.4829H497.125V0.35791H557.75V12.4829H569.875V73.1079H557.75V85.2329H497.125ZM509.25 73.1079H545.625V12.4829H509.25V73.1079ZM618.375 85.2329V73.1079H606.25V60.9829H594.125V48.8579H582V0.35791H606.25V36.7329H618.375V48.8579H630.5V36.7329H642.625V0.35791H666.875V48.8579H654.75V60.9829H642.625V73.1079H630.5V85.2329H618.375ZM679 85.2329V0.35791H763.875V12.4829H703.25V36.7329H751.75V48.8579H703.25V73.1079H763.875V85.2329H679ZM776 85.2329V0.35791H848.75V12.4829H860.875V48.8579H836.625V60.9829H848.75V73.1079H860.875V85.2329H824.5V73.1079H812.375V60.9829H800.25V85.2329H776ZM800.25 48.8579H824.5V36.7329H836.625V12.4829H800.25V48.8579Z&quot; fill=&quot;#FBC307&quot;/&gt;
     &lt;/svg&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
@@ -4278,9 +4350,6 @@ importScripts("/gsap.min.js");
                     &lt;p class=&quot;tracker-module__number&quot;&gt;$remaining&lt;/p&gt;
                     &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
                 &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div id=&quot;quarter-close&quot; class=&quot;button button--quarter&quot;&gt;
-                &lt;a&gt;OK&lt;/a&gt;
             &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
@@ -4436,9 +4505,6 @@ importScripts("/gsap.min.js");
                     &lt;p class=&quot;tracker-module__number&quot;&gt;$remaining&lt;/p&gt;
                     &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
                 &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div id=&quot;quarter-close&quot; class=&quot;button button--quarter&quot;&gt;
-                &lt;a&gt;OK&lt;/a&gt;
             &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
@@ -4625,9 +4691,6 @@ importScripts("/gsap.min.js");
                     &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
-            &lt;div id=&quot;quarter-close&quot; class=&quot;button button--quarter&quot;&gt;
-                &lt;a&gt;OK&lt;/a&gt;
-            &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
             &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
@@ -4785,9 +4848,6 @@ importScripts("/gsap.min.js");
                     &lt;p class=&quot;tracker-module__number&quot;&gt;$remaining&lt;/p&gt;
                     &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
                 &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div id=&quot;quarter-close&quot; class=&quot;button button--quarter&quot;&gt;
-                &lt;a&gt;OK&lt;/a&gt;
             &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
@@ -4963,9 +5023,6 @@ importScripts("/gsap.min.js");
                     &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
-            &lt;div id=&quot;quarter-close&quot; class=&quot;button button--quarter&quot;&gt;
-                &lt;a&gt;OK&lt;/a&gt;
-            &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
             &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
@@ -5140,9 +5197,6 @@ importScripts("/gsap.min.js");
                     &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
-            &lt;div id=&quot;quarter-close&quot; class=&quot;button button--quarter&quot;&gt;
-                &lt;a&gt;OK&lt;/a&gt;
-            &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
             &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
@@ -5267,9 +5321,6 @@ importScripts("/gsap.min.js");
                     &lt;p class=&quot;tracker-module__number&quot;&gt;$remaining&lt;/p&gt;
                     &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
                 &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div id=&quot;quarter-close&quot; class=&quot;button button--quarter&quot;&gt;
-                &lt;a&gt;OK&lt;/a&gt;
             &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
@@ -5451,9 +5502,6 @@ importScripts("/gsap.min.js");
                     &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
-            &lt;div id=&quot;quarter-close&quot; class=&quot;button button--quarter&quot;&gt;
-                &lt;a&gt;OK&lt;/a&gt;
-            &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
             &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
@@ -5578,9 +5626,6 @@ importScripts("/gsap.min.js");
                     &lt;p class=&quot;tracker-module__number&quot;&gt;$remaining&lt;/p&gt;
                     &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
                 &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div id=&quot;quarter-close&quot; class=&quot;button button--quarter&quot;&gt;
-                &lt;a&gt;OK&lt;/a&gt;
             &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
@@ -5732,9 +5777,6 @@ importScripts("/gsap.min.js");
                     &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
-            &lt;div id=&quot;quarter-close&quot; class=&quot;button button--quarter&quot;&gt;
-                &lt;a&gt;OK&lt;/a&gt;
-            &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
             &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
@@ -5857,9 +5899,6 @@ importScripts("/gsap.min.js");
                     &lt;p class=&quot;tracker-module__number&quot;&gt;$remaining&lt;/p&gt;
                     &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
                 &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div id=&quot;quarter-close&quot; class=&quot;button button--quarter&quot;&gt;
-                &lt;a&gt;OK&lt;/a&gt;
             &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
@@ -5986,9 +6025,6 @@ importScripts("/gsap.min.js");
                     &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
-            &lt;div id=&quot;quarter-close&quot; class=&quot;button button--quarter&quot;&gt;
-                &lt;a&gt;OK&lt;/a&gt;
-            &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
             &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
@@ -6112,9 +6148,6 @@ importScripts("/gsap.min.js");
                     &lt;p class=&quot;tracker-module__number&quot;&gt;$remaining&lt;/p&gt;
                     &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
                 &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div id=&quot;quarter-close&quot; class=&quot;button button--quarter&quot;&gt;
-                &lt;a&gt;OK&lt;/a&gt;
             &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
@@ -6240,9 +6273,6 @@ importScripts("/gsap.min.js");
                     &lt;p class=&quot;tracker-module__number&quot;&gt;$remaining&lt;/p&gt;
                     &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
                 &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div id=&quot;quarter-close&quot; class=&quot;button button--quarter&quot;&gt;
-                &lt;a&gt;OK&lt;/a&gt;
             &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
@@ -6419,9 +6449,6 @@ importScripts("/gsap.min.js");
                     &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
-            &lt;div id=&quot;quarter-close&quot; class=&quot;button button--quarter&quot;&gt;
-                &lt;a&gt;OK&lt;/a&gt;
-            &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
             &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
@@ -6571,9 +6598,6 @@ importScripts("/gsap.min.js");
                     &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
-            &lt;div id=&quot;quarter-close&quot; class=&quot;button button--quarter&quot;&gt;
-                &lt;a&gt;OK&lt;/a&gt;
-            &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
             &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
@@ -6704,9 +6728,7 @@ importScripts("/gsap.min.js");
 			&lt;&lt;EndingCheck&gt;&gt;
 		&lt;&lt;/link&gt;&gt;
 	&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="93" name="Login" tags="" position="500,300" size="100,100">/* Pass Messages */
-&lt;&lt;EventMessenger &quot;loginFlag&quot; true false&gt;&gt;
-/* Variable Initialization */
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="93" name="Login" tags="" position="500,300" size="100,100">/* Variable Initialization */
 &lt;&lt;if $time == undefined&gt;&gt;
 	&lt;&lt;set $time to 0&gt;&gt;
 &lt;&lt;/if&gt;&gt;
@@ -6725,6 +6747,59 @@ importScripts("/gsap.min.js");
 &lt;&lt;set $workStyle to 0&gt;&gt;
 &lt;&lt;set $orientation to 0&gt;&gt;
 &lt;&lt;set $quarter to 1&gt;&gt;
+&lt;&lt;script&gt;&gt;
+	$(document).ready(function() {
+		$(&quot;#l-close&quot;).click(function(){
+			document.getElementById(&#39;l-about&#39;).classList.toggle(&#39;about-window--hidden&#39;);
+		});
+		$(&quot;#l-about-mobile&quot;).click(function(){
+			document.getElementById(&#39;l-about&#39;).classList.toggle(&#39;about-window--hidden&#39;);
+			document.getElementById(&#39;l-menu-overlay&#39;).classList.toggle(&#39;menu-overlay--hidden&#39;);
+			document.getElementById(&#39;l-hamburger&#39;).src=&quot;img/menu.svg&quot;;
+		});
+		$(&quot;#l-hamburger&quot;).click(function() {
+			if (document.getElementById(&#39;l-menu-overlay&#39;).classList.contains(&#39;menu-overlay--hidden&#39;)) {
+				document.getElementById(&#39;l-hamburger&#39;).src=&quot;img/close.svg&quot;;
+			} else {
+				document.getElementById(&#39;l-hamburger&#39;).src=&quot;img/menu.svg&quot;;
+			}
+			document.getElementById(&#39;l-menu-overlay&#39;).classList.toggle(&#39;menu-overlay--hidden&#39;);        
+		});
+		$(&quot;#l-quit-mobile&quot;).click(function() {
+            $.wiki(&quot;&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;goto &#39;QUIT&#39;&gt;&gt;&lt;&lt;/timed&gt;&gt;&quot;);
+            document.getElementById(&#39;menu-overlay&#39;).classList.toggle(&#39;menu-overlay--hidden&#39;);
+            document.getElementById(&#39;hamburger&#39;).src=&quot;img/menu.svg&quot;;
+        });
+	});
+&lt;&lt;/script&gt;&gt;
+
+&lt;div class=&quot;menu-bar menu-bar--login&quot;&gt;
+    &lt;img id=&quot;l-hamburger&quot; class=&quot;menu-bar__btn&quot; src=&quot;img/menu.svg&quot; /&gt;
+    &lt;img class=&quot;menu-bar__logo&quot; src=&quot;img/logo.png&quot; /&gt;
+    &lt;a href=&quot;https://chief.com&quot; class=&quot;menu-bar__heading&quot;&gt;A corporate survival game by&lt;img src=&quot;img/chief.svg&quot;/&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div id=&quot;l-menu-overlay&quot; class=&quot;menu-overlay menu-overlay--hidden&quot;&gt;
+    &lt;ul id=&quot;l-mobile-menu&quot; class=&quot;mobile-menu&quot;&gt;
+        &lt;li id=&quot;l-about-mobile&quot; class=&quot;mobile-menu__option&quot;&gt;&lt;img src=&quot;img/about.png&quot; /&gt;Who Made This?&lt;/li&gt;
+        &lt;li id=&quot;l-quit-mobile&quot; class=&quot;mobile-menu__option&quot;&gt;&lt;img src=&quot;img/quit.png&quot; /&gt;Quit&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&quot;l-about&quot; class=&quot;about-window about-window--hidden&quot;&gt;
+    &lt;div class=&quot;titlebar titlebar--float&quot;&gt;
+        &lt;img src=&quot;img/grip.svg&quot; class=&quot;titlebar__grip&quot;&gt;
+        &lt;p class=&quot;titlebar__text&quot;&gt;WHO MADE THIS?&lt;/p&gt;
+        &lt;img src=&quot;img/grip.svg&quot; class=&quot;titlebar__grip&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;window-text&quot;&gt;
+        &lt;div class=&quot;window-text__scroll&quot;&gt;
+            &lt;h1 class=&quot;window-text__title&quot;&gt;CHIEF IS A NETWORK FOR WOMEN EXECUTIVES&lt;/h1&gt;
+            &lt;p class=&quot;window-text__copy&quot;&gt;Navigating the highs, lows, and absurdities of corporate life at the executive level takes more than grit and hustle. Just ask any of our members—&lt;mark&gt;40% of whom are in the C-Suite&lt;/mark&gt;.&lt;/p&gt;
+            &lt;p class=&quot;window-text__copy&quot;&gt;Chief helps you be &lt;mark&gt;a more impactful leader&lt;/mark&gt; by connecting you with peers who understand your challenges and ambitions.&lt;/p&gt;
+            &lt;p class=&quot;window-text__copy&quot;&gt;Visit &lt;a href=&quot;https://chief.com&quot;&gt;Chief.com&lt;/a&gt; to learn more.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div id=&quot;l-close&quot; class=&quot;button&quot;&gt;&lt;a&gt;Close&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 &lt;div class=&quot;abs-wrapper abs-wrapper--login&quot;&gt;
 	&lt;img class=&quot;logo&quot; src=&quot;img/logo.png&quot;/&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
@@ -6857,7 +6932,7 @@ importScripts("/gsap.min.js");
 &lt;div class=&quot;bg bg--start&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;abs-wrapper abs-wrapper--start&quot;&gt;
 	&lt;img class=&quot;logo logo--start&quot; src=&quot;img/logo-start.png&quot;/&gt;
-	&lt;a class=&quot;start-subhead&quot;&gt;A survival game by Chief&lt;/a&gt;
+	&lt;a class=&quot;start-subhead&quot; href=&quot;https://chief.com&quot;&gt;A survival game by Chief&lt;/a&gt;
 	&lt;div id=&quot;notif1&quot; class=&quot;notification&quot;&gt;
 		&lt;img class=&quot;notification__image&quot; src=&quot;img/slack.png&quot;/&gt;
 		&lt;div class=&quot;notification-text&quot;&gt;
@@ -6881,7 +6956,7 @@ importScripts("/gsap.min.js");
 	&lt;/div&gt;
 	&lt;div class=&quot;rel-wrapper rel-wrapper--start&quot;&gt;
 		&lt;img class=&quot;start-img&quot; src=&quot;img/start.jpg&quot; /&gt;
-		&lt;div id=&quot;start-btn&quot; class=&quot;button button--start button--disabled&quot;&gt;
+		&lt;div id=&quot;start-btn&quot; class=&quot;button button--start button--hidden&quot;&gt;
 			&lt;&lt;link &quot;New Game&quot;&gt;&gt;
 				&lt;&lt;goto &quot;Login&quot;&gt;&gt;
 			&lt;&lt;/link&gt;&gt;
@@ -6900,19 +6975,94 @@ importScripts("/gsap.min.js");
 &lt;&lt;script&gt;&gt;
 	function startUnlock() {
 		const btn = document.querySelector(&#39;#start-btn&#39;);
-		btn.classList.remove(&#39;button--disabled&#39;);
+		btn.classList.remove(&#39;button--hidden&#39;);
 	}
 	const waitForGSAP = setInterval(function() {
 		if (typeof gsap !== &quot;undefined&quot;) {
 			clearInterval(waitForGSAP);
-			
-			gsap.from(&quot;.notification&quot;, {delay: 0.5, stagger: 1, duration: 0.5, y: 25, opacity: 0, ease: &quot;back.out&quot;, onComplete: startUnlock});
+			var tl = gsap.timeline();
+			tl.from(&quot;.notification&quot;, {delay: 0.5, stagger: 1, duration: 0.5, y: 25, opacity: 0, ease: &quot;back.out&quot;, onComplete: startUnlock});
+			tl.fromTo(&quot;#start-btn&quot;, {y:15}, {y:0, opacity: 1, duration: 0.25});
 		}
 	}, 100);
 &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="PassageDone" tags="" position="600,1225" size="100,100">&lt;&lt;script&gt;&gt;
     if (document.querySelector(&#39;#sharing&#39;)) {
         var endingLabel = State.getVar(&quot;$endingLabel&quot;).toString();
         var endingImage = State.getVar(&quot;$endingImage&quot;);
+
+        // var delayInMilliseconds = 10000; //1 second
+
+        // setTimeout(function() {
+        //     document.getElementById(&#39;about&#39;).classList.toggle(&#39;about-window--hidden&#39;);
+        //     document.getElementById(&#39;about&#39;).classList.toggle(&#39;about-window--over&#39;);
+        // }, delayInMilliseconds);
+
+        // function isDesktop() {
+        //     const hasTouch = &#39;ontouchstart&#39; in window || navigator.maxTouchPoints &gt; 0;
+        //     const isLargeScreen = window.innerWidth &gt; 1200;
+        //     return !hasTouch &amp;&amp; isLargeScreen;
+        // }
+        // if (isDesktop()) {
+        //     let screensaverTimer;
+        //     let screensaverInterval;
+
+        //     const idleTime = 10000; // 5 seconds
+        //     const imageDisplayInterval = 3000; // 2 second between images
+        //     const images = [
+        //         &#39;/img/msg1.png&#39;,
+        //         &#39;/img/msg2.png&#39;,
+        //         &#39;/img/msg3.png&#39;,
+        //         &#39;/img/msg4.png&#39;,
+        //         &#39;/img/msg5.png&#39;,
+        //         &#39;/img/msg6.png&#39;,
+        //         &#39;/img/msg7.png&#39;
+        //     ];
+            
+        //     // Start the screensaver timer
+        //     function resetScreensaverTimer() {
+        //         clearTimeout(screensaverTimer);
+        //         removeImages();
+        //         screensaverTimer = setTimeout(startScreensaver, idleTime);
+        //     }
+
+        //     // Start displaying images one by one at intervals
+        //     function startScreensaver() {
+        //         let imageIndex = 0;
+        //         screensaverInterval = setInterval(() =&gt; {
+        //             if (imageIndex &gt;= images.length) {
+        //                 clearInterval(screensaverInterval); // Stop when all images have been displayed
+        //                 return;
+        //             }
+        //             displayImage(images[imageIndex]);
+        //             imageIndex++;
+        //         }, imageDisplayInterval);
+        //     }
+
+        //     // Show a single image at a random position
+        //     function displayImage(src) {
+        //         let img = document.createElement(&#39;img&#39;);
+        //         img.src = src;
+        //         img.classList.add(&#39;screensaver-popup&#39;);
+        //         img.style.top = `${Math.random() * 70}vh`;
+        //         img.style.left = `${Math.random() * 70}vw`;
+        //         img.style.opacity = &#39;1&#39;;
+        //         document.body.appendChild(img);
+        //     }
+
+        //     // Remove all screensaver images
+        //     function removeImages() {
+        //         clearInterval(screensaverInterval); // Clear interval in case it’s still running
+        //         document.querySelectorAll(&#39;.screensaver-popup&#39;).forEach(img =&gt; img.remove());
+        //     }
+
+        //     // Reset screensaver timer on user activity
+        //     [&#39;mousemove&#39;, &#39;keypress&#39;, &#39;scroll&#39;].forEach(event =&gt; {
+        //         window.addEventListener(event, resetScreensaverTimer);
+        //     });
+
+        //     // Initialize screensaver timer
+        //     resetScreensaverTimer();
+        // }
     }
 
     // Function to fetch the image blob
@@ -7068,6 +7218,7 @@ importScripts("/gsap.min.js");
         $(document).ready(function() {
             $(&quot;#close&quot;).click(function(){
                 document.getElementById(&#39;about&#39;).classList.toggle(&#39;about-window--hidden&#39;);
+                document.getElementById(&#39;about&#39;).classList.remove(&#39;about-window--over&#39;);
             });
             $(&quot;#about-mobile&quot;).click(function(){
                 document.getElementById(&#39;about&#39;).classList.toggle(&#39;about-window--hidden&#39;);
@@ -7079,7 +7230,9 @@ importScripts("/gsap.min.js");
             if (typeof gsap !== &quot;undefined&quot;) {
                 clearInterval(waitForGSAP);
                 if(document.getElementById(&#39;scenario-area&#39;)) {
-                    gsap.from(&quot;#scenario-area&quot;, {duration: 0.5, y: 25, ease: &quot;back.out&quot;});
+                    var tl = gsap.timeline();
+                    tl.from(&quot;#scenario-area&quot;, {duration: 0.5, y: 25, ease: &quot;back.out&quot;}, 0);
+                    tl.to(&quot;#quarter&quot;, {duration: 0.25, opacity: 0, y: -25, ease: &quot;back.out&quot;}, 1.5);
                 }
                 if(document.getElementById(&#39;transition&#39;)) {
                     var tl = gsap.timeline();
@@ -7087,6 +7240,7 @@ importScripts("/gsap.min.js");
                     tl.from(&quot;.dot&quot;, {delay: 0.5, duration: 0.25, stagger:{ each:0.25, from:&quot;start&quot;}, opacity: 0}, 0);
                     tl.to(&quot;#transition&quot;, {duration: 0.5, opacity: 0, visibility: &quot;hidden&quot;, ease: &quot;back.out&quot;});
                     tl.from(&quot;.rel-wrapper&quot;, {duration: 0.5, y: 25, ease: &quot;back.out&quot;}, 1.5);
+                    tl.from(&quot;.flash&quot;, {fill: &quot;#ffffff&quot;, duration: 0.1, yoyo: true, repeat: 8, ease: &quot;none&quot;}, 1.5);
                 }
 
                 let text = document.querySelector(&quot;#quit-btn&quot;);

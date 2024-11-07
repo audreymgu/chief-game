@@ -28,6 +28,7 @@
         $(document).ready(function() {
             $("#close").click(function(){
                 document.getElementById('about').classList.toggle('about-window--hidden');
+                document.getElementById('about').classList.remove('about-window--over');
             });
             $("#about-mobile").click(function(){
                 document.getElementById('about').classList.toggle('about-window--hidden');
@@ -39,7 +40,9 @@
             if (typeof gsap !== "undefined") {
                 clearInterval(waitForGSAP);
                 if(document.getElementById('scenario-area')) {
-                    gsap.from("#scenario-area", {duration: 0.5, y: 25, ease: "back.out"});
+                    var tl = gsap.timeline();
+                    tl.from("#scenario-area", {duration: 0.5, y: 25, ease: "back.out"}, 0);
+                    tl.to("#quarter", {duration: 0.25, opacity: 0, y: -25, ease: "back.out"}, 1.5);
                 }
                 if(document.getElementById('transition')) {
                     var tl = gsap.timeline();
@@ -47,6 +50,7 @@
                     tl.from(".dot", {delay: 0.5, duration: 0.25, stagger:{ each:0.25, from:"start"}, opacity: 0}, 0);
                     tl.to("#transition", {duration: 0.5, opacity: 0, visibility: "hidden", ease: "back.out"});
                     tl.from(".rel-wrapper", {duration: 0.5, y: 25, ease: "back.out"}, 1.5);
+                    tl.from(".flash", {fill: "#ffffff", duration: 0.1, yoyo: true, repeat: 8, ease: "none"}, 1.5);
                 }
 
                 let text = document.querySelector("#quit-btn");

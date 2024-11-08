@@ -78,6 +78,8 @@
                     tl.to("#transition", {duration: 0.5, opacity: 0, visibility: "hidden", ease: "back.out"});
                     tl.from(".rel-wrapper", {duration: 0.5, y: 25, ease: "back.out"}, 1.5);
                     tl.from(".flash", {fill: "#ffffff", duration: 0.1, yoyo: true, repeat: 8, ease: "none"}, 2.25);
+                } else if(document.getElementById('blink')) {
+                    gsap.from(".flash", {fill: "#ffffff", duration: 0.1, yoyo: true, repeat: 8, ease: "none"});
                 }
 
                 let text = document.querySelector("#quit-btn");

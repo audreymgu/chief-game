@@ -64,7 +64,7 @@
         window.gtag = function gtag(){window.dataLayer.push(arguments);}
         window.gtag('js', new Date());
 
-        window.gtag('config', 'G-6R55NC0CC5');
+        window.gtag('config', 'G-VQW2TB3FNV');
     }
 </script>
 
@@ -76,7 +76,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{`https://chief-game.vercel.app`}">
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6R55NC0CC5"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQW2TB3FNV"></script>
 </svelte:head>
 
 <!-- <About/> -->

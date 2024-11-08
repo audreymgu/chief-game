@@ -2,6 +2,7 @@
 <<widget "SharingModule">>
     <div class="btn-area btn-area--ending">
         <div class="button button--ending button--sharing" id="sharing"><a>Share</a></div>
-        <div class="button" id="clip"><a>Download Image</a></div>
+        <div class="button button--preview" id="clip"><a><span><img @src="$endingImage" height="200px"/></span>Download Image</a></div>
     </div>
+    
 <</widget>>

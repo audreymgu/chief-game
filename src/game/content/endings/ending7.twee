@@ -6,6 +6,9 @@
 /* passage content */
 <<set $endingImage to "/img/e-fire_share.png">>
 <<set $endingLabel to "gre">>
+<div id="transition" class="bg bg--animation">
+    <p class="bg__text"><img class="evaluate" src="img/evaluate.png"/><span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></p>
+</div>
 <div class="bg bg--purple"></div>
 <div class=" abs-wrapper abs-wrapper--ending">
     <svg class="logo logo--ending logo--purple" width="861" height="86" viewBox="0 0 861 86" fill="none" xmlns="http://www.w3.org/2000/svg">

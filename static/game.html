@@ -1053,6 +1053,22 @@ h1 {
 .button--top a {
   margin-top: 0px;
 }
+.button--preview a {
+  position: relative;
+}
+.button--preview a span {
+  position: absolute;
+  right: -50px;
+  display: none;
+  z-index: 99;
+}
+.button--preview a span img {
+  border: 1px solid #2A2C41;
+}
+.button--preview a:hover span {
+  display: block;
+}
+
 .menu-bar {
   position: fixed;
   z-index: 2;
@@ -1393,6 +1409,7 @@ h1 {
   width: calc(100vw - 128px);
   justify-content: space-between;
   margin: 56px 64px;
+  align-items: flex-end;
 }
 .icon-view--hidden {
   display: none;
@@ -1421,13 +1438,19 @@ h1 {
 .icon__label {
   color: white;
   font-family: start-2p;
-  margin-top: 12px;
+  margin-top: 8px;
   font-size: 12px;
 }
 .icon__img {
   height: 106px;
   width: 106px;
   object-fit: contain;
+}
+
+.icon-group {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .scroll-bar {
@@ -1473,6 +1496,12 @@ h1 {
 @media (min-width: 1200px) and (min-height: 850px) {
   .about-window--over {
     display: unset;
+  }
+}
+@media (min-width: 1200px) and (min-height: 850px) {
+  .about-window--tut {
+    top: 225px;
+    left: 125px;
   }
 }
 
@@ -1594,19 +1623,20 @@ h1 {
   align-items: center;
 }
 .bg__text {
+  color: #213C06;
   text-transform: uppercase;
   font-family: start-2p;
-  filter: drop-shadow(8px 8px 0px rgba(0, 0, 0, 0.25));
-  font-size: 12px;
-  max-width: 200px;
+  font-size: 8px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   .bg__text {
-    font-size: 24px;
-    max-width: unset;
+    font-size: 10px;
   }
 }
 .menu-bar {
@@ -1855,6 +1885,11 @@ h1 {
 .menu-overlay--hidden {
   display: none;
 }
+@media (min-width: 1200px) and (min-height: 850px) {
+  .menu-overlay {
+    display: none;
+  }
+}
 
 .quarter-indicator {
   position: absolute;
@@ -1970,6 +2005,25 @@ h1 {
     position: absolute;
     height: 100px;
     z-index: 100;
+  }
+}
+
+.evaluate {
+  width: 300px;
+}
+@media (min-width: 1200px) and (min-height: 850px) {
+  .evaluate {
+    width: 500px;
+  }
+}
+
+.dot {
+  align-self: center;
+  padding-top: 8px;
+}
+@media (min-width: 1200px) and (min-height: 850px) {
+  .dot {
+    padding-top: 12px;
   }
 }
 
@@ -2923,6 +2977,22 @@ h1 {
 .button--top a {
   margin-top: 0px;
 }
+.button--preview a {
+  position: relative;
+}
+.button--preview a span {
+  position: absolute;
+  right: -50px;
+  display: none;
+  z-index: 99;
+}
+.button--preview a span img {
+  border: 1px solid #2A2C41;
+}
+.button--preview a:hover span {
+  display: block;
+}
+
 .menu-bar {
   position: fixed;
   z-index: 2;
@@ -3263,6 +3333,7 @@ h1 {
   width: calc(100vw - 128px);
   justify-content: space-between;
   margin: 56px 64px;
+  align-items: flex-end;
 }
 .icon-view--hidden {
   display: none;
@@ -3291,13 +3362,19 @@ h1 {
 .icon__label {
   color: white;
   font-family: start-2p;
-  margin-top: 12px;
+  margin-top: 8px;
   font-size: 12px;
 }
 .icon__img {
   height: 106px;
   width: 106px;
   object-fit: contain;
+}
+
+.icon-group {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .scroll-bar {
@@ -3343,6 +3420,12 @@ h1 {
 @media (min-width: 1200px) and (min-height: 850px) {
   .about-window--over {
     display: unset;
+  }
+}
+@media (min-width: 1200px) and (min-height: 850px) {
+  .about-window--tut {
+    top: 225px;
+    left: 125px;
   }
 }
 
@@ -3464,19 +3547,20 @@ h1 {
   align-items: center;
 }
 .bg__text {
+  color: #213C06;
   text-transform: uppercase;
   font-family: start-2p;
-  filter: drop-shadow(8px 8px 0px rgba(0, 0, 0, 0.25));
-  font-size: 12px;
-  max-width: 200px;
+  font-size: 8px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   .bg__text {
-    font-size: 24px;
-    max-width: unset;
+    font-size: 10px;
   }
 }
 .menu-bar {
@@ -3725,6 +3809,11 @@ h1 {
 .menu-overlay--hidden {
   display: none;
 }
+@media (min-width: 1200px) and (min-height: 850px) {
+  .menu-overlay {
+    display: none;
+  }
+}
 
 .quarter-indicator {
   position: absolute;
@@ -3843,6 +3932,25 @@ h1 {
   }
 }
 
+.evaluate {
+  width: 300px;
+}
+@media (min-width: 1200px) and (min-height: 850px) {
+  .evaluate {
+    width: 500px;
+  }
+}
+
+.dot {
+  align-self: center;
+  padding-top: 8px;
+}
+@media (min-width: 1200px) and (min-height: 850px) {
+  .dot {
+    padding-top: 12px;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "StoryScript" */
 // hide back + forward
 Config.history.controls = false;
@@ -3872,7 +3980,7 @@ importScripts("/gsap.min.js");
 ;!function(){"use strict";var t=!0,e=!1,s=!1,i={full:"#2ECC40",empty:"#FF4136",back:"#DDDDDD",height:"12px",width:"180px",animate:400,easing:"swing",text:"#111111",label:"",align:"center"},n=["center","left","right"],r=["swing","linear"];function a(t,e){return t&&"string"==typeof t&&(t=t.toLowerCase().trim())?t:e||""}function o(t){return t<.5?2*t*t:(4-2*t)*t-1}function l(t,e){if(!(this instanceof l))return new l(t,e);var s=clone(i);this.settings=Object.assign(s,t),this.settings.align=a(this.settings.align),this.settings.easing=a(this.settings.easing),n.includes(this.settings.align)||(this.settings.align="center"),r.includes(this.settings.easing)||(this.settings.easing="swing"),e=Number(e),Number.isNaN(e)&&(e=1),e=Math.clamp(e,0,1),this.value=e;var h=$(document.createElement("div")).addClass("chapel-meter").attr({"data-val":e,"data-label":this.settings.label}).css({position:"relative","background-color":this.settings.back,height:this.settings.height,width:this.settings.width,overflow:"hidden"}),g=$(document.createElement("div")).addClass("meter-label").css({top:0,right:0,"font-size":this.settings.height,"font-weight":"bold","line-height":"100%",width:"100%",height:"100%","vertical-align":"middle","text-align":this.settings.align,color:this.settings.text,"z-index":1,position:"relative",bottom:"100%"}).wiki(this.settings.label).appendTo(h),u=$(document.createElement("div")).addClass("meter-top").css({"background-color":this.settings.full,opacity:o(this.value),width:"100%",height:"100%","z-index":0}),c=$(document.createElement("div")).addClass("meter-bottom").css({position:"absolute",top:0,left:0,"background-color":this.settings.empty,opacity:1,width:100*this.value+"%",height:"100%","z-index":0}).append(u).appendTo(h);this.$element=h,this.$bars={top:u,bottom:c},this.$label=g,g.css("font-size",parseInt(h.css("height"),10)<parseInt($(".passage").css("font-size"),10)?h.css("height"):$(".passage").css("font-size")),g.css("line-height",h.css("height"))}Object.assign(l,{_list:new Map,is:function(t){return t instanceof l},has:function(t){return l._list.has(t)&&l.is(l._list.get(t))},get:function(t){return l.has(t)?l._list.get(t):null},del:function(t){l.has(t)&&l._list.delete(t)},add:function(t,s,i){if(!l.has(t)||e){Object.assign(s,{id:t});var n=new l(s,i);return l._list.set(t,n),n}console.error('Meter "'+t+'" already exists.')},_emit:function(t,e){l.is(t)&&t.$element.trigger({type:":"+e,meter:t})}}),Object.assign(l.prototype,{constructor:l,_label:function(t){var e=this;function s(){e.$label.empty().wiki(e.settings.label),e.$label.css("font-size",parseInt(e.$element.css("height"),10)<parseInt(e.$element.parent().css("font-size"),10)?e.$element.css("height"):e.$element.parent().css("font-size")),e.$label.css("line-height",e.$element.css("height"))}return t?setTimeout(s,Engine.minDomActionDelay):s(),this},_width:function(){var t=this;return this.$bars.bottom.animate({width:100*this.value+"%"},this.settings.animate,this.settings.easing,(function(){l._emit(t,"meter-animation-complete")})),this},_color:function(){return this.$bars.top.animate({opacity:o(this.value)},this.settings.animate,this.settings.easing),this},animate:function(){return l._emit(this,"meter-animation-start"),this._color()._width()._label()},val:function(t){return void 0!==t&&(t=Number(t),Number.isNaN(t)&&(t=1),t=Math.clamp(t,0,1),this.value=t,this.animate()),this.value},options:function(t){return t&&"object"==typeof t&&Object.assign(this.settings,t),this.settings},unwrap:function(){return this.$element[0]},place:function(t,e){var s=$(document.createElement("span"));return t instanceof jQuery||(t=$(t)),t[0]||console.warn("meter#place() -> no valid target"),e&&"object"==typeof e&&(e.classes&&(Array.isArray(e.classes)||"string"==typeof e.classes)&&s.addClass(e.classes),e.attr&&"object"==typeof e.attr&&s.attr(e.attr)),t.append(s.append(this.$element)),this._label(!0),this},on:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.on(t,e),this):this},one:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.one(t,e),this):this},off:function(t){return t=t&&"string"==typeof t&&t.trim()?t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "):".userland",this.$element.off(t),this},click:function(t,e){return this.$element.ariaClick(t,e),this},clone:function(){return new l(this.settings,this.value)},toJSON:function(){return JSON.reviveWrapper("new setup.Meter("+JSON.stringify(this.settings)+", "+this.value+")")}}),setup.Meter=l,t&&(window.Meter=window.Meter||l),Macro.add("newmeter",{tags:["colors","sizing","animation","label"],handler:function(){if(State.length>0&&!s)return this.error("The `<<newmeter>>` macro must be called in your `StoryInit` special passage. Seriously. No excuses. --Love, Chapel");if(this.args.length<1)return this.error("The `<<newmeter>>` macro requires at least one argument: a meter name.");var t=this.args[0],i=null,n=null,r=null,a=null;if("string"!=typeof t)return this.error("Invalid meter name.");if(t=t.trim(),l.has(t)&&!e)return this.error('Cannot clobber the existing meter "'+t+'".');this.payload.length&&(i=this.payload.find((function(t){return"colors"===t.name})),n=this.payload.find((function(t){return"sizing"===t.name})),r=this.payload.find((function(t){return"animation"===t.name})),a=this.payload.find((function(t){return"label"===t.name})));var o={};if(i){if(!i.args.length)return this.error("No arguments passed to the `<<colors>>` tag.");switch(i.args.length){case 1:o.empty=i.args[0],o.full="transparent";break;case 2:o.full=i.args[0],o.empty=i.args[1];break;default:o.full=i.args[0],o.empty=i.args[1],o.back=i.args[2]}}if(n){if(!n.args.length)return this.error("No arguments passed to the `<<sizing>>` tag.");o.width=n.args[0],n.args[1]&&(o.height=n.args[1])}if(r){if(!r.args.length)return this.error("No arguments passed to the `<<animation>>` tag.");if("boolean"!=typeof r.args[0]||r.args[0]){if("string"!=typeof r.args[0])return this.error("The argument to the `<<animation>>` tag should be `true`, `false`, or a valid CSS time value.");o.animate=Util.fromCssTime(r.args[0])}else o.animate=0;r.args[1]&&["swing","linear"].includes(r.args[1])&&(o.easing=r.args[1])}if(a){var h=a.args[0];if(!h||"string"!=typeof h)return this.error("The labelText argument for the `<<label>>` tag is required.");o.label=h.trim(),a.args[1]&&"string"==typeof a.args[1]&&(o.text=a.args[1]),a.args[2]&&"string"==typeof a.args[2]&&(o.align=a.args[2])}l.add(t,o,this.args[1])}}),Macro.add("showmeter",{handler:function(){if(this.args.length<1)return this.error("This macro requires at least one argument: the meter's name.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');"number"==typeof this.args[1]&&e.val(this.args[1]),e.place(this.output,{classes:"macro-"+this.name,attr:{id:"meter-"+Util.slugify(t)}})}}),Macro.add("updatemeter",{handler:function(){if(this.args.length<2)return this.error("This macro requires two arguments: the meter's name and a value.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');e.val(this.args[1])}})}();
 // end meters.min.js
 /* twine-user-script #2: "UserScript" */
-</script><tw-tag name="Q3" color="green"></tw-tag><tw-tag name="Q4" color="green"></tw-tag><tw-tag name="Main" color="blue"></tw-tag><tw-tag name="EndE" color="orange"></tw-tag><tw-tag name="EndStay" color="red"></tw-tag><tw-tag name="StoryInit" color="orange"></tw-tag><tw-tag name="EndUnhappy" color="red"></tw-tag><tw-tag name="Q1" color="green"></tw-tag><tw-tag name="Q2" color="green"></tw-tag><tw-tag name="Widget" color="green"></tw-tag><tw-tag name="EndFired" color="red"></tw-tag><tw-tag name="EndPromo" color="red"></tw-tag><tw-tag name="nobr" color="purple"></tw-tag><tw-tag name="widget" color="orange"></tw-tag><tw-passagedata pid="1" name="Burnout" tags="" position="925,525" size="100,100">&lt;&lt;set $slack to false&gt;&gt;
+</script><tw-tag name="Q4" color="green"></tw-tag><tw-tag name="EndE" color="orange"></tw-tag><tw-tag name="EndStay" color="red"></tw-tag><tw-tag name="Widget" color="green"></tw-tag><tw-tag name="widget" color="orange"></tw-tag><tw-tag name="Q3" color="green"></tw-tag><tw-tag name="Main" color="blue"></tw-tag><tw-tag name="EndFired" color="red"></tw-tag><tw-tag name="Q1" color="green"></tw-tag><tw-tag name="EndPromo" color="red"></tw-tag><tw-tag name="nobr" color="purple"></tw-tag><tw-tag name="StoryInit" color="orange"></tw-tag><tw-tag name="Q2" color="green"></tw-tag><tw-tag name="EndUnhappy" color="red"></tw-tag><tw-passagedata pid="1" name="Burnout" tags="" position="925,525" size="100,100">&lt;&lt;set $slack to false&gt;&gt;
 &lt;&lt;script&gt;&gt;
     UIBar.hide();
 &lt;&lt;/script&gt;&gt;
@@ -3976,7 +4084,7 @@ importScripts("/gsap.min.js");
 &lt;&lt;set $endingImage to &quot;/img/e-friends_share.png&quot;&gt;&gt;
 &lt;&lt;set $endingLabel to &quot;fri&quot;&gt;&gt;
 &lt;div id=&quot;transition&quot; class=&quot;bg bg--animation&quot;&gt;
-    &lt;p class=&quot;bg__text&quot;&gt;Evaluating your performance&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
+    &lt;p class=&quot;bg__text&quot;&gt;&lt;img class=&quot;evaluate&quot; src=&quot;img/evaluate.png&quot;/&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;bg bg--purple&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot; abs-wrapper abs-wrapper--ending&quot;&gt;
@@ -4015,7 +4123,7 @@ importScripts("/gsap.min.js");
 &lt;&lt;set $endingImage to &quot;/img/e-boss_share.png&quot;&gt;&gt;
 &lt;&lt;set $endingLabel to &quot;bos&quot;&gt;&gt;
 &lt;div id=&quot;transition&quot; class=&quot;bg bg--animation&quot;&gt;
-    &lt;p class=&quot;bg__text&quot;&gt;Evaluating your performance&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
+    &lt;p class=&quot;bg__text&quot;&gt;&lt;img class=&quot;evaluate&quot; src=&quot;img/evaluate.png&quot;/&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;bg bg--purple&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot; abs-wrapper abs-wrapper--ending&quot;&gt;
@@ -4054,7 +4162,7 @@ importScripts("/gsap.min.js");
 &lt;&lt;set $endingImage to &quot;/img/e-beloved_share.png&quot;&gt;&gt;
 &lt;&lt;set $endingLabel to &quot;bel&quot;&gt;&gt;
 &lt;div id=&quot;transition&quot; class=&quot;bg bg--animation&quot;&gt;
-    &lt;p class=&quot;bg__text&quot;&gt;Evaluating your performance&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
+    &lt;p class=&quot;bg__text&quot;&gt;&lt;img class=&quot;evaluate&quot; src=&quot;img/evaluate.png&quot;/&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;bg bg--blue&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot; abs-wrapper abs-wrapper--ending&quot;&gt;
@@ -4093,7 +4201,7 @@ importScripts("/gsap.min.js");
 &lt;&lt;set $endingImage to &quot;/img/e-out_share.png&quot;&gt;&gt;
 &lt;&lt;set $endingLabel to &quot;out&quot;&gt;&gt;
 &lt;div id=&quot;transition&quot; class=&quot;bg bg--animation&quot;&gt;
-    &lt;p class=&quot;bg__text&quot;&gt;Evaluating your performance&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
+    &lt;p class=&quot;bg__text&quot;&gt;&lt;img class=&quot;evaluate&quot; src=&quot;img/evaluate.png&quot;/&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;bg bg--blue&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot; abs-wrapper abs-wrapper--ending&quot;&gt;
@@ -4132,7 +4240,7 @@ importScripts("/gsap.min.js");
 &lt;&lt;set $endingImage to &quot;/img/e-violence_share.png&quot;&gt;&gt;
 &lt;&lt;set $endingLabel to &quot;vio&quot;&gt;&gt;
 &lt;div id=&quot;transition&quot; class=&quot;bg bg--animation&quot;&gt;
-    &lt;p class=&quot;bg__text&quot;&gt;Evaluating your performance&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
+    &lt;p class=&quot;bg__text&quot;&gt;&lt;img class=&quot;evaluate&quot; src=&quot;img/evaluate.png&quot;/&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;bg bg--red&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot; abs-wrapper abs-wrapper--ending&quot;&gt;
@@ -4171,7 +4279,7 @@ importScripts("/gsap.min.js");
 &lt;&lt;set $endingImage to &quot;/img/e-profit_share.png&quot;&gt;&gt;
 &lt;&lt;set $endingLabel to &quot;pro&quot;&gt;&gt;
 &lt;div id=&quot;transition&quot; class=&quot;bg bg--animation&quot;&gt;
-    &lt;p class=&quot;bg__text&quot;&gt;Evaluating your performance&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
+    &lt;p class=&quot;bg__text&quot;&gt;&lt;img class=&quot;evaluate&quot; src=&quot;img/evaluate.png&quot;/&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;bg bg--blue&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot; abs-wrapper abs-wrapper--ending&quot;&gt;
@@ -4209,6 +4317,9 @@ importScripts("/gsap.min.js");
 /* passage content */
 &lt;&lt;set $endingImage to &quot;/img/e-fire_share.png&quot;&gt;&gt;
 &lt;&lt;set $endingLabel to &quot;gre&quot;&gt;&gt;
+&lt;div id=&quot;transition&quot; class=&quot;bg bg--animation&quot;&gt;
+    &lt;p class=&quot;bg__text&quot;&gt;&lt;img class=&quot;evaluate&quot; src=&quot;img/evaluate.png&quot;/&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class=&quot;bg bg--purple&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot; abs-wrapper abs-wrapper--ending&quot;&gt;
     &lt;svg class=&quot;logo logo--ending logo--purple&quot; width=&quot;861&quot; height=&quot;86&quot; viewBox=&quot;0 0 861 86&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
@@ -4246,7 +4357,7 @@ importScripts("/gsap.min.js");
 &lt;&lt;set $endingImage to &quot;/img/e-thrones_share.png&quot;&gt;&gt;
 &lt;&lt;set $endingLabel to &quot;got&quot;&gt;&gt;
 &lt;div id=&quot;transition&quot; class=&quot;bg bg--animation&quot;&gt;
-    &lt;p class=&quot;bg__text&quot;&gt;Evaluating your performance&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
+    &lt;p class=&quot;bg__text&quot;&gt;&lt;img class=&quot;evaluate&quot; src=&quot;img/evaluate.png&quot;/&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;bg bg--red&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot; abs-wrapper abs-wrapper--ending&quot;&gt;
@@ -6990,79 +7101,79 @@ importScripts("/gsap.min.js");
         var endingLabel = State.getVar(&quot;$endingLabel&quot;).toString();
         var endingImage = State.getVar(&quot;$endingImage&quot;);
 
-        // var delayInMilliseconds = 10000; //1 second
+        var delayInMilliseconds = 10000; //10 second
 
-        // setTimeout(function() {
-        //     document.getElementById(&#39;about&#39;).classList.toggle(&#39;about-window--hidden&#39;);
-        //     document.getElementById(&#39;about&#39;).classList.toggle(&#39;about-window--over&#39;);
-        // }, delayInMilliseconds);
+        setTimeout(function() {
+            document.getElementById(&#39;about&#39;).classList.toggle(&#39;about-window--hidden&#39;);
+            document.getElementById(&#39;about&#39;).classList.toggle(&#39;about-window--over&#39;);
+        }, delayInMilliseconds);
 
-        // function isDesktop() {
-        //     const hasTouch = &#39;ontouchstart&#39; in window || navigator.maxTouchPoints &gt; 0;
-        //     const isLargeScreen = window.innerWidth &gt; 1200;
-        //     return !hasTouch &amp;&amp; isLargeScreen;
-        // }
-        // if (isDesktop()) {
-        //     let screensaverTimer;
-        //     let screensaverInterval;
+        function isDesktop() {
+            const hasTouch = &#39;ontouchstart&#39; in window || navigator.maxTouchPoints &gt; 0;
+            const isLargeScreen = window.innerWidth &gt; 1200;
+            return !hasTouch &amp;&amp; isLargeScreen;
+        }
+        if (isDesktop()) {
+            let screensaverTimer;
+            let screensaverInterval;
 
-        //     const idleTime = 10000; // 5 seconds
-        //     const imageDisplayInterval = 3000; // 2 second between images
-        //     const images = [
-        //         &#39;/img/msg1.png&#39;,
-        //         &#39;/img/msg2.png&#39;,
-        //         &#39;/img/msg3.png&#39;,
-        //         &#39;/img/msg4.png&#39;,
-        //         &#39;/img/msg5.png&#39;,
-        //         &#39;/img/msg6.png&#39;,
-        //         &#39;/img/msg7.png&#39;
-        //     ];
+            const idleTime = 15000; // 15 seconds
+            const imageDisplayInterval = 5000; // 5 second between images
+            const images = [
+                &#39;/img/msg1.png&#39;,
+                &#39;/img/msg2.png&#39;,
+                &#39;/img/msg3.png&#39;,
+                &#39;/img/msg4.png&#39;,
+                &#39;/img/msg5.png&#39;,
+                &#39;/img/msg6.png&#39;,
+                &#39;/img/msg7.png&#39;
+            ];
             
-        //     // Start the screensaver timer
-        //     function resetScreensaverTimer() {
-        //         clearTimeout(screensaverTimer);
-        //         removeImages();
-        //         screensaverTimer = setTimeout(startScreensaver, idleTime);
-        //     }
+            // Start the screensaver timer
+            function resetScreensaverTimer() {
+                clearTimeout(screensaverTimer);
+                removeImages();
+                screensaverTimer = setTimeout(startScreensaver, idleTime);
+            }
 
-        //     // Start displaying images one by one at intervals
-        //     function startScreensaver() {
-        //         let imageIndex = 0;
-        //         screensaverInterval = setInterval(() =&gt; {
-        //             if (imageIndex &gt;= images.length) {
-        //                 clearInterval(screensaverInterval); // Stop when all images have been displayed
-        //                 return;
-        //             }
-        //             displayImage(images[imageIndex]);
-        //             imageIndex++;
-        //         }, imageDisplayInterval);
-        //     }
+            // Start displaying images one by one at intervals
+            function startScreensaver() {
+                let imageIndex = 0;
+                screensaverInterval = setInterval(() =&gt; {
+                    if (imageIndex &gt;= images.length) {
+                        clearInterval(screensaverInterval); // Stop when all images have been displayed
+                        return;
+                    }
+                    displayImage(images[imageIndex]);
+                    imageIndex++;
+                }, imageDisplayInterval);
+            }
 
-        //     // Show a single image at a random position
-        //     function displayImage(src) {
-        //         let img = document.createElement(&#39;img&#39;);
-        //         img.src = src;
-        //         img.classList.add(&#39;screensaver-popup&#39;);
-        //         img.style.top = `${Math.random() * 70}vh`;
-        //         img.style.left = `${Math.random() * 70}vw`;
-        //         img.style.opacity = &#39;1&#39;;
-        //         document.body.appendChild(img);
-        //     }
+            // Show a single image at a random position
+            function displayImage(src) {
+                let img = document.createElement(&#39;img&#39;);
+                img.src = src;
+                img.classList.add(&#39;screensaver-popup&#39;);
+                img.style.top = `${Math.random() * 70}vh`;
+                img.style.left = `${Math.random() * 70}vw`;
+                img.style.opacity = &#39;1&#39;;
+                document.body.appendChild(img);
+            }
 
-        //     // Remove all screensaver images
-        //     function removeImages() {
-        //         clearInterval(screensaverInterval); // Clear interval in case it’s still running
-        //         document.querySelectorAll(&#39;.screensaver-popup&#39;).forEach(img =&gt; img.remove());
-        //     }
+            // Remove all screensaver images
+            function removeImages() {
+                clearInterval(screensaverInterval); // Clear interval in case it’s still running
+                document.querySelectorAll(&#39;.screensaver-popup&#39;).forEach(img =&gt; img.remove());
+            }
 
-        //     // Reset screensaver timer on user activity
-        //     [&#39;mousemove&#39;, &#39;keypress&#39;, &#39;scroll&#39;].forEach(event =&gt; {
-        //         window.addEventListener(event, resetScreensaverTimer);
-        //     });
+            // Reset screensaver timer on user activity
+            [&#39;mousemove&#39;, &#39;keypress&#39;, &#39;scroll&#39;].forEach(event =&gt; {
+                window.addEventListener(event, resetScreensaverTimer);
+            });
 
-        //     // Initialize screensaver timer
-        //     resetScreensaverTimer();
-        // }
+            // Initialize screensaver timer
+            resetScreensaverTimer();
+        }
     }
 
     // Function to fetch the image blob
@@ -7192,6 +7303,7 @@ importScripts("/gsap.min.js");
 &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="96" name="PassageHeader" tags="" position="725,1225" size="100,100">&lt;div id=&quot;menu-overlay&quot; class=&quot;menu-overlay menu-overlay--hidden&quot;&gt;
     &lt;ul id=&quot;mobile-menu&quot; class=&quot;mobile-menu&quot;&gt;
         &lt;li id=&quot;about-mobile&quot; class=&quot;mobile-menu__option&quot;&gt;&lt;img src=&quot;img/about.png&quot; /&gt;Who Made This?&lt;/li&gt;
+        &lt;li id=&quot;tut-mobile&quot; class=&quot;mobile-menu__option&quot;&gt;&lt;img src=&quot;img/tutorial.png&quot; /&gt;How to Play&lt;/li&gt;
         &lt;li id=&quot;quit-mobile&quot; class=&quot;mobile-menu__option&quot;&gt;&lt;img src=&quot;img/quit.png&quot; /&gt;Quit&lt;/li&gt;
     &lt;/ul&gt;
 &lt;/div&gt;
@@ -7213,6 +7325,23 @@ importScripts("/gsap.min.js");
     &lt;/div&gt;
 &lt;/div&gt;
 
+&lt;div id=&quot;tut&quot; class=&quot;about-window about-window--hidden about-window--tut&quot;&gt;
+    &lt;div class=&quot;titlebar titlebar--float&quot;&gt;
+        &lt;img src=&quot;img/grip.svg&quot; class=&quot;titlebar__grip&quot;&gt;
+        &lt;p class=&quot;titlebar__text&quot;&gt;HOW TO PLAY&lt;/p&gt;
+        &lt;img src=&quot;img/grip.svg&quot; class=&quot;titlebar__grip&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;window-text&quot;&gt;
+        &lt;div class=&quot;window-text__scroll&quot;&gt;
+            &lt;h1 class=&quot;window-text__title&quot;&gt;EMPLOYEE HANDBOOK&lt;/h1&gt;
+            &lt;p class=&quot;window-text__copy&quot;&gt;You’re the latest exec hire at MEGA MULTINATIONAL. As a woman, you know a corporate job is never just about the work.&lt;/p&gt;
+            &lt;p class=&quot;window-text__copy&quot;&gt;&lt;mark&gt;LIKEABILITY&lt;/mark&gt; measures your standing at the firm. If it drops to zero, &lt;mark&gt;you will be fired&lt;/mark&gt;. &lt;mark&gt;WELL-BEING&lt;/mark&gt; reflects your stress levels. If it drops to zero, &lt;mark&gt;you will burn out.&lt;/mark&gt;&lt;/p&gt;
+            &lt;p class=&quot;window-text__copy&quot;&gt;You’ll face scenarios with no obvious solution. Do your best and learn just what kind of executive you really are.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div id=&quot;close-tut&quot; class=&quot;button&quot;&gt;&lt;a&gt;Close&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
 &lt;&lt;done&gt;&gt;
     &lt;&lt;script&gt;&gt;
         $(document).ready(function() {
@@ -7220,8 +7349,17 @@ importScripts("/gsap.min.js");
                 document.getElementById(&#39;about&#39;).classList.toggle(&#39;about-window--hidden&#39;);
                 document.getElementById(&#39;about&#39;).classList.remove(&#39;about-window--over&#39;);
             });
+            $(&quot;#close-tut&quot;).click(function(){
+                document.getElementById(&#39;tut&#39;).classList.toggle(&#39;about-window--hidden&#39;);
+                document.getElementById(&#39;tut&#39;).classList.remove(&#39;about-window--over&#39;);
+            });
             $(&quot;#about-mobile&quot;).click(function(){
                 document.getElementById(&#39;about&#39;).classList.toggle(&#39;about-window--hidden&#39;);
+                document.getElementById(&#39;menu-overlay&#39;).classList.toggle(&#39;menu-overlay--hidden&#39;);
+                document.getElementById(&#39;hamburger&#39;).src=&quot;img/menu.svg&quot;;
+            });
+            $(&quot;#tut-mobile&quot;).click(function(){
+                document.getElementById(&#39;tut&#39;).classList.toggle(&#39;about-window--hidden&#39;);
                 document.getElementById(&#39;menu-overlay&#39;).classList.toggle(&#39;menu-overlay--hidden&#39;);
                 document.getElementById(&#39;hamburger&#39;).src=&quot;img/menu.svg&quot;;
             });
@@ -7232,15 +7370,15 @@ importScripts("/gsap.min.js");
                 if(document.getElementById(&#39;scenario-area&#39;)) {
                     var tl = gsap.timeline();
                     tl.from(&quot;#scenario-area&quot;, {duration: 0.5, y: 25, ease: &quot;back.out&quot;}, 0);
-                    tl.to(&quot;#quarter&quot;, {duration: 0.25, opacity: 0, y: -25, ease: &quot;back.out&quot;}, 1.5);
+                    tl.to(&quot;#quarter&quot;, {duration: 0.25, opacity: 0, y: -25, ease: &quot;back.out&quot;}, 1.25);
                 }
                 if(document.getElementById(&#39;transition&#39;)) {
                     var tl = gsap.timeline();
-                    tl.from(&quot;.bg__text&quot;, {duration: 1.5, y: 100, ease: &quot;back.out&quot;});
-                    tl.from(&quot;.dot&quot;, {delay: 0.5, duration: 0.25, stagger:{ each:0.25, from:&quot;start&quot;}, opacity: 0}, 0);
+                    tl.from(&quot;.bg__text&quot;, {duration: 2, y: 100, ease: &quot;back.out&quot;});
+                    tl.from(&quot;.dot&quot;, {delay: 0.5, duration: 0.1, stagger:{ each:0.5, from:&quot;start&quot;}, opacity: 0}, 0);
                     tl.to(&quot;#transition&quot;, {duration: 0.5, opacity: 0, visibility: &quot;hidden&quot;, ease: &quot;back.out&quot;});
                     tl.from(&quot;.rel-wrapper&quot;, {duration: 0.5, y: 25, ease: &quot;back.out&quot;}, 1.5);
-                    tl.from(&quot;.flash&quot;, {fill: &quot;#ffffff&quot;, duration: 0.1, yoyo: true, repeat: 8, ease: &quot;none&quot;}, 1.5);
+                    tl.from(&quot;.flash&quot;, {fill: &quot;#ffffff&quot;, duration: 0.1, yoyo: true, repeat: 8, ease: &quot;none&quot;}, 2.25);
                 }
 
                 let text = document.querySelector(&quot;#quit-btn&quot;);
@@ -7284,9 +7422,15 @@ importScripts("/gsap.min.js");
 &lt;/div&gt;
 
 &lt;div id=&quot;desktop&quot; class=&quot;icon-view&quot;&gt;
-    &lt;div id=&quot;about-btn&quot; class=&quot;icon&quot;&gt;
-        &lt;img class=&quot;icon__img&quot; src=&quot;img/about.png&quot; /&gt;
-        &lt;p class=&quot;icon__label&quot;&gt;WHO MADE THIS?&lt;/p&gt;
+    &lt;div class=&quot;icon-group&quot;&gt;
+        &lt;div id=&quot;tut-btn&quot; class=&quot;icon&quot;&gt;
+            &lt;img class=&quot;icon__img&quot; src=&quot;img/tutorial.png&quot; /&gt;
+            &lt;p class=&quot;icon__label&quot;&gt;HOW TO PLAY&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div id=&quot;about-btn&quot; class=&quot;icon&quot;&gt;
+            &lt;img class=&quot;icon__img&quot; src=&quot;img/about.png&quot; /&gt;
+            &lt;p class=&quot;icon__label&quot;&gt;WHO MADE THIS?&lt;/p&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
     &lt;div id=&quot;quit-btn&quot; class=&quot;icon&quot;&gt;
         &lt;img class=&quot;icon__img&quot; src=&quot;img/quit.png&quot; /&gt;
@@ -7323,12 +7467,14 @@ importScripts("/gsap.min.js");
             $(&quot;#about-btn&quot;).click(function() {
                 $.wiki(&quot;&lt;&lt;audio &#39;click&#39; volume 2 play&gt;&gt;&quot;);
                 document.getElementById(&#39;about&#39;).classList.toggle(&#39;about-window--hidden&#39;);
-                console.log(&quot;meme&quot;);
+            });
+            $(&quot;#tut-btn&quot;).click(function() {
+                $.wiki(&quot;&lt;&lt;audio &#39;click&#39; volume 2 play&gt;&gt;&quot;);
+                document.getElementById(&#39;tut&#39;).classList.toggle(&#39;about-window--hidden&#39;);
             });
             $(&quot;#about-lnk&quot;).click(function() {
                 $.wiki(&quot;&lt;&lt;audio &#39;click&#39; volume 2 play&gt;&gt;&quot;);
                 document.getElementById(&#39;about&#39;).classList.toggle(&#39;about-window--hidden&#39;);
-                console.log(&quot;meme&quot;);
             });
         });
     &lt;&lt;/script&gt;&gt;
@@ -7672,8 +7818,9 @@ importScripts("/gsap.min.js");
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="111" name="SharingModule" tags="widget" position="100,1475" size="100,100">&lt;&lt;widget &quot;SharingModule&quot;&gt;&gt;
     &lt;div class=&quot;btn-area btn-area--ending&quot;&gt;
         &lt;div class=&quot;button button--ending button--sharing&quot; id=&quot;sharing&quot;&gt;&lt;a&gt;Share&lt;/a&gt;&lt;/div&gt;
-        &lt;div class=&quot;button&quot; id=&quot;clip&quot;&gt;&lt;a&gt;Download Image&lt;/a&gt;&lt;/div&gt;
+        &lt;div class=&quot;button button--preview&quot; id=&quot;clip&quot;&gt;&lt;a&gt;&lt;span&gt;&lt;img @src=&quot;$endingImage&quot; height=&quot;200px&quot;/&gt;&lt;/span&gt;Download Image&lt;/a&gt;&lt;/div&gt;
     &lt;/div&gt;
+    
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="112" name="TitleBar" tags="widget" position="225,1475" size="100,100">&lt;&lt;widget &quot;TitleBar&quot;&gt;&gt;
     &lt;div class=&quot;titlebar&quot;&gt;
         &lt;img src=&quot;img/grip.svg&quot; class=&quot;titlebar__grip&quot;/&gt;

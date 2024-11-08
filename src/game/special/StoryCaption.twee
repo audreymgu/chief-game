@@ -7,9 +7,15 @@
 </div>
 
 <div id="desktop" class="icon-view">
-    <div id="about-btn" class="icon">
-        <img class="icon__img" src="img/about.png" />
-        <p class="icon__label">WHO MADE THIS?</p>
+    <div class="icon-group">
+        <div id="tut-btn" class="icon">
+            <img class="icon__img" src="img/tutorial.png" />
+            <p class="icon__label">HOW TO PLAY</p>
+        </div>
+        <div id="about-btn" class="icon">
+            <img class="icon__img" src="img/about.png" />
+            <p class="icon__label">WHO MADE THIS?</p>
+        </div>
     </div>
     <div id="quit-btn" class="icon">
         <img class="icon__img" src="img/quit.png" />
@@ -46,12 +52,14 @@
             $("#about-btn").click(function() {
                 $.wiki("<<audio 'click' volume 2 play>>");
                 document.getElementById('about').classList.toggle('about-window--hidden');
-                console.log("meme");
+            });
+            $("#tut-btn").click(function() {
+                $.wiki("<<audio 'click' volume 2 play>>");
+                document.getElementById('tut').classList.toggle('about-window--hidden');
             });
             $("#about-lnk").click(function() {
                 $.wiki("<<audio 'click' volume 2 play>>");
                 document.getElementById('about').classList.toggle('about-window--hidden');
-                console.log("meme");
             });
         });
     <</script>>

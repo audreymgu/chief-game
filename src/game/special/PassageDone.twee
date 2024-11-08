@@ -4,79 +4,79 @@
         var endingLabel = State.getVar("$endingLabel").toString();
         var endingImage = State.getVar("$endingImage");
 
-        // var delayInMilliseconds = 10000; //1 second
+        var delayInMilliseconds = 10000; //10 second
 
-        // setTimeout(function() {
-        //     document.getElementById('about').classList.toggle('about-window--hidden');
-        //     document.getElementById('about').classList.toggle('about-window--over');
-        // }, delayInMilliseconds);
+        setTimeout(function() {
+            document.getElementById('about').classList.toggle('about-window--hidden');
+            document.getElementById('about').classList.toggle('about-window--over');
+        }, delayInMilliseconds);
 
-        // function isDesktop() {
-        //     const hasTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-        //     const isLargeScreen = window.innerWidth > 1200;
-        //     return !hasTouch && isLargeScreen;
-        // }
-        // if (isDesktop()) {
-        //     let screensaverTimer;
-        //     let screensaverInterval;
+        function isDesktop() {
+            const hasTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+            const isLargeScreen = window.innerWidth > 1200;
+            return !hasTouch && isLargeScreen;
+        }
+        if (isDesktop()) {
+            let screensaverTimer;
+            let screensaverInterval;
 
-        //     const idleTime = 10000; // 5 seconds
-        //     const imageDisplayInterval = 3000; // 2 second between images
-        //     const images = [
-        //         '/img/msg1.png',
-        //         '/img/msg2.png',
-        //         '/img/msg3.png',
-        //         '/img/msg4.png',
-        //         '/img/msg5.png',
-        //         '/img/msg6.png',
-        //         '/img/msg7.png'
-        //     ];
+            const idleTime = 15000; // 15 seconds
+            const imageDisplayInterval = 5000; // 5 second between images
+            const images = [
+                '/img/msg1.png',
+                '/img/msg2.png',
+                '/img/msg3.png',
+                '/img/msg4.png',
+                '/img/msg5.png',
+                '/img/msg6.png',
+                '/img/msg7.png'
+            ];
             
-        //     // Start the screensaver timer
-        //     function resetScreensaverTimer() {
-        //         clearTimeout(screensaverTimer);
-        //         removeImages();
-        //         screensaverTimer = setTimeout(startScreensaver, idleTime);
-        //     }
+            // Start the screensaver timer
+            function resetScreensaverTimer() {
+                clearTimeout(screensaverTimer);
+                removeImages();
+                screensaverTimer = setTimeout(startScreensaver, idleTime);
+            }
 
-        //     // Start displaying images one by one at intervals
-        //     function startScreensaver() {
-        //         let imageIndex = 0;
-        //         screensaverInterval = setInterval(() => {
-        //             if (imageIndex >= images.length) {
-        //                 clearInterval(screensaverInterval); // Stop when all images have been displayed
-        //                 return;
-        //             }
-        //             displayImage(images[imageIndex]);
-        //             imageIndex++;
-        //         }, imageDisplayInterval);
-        //     }
+            // Start displaying images one by one at intervals
+            function startScreensaver() {
+                let imageIndex = 0;
+                screensaverInterval = setInterval(() => {
+                    if (imageIndex >= images.length) {
+                        clearInterval(screensaverInterval); // Stop when all images have been displayed
+                        return;
+                    }
+                    displayImage(images[imageIndex]);
+                    imageIndex++;
+                }, imageDisplayInterval);
+            }
 
-        //     // Show a single image at a random position
-        //     function displayImage(src) {
-        //         let img = document.createElement('img');
-        //         img.src = src;
-        //         img.classList.add('screensaver-popup');
-        //         img.style.top = `${Math.random() * 70}vh`;
-        //         img.style.left = `${Math.random() * 70}vw`;
-        //         img.style.opacity = '1';
-        //         document.body.appendChild(img);
-        //     }
+            // Show a single image at a random position
+            function displayImage(src) {
+                let img = document.createElement('img');
+                img.src = src;
+                img.classList.add('screensaver-popup');
+                img.style.top = `${Math.random() * 70}vh`;
+                img.style.left = `${Math.random() * 70}vw`;
+                img.style.opacity = '1';
+                document.body.appendChild(img);
+            }
 
-        //     // Remove all screensaver images
-        //     function removeImages() {
-        //         clearInterval(screensaverInterval); // Clear interval in case it’s still running
-        //         document.querySelectorAll('.screensaver-popup').forEach(img => img.remove());
-        //     }
+            // Remove all screensaver images
+            function removeImages() {
+                clearInterval(screensaverInterval); // Clear interval in case it’s still running
+                document.querySelectorAll('.screensaver-popup').forEach(img => img.remove());
+            }
 
-        //     // Reset screensaver timer on user activity
-        //     ['mousemove', 'keypress', 'scroll'].forEach(event => {
-        //         window.addEventListener(event, resetScreensaverTimer);
-        //     });
+            // Reset screensaver timer on user activity
+            ['mousemove', 'keypress', 'scroll'].forEach(event => {
+                window.addEventListener(event, resetScreensaverTimer);
+            });
 
-        //     // Initialize screensaver timer
-        //     resetScreensaverTimer();
-        // }
+            // Initialize screensaver timer
+            resetScreensaverTimer();
+        }
     }
 
     // Function to fetch the image blob

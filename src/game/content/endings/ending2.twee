@@ -7,7 +7,7 @@
 <<set $endingImage to "/img/e-boss_share.png">>
 <<set $endingLabel to "bos">>
 <div id="transition" class="bg bg--animation">
-    <p class="bg__text">Evaluating your performance<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></p>
+    <p class="bg__text"><img class="evaluate" src="img/evaluate.png"/><span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></p>
 </div>
 <div class="bg bg--purple"></div>
 <div class=" abs-wrapper abs-wrapper--ending">

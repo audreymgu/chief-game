@@ -7,7 +7,7 @@
 <<set $endingImage to "/img/e-profit_share.png">>
 <<set $endingLabel to "pro">>
 <div id="transition" class="bg bg--animation">
-    <p class="bg__text">Evaluating your performance<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></p>
+    <p class="bg__text"><img class="evaluate" src="img/evaluate.png"/><span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></p>
 </div>
 <div class="bg bg--blue"></div>
 <div class=" abs-wrapper abs-wrapper--ending">

@@ -2,6 +2,7 @@
 <div id="menu-overlay" class="menu-overlay menu-overlay--hidden">
     <ul id="mobile-menu" class="mobile-menu">
         <li id="about-mobile" class="mobile-menu__option"><img src="img/about.png" />Who Made This?</li>
+        <li id="tut-mobile" class="mobile-menu__option"><img src="img/tutorial.png" />How to Play</li>
         <li id="quit-mobile" class="mobile-menu__option"><img src="img/quit.png" />Quit</li>
     </ul>
 </div>
@@ -23,6 +24,23 @@
     </div>
 </div>
 
+<div id="tut" class="about-window about-window--hidden about-window--tut">
+    <div class="titlebar titlebar--float">
+        <img src="img/grip.svg" class="titlebar__grip">
+        <p class="titlebar__text">HOW TO PLAY</p>
+        <img src="img/grip.svg" class="titlebar__grip">
+    </div>
+    <div class="window-text">
+        <div class="window-text__scroll">
+            <h1 class="window-text__title">EMPLOYEE HANDBOOK</h1>
+            <p class="window-text__copy">You’re the latest exec hire at MEGA MULTINATIONAL. As a woman, you know a corporate job is never just about the work.</p>
+            <p class="window-text__copy"><mark>LIKEABILITY</mark> measures your standing at the firm. If it drops to zero, <mark>you will be fired</mark>. <mark>WELL-BEING</mark> reflects your stress levels. If it drops to zero, <mark>you will burn out.</mark></p>
+            <p class="window-text__copy">You’ll face scenarios with no obvious solution. Do your best and learn just what kind of executive you really are.</p>
+        </div>
+        <div id="close-tut" class="button"><a>Close</a></div>
+    </div>
+</div>
+
 <<done>>
     <<script>>
         $(document).ready(function() {
@@ -30,8 +48,17 @@
                 document.getElementById('about').classList.toggle('about-window--hidden');
                 document.getElementById('about').classList.remove('about-window--over');
             });
+            $("#close-tut").click(function(){
+                document.getElementById('tut').classList.toggle('about-window--hidden');
+                document.getElementById('tut').classList.remove('about-window--over');
+            });
             $("#about-mobile").click(function(){
                 document.getElementById('about').classList.toggle('about-window--hidden');
+                document.getElementById('menu-overlay').classList.toggle('menu-overlay--hidden');
+                document.getElementById('hamburger').src="img/menu.svg";
+            });
+            $("#tut-mobile").click(function(){
+                document.getElementById('tut').classList.toggle('about-window--hidden');
                 document.getElementById('menu-overlay').classList.toggle('menu-overlay--hidden');
                 document.getElementById('hamburger').src="img/menu.svg";
             });
@@ -42,15 +69,15 @@
                 if(document.getElementById('scenario-area')) {
                     var tl = gsap.timeline();
                     tl.from("#scenario-area", {duration: 0.5, y: 25, ease: "back.out"}, 0);
-                    tl.to("#quarter", {duration: 0.25, opacity: 0, y: -25, ease: "back.out"}, 1.5);
+                    tl.to("#quarter", {duration: 0.25, opacity: 0, y: -25, ease: "back.out"}, 1.25);
                 }
                 if(document.getElementById('transition')) {
                     var tl = gsap.timeline();
-                    tl.from(".bg__text", {duration: 1.5, y: 100, ease: "back.out"});
-                    tl.from(".dot", {delay: 0.5, duration: 0.25, stagger:{ each:0.25, from:"start"}, opacity: 0}, 0);
+                    tl.from(".bg__text", {duration: 2, y: 100, ease: "back.out"});
+                    tl.from(".dot", {delay: 0.5, duration: 0.1, stagger:{ each:0.5, from:"start"}, opacity: 0}, 0);
                     tl.to("#transition", {duration: 0.5, opacity: 0, visibility: "hidden", ease: "back.out"});
                     tl.from(".rel-wrapper", {duration: 0.5, y: 25, ease: "back.out"}, 1.5);
-                    tl.from(".flash", {fill: "#ffffff", duration: 0.1, yoyo: true, repeat: 8, ease: "none"}, 1.5);
+                    tl.from(".flash", {fill: "#ffffff", duration: 0.1, yoyo: true, repeat: 8, ease: "none"}, 2.25);
                 }
 
                 let text = document.querySelector("#quit-btn");

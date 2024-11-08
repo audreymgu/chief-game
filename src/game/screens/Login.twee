@@ -36,11 +36,6 @@
 			}
 			document.getElementById('l-menu-overlay').classList.toggle('menu-overlay--hidden');        
 		});
-		$("#l-quit-mobile").click(function() {
-            $.wiki("<<timed 0.1s>><<goto 'QUIT'>><</timed>>");
-            document.getElementById('menu-overlay').classList.toggle('menu-overlay--hidden');
-            document.getElementById('hamburger').src="img/menu.svg";
-        });
 	});
 <</script>>
 
@@ -52,7 +47,6 @@
 <div id="l-menu-overlay" class="menu-overlay menu-overlay--hidden">
     <ul id="l-mobile-menu" class="mobile-menu">
         <li id="l-about-mobile" class="mobile-menu__option"><img src="img/about.png" />Who Made This?</li>
-        <li id="l-quit-mobile" class="mobile-menu__option"><img src="img/quit.png" />Quit</li>
     </ul>
 </div>
 <div id="l-about" class="about-window about-window--hidden">

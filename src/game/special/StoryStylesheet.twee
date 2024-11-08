@@ -960,7 +960,12 @@ h1 {
   border: 1px solid #2A2C41;
 }
 .button--preview a:hover span {
-  display: block;
+  display: none;
+}
+@media (min-width: 1200px) and (min-height: 850px) {
+  .button--preview a:hover span {
+    display: block;
+  }
 }
 
 .menu-bar {

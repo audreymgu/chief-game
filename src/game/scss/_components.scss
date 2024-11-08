@@ -597,7 +597,10 @@
         }
 
         & a:hover span {
-            display: block;
+            display: none;
+            @include breakpoint(desktop) {
+                display: block;
+            }
         }
     }
 }

@@ -69,8 +69,7 @@
                 if(document.getElementById('scenario-area')) {
                     var tl = gsap.timeline();
                     tl.from("#scenario-area", {duration: 0.5, y: 25, ease: "back.out"}, 0);
-                    tl.to("#quarter", {duration: 0.25, opacity: 0, y: -25, ease: "back.out"}, 1.25);
-                    tl.to("#quarter", {display:"none"});
+                    tl.to("#quarter", {duration: 0.25, opacity: 0, y: -25, ease: "back.out", display:"none"}, 1.25);
                 }
                 if(document.getElementById('transition')) {
                     var tl = gsap.timeline();

@@ -1,5 +1,9 @@
 /* title + metadata */
 :: Agitator {"position":"600,800","size":"100,100"}
+<<script>>
+    UIBar.show();
+    UIBar.unstow();
+<</script>>
 /* passage content */
 <<CalcResource "-1" "-2" "-1" "-1">>
 <<audio "bad" volume 0.5 play>>

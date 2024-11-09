@@ -1,5 +1,9 @@
 /* title + metadata */
 :: No feelings {"position":"600,800","size":"100,100"}
+<<script>>
+    UIBar.show();
+    UIBar.unstow();
+<</script>>
 <<CalcResource "0" "-1" "1" "0">>
 <<audio "bad" volume 0.5 play>>
 <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>

@@ -1,4 +1,8 @@
 :: Reply All [Q3] {"position":"600,675","size":"100,100"}
+<<script>>
+    UIBar.show();
+    UIBar.unstow();
+<</script>>
 /* handle quarter */
 <<script>>
     $(document).ready(function() {

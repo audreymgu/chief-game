@@ -12,9 +12,6 @@
         if(quarterCheck) {
             document.getElementById('quarter').classList.toggle('quarter-indicator--hidden');
         }
-        $("#quarter-close").click(function(){
-            document.getElementById('quarter').classList.toggle('quarter-indicator--hidden');
-        });
     });
 <</script>>
 <<set $remaining to 3>>
@@ -31,12 +28,6 @@
                 <p class="calendar__heading">Now starting</p>
                 <p class="calendar__quarter">Q$quarter</p>
             </div>
-            <div class="tracker">
-                <div class="tracker-module">
-                    <p class="tracker-module__number">$remaining</p>
-                    <p class="tracker-module__label">remaining</p>
-                </div>
-            </div>
         </div>
         <div class="content" id="scenario-area">
             <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
@@ -49,7 +40,7 @@
                 </div>
             </div>
             <<ChoiceModule
-                "F it we ball"
+                "F it, we ball"
                 "Your plate is full"
                 "s|Volunteer your rival|Deteriorate|Turn around"
             >>

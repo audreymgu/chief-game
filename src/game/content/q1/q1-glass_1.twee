@@ -1,5 +1,5 @@
 /* title + metadata */
-:: F it we ball {"position":"600,800","size":"100,100"}
+:: F it, we ball {"position":"600,800","size":"100,100"}
 <<script>>
     UIBar.show();
     UIBar.unstow();
@@ -19,7 +19,7 @@
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">Who cares if you’re being set up to fail? You’re not going to let that happen. Get in, loser, we’re going to the cover of Forbes.</p>
+            <p class="scenario__desc scenario__desc--alert">Who cares if you’re being set up to fail? You’re not going to let that happen. Get in, loser, we’re going on the cover of Forbes.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

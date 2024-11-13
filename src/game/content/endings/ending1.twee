@@ -18,7 +18,10 @@
         <div class="content content--ending">
             <<TitleBar "👏👏 NOT HERE TO MAKE FRIENDS 👏👏">>
             <div class="ending">
-                <img class="ending__img" src="img/e-friends.jpg"/>
+                <div class="img-box">
+                    <img class="img-box__img" src="img/e-friends.jpg"/>
+                    <img class="img-box__img img-box__img--hover" @src="$endingImage"/>
+                </div>
                 <div class="ending__text">
                     <h1 class="ending__title">$user,You’re Not Here to Make Friends</h1>
                     <p class="ending__desc">You’re efficient, strategic, and you’ve kept distractions at bay. You’d prefer coworkers not bother you, but if they must, they need to make it actionable. Don’t expect an invite to happy hour.</p>

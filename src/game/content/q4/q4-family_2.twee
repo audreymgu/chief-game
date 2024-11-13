@@ -1,5 +1,5 @@
 /* title + metadata */
-:: Get candid {"position":"600,800","size":"100,100"}
+:: Get cagey {"position":"600,800","size":"100,100"}
 <<script>>
     UIBar.show();
     UIBar.unstow();
@@ -12,14 +12,14 @@
     <img class="scenario__img" src="img/q4-family.jpg"/>
     <div class="scenario__text">
         <h1 class="scenario__title">Family Planning</h1>
-        <p class="scenario__desc">At the EOY forecast, the COO casually asks if you'll be “on leave” soon. While staring directly at your uterus.</p>
+        <p class="scenario__desc">At the EOY forecasting meeting, the COO casually asks if you expect to be “on leave” in the next 18 months — while staring directly at your uterus.</p>
     </div>
 </div>
 <div class="alert">
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">You respond with a simple “maybe” and leave no room for follow-ups. Honesty is the best policy, right?</p>
+            <p class="scenario__desc scenario__desc--alert">You respond with a simple “maybe” and leave no room for follow-ups. Equivocation is the best policy, right? </p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

@@ -12,7 +12,7 @@
     <img class="scenario__img" src="img/q1-cold.jpg"/>
     <div class="scenario__text">
         <h1 class="scenario__title">You're Fuckin' Cold</h1>
-        <p class="scenario__desc">The building is heated like a Victorian prison. Your besuited male colleagues don’t seem to notice.</p>
+        <p class="scenario__desc">The building is heated like a Victorian prison. Your besuited colleagues don’t seem to notice.</p>
     </div>
 </div>
 <div class="alert">

@@ -786,7 +786,7 @@ h1 {
   .ending {
     border-width: 0 1px 1px 1px;
     flex-direction: row;
-    max-height: 325px;
+    max-height: 330px;
     padding: 8px;
     overflow-y: auto;
   }
@@ -850,22 +850,6 @@ h1 {
   height: min-content;
   max-width: 90%;
 }
-.ending__img {
-  width: 100%;
-  min-height: 150px;
-  max-height: 500px;
-  object-fit: cover;
-  border: 1px solid #2A2C41;
-  border-width: 0 0 1px 0;
-  align-self: start;
-}
-@media (min-width: 1200px) and (min-height: 850px) {
-  .ending__img {
-    height: unset;
-    width: 275px;
-    border-width: 1px;
-  }
-}
 .ending__icon {
   height: 64px;
   align-self: center;
@@ -887,6 +871,62 @@ h1 {
   .ending__replay a {
     font-size: 16px;
   }
+}
+.ending__img {
+  width: 100%;
+  min-height: 150px;
+  max-height: 500px;
+  object-fit: cover;
+  border: 1px solid #2A2C41;
+  border-width: 0 0 1px 0;
+  align-self: start;
+}
+@media (min-width: 1200px) and (min-height: 850px) {
+  .ending__img {
+    height: unset;
+    width: 275px;
+    border-width: 1px;
+  }
+}
+.ending__img--hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+
+.img-box {
+  position: relative;
+}
+@media (min-width: 1200px) and (min-height: 850px) {
+  .img-box {
+    height: 278px;
+  }
+}
+.img-box__img {
+  width: 100%;
+  min-height: 150px;
+  max-height: 500px;
+  object-fit: cover;
+  border: 1px solid #2A2C41;
+  border-width: 0 0 1px 0;
+  align-self: start;
+}
+@media (min-width: 1200px) and (min-height: 850px) {
+  .img-box__img {
+    height: unset;
+    width: 275px;
+    border-width: 1px;
+  }
+}
+.img-box__img--hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+.img-box:hover .img-box__img--hover {
+  display: block;
 }
 
 .btn-area {
@@ -2715,7 +2755,7 @@ h1 {
   .ending {
     border-width: 0 1px 1px 1px;
     flex-direction: row;
-    max-height: 325px;
+    max-height: 330px;
     padding: 8px;
     overflow-y: auto;
   }
@@ -2779,22 +2819,6 @@ h1 {
   height: min-content;
   max-width: 90%;
 }
-.ending__img {
-  width: 100%;
-  min-height: 150px;
-  max-height: 500px;
-  object-fit: cover;
-  border: 1px solid #2A2C41;
-  border-width: 0 0 1px 0;
-  align-self: start;
-}
-@media (min-width: 1200px) and (min-height: 850px) {
-  .ending__img {
-    height: unset;
-    width: 275px;
-    border-width: 1px;
-  }
-}
 .ending__icon {
   height: 64px;
   align-self: center;
@@ -2816,6 +2840,62 @@ h1 {
   .ending__replay a {
     font-size: 16px;
   }
+}
+.ending__img {
+  width: 100%;
+  min-height: 150px;
+  max-height: 500px;
+  object-fit: cover;
+  border: 1px solid #2A2C41;
+  border-width: 0 0 1px 0;
+  align-self: start;
+}
+@media (min-width: 1200px) and (min-height: 850px) {
+  .ending__img {
+    height: unset;
+    width: 275px;
+    border-width: 1px;
+  }
+}
+.ending__img--hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+
+.img-box {
+  position: relative;
+}
+@media (min-width: 1200px) and (min-height: 850px) {
+  .img-box {
+    height: 278px;
+  }
+}
+.img-box__img {
+  width: 100%;
+  min-height: 150px;
+  max-height: 500px;
+  object-fit: cover;
+  border: 1px solid #2A2C41;
+  border-width: 0 0 1px 0;
+  align-self: start;
+}
+@media (min-width: 1200px) and (min-height: 850px) {
+  .img-box__img {
+    height: unset;
+    width: 275px;
+    border-width: 1px;
+  }
+}
+.img-box__img--hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+.img-box:hover .img-box__img--hover {
+  display: block;
 }
 
 .btn-area {
@@ -3990,7 +4070,7 @@ importScripts("/gsap.min.js");
 ;!function(){"use strict";var t=!0,e=!1,s=!1,i={full:"#2ECC40",empty:"#FF4136",back:"#DDDDDD",height:"12px",width:"180px",animate:400,easing:"swing",text:"#111111",label:"",align:"center"},n=["center","left","right"],r=["swing","linear"];function a(t,e){return t&&"string"==typeof t&&(t=t.toLowerCase().trim())?t:e||""}function o(t){return t<.5?2*t*t:(4-2*t)*t-1}function l(t,e){if(!(this instanceof l))return new l(t,e);var s=clone(i);this.settings=Object.assign(s,t),this.settings.align=a(this.settings.align),this.settings.easing=a(this.settings.easing),n.includes(this.settings.align)||(this.settings.align="center"),r.includes(this.settings.easing)||(this.settings.easing="swing"),e=Number(e),Number.isNaN(e)&&(e=1),e=Math.clamp(e,0,1),this.value=e;var h=$(document.createElement("div")).addClass("chapel-meter").attr({"data-val":e,"data-label":this.settings.label}).css({position:"relative","background-color":this.settings.back,height:this.settings.height,width:this.settings.width,overflow:"hidden"}),g=$(document.createElement("div")).addClass("meter-label").css({top:0,right:0,"font-size":this.settings.height,"font-weight":"bold","line-height":"100%",width:"100%",height:"100%","vertical-align":"middle","text-align":this.settings.align,color:this.settings.text,"z-index":1,position:"relative",bottom:"100%"}).wiki(this.settings.label).appendTo(h),u=$(document.createElement("div")).addClass("meter-top").css({"background-color":this.settings.full,opacity:o(this.value),width:"100%",height:"100%","z-index":0}),c=$(document.createElement("div")).addClass("meter-bottom").css({position:"absolute",top:0,left:0,"background-color":this.settings.empty,opacity:1,width:100*this.value+"%",height:"100%","z-index":0}).append(u).appendTo(h);this.$element=h,this.$bars={top:u,bottom:c},this.$label=g,g.css("font-size",parseInt(h.css("height"),10)<parseInt($(".passage").css("font-size"),10)?h.css("height"):$(".passage").css("font-size")),g.css("line-height",h.css("height"))}Object.assign(l,{_list:new Map,is:function(t){return t instanceof l},has:function(t){return l._list.has(t)&&l.is(l._list.get(t))},get:function(t){return l.has(t)?l._list.get(t):null},del:function(t){l.has(t)&&l._list.delete(t)},add:function(t,s,i){if(!l.has(t)||e){Object.assign(s,{id:t});var n=new l(s,i);return l._list.set(t,n),n}console.error('Meter "'+t+'" already exists.')},_emit:function(t,e){l.is(t)&&t.$element.trigger({type:":"+e,meter:t})}}),Object.assign(l.prototype,{constructor:l,_label:function(t){var e=this;function s(){e.$label.empty().wiki(e.settings.label),e.$label.css("font-size",parseInt(e.$element.css("height"),10)<parseInt(e.$element.parent().css("font-size"),10)?e.$element.css("height"):e.$element.parent().css("font-size")),e.$label.css("line-height",e.$element.css("height"))}return t?setTimeout(s,Engine.minDomActionDelay):s(),this},_width:function(){var t=this;return this.$bars.bottom.animate({width:100*this.value+"%"},this.settings.animate,this.settings.easing,(function(){l._emit(t,"meter-animation-complete")})),this},_color:function(){return this.$bars.top.animate({opacity:o(this.value)},this.settings.animate,this.settings.easing),this},animate:function(){return l._emit(this,"meter-animation-start"),this._color()._width()._label()},val:function(t){return void 0!==t&&(t=Number(t),Number.isNaN(t)&&(t=1),t=Math.clamp(t,0,1),this.value=t,this.animate()),this.value},options:function(t){return t&&"object"==typeof t&&Object.assign(this.settings,t),this.settings},unwrap:function(){return this.$element[0]},place:function(t,e){var s=$(document.createElement("span"));return t instanceof jQuery||(t=$(t)),t[0]||console.warn("meter#place() -> no valid target"),e&&"object"==typeof e&&(e.classes&&(Array.isArray(e.classes)||"string"==typeof e.classes)&&s.addClass(e.classes),e.attr&&"object"==typeof e.attr&&s.attr(e.attr)),t.append(s.append(this.$element)),this._label(!0),this},on:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.on(t,e),this):this},one:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.one(t,e),this):this},off:function(t){return t=t&&"string"==typeof t&&t.trim()?t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "):".userland",this.$element.off(t),this},click:function(t,e){return this.$element.ariaClick(t,e),this},clone:function(){return new l(this.settings,this.value)},toJSON:function(){return JSON.reviveWrapper("new setup.Meter("+JSON.stringify(this.settings)+", "+this.value+")")}}),setup.Meter=l,t&&(window.Meter=window.Meter||l),Macro.add("newmeter",{tags:["colors","sizing","animation","label"],handler:function(){if(State.length>0&&!s)return this.error("The `<<newmeter>>` macro must be called in your `StoryInit` special passage. Seriously. No excuses. --Love, Chapel");if(this.args.length<1)return this.error("The `<<newmeter>>` macro requires at least one argument: a meter name.");var t=this.args[0],i=null,n=null,r=null,a=null;if("string"!=typeof t)return this.error("Invalid meter name.");if(t=t.trim(),l.has(t)&&!e)return this.error('Cannot clobber the existing meter "'+t+'".');this.payload.length&&(i=this.payload.find((function(t){return"colors"===t.name})),n=this.payload.find((function(t){return"sizing"===t.name})),r=this.payload.find((function(t){return"animation"===t.name})),a=this.payload.find((function(t){return"label"===t.name})));var o={};if(i){if(!i.args.length)return this.error("No arguments passed to the `<<colors>>` tag.");switch(i.args.length){case 1:o.empty=i.args[0],o.full="transparent";break;case 2:o.full=i.args[0],o.empty=i.args[1];break;default:o.full=i.args[0],o.empty=i.args[1],o.back=i.args[2]}}if(n){if(!n.args.length)return this.error("No arguments passed to the `<<sizing>>` tag.");o.width=n.args[0],n.args[1]&&(o.height=n.args[1])}if(r){if(!r.args.length)return this.error("No arguments passed to the `<<animation>>` tag.");if("boolean"!=typeof r.args[0]||r.args[0]){if("string"!=typeof r.args[0])return this.error("The argument to the `<<animation>>` tag should be `true`, `false`, or a valid CSS time value.");o.animate=Util.fromCssTime(r.args[0])}else o.animate=0;r.args[1]&&["swing","linear"].includes(r.args[1])&&(o.easing=r.args[1])}if(a){var h=a.args[0];if(!h||"string"!=typeof h)return this.error("The labelText argument for the `<<label>>` tag is required.");o.label=h.trim(),a.args[1]&&"string"==typeof a.args[1]&&(o.text=a.args[1]),a.args[2]&&"string"==typeof a.args[2]&&(o.align=a.args[2])}l.add(t,o,this.args[1])}}),Macro.add("showmeter",{handler:function(){if(this.args.length<1)return this.error("This macro requires at least one argument: the meter's name.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');"number"==typeof this.args[1]&&e.val(this.args[1]),e.place(this.output,{classes:"macro-"+this.name,attr:{id:"meter-"+Util.slugify(t)}})}}),Macro.add("updatemeter",{handler:function(){if(this.args.length<2)return this.error("This macro requires two arguments: the meter's name and a value.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');e.val(this.args[1])}})}();
 // end meters.min.js
 /* twine-user-script #2: "UserScript" */
-</script><tw-tag name="widget" color="orange"></tw-tag><tw-tag name="Q2" color="green"></tw-tag><tw-tag name="EndFired" color="red"></tw-tag><tw-tag name="EndUnhappy" color="red"></tw-tag><tw-tag name="EndStay" color="red"></tw-tag><tw-tag name="Q3" color="green"></tw-tag><tw-tag name="EndPromo" color="red"></tw-tag><tw-tag name="nobr" color="purple"></tw-tag><tw-tag name="Widget" color="green"></tw-tag><tw-tag name="Q1" color="green"></tw-tag><tw-tag name="Q4" color="green"></tw-tag><tw-tag name="StoryInit" color="orange"></tw-tag><tw-tag name="Main" color="blue"></tw-tag><tw-tag name="EndE" color="orange"></tw-tag><tw-passagedata pid="1" name="Burnout" tags="" position="925,525" size="100,100">&lt;&lt;set $slack to false&gt;&gt;
+</script><tw-tag name="EndStay" color="red"></tw-tag><tw-tag name="EndE" color="orange"></tw-tag><tw-tag name="EndUnhappy" color="red"></tw-tag><tw-tag name="Q4" color="green"></tw-tag><tw-tag name="Main" color="blue"></tw-tag><tw-tag name="EndPromo" color="red"></tw-tag><tw-tag name="nobr" color="purple"></tw-tag><tw-tag name="Q2" color="green"></tw-tag><tw-tag name="StoryInit" color="orange"></tw-tag><tw-tag name="widget" color="orange"></tw-tag><tw-tag name="Q1" color="green"></tw-tag><tw-tag name="Q3" color="green"></tw-tag><tw-tag name="EndFired" color="red"></tw-tag><tw-tag name="Widget" color="green"></tw-tag><tw-passagedata pid="1" name="Burnout" tags="" position="925,525" size="100,100">&lt;&lt;set $slack to false&gt;&gt;
 &lt;&lt;script&gt;&gt;
     UIBar.hide();
 &lt;&lt;/script&gt;&gt;
@@ -4069,7 +4149,7 @@ importScripts("/gsap.min.js");
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q1-cold.jpg&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
         &lt;h1 class=&quot;scenario__title&quot;&gt;You&#39;re Fuckin&#39; Cold&lt;/h1&gt;
-        &lt;p class=&quot;scenario__desc&quot;&gt;The building is heated like a Victorian prison. Your besuited male colleagues don’t seem to notice.&lt;/p&gt;
+        &lt;p class=&quot;scenario__desc&quot;&gt;The building is heated like a Victorian prison. Your besuited colleagues don’t seem to notice.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -4105,7 +4185,10 @@ importScripts("/gsap.min.js");
         &lt;div class=&quot;content content--ending&quot;&gt;
             &lt;&lt;TitleBar &quot;👏👏 NOT HERE TO MAKE FRIENDS 👏👏&quot;&gt;&gt;
             &lt;div class=&quot;ending&quot;&gt;
-                &lt;img class=&quot;ending__img&quot; src=&quot;img/e-friends.jpg&quot;/&gt;
+                &lt;div class=&quot;img-box&quot;&gt;
+                    &lt;img class=&quot;img-box__img&quot; src=&quot;img/e-friends.jpg&quot;/&gt;
+                    &lt;img class=&quot;img-box__img img-box__img--hover&quot; @src=&quot;$endingImage&quot;/&gt;
+                &lt;/div&gt;
                 &lt;div class=&quot;ending__text&quot;&gt;
                     &lt;h1 class=&quot;ending__title&quot;&gt;$user,You’re Not Here to Make Friends&lt;/h1&gt;
                     &lt;p class=&quot;ending__desc&quot;&gt;You’re efficient, strategic, and you’ve kept distractions at bay. You’d prefer coworkers not bother you, but if they must, they need to make it actionable. Don’t expect an invite to happy hour.&lt;/p&gt;
@@ -4144,7 +4227,10 @@ importScripts("/gsap.min.js");
         &lt;div class=&quot;content content--ending&quot;&gt;
             &lt;&lt;TitleBar &quot;🤝🧳 YOU MANAGE LIKE A BOSS 🤝🧳&quot;&gt;&gt;
             &lt;div class=&quot;ending&quot;&gt;
-                &lt;img class=&quot;ending__img&quot; src=&quot;img/e-boss.jpg&quot;/&gt;
+                &lt;div class=&quot;img-box&quot;&gt;
+                    &lt;img class=&quot;img-box__img&quot; src=&quot;img/e-boss.jpg&quot;/&gt;
+                    &lt;img class=&quot;img-box__img img-box__img--hover&quot; @src=&quot;$endingImage&quot;/&gt;
+                &lt;/div&gt;
                 &lt;div class=&quot;ending__text&quot;&gt;
                     &lt;h1 class=&quot;ending__title&quot;&gt;$user,You Manage Like a Boss&lt;/h1&gt;
                     &lt;p class=&quot;ending__desc&quot;&gt;You have an innate ability to inspire your colleagues and herd them toward a common goal. Leadership looks good on you, and people follow your directions without question. Have you considered starting a cult?&lt;/p&gt;
@@ -4183,7 +4269,10 @@ importScripts("/gsap.min.js");
         &lt;div class=&quot;content content--ending&quot;&gt;
             &lt;&lt;TitleBar &quot;💗💗 YOU ARE BELOVED 💗💗&quot;&gt;&gt;
             &lt;div class=&quot;ending&quot;&gt;
-                &lt;img class=&quot;ending__img&quot; src=&quot;img/e-beloved.jpg&quot;/&gt;
+                &lt;div class=&quot;img-box&quot;&gt;
+                    &lt;img class=&quot;img-box__img&quot; src=&quot;img/e-beloved.jpg&quot;/&gt;
+                    &lt;img class=&quot;img-box__img img-box__img--hover&quot; @src=&quot;$endingImage&quot;/&gt;
+                &lt;/div&gt;
                 &lt;div class=&quot;ending__text&quot;&gt;
                     &lt;h1 class=&quot;ending__title&quot;&gt;$user,You&#39;re a Beloved Office Presence&lt;/h1&gt;
                     &lt;p class=&quot;ending__desc&quot;&gt;People love working with you, and they trust that you’ve got their back. Just be prepared for a calendar filled with gratuitous coffee chats and one-on-ones.&lt;/p&gt;
@@ -4222,7 +4311,10 @@ importScripts("/gsap.min.js");
         &lt;div class=&quot;content content--ending&quot;&gt;
             &lt;&lt;TitleBar &quot;🏃💨 YOU WERE JUST HEADING OUT 🏃💨&quot;&gt;&gt;
             &lt;div class=&quot;ending&quot;&gt;
-                &lt;img class=&quot;ending__img&quot; src=&quot;img/e-out.jpg&quot;/&gt;
+                &lt;div class=&quot;img-box&quot;&gt;
+                    &lt;img class=&quot;img-box__img&quot; src=&quot;img/e-out.jpg&quot;/&gt;
+                    &lt;img class=&quot;img-box__img img-box__img--hover&quot; @src=&quot;$endingImage&quot;/&gt;
+                &lt;/div&gt;
                 &lt;div class=&quot;ending__text&quot;&gt;
                     &lt;h1 class=&quot;ending__title&quot;&gt;$user,You Were Just Heading Out&lt;/h1&gt;
                     &lt;p class=&quot;ending__desc&quot;&gt;Oh, a last-minute Zoom meeting? Sorry, you’ll have to circle back. Some call it a healthy work-life balance, you call it self-preservation.&lt;/p&gt;
@@ -4261,7 +4353,10 @@ importScripts("/gsap.min.js");
         &lt;div class=&quot;content content--ending&quot;&gt;
             &lt;&lt;TitleBar &quot;🔪🔪 YOU CHOSE VIOLENCE 🔪🔪&quot;&gt;&gt;
             &lt;div class=&quot;ending&quot;&gt;
-                &lt;img class=&quot;ending__img&quot; src=&quot;img/e-violence.jpg&quot;/&gt;
+                &lt;div class=&quot;img-box&quot;&gt;
+                    &lt;img class=&quot;img-box__img&quot; src=&quot;img/e-violence.jpg&quot;/&gt;
+                    &lt;img class=&quot;img-box__img img-box__img--hover&quot; @src=&quot;$endingImage&quot;/&gt;
+                &lt;/div&gt;
                 &lt;div class=&quot;ending__text&quot;&gt;
                     &lt;h1 class=&quot;ending__title&quot;&gt;$user,You Chose Violence&lt;/h1&gt;
                     &lt;p class=&quot;ending__desc&quot;&gt;For you to win, someone else has to lose. And so what if you stab your teammate in the back? There are no teams on The Corporate Trail.&lt;/p&gt;
@@ -4300,7 +4395,10 @@ importScripts("/gsap.min.js");
         &lt;div class=&quot;content content--ending&quot;&gt;
             &lt;&lt;TitleBar &quot;💸🩸 YOU BLEED FOR PROFIT 💸🩸&quot;&gt;&gt;
             &lt;div class=&quot;ending&quot;&gt;
-                &lt;img class=&quot;ending__img&quot; src=&quot;img/e-profit.jpg&quot;/&gt;
+                &lt;div class=&quot;img-box&quot;&gt;
+                    &lt;img class=&quot;img-box__img&quot; src=&quot;img/e-profit.jpg&quot;/&gt;
+                    &lt;img class=&quot;img-box__img img-box__img--hover&quot; @src=&quot;$endingImage&quot;/&gt;
+                &lt;/div&gt;
                 &lt;div class=&quot;ending__text&quot;&gt;
                     &lt;h1 class=&quot;ending__title&quot;&gt;$user,You Bleed for Incremental Profit&lt;/h1&gt;
                     &lt;p class=&quot;ending__desc&quot;&gt;Your work ethic is unmatched, but at what cost? You’ve hit revenue targets by missing weekends fueled by triple-shot espressos and gas station No-Doze. The job won’t be done until value is returned to shareholders.&lt;/p&gt;
@@ -4337,11 +4435,14 @@ importScripts("/gsap.min.js");
     &lt;/svg&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
         &lt;div class=&quot;content content--ending&quot;&gt;
-            &lt;&lt;TitleBar &quot;🧯🔥 YOU ARE THE EXECUTIVE FIREFIGHTER 🧯🔥&quot;&gt;&gt;
+            &lt;&lt;TitleBar &quot;🧯🔥 YOU ARE THE RESIDENT FIREFIGHTER 🧯🔥&quot;&gt;&gt;
             &lt;div class=&quot;ending&quot;&gt;
-                &lt;img class=&quot;ending__img&quot; src=&quot;img/e-fire.jpg&quot;/&gt;
+                &lt;div class=&quot;img-box&quot;&gt;
+                    &lt;img class=&quot;img-box__img&quot; src=&quot;img/e-fire.jpg&quot;/&gt;
+                    &lt;img class=&quot;img-box__img img-box__img--hover&quot; @src=&quot;$endingImage&quot;/&gt;
+                &lt;/div&gt;
                 &lt;div class=&quot;ending__text&quot;&gt;
-                    &lt;h1 class=&quot;ending__title&quot;&gt;$user,You Are the Executive Firefighter&lt;/h1&gt;
+                    &lt;h1 class=&quot;ending__title&quot;&gt;$user,You Are the Resident Firefighter&lt;/h1&gt;
                     &lt;p class=&quot;ending__desc&quot;&gt;You solve all sorts of problems — even the ones you have nothing to do with. People appreciate your dependability, but after fighting so many dumpster fires, you’re at risk of burning out.&lt;/p&gt;
                     &lt;div class=&quot;ending__replay&quot;&gt;
                         🕹️
@@ -4378,7 +4479,10 @@ importScripts("/gsap.min.js");
         &lt;div class=&quot;content content--ending&quot;&gt;
             &lt;&lt;TitleBar &quot;👑👑 YOU GAME OF THRONES&#39;D IT 👑👑&quot;&gt;&gt;
             &lt;div class=&quot;ending&quot;&gt;
-                &lt;img class=&quot;ending__img&quot; src=&quot;img/e-thrones.jpg&quot;/&gt;
+                &lt;div class=&quot;img-box&quot;&gt;
+                    &lt;img class=&quot;img-box__img&quot; src=&quot;img/e-thrones.jpg&quot;/&gt;
+                    &lt;img class=&quot;img-box__img img-box__img--hover&quot; @src=&quot;$endingImage&quot;/&gt;
+                &lt;/div&gt;
                 &lt;div class=&quot;ending__text&quot;&gt;
                     &lt;h1 class=&quot;ending__title&quot;&gt;$user,You Game-of-Thrones&#39;d It&lt;/h1&gt;
                     &lt;p class=&quot;ending__desc&quot;&gt;Your feel for office politics is frighteningly sharp — you’ve outmaneuvered everyone and survived all power plays. After your stint in the C-Suite, you should consider running for Congress.&lt;/p&gt;
@@ -4415,7 +4519,10 @@ importScripts("/gsap.min.js");
         &lt;div class=&quot;content content--ending&quot;&gt;
             &lt;&lt;TitleBar &quot;🦎🦎 YOU QUIT 🦎🦎&quot;&gt;&gt;
             &lt;div class=&quot;ending&quot;&gt;
-                &lt;img class=&quot;ending__img&quot; src=&quot;img/e-quit.jpg&quot;/&gt;
+                &lt;div class=&quot;img-box&quot;&gt;
+                    &lt;img class=&quot;img-box__img&quot; src=&quot;img/e-quit.jpg&quot;/&gt;
+                    &lt;img class=&quot;img-box__img img-box__img--hover&quot; @src=&quot;$endingImage&quot;/&gt;
+                &lt;/div&gt;
                 &lt;div class=&quot;ending__text&quot;&gt;
                     &lt;h1 class=&quot;ending__title&quot;&gt;$user,You Quit&lt;/h1&gt;
                     &lt;p class=&quot;ending__desc&quot;&gt;Spend the best years of your life “circling back” over stale office coffee? No thanks. Time to pack it up, blow it up, and move to Costa Rica.
@@ -4447,9 +4554,6 @@ importScripts("/gsap.min.js");
         if(quarterCheck) {
             document.getElementById(&#39;quarter&#39;).classList.toggle(&#39;quarter-indicator--hidden&#39;);
         }
-        $(&quot;#quarter-close&quot;).click(function(){
-            document.getElementById(&#39;quarter&#39;).classList.toggle(&#39;quarter-indicator--hidden&#39;);
-        });
     });
 &lt;&lt;/script&gt;&gt;
 &lt;&lt;set $remaining to 3&gt;&gt;
@@ -4466,12 +4570,6 @@ importScripts("/gsap.min.js");
                 &lt;p class=&quot;calendar__heading&quot;&gt;Now starting&lt;/p&gt;
                 &lt;p class=&quot;calendar__quarter&quot;&gt;Q$quarter&lt;/p&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;tracker&quot;&gt;
-                &lt;div class=&quot;tracker-module&quot;&gt;
-                    &lt;p class=&quot;tracker-module__number&quot;&gt;$remaining&lt;/p&gt;
-                    &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
             &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
@@ -4484,12 +4582,12 @@ importScripts("/gsap.min.js");
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;&lt;ChoiceModule
-                &quot;F it we ball&quot;
+                &quot;F it, we ball&quot;
                 &quot;Your plate is full&quot;
                 &quot;s|Volunteer your rival|Deteriorate|Turn around&quot;
             &gt;&gt;
         &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="F it we ball" tags="" position="600,800" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="F it, we ball" tags="" position="600,800" size="100,100">&lt;&lt;script&gt;&gt;
     UIBar.show();
     UIBar.unstow();
 &lt;&lt;/script&gt;&gt;
@@ -4508,7 +4606,7 @@ importScripts("/gsap.min.js");
     &lt;div class=&quot;scenario scenario--alert&quot;&gt;
         &lt;img class=&quot;scenario__icon&quot; src=&quot;img/warn1.png&quot;/&gt;
         &lt;div class=&quot;scenario__text scenario__text--alert&quot;&gt;
-            &lt;p class=&quot;scenario__desc scenario__desc--alert&quot;&gt;Who cares if you’re being set up to fail? You’re not going to let that happen. Get in, loser, we’re going to the cover of Forbes.&lt;/p&gt;
+            &lt;p class=&quot;scenario__desc scenario__desc--alert&quot;&gt;Who cares if you’re being set up to fail? You’re not going to let that happen. Get in, loser, we’re going on the cover of Forbes.&lt;/p&gt;
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;btn-area btn-area--alert&quot;&gt;
@@ -4636,12 +4734,6 @@ importScripts("/gsap.min.js");
             &lt;div class=&quot;calendar&quot;&gt;
                 &lt;p class=&quot;calendar__heading&quot;&gt;Now starting&lt;/p&gt;
                 &lt;p class=&quot;calendar__quarter&quot;&gt;Q$quarter&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;tracker&quot;&gt;
-                &lt;div class=&quot;tracker-module&quot;&gt;
-                    &lt;p class=&quot;tracker-module__number&quot;&gt;$remaining&lt;/p&gt;
-                    &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
-                &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
@@ -4842,12 +4934,6 @@ importScripts("/gsap.min.js");
                 &lt;p class=&quot;calendar__heading&quot;&gt;Now starting&lt;/p&gt;
                 &lt;p class=&quot;calendar__quarter&quot;&gt;Q$quarter&lt;/p&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;tracker&quot;&gt;
-                &lt;div class=&quot;tracker-module&quot;&gt;
-                    &lt;p class=&quot;tracker-module__number&quot;&gt;$remaining&lt;/p&gt;
-                    &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
             &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
@@ -4856,7 +4942,7 @@ importScripts("/gsap.min.js");
                 &lt;img class=&quot;scenario__img&quot; src=&quot;img/q2-stake.jpg&quot;/&gt;
                 &lt;div class=&quot;scenario__text&quot;&gt;
                     &lt;h1 class=&quot;scenario__title&quot;&gt;Multiple Stakeholders&lt;/h1&gt;
-                    &lt;p class=&quot;scenario__desc&quot;&gt;A last-minute emergency hits your inbox at 5pm—and your nephew’s clarinet recital starts at 5pm.&lt;/p&gt;
+                    &lt;p class=&quot;scenario__desc&quot;&gt;A last-minute emergency hits your inbox at 5 pm — and your nephew’s clarinet recital starts at 5:30.&lt;/p&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;&lt;ChoiceModule
@@ -4878,7 +4964,7 @@ importScripts("/gsap.min.js");
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q2-stake.jpg&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
         &lt;h1 class=&quot;scenario__title&quot;&gt;Multiple Stakeholders&lt;/h1&gt;
-        &lt;p class=&quot;scenario__desc&quot;&gt;A last-minute emergency hits your inbox at 5pm—and your nephew’s recital starts at 5pm.&lt;/p&gt;
+        &lt;p class=&quot;scenario__desc&quot;&gt;A last-minute emergency hits your inbox at 5 pm — and your nephew’s clarinet recital starts at 5:30.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -4908,7 +4994,7 @@ importScripts("/gsap.min.js");
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q2-stake.jpg&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
         &lt;h1 class=&quot;scenario__title&quot;&gt;Multiple Stakeholders&lt;/h1&gt;
-        &lt;p class=&quot;scenario__desc&quot;&gt;A last-minute emergency hits your inbox at 5pm—and your nephew’s recital starts at 5pm.&lt;/p&gt;
+        &lt;p class=&quot;scenario__desc&quot;&gt;A last-minute emergency hits your inbox at 5 pm — and your nephew’s clarinet recital starts at 5:30.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -4938,7 +5024,7 @@ importScripts("/gsap.min.js");
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q2-stake.jpg&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
         &lt;h1 class=&quot;scenario__title&quot;&gt;Multiple Stakeholders&lt;/h1&gt;
-        &lt;p class=&quot;scenario__desc&quot;&gt;A last-minute emergency hits your inbox at 5pm—and your nephew’s recital starts at 5pm.&lt;/p&gt;
+        &lt;p class=&quot;scenario__desc&quot;&gt;A last-minute emergency hits your inbox at 5 pm — and your nephew’s clarinet recital starts at 5:30.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -4968,7 +5054,7 @@ importScripts("/gsap.min.js");
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q2-stake.jpg&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
         &lt;h1 class=&quot;scenario__title&quot;&gt;Multiple Stakeholders&lt;/h1&gt;
-        &lt;p class=&quot;scenario__desc&quot;&gt;A last-minute emergency hits your inbox at 5pm—and your nephew’s recital starts at 5pm.&lt;/p&gt;
+        &lt;p class=&quot;scenario__desc&quot;&gt;A last-minute emergency hits your inbox at 5 pm — and your nephew’s clarinet recital starts at 5:30.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -5016,12 +5102,6 @@ importScripts("/gsap.min.js");
                 &lt;p class=&quot;calendar__heading&quot;&gt;Now starting&lt;/p&gt;
                 &lt;p class=&quot;calendar__quarter&quot;&gt;Q$quarter&lt;/p&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;tracker&quot;&gt;
-                &lt;div class=&quot;tracker-module&quot;&gt;
-                    &lt;p class=&quot;tracker-module__number&quot;&gt;$remaining&lt;/p&gt;
-                    &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
             &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
@@ -5036,7 +5116,7 @@ importScripts("/gsap.min.js");
             &lt;&lt;ChoiceModule
                 &quot;Sorry I care, Brian&quot;
                 &quot;h|Pants him with data|The numbers|You fumble&quot;
-                &quot;s|Verbal judo him|You suggest|You stammer&quot;
+                &quot;s|Judo him verbally|You suggest|You stammer&quot;
             &gt;&gt;
         &lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="Sorry I care, Brian" tags="" position="600,800" size="100,100">&lt;&lt;script&gt;&gt;
@@ -5116,7 +5196,7 @@ importScripts("/gsap.min.js");
     &lt;div class=&quot;scenario scenario--alert&quot;&gt;
         &lt;img class=&quot;scenario__icon&quot; src=&quot;img/warn1.png&quot;/&gt;
         &lt;div class=&quot;scenario__text scenario__text--alert&quot;&gt;
-            &lt;p class=&quot;scenario__desc scenario__desc--alert&quot;&gt;You fumble for the relevant facts and figures. Now you’re emotional and unconvincing.&lt;/p&gt;
+            &lt;p class=&quot;scenario__desc scenario__desc--alert&quot;&gt;You fumble for the relevant facts and figures. Now you’re emotional *and* unconvincing.&lt;/p&gt;
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;btn-area btn-area--alert&quot;&gt;
@@ -5214,12 +5294,6 @@ importScripts("/gsap.min.js");
                 &lt;p class=&quot;calendar__heading&quot;&gt;Now starting&lt;/p&gt;
                 &lt;p class=&quot;calendar__quarter&quot;&gt;Q$quarter&lt;/p&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;tracker&quot;&gt;
-                &lt;div class=&quot;tracker-module&quot;&gt;
-                    &lt;p class=&quot;tracker-module__number&quot;&gt;$remaining&lt;/p&gt;
-                    &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
             &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
@@ -5228,7 +5302,7 @@ importScripts("/gsap.min.js");
                 &lt;img class=&quot;scenario__img&quot; src=&quot;img/q1-cold.jpg&quot;/&gt;
                 &lt;div class=&quot;scenario__text&quot;&gt;
                     &lt;h1 class=&quot;scenario__title&quot;&gt;What&#39;s Cooler Than Being Cold?&lt;/h1&gt;
-                    &lt;p class=&quot;scenario__desc&quot;&gt;The building is heated like a Victorian prison. Your besuited male colleagues don’t seem to notice.&lt;/p&gt;
+                    &lt;p class=&quot;scenario__desc&quot;&gt;The building is heated like a Victorian prison. Your besuited colleagues don’t seem to notice.&lt;/p&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;&lt;ChoiceModule
@@ -5248,8 +5322,8 @@ importScripts("/gsap.min.js");
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q1-cold.jpg&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
-        &lt;h1 class=&quot;scenario__title&quot;&gt;You&#39;re Fuckin&#39; Cold&lt;/h1&gt;
-        &lt;p class=&quot;scenario__desc&quot;&gt;The building is heated like a Victorian prison. Your besuited male colleagues don’t seem to notice.&lt;/p&gt;
+        &lt;h1 class=&quot;scenario__title&quot;&gt;What&#39;s Cooler Than Being Cold?&lt;/h1&gt;
+        &lt;p class=&quot;scenario__desc&quot;&gt;The building is heated like a Victorian prison. Your besuited colleagues don’t seem to notice.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -5277,8 +5351,8 @@ importScripts("/gsap.min.js");
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q1-cold.jpg&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
-        &lt;h1 class=&quot;scenario__title&quot;&gt;You&#39;re Fuckin&#39; Cold&lt;/h1&gt;
-        &lt;p class=&quot;scenario__desc&quot;&gt;The building is heated like a Victorian prison. Your besuited male colleagues don’t seem to notice.&lt;/p&gt;
+        &lt;h1 class=&quot;scenario__title&quot;&gt;What&#39;s Cooler Than Being Cold?&lt;/h1&gt;
+        &lt;p class=&quot;scenario__desc&quot;&gt;The building is heated like a Victorian prison. Your besuited colleagues don’t seem to notice.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -5306,8 +5380,8 @@ importScripts("/gsap.min.js");
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q1-cold.jpg&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
-        &lt;h1 class=&quot;scenario__title&quot;&gt;You&#39;re Fuckin&#39; Cold&lt;/h1&gt;
-        &lt;p class=&quot;scenario__desc&quot;&gt;The building is heated like a Victorian prison. Your besuited male colleagues don’t seem to notice.&lt;/p&gt;
+        &lt;h1 class=&quot;scenario__title&quot;&gt;What&#39;s Cooler Than Being Cold?&lt;/h1&gt;
+        &lt;p class=&quot;scenario__desc&quot;&gt;The building is heated like a Victorian prison. Your besuited colleagues don’t seem to notice.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -5335,8 +5409,8 @@ importScripts("/gsap.min.js");
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q1-cold.jpg&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
-        &lt;h1 class=&quot;scenario__title&quot;&gt;You&#39;re Fuckin&#39; Cold&lt;/h1&gt;
-        &lt;p class=&quot;scenario__desc&quot;&gt;The building is heated like a Victorian prison. Your besuited male colleagues don’t seem to notice.&lt;/p&gt;
+        &lt;h1 class=&quot;scenario__title&quot;&gt;What&#39;s Cooler Than Being Cold?&lt;/h1&gt;
+        &lt;p class=&quot;scenario__desc&quot;&gt;The building is heated like a Victorian prison. Your besuited colleagues don’t seem to notice.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -5364,8 +5438,8 @@ importScripts("/gsap.min.js");
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q1-cold.jpg&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
-        &lt;h1 class=&quot;scenario__title&quot;&gt;You&#39;re Fuckin&#39; Cold&lt;/h1&gt;
-        &lt;p class=&quot;scenario__desc&quot;&gt;The building is heated like a Victorian prison. Your besuited male colleagues don’t seem to notice.&lt;/p&gt;
+        &lt;h1 class=&quot;scenario__title&quot;&gt;What&#39;s Cooler Than Being Cold?&lt;/h1&gt;
+        &lt;p class=&quot;scenario__desc&quot;&gt;The building is heated like a Victorian prison. Your besuited colleagues don’t seem to notice.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -5411,12 +5485,6 @@ importScripts("/gsap.min.js");
             &lt;div class=&quot;calendar&quot;&gt;
                 &lt;p class=&quot;calendar__heading&quot;&gt;Now starting&lt;/p&gt;
                 &lt;p class=&quot;calendar__quarter&quot;&gt;Q$quarter&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;tracker&quot;&gt;
-                &lt;div class=&quot;tracker-module&quot;&gt;
-                    &lt;p class=&quot;tracker-module__number&quot;&gt;$remaining&lt;/p&gt;
-                    &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
-                &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
@@ -5551,12 +5619,6 @@ importScripts("/gsap.min.js");
                 &lt;p class=&quot;calendar__heading&quot;&gt;Now starting&lt;/p&gt;
                 &lt;p class=&quot;calendar__quarter&quot;&gt;Q$quarter&lt;/p&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;tracker&quot;&gt;
-                &lt;div class=&quot;tracker-module&quot;&gt;
-                    &lt;p class=&quot;tracker-module__number&quot;&gt;$remaining&lt;/p&gt;
-                    &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
             &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
@@ -5571,7 +5633,7 @@ importScripts("/gsap.min.js");
             &lt;&lt;ChoiceModule
                 &quot;h|Give them a heads up|She&#39;s grateful|Mind your&quot;
                 &quot;Reprimand them privately&quot;
-                &quot;s|Leave a comment|Kinda snarky|Dunked on&quot;
+                &quot;s|Drop a comment|Kinda snarky|Dunked on&quot;
             &gt;&gt;
         &lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="She&#39;s grateful" tags="" position="600,800" size="100,100">&lt;&lt;script&gt;&gt;
@@ -5755,12 +5817,6 @@ importScripts("/gsap.min.js");
                 &lt;p class=&quot;calendar__heading&quot;&gt;Now starting&lt;/p&gt;
                 &lt;p class=&quot;calendar__quarter&quot;&gt;Q$quarter&lt;/p&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;tracker&quot;&gt;
-                &lt;div class=&quot;tracker-module&quot;&gt;
-                    &lt;p class=&quot;tracker-module__number&quot;&gt;$remaining&lt;/p&gt;
-                    &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
             &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
@@ -5895,12 +5951,6 @@ importScripts("/gsap.min.js");
             &lt;div class=&quot;calendar&quot;&gt;
                 &lt;p class=&quot;calendar__heading&quot;&gt;Now starting&lt;/p&gt;
                 &lt;p class=&quot;calendar__quarter&quot;&gt;Q$quarter&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;tracker&quot;&gt;
-                &lt;div class=&quot;tracker-module&quot;&gt;
-                    &lt;p class=&quot;tracker-module__number&quot;&gt;$remaining&lt;/p&gt;
-                    &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
-                &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
@@ -6066,12 +6116,6 @@ importScripts("/gsap.min.js");
                 &lt;p class=&quot;calendar__heading&quot;&gt;Now starting&lt;/p&gt;
                 &lt;p class=&quot;calendar__quarter&quot;&gt;Q$quarter&lt;/p&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;tracker&quot;&gt;
-                &lt;div class=&quot;tracker-module&quot;&gt;
-                    &lt;p class=&quot;tracker-module__number&quot;&gt;$remaining&lt;/p&gt;
-                    &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
             &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
@@ -6204,12 +6248,6 @@ importScripts("/gsap.min.js");
             &lt;div class=&quot;calendar&quot;&gt;
                 &lt;p class=&quot;calendar__heading&quot;&gt;Now starting&lt;/p&gt;
                 &lt;p class=&quot;calendar__quarter&quot;&gt;Q$quarter&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;tracker&quot;&gt;
-                &lt;div class=&quot;tracker-module&quot;&gt;
-                    &lt;p class=&quot;tracker-module__number&quot;&gt;$remaining&lt;/p&gt;
-                    &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
-                &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
@@ -6346,12 +6384,6 @@ importScripts("/gsap.min.js");
                 &lt;p class=&quot;calendar__heading&quot;&gt;Now starting&lt;/p&gt;
                 &lt;p class=&quot;calendar__quarter&quot;&gt;Q$quarter&lt;/p&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;tracker&quot;&gt;
-                &lt;div class=&quot;tracker-module&quot;&gt;
-                    &lt;p class=&quot;tracker-module__number&quot;&gt;$remaining&lt;/p&gt;
-                    &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
             &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
@@ -6360,15 +6392,15 @@ importScripts("/gsap.min.js");
                 &lt;img class=&quot;scenario__img&quot; src=&quot;img/q3-steal.jpg&quot;/&gt;
                 &lt;div class=&quot;scenario__text&quot;&gt;
                     &lt;h1 class=&quot;scenario__title&quot;&gt;Stolen Valor&lt;/h1&gt;
-                    &lt;p class=&quot;scenario__desc&quot;&gt;You propose a brilliant plan during a strategy session —then Mark proposes it again 10 minutes later.&lt;/p&gt;
+                    &lt;p class=&quot;scenario__desc&quot;&gt;You propose a brilliant plan during a strategy session — then Mark proposes it again 10 minutes later.&lt;/p&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;&lt;ChoiceModule
-                &quot;Smile &amp; nod&quot;
+                &quot;Let this one go&quot;
                 &quot;h|Put your foot down|You demolish|Too far&quot;
             &gt;&gt;
         &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="69" name="Smile &amp; nod" tags="" position="600,800" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="69" name="Let this one go" tags="" position="600,800" size="100,100">&lt;&lt;script&gt;&gt;
     UIBar.show();
     UIBar.unstow();
 &lt;&lt;/script&gt;&gt;
@@ -6380,7 +6412,7 @@ importScripts("/gsap.min.js");
 	&lt;img class=&quot;scenario__img&quot; src=&quot;img/q3-steal.jpg&quot;/&gt;
 	&lt;div class=&quot;scenario__text&quot;&gt;
 		&lt;h1 class=&quot;scenario__title&quot;&gt;Stolen Valor&lt;/h1&gt;
-		&lt;p class=&quot;scenario__desc&quot;&gt;You propose a brilliant plan during a strategy session —then Mark proposes it again 10 minutes later.&lt;/p&gt;
+		&lt;p class=&quot;scenario__desc&quot;&gt;You propose a brilliant plan during a strategy session — then Mark proposes it again 10 minutes later.&lt;/p&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -6409,7 +6441,7 @@ importScripts("/gsap.min.js");
 	&lt;img class=&quot;scenario__img&quot; src=&quot;img/q3-steal.jpg&quot;/&gt;
 	&lt;div class=&quot;scenario__text&quot;&gt;
 		&lt;h1 class=&quot;scenario__title&quot;&gt;Stolen Valor&lt;/h1&gt;
-		&lt;p class=&quot;scenario__desc&quot;&gt;You propose a brilliant plan during a strategy session —then Mark proposes it again 10 minutes later.&lt;/p&gt;
+		&lt;p class=&quot;scenario__desc&quot;&gt;You propose a brilliant plan during a strategy session — then Mark proposes it again 10 minutes later.&lt;/p&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -6438,7 +6470,7 @@ importScripts("/gsap.min.js");
 	&lt;img class=&quot;scenario__img&quot; src=&quot;img/q3-steal.jpg&quot;/&gt;
 	&lt;div class=&quot;scenario__text&quot;&gt;
 		&lt;h1 class=&quot;scenario__title&quot;&gt;Stolen Valor&lt;/h1&gt;
-		&lt;p class=&quot;scenario__desc&quot;&gt;You propose a brilliant plan during a strategy session —then Mark proposes it again 10 minutes later.&lt;/p&gt;
+		&lt;p class=&quot;scenario__desc&quot;&gt;You propose a brilliant plan during a strategy session — then Mark proposes it again 10 minutes later.&lt;/p&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -6484,12 +6516,6 @@ importScripts("/gsap.min.js");
                 &lt;p class=&quot;calendar__heading&quot;&gt;Now starting&lt;/p&gt;
                 &lt;p class=&quot;calendar__quarter&quot;&gt;Q$quarter&lt;/p&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;tracker&quot;&gt;
-                &lt;div class=&quot;tracker-module&quot;&gt;
-                    &lt;p class=&quot;tracker-module__number&quot;&gt;$remaining&lt;/p&gt;
-                    &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
             &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
@@ -6498,12 +6524,12 @@ importScripts("/gsap.min.js");
                 &lt;img class=&quot;scenario__img&quot; src=&quot;img/q4-family.jpg&quot;/&gt;
                 &lt;div class=&quot;scenario__text&quot;&gt;
                     &lt;h1 class=&quot;scenario__title&quot;&gt;Family Planning&lt;/h1&gt;
-                    &lt;p class=&quot;scenario__desc&quot;&gt;At the EOY forecast, the COO casually asks if you&#39;ll be “on leave” soon. While staring directly at your uterus.&lt;/p&gt;
+                    &lt;p class=&quot;scenario__desc&quot;&gt;At the EOY forecasting meeting, the COO casually asks if you expect to be “on leave” in the next 18 months — while staring directly at your uterus.&lt;/p&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;&lt;ChoiceModule
                 &quot;Play it cool&quot;
-                &quot;Get candid&quot;
+                &quot;Get cagey&quot;
                 &quot;None of their business&quot;
             &gt;&gt;
         &lt;/div&gt;
@@ -6519,7 +6545,7 @@ importScripts("/gsap.min.js");
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q4-family.jpg&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
         &lt;h1 class=&quot;scenario__title&quot;&gt;Family Planning&lt;/h1&gt;
-            &lt;p class=&quot;scenario__desc&quot;&gt;At the EOY forecast, the COO casually asks if you&#39;ll be “on leave” soon. While staring directly at your uterus.&lt;/p&gt;
+            &lt;p class=&quot;scenario__desc&quot;&gt;At the EOY forecasting meeting, the COO casually asks if you expect to be “on leave” in the next 18 months — while staring directly at your uterus.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -6536,7 +6562,7 @@ importScripts("/gsap.min.js");
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="74" name="Get candid" tags="" position="600,800" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="74" name="Get cagey" tags="" position="600,800" size="100,100">&lt;&lt;script&gt;&gt;
     UIBar.show();
     UIBar.unstow();
 &lt;&lt;/script&gt;&gt;
@@ -6548,14 +6574,14 @@ importScripts("/gsap.min.js");
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q4-family.jpg&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
         &lt;h1 class=&quot;scenario__title&quot;&gt;Family Planning&lt;/h1&gt;
-        &lt;p class=&quot;scenario__desc&quot;&gt;At the EOY forecast, the COO casually asks if you&#39;ll be “on leave” soon. While staring directly at your uterus.&lt;/p&gt;
+        &lt;p class=&quot;scenario__desc&quot;&gt;At the EOY forecasting meeting, the COO casually asks if you expect to be “on leave” in the next 18 months — while staring directly at your uterus.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
     &lt;div class=&quot;scenario scenario--alert&quot;&gt;
         &lt;img class=&quot;scenario__icon&quot; src=&quot;img/warn1.png&quot;/&gt;
         &lt;div class=&quot;scenario__text scenario__text--alert&quot;&gt;
-            &lt;p class=&quot;scenario__desc scenario__desc--alert&quot;&gt;You respond with a simple “maybe” and leave no room for follow-ups. Honesty is the best policy, right?&lt;/p&gt;
+            &lt;p class=&quot;scenario__desc scenario__desc--alert&quot;&gt;You respond with a simple “maybe” and leave no room for follow-ups. Equivocation is the best policy, right? &lt;/p&gt;
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;btn-area btn-area--alert&quot;&gt;
@@ -6577,7 +6603,7 @@ importScripts("/gsap.min.js");
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q4-family.jpg&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
         &lt;h1 class=&quot;scenario__title&quot;&gt;Family Planning&lt;/h1&gt;
-        &lt;p class=&quot;scenario__desc&quot;&gt;At the EOY forecast, the COO casually asks if you&#39;ll be “on leave” soon. While staring directly at your uterus.&lt;/p&gt;
+        &lt;p class=&quot;scenario__desc&quot;&gt;At the EOY forecasting meeting, the COO casually asks if you expect to be “on leave” in the next 18 months — while staring directly at your uterus.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -6625,12 +6651,6 @@ importScripts("/gsap.min.js");
                 &lt;p class=&quot;calendar__heading&quot;&gt;Now starting&lt;/p&gt;
                 &lt;p class=&quot;calendar__quarter&quot;&gt;Q$quarter&lt;/p&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;tracker&quot;&gt;
-                &lt;div class=&quot;tracker-module&quot;&gt;
-                    &lt;p class=&quot;tracker-module__number&quot;&gt;$remaining&lt;/p&gt;
-                    &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
             &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
@@ -6644,7 +6664,7 @@ importScripts("/gsap.min.js");
             &lt;/div&gt;
             &lt;&lt;ChoiceModule
                 &quot;h|Prepare a PowerPoint|Persuasive slides|Muddled slides&quot;
-                &quot;Keep it casual&quot;
+                &quot;Conversational Approach&quot;
                 &quot;s|Threaten to walk|Big gamble|Sorry you&quot;
             &gt;&gt;
         &lt;/div&gt;
@@ -6710,7 +6730,7 @@ importScripts("/gsap.min.js");
             &lt;&lt;/link&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="79" name="Keep it casual" tags="" position="600,800" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="79" name="Conversational Approach" tags="" position="600,800" size="100,100">&lt;&lt;script&gt;&gt;
     UIBar.show();
     UIBar.unstow();
 &lt;&lt;/script&gt;&gt;
@@ -6828,12 +6848,6 @@ importScripts("/gsap.min.js");
                 &lt;p class=&quot;calendar__heading&quot;&gt;Now starting&lt;/p&gt;
                 &lt;p class=&quot;calendar__quarter&quot;&gt;Q$quarter&lt;/p&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;tracker&quot;&gt;
-                &lt;div class=&quot;tracker-module&quot;&gt;
-                    &lt;p class=&quot;tracker-module__number&quot;&gt;$remaining&lt;/p&gt;
-                    &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
             &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
@@ -6869,7 +6883,7 @@ importScripts("/gsap.min.js");
     &lt;div class=&quot;scenario scenario--alert&quot;&gt;
         &lt;img class=&quot;scenario__icon&quot; src=&quot;img/warn1.png&quot;/&gt;
         &lt;div class=&quot;scenario__text scenario__text--alert&quot;&gt;
-            &lt;p class=&quot;scenario__desc scenario__desc--alert&quot;&gt;Your command of the facts makes you sound neutral and measured. But somehow, it still comes off like a lecture.&lt;/p&gt;
+            &lt;p class=&quot;scenario__desc scenario__desc--alert&quot;&gt;Your command of the facts makes you sound neutral and measured, like a news anchor who can’t be bought. It’s giving Libra.&lt;/p&gt;
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;btn-area btn-area--alert&quot;&gt;
@@ -6997,12 +7011,6 @@ importScripts("/gsap.min.js");
                 &lt;p class=&quot;calendar__heading&quot;&gt;Now starting&lt;/p&gt;
                 &lt;p class=&quot;calendar__quarter&quot;&gt;Q$quarter&lt;/p&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;tracker&quot;&gt;
-                &lt;div class=&quot;tracker-module&quot;&gt;
-                    &lt;p class=&quot;tracker-module__number&quot;&gt;$remaining&lt;/p&gt;
-                    &lt;p class=&quot;tracker-module__label&quot;&gt;remaining&lt;/p&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;content&quot; id=&quot;scenario-area&quot;&gt;
             &lt;&lt;set $quarterLabel to &quot;YOU ARE IN: Q&quot;+ $quarter&gt;&gt;
@@ -7011,7 +7019,7 @@ importScripts("/gsap.min.js");
                 &lt;img class=&quot;scenario__img&quot; src=&quot;img/q4-screen.jpg&quot;/&gt;
                 &lt;div class=&quot;scenario__text&quot;&gt;
                     &lt;h1 class=&quot;scenario__title&quot;&gt;Screen Bare&lt;/h1&gt;
-                    &lt;p class=&quot;scenario__desc&quot;&gt;While screen-sharing on a prep call for the Q3 earnings report, you accidentally reveal your bulk order for Charmin double-ply.&lt;/p&gt;
+                    &lt;p class=&quot;scenario__desc&quot;&gt;While screen-sharing on a prep call for the Q4 earnings report, you accidentally reveal your bulk order for Charmin double-ply.&lt;/p&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;&lt;ChoiceModule
@@ -7031,7 +7039,7 @@ importScripts("/gsap.min.js");
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q4-screen.jpg&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
         &lt;h1 class=&quot;scenario__title&quot;&gt;Screen Bare&lt;/h1&gt;
-        &lt;p class=&quot;scenario__desc&quot;&gt;While screen-sharing on a prep call for the Q3 earnings report, you accidentally reveal your bulk order for Charmin double-ply.&lt;/p&gt;
+        &lt;p class=&quot;scenario__desc&quot;&gt;While screen-sharing on a prep call for the Q4 earnings report, you accidentally reveal your bulk order for Charmin double-ply.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -7060,7 +7068,7 @@ importScripts("/gsap.min.js");
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q4-screen.jpg&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
         &lt;h1 class=&quot;scenario__title&quot;&gt;Screen Bare&lt;/h1&gt;
-        &lt;p class=&quot;scenario__desc&quot;&gt;While screen-sharing on a prep call for the Q3 earnings report, you accidentally reveal your bulk order for Charmin double-ply.&lt;/p&gt;
+        &lt;p class=&quot;scenario__desc&quot;&gt;While screen-sharing on a prep call for the Q4 earnings report, you accidentally reveal your bulk order for Charmin double-ply.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -7089,7 +7097,7 @@ importScripts("/gsap.min.js");
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q4-screen.jpg&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
         &lt;h1 class=&quot;scenario__title&quot;&gt;Screen Bare&lt;/h1&gt;
-        &lt;p class=&quot;scenario__desc&quot;&gt;While screen-sharing on a prep call for the Q3 earnings report, you accidentally reveal your bulk order for Charmin double-ply.&lt;/p&gt;
+        &lt;p class=&quot;scenario__desc&quot;&gt;While screen-sharing on a prep call for the Q4 earnings report, you accidentally reveal your bulk order for Charmin double-ply.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -7118,7 +7126,7 @@ importScripts("/gsap.min.js");
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q4-screen.jpg&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
         &lt;h1 class=&quot;scenario__title&quot;&gt;Screen Bare&lt;/h1&gt;
-        &lt;p class=&quot;scenario__desc&quot;&gt;While screen-sharing on a prep call for the Q3 earnings report, you accidentally reveal your bulk order for Charmin double-ply.&lt;/p&gt;
+        &lt;p class=&quot;scenario__desc&quot;&gt;While screen-sharing on a prep call for the Q4 earnings report, you accidentally reveal your bulk order for Charmin double-ply.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -7192,7 +7200,7 @@ importScripts("/gsap.min.js");
 &lt;div class=&quot;menu-bar menu-bar--login&quot;&gt;
     &lt;img id=&quot;l-hamburger&quot; class=&quot;menu-bar__btn&quot; src=&quot;img/menu.svg&quot; /&gt;
     &lt;img class=&quot;menu-bar__logo&quot; src=&quot;img/logo.png&quot; /&gt;
-    &lt;a href=&quot;https://chief.com&quot; class=&quot;menu-bar__heading&quot;&gt;A corporate survival game by&lt;img src=&quot;img/chief.svg&quot;/&gt;&lt;/a&gt;
+    &lt;a href=&quot;https://chief.com&quot; class=&quot;menu-bar__heading&quot;&gt;A workplace survival game by&lt;img src=&quot;img/chief.svg&quot;/&gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;div id=&quot;l-menu-overlay&quot; class=&quot;menu-overlay menu-overlay--hidden&quot;&gt;
     &lt;ul id=&quot;l-mobile-menu&quot; class=&quot;mobile-menu&quot;&gt;
@@ -7396,7 +7404,7 @@ importScripts("/gsap.min.js");
 		if (typeof gsap !== &quot;undefined&quot;) {
 			clearInterval(waitForGSAP);
 			var tl = gsap.timeline();
-			tl.from(&quot;.notification&quot;, {delay: 0.5, stagger: 1, duration: 0.5, y: 25, opacity: 0, ease: &quot;back.out&quot;, onComplete: startUnlock});
+			tl.from(&quot;.notification&quot;, {delay: 0.5, stagger: 0.75, duration: 0.5, y: 25, opacity: 0, ease: &quot;back.out&quot;, onComplete: startUnlock});
 			tl.fromTo(&quot;#start-btn&quot;, {y:15}, {y:0, opacity: 1, duration: 0.25});
 		}
 	}, 100);
@@ -7421,8 +7429,8 @@ importScripts("/gsap.min.js");
             let screensaverTimer;
             let screensaverInterval;
 
-            const idleTime = 15000; // 15 seconds
-            const imageDisplayInterval = 5000; // 5 second between images
+            const idleTime = 12000; // 12 seconds
+            const imageDisplayInterval = 3000; // 5 second between images
             const images = [
                 &#39;/img/msg1.png&#39;,
                 &#39;/img/msg2.png&#39;,
@@ -7674,7 +7682,7 @@ importScripts("/gsap.min.js");
                 if(document.getElementById(&#39;scenario-area&#39;)) {
                     var tl = gsap.timeline();
                     tl.from(&quot;#scenario-area&quot;, {duration: 0.5, y: 25, ease: &quot;back.out&quot;}, 0);
-                    tl.to(&quot;#quarter&quot;, {duration: 0.25, opacity: 0, y: -25, ease: &quot;back.out&quot;, display:&quot;none&quot;}, 1.25);
+                    tl.to(&quot;#quarter&quot;, {duration: 0.5, opacity: 0, y: -25, ease: &quot;back.out&quot;, display:&quot;none&quot;}, 1.25);
                 }
                 if(document.getElementById(&#39;transition&#39;)) {
                     var tl = gsap.timeline();
@@ -7693,6 +7701,14 @@ importScripts("/gsap.min.js");
                 setInterval(() =&gt; {
                     animation.restart();
                 }, 15000);
+
+                let about = document.querySelector(&quot;#about-btn&quot;);
+                let aboutAnimation = gsap.to(&quot;#about-btn&quot;, { paused: true, duration: 0.1, rotation: 10, yoyo: true, repeat: 5, ease: &quot;power1.inOut&quot; });
+                about.addEventListener(&quot;mouseenter&quot;, () =&gt; aboutAnimation.restart());
+
+                let tut = document.querySelector(&quot;#tut-btn&quot;);
+                let tutAnimation = gsap.to(&quot;#tut-btn&quot;, { paused: true, duration: 0.1, rotation: 10, yoyo: true, repeat: 5, ease: &quot;power1.inOut&quot; });
+                tut.addEventListener(&quot;mouseenter&quot;, () =&gt; tutAnimation.restart());
             }
         }, 100);
     &lt;&lt;/script&gt;&gt;
@@ -7724,7 +7740,7 @@ importScripts("/gsap.min.js");
 &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="98" name="StoryCaption" tags="StoryInit" position="500,100" size="100,100">&lt;div class=&quot;menu-bar&quot;&gt;
     &lt;img id=&quot;hamburger&quot; class=&quot;menu-bar__btn&quot; src=&quot;img/menu.svg&quot; /&gt;
     &lt;img class=&quot;menu-bar__logo&quot; src=&quot;img/logo.png&quot; /&gt;
-    &lt;a href=&quot;https://chief.com&quot; class=&quot;menu-bar__heading&quot;&gt;A corporate survival game by&lt;img src=&quot;img/chief.svg&quot;/&gt;&lt;/a&gt;
+    &lt;a href=&quot;https://chief.com&quot; class=&quot;menu-bar__heading&quot;&gt;A workplace survival game by&lt;img src=&quot;img/chief.svg&quot;/&gt;&lt;/a&gt;
 &lt;/div&gt;
 
 &lt;div id=&quot;desktop&quot; class=&quot;icon-view&quot;&gt;
@@ -7819,6 +7835,12 @@ importScripts("/gsap.min.js");
     &lt;&lt;set $orientation to Math.clamp($orientation += Number($args[3]), -8, 8)&gt;&gt;
 	&lt;&lt;set $energyDelta to $args[0]&gt;&gt;
 	&lt;&lt;set $approvalDelta to $args[1]&gt;&gt;
+	&lt;&lt;if $energyDelta &gt; 0&gt;&gt;
+		&lt;&lt;set $energyDelta to &quot;+&quot; + $energyDelta&gt;&gt;
+	&lt;&lt;/if&gt;&gt;
+	&lt;&lt;if $approvalDelta &gt; 0&gt;&gt;
+		&lt;&lt;set $approvalDelta to &quot;+&quot; + $approvalDelta&gt;&gt;
+	&lt;&lt;/if&gt;&gt;
 	&lt;&lt;script&gt;&gt;
         $(document).ready(function() {
             $(&quot;#energyNotif p&quot;).text(State.getVar(&quot;$energyDelta&quot;).toString());
@@ -8092,7 +8114,7 @@ importScripts("/gsap.min.js");
                 &lt;p&gt;$energyNotif&lt;/p&gt;
             &lt;/div&gt;
             &lt;div class=&quot;resource-meter__label&quot;&gt;
-                &lt;p class=&quot;resource-meter__name&quot;&gt;Wellbeing&lt;/p&gt;
+                &lt;p class=&quot;resource-meter__name&quot;&gt;Well-being&lt;/p&gt;
             &lt;/div&gt;
             &lt;&lt;showmeter &#39;energy&#39; &#39;_energy / _maxEnergy&#39; /&gt;&gt;
         &lt;/div&gt;
@@ -8101,7 +8123,7 @@ importScripts("/gsap.min.js");
                 &lt;p&gt;$approvalNotif&lt;/p&gt;
             &lt;/div&gt;
             &lt;div class=&quot;resource-meter__label&quot;&gt;
-                &lt;p&gt;Likability&lt;/p&gt;
+                &lt;p&gt;Likeability&lt;/p&gt;
             &lt;/div&gt;
             &lt;&lt;showmeter &#39;approval&#39; &#39;_approval / _maxApproval&#39; /&gt;&gt;
         &lt;/div&gt;

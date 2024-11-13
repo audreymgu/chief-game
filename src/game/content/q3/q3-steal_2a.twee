@@ -12,7 +12,7 @@
 	<img class="scenario__img" src="img/q3-steal.jpg"/>
 	<div class="scenario__text">
 		<h1 class="scenario__title">Stolen Valor</h1>
-		<p class="scenario__desc">You propose a brilliant plan during a strategy session —then Mark proposes it again 10 minutes later.</p>
+		<p class="scenario__desc">You propose a brilliant plan during a strategy session — then Mark proposes it again 10 minutes later.</p>
 	</div>
 </div>
 <div class="alert">

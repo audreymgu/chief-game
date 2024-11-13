@@ -20,8 +20,8 @@
             let screensaverTimer;
             let screensaverInterval;
 
-            const idleTime = 15000; // 15 seconds
-            const imageDisplayInterval = 5000; // 5 second between images
+            const idleTime = 12000; // 12 seconds
+            const imageDisplayInterval = 3000; // 5 second between images
             const images = [
                 '/img/msg1.png',
                 '/img/msg2.png',

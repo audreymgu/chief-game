@@ -6,6 +6,12 @@
     <<set $orientation to Math.clamp($orientation += Number($args[3]), -8, 8)>>
 	<<set $energyDelta to $args[0]>>
 	<<set $approvalDelta to $args[1]>>
+	<<if $energyDelta > 0>>
+		<<set $energyDelta to "+" + $energyDelta>>
+	<</if>>
+	<<if $approvalDelta > 0>>
+		<<set $approvalDelta to "+" + $approvalDelta>>
+	<</if>>
 	<<script>>
         $(document).ready(function() {
             $("#energyNotif p").text(State.getVar("$energyDelta").toString());

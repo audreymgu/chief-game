@@ -10,7 +10,7 @@
                 <p>$energyNotif</p>
             </div>
             <div class="resource-meter__label">
-                <p class="resource-meter__name">Wellbeing</p>
+                <p class="resource-meter__name">Well-being</p>
             </div>
             <<showmeter 'energy' '_energy / _maxEnergy' />>
         </div>
@@ -19,7 +19,7 @@
                 <p>$approvalNotif</p>
             </div>
             <div class="resource-meter__label">
-                <p>Likability</p>
+                <p>Likeability</p>
             </div>
             <<showmeter 'approval' '_approval / _maxApproval' />>
         </div>

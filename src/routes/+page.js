@@ -30,7 +30,7 @@ export function load({ url }) {
         ogDescription = "I’ve hit revenue targets by missing weekends and weddings while pounding triple-shot espressos and gas station No-Doze.";
         ogImage = 'https://thecorporatetrail.chief.com/img/e-profit_share.jpg';
     } else if (result === 'gre') {
-        ogTitle = "🧯🔥 I AM THE EXECUTIVE FIREFIGHTER 🧯🔥 - The Corporate Trail";
+        ogTitle = "🧯🔥 I AM THE RESIDENT FIREFIGHTER 🧯🔥 - The Corporate Trail";
         ogDescription = "I solve all sorts of problems — even the ones I have nothing to do with.";
         ogImage = 'https://thecorporatetrail.chief.com/img/e-fire_share.jpg';
     } else if (result === 'got') {
@@ -43,7 +43,7 @@ export function load({ url }) {
         ogImage = 'https://thecorporatetrail.chief.com/img/e-quit_share.jpg'; 
     } else {
         ogTitle = "THE CORPORATE TRAIL";
-        ogDescription = "A corporate survival game by Chief";
+        ogDescription = "A workplace survival game by Chief";
         ogImage = 'https://thecorporatetrail.chief.com/img/e-violence.jpg';
     }
 

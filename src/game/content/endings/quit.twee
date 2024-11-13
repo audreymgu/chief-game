@@ -16,7 +16,10 @@
         <div class="content content--ending">
             <<TitleBar "🦎🦎 YOU QUIT 🦎🦎">>
             <div class="ending">
-                <img class="ending__img" src="img/e-quit.jpg"/>
+                <div class="img-box">
+                    <img class="img-box__img" src="img/e-quit.jpg"/>
+                    <img class="img-box__img img-box__img--hover" @src="$endingImage"/>
+                </div>
                 <div class="ending__text">
                     <h1 class="ending__title">$user,You Quit</h1>
                     <p class="ending__desc">Spend the best years of your life “circling back” over stale office coffee? No thanks. Time to pack it up, blow it up, and move to Costa Rica.

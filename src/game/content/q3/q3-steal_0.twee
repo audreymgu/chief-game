@@ -30,12 +30,6 @@
                 <p class="calendar__heading">Now starting</p>
                 <p class="calendar__quarter">Q$quarter</p>
             </div>
-            <div class="tracker">
-                <div class="tracker-module">
-                    <p class="tracker-module__number">$remaining</p>
-                    <p class="tracker-module__label">remaining</p>
-                </div>
-            </div>
         </div>
         <div class="content" id="scenario-area">
             <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
@@ -44,11 +38,11 @@
                 <img class="scenario__img" src="img/q3-steal.jpg"/>
                 <div class="scenario__text">
                     <h1 class="scenario__title">Stolen Valor</h1>
-                    <p class="scenario__desc">You propose a brilliant plan during a strategy session —then Mark proposes it again 10 minutes later.</p>
+                    <p class="scenario__desc">You propose a brilliant plan during a strategy session — then Mark proposes it again 10 minutes later.</p>
                 </div>
             </div>
             <<ChoiceModule
-                "Smile & nod"
+                "Let this one go"
                 "h|Put your foot down|You demolish|Too far"
             >>
         </div>

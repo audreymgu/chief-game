@@ -28,12 +28,6 @@
                 <p class="calendar__heading">Now starting</p>
                 <p class="calendar__quarter">Q$quarter</p>
             </div>
-            <div class="tracker">
-                <div class="tracker-module">
-                    <p class="tracker-module__number">$remaining</p>
-                    <p class="tracker-module__label">remaining</p>
-                </div>
-            </div>
         </div>
         <div class="content" id="scenario-area">
             <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
@@ -42,12 +36,12 @@
                 <img class="scenario__img" src="img/q4-family.jpg"/>
                 <div class="scenario__text">
                     <h1 class="scenario__title">Family Planning</h1>
-                    <p class="scenario__desc">At the EOY forecast, the COO casually asks if you'll be “on leave” soon. While staring directly at your uterus.</p>
+                    <p class="scenario__desc">At the EOY forecasting meeting, the COO casually asks if you expect to be “on leave” in the next 18 months — while staring directly at your uterus.</p>
                 </div>
             </div>
             <<ChoiceModule
                 "Play it cool"
-                "Get candid"
+                "Get cagey"
                 "None of their business"
             >>
         </div>

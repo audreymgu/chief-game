@@ -18,7 +18,10 @@
         <div class="content content--ending">
             <<TitleBar "💸🩸 YOU BLEED FOR PROFIT 💸🩸">>
             <div class="ending">
-                <img class="ending__img" src="img/e-profit.jpg"/>
+                <div class="img-box">
+                    <img class="img-box__img" src="img/e-profit.jpg"/>
+                    <img class="img-box__img img-box__img--hover" @src="$endingImage"/>
+                </div>
                 <div class="ending__text">
                     <h1 class="ending__title">$user,You Bleed for Incremental Profit</h1>
                     <p class="ending__desc">Your work ethic is unmatched, but at what cost? You’ve hit revenue targets by missing weekends fueled by triple-shot espressos and gas station No-Doze. The job won’t be done until value is returned to shareholders.</p>

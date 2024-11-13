@@ -29,12 +29,6 @@
                 <p class="calendar__heading">Now starting</p>
                 <p class="calendar__quarter">Q$quarter</p>
             </div>
-            <div class="tracker">
-                <div class="tracker-module">
-                    <p class="tracker-module__number">$remaining</p>
-                    <p class="tracker-module__label">remaining</p>
-                </div>
-            </div>
         </div>
         <div class="content" id="scenario-area">
             <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>

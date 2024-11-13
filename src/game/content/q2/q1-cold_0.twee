@@ -29,12 +29,6 @@
                 <p class="calendar__heading">Now starting</p>
                 <p class="calendar__quarter">Q$quarter</p>
             </div>
-            <div class="tracker">
-                <div class="tracker-module">
-                    <p class="tracker-module__number">$remaining</p>
-                    <p class="tracker-module__label">remaining</p>
-                </div>
-            </div>
         </div>
         <div class="content" id="scenario-area">
             <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
@@ -43,7 +37,7 @@
                 <img class="scenario__img" src="img/q1-cold.jpg"/>
                 <div class="scenario__text">
                     <h1 class="scenario__title">What's Cooler Than Being Cold?</h1>
-                    <p class="scenario__desc">The building is heated like a Victorian prison. Your besuited male colleagues don’t seem to notice.</p>
+                    <p class="scenario__desc">The building is heated like a Victorian prison. Your besuited colleagues don’t seem to notice.</p>
                 </div>
             </div>
             <<ChoiceModule

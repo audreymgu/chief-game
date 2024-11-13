@@ -18,7 +18,10 @@
         <div class="content content--ending">
             <<TitleBar "🔪🔪 YOU CHOSE VIOLENCE 🔪🔪">>
             <div class="ending">
-                <img class="ending__img" src="img/e-violence.jpg"/>
+                <div class="img-box">
+                    <img class="img-box__img" src="img/e-violence.jpg"/>
+                    <img class="img-box__img img-box__img--hover" @src="$endingImage"/>
+                </div>
                 <div class="ending__text">
                     <h1 class="ending__title">$user,You Chose Violence</h1>
                     <p class="ending__desc">For you to win, someone else has to lose. And so what if you stab your teammate in the back? There are no teams on The Corporate Trail.</p>

@@ -18,7 +18,10 @@
         <div class="content content--ending">
             <<TitleBar "💗💗 YOU ARE BELOVED 💗💗">>
             <div class="ending">
-                <img class="ending__img" src="img/e-beloved.jpg"/>
+                <div class="img-box">
+                    <img class="img-box__img" src="img/e-beloved.jpg"/>
+                    <img class="img-box__img img-box__img--hover" @src="$endingImage"/>
+                </div>
                 <div class="ending__text">
                     <h1 class="ending__title">$user,You're a Beloved Office Presence</h1>
                     <p class="ending__desc">People love working with you, and they trust that you’ve got their back. Just be prepared for a calendar filled with gratuitous coffee chats and one-on-ones.</p>

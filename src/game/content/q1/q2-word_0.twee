@@ -30,12 +30,6 @@
                 <p class="calendar__heading">Now starting</p>
                 <p class="calendar__quarter">Q$quarter</p>
             </div>
-            <div class="tracker">
-                <div class="tracker-module">
-                    <p class="tracker-module__number">$remaining</p>
-                    <p class="tracker-module__label">remaining</p>
-                </div>
-            </div>
         </div>
         <div class="content" id="scenario-area">
             <<set $quarterLabel to "YOU ARE IN: Q"+ $quarter>>
@@ -50,7 +44,7 @@
             <<ChoiceModule
                 "Sorry I care, Brian"
                 "h|Pants him with data|The numbers|You fumble"
-                "s|Verbal judo him|You suggest|You stammer"
+                "s|Judo him verbally|You suggest|You stammer"
             >>
         </div>
 </div>

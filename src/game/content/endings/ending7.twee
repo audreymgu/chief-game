@@ -16,11 +16,14 @@
     </svg>
 	<div class="rel-wrapper">
         <div class="content content--ending">
-            <<TitleBar "🧯🔥 YOU ARE THE EXECUTIVE FIREFIGHTER 🧯🔥">>
+            <<TitleBar "🧯🔥 YOU ARE THE RESIDENT FIREFIGHTER 🧯🔥">>
             <div class="ending">
-                <img class="ending__img" src="img/e-fire.jpg"/>
+                <div class="img-box">
+                    <img class="img-box__img" src="img/e-fire.jpg"/>
+                    <img class="img-box__img img-box__img--hover" @src="$endingImage"/>
+                </div>
                 <div class="ending__text">
-                    <h1 class="ending__title">$user,You Are the Executive Firefighter</h1>
+                    <h1 class="ending__title">$user,You Are the Resident Firefighter</h1>
                     <p class="ending__desc">You solve all sorts of problems — even the ones you have nothing to do with. People appreciate your dependability, but after fighting so many dumpster fires, you’re at risk of burning out.</p>
                     <div class="ending__replay">
                         🕹️

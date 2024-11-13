@@ -795,6 +795,9 @@ h1 {
   .img-box {
     height: 278px;
   }
+  .img-box:hover .img-box__img--hover {
+    display: block;
+  }
 }
 .img-box__img {
   width: 100%;
@@ -817,9 +820,6 @@ h1 {
   left: 0;
   top: 0;
   display: none;
-}
-.img-box:hover .img-box__img--hover {
-  display: block;
 }
 
 .btn-area {

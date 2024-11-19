@@ -54,8 +54,8 @@
 		if (typeof gsap !== "undefined") {
 			clearInterval(waitForGSAP);
 			var tl = gsap.timeline();
-			tl.from(".notification", {delay: 0.5, stagger: 0.75, duration: 0.5, y: 25, opacity: 0, ease: "back.out", onComplete: startUnlock});
-			tl.fromTo("#start-btn", {y:15}, {y:0, opacity: 1, duration: 0.25});
+			tl.fromTo("#start-btn", {y:15}, {y:0, opacity: 1, duration: 0.25, delay: 0.75, onComplete: startUnlock},0);
+			tl.from(".notification", {delay: 1.75, stagger: 1, duration: 0.75, y: 25, opacity: 0, ease: "back.out"},0);
 		}
 	}, 100);
 <</script>>

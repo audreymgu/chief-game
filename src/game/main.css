@@ -628,6 +628,7 @@ h1 {
     height: unset;
     width: 265px;
     max-height: unset;
+    border-width: 1px;
   }
 }
 .scenario__icon {

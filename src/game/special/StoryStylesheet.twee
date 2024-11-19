@@ -618,9 +618,10 @@ h1 {
 }
 .scenario__img {
   width: 100%;
-  min-height: 250px;
-  max-height: 500px;
+  height: 215px;
   object-fit: cover;
+  border: 1px solid #2A2C41;
+  border-width: 1px 0 1px 0;
   align-self: start;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
@@ -628,7 +629,6 @@ h1 {
     height: unset;
     width: 265px;
     max-height: unset;
-    border: 1px solid #2A2C41;
   }
 }
 .scenario__icon {
@@ -703,7 +703,6 @@ h1 {
 }
 .ending__text {
   flex-grow: 1;
-  overflow-y: auto;
   font-size: 16px;
   padding-left: 8px;
   padding-top: 8px;
@@ -756,6 +755,7 @@ h1 {
 }
 .ending__replay {
   margin-top: 12px;
+  margin-bottom: 12px;
 }
 .ending__replay a {
   color: hsl(72deg, 93%, 30%);
@@ -803,10 +803,10 @@ h1 {
 .img-box__img {
   width: 100%;
   min-height: 150px;
-  max-height: 500px;
+  max-height: 300px;
   object-fit: cover;
   border: 1px solid #2A2C41;
-  border-width: 0 0 1px 0;
+  border-width: 1px 0 1px 0;
   align-self: start;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
@@ -860,13 +860,21 @@ h1 {
 
 .titlebar {
   color: white;
-  display: flex;
+  display: none;
   justify-content: space-between;
   height: 33px;
   text-align: center;
   border: 1px solid #2A2C41;
   padding: 3px;
   background-color: #2A2C41;
+}
+@media (min-width: 1200px) and (min-height: 850px) {
+  .titlebar {
+    display: flex;
+  }
+}
+.titlebar--show {
+  display: flex;
 }
 .titlebar__text {
   font-family: departure;
@@ -1047,12 +1055,13 @@ h1 {
 .class-selector {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
   margin-bottom: 0px;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   .class-selector {
     flex-direction: unset;
+    gap: 12px;
   }
 }
 
@@ -1061,7 +1070,7 @@ h1 {
   flex: 1 0 0;
   line-height: 1.1;
   border: solid hsl(60deg, 20%, 75%);
-  border-width: 1px 2px 2px 1px;
+  border-width: 1px 3px 3px 1px;
   display: flex;
   flex-direction: row;
   cursor: url("img/cursor2.svg"), pointer;
@@ -1095,7 +1104,7 @@ h1 {
 }
 .class--selected {
   border: solid black;
-  border-width: 1px 2px 2px 1px;
+  border-width: 1px 3px 3px 1px;
 }
 
 #textbox-user {
@@ -1230,7 +1239,7 @@ h1 {
 .login-window {
   padding: 8px 16px 16px 16px;
   border: 1px solid #2A2C41;
-  border-width: 0px 1px 1px 1px;
+  border-width: 1px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -1261,11 +1270,13 @@ h1 {
   margin-right: auto;
   padding: 4px;
   font-family: departure;
+  display: none;
   margin-bottom: 12px;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   .login-window__info {
     font-size: 14px;
+    display: block;
   }
 }
 
@@ -1728,6 +1739,11 @@ h1 {
 #notif1 {
   top: 100px;
 }
+@media (max-width: 375px) {
+  #notif1 {
+    top: 60px;
+  }
+}
 @media (min-width: 1200px) and (min-height: 850px) {
   #notif1 {
     left: -200px;
@@ -1738,6 +1754,11 @@ h1 {
 #notif2 {
   top: 230px;
 }
+@media (max-width: 375px) {
+  #notif2 {
+    top: 190px;
+  }
+}
 @media (min-width: 1200px) and (min-height: 850px) {
   #notif2 {
     right: -200px;
@@ -1747,6 +1768,11 @@ h1 {
 
 #notif3 {
   top: 360px;
+}
+@media (max-width: 375px) {
+  #notif3 {
+    top: 320px;
+  }
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   #notif3 {

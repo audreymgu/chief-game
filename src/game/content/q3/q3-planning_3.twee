@@ -19,7 +19,7 @@
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">Never a wrong answer. Even if it’s a bit 2000-and-late. Maybe you can follow it up with a team SoulCycle. You made an impression — whether it’s a good one is debatable.</p>
+            <p class="scenario__desc scenario__desc--alert">Never a wrong answer, even if it’s a bit 2000-and-late. Maybe you can follow it up with a team SoulCycle. You made an impression — whether it’s a good one is debatable.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

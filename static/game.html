@@ -724,9 +724,10 @@ h1 {
 }
 .scenario__img {
   width: 100%;
-  min-height: 250px;
-  max-height: 500px;
+  height: 215px;
   object-fit: cover;
+  border: 1px solid #2A2C41;
+  border-width: 1px 0 1px 0;
   align-self: start;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
@@ -734,7 +735,6 @@ h1 {
     height: unset;
     width: 265px;
     max-height: unset;
-    border: 1px solid #2A2C41;
   }
 }
 .scenario__icon {
@@ -809,7 +809,6 @@ h1 {
 }
 .ending__text {
   flex-grow: 1;
-  overflow-y: auto;
   font-size: 16px;
   padding-left: 8px;
   padding-top: 8px;
@@ -862,6 +861,7 @@ h1 {
 }
 .ending__replay {
   margin-top: 12px;
+  margin-bottom: 12px;
 }
 .ending__replay a {
   color: hsl(72deg, 93%, 30%);
@@ -909,10 +909,10 @@ h1 {
 .img-box__img {
   width: 100%;
   min-height: 150px;
-  max-height: 500px;
+  max-height: 300px;
   object-fit: cover;
   border: 1px solid #2A2C41;
-  border-width: 0 0 1px 0;
+  border-width: 1px 0 1px 0;
   align-self: start;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
@@ -966,13 +966,21 @@ h1 {
 
 .titlebar {
   color: white;
-  display: flex;
+  display: none;
   justify-content: space-between;
   height: 33px;
   text-align: center;
   border: 1px solid #2A2C41;
   padding: 3px;
   background-color: #2A2C41;
+}
+@media (min-width: 1200px) and (min-height: 850px) {
+  .titlebar {
+    display: flex;
+  }
+}
+.titlebar--show {
+  display: flex;
 }
 .titlebar__text {
   font-family: departure;
@@ -1153,12 +1161,13 @@ h1 {
 .class-selector {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
   margin-bottom: 0px;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   .class-selector {
     flex-direction: unset;
+    gap: 12px;
   }
 }
 
@@ -1167,7 +1176,7 @@ h1 {
   flex: 1 0 0;
   line-height: 1.1;
   border: solid hsl(60deg, 20%, 75%);
-  border-width: 1px 2px 2px 1px;
+  border-width: 1px 3px 3px 1px;
   display: flex;
   flex-direction: row;
   cursor: url("img/cursor2.svg"), pointer;
@@ -1201,7 +1210,7 @@ h1 {
 }
 .class--selected {
   border: solid black;
-  border-width: 1px 2px 2px 1px;
+  border-width: 1px 3px 3px 1px;
 }
 
 #textbox-user {
@@ -1336,7 +1345,7 @@ h1 {
 .login-window {
   padding: 8px 16px 16px 16px;
   border: 1px solid #2A2C41;
-  border-width: 0px 1px 1px 1px;
+  border-width: 1px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -1367,11 +1376,13 @@ h1 {
   margin-right: auto;
   padding: 4px;
   font-family: departure;
+  display: none;
   margin-bottom: 12px;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   .login-window__info {
     font-size: 14px;
+    display: block;
   }
 }
 
@@ -1834,6 +1845,11 @@ h1 {
 #notif1 {
   top: 100px;
 }
+@media (max-width: 375px) {
+  #notif1 {
+    top: 60px;
+  }
+}
 @media (min-width: 1200px) and (min-height: 850px) {
   #notif1 {
     left: -200px;
@@ -1844,6 +1860,11 @@ h1 {
 #notif2 {
   top: 230px;
 }
+@media (max-width: 375px) {
+  #notif2 {
+    top: 190px;
+  }
+}
 @media (min-width: 1200px) and (min-height: 850px) {
   #notif2 {
     right: -200px;
@@ -1853,6 +1874,11 @@ h1 {
 
 #notif3 {
   top: 360px;
+}
+@media (max-width: 375px) {
+  #notif3 {
+    top: 320px;
+  }
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   #notif3 {
@@ -2693,9 +2719,10 @@ h1 {
 }
 .scenario__img {
   width: 100%;
-  min-height: 250px;
-  max-height: 500px;
+  height: 215px;
   object-fit: cover;
+  border: 1px solid #2A2C41;
+  border-width: 1px 0 1px 0;
   align-self: start;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
@@ -2703,7 +2730,6 @@ h1 {
     height: unset;
     width: 265px;
     max-height: unset;
-    border: 1px solid #2A2C41;
   }
 }
 .scenario__icon {
@@ -2778,7 +2804,6 @@ h1 {
 }
 .ending__text {
   flex-grow: 1;
-  overflow-y: auto;
   font-size: 16px;
   padding-left: 8px;
   padding-top: 8px;
@@ -2831,6 +2856,7 @@ h1 {
 }
 .ending__replay {
   margin-top: 12px;
+  margin-bottom: 12px;
 }
 .ending__replay a {
   color: hsl(72deg, 93%, 30%);
@@ -2878,10 +2904,10 @@ h1 {
 .img-box__img {
   width: 100%;
   min-height: 150px;
-  max-height: 500px;
+  max-height: 300px;
   object-fit: cover;
   border: 1px solid #2A2C41;
-  border-width: 0 0 1px 0;
+  border-width: 1px 0 1px 0;
   align-self: start;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
@@ -2935,13 +2961,21 @@ h1 {
 
 .titlebar {
   color: white;
-  display: flex;
+  display: none;
   justify-content: space-between;
   height: 33px;
   text-align: center;
   border: 1px solid #2A2C41;
   padding: 3px;
   background-color: #2A2C41;
+}
+@media (min-width: 1200px) and (min-height: 850px) {
+  .titlebar {
+    display: flex;
+  }
+}
+.titlebar--show {
+  display: flex;
 }
 .titlebar__text {
   font-family: departure;
@@ -3122,12 +3156,13 @@ h1 {
 .class-selector {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
   margin-bottom: 0px;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   .class-selector {
     flex-direction: unset;
+    gap: 12px;
   }
 }
 
@@ -3136,7 +3171,7 @@ h1 {
   flex: 1 0 0;
   line-height: 1.1;
   border: solid hsl(60deg, 20%, 75%);
-  border-width: 1px 2px 2px 1px;
+  border-width: 1px 3px 3px 1px;
   display: flex;
   flex-direction: row;
   cursor: url("img/cursor2.svg"), pointer;
@@ -3170,7 +3205,7 @@ h1 {
 }
 .class--selected {
   border: solid black;
-  border-width: 1px 2px 2px 1px;
+  border-width: 1px 3px 3px 1px;
 }
 
 #textbox-user {
@@ -3305,7 +3340,7 @@ h1 {
 .login-window {
   padding: 8px 16px 16px 16px;
   border: 1px solid #2A2C41;
-  border-width: 0px 1px 1px 1px;
+  border-width: 1px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -3336,11 +3371,13 @@ h1 {
   margin-right: auto;
   padding: 4px;
   font-family: departure;
+  display: none;
   margin-bottom: 12px;
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   .login-window__info {
     font-size: 14px;
+    display: block;
   }
 }
 
@@ -3803,6 +3840,11 @@ h1 {
 #notif1 {
   top: 100px;
 }
+@media (max-width: 375px) {
+  #notif1 {
+    top: 60px;
+  }
+}
 @media (min-width: 1200px) and (min-height: 850px) {
   #notif1 {
     left: -200px;
@@ -3813,6 +3855,11 @@ h1 {
 #notif2 {
   top: 230px;
 }
+@media (max-width: 375px) {
+  #notif2 {
+    top: 190px;
+  }
+}
 @media (min-width: 1200px) and (min-height: 850px) {
   #notif2 {
     right: -200px;
@@ -3822,6 +3869,11 @@ h1 {
 
 #notif3 {
   top: 360px;
+}
+@media (max-width: 375px) {
+  #notif3 {
+    top: 320px;
+  }
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   #notif3 {
@@ -4070,7 +4122,7 @@ importScripts("/gsap.min.js");
 ;!function(){"use strict";var t=!0,e=!1,s=!1,i={full:"#2ECC40",empty:"#FF4136",back:"#DDDDDD",height:"12px",width:"180px",animate:400,easing:"swing",text:"#111111",label:"",align:"center"},n=["center","left","right"],r=["swing","linear"];function a(t,e){return t&&"string"==typeof t&&(t=t.toLowerCase().trim())?t:e||""}function o(t){return t<.5?2*t*t:(4-2*t)*t-1}function l(t,e){if(!(this instanceof l))return new l(t,e);var s=clone(i);this.settings=Object.assign(s,t),this.settings.align=a(this.settings.align),this.settings.easing=a(this.settings.easing),n.includes(this.settings.align)||(this.settings.align="center"),r.includes(this.settings.easing)||(this.settings.easing="swing"),e=Number(e),Number.isNaN(e)&&(e=1),e=Math.clamp(e,0,1),this.value=e;var h=$(document.createElement("div")).addClass("chapel-meter").attr({"data-val":e,"data-label":this.settings.label}).css({position:"relative","background-color":this.settings.back,height:this.settings.height,width:this.settings.width,overflow:"hidden"}),g=$(document.createElement("div")).addClass("meter-label").css({top:0,right:0,"font-size":this.settings.height,"font-weight":"bold","line-height":"100%",width:"100%",height:"100%","vertical-align":"middle","text-align":this.settings.align,color:this.settings.text,"z-index":1,position:"relative",bottom:"100%"}).wiki(this.settings.label).appendTo(h),u=$(document.createElement("div")).addClass("meter-top").css({"background-color":this.settings.full,opacity:o(this.value),width:"100%",height:"100%","z-index":0}),c=$(document.createElement("div")).addClass("meter-bottom").css({position:"absolute",top:0,left:0,"background-color":this.settings.empty,opacity:1,width:100*this.value+"%",height:"100%","z-index":0}).append(u).appendTo(h);this.$element=h,this.$bars={top:u,bottom:c},this.$label=g,g.css("font-size",parseInt(h.css("height"),10)<parseInt($(".passage").css("font-size"),10)?h.css("height"):$(".passage").css("font-size")),g.css("line-height",h.css("height"))}Object.assign(l,{_list:new Map,is:function(t){return t instanceof l},has:function(t){return l._list.has(t)&&l.is(l._list.get(t))},get:function(t){return l.has(t)?l._list.get(t):null},del:function(t){l.has(t)&&l._list.delete(t)},add:function(t,s,i){if(!l.has(t)||e){Object.assign(s,{id:t});var n=new l(s,i);return l._list.set(t,n),n}console.error('Meter "'+t+'" already exists.')},_emit:function(t,e){l.is(t)&&t.$element.trigger({type:":"+e,meter:t})}}),Object.assign(l.prototype,{constructor:l,_label:function(t){var e=this;function s(){e.$label.empty().wiki(e.settings.label),e.$label.css("font-size",parseInt(e.$element.css("height"),10)<parseInt(e.$element.parent().css("font-size"),10)?e.$element.css("height"):e.$element.parent().css("font-size")),e.$label.css("line-height",e.$element.css("height"))}return t?setTimeout(s,Engine.minDomActionDelay):s(),this},_width:function(){var t=this;return this.$bars.bottom.animate({width:100*this.value+"%"},this.settings.animate,this.settings.easing,(function(){l._emit(t,"meter-animation-complete")})),this},_color:function(){return this.$bars.top.animate({opacity:o(this.value)},this.settings.animate,this.settings.easing),this},animate:function(){return l._emit(this,"meter-animation-start"),this._color()._width()._label()},val:function(t){return void 0!==t&&(t=Number(t),Number.isNaN(t)&&(t=1),t=Math.clamp(t,0,1),this.value=t,this.animate()),this.value},options:function(t){return t&&"object"==typeof t&&Object.assign(this.settings,t),this.settings},unwrap:function(){return this.$element[0]},place:function(t,e){var s=$(document.createElement("span"));return t instanceof jQuery||(t=$(t)),t[0]||console.warn("meter#place() -> no valid target"),e&&"object"==typeof e&&(e.classes&&(Array.isArray(e.classes)||"string"==typeof e.classes)&&s.addClass(e.classes),e.attr&&"object"==typeof e.attr&&s.attr(e.attr)),t.append(s.append(this.$element)),this._label(!0),this},on:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.on(t,e),this):this},one:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.one(t,e),this):this},off:function(t){return t=t&&"string"==typeof t&&t.trim()?t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "):".userland",this.$element.off(t),this},click:function(t,e){return this.$element.ariaClick(t,e),this},clone:function(){return new l(this.settings,this.value)},toJSON:function(){return JSON.reviveWrapper("new setup.Meter("+JSON.stringify(this.settings)+", "+this.value+")")}}),setup.Meter=l,t&&(window.Meter=window.Meter||l),Macro.add("newmeter",{tags:["colors","sizing","animation","label"],handler:function(){if(State.length>0&&!s)return this.error("The `<<newmeter>>` macro must be called in your `StoryInit` special passage. Seriously. No excuses. --Love, Chapel");if(this.args.length<1)return this.error("The `<<newmeter>>` macro requires at least one argument: a meter name.");var t=this.args[0],i=null,n=null,r=null,a=null;if("string"!=typeof t)return this.error("Invalid meter name.");if(t=t.trim(),l.has(t)&&!e)return this.error('Cannot clobber the existing meter "'+t+'".');this.payload.length&&(i=this.payload.find((function(t){return"colors"===t.name})),n=this.payload.find((function(t){return"sizing"===t.name})),r=this.payload.find((function(t){return"animation"===t.name})),a=this.payload.find((function(t){return"label"===t.name})));var o={};if(i){if(!i.args.length)return this.error("No arguments passed to the `<<colors>>` tag.");switch(i.args.length){case 1:o.empty=i.args[0],o.full="transparent";break;case 2:o.full=i.args[0],o.empty=i.args[1];break;default:o.full=i.args[0],o.empty=i.args[1],o.back=i.args[2]}}if(n){if(!n.args.length)return this.error("No arguments passed to the `<<sizing>>` tag.");o.width=n.args[0],n.args[1]&&(o.height=n.args[1])}if(r){if(!r.args.length)return this.error("No arguments passed to the `<<animation>>` tag.");if("boolean"!=typeof r.args[0]||r.args[0]){if("string"!=typeof r.args[0])return this.error("The argument to the `<<animation>>` tag should be `true`, `false`, or a valid CSS time value.");o.animate=Util.fromCssTime(r.args[0])}else o.animate=0;r.args[1]&&["swing","linear"].includes(r.args[1])&&(o.easing=r.args[1])}if(a){var h=a.args[0];if(!h||"string"!=typeof h)return this.error("The labelText argument for the `<<label>>` tag is required.");o.label=h.trim(),a.args[1]&&"string"==typeof a.args[1]&&(o.text=a.args[1]),a.args[2]&&"string"==typeof a.args[2]&&(o.align=a.args[2])}l.add(t,o,this.args[1])}}),Macro.add("showmeter",{handler:function(){if(this.args.length<1)return this.error("This macro requires at least one argument: the meter's name.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');"number"==typeof this.args[1]&&e.val(this.args[1]),e.place(this.output,{classes:"macro-"+this.name,attr:{id:"meter-"+Util.slugify(t)}})}}),Macro.add("updatemeter",{handler:function(){if(this.args.length<2)return this.error("This macro requires two arguments: the meter's name and a value.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');e.val(this.args[1])}})}();
 // end meters.min.js
 /* twine-user-script #2: "UserScript" */
-</script><tw-tag name="EndFired" color="red"></tw-tag><tw-tag name="EndUnhappy" color="red"></tw-tag><tw-tag name="Q1" color="green"></tw-tag><tw-tag name="Main" color="blue"></tw-tag><tw-tag name="EndE" color="orange"></tw-tag><tw-tag name="widget" color="orange"></tw-tag><tw-tag name="Q4" color="green"></tw-tag><tw-tag name="nobr" color="purple"></tw-tag><tw-tag name="EndPromo" color="red"></tw-tag><tw-tag name="Q3" color="green"></tw-tag><tw-tag name="EndStay" color="red"></tw-tag><tw-tag name="Widget" color="green"></tw-tag><tw-tag name="StoryInit" color="orange"></tw-tag><tw-tag name="Q2" color="green"></tw-tag><tw-passagedata pid="1" name="Burnout" tags="" position="925,525" size="100,100">&lt;&lt;set $slack to false&gt;&gt;
+</script><tw-tag name="EndPromo" color="red"></tw-tag><tw-tag name="nobr" color="purple"></tw-tag><tw-tag name="Q3" color="green"></tw-tag><tw-tag name="Main" color="blue"></tw-tag><tw-tag name="EndStay" color="red"></tw-tag><tw-tag name="Q4" color="green"></tw-tag><tw-tag name="EndE" color="orange"></tw-tag><tw-tag name="EndFired" color="red"></tw-tag><tw-tag name="Widget" color="green"></tw-tag><tw-tag name="StoryInit" color="orange"></tw-tag><tw-tag name="Q2" color="green"></tw-tag><tw-tag name="widget" color="orange"></tw-tag><tw-tag name="Q1" color="green"></tw-tag><tw-tag name="EndUnhappy" color="red"></tw-tag><tw-passagedata pid="1" name="Burnout" tags="" position="925,525" size="100,100">&lt;&lt;set $slack to false&gt;&gt;
 &lt;&lt;script&gt;&gt;
     UIBar.hide();
 &lt;&lt;/script&gt;&gt;
@@ -4863,7 +4915,7 @@ importScripts("/gsap.min.js");
     &lt;div class=&quot;scenario scenario--alert&quot;&gt;
         &lt;img class=&quot;scenario__icon&quot; src=&quot;img/warn1.png&quot;/&gt;
         &lt;div class=&quot;scenario__text scenario__text--alert&quot;&gt;
-            &lt;p class=&quot;scenario__desc scenario__desc--alert&quot;&gt;The exec. committee holds firm and brands you an agitator.&lt;/p&gt;
+            &lt;p class=&quot;scenario__desc scenario__desc--alert&quot;&gt;The exec committee holds firm and brands you an agitator.&lt;/p&gt;
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;btn-area btn-area--alert&quot;&gt;
@@ -5824,7 +5876,7 @@ importScripts("/gsap.min.js");
             &lt;div class=&quot;scenario&quot;&gt;
                 &lt;img class=&quot;scenario__img&quot; src=&quot;img/q2-time.jpg&quot;/&gt;
                 &lt;div class=&quot;scenario__text&quot;&gt;
-                    &lt;h1 class=&quot;scenario__title&quot;&gt;Five Alarm Fire&lt;/h1&gt;
+                    &lt;h1 class=&quot;scenario__title&quot;&gt;Five-Alarm Fire&lt;/h1&gt;
                     &lt;p class=&quot;scenario__desc&quot;&gt;You’ve been given a high-stakes assignment with an impossible deadline.&lt;/p&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
@@ -5845,7 +5897,7 @@ importScripts("/gsap.min.js");
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q2-time.jpg&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
-        &lt;h1 class=&quot;scenario__title&quot;&gt;Five Alarm Fire&lt;/h1&gt;
+        &lt;h1 class=&quot;scenario__title&quot;&gt;Five-Alarm Fire&lt;/h1&gt;
         &lt;p class=&quot;scenario__desc&quot;&gt;You’ve been given a high-stakes assignment with an impossible deadline.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
@@ -5874,7 +5926,7 @@ importScripts("/gsap.min.js");
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q2-time.jpg&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
-        &lt;h1 class=&quot;scenario__title&quot;&gt;Five Alarm Fire&lt;/h1&gt;
+        &lt;h1 class=&quot;scenario__title&quot;&gt;Five-Alarm Fire&lt;/h1&gt;
         &lt;p class=&quot;scenario__desc&quot;&gt;You’ve been given a high-stakes assignment with an impossible deadline.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
@@ -5903,7 +5955,7 @@ importScripts("/gsap.min.js");
 &lt;div class=&quot;scenario scenario--inactive&quot;&gt;
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q2-time.jpg&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
-        &lt;h1 class=&quot;scenario__title&quot;&gt;Five Alarm Fire&lt;/h1&gt;
+        &lt;h1 class=&quot;scenario__title&quot;&gt;Five-Alarm Fire&lt;/h1&gt;
         &lt;p class=&quot;scenario__desc&quot;&gt;You’ve been given a high-stakes assignment with an impossible deadline.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
@@ -5911,7 +5963,7 @@ importScripts("/gsap.min.js");
     &lt;div class=&quot;scenario scenario--alert&quot;&gt;
         &lt;img class=&quot;scenario__icon&quot; src=&quot;img/warn1.png&quot;/&gt;
         &lt;div class=&quot;scenario__text scenario__text--alert&quot;&gt;
-            &lt;p class=&quot;scenario__desc scenario__desc--alert&quot;&gt;You tell the top brass it can’t be done. At least, not like this. They pass it to someone else, and you keep your sanity—for now.&lt;/p&gt;
+            &lt;p class=&quot;scenario__desc scenario__desc--alert&quot;&gt;You tell the top brass it can’t be done. At least, not like this. They pass it to someone else, and you keep your sanity — for now.&lt;/p&gt;
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;btn-area btn-area--alert&quot;&gt;
@@ -6210,7 +6262,7 @@ importScripts("/gsap.min.js");
     &lt;div class=&quot;scenario scenario--alert&quot;&gt;
         &lt;img class=&quot;scenario__icon&quot; src=&quot;img/warn1.png&quot;/&gt;
         &lt;div class=&quot;scenario__text scenario__text--alert&quot;&gt;
-            &lt;p class=&quot;scenario__desc scenario__desc--alert&quot;&gt;Never a wrong answer. Even if it’s a bit 2000-and-late. Maybe you can follow it up with a team SoulCycle. You made an impression — whether it’s a good one is debatable.&lt;/p&gt;
+            &lt;p class=&quot;scenario__desc scenario__desc--alert&quot;&gt;Never a wrong answer, even if it’s a bit 2000-and-late. Maybe you can follow it up with a team SoulCycle. You made an impression — whether it’s a good one is debatable.&lt;/p&gt;
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;btn-area btn-area--alert&quot;&gt;
@@ -6659,7 +6711,7 @@ importScripts("/gsap.min.js");
                 &lt;img class=&quot;scenario__img&quot; src=&quot;img/q4-next.jpg&quot;/&gt;
                 &lt;div class=&quot;scenario__text&quot;&gt;
                     &lt;h1 class=&quot;scenario__title&quot;&gt;Next Steps&lt;/h1&gt;
-                    &lt;p class=&quot;scenario__desc&quot;&gt;You made it to the end of the year—now it’s time to make a case for your promotion.&lt;/p&gt;
+                    &lt;p class=&quot;scenario__desc&quot;&gt;You made it to the end of the year — now it’s time to make a case for your promotion.&lt;/p&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;&lt;ChoiceModule
@@ -6684,7 +6736,7 @@ importScripts("/gsap.min.js");
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q4-next.jpg&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
         &lt;h1 class=&quot;scenario__title&quot;&gt;Next Steps&lt;/h1&gt;
-        &lt;p class=&quot;scenario__desc&quot;&gt;You made it to the end of the year—now it’s time to make a case for your promotion.&lt;/p&gt;
+        &lt;p class=&quot;scenario__desc&quot;&gt;You made it to the end of the year — now it’s time to make a case for your promotion.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -6713,7 +6765,7 @@ importScripts("/gsap.min.js");
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q4-next.jpg&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
         &lt;h1 class=&quot;scenario__title&quot;&gt;Next Steps&lt;/h1&gt;
-        &lt;p class=&quot;scenario__desc&quot;&gt;You made it to the end of the year—now it’s time to make a case for your promotion.&lt;/p&gt;
+        &lt;p class=&quot;scenario__desc&quot;&gt;You made it to the end of the year — now it’s time to make a case for your promotion.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -6742,7 +6794,7 @@ importScripts("/gsap.min.js");
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q4-next.jpg&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
         &lt;h1 class=&quot;scenario__title&quot;&gt;Next Steps&lt;/h1&gt;
-        &lt;p class=&quot;scenario__desc&quot;&gt;You made it to the end of the year—now it’s time to make a case for your promotion.&lt;/p&gt;
+        &lt;p class=&quot;scenario__desc&quot;&gt;You made it to the end of the year — now it’s time to make a case for your promotion.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -6771,7 +6823,7 @@ importScripts("/gsap.min.js");
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q4-next.jpg&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
         &lt;h1 class=&quot;scenario__title&quot;&gt;Next Steps&lt;/h1&gt;
-        &lt;p class=&quot;scenario__desc&quot;&gt;You made it to the end of the year—now it’s time to make a case for your promotion.&lt;/p&gt;
+        &lt;p class=&quot;scenario__desc&quot;&gt;You made it to the end of the year — now it’s time to make a case for your promotion.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -6800,7 +6852,7 @@ importScripts("/gsap.min.js");
     &lt;img class=&quot;scenario__img&quot; src=&quot;img/q4-next.jpg&quot;/&gt;
     &lt;div class=&quot;scenario__text&quot;&gt;
         &lt;h1 class=&quot;scenario__title&quot;&gt;Next Steps&lt;/h1&gt;
-        &lt;p class=&quot;scenario__desc&quot;&gt;You made it to the end of the year—now it’s time to make a case for your promotion.&lt;/p&gt;
+        &lt;p class=&quot;scenario__desc&quot;&gt;You made it to the end of the year — now it’s time to make a case for your promotion.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;alert&quot;&gt;
@@ -7208,7 +7260,7 @@ importScripts("/gsap.min.js");
     &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&quot;l-about&quot; class=&quot;about-window about-window--hidden&quot;&gt;
-    &lt;div class=&quot;titlebar titlebar--float&quot;&gt;
+    &lt;div class=&quot;titlebar titlebar--show titlebar--float&quot;&gt;
         &lt;img src=&quot;img/grip.svg&quot; class=&quot;titlebar__grip&quot;&gt;
         &lt;p class=&quot;titlebar__text&quot;&gt;WHO MADE THIS?&lt;/p&gt;
         &lt;img src=&quot;img/grip.svg&quot; class=&quot;titlebar__grip&quot;&gt;
@@ -7227,7 +7279,7 @@ importScripts("/gsap.min.js");
 	&lt;img class=&quot;logo&quot; src=&quot;img/logo.png&quot;/&gt;
 	&lt;div class=&quot;rel-wrapper&quot;&gt;
 		&lt;div class=&quot;content content--login&quot;&gt;
-			&lt;&lt;TitleBar &quot;Welcome&quot;&gt;&gt;
+			&lt;&lt;TitleBar &quot;Welcome&quot; &quot;titlebar--show&quot;&gt;&gt;
 			&lt;div class=&quot;login-window&quot;&gt;
 				&lt;div&gt;
 					&lt;h1 class=&quot;login-window__title&quot;&gt;Pick Your Department&lt;/h1&gt;
@@ -7244,7 +7296,7 @@ importScripts("/gsap.min.js");
 							&lt;img class=&quot;class__portrait&quot; src=&quot;img/sales.jpg&quot;/&gt;
 							&lt;div class=&quot;class-info&quot;&gt;
 								&lt;p class=&quot;class-info__title class-info__title--sales&quot;&gt;MARKETING&lt;/p&gt;
-								&lt;p class=&quot;class-info__desc&quot;&gt;You can charm, cajole, and occasionally even captivate. You can’t do spreadsheets.&lt;/p&gt;
+								&lt;p class=&quot;class-info__desc&quot;&gt;You can charm, cajole, and even captivate. What you can’t do is spreadsheets.&lt;/p&gt;
 							&lt;/div&gt;
 						&lt;/div&gt;
 						&lt;div class=&quot;class&quot; id=&quot;lg&quot;&gt;
@@ -7258,7 +7310,7 @@ importScripts("/gsap.min.js");
 							&lt;img class=&quot;class__portrait&quot; src=&quot;img/ops.jpg&quot;/&gt;
 							&lt;div class=&quot;class-info&quot;&gt;
 								&lt;p class=&quot;class-info__title class-info__title--ops&quot;&gt;OPERATIONS&lt;/p&gt;
-								&lt;p class=&quot;class-info__desc&quot;&gt;Blockers, beware. Neither rain nor shifting priority keeps you from hitting a deadline.&lt;/p&gt;
+								&lt;p class=&quot;class-info__desc&quot;&gt;Blockers, beware. No bottleneck can keep you from hitting a deadline.&lt;/p&gt;
 							&lt;/div&gt;
 						&lt;/div&gt;
 					&lt;/div&gt;
@@ -7355,7 +7407,7 @@ importScripts("/gsap.min.js");
 &lt;div class=&quot;bg bg--start&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;abs-wrapper abs-wrapper--start&quot;&gt;
 	&lt;img class=&quot;logo logo--start&quot; src=&quot;img/logo-start.png&quot;/&gt;
-	&lt;a class=&quot;start-subhead&quot; href=&quot;https://chief.com&quot;&gt;A survival game by Chief&lt;/a&gt;
+	&lt;a class=&quot;start-subhead&quot; href=&quot;https://chief.com&quot; target=”_blank”&gt;A workplace survival game by Chief&lt;/a&gt;
 	&lt;div id=&quot;notif1&quot; class=&quot;notification&quot;&gt;
 		&lt;img class=&quot;notification__image&quot; src=&quot;img/slack.png&quot;/&gt;
 		&lt;div class=&quot;notification-text&quot;&gt;
@@ -7380,7 +7432,7 @@ importScripts("/gsap.min.js");
 	&lt;div class=&quot;rel-wrapper rel-wrapper--start&quot;&gt;
 		&lt;img class=&quot;start-img&quot; src=&quot;img/start.jpg&quot; /&gt;
 		&lt;div id=&quot;start-btn&quot; class=&quot;button button--start button--hidden&quot;&gt;
-			&lt;&lt;link &quot;New Game&quot;&gt;&gt;
+			&lt;&lt;link &quot;Start Game&quot;&gt;&gt;
 				&lt;&lt;goto &quot;Login&quot;&gt;&gt;
 			&lt;&lt;/link&gt;&gt;
 		&lt;/div&gt;
@@ -7740,7 +7792,7 @@ importScripts("/gsap.min.js");
 &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="98" name="StoryCaption" tags="StoryInit" position="500,100" size="100,100">&lt;div class=&quot;menu-bar&quot;&gt;
     &lt;img id=&quot;hamburger&quot; class=&quot;menu-bar__btn&quot; src=&quot;img/menu.svg&quot; /&gt;
     &lt;img class=&quot;menu-bar__logo&quot; src=&quot;img/logo.png&quot; /&gt;
-    &lt;a href=&quot;https://chief.com&quot; class=&quot;menu-bar__heading&quot;&gt;A workplace survival game by&lt;img src=&quot;img/chief.svg&quot;/&gt;&lt;/a&gt;
+    &lt;a href=&quot;https://chief.com&quot; target=&quot;_blank&quot; class=&quot;menu-bar__heading&quot;&gt;A workplace survival game by&lt;img src=&quot;img/chief.svg&quot;/&gt;&lt;/a&gt;
 &lt;/div&gt;
 
 &lt;div id=&quot;desktop&quot; class=&quot;icon-view&quot;&gt;
@@ -8150,7 +8202,7 @@ importScripts("/gsap.min.js");
     &lt;/div&gt;
     
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="112" name="TitleBar" tags="widget" position="225,1475" size="100,100">&lt;&lt;widget &quot;TitleBar&quot;&gt;&gt;
-    &lt;div class=&quot;titlebar&quot;&gt;
+    &lt;div class=&quot;titlebar _args[1]&quot;&gt;
         &lt;img src=&quot;img/grip.svg&quot; class=&quot;titlebar__grip&quot;/&gt;
         &lt;p class=&quot;titlebar__text&quot;&gt;_args[0]&lt;/p&gt;
         &lt;img src=&quot;img/grip.svg&quot; class=&quot;titlebar__grip&quot;/&gt;

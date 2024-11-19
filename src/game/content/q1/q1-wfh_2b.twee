@@ -20,7 +20,7 @@
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">The exec. committee holds firm and brands you an agitator.</p>
+            <p class="scenario__desc scenario__desc--alert">The exec committee holds firm and brands you an agitator.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

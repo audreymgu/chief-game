@@ -50,7 +50,7 @@
     </ul>
 </div>
 <div id="l-about" class="about-window about-window--hidden">
-    <div class="titlebar titlebar--float">
+    <div class="titlebar titlebar--show titlebar--float">
         <img src="img/grip.svg" class="titlebar__grip">
         <p class="titlebar__text">WHO MADE THIS?</p>
         <img src="img/grip.svg" class="titlebar__grip">
@@ -69,7 +69,7 @@
 	<img class="logo" src="img/logo.png"/>
 	<div class="rel-wrapper">
 		<div class="content content--login">
-			<<TitleBar "Welcome">>
+			<<TitleBar "Welcome" "titlebar--show">>
 			<div class="login-window">
 				<div>
 					<h1 class="login-window__title">Pick Your Department</h1>
@@ -86,7 +86,7 @@
 							<img class="class__portrait" src="img/sales.jpg"/>
 							<div class="class-info">
 								<p class="class-info__title class-info__title--sales">MARKETING</p>
-								<p class="class-info__desc">You can charm, cajole, and occasionally even captivate. You can’t do spreadsheets.</p>
+								<p class="class-info__desc">You can charm, cajole, and even captivate. What you can’t do is spreadsheets.</p>
 							</div>
 						</div>
 						<div class="class" id="lg">
@@ -100,7 +100,7 @@
 							<img class="class__portrait" src="img/ops.jpg"/>
 							<div class="class-info">
 								<p class="class-info__title class-info__title--ops">OPERATIONS</p>
-								<p class="class-info__desc">Blockers, beware. Neither rain nor shifting priority keeps you from hitting a deadline.</p>
+								<p class="class-info__desc">Blockers, beware. No bottleneck can keep you from hitting a deadline.</p>
 							</div>
 						</div>
 					</div>

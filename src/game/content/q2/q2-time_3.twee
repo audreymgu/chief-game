@@ -11,7 +11,7 @@
 <div class="scenario scenario--inactive">
     <img class="scenario__img" src="img/q2-time.jpg"/>
     <div class="scenario__text">
-        <h1 class="scenario__title">Five Alarm Fire</h1>
+        <h1 class="scenario__title">Five-Alarm Fire</h1>
         <p class="scenario__desc">You’ve been given a high-stakes assignment with an impossible deadline.</p>
     </div>
 </div>
@@ -19,7 +19,7 @@
     <div class="scenario scenario--alert">
         <img class="scenario__icon" src="img/warn1.png"/>
         <div class="scenario__text scenario__text--alert">
-            <p class="scenario__desc scenario__desc--alert">You tell the top brass it can’t be done. At least, not like this. They pass it to someone else, and you keep your sanity—for now.</p>
+            <p class="scenario__desc scenario__desc--alert">You tell the top brass it can’t be done. At least, not like this. They pass it to someone else, and you keep your sanity — for now.</p>
         </div>
     </div>
     <div class="btn-area btn-area--alert">

@@ -16,7 +16,7 @@
     <img class="scenario__img" src="img/q4-next.jpg"/>
     <div class="scenario__text">
         <h1 class="scenario__title">Next Steps</h1>
-        <p class="scenario__desc">You made it to the end of the year—now it’s time to make a case for your promotion.</p>
+        <p class="scenario__desc">You made it to the end of the year — now it’s time to make a case for your promotion.</p>
     </div>
 </div>
 <div class="alert">

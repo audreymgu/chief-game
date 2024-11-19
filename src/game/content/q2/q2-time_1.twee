@@ -11,7 +11,7 @@
 <div class="scenario scenario--inactive">
     <img class="scenario__img" src="img/q2-time.jpg"/>
     <div class="scenario__text">
-        <h1 class="scenario__title">Five Alarm Fire</h1>
+        <h1 class="scenario__title">Five-Alarm Fire</h1>
         <p class="scenario__desc">You’ve been given a high-stakes assignment with an impossible deadline.</p>
     </div>
 </div>

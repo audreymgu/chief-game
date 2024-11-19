@@ -5,7 +5,7 @@
 <div class="bg bg--start"></div>
 <div class="abs-wrapper abs-wrapper--start">
 	<img class="logo logo--start" src="img/logo-start.png"/>
-	<a class="start-subhead" href="https://chief.com">A survival game by Chief</a>
+	<a class="start-subhead" href="https://chief.com" target=”_blank”>A workplace survival game by Chief</a>
 	<div id="notif1" class="notification">
 		<img class="notification__image" src="img/slack.png"/>
 		<div class="notification-text">
@@ -30,7 +30,7 @@
 	<div class="rel-wrapper rel-wrapper--start">
 		<img class="start-img" src="img/start.jpg" />
 		<div id="start-btn" class="button button--start button--hidden">
-			<<link "New Game">>
+			<<link "Start Game">>
 				<<goto "Login">>
 			<</link>>
 		</div>

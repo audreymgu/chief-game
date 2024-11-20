@@ -85,9 +85,6 @@
                 let text = document.querySelector("#quit-btn");
                 let animation = gsap.to("#quit-btn", { paused: true, duration: 0.1, rotation: 10, yoyo: true, repeat: 5, ease: "power1.inOut" });
                 text.addEventListener("mouseenter", () => animation.restart());
-                setInterval(() => {
-                    animation.restart();
-                }, 15000);
 
                 let about = document.querySelector("#about-btn");
                 let aboutAnimation = gsap.to("#about-btn", { paused: true, duration: 0.1, rotation: 10, yoyo: true, repeat: 5, ease: "power1.inOut" });
@@ -96,6 +93,19 @@
                 let tut = document.querySelector("#tut-btn");
                 let tutAnimation = gsap.to("#tut-btn", { paused: true, duration: 0.1, rotation: 10, yoyo: true, repeat: 5, ease: "power1.inOut" });
                 tut.addEventListener("mouseenter", () => tutAnimation.restart());
+
+                let tutWiggle = gsap.to("#tut-btn", { paused: true, duration: 0.1, rotation: 10, yoyo: true, repeat: 5, ease: "power1.inOut" });
+
+                let toggle = true;
+
+                setInterval(() => {
+                    if (toggle) {
+                        animation.restart();
+                    } else {
+                        tutWiggle.restart();
+                    }
+                    toggle = !toggle;
+                }, 15000);
             }
         }, 100);
     <</script>>

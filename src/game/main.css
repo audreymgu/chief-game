@@ -197,9 +197,9 @@ h1 {
 }
 .abs-wrapper--ending {
   width: calc(100% - 28px);
-  height: calc(100% - 80px);
+  height: calc(100% - 30px);
   position: fixed;
-  top: 64px;
+  top: 14px;
   left: 14px;
 }
 @media (min-width: 1200px) and (min-height: 850px) {

@@ -42,9 +42,9 @@
     }
     &--ending {
         width: calc(100% - 28px);
-        height: calc(100% - 80px);
+        height: calc(100% - 30px);
         position: fixed;
-        top: 64px;
+        top: 14px;
         left: 14px;
     
         @include breakpoint(desktop) {

@@ -547,6 +547,9 @@ h1 {
     display: flex;
   }
 }
+.scenario--inactive .scenario__img {
+  opacity: 1;
+}
 @media (min-width: 1200px) and (min-height: 850px) {
   .scenario {
     border-width: 0px 1px 0 1px;
@@ -622,6 +625,7 @@ h1 {
   object-fit: cover;
   border: 1px solid #2A2C41;
   border-width: 1px 0 1px 0;
+  opacity: 0;
   align-self: start;
 }
 @media (min-width: 1200px) and (min-height: 850px) {

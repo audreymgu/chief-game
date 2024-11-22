@@ -70,6 +70,7 @@
                     var tl = gsap.timeline();
                     tl.from("#scenario-area", {duration: 0.5, y: 25, ease: "back.out"}, 0);
                     tl.to("#quarter", {duration: 0.5, opacity: 0, y: -25, ease: "back.out", display:"none"}, 1.25);
+                    tl.fromTo(".scenario__img", {opacity:0}, {opacity:1, duration:0.5, ease:"back.out"}, 0);
                 }
                 if(document.getElementById('transition')) {
                     var tl = gsap.timeline();

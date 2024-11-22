@@ -258,7 +258,7 @@
         border: 1px solid #2A2C41;
         border-width: 1px 0 1px 0;
         @include breakpoint(desktop) {
-            height: unset;
+            height: 265px;
             width: 265px;
             max-height: unset;
             border-width: 1px;

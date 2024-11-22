@@ -625,7 +625,7 @@ h1 {
 }
 @media (min-width: 1200px) and (min-height: 850px) {
   .scenario__img {
-    height: unset;
+    height: 265px;
     width: 265px;
     max-height: unset;
     border-width: 1px;

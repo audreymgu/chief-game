@@ -265,7 +265,6 @@
         @include breakpoint(desktop) {
             height: 265px;
             width: 265px;
-            max-height: unset;
             border-width: 1px;
         }
         align-self: start;

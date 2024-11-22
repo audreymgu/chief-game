@@ -631,7 +631,6 @@ h1 {
   .scenario__img {
     height: 265px;
     width: 265px;
-    max-height: unset;
     border-width: 1px;
   }
 }

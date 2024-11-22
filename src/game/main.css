@@ -625,6 +625,7 @@ h1 {
   border: 1px solid #2A2C41;
   border-width: 1px 0 1px 0;
   opacity: 0;
+  background-color: #FFFFF5;
   align-self: start;
 }
 @media (min-width: 1200px) and (min-height: 850px) {

@@ -734,6 +734,7 @@
     &__portrait {
         max-width: 24%;
         object-fit: contain;
+        aspect-ratio: 1 / 1;
         @include breakpoint(desktop) {
             max-width: unset;
             width: 100%;

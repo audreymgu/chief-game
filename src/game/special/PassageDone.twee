@@ -112,8 +112,11 @@
                         })
                     ]);
                     setTimeout(function () {
-                        shareBtn.children[0].innerText = "Copied to Clipboard";
+                        shareBtn.innerText = "URL Copied!";
                     }, 200);
+                    setTimeout(function () {
+                        shareBtn.innerText = "Share";
+                    }, 2000);
                 } catch (error) {
                     console.error(error);
                 }
@@ -134,7 +137,9 @@
     // Share button functionality
     if (document.querySelector('#sharing')) {
         var shareBtn = document.querySelector('#sharing');
-
+        if (!navigator.share) {
+            shareBtn.remove();
+        }
         shareBtn.addEventListener('click', async () => {
             const blob = await fetchImageBlob(endingImage);
             
@@ -150,33 +155,23 @@
 
             // Fallback to clipboard if Web Share API is unavailable
             if (!navigator.canShare || !navigator.canShare(shareData)) {
-                console.log('Web Share API not available. Using clipboard as fallback.');
-                try {
-                    shareBtn.classList.remove("button--success");
-                    shareBtn.children[0].innerText = "Copying...";
-                    await navigator.clipboard.write([
-                        new ClipboardItem({
-                            'image/png': blob
-                        })
-                    ]);
-                    setTimeout(function () {
-                        shareBtn.children[0].innerText = "Copied to Clipboard";
-                        shareBtn.classList.add("button--success");
-                    }, 200);
-                } catch (error) {
-                    console.error(error);
-                }
-                return;
+                console.log('Web Share API not available. Using download as fallback.');
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(await fetchImageBlob(endingImage));
+                link.download = 'image.png';
+                link.click();
             }
 
             // Try sharing via Web Share API
-            navigator.share(shareData)
-                .then(() => {
-                    console.log('Shared successfully');
-                })
-                .catch((e) => {
-                    console.log('Error: ' + e);
-                });
+            if (navigator.share) {
+                navigator.share(shareData)
+                    .then(() => {
+                        console.log('Shared successfully');
+                    })
+                    .catch((e) => {
+                        console.log('Error: ' + e);
+                    });
+            }
         });
     }
 

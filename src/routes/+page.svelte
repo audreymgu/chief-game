@@ -65,6 +65,8 @@
         window.gtag('js', new Date());
 
         window.gtag('config', 'G-3QGYQG9BYF');
+        window.gtag('config', 'G-VQW2TB3FNV');
+        window.gtag('config', 'G-LDVNNHB8F0');
     }
 </script>
 
@@ -74,9 +76,11 @@
     <meta property="og:description" content="{ogDescription}" />
     <meta property="og:image" content="{ogImage}" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="{`https://chief-game.vercel.app`}">
+    <meta property="og:url" content="{`https://thecorporatetrail.chief.com`}">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3QGYQG9BYF"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQW2TB3FNV"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LDVNNHB8F0"></script>
 </svelte:head>
 
 <!-- <About/> -->

@@ -1,13 +1,21 @@
 $_breakpoints: (
   se: 375px,
-  desktop: 1200px, 
+  tablet: 420px,
+  desktop: 1200px,
   vLaptop: 900px
-
 );
 
 @mixin breakpoint($key) {
   @if map-has-key($_breakpoints, $key) {
     @media (min-width: #{map-get($_breakpoints, $key)}) and (min-height: 850px) {
+      @content;
+    }
+  }
+}
+
+@mixin tabBreakpoint($key) {
+  @if map-has-key($_breakpoints, $key) {
+    @media (min-width: #{map-get($_breakpoints, $key)}) {
       @content;
     }
   }

@@ -629,6 +629,11 @@ h1 {
   background-color: #FFFFF5;
   align-self: start;
 }
+@media (min-width: 420px) {
+  .scenario__img {
+    height: 300px;
+  }
+}
 @media (min-width: 1200px) and (min-height: 850px) {
   .scenario__img {
     height: 265px;

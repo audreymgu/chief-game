@@ -630,7 +630,7 @@ h1 {
 }
 @media (min-width: 420px) {
   .scenario__img {
-    height: 300px;
+    height: 350px;
   }
 }
 @media (min-width: 1200px) and (min-height: 850px) {

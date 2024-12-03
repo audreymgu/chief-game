@@ -42,8 +42,8 @@ export function load({ url }) {
         ogDescription = "Spend the best years of my life “circling back” over stale office coffee? No thanks. Time to pack it up, blow it up, and move to Costa Rica.";
         ogImage = 'https://thecorporatetrail.chief.com/img/e-quit_share.jpg'; 
     } else {
-        ogTitle = "THE CORPORATE TRAIL";
-        ogDescription = "A workplace survival game by Chief";
+        ogTitle = "THE CORPORATE TRAIL (A workplace survival game by Chief)";
+        ogDescription = "Think you’ve got what it takes to survive the workplace as a woman executive? It’s time to hit The Corporate Trail and find out.";
         ogImage = 'https://thecorporatetrail.chief.com/img/e-violence.jpg';
     }
 

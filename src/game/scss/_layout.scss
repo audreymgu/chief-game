@@ -96,6 +96,14 @@
                 max-height: 670px;
         }
     }
+    &--over {
+        top: 80px;
+        height: calc(100% - 94px);
+        @include breakpoint(desktop) {
+            height: unset;
+            top: calc(50% - 20px);
+        }
+    }
 }
 
 .rel-wrapper {
@@ -155,6 +163,9 @@
         @include breakpoint(desktop) {
             border-width: 1px;
         }
+    }
+    &--over {
+        height: calc(100% - 32px);
     }
     &--login {
         border-width: 0px;

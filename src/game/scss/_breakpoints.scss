@@ -7,7 +7,7 @@ $_breakpoints: (
 
 @mixin breakpoint($key) {
   @if map-has-key($_breakpoints, $key) {
-    @media (min-width: #{map-get($_breakpoints, $key)}) and (min-height: 850px) {
+    @media (min-width: #{map-get($_breakpoints, $key)}) and (min-height: 800px) {
       @content;
     }
   }

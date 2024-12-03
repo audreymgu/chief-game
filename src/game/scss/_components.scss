@@ -24,15 +24,20 @@
     }
     &--ending {
         position:absolute;
-        top: -4.75rem;
+        top: -5rem;
         display: block;
         width: 97%;
+        max-width: 600px;
+        left: 50%;
+        transform: translateX(-50%);
         @include breakpoint(desktop) {
             top: -2.75rem;
             position: relative;
             top: unset;
             left: 0.5rem;
             margin: 0;
+            max-width: unset;
+            transform: unset;
         }
     }
     &--red {
@@ -338,7 +343,8 @@
     &__text {
         flex-grow: 1;
         font-size: 16px;
-        padding-left: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
         padding-top: 8px;
         
 
@@ -351,6 +357,8 @@
         @include breakpoint(desktop) {
             font-size: 18px;   
             margin-left: 4px;
+            padding-left: 8px;
+            padding-right: 8px;
         }
         &--alert {
             padding-left: 0;
@@ -434,6 +442,10 @@
         object-fit: cover;
         border: 1px solid #2A2C41;
         border-width: 1px 0 1px 0;
+
+        @include tabBreakpoint(tablet) {
+            max-height: 450px;
+        }
 
         @include breakpoint(desktop) {
             height: unset;
@@ -987,9 +999,9 @@
     bottom: 0;
     left: 0;
     display: flex;
-    width: calc(100vw - 128px);
+    width: calc(100vw - 6%);
     justify-content: space-between;
-    margin: 56px 64px;
+    margin: 3%;
     align-items:flex-end;
     &--hidden {
         display: none;

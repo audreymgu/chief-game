@@ -6,6 +6,7 @@
     left: 50%;
     max-width: 600px;
     transform: translate(-50%, 0);
+
     @include breakpoint(desktop) {
         position: fixed;
         top: 50%;
@@ -19,6 +20,9 @@
         filter: drop-shadow(8px 8px 0px rgba(0, 0, 0, 0.25));
         padding: 8px;
         box-sizing: border-box;
+    }
+    @include vbreakpoint(vLogo) {
+        top: calc(50% + 38px);
     }
 }
 .abs-wrapper {
@@ -39,6 +43,9 @@
         width: 100%;
         max-width: 790px;
         max-height: 670px;
+    }
+    @include vbreakpoint(vLogo) {
+        top: calc(50% + 70px);
     }
     &--ending {
         width: calc(100% - 28px);
@@ -62,17 +69,20 @@
         top: 64px;
         height: calc(100% - 80px);
         @include breakpoint(desktop) {
-                width: unset;
-                height: unset;
-                margin: auto;
-                position: absolute;
-                top: calc(50% - 20px);
-                left: 50%;
-                transform: translate(-50%, -50%);
-                min-width: 600px;
-                max-width: 790px;
-                max-height: 670px;
-            }
+            width: unset;
+            height: unset;
+            margin: auto;
+            position: absolute;
+            top: calc(50% - 20px);
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 600px;
+            max-width: 790px;
+            max-height: 670px;
+        }
+        @include vbreakpoint(vLogo) {
+            top: 50%;
+        }
     }
     &--start {
         filter: none;

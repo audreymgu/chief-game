@@ -3,6 +3,9 @@
     @include breakpoint(desktop) {
         display: block;
     }
+    @include vbreakpoint(vLogo) {
+        display: none;
+    }
     // position:absolute;
     // top: -2.5rem;
     width: 100%;
@@ -38,6 +41,11 @@
             margin: 0;
             max-width: unset;
             transform: unset;
+        }
+    }
+    &--fixed {
+        @include vbreakpoint(vLogo) {
+                display: block;
         }
     }
     &--red {
@@ -684,42 +692,6 @@
     }
 }
 
-.menu-bar {
-    position: fixed;
-    z-index: 2;
-    width: calc(100vw - 12px);
-    background-color: #668547;
-    left: 0;
-    display: flex;
-    height: 36px;
-    padding: 6px;
-    justify-content: space-between;
-    font-family: departure;
-    &__group {
-        height: 100%;
-        display: flex;
-        gap: 4px;
-    }
-    &__link {
-        color: #DCF15B;
-        background-color: #547335;
-        padding: 4px 12px 0 12px;
-        &:hover {
-            color: black;
-            background-color: #DCF15B;
-        }
-    }
-    &__logo {
-        @include breakpoint(desktop) {
-            display: none;
-        }
-    }
-    &--login {
-        display: flex !important;
-        justify-content: center;
-    }
-}
-
 .class-selector {
     display: flex;
     flex-direction: column;
@@ -1006,6 +978,9 @@
     &--hidden {
         display: none;
     }
+    @include minBreakpoint(icons) {
+        display: none;
+    }
 }
 .icon {
     display: none;
@@ -1086,7 +1061,7 @@
     }
     &--tut {
         @include breakpoint(desktop) {
-            top: 225px;
+            top: 150px;
             left: 125px;
         }
     }
@@ -1252,6 +1227,10 @@
     }
     font-family: departure;
     font-size: 16px;
+    &--login {
+        display: flex;
+        justify-content: center;
+    }
     &:hover {
         text-decoration: underline;
     }
@@ -1268,7 +1247,10 @@
         top: 18px;
         @include breakpoint(desktop) {
             display: none;
-        }  
+        }
+        @include minBreakpoint(icons) {
+            display: unset;
+        }
     }
 
     &__heading {
@@ -1291,6 +1273,10 @@
                 margin-left: 12px;
                 margin-bottom: -3px;
             }
+        }
+
+        @include vbreakpoint(vLogo) {
+            display: none;
         }
 
         &--color {
@@ -1333,6 +1319,13 @@
         align-self: center;
         @include breakpoint(desktop) {
             display: none;
+        }
+        @include vbreakpoint(vLogo) {
+            display: block;
+            margin-top: 0;
+        }
+        &--login {
+            margin-top: 0px;
         }
     }
 }
@@ -1427,7 +1420,9 @@
         left: -200px;
         top: 70px;
     }
-
+    @include minBreakpoint(icons) {
+        left: -75px;
+    }
 }
 #notif2 {
     top: 230px;
@@ -1438,6 +1433,10 @@
         right: -200px;
         top: 240px;
     }
+    @include minBreakpoint(icons) {
+        right: -75px;
+        top: 200px;
+    }
 }
 #notif3 {
     top: 360px;
@@ -1447,6 +1446,10 @@
     @include breakpoint(desktop) {
         left: -125px;
         top: 355px;
+    }
+    @include minBreakpoint(icons) {
+        left: -30px;
+        top: 340px;
     }
 }
 
@@ -1506,17 +1509,20 @@
     }
 }
 .menu-overlay {
-    z-index: 2;
+    z-index: 5;
     position: fixed;
     height: 100dvh;
     width: 100vw;
     top: 48px;
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    &--hidden {
-            display: none;
-    }
     @include breakpoint(desktop) {
+        display: none;
+    }
+    @include minBreakpoint(icons) {
+        display: unset;
+    }
+    &--hidden {
         display: none;
     }
 }
@@ -1537,6 +1543,10 @@
         transform: none;
         height: 390px;
         width: 350px;
+    }
+    @include minBreakpoint(icons) {
+        right: 50%;
+        transform: translateX(50%);
     }
     background-color: #C4D2FF;
     border: 1px solid #2A2C41;

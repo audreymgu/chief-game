@@ -44,7 +44,7 @@ export function load({ url }) {
     } else {
         ogTitle = "THE CORPORATE TRAIL (A workplace survival game by Chief)";
         ogDescription = "Think you’ve got what it takes to survive the workplace as a woman executive? It’s time to hit The Corporate Trail and find out.";
-        ogImage = 'https://thecorporatetrail.chief.com/img/e-violence.jpg';
+        ogImage = 'https://thecorporatetrail.chief.com/img/tct-preview.jpg';
     }
 
     return {

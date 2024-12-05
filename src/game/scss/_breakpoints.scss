@@ -1,13 +1,14 @@
 $_breakpoints: (
   se: 375px,
   tablet: 420px,
-  desktop: 1200px,
-  vLaptop: 900px
+  desktop: 800px,
+  icons: 1200px,
+  vLogo: 800px
 );
 
 @mixin breakpoint($key) {
   @if map-has-key($_breakpoints, $key) {
-    @media (min-width: #{map-get($_breakpoints, $key)}) and (min-height: 800px) {
+    @media (min-width: #{map-get($_breakpoints, $key)}) and (min-height: 720px) {
       @content;
     }
   }
@@ -23,7 +24,7 @@ $_breakpoints: (
 
 @mixin minBreakpoint($key) {
   @if map-has-key($_breakpoints, $key) {
-    @media (max-width: #{map-get($_breakpoints, $key)}) {
+    @media (max-width: #{map-get($_breakpoints, $key)}) and (min-width: 800px) {
       @content;
     }
   }
@@ -31,7 +32,7 @@ $_breakpoints: (
 
 @mixin vbreakpoint($key) {
   @if map-has-key($_breakpoints, $key) {
-    @media (max-height: #{map-get($_breakpoints, $key)}) {
+    @media (max-height: #{map-get($_breakpoints, $key)}) and (min-height: 720px) and (min-width: 800px) {
       @content;
     }
   }

@@ -41,7 +41,7 @@
 
 <div class="menu-bar menu-bar--login">
     <img id="l-hamburger" class="menu-bar__btn" src="img/menu.svg" />
-    <img class="menu-bar__logo" src="img/logo.png" />
+    <img class="menu-bar__logo menu-bar__logo--login" src="img/logo.png" />
     <a href="https://chief.com" class="menu-bar__heading">A workplace survival game by<img src="img/chief.svg"/></a>
 </div>
 <div id="l-menu-overlay" class="menu-overlay menu-overlay--hidden">
